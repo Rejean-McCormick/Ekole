@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Ekole · références d'outils propres au Kristal, v14",
+  "type":"object",
+  "required":["format","kristal_id","etat","activites"],
+  "properties":{
+    "format":{"const":"ekole.kristal-interactions/1.0"},
+    "kristal_id":{"type":"string","pattern":"^qc-pri-[a-z]+-[0-9]{3}$"},
+    "etat":{"const":"proposition_non_validee"},
+    "cours_annee_proposee":{"type":"integer","minimum":1,"maximum":6},
+    "annee_statut":{"type":"string"},
+    "activites":{"type":"array","items":{"type":"object","required":["id","type","competence_ciblee","usage"],"properties":{
+      "id":{"type":"string","pattern":"^[a-z0-9-]{3,48}$"},
+      "type":{"type":"string"},
+      "competence_ciblee":{"type":"string","minLength":12},
+      "usage":{"const":"entrainement_non_certifiant"}
+    },"additionalProperties":false}}
+  },"additionalProperties":false
+}

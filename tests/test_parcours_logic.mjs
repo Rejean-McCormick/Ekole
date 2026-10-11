@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const source=fs.readFileSync(path.join(root,'site/app.js'),'utf8');
+const config=JSON.parse(fs.readFileSync(path.join(root,'site/data/organisation-parcours.json'),'utf8'));
+const newPlacements=JSON.parse(fs.readFileSync(path.join(root,'site/data/parcours-affectations.4-etapes.exemple.json'),'utf8'));
+assert.equal(config.etapes.length,4);
+assert.equal(config.modele_bulletin_officiel.etapes,3);
+assert.match(source,/function renderMarkdown\(/);
+assert.doesNotMatch(source,/id="wave"/);
+const ctx=vm.createContext({URL,URLSearchParams,document:{baseURI:'http://example.local/'}, console});
+vm.runInContext(source.replace(/main\(\);\s*$/u,''),ctx,{filename:'app.js'});
+const testCourse=[{id:'qc-pri-ma-001',discipline:'Mathématique'},{id:'qc-pri-ma-002',discipline:'Mathématique'}];
+function assign(k,v){ctx[k+'_test']=v;vm.runInContext(`${k}=${k}_test`,ctx);}
+function evalx(s){return vm.runInContext(s,ctx);}
+assign('catalogue',{courses:testCourse});assign('school',config);assign('placements',structuredClone(newPlacements));assign('legacyYearMap',{});
+vm.runInContext('lookup=new Map(catalogue.courses.map(c=>[c.id,c]))',ctx);
+assert.doesNotThrow(()=>evalx('validateLoadedConfiguration()'));
+assert.equal(evalx('getStages(3).length'),4);
+assert.equal(evalx('stageIds("annee-3-etape-4").length'),0);
+const legacy=structuredClone(newPlacements);for(let y=1;y<=6;y++)delete legacy.cours_par_etape[`annee-${y}-etape-4`];
+legacy.cours_par_etape['annee-3-etape-1']=['qc-pri-ma-001'];
+assign('placements',legacy);assert.doesNotThrow(()=>evalx('validateLoadedConfiguration()'));
+assert.equal(evalx('Object.keys(placements.cours_par_etape).length'),24);
+assert.deepEqual(Array.from(evalx('yearCourseIds(3)')),['qc-pri-ma-001']);
+assert.equal(evalx('stageIds("annee-3-etape-4").length'),0);
+assign('legacyYearMap',{'qc-pri-ma-002':3});
+assert.deepEqual(Array.from(evalx('yearCourseIds(3)')),['qc-pri-ma-001','qc-pri-ma-002']);
+assert.equal(evalx('stageIds("annee-3-etape-4").length'),0);
+console.log('Contrôles JS réussis : quatre étapes, 3 bulletins distincts, migration v3 en mémoire, anciens niveaux préservés.');

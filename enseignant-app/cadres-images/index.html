@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr-CA"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ekole Enseignant · Cadres des images</title>
+<link rel="stylesheet" href="/cadres-images/frame-styles.css">
+<link rel="stylesheet" href="/cadres-images/style.css">
+</head><body>
+<header class="topbar"><a href="/" class="back">← Ekole Enseignant</a><strong>Cadres des images</strong><span>Configuration locale</span></header>
+<main>
+ <div class="intro"><p class="eyebrow">APPARENCE DES FICHES ÉLÈVE</p><h1>Choisir la présentation des illustrations</h1>
+ <p>Teste différents cadres sans toucher aux images. Le choix s’applique aux illustrations présentes dans les fiches Élève; les descriptions des images manquantes restent dans leur cadre pointillé.</p></div>
+ <div class="layout">
+  <section class="settings" aria-labelledby="typesHeading">
+   <h2 id="typesHeading">Type de cadre</h2>
+   <fieldset class="style-list" id="styleList"><legend class="sr-only">Choisir un type de cadre</legend>
+    <label class="style-choice"><input type="radio" name="frameStyle" value="epure" checked><span><strong>Épuré</strong><small>Grande image, aucun cadre supplémentaire.</small></span></label>
+    <label class="style-choice"><input type="radio" name="frameStyle" value="carte"><span><strong>Carte douce</strong><small>Fond blanc, coins arrondis et ombre légère.</small></span></label>
+    <label class="style-choice"><input type="radio" name="frameStyle" value="galerie"><span><strong>Galerie</strong><small>Passe-partout crème, présentation de musée.</small></span></label>
+    <label class="style-choice"><input type="radio" name="frameStyle" value="carnet"><span><strong>Carnet</strong><small>Papier chaleureux et bordure d’accent.</small></span></label>
+    <label class="style-choice"><input type="radio" name="frameStyle" value="bandeau"><span><strong>Bandeau</strong><small>Image bord à bord, sans recadrage.</small></span></label>
+    <label class="style-choice"><input type="radio" name="frameStyle" value="sombre"><span><strong>Focus sombre</strong><small>Fond foncé pour mettre en valeur l’image.</small></span></label>
+    <label class="style-choice"><input type="radio" name="frameStyle" value="bordure"><span><strong>Bordure colorée</strong><small>Contour personnalisable autour de l’illustration.</small></span></label>
+   </fieldset>
+   <div class="color-choice" id="colorChoice" hidden>
+    <label for="borderColorPicker"><strong>Couleur de la bordure</strong></label>
+    <div class="color-inputs">
+     <input type="color" id="borderColorPicker" value="#1e6864" aria-label="Choisir la couleur de la bordure">
+     <input type="text" id="borderColorHex" value="#1e6864" maxlength="7" spellcheck="false" pattern="#[a-fA-F0-9]{6}" inputmode="text" aria-label="Code hexadécimal de la bordure">
+     <button type="button" id="colorResetButton" class="outline">Couleur par défaut</button>
+    </div>
+    <small>Couleur par défaut : #1e6864. La couleur est enregistrée avec ton style.</small>
+   </div>
+   <h2 id="sizeHeading">Taille de l’image</h2>
+   <fieldset class="size-list"><legend class="sr-only">Taille maximale des illustrations</legend>
+    <label><input type="radio" name="frameSize" value="compact"><span>Compacte</span></label>
+    <label><input type="radio" name="frameSize" value="normal" checked><span>Normale</span></label>
+    <label><input type="radio" name="frameSize" value="grand"><span>Grande</span></label>
+   </fieldset>
+   <div class="actions"><button id="saveButton" type="button" class="primary">Enregistrer pour Ekole Élève</button><button id="resetButton" type="button" class="outline">Revenir au style épuré</button></div>
+   <p id="status" class="status" role="status" aria-live="polite">Chargement des préférences…</p>
+  </section>
+  <section class="preview" aria-labelledby="previewHeading">
+   <div class="preview-head"><div><p class="eyebrow">PRÉVISUALISATION IMMÉDIATE</p><h2 id="previewHeading">Ce que verra l’enfant</h2></div><span id="styleName" class="tag">Épuré</span></div>
+   <div class="student-card"><h3>Joue avec les fractions</h3><p class="hint">Ce que nous allons découvrir</p>
+    <figure class="kristal-visual has-media" id="liveFrame">
+     <img class="kristal-visual-img" id="liveImage" alt="Exemple de représentation visuelle des fractions" hidden>
+     <div class="demo-art" id="demoArt" role="img" aria-label="Exemple : disque divisé en quatre parts et collection de jetons">
+      <svg viewBox="0 0 620 365" aria-hidden="true" focusable="false">
+       <rect width="620" height="365" rx="14" fill="#e4efe7"/>
+       <rect x="25" y="28" width="570" height="310" rx="16" fill="#fcfaf3"/>
+       <circle cx="203" cy="183" r="115" fill="#f5c763" stroke="#ad823c" stroke-width="3"/>
+       <path d="M203 183 L203 68 A115 115 0 0 1 318 183Z" fill="#7bb4ad" stroke="#ad823c" stroke-width="3"/>
+       <path d="M203 183 L318 183 A115 115 0 0 1 203 298Z" fill="#7bb4ad" stroke="#ad823c" stroke-width="3"/>
+       <line x1="88" y1="183" x2="318" y2="183" stroke="#ad823c" stroke-width="3"/><line x1="203" y1="68" x2="203" y2="298" stroke="#ad823c" stroke-width="3"/>
+       <rect x="372" y="88" width="181" height="202" rx="16" fill="#e9ece9" stroke="#b1c9c4" stroke-width="2"/>
+       <g fill="#d66b4d"><circle cx="419" cy="136" r="20"/><circle cx="474" cy="136" r="20"/><circle cx="529" cy="136" r="20"/></g>
+       <g fill="#dbaf78"><circle cx="419" cy="200" r="20"/><circle cx="474" cy="200" r="20"/><circle cx="529" cy="200" r="20"/></g>
+      </svg>
+     </div>
+    </figure>
+    <p>Représenter une fraction comme partie d’un tout ou d’une collection.</p>
+   </div>
+   <p class="tip">Si l’image des fractions existe dans Ekole, cet aperçu l’utilise. Sinon, il montre un exemple schématique.</p>
+   <p class="tip"><strong>Important :</strong> les diagrammes ne sont jamais coupés : les images conservent toutes leurs proportions.</p>
+   <a id="studentLink" href="http://127.0.0.1:8765/eleve/?cours=qc-pri-ma-012" target="_blank" rel="noopener noreferrer">Ouvrir une vraie fiche Élève ↗</a>
+  </section>
+ </div>
+</main>
+<script src="/cadres-images/app.js" defer></script>
+</body></html>

@@ -1,0 +1,68 @@
+/* Ekole v19: presentation choices for images actually loaded from Kristals.
+ * Missing images retain their dashed descriptive placeholders.
+ * No object-fit:cover: fractions, diagrams and labels must never be cropped.
+ */
+:root{--ekole-img-max-height:470px;--ekole-image-border-color:#1e6864}
+:root[data-image-size="compact"]{--ekole-img-max-height:310px}
+:root[data-image-size="grand"]{--ekole-img-max-height:660px}
+.kristal-visual.has-media:not(.kristal-visual-compact){
+  box-sizing:border-box;display:flex;flex-direction:column;align-items:stretch;
+  min-height:0;margin:20px 0;border:0;border-radius:0;padding:0;
+  background:transparent;box-shadow:none;overflow:hidden;color:inherit;
+}
+.kristal-visual.has-media:not(.kristal-visual-compact) .kristal-visual-img{
+  display:block;width:100%;height:auto;max-height:var(--ekole-img-max-height);
+  object-fit:contain;object-position:center;border-radius:14px;margin:0 auto;
+}
+/* 1. Sans cadre / editorial image */
+:root[data-image-frame="epure"] .kristal-visual.has-media:not(.kristal-visual-compact){
+  background:transparent;padding:0;border:0;box-shadow:none;
+}
+/* 2. Light classic card */
+:root[data-image-frame="carte"] .kristal-visual.has-media:not(.kristal-visual-compact){
+  padding:15px;background:#fff;border:1px solid #d3e6e2;
+  border-radius:23px;box-shadow:0 10px 28px rgba(18,73,68,.09);
+}
+/* 3. Gallery / paper mat */
+:root[data-image-frame="galerie"] .kristal-visual.has-media:not(.kristal-visual-compact){
+  padding:23px;background:#faf8f2;border:1px solid #e1ddd1;
+  border-radius:5px;box-shadow:0 7px 20px rgba(51,55,53,.09);
+}
+:root[data-image-frame="galerie"] .kristal-visual.has-media:not(.kristal-visual-compact) img{border-radius:2px}
+/* 4. Warm notebook */
+:root[data-image-frame="carnet"] .kristal-visual.has-media:not(.kristal-visual-compact){
+  padding:15px;background:#fff9eb;border:1px solid #efdab2;
+  border-left:7px solid #d99a41;border-radius:13px;
+}
+/* 5. A photo band, all pixels visible */
+:root[data-image-frame="bandeau"] .kristal-visual.has-media:not(.kristal-visual-compact){
+  background:#eaf1ee;border-radius:22px;padding:0;box-shadow:none;
+}
+:root[data-image-frame="bandeau"] .kristal-visual.has-media:not(.kristal-visual-compact) img{border-radius:0}
+/* 6. Dark cinema */
+:root[data-image-frame="sombre"] .kristal-visual.has-media:not(.kristal-visual-compact){
+  background:#173130;padding:16px;border-radius:22px;
+  box-shadow:0 9px 24px rgba(10,31,31,.17);
+}
+:root[data-image-frame="sombre"] .kristal-visual.has-media:not(.kristal-visual-compact) img{border-radius:10px}
+/* 7. Colored frame. Color comes from the validated teacher configuration. */
+:root[data-image-frame="bordure"] .kristal-visual.has-media:not(.kristal-visual-compact){
+  padding:12px;background:#fff;border:5px solid var(--ekole-image-border-color,#1e6864);
+  border-radius:23px;box-shadow:0 5px 18px rgba(15,65,61,.10);
+}
+:root[data-image-frame="bordure"] .kristal-visual.has-media:not(.kristal-visual-compact) img{border-radius:11px}
+/* Thumbnails never inherit the large frame / frame height. */
+.kristal-visual.kristal-visual-compact.has-media{
+  min-height:0;margin:4px 0 6px;padding:0;border:0;border-radius:12px;
+  background:transparent;box-shadow:none;overflow:hidden;
+}
+.kristal-visual.kristal-visual-compact.has-media .kristal-visual-img{
+  display:block;width:100%;height:auto;max-height:140px;object-fit:contain;margin:0 auto;
+}
+@media(max-width:560px){
+  :root[data-image-frame="galerie"] .kristal-visual.has-media:not(.kristal-visual-compact){padding:12px}
+  :root[data-image-frame="carte"] .kristal-visual.has-media:not(.kristal-visual-compact),
+  :root[data-image-frame="carnet"] .kristal-visual.has-media:not(.kristal-visual-compact),
+  :root[data-image-frame="sombre"] .kristal-visual.has-media:not(.kristal-visual-compact),
+  :root[data-image-frame="bordure"] .kristal-visual.has-media:not(.kristal-visual-compact){padding:10px}
+}

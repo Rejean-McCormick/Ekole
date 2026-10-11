@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.secret
+config.local.*
+/vendor/reference-only/*.zip
+/site/.DS_Store
+*.ekole-backup-*

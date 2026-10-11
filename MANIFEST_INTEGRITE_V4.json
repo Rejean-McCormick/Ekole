@@ -1,0 +1,256 @@
+{
+  "format": "ekole.overlay-files/1.0",
+  "version": "4.0",
+  "kristal": "societes-autochtones-quebec",
+  "scope": "corpus_autonome_encyclopedique_candidat_non_approuve",
+  "fichiers": [
+    {
+      "path": "README_ENCYCLOPEDIE_AUTOCHTONES_V4.md",
+      "sha256": "ae0304ff66d8ad1d70acf850240d5fe8587c5e41a766c33378ef808ce52f5578"
+    },
+    {
+      "path": "cours-references/qc-pri-us-009/PROPOSITION_EXTENSION_ENCYCLOPEDIQUE_V4.json",
+      "sha256": "2aab38ffadf32a2d201f0de7905918c2402b1272c7576b5dc5570bc9eadf4ca1"
+    },
+    {
+      "path": "docs/CONTRAT_LECTEUR_HORS_LIGNE.md",
+      "sha256": "06de8b7374ceddd11914019438edf3e25c6b2ad512d745751006fc0e45be8370"
+    },
+    {
+      "path": "docs/REVUE_DOCUMENTAIRE_V4.md",
+      "sha256": "1ebe13a347f7653f9fbac006d5ea6c8306cb52eb5afe234fe54181621befc67f"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/.gitignore",
+      "sha256": "ba9e766905d86932af10e20f99bdafe6b4a37eab2b45a1d91e011bc12985858f"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/AGENTS.md",
+      "sha256": "211615e096aa531e0f933cd6562802dffa48fa4227ba3211b734f49fbafff406"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/README.md",
+      "sha256": "f07bb21805e3fd68269ae0e8b8943f031e80cb4e23807c8de73c6e6325185a68"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/authoring/ALIGNEMENT.md",
+      "sha256": "f9b8391cc9f16a527a8d9e86630c3b2191b9662de566649031c0649947963b1f"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/authoring/BRIEF_REDACTION.md",
+      "sha256": "37351a4a767a7a76a10e411c16731b10d0bd919823e342c38c1cbbc27558fd83"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/authoring/CONTRAT_PEDAGOGIQUE.json",
+      "sha256": "46b5399f7e499cbdd2b40b4336b0a4d40362116c10f6e45617ab0a9bfbdbedca"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/authoring/PARCOURS.md",
+      "sha256": "4bf7f634e8928f39809de4e3f399b7eb2ce0a6b07c5714fd00a8b9dbe002a93b"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build/v9/artifacts/urn-kristal-societes-autochtones-quebec-encyclopedie-v4-6a83bf2ae2.logical-artifact.json",
+      "sha256": "57db2afe1c2c2515c13d49454aa0c2593cf163a5e9e8e69f3f87b7ff4558299f"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build/v9/artifacts/urn-kristal-societes-autochtones-quebec-graphe-v3-45c82fcfa0.logical-artifact.json",
+      "sha256": "d5d0df317d14354255a6104326990e1d54210885ffb0195febc0681416d089c1"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build/v9/build-receipt.json",
+      "sha256": "12d50d381d4d7e2b59fd50fa04f079abbb106bc9b87e93e7bfefbf09ad01a676"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build/v9/materializations/urn-kristal-societes-autochtones-quebec-encyclopedie-v4-6a83bf2ae2.materialization.json",
+      "sha256": "e69910de6dc800107ae3a09af7fe9338a597c5a8c2431bd3fd507ab89139a1af"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build/v9/materializations/urn-kristal-societes-autochtones-quebec-graphe-v3-45c82fcfa0.materialization.json",
+      "sha256": "2efab3fc0fe52c63b830959fc87f0ba1591c90140c59afdc013d5795996115b9"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build/v9/state-snapshot.json",
+      "sha256": "550300f8353dc1d06c10e0855f3a02d31ea841d4d4fb19f255c56fc3a2713727"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build/v9/v9-capabilities.json",
+      "sha256": "d09265189501362933039efd79bd003a53669caf3019ce33f63bc281b5b31016"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build-candidats/v4/artifacts/urn-kristal-societes-autochtones-quebec-encyclopedie-v4-6a83bf2ae2.logical-artifact.json",
+      "sha256": "57db2afe1c2c2515c13d49454aa0c2593cf163a5e9e8e69f3f87b7ff4558299f"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build-candidats/v4/artifacts/urn-kristal-societes-autochtones-quebec-graphe-v3-45c82fcfa0.logical-artifact.json",
+      "sha256": "d5d0df317d14354255a6104326990e1d54210885ffb0195febc0681416d089c1"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build-candidats/v4/build-receipt.json",
+      "sha256": "8d67e619263716c0e160126d230ecd1e0b3a12e93286875ac914b4bf1617bba7"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build-candidats/v4/materializations/urn-kristal-societes-autochtones-quebec-encyclopedie-v4-6a83bf2ae2.materialization.json",
+      "sha256": "e69910de6dc800107ae3a09af7fe9338a597c5a8c2431bd3fd507ab89139a1af"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build-candidats/v4/materializations/urn-kristal-societes-autochtones-quebec-graphe-v3-45c82fcfa0.materialization.json",
+      "sha256": "2efab3fc0fe52c63b830959fc87f0ba1591c90140c59afdc013d5795996115b9"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build-candidats/v4/state-snapshot.json",
+      "sha256": "667796550b855acbcc82b6c94c87a6a2f7a812764d7c94ab2db8fe3e96462fc8"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/build-candidats/v4/v9-capabilities.json",
+      "sha256": "d09265189501362933039efd79bd003a53669caf3019ce33f63bc281b5b31016"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/canon/domain/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/canon/domain/encyclopedie-v4.json",
+      "sha256": "2c3e5f0bdac4bda80893097c4d3f80e96457658217312e593632528229836b42"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/canon/domain/graphe-v3.json",
+      "sha256": "d0b3183bf6f585b26f863dbffcc2f3ef1974660bceb3ef46ee9578a398e61751"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/canon/epistemic/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/canon/operations/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/canon/state.index.json",
+      "sha256": "344255ffaacf016f5172a3231d1b2c7f29c17a710fc6aee78a4a75073efbd758"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/00_INTENT_AND_SCOPE.md",
+      "sha256": "ad92d86deb4d0874a0e4e8032cd34389d40be3ceed184dcd7ee3c98e49a4ce66"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/01_SEMANTIC_BOUNDARY.md",
+      "sha256": "e64f8d02ed78ec658d24e28f5b3350e1f9019cb3a76435db87c7f3e268af52cc"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/02_NATIVE_MODEL.md",
+      "sha256": "d537d1aed326bca7a4b76651eecdb3ab983cdeaf9bd49ccbae1404bd96257b1b"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/03_EPISTEMIC_MODEL.md",
+      "sha256": "6418e38b6e54893d2a03bf702f754b192f48679ad89853b405e1b325260a53b7"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/04_CANONICAL_DERIVED.md",
+      "sha256": "9ca1154b18ae0980a96e562cedbef1ce85a2912940cf52819dd0fd402e1b1345"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/05_ORIENTATIONS.md",
+      "sha256": "4ef452034359517fbbc8038117817fc8695d5c3effc12544e8b7437ac6323b77"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/06_VALIDATION.md",
+      "sha256": "6e682d02844884e0e84511b8b71089bcbb0918170f0676e1a5843e2f1a8aad3d"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/07_HOSTING_AND_PUBLICATION.md",
+      "sha256": "ae4e01c7a5ecdb94b4603452bdc78973771b000addd3ed83ebf2082db1d5022b"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/08_GLOSSARY.md",
+      "sha256": "1f6375e83316f360dc9e98383876a5cea39f9d826293c9a9ee4dbb22a7928c01"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/09_CADRE_PEDAGOGIQUE.md",
+      "sha256": "91c128ef7ff366a85de2134925eb8f5ac286effe58085cffc1208a3ee4baeb46"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/docs/PROFILE_NOTES.md",
+      "sha256": "5f62161b993e08b75068058c91f55fb7e105775d86fcf52e38fdd2f6be7d7d44"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/kristal.workspace.json",
+      "sha256": "becca580633d43e3d881982a35f526d9554a7dfb4e67007035ee0a85e5fc07dd"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/runtime/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/sources/source-catalog.json",
+      "sha256": "d7252a909fd18022eb331328e5fe169f17ff97a656167e91d43fcd60c8a7d9fe"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/state/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/tools/_templates/AGENTS.kristal.md",
+      "sha256": "211615e096aa531e0f933cd6562802dffa48fa4227ba3211b734f49fbafff406"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/tools/_templates/AI_START_HERE.md",
+      "sha256": "76cbb2c9564fc4098754faffcfe21923389a2de5839faf907edfd691d78257ca"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/tools/_templates/github-hosting.json",
+      "sha256": "774e87548a6917b1b25e7c610d727d19af4df081897a816a02744ff5eaf021c9"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/tools/_templates/gitignore-kristal.txt",
+      "sha256": "ba9e766905d86932af10e20f99bdafe6b4a37eab2b45a1d91e011bc12985858f"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/tools/_templates/projection.json",
+      "sha256": "9a93c6e5ae26d5d989458a3c7dd43fbe3b5d878a23a6db61d9cc82594d068eb2"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/tools/_templates/readme-kristal.md",
+      "sha256": "ad2c1b129935b60f805c233e2d9e71cf88e7bf7835a15150ea9fe3dfdfa9571c"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/tools/_templates/source-catalog.json",
+      "sha256": "4e11d46142630914cfd1fb447c6b065d9143d24d179a18edc1162f3063edfce9"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/tools/_templates/state.index.json",
+      "sha256": "28a1ce910aa079e50199b467487fac9af0584ad43360200f5a4666d2481e1c08"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/tools/_templates/workspace.json",
+      "sha256": "6e048d7ed0086aa47ca6ebd1a3d3798057a5d9861bc2a5b732d04c8b0cc23a2d"
+    },
+    {
+      "path": "kristals/societes-autochtones-quebec/tools/kristal.py",
+      "sha256": "88cb33e3a96242c7c0f579f0ddd0634d300bb104cdd877019936863bd500b077"
+    },
+    {
+      "path": "site/eleve/encyclopedie-autochtones/app.js",
+      "sha256": "bf16169421e7c239b04f6a1a7c03b6d23d58d7ea67b12cfbee4c875c0de80cff"
+    },
+    {
+      "path": "site/eleve/encyclopedie-autochtones/bibliotheque.json",
+      "sha256": "9ca661fa9e63e9422847d3686f9c71ea25bfb5314d9b1c2736b9044e92871ac0"
+    },
+    {
+      "path": "site/eleve/encyclopedie-autochtones/index.html",
+      "sha256": "7e3c383a930bcb97138f5a88f2f35931b2cc71bc32915dc8189881d4b7887324"
+    },
+    {
+      "path": "site/eleve/encyclopedie-autochtones/style.css",
+      "sha256": "a8a7141c65247def5e3415f22885786fa712cabfc26a3ef2d7c1833cf66d731e"
+    },
+    {
+      "path": "tests/test_encyclopedie_autochtones_v4.py",
+      "sha256": "27eac20836801c96bd331a0faf73927a3ba5636111338443b392c1f75b4fca1e"
+    },
+    {
+      "path": "tools/encyclopedie_autochtones_v4.py",
+      "sha256": "6bde127a9f64f49b9f7183146e0a4440b781bd87470675abfb8c26058115ff87"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ekole Core | Administration et navigation</title>
+  <meta name="description" content="Ekole : 202 microparcours pédagogiques, navigation par cycles, années, quatre étapes pédagogiques et cours.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="top">
+  <a class="brand" href="./" aria-label="Ekole accueil">
+    <span class="mark" aria-hidden="true"><img src="assets/ekole-logo.svg" alt=""></span>
+    <span><strong>Ekole</strong><small>École primaire · Québec · portée universelle</small></span>
+  </a>
+  <nav aria-label="Navigation principale">
+    <a href="./?page=accueil">Accueil</a>
+    <a href="./?page=parcours">Parcours</a>
+    <a href="./?page=annees">Années</a>
+    <a href="./?page=cours">Cours</a>
+    <a href="./?page=disciplines">Domaines</a>
+    <a href="./?page=familles">Familles</a>
+    <a href="./?page=enseignants">Enseignement</a>
+    <a href="./?page=langues">Langues</a>
+    <a href="./eleve/" class="mode-link">Ekole Élève ↗</a>
+    <a href="./enseignant/" class="mode-link">Ekole Enseignant ↗</a>
+    <a href="http://127.0.0.1:4177/" target="_blank" rel="noopener noreferrer" title="Konstellation Light : prévisualisation locale indépendante, si démarrée">Konstellation Light ↗</a>
+  </nav>
+</header>
+<div class="ribbon" role="status">Ekole Core · Navigation et administration de démonstration · Voir les expériences Élève et Enseignant</div>
+<div class="layout">
+  <aside class="sidebar" aria-label="Outils de découverte">
+    <label for="search">Rechercher</label>
+    <input id="search" type="search" placeholder="Notion, titre, identifiant…">
+    <label for="subject">Domaine / matière</label>
+    <select id="subject"><option value="">Tous les domaines</option></select>
+    <label for="level">Niveau scolaire</label>
+    <select id="level">
+      <option value="">Tous les niveaux</option>
+      <option value="1">1re année</option>
+      <option value="2">2e année</option>
+      <option value="3">3e année</option>
+      <option value="4">4e année</option>
+      <option value="5">5e année</option>
+      <option value="6">6e année</option>
+    </select>
+    <label for="stage">Étape pédagogique</label>
+    <select id="stage"><option value="">Toutes les étapes</option><option value="1">Étape 1</option><option value="2">Étape 2</option><option value="3">Étape 3</option><option value="4">Étape 4</option></select>
+    <p class="note">Parcours : cycle → année → 4 étapes pédagogiques (2 à l’automne, 2 en hiver) → cours. Le bulletin officiel comporte 3 étapes distinctes.</p>
+    <div class="side-links icon-legend-block">
+      <h3>Domaines <span class="sr-only">et matières</span></h3>
+      <div id="domainLegend"></div>
+    </div>
+    <div class="side-links">
+      <h3>Espaces</h3>
+      <div id="pageLinks"></div>
+    </div>
+  </aside>
+  <main id="main"></main>
+</div>
+<footer>Ekole Core · Navigation par cours, parcours, cycles, années et étapes · Aucun accès scolaire authentifié ici</footer>
+<script src="app.js"></script>
+</body>
+</html>

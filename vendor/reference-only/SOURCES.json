@@ -1,0 +1,68 @@
+[
+  {
+    "filename": "kompiler-source.zip",
+    "sha256": "9bbc1b5d6ebc407badc559e76a79b7c5d2909a045f9eb02b7e4330832e9cc93e",
+    "bytes": 367475,
+    "execution_policy": "reference_only_never_auto_install"
+  },
+  {
+    "filename": "konstellation-light-source.zip",
+    "sha256": "eaa99835c7bc347e305bc96559f5edc4d09a9caf167e7c933c51a75ba419d44b",
+    "bytes": 114951,
+    "execution_policy": "reference_only_never_auto_install"
+  },
+  {
+    "filename": "konstellation-source.zip",
+    "sha256": "08d6eb863f3f4bdebc130fe188f6568ab7fec90fcdb566e398625d65afc17363",
+    "bytes": 2579226,
+    "execution_policy": "reference_only_never_auto_install"
+  },
+  {
+    "filename": "kristal-authoring-kit-source.zip",
+    "sha256": "2c342c371c20dd6ee68bc34b8a744c40f067143fadc5990d32cf4ffb5f042fd6",
+    "bytes": 306311,
+    "execution_policy": "reference_only_never_auto_install"
+  },
+  {
+    "filename": "kristal-framework-v10-source.zip",
+    "sha256": "efd4fd5690983bca4f2a5ad146ef59c0fbe74aed9bd6cbd696989fa3e4969cf5",
+    "bytes": 1349580,
+    "execution_policy": "reference_only_never_auto_install"
+  },
+  {
+    "filename": "kristal-manager-source.zip",
+    "sha256": "d3efc70cd42bdfc17343ef22c43ebc719e871f4947a828ac75cdc465248a9a4a",
+    "bytes": 35587,
+    "execution_policy": "reference_only_never_auto_install"
+  },
+  {
+    "filename": "mediatheque-source.zip",
+    "sha256": "7287cc2dac0056b712c71b891998f583792365601f7f7fc972f9a4134f309736",
+    "bytes": 2363504,
+    "execution_policy": "reference_only_never_auto_install"
+  },
+  {
+    "filename": "semantik-architect-source.zip",
+    "sha256": "51586fa4aeb71c4e4c7309f233219006871a0fd2a02c484c6a9d79237e5c3a3f",
+    "bytes": 305071,
+    "execution_policy": "reference_only_never_auto_install"
+  },
+  {
+    "filename": "uckk-legacy-v04-reference.zip",
+    "sha256": "2f605dd2bba336d41d98ca2d4bac813e939ba9dc6f5d22e52a49c4672853e9c6",
+    "bytes": 772007,
+    "execution_policy": "reference_only_never_auto_install"
+  },
+  {
+    "filename": "uckk-moodle-source.zip",
+    "sha256": "047fdc36100412ef490d2b2aca17dca565ed7a6c3e9f25bf544845f895ce1683",
+    "bytes": 6434562,
+    "execution_policy": "reference_only_never_auto_install"
+  },
+  {
+    "filename": "uckk-ops-console-source.zip",
+    "sha256": "13e755c92ec9685a850d8c7966a456788f8e9325cf22db19ebd191963b0aef51",
+    "bytes": 330652,
+    "execution_policy": "reference_only_never_auto_install"
+  }
+]

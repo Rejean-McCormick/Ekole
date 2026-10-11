@@ -1,0 +1,18 @@
+{
+  "format": "ekole.student-integrations/0.1",
+  "konstellation_light": {
+    "enabled": false,
+    "public_url": null,
+    "verified_collection": false,
+    "note": "Activer seulement apres construction et publication d une collection Kristal v10 publique et vérifiée."
+  },
+  "mediatheque": {
+    "enabled": false,
+    "public_url": null,
+    "rights_checked": false
+  },
+  "moodle": {
+    "enabled": false,
+    "public_url": null
+  }
+}

@@ -1,0 +1,22 @@
+<!doctype html><html lang="fr-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ekole Enseignant — Album d'images</title><link rel="stylesheet" href="/images-album/style.css"><link rel="stylesheet" href="/images-album/frame-styles.css"></head>
+<body><header class="top"><a href="/">← Ekole Enseignant</a><strong>Gestionnaire d'images Ekole</strong><a href="/cadres-images/">Configurateur complet des cadres ↗</a></header>
+<main>
+ <section class="intro"><div><p class="kicker">INVENTAIRE · ALBUM · PROMPTS · CADRES</p><h1>Toutes les illustrations au même endroit</h1><p>Un emplacement par visuel déclaré. Les cours et années sont des propositions à confirmer. Les images sont toujours conservées dans leur Kristal d'origine.</p></div><div class="buttons"><button id="rescan" type="button">↻ Actualiser l'inventaire</button><button id="sync" type="button" class="primary">Synchroniser avec Ekole Élève</button></div></section>
+ <section class="metrics" aria-label="Bilan des images"><div><b id="totalSlots">—</b><span>Emplacements</span></div><div><b id="presentCount">—</b><span>Présentes</span></div><div><b id="missingCount">—</b><span>Manquantes</span></div><div><b id="pendingCount">—</b><span>À synchroniser / sans source</span></div></section>
+ <div class="layout">
+  <aside class="filters" aria-label="Filtres de l'album"><h2>Explorer</h2>
+   <label>Rechercher<input id="search" type="search" placeholder="Cours, code, notion, prompt…"></label>
+   <label>Année<select id="year"><option value="">Toutes les années</option></select></label>
+   <label>Matière<select id="subject"><option value="">Toutes les matières</option></select></label>
+   <label>Cours<select id="course"><option value="">Tous les cours</option></select></label>
+   <label>Emplacement<select id="slot"><option value="">Tous les emplacements</option></select></label>
+   <label>Statut<select id="state"><option value="">Tous les statuts</option><option value="presente">Image présente</option><option value="manquante">Image manquante</option><option value="a_synchroniser">À synchroniser</option><option value="source_absente">Kristal visuel source absent</option></select></label>
+   <div class="buttons"><button id="clearFilters" type="button" class="quiet">Effacer les filtres</button><button id="csv" type="button" class="quiet">Exporter l'inventaire CSV</button></div>
+   <p id="orphanNote" class="hint"></p>
+  </aside>
+  <section class="album"><div class="album-head"><div><h2>Album</h2><p id="resultCount">Chargement…</p></div><label>Affichage<select id="view"><option value="grid">Vignettes</option><option value="list">Liste</option></select></label></div>
+   <div id="cards" class="cards" aria-label="Illustrations"></div><div class="pagination"><button id="previous" type="button" class="quiet">← Précédent</button><span id="pageInfo"></span><button id="next" type="button" class="quiet">Suivant →</button></div>
+  </section>
+  <aside class="details" id="details" aria-live="polite"><h2>Fiche d’image</h2><p>Choisis une vignette pour voir le prompt, remplacer ou effacer son image et configurer les cadres.</p></aside>
+ </div><p id="globalStatus" class="global-status" role="status" aria-live="polite"></p>
+</main><script src="/images-album/app.js" defer></script></body></html>

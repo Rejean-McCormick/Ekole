@@ -1,0 +1,42 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const source=fs.readFileSync(path.join(root,'site/app.js'),'utf8');
+const propositions=JSON.parse(fs.readFileSync(path.join(root,'site/data/parcours-propositions.json'),'utf8'));
+const ctx=vm.createContext({URL,URLSearchParams,document:{baseURI:'http://example.local/'}, console});
+vm.runInContext(source.replace(/main\(\);\s*$/u,''),ctx,{filename:'site/app.js'});
+const a=(key,val)=>{ctx[key+'_test']=val;vm.runInContext(`${key}=${key}_test`,ctx);};
+const ev=s=>vm.runInContext(s,ctx);
+const sample=[{id:'qc-pri-ma-009',discipline:'Mathématique'},{id:'qc-pri-fr-004',discipline:'Français, langue d’enseignement'}];
+const model={annees:Array.from({length:6},(_,i)=>({niveau:i+1})), etapes:Array.from({length:4},(_,i)=>({numero:i+1,periode:i<2?'automne':'hiver'})),cycles:[{id:'cycle-1',annees:[1,2]},{id:'cycle-2',annees:[3,4]},{id:'cycle-3',annees:[5,6]}]};
+const empty=Object.fromEntries(Array.from({length:6},(_,y)=>Array.from({length:4},(_,s)=>[`annee-${y+1}-etape-${s+1}`,[]])).flat());
+a('lookup',new Map(sample.map(c=>[c.id,c])));
+a('school',model);
+a('placements',{cours_par_etape:structuredClone(empty)});
+a('legacyYearMap',{});
+const entries=Object.fromEntries(sample.map(c=>[c.id, propositions.affectations_proposees[c.id]]));
+a('propositions',{format:'ekole.parcours-propositions/0.1',affectations_proposees:entries});
+ev('applySuggestedPlacements()');
+assert.equal(ev('courseYears("qc-pri-ma-009")[0]'),3);
+assert.equal(ev('proposedIds.size'),2);
+assert.match(ev('coursePlacementLabel("qc-pri-ma-009")'),/proposition à valider/);
+// Manual stage overrides must win even if draft would place elsewhere.
+const withApproval=structuredClone(empty);withApproval['annee-2-etape-3']=['qc-pri-ma-009'];
+a('placements',{cours_par_etape:withApproval});
+ev('applySuggestedPlacements()');
+assert.deepEqual(Array.from(ev('courseYears("qc-pri-ma-009")')),[2]);
+assert.equal(ev('proposedIds.has("qc-pri-ma-009")'),false);
+assert.equal(ev('stagePlacements("qc-pri-ma-009")[0].stage'),3);
+// Legacy year overrides projected year and stays without invented stage.
+a('placements',{cours_par_etape:structuredClone(empty)});
+a('legacyYearMap',{'qc-pri-fr-004':6});
+ev('applySuggestedPlacements()');
+assert.deepEqual(Array.from(ev('courseYears("qc-pri-fr-004")')),[6]);
+assert.equal(ev('stagePlacements("qc-pri-fr-004").length'),0);
+// All grade-stage containers have at least one suggestion on the real roster.
+assert.equal(Object.values(propositions.cours_par_etape).filter(xs=>xs.length).length,24);
+assert.equal(Object.values(propositions.cours_par_etape).reduce((n,x)=>n+x.length,0),202);
+console.log('JS bridge: propositions visibles, validation pending, precedence of manual year and stage, 24 pathways OK');

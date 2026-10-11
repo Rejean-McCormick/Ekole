@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="ekole-csrf" content="__CSRF_TOKEN__">
+<meta name="description" content="Console locale d'opérations pour Ekole.">
+<title>Ekole — OpsConsole</title>
+<link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#workspace">Aller au contenu</a>
+<header class="topbar">
+ <div class="identity"><span class="brandmark" aria-hidden="true"><img src="/logo.svg" alt=""></span><span><strong>Ekole <span class="lowweight">OpsConsole</span></strong><small>Poste de pilotage local · Kristal / UCKK</small></span></div>
+ <div class="topright"><span class="statusdot" aria-hidden="true"></span><span>Local uniquement</span><a class="external-link" href="http://127.0.0.1:8765/" target="_blank" rel="noopener noreferrer">Ouvrir Ekole ↗</a></div>
+</header>
+<div class="app-shell">
+ <aside class="sidebar" aria-label="Navigation de la console">
+  <div class="sectionlabel">TRAVAIL</div>
+  <nav id="menu" class="menu">
+   <button class="navbtn selected" type="button" data-view="dashboard">⌂ <span>Vue d’ensemble</span></button>
+   <button class="navbtn" type="button" data-view="inspector">▦ <span>Inspecteur Kristals</span></button>
+   <button class="navbtn" type="button" data-view="actions">▶ <span>Lanceur d’actions</span></button>
+   <button class="navbtn" type="button" data-view="deployment">⇪ <span>Déploiement local</span></button>
+   <button class="navbtn" type="button" data-view="integrations">◇ <span>Connexions</span></button>
+   <button class="navbtn" type="button" data-view="logs">≡ <span>Rapports & journal</span></button>
+  </nav>
+  <div class="sidebar-foot"><div class="smallbrand">#1e6864</div><p>Le rapport explique.<br>Le journal diagnostique.<br>L’interface résume.</p><span>Ekole OpsConsole 0.1 · Prototype</span></div>
+ </aside>
+ <main id="workspace" class="workspace">
+  <div class="page-head"><div><div class="eyebrow">Console d’exploitation</div><h1 id="view-title">Vue d’ensemble</h1><p id="view-description">État du dépôt local et actions sûres.</p></div><div class="head-buttons"><button class="btn ghost" id="refresh" type="button">↻ Actualiser</button></div></div>
+  <div id="notice" class="notice hidden" role="status" aria-live="polite"></div>
+  <section id="dashboard" class="panel active" aria-label="Vue d'ensemble">
+   <div class="statgrid" id="stats"><div class="stat skeleton">Chargement…</div></div>
+   <div class="cols-2">
+    <div class="card"><h2>Santé du workspace</h2><div id="health" class="status-list"><p>Lecture en cours…</p></div></div>
+    <div class="card"><h2>Chaîne de production</h2><ol class="steps"><li><b>Kristals / catalogue</b><small>États pédagogiques indépendants, non publiés.</small></li><li><b>Portail Ekole</b><small>Fiches, navigation et plans de projection.</small></li><li><b>Export et prévisualisation</b><small>Site statique local; pas de publication distante.</small></li><li><b>Qualification v10</b><small>GitHub et attestation : traitement distinct à réaliser.</small></li></ol></div>
+   </div>
+   <div class="card"><h2>Actions fréquentes</h2><div class="button-grid"><button class="btn primary" type="button" data-action="verify">Vérifier les 202 Kristals</button><button class="btn" type="button" data-action="build">Construire le portail</button><button class="btn" type="button" data-action="preview-start">Démarrer la prévisualisation</button><button class="btn" type="button" data-action="moodle-plan">Générer le plan Moodle</button></div><p class="hint">Les actions de cette page ne modifient ni Moodle, ni GitHub, ni un serveur distant.</p></div>
+  </section>
+  <section id="inspector" class="panel" aria-label="Inspecteur Kristals">
+   <div class="card"><h2>Explorer les Kristals</h2><div class="filters"><label>Rechercher<input type="search" id="find" placeholder="ID, titre, notion…"></label><label>Discipline<select id="discipline"><option value="">Toutes</option></select></label><label>Vague<select id="wave"><option value="">Toutes</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></label></div><p class="hint" id="count-results"></p><div id="course-list" class="course-list"></div></div>
+   <div class="card" id="course-detail"><h2>Fiche d’inspection</h2><p>Choisir un Kristal pour examiner ses 14 fichiers, ses items d’évaluation et ses relations.</p></div>
+  </section>
+  <section id="actions" class="panel" aria-label="Lanceur d'actions">
+   <div class="card"><h2>Lanceur Ekole</h2><p>Chaque bouton déclenche une commande prédéfinie de <code>tools/ekole.py</code>. Aucune commande arbitraire n'est acceptée.</p><div class="actiontiles"><button type="button" class="actiontile" data-action="verify"><b>✓ Vérifier</b><small>Structure et cohérence des 202 livraisons</small></button><button type="button" class="actiontile" data-action="build"><b>▤ Construire</b><small>Recréer l'index du site, sans toucher aux cours</small></button><button type="button" class="actiontile" data-action="preview-start"><b>▷ Prévisualiser</b><small>Démarrer le site sur le port 8765</small></button><button type="button" class="actiontile" data-action="preview-stop"><b>■ Arrêter</b><small>Arrêter uniquement l'aperçu démarré ici</small></button><button type="button" class="actiontile" data-action="moodle-plan"><b>≣ Plan Moodle</b><small>Projection JSON sans écriture Moodle</small></button><button type="button" class="actiontile" data-action="pages-zip"><b>↧ Export ZIP</b><small>Créer dist/ekole-site-preview.zip localement</small></button></div></div>
+   <div class="card"><h2>Sortie de la dernière commande</h2><div id="output-note" class="hint">Aucune action encore exécutée.</div><pre id="command-output" class="console-output" aria-live="polite">En attente d'une commande.</pre></div>
+  </section>
+  <section id="deployment" class="panel" aria-label="Déploiement local">
+   <div class="card"><h2>Copie vers un dossier statique local</h2><p>Ce workflow ne publie pas sur GitHub ni vers un serveur. Une simulation est obligatoire et la copie conserve les fichiers existants de la cible, avec sauvegardes des remplacements.</p><label class="full-label" for="deploy-target">Destination locale (hors du dépôt Ekole et hors d’un autre dépôt Git)</label><input id="deploy-target" type="text" spellcheck="false" placeholder="C:\\mycode\\mon-site-statique"><div class="inline-actions"><button class="btn primary" id="simulate" type="button">1 · Simuler les changements</button></div><div id="deploy-plan" class="deploy-plan">Aucune simulation récente.</div>
+    <div id="apply-box" class="confirm-box hidden"><h3>2 · Confirmation nécessaire</h3><p>Vérifie le dossier cible et le plan de changements. Cette action copiera uniquement les fichiers publics du site.</p><label for="deploy-confirm">Tape <code>COPIER EN LOCAL</code> pour confirmer</label><input id="deploy-confirm" type="text" autocomplete="off"><button type="button" class="btn caution" id="apply-deploy">Appliquer la copie locale</button></div>
+   </div>
+   <div class="card"><h2>Publication distante</h2><p class="warning">GitHub, Moodle et le serveur ne sont pas déployés par cette console. Leurs ports sont déclarés, mais aucune écriture distante n'est intégrée ni autorisée.</p><p>La publication Kristal v10 doit utiliser un état sémantique qualifié, un engagement épinglé et un enregistrement de publication valide.</p></div>
+  </section>
+  <section id="integrations" class="panel" aria-label="Connexions">
+   <div class="card"><h2>Composants de l’écosystème</h2><p>Les dépôts voisins ne sont inspectés que pour signaler leur présence. Aucun appel distant n'est effectué.</p><div id="connection-list">Chargement…</div></div>
+   <div class="card"><h2>Git local (lecture seule)</h2><div id="git-info">Chargement…</div></div>
+  </section>
+  <section id="logs" class="panel" aria-label="Rapports et journal">
+   <div class="card"><h2>Historique de la session</h2><button class="btn ghost" id="reload-logs" type="button">↻ Actualiser les opérations</button><div id="records" class="records">Aucune opération.</div><p class="hint">Journal technique local : <code>opsconsole/logs/operations.jsonl</code>. Les rapports restent distincts des banques pédagogiques.</p></div>
+  </section>
+ </main>
+</div>
+</body>
+</html>

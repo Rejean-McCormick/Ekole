@@ -1,0 +1,2002 @@
+{
+  "format": "ekole.microlab-catalog/0.1",
+  "description": "Ekole MiniLab v14. Neuf moteurs historiques et cinq nouveaux moteurs; associations vérifiées structurellement, revue pédagogique nécessaire.",
+  "items": [
+    {
+      "id": "partage-12",
+      "type": "jetons",
+      "title": "Répartis 12 jetons dans 3 boîtes",
+      "instruction": "Répartis chaque jeton une seule fois. Chaque boîte doit avoir le même nombre.",
+      "parameters": {
+        "total": 12,
+        "groups": 3
+      },
+      "source_kristal_id": "qc-pri-ma-009",
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Compte le nombre de boîtes avant de commencer.",
+        "Compare les quantités de chaque boîte; aucun jeton ne peut être compté deux fois."
+      ],
+      "annees_proposees": [
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "partage-14",
+      "type": "jetons",
+      "title": "Partage avec un reste",
+      "instruction": "Répartis 14 jetons dans 4 boîtes. Il peut rester des jetons.",
+      "parameters": {
+        "total": 14,
+        "groups": 4
+      },
+      "source_kristal_id": "qc-pri-ma-009",
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Compte le nombre de boîtes avant de commencer.",
+        "Compare les quantités de chaque boîte; aucun jeton ne peut être compté deux fois."
+      ],
+      "annees_proposees": [
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "fractions-3-8",
+      "type": "fraction",
+      "title": "Colorie trois huitièmes",
+      "instruction": "Colorie exactement trois des huit parts égales.",
+      "parameters": {
+        "total": 8,
+        "wanted": 3
+      },
+      "source_kristal_id": "qc-pri-ma-012",
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Compte les parts qui forment le tout.",
+        "Colorie seulement le nombre demandé de parts; elles sont de même taille."
+      ],
+      "annees_proposees": [
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "fractions-2-5",
+      "type": "fraction",
+      "title": "Colorie deux cinquièmes",
+      "instruction": "Colorie deux parts sur cinq parts égales.",
+      "parameters": {
+        "total": 5,
+        "wanted": 2
+      },
+      "source_kristal_id": "qc-pri-ma-012",
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Compte les parts qui forment le tout.",
+        "Colorie seulement le nombre demandé de parts; elles sont de même taille."
+      ],
+      "annees_proposees": [
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "droite-12",
+      "type": "droite",
+      "title": "Trouve le nombre 12",
+      "instruction": "Déplace le repère au nombre douze.",
+      "parameters": {
+        "min": 0,
+        "max": 20,
+        "start": 0,
+        "target": 12,
+        "step": 1
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Repère le zéro ou le premier nombre de la droite.",
+        "Chaque graduation avance du même pas; avance ou recule sans sauter une graduation."
+      ],
+      "annees_proposees": [
+        1,
+        2
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "droite-7",
+      "type": "droite",
+      "title": "Trouve le nombre 7",
+      "instruction": "Déplace le repère au nombre sept.",
+      "parameters": {
+        "min": 0,
+        "max": 12,
+        "start": 0,
+        "target": 7,
+        "step": 1
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Repère le zéro ou le premier nombre de la droite.",
+        "Chaque graduation avance du même pas; avance ou recule sans sauter une graduation."
+      ],
+      "annees_proposees": [
+        1,
+        2
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "histoire-graine",
+      "type": "ordonner",
+      "title": "La vie d’une plante",
+      "instruction": "Replace quatre moments de l’histoire dans l’ordre.",
+      "parameters": {
+        "cards": [
+          {
+            "id": "a",
+            "text": "Une graine est plantée."
+          },
+          {
+            "id": "b",
+            "text": "Une racine apparaît."
+          },
+          {
+            "id": "c",
+            "text": "Une tige grandit."
+          },
+          {
+            "id": "d",
+            "text": "La plante fait des feuilles."
+          }
+        ],
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "initial": [
+          "d",
+          "a",
+          "c",
+          "b"
+        ]
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Quel événement doit arriver avant les autres ?",
+        "Repère ce qui dépend d’un autre événement; utilise les flèches pour réorganiser."
+      ],
+      "annees_proposees": [
+        2,
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "journee-ordre",
+      "type": "ordonner",
+      "title": "Ma journée",
+      "instruction": "Mets ces moments dans un ordre possible pour cette situation.",
+      "parameters": {
+        "cards": [
+          {
+            "id": "a",
+            "text": "Je me réveille."
+          },
+          {
+            "id": "b",
+            "text": "Je prends mon déjeuner."
+          },
+          {
+            "id": "c",
+            "text": "Je pars à l’école."
+          },
+          {
+            "id": "d",
+            "text": "Je rentre à la maison."
+          }
+        ],
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "initial": [
+          "b",
+          "d",
+          "a",
+          "c"
+        ]
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Quel événement doit arriver avant les autres ?",
+        "Repère ce qui dépend d’un autre événement; utilise les flèches pour réorganiser."
+      ],
+      "annees_proposees": [
+        2,
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "associe-formes",
+      "type": "associer",
+      "title": "Associe la forme et sa propriété",
+      "instruction": "Associe chaque figure à sa description.",
+      "parameters": {
+        "pairs": [
+          {
+            "left": "triangle",
+            "label": "Triangle",
+            "right": "3c",
+            "correct_label": "Trois côtés"
+          },
+          {
+            "left": "carre",
+            "label": "Carré",
+            "right": "4e",
+            "correct_label": "Quatre côtés égaux"
+          },
+          {
+            "left": "cercle",
+            "label": "Cercle",
+            "right": "courbe",
+            "correct_label": "Ligne courbe fermée"
+          }
+        ]
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Relis une propriété et trouve ce qu’elle décrit.",
+        "Une même définition ne peut être la bonne réponse de deux objets différents ici."
+      ],
+      "annees_proposees": [
+        2,
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "associe-mots",
+      "type": "associer",
+      "title": "Associe les mots et leurs sens",
+      "instruction": "Choisis la bonne définition pour chaque mot.",
+      "parameters": {
+        "pairs": [
+          {
+            "left": "rapide",
+            "label": "Rapide",
+            "right": "vite",
+            "correct_label": "Qui va vite"
+          },
+          {
+            "left": "silencieux",
+            "label": "Silencieux",
+            "right": "calme",
+            "correct_label": "Qui fait peu de bruit"
+          },
+          {
+            "left": "fragile",
+            "label": "Fragile",
+            "right": "cassant",
+            "correct_label": "Qui peut casser facilement"
+          }
+        ]
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Relis une propriété et trouve ce qu’elle décrit.",
+        "Une même définition ne peut être la bonne réponse de deux objets différents ici."
+      ],
+      "annees_proposees": [
+        2,
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "classe-vivant",
+      "type": "classer",
+      "title": "Animal ou végétal ?",
+      "instruction": "Classe chaque élément dans le bon groupe.",
+      "parameters": {
+        "bins": [
+          "Animal",
+          "Végétal"
+        ],
+        "objects": [
+          {
+            "id": "chat",
+            "text": "Chat",
+            "bin": "Animal"
+          },
+          {
+            "id": "sapin",
+            "text": "Sapin",
+            "bin": "Végétal"
+          },
+          {
+            "id": "papillon",
+            "text": "Papillon",
+            "bin": "Animal"
+          },
+          {
+            "id": "mousse",
+            "text": "Mousse",
+            "bin": "Végétal"
+          }
+        ]
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Quelle propriété distingue les catégories ?",
+        "Regarde la matière ou la nature de chaque élément avant de choisir."
+      ],
+      "annees_proposees": [
+        2,
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "classe-materiaux",
+      "type": "classer",
+      "title": "Métal ou bois ?",
+      "instruction": "Regroupe les objets selon leur matière principale dans ces exemples.",
+      "parameters": {
+        "bins": [
+          "Métal",
+          "Bois"
+        ],
+        "objects": [
+          {
+            "id": "clou",
+            "text": "Clou en acier",
+            "bin": "Métal"
+          },
+          {
+            "id": "cuillere",
+            "text": "Cuillère en acier",
+            "bin": "Métal"
+          },
+          {
+            "id": "regle",
+            "text": "Règle en bois",
+            "bin": "Bois"
+          },
+          {
+            "id": "cube",
+            "text": "Cube en bois",
+            "bin": "Bois"
+          }
+        ]
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Quelle propriété distingue les catégories ?",
+        "Regarde la matière ou la nature de chaque élément avant de choisir."
+      ],
+      "annees_proposees": [
+        2,
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "grille-c-3",
+      "type": "grille",
+      "title": "Cherche la case C3",
+      "instruction": "Sélectionne la colonne C et la ligne 3.",
+      "parameters": {
+        "width": 5,
+        "height": 5,
+        "target": [
+          "C",
+          3
+        ]
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "La lettre indique la colonne.",
+        "Le chiffre indique la ligne. Commence par la colonne, puis cherche la ligne."
+      ],
+      "annees_proposees": [
+        2,
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "grille-e-2",
+      "type": "grille",
+      "title": "Cherche la case E2",
+      "instruction": "Sélectionne la colonne E et la ligne 2.",
+      "parameters": {
+        "width": 5,
+        "height": 5,
+        "target": [
+          "E",
+          2
+        ]
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "La lettre indique la colonne.",
+        "Le chiffre indique la ligne. Commence par la colonne, puis cherche la ligne."
+      ],
+      "annees_proposees": [
+        2,
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "estime-48",
+      "type": "estimer",
+      "title": "Estime une quantité",
+      "instruction": "Observe les paquets. À ton avis, combien y a-t-il de jetons environ ?",
+      "parameters": {
+        "exact": 48,
+        "min": 40,
+        "max": 55,
+        "tolerance": 5,
+        "display_groups": [
+          10,
+          10,
+          10,
+          10,
+          8
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-005",
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche les petits groupes faciles à compter.",
+        "Estime par dizaines et ajoute le petit reste; l’estimation n’a pas besoin d’être exacte."
+      ],
+      "annees_proposees": [
+        1,
+        2
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "estime-73",
+      "type": "estimer",
+      "title": "Estime environ 73 éléments",
+      "instruction": "Observe les paquets. Estime le nombre total de jetons.",
+      "parameters": {
+        "exact": 73,
+        "min": 65,
+        "max": 80,
+        "tolerance": 6,
+        "display_groups": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          3
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-005",
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche les petits groupes faciles à compter.",
+        "Estime par dizaines et ajoute le petit reste; l’estimation n’a pas besoin d’être exacte."
+      ],
+      "annees_proposees": [
+        1,
+        2
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "suite-pas-3",
+      "type": "suite",
+      "title": "Trouve le prochain nombre",
+      "instruction": "Complète 3, 6, 9, 12, ...",
+      "parameters": {
+        "shown": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "choices": [
+          13,
+          15,
+          16
+        ],
+        "answer": 15
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Regarde la différence entre deux nombres voisins.",
+        "Applique le même pas au dernier nombre pour trouver la suite."
+      ],
+      "annees_proposees": [
+        2,
+        3
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "suite-pas-5",
+      "type": "suite",
+      "title": "Trouve le prochain nombre",
+      "instruction": "Complète 5, 10, 15, 20, ...",
+      "parameters": {
+        "shown": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "choices": [
+          21,
+          25,
+          30
+        ],
+        "answer": 25
+      },
+      "source_kristal_id": null,
+      "association_status": "generique_sans_lien_cours",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Regarde la différence entre deux nombres voisins.",
+        "Applique le même pas au dernier nombre pour trouver la suite."
+      ],
+      "annees_proposees": [
+        2,
+        3
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "recit-atelier-cartes",
+      "type": "ordonner",
+      "title": "L’histoire de la boîte à outils",
+      "instruction": "Replace les événements dans l’ordre. Ensuite, explique à un adulte pourquoi une action conduit à la suivante.",
+      "parameters": {
+        "cards": [
+          {
+            "id": "a",
+            "text": "Une équipe prépare des décors dans son atelier."
+          },
+          {
+            "id": "b",
+            "text": "La boîte contenant les pinceaux a disparu."
+          },
+          {
+            "id": "c",
+            "text": "Quelqu’un remarque la boîte derrière un grand carton."
+          },
+          {
+            "id": "d",
+            "text": "L’équipe retrouve les pinceaux et peut terminer le décor."
+          }
+        ],
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "initial": [
+          "c",
+          "a",
+          "d",
+          "b"
+        ]
+      },
+      "source_kristal_id": "qc-pri-fr-008",
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Repère la situation avant que le problème arrive.",
+        "Place le problème avant la recherche et la résolution."
+      ],
+      "annees_proposees": [
+        2,
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "science-observer-interpreter",
+      "type": "classer",
+      "title": "J’observe ou je suppose ?",
+      "instruction": "Sur une fiche fictive, deux bandes sont montrées avec des marques. Trie les phrases : observation écrite ou interprétation.",
+      "parameters": {
+        "bins": [
+          "Observation sur la fiche",
+          "Interprétation à examiner"
+        ],
+        "objects": [
+          {
+            "id": "a",
+            "text": "La fiche indique une marque de deux carreaux sur P.",
+            "bin": "Observation sur la fiche"
+          },
+          {
+            "id": "b",
+            "text": "La fiche indique une marque de cinq carreaux sur Q.",
+            "bin": "Observation sur la fiche"
+          },
+          {
+            "id": "c",
+            "text": "Le papier Q boit toujours plus vite.",
+            "bin": "Interprétation à examiner"
+          },
+          {
+            "id": "d",
+            "text": "Les deux bandes sont fabriquées avec des matières différentes.",
+            "bin": "Interprétation à examiner"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-st-001",
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Relis seulement les données indiquées par la carte fictive.",
+        "Une explication causale non mesurée reste une hypothèse à explorer."
+      ],
+      "annees_proposees": [
+        2,
+        3,
+        4
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "multiplier-6x4",
+      "type": "jetons",
+      "title": "Construis 6 groupes de 4",
+      "instruction": "Six équipes reçoivent chacune quatre jetons. Répartis les 24 jetons en 6 groupes égaux et vérifie la quantité totale.",
+      "parameters": {
+        "total": 24,
+        "groups": 6
+      },
+      "source_kristal_id": "qc-pri-ma-008",
+      "annees_proposees": [
+        3,
+        4
+      ],
+      "hints": [
+        "Commence par repérer les 6 équipes, sans compter les jetons un par un pour la réponse.",
+        "Vérifie que les six groupes contiennent autant de jetons. Puis écris mentalement 6 × 4."
+      ],
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "multiplier-5x6",
+      "type": "jetons",
+      "title": "Cinq rangées de six objets",
+      "instruction": "Construis cinq rangées contenant chacune six objets. Place les 30 jetons et vérifie que chaque rangée en contient six.",
+      "parameters": {
+        "total": 30,
+        "groups": 5
+      },
+      "source_kristal_id": "qc-pri-ma-008",
+      "annees_proposees": [
+        3,
+        4
+      ],
+      "hints": [
+        "Repère les cinq groupes à construire.",
+        "Vérifie les six objets de chaque rangée, puis le total par multiplication."
+      ],
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "histoire-relier-fonctions",
+      "type": "associer",
+      "title": "Habiter, circuler, se protéger",
+      "instruction": "Associe ces éléments historiques à leur fonction. Les situations décrites concernent des sociétés ou lieux précis : elles ne sont pas universelles.",
+      "parameters": {
+        "pairs": [
+          {
+            "left": "riviere",
+            "label": "Rivière utilisée pour circuler",
+            "right": "transport",
+            "correct_label": "Déplacements en canot et échanges"
+          },
+          {
+            "left": "maison",
+            "label": "Maison longue de certaines sociétés iroquoiennes",
+            "right": "habitat",
+            "correct_label": "Habitation de plusieurs familles"
+          },
+          {
+            "left": "palissade",
+            "label": "Palissade entourant certains villages iroquoiens",
+            "right": "defense",
+            "correct_label": "Protection contre des attaques"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-us-009",
+      "annees_proposees": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_article_ids": [
+        "ens-v4:riviere-route",
+        "ens-v4:interieur-maison",
+        "ens-v4:palissades"
+      ],
+      "hints": [
+        "Relis la fonction principale de chaque élément dans les fiches du Kristal autonome.",
+        "Attention : une palissade n’était pas présente dans tous les villages."
+      ],
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "histoire-faits-limites",
+      "type": "classer",
+      "title": "Ce que les sources permettent de dire",
+      "instruction": "Classe chaque phrase. « Non établi » ne veut pas dire automatiquement « faux ».",
+      "parameters": {
+        "bins": [
+          "Documenté dans ces contextes",
+          "Non établi comme règle générale"
+        ],
+        "objects": [
+          {
+            "id": "riv",
+            "text": "Des rivières servaient à voyager en canot et à échanger.",
+            "bin": "Documenté dans ces contextes"
+          },
+          {
+            "id": "pal",
+            "text": "Certains villages iroquoiens avaient des palissades défensives.",
+            "bin": "Documenté dans ces contextes"
+          },
+          {
+            "id": "long",
+            "text": "Chaque maison longue mesurait exactement 40 mètres.",
+            "bin": "Non établi comme règle générale"
+          },
+          {
+            "id": "uni",
+            "text": "Tous les peuples autochtones vivaient dans des maisons longues.",
+            "bin": "Non établi comme règle générale"
+          },
+          {
+            "id": "peaux",
+            "text": "La préparation des peaux était toujours interdite aux hommes.",
+            "bin": "Non établi comme règle générale"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-us-009",
+      "annees_proposees": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_article_ids": [
+        "ens-v4:riviere-route",
+        "ens-v4:palissades",
+        "ens-v4:nombre-maison",
+        "ens-v4:ecorcher"
+      ],
+      "hints": [
+        "Une observation précise n’est pas une règle universelle.",
+        "Cherche les mots « certains », « toujours » et « tous ». Ils changent ce qu’on affirme."
+      ],
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "histoire-innu-iroquois",
+      "type": "associer",
+      "title": "Contextes de vie : deux exemples documentés",
+      "instruction": "Associe chaque description à la société et au contexte indiqués. Ces exemples n’épuisent pas la diversité de chaque nation.",
+      "parameters": {
+        "pairs": [
+          {
+            "left": "innu",
+            "label": "Déplacements saisonniers documentés dans le Nitassinan",
+            "right": "innu-voyages",
+            "correct_label": "Familles et groupes innus dans des contextes historiques"
+          },
+          {
+            "left": "iro",
+            "label": "Villages avec maisons longues et agriculture, selon les sites étudiés",
+            "right": "iro-villages",
+            "correct_label": "Certaines sociétés iroquoiennes du Saint-Laurent vers 1500"
+          },
+          {
+            "left": "innu2",
+            "label": "Pêche au saumon dans les rivières nord-côtières documentées",
+            "right": "innu-peche",
+            "correct_label": "Pratiques innues relatées par Nametau innu"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-us-009",
+      "annees_proposees": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_article_ids": [
+        "ens-v4:deplacements-innus",
+        "ens-v4:filets-innu",
+        "ens-v4:interieur-maison"
+      ],
+      "hints": [
+        "Vérifie à quelle société, époque et région se rapporte chaque observation.",
+        "La même société peut changer ses pratiques au fil du temps."
+      ],
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "arrondir-147",
+      "type": "droite",
+      "title": "Arrondir 147 à la dizaine",
+      "instruction": "Le nombre 147 est situé entre 140 et 150. Place le repère sur la dizaine la plus proche de 147.",
+      "parameters": {
+        "min": 130,
+        "max": 170,
+        "start": 130,
+        "target": 150,
+        "step": 5
+      },
+      "source_kristal_id": "qc-pri-ma-005",
+      "annees_proposees": [
+        3,
+        4
+      ],
+      "hints": [
+        "147 est à 7 unités de 140, mais à seulement 3 unités de 150.",
+        "Sur la droite, compare la distance de 147 aux deux dizaines voisines."
+      ],
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "arrondir-263",
+      "type": "droite",
+      "title": "Arrondir 263 à la dizaine",
+      "instruction": "Le nombre 263 se trouve entre 260 et 270. Place le repère sur la dizaine la plus proche.",
+      "parameters": {
+        "min": 250,
+        "max": 290,
+        "start": 290,
+        "target": 260,
+        "step": 5
+      },
+      "source_kristal_id": "qc-pri-ma-005",
+      "annees_proposees": [
+        3,
+        4
+      ],
+      "hints": [
+        "Compare les distances : de 263 à 260, puis de 263 à 270.",
+        "Choisis la dizaine la plus proche, pas la plus grande."
+      ],
+      "association_status": "illustration_candidate_non_validee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "centaines-372",
+      "type": "position",
+      "title": "Fabrique 372",
+      "instruction": "Construis 372 avec les centaines, dizaines et unités. N’écris aucun chiffre au clavier.",
+      "parameters": {
+        "target": 372,
+        "start": [
+          1,
+          5,
+          1
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-003",
+      "annees_proposees": [
+        2,
+        3
+      ],
+      "competence_ciblee": "Décomposer et recomposer selon les valeurs de position",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Une centaine vaut dix dizaines.",
+        "372, c’est 3 centaines, 7 dizaines et 2 unités."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "centaines-508",
+      "type": "position",
+      "title": "Construis un nombre avec un zéro",
+      "instruction": "Construis 508 : que se passe-t-il à la place des dizaines ?",
+      "parameters": {
+        "target": 508,
+        "start": [
+          1,
+          1,
+          1
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-003",
+      "annees_proposees": [
+        2,
+        3
+      ],
+      "competence_ciblee": "Comprendre le rôle du zéro dans la décomposition",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Quelle colonne doit rester à zéro ?",
+        "Cinq centaines, zéro dizaine et huit unités."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "egalite-604",
+      "type": "position",
+      "title": "Décompose 604",
+      "instruction": "Construis le nombre 604 et observe le rôle du zéro dans les dizaines.",
+      "parameters": {
+        "target": 604,
+        "start": [
+          7,
+          2,
+          9
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-018",
+      "annees_proposees": [
+        3
+      ],
+      "competence_ciblee": "Relier différentes écritures d’un nombre",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Vérifie les centaines avant les dizaines.",
+        "604 représente six centaines, zéro dizaine et quatre unités."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "probleme-bibliotheque",
+      "type": "probleme",
+      "title": "Livres de la bibliothèque",
+      "instruction": "146 livres sont disponibles. On reçoit 87 livres, puis 35 sont empruntés. Choisis les deux opérations dans le bon ordre.",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Combien de livres après le don ?",
+            "options": [
+              "146 + 87 = 233",
+              "146 - 87 = 59",
+              "146 + 35 = 181",
+              "87 + 35 = 122"
+            ],
+            "answer": "146 + 87 = 233"
+          },
+          {
+            "prompt": "Combien de livres restent ensuite ?",
+            "options": [
+              "233 - 35 = 198",
+              "233 + 35 = 268",
+              "146 - 35 = 111",
+              "87 - 35 = 52"
+            ],
+            "answer": "233 - 35 = 198"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-019",
+      "annees_proposees": [
+        3
+      ],
+      "competence_ciblee": "Résoudre un problème additif à étapes",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Un don augmente la quantité disponible.",
+        "Un emprunt diminue ensuite cette quantité."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "calcul-mental-100",
+      "type": "probleme",
+      "title": "Calcule sans te perdre",
+      "instruction": "75 + 25, puis retire 35. Choisis les étapes de calcul mental.",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Quel regroupement facilite le premier calcul ?",
+            "options": [
+              "75 + 25 = 100",
+              "75 + 25 = 90",
+              "75 - 25 = 50"
+            ],
+            "answer": "75 + 25 = 100"
+          },
+          {
+            "prompt": "Quel est le résultat final ?",
+            "options": [
+              "100 - 35 = 65",
+              "100 - 35 = 75",
+              "100 + 35 = 135"
+            ],
+            "answer": "100 - 35 = 65"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-010",
+      "annees_proposees": [
+        3
+      ],
+      "competence_ciblee": "Stratégies de calcul mental",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche d’abord un nombre rond.",
+        "Après 100, retire trois dizaines puis cinq unités."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "egalites-75",
+      "type": "probleme",
+      "title": "Deux calculs, une même valeur",
+      "instruction": "Détermine si les deux expressions peuvent représenter le même nombre.",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Que vaut 48 + 27 ?",
+            "options": [
+              "75",
+              "65",
+              "85"
+            ],
+            "answer": "75"
+          },
+          {
+            "prompt": "Quelle autre expression donne ce même résultat ?",
+            "options": [
+              "90 − 15",
+              "90 − 25",
+              "80 − 15"
+            ],
+            "answer": "90 − 15"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-018",
+      "annees_proposees": [
+        3
+      ],
+      "competence_ciblee": "Reconnaître une égalité numérique",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Regroupe dizaines et unités.",
+        "Deux calculs différents peuvent produire le même nombre."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "probleme-boites",
+      "type": "probleme",
+      "title": "Boîtes et matériel scolaire",
+      "instruction": "On range huit crayons dans chacune des sept boîtes, puis on distribue neuf crayons. Combien en reste-t-il ?",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Combien de crayons avant la distribution ?",
+            "options": [
+              "7 × 8 = 56",
+              "7 + 8 = 15",
+              "8 × 9 = 72"
+            ],
+            "answer": "7 × 8 = 56"
+          },
+          {
+            "prompt": "Combien en reste-t-il après ?",
+            "options": [
+              "56 − 9 = 47",
+              "56 + 9 = 65",
+              "56 − 8 = 48"
+            ],
+            "answer": "56 − 9 = 47"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-020",
+      "annees_proposees": [
+        4
+      ],
+      "competence_ciblee": "Modéliser puis contrôler une situation multiplicative",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche d’abord le total des sept boîtes.",
+        "Distribuer neuf crayons fait diminuer ce total."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "verification-ecrite",
+      "type": "probleme",
+      "title": "Vérifie ton calcul",
+      "instruction": "Une addition donne 458 + 167. Choisis un résultat puis la vérification par soustraction.",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Quelle est la somme ?",
+            "options": [
+              "625",
+              "515",
+              "615"
+            ],
+            "answer": "625"
+          },
+          {
+            "prompt": "Comment vérifier ce résultat ?",
+            "options": [
+              "625 − 167 = 458",
+              "625 + 167 = 792",
+              "625 − 458 = 157"
+            ],
+            "answer": "625 − 167 = 458"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-011",
+      "annees_proposees": [
+        4
+      ],
+      "competence_ciblee": "Vérification d’un calcul écrit",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Additionne séparément les unités, les dizaines et les centaines.",
+        "Soustraire un terme de la somme doit redonner l’autre terme."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "diagramme-lectures",
+      "type": "diagramme",
+      "title": "Lire les livres empruntés",
+      "instruction": "Le diagramme donne les livres empruntés par quatre classes. Réponds aux deux questions.",
+      "parameters": {
+        "bars": [
+          {
+            "label": "A",
+            "value": 9
+          },
+          {
+            "label": "B",
+            "value": 14
+          },
+          {
+            "label": "C",
+            "value": 11
+          },
+          {
+            "label": "D",
+            "value": 6
+          }
+        ],
+        "questions": [
+          {
+            "prompt": "Combien de livres ont été empruntés par les classes B et D ensemble ?",
+            "options": [
+              20,
+              18,
+              25,
+              8
+            ],
+            "answer": 20
+          },
+          {
+            "prompt": "Combien de livres de plus pour B que pour D ?",
+            "options": [
+              8,
+              6,
+              20,
+              14
+            ],
+            "answer": 8
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-031",
+      "annees_proposees": [
+        3
+      ],
+      "competence_ciblee": "Interpréter un diagramme et comparer les données",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Repère chaque classe dans le diagramme.",
+        "Une question demande une somme; l’autre demande une différence."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "diagramme-sports",
+      "type": "diagramme",
+      "title": "Comparer les choix d’activités",
+      "instruction": "Lis les effectifs et effectue les deux comparaisons.",
+      "parameters": {
+        "bars": [
+          {
+            "label": "Danse",
+            "value": 8
+          },
+          {
+            "label": "Course",
+            "value": 12
+          },
+          {
+            "label": "Natation",
+            "value": 7
+          },
+          {
+            "label": "Vélo",
+            "value": 13
+          }
+        ],
+        "questions": [
+          {
+            "prompt": "Combien d’élèves ont choisi Course ou Vélo ?",
+            "options": [
+              25,
+              21,
+              20,
+              5
+            ],
+            "answer": 25
+          },
+          {
+            "prompt": "Quel écart entre Vélo et Natation ?",
+            "options": [
+              6,
+              5,
+              20,
+              7
+            ],
+            "answer": 6
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-031",
+      "annees_proposees": [
+        3
+      ],
+      "competence_ciblee": "Faire parler un tableau de données",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Identifie les valeurs avant de calculer.",
+        "Une différence compare deux effectifs."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "diagramme-classe",
+      "type": "diagramme",
+      "title": "Lire un tableau de données",
+      "instruction": "Observe les groupes représentés puis sélectionne les calculs justes.",
+      "parameters": {
+        "bars": [
+          {
+            "label": "Pomme",
+            "value": 9
+          },
+          {
+            "label": "Poire",
+            "value": 6
+          },
+          {
+            "label": "Prune",
+            "value": 5
+          }
+        ],
+        "questions": [
+          {
+            "prompt": "Combien de fruits en tout ?",
+            "options": [
+              20,
+              19,
+              15,
+              9
+            ],
+            "answer": 20
+          },
+          {
+            "prompt": "Quel écart entre Pomme et Prune ?",
+            "options": [
+              4,
+              3,
+              5,
+              14
+            ],
+            "answer": 4
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-030",
+      "annees_proposees": [
+        2,
+        3
+      ],
+      "competence_ciblee": "Lire un relevé et en vérifier le total",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Additionne les trois effectifs.",
+        "Pour l’écart, compare le plus grand et le plus petit."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "fractions-equivalentes-2-3",
+      "type": "equivalence",
+      "title": "Plusieurs écritures de deux tiers",
+      "instruction": "Sélectionne toutes les fractions qui représentent exactement deux tiers.",
+      "parameters": {
+        "numerator": 2,
+        "denominator": 3,
+        "choices": [
+          {
+            "id": "a",
+            "n": 4,
+            "d": 6
+          },
+          {
+            "id": "b",
+            "n": 6,
+            "d": 9
+          },
+          {
+            "id": "c",
+            "n": 3,
+            "d": 5
+          },
+          {
+            "id": "d",
+            "n": 8,
+            "d": 12
+          },
+          {
+            "id": "e",
+            "n": 2,
+            "d": 5
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-013",
+      "annees_proposees": [
+        4
+      ],
+      "competence_ciblee": "Repérer plusieurs fractions équivalentes",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Il faut multiplier le haut et le bas par le même nombre.",
+        "4/6, 6/9 et 8/12 valent deux tiers."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "fractions-equivalentes-3-4",
+      "type": "equivalence",
+      "title": "Trouve trois quarts autrement",
+      "instruction": "Choisis toutes les fractions équivalentes à trois quarts.",
+      "parameters": {
+        "numerator": 3,
+        "denominator": 4,
+        "choices": [
+          {
+            "id": "a",
+            "n": 6,
+            "d": 8
+          },
+          {
+            "id": "b",
+            "n": 9,
+            "d": 12
+          },
+          {
+            "id": "c",
+            "n": 4,
+            "d": 5
+          },
+          {
+            "id": "d",
+            "n": 12,
+            "d": 16
+          },
+          {
+            "id": "e",
+            "n": 3,
+            "d": 5
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-013",
+      "annees_proposees": [
+        4
+      ],
+      "competence_ciblee": "Comparer et produire les fractions équivalentes",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Les deux termes sont multipliés par le même facteur.",
+        "Une fraction plus grande en apparence peut représenter la même proportion."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "duree-bibliobus",
+      "type": "duree",
+      "title": "Combien de temps a duré la sortie ?",
+      "instruction": "Départ à 8 h 40, retour à 10 h 05. Construis la durée écoulée par bonds de temps.",
+      "parameters": {
+        "start_hour": 8,
+        "start_minute": 40,
+        "duration": 85,
+        "max_duration": 150
+      },
+      "source_kristal_id": "qc-pri-ma-026",
+      "annees_proposees": [
+        2,
+        3
+      ],
+      "competence_ciblee": "Calculer une durée entre deux heures",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Atteins d’abord 9 h, puis 10 h.",
+        "20 minutes + 60 minutes + 5 minutes = 85 minutes."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "duree-atelier",
+      "type": "duree",
+      "title": "De 9 h 15 à 11 h",
+      "instruction": "La séance commence à 9 h 15 et se termine à 11 h. Calcule la durée écoulée.",
+      "parameters": {
+        "start_hour": 9,
+        "start_minute": 15,
+        "duration": 105,
+        "max_duration": 150
+      },
+      "source_kristal_id": "qc-pri-ma-026",
+      "annees_proposees": [
+        2,
+        3
+      ],
+      "competence_ciblee": "Comparer des durées",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "De 9 h 15 à 10 h : 45 minutes.",
+        "Ajoute ensuite 60 minutes."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "perimetre-jardin",
+      "type": "probleme",
+      "title": "Périmètre d’un jardin",
+      "instruction": "Un jardin rectangulaire mesure 8 m sur 5 m. Quel est le périmètre total ?",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Quels côtés faut-il additionner ?",
+            "options": [
+              "8 + 5 + 8 + 5 = 26",
+              "8 × 5 = 40",
+              "8 + 5 = 13"
+            ],
+            "answer": "8 + 5 + 8 + 5 = 26"
+          },
+          {
+            "prompt": "Quel est le périmètre en mètres ?",
+            "options": [
+              "26 m",
+              "40 m",
+              "13 m",
+              "52 m"
+            ],
+            "answer": "26 m"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-027",
+      "annees_proposees": [
+        4
+      ],
+      "competence_ciblee": "Distinguer le périmètre de la surface",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche d’abord quelles données sont nécessaires à la première opération.",
+        "Vérifie que la deuxième opération utilise le résultat de la première."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "aire-cour",
+      "type": "probleme",
+      "title": "Aire de deux parcelles",
+      "instruction": "Une parcelle mesure 7 m de long et 9 m de large. On en utilise deux de même taille.",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Quelle est l’aire d’une parcelle ?",
+            "options": [
+              "7 × 9 = 63 m²",
+              "7 + 9 = 16 m²",
+              "7 × 2 = 14 m²"
+            ],
+            "answer": "7 × 9 = 63 m²"
+          },
+          {
+            "prompt": "Quelle est l’aire des deux parcelles ?",
+            "options": [
+              "2 × 63 = 126 m²",
+              "63 m²",
+              "7 × 9 × 9 = 567 m²"
+            ],
+            "answer": "2 × 63 = 126 m²"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-028",
+      "annees_proposees": [
+        5
+      ],
+      "competence_ciblee": "Calculer une aire en unités carrées",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche d’abord quelles données sont nécessaires à la première opération.",
+        "Vérifie que la deuxième opération utilise le résultat de la première."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "fractions-addition",
+      "type": "probleme",
+      "title": "Addition de parts égales",
+      "instruction": "Une recette utilise 1/4 de tasse puis encore 2/4 de tasse du même ingrédient.",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Combien de quarts sont utilisés au total ?",
+            "options": [
+              "1 + 2 = 3 quarts",
+              "1 × 2 = 2 quarts",
+              "1 + 4 = 5 quarts"
+            ],
+            "answer": "1 + 2 = 3 quarts"
+          },
+          {
+            "prompt": "Quelle fraction de tasse est utilisée ?",
+            "options": [
+              "3/4",
+              "3/8",
+              "2/4",
+              "1/2"
+            ],
+            "answer": "3/4"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-014",
+      "annees_proposees": [
+        5
+      ],
+      "competence_ciblee": "Ajouter des fractions ayant le même dénominateur",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche d’abord quelles données sont nécessaires à la première opération.",
+        "Vérifie que la deuxième opération utilise le résultat de la première."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "decimaux-comparer",
+      "type": "probleme",
+      "title": "Comparer des distances décimales",
+      "instruction": "Léa marche 3,45 km et Sami 3,5 km. Qui a parcouru le plus ?",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Comment écrire 3,5 en centièmes ?",
+            "options": [
+              "3,50",
+              "3,05",
+              "3,005",
+              "3,5000 est un millier de fois plus grand"
+            ],
+            "answer": "3,50"
+          },
+          {
+            "prompt": "Qui a marché le plus loin ?",
+            "options": [
+              "Sami : 3,50 > 3,45",
+              "Léa : 3,45 > 3,5",
+              "Même distance"
+            ],
+            "answer": "Sami : 3,50 > 3,45"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-016",
+      "annees_proposees": [
+        5
+      ],
+      "competence_ciblee": "Comparer les décimaux avec la valeur de position",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche d’abord quelles données sont nécessaires à la première opération.",
+        "Vérifie que la deuxième opération utilise le résultat de la première."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "volume-boite",
+      "type": "probleme",
+      "title": "Volume d’une boîte",
+      "instruction": "Une boîte mesure 3 unités de largeur, 4 de longueur et 5 de hauteur.",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Quelle est l’aire de sa base ?",
+            "options": [
+              "3 × 4 = 12 unités²",
+              "3 + 4 = 7 unités²",
+              "3 × 5 = 15 unités²"
+            ],
+            "answer": "3 × 4 = 12 unités²"
+          },
+          {
+            "prompt": "Combien de petits cubes rempliraient la boîte ?",
+            "options": [
+              "12 × 5 = 60 cubes",
+              "12 + 5 = 17 cubes",
+              "3 + 4 + 5 = 12 cubes"
+            ],
+            "answer": "12 × 5 = 60 cubes"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-029",
+      "annees_proposees": [
+        6
+      ],
+      "competence_ciblee": "Décomposer un volume en couches de cubes",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche d’abord quelles données sont nécessaires à la première opération.",
+        "Vérifie que la deuxième opération utilise le résultat de la première."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "pourcent-80",
+      "type": "probleme",
+      "title": "Pourcentage d’une collection",
+      "instruction": "Un club compte 80 membres. 25 % des membres choisissent la natation.",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Quelle fraction de cent représente 25 % ?",
+            "options": [
+              "25/100 = 1/4",
+              "25/10",
+              "1/25",
+              "25/80"
+            ],
+            "answer": "25/100 = 1/4"
+          },
+          {
+            "prompt": "Combien de membres ont choisi la natation ?",
+            "options": [
+              "80 ÷ 4 = 20",
+              "80 ÷ 25 = 3,2",
+              "80 − 25 = 55",
+              "25 × 80 = 2000"
+            ],
+            "answer": "80 ÷ 4 = 20"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-017",
+      "annees_proposees": [
+        6
+      ],
+      "competence_ciblee": "Interpréter un pourcentage en contexte",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche d’abord quelles données sont nécessaires à la première opération.",
+        "Vérifie que la deuxième opération utilise le résultat de la première."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "nombre-probable",
+      "type": "probleme",
+      "title": "Probabilité qualitative",
+      "instruction": "Dans un sac il y a 7 jetons verts et 1 jeton rouge; on tire un seul jeton sans regarder.",
+      "parameters": {
+        "steps": [
+          {
+            "prompt": "Quel événement est le plus probable ?",
+            "options": [
+              "Tirer un vert",
+              "Tirer un rouge",
+              "Les deux ont la même chance"
+            ],
+            "answer": "Tirer un vert"
+          },
+          {
+            "prompt": "Quel événement est impossible dans ce sac ?",
+            "options": [
+              "Tirer un bleu",
+              "Tirer un vert",
+              "Tirer un rouge"
+            ],
+            "answer": "Tirer un bleu"
+          }
+        ]
+      },
+      "source_kristal_id": "qc-pri-ma-032",
+      "annees_proposees": [
+        4
+      ],
+      "competence_ciblee": "Comparer des probabilités qualitatives",
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "hints": [
+        "Cherche d’abord quelles données sont nécessaires à la première opération.",
+        "Vérifie que la deuxième opération utilise le résultat de la première."
+      ],
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "suite-1re-bonds",
+      "type": "suite",
+      "title": "Trouve le rythme des nombres",
+      "instruction": "Les nombres avancent selon une régularité. Quelle case vient ensuite ?",
+      "parameters": {
+        "shown": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "choices": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "answer": 10
+      },
+      "source_kristal_id": "qc-pri-ma-004",
+      "annees_proposees": [
+        1
+      ],
+      "competence_ciblee": "Reconnaître et poursuivre une suite numérique",
+      "hints": [
+        "Compare deux nombres qui se suivent.",
+        "On ajoute toujours deux."
+      ],
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    },
+    {
+      "id": "collection-15-3",
+      "type": "jetons",
+      "title": "Organise une collection de 15 objets",
+      "instruction": "Répartis les quinze jetons dans trois collections de même taille, sans en oublier.",
+      "parameters": {
+        "total": 15,
+        "groups": 3
+      },
+      "source_kristal_id": "qc-pri-ma-001",
+      "annees_proposees": [
+        1
+      ],
+      "competence_ciblee": "Organiser et compter une collection sans doublons",
+      "hints": [
+        "Représente les trois collections.",
+        "Compte cinq jetons dans chacune des trois collections."
+      ],
+      "association_status": "proposition_ciblee_v14_non_approuvee",
+      "validation_mode": "deterministic_practice",
+      "status": "prototype_revue_humaine",
+      "usage": "entrainement_verifiable_non_certifiant",
+      "niveau_statut": "suggestion_pedagogique_a_valider"
+    }
+  ],
+  "count": 51,
+  "source": "scenarios_originaux_illustratifs",
+  "version": "v14"
+}

@@ -1,0 +1,87 @@
+{
+  "format": "ekole.overlay/15.0",
+  "version": "v15",
+  "base": "Ekole_Pack_202_MEGA_Optimise_v14",
+  "install_root": ".",
+  "images_generated": 0,
+  "changes": {
+    "editeur_enseignant": "glisser-deposer + gestion format/dimensions/nom + sauvegarde + recompile",
+    "etapes": "1,2,3,4",
+    "interface_eleve": "description image sans bouton copie",
+    "minilab": "retour cours et parcours"
+  },
+  "files": {
+    "README_EKOLE_IMAGES_NAVIGATION_V15.md": {
+      "sha256": "5028dee7599a88c806300d840d388351343a2539961fc9d862c1638d63e24178",
+      "bytes": 4389
+    },
+    "enseignant-app/index.html": {
+      "sha256": "3036a37375970943326fbe328a05ee464d46a6cc9de58ca84c1ca692a87470f5",
+      "bytes": 2618
+    },
+    "enseignant-app/app.js": {
+      "sha256": "0dbfac0f770d0332b11ff1ac7ca3616b7ce673f1498b645a3a69cd2982f8f3f2",
+      "bytes": 12294
+    },
+    "enseignant-app/images-editor-v15.js": {
+      "sha256": "8ec51d9d7cf3bc2da959e52ea180e033c19a907ebe6c91384a6765f97146bbbf",
+      "bytes": 5592
+    },
+    "enseignant-app/style.css": {
+      "sha256": "e2bc8d8354859fc9b6115d8d2f13aec4ac612748415db36d15cb46276abe8f2c",
+      "bytes": 7160
+    },
+    "tools/serve_enseignant.py": {
+      "sha256": "ef08ca375508371a89506dbd2751a5b83c663a2ef07ff87675c39bb2687e17d7",
+      "bytes": 14724
+    },
+    "tools/construire_vue_enfant.py": {
+      "sha256": "fb8caa7c6ce267b8b909a0b809e550342b3950e72e91728140dfd6acc51ecdb5",
+      "bytes": 2750
+    },
+    "site/index.html": {
+      "sha256": "3823154fdece484c4686a0f3b3f84116fe07c26f8455a55caf329df75ea96a3b",
+      "bytes": 3269
+    },
+    "site/eleve/app.js": {
+      "sha256": "68ea181d310b246c97a27f8510832a385ef661cca0f867d1cb72bce3db167468",
+      "bytes": 24312
+    },
+    "site/eleve/style.css": {
+      "sha256": "3b40a73eaa94f1317c32bb9984fd65d30f0f715dde901448037299159fe360ae",
+      "bytes": 8995
+    },
+    "site/eleve/labo/index.html": {
+      "sha256": "2d9db59bdd78dc9e2b7ecf4ae42878345d4dcf2e3306773bc6b3aa216d15ca33",
+      "bytes": 1081
+    },
+    "site/eleve/labo/app.js": {
+      "sha256": "6a2d02fa46ff9ec27966dce692aa32284571960a1b2e6608a5b35967e2db208a",
+      "bytes": 17049
+    },
+    "site/eleve/labo/lab.css": {
+      "sha256": "276fd6cad0337350b0f392e5e501303796fa72929e3fcf1c73a790f3120e4a6a",
+      "bytes": 6727
+    },
+    "site/eleve/mondes-v12/app.js": {
+      "sha256": "61ffd2ae99f3b4eb009ca55e65600ccbdc3df7c01b18fb47526de7c14f7b7d86",
+      "bytes": 8097
+    },
+    "site/eleve/encyclopedie-autochtones/app.js": {
+      "sha256": "b3077e73245601ddbb68ff7b5069f21f41b356a8450f45825ef89008cd1c2c93",
+      "bytes": 10066
+    },
+    "tests/test_ekole_image_editor_v15.py": {
+      "sha256": "f19aa2e1072ef316873d732efdcd689298cfc9b736b2b57fd2a45eddf42fd53d",
+      "bytes": 4563
+    },
+    "tests/test_ekole_v15_ui.py": {
+      "sha256": "6afef6f62b1b09a7bb5ccf771678b0b4417d237e0f4cfee25e29053f85933e90",
+      "bytes": 1953
+    },
+    "tests/test_kristal_visuels_v10.py": {
+      "sha256": "10c5c7298649bee5656a97c2b75308f051e65f9bcb2fae93823050a9e2923d01",
+      "bytes": 3643
+    }
+  }
+}

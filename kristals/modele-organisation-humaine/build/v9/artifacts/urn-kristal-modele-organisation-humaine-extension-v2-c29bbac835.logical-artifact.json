@@ -1,0 +1,116 @@
+{
+  "schema_version": "9.0",
+  "artifact_type": "kristal_logical_artifact",
+  "artifact_id": "urn:kristal:modele-organisation-humaine:extension-v2",
+  "logical_contract": {
+    "id": "ekole.modele-organisation-humaine-extension",
+    "version": "2.0"
+  },
+  "payload": {
+    "format": "kristal.organisation-humaine-extension/2.0",
+    "heritage": "kristals/modele-organisation-humaine/canon/domain/modele.json",
+    "axes": [
+      "role",
+      "tache",
+      "ressource",
+      "responsabilite",
+      "autorite",
+      "pratique",
+      "interaction",
+      "temps",
+      "provenance"
+    ],
+    "noeuds": {
+      "Acteur": {
+        "requis": [
+          "id",
+          "type",
+          "contexte"
+        ]
+      },
+      "RelationSituee": {
+        "requis": [
+          "id",
+          "societe_ref",
+          "role_ref",
+          "tache_ref",
+          "ressource_ref",
+          "periode_ref",
+          "source_ids",
+          "fact_ids",
+          "regime"
+        ],
+        "regime": [
+          "pratique_decrite",
+          "mandat_contemporain",
+          "evenement_atteste",
+          "norme_documentee"
+        ]
+      },
+      "Assertion": {
+        "requis": [
+          "id",
+          "enonce_fr",
+          "periode_ref",
+          "sujet_ref",
+          "objet_ref",
+          "source_ids",
+          "limites",
+          "statut"
+        ]
+      },
+      "Norme": {
+        "requis": [
+          "id",
+          "modalite",
+          "sujet_ref",
+          "action_ref",
+          "periode_ref",
+          "source_ids",
+          "portee",
+          "statut",
+          "interpretation"
+        ],
+        "modalites": [
+          "engagement_declare",
+          "responsabilite_decrite",
+          "autorite_reconnue_dans_source",
+          "interdiction_textuelle"
+        ]
+      },
+      "Preuve": {
+        "requis": [
+          "source_id",
+          "localisateur",
+          "ancrage_section",
+          "type_document",
+          "perspective",
+          "statut_revue"
+        ]
+      }
+    },
+    "contraintes": [
+      "règle déclarée ≠ pratique observée ≠ événement",
+      "absence de relation ≠ négation",
+      "autorité reconnue par un groupe ne vaut pas autorité universelle",
+      "aucun fait hors période",
+      "source coloniale ≠ consentement automatique de toutes les nations",
+      "aucune question évaluative auto sur un préjudice colonial",
+      "une règle doit avoir un locuteur ou une institution reconnaissante identifiables",
+      "graphe sémantique et graphe de préalables pédagogiques séparés"
+    ],
+    "statuts": [
+      "candidate_documentee",
+      "a_verifier_avec_nation",
+      "retenue_apres_revue",
+      "non_diffusable"
+    ]
+  },
+  "scope": {
+    "domain": "organisation_humaine"
+  },
+  "logical_commitment": {
+    "profile": "kristal.logical/jcs-sha256-v1",
+    "digest": "sha256:8be8ac7fbf9ac9f2ebc70639f9b16c5b3d43bf87fc70576ff23359c6581f6bdf"
+  }
+}

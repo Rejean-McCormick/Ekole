@@ -1,0 +1,6 @@
+{
+  "format": "ekole.level-map/0.1",
+  "status": "a_completer",
+  "description": "Mappage manuel des niveaux scolaires pour l’interface Ekole. Compléter levels_by_course avec des valeurs de 1 à 6.",
+  "levels_by_course": {}
+}

@@ -1,0 +1,188 @@
+{
+  "format": "ekole.experiences-publiques/1.0",
+  "references": 202,
+  "experiences_pilotes": 5,
+  "en_attente": 197,
+  "notice": "Prototypes à réviser; non certificatifs; corrigés exclus.",
+  "cours": {
+    "qc-pri-ad-001": {
+      "id": "qc-pri-ad-001",
+      "titre_enfant": "Exprimer une intention par le théâtre",
+      "statut": "prototype_a_valider",
+      "phases": {
+        "decouvrir": {
+          "titre_enfant": "Que veut dire le personnage ?",
+          "consigne_enfant": "Explore les intentions « inviter », « prévenir » et « chercher ». On peut les exprimer de plusieurs façons.",
+          "statut_validation": "Observation de choix d’expression"
+        },
+        "essayer": {
+          "titre_enfant": "Crée une petite scène",
+          "consigne_enfant": "Choisis une intention; joue-la avec deux moyens différents : geste, posture, voix ou espace. Tu peux utiliser une figurine.",
+          "statut_validation": "Aucune correction automatique de la performance"
+        },
+        "expliquer": {
+          "titre_enfant": "Qu’est-ce qui fait comprendre ?",
+          "consigne_enfant": "Nomme les deux moyens choisis et explique comment ils font comprendre l’intention du personnage.",
+          "statut_validation": "Grille humaine centrée sur indices observables"
+        },
+        "explorer": {
+          "titre_enfant": "Change le moyen, garde l’intention",
+          "consigne_enfant": "Rejoue la même intention avec un autre geste, une voix différente ou un trajet nouveau.",
+          "statut_validation": "Création et transfert libre"
+        }
+      },
+      "outils": [],
+      "evaluation": "Aucune maîtrise attestée dans Ekole Élève."
+    },
+    "qc-pri-ma-012": {
+      "id": "qc-pri-ma-012",
+      "titre_enfant": "Des parts égales, plusieurs représentations",
+      "statut": "prototype_a_valider",
+      "phases": {
+        "decouvrir": {
+          "titre_enfant": "Quel est le tout ?",
+          "consigne_enfant": "Repère le rectangle entier, la bande entière ou toute la collection avant de compter les parts.",
+          "statut_validation": "Observation guidée, sans score"
+        },
+        "essayer": {
+          "titre_enfant": "Construis une fraction",
+          "consigne_enfant": "Colorie des parts égales. Essaie deux dispositions différentes, puis change de support.",
+          "statut_validation": "Vérification automatique partielle sur une bande"
+        },
+        "expliquer": {
+          "titre_enfant": "Le même sens sur trois supports",
+          "consigne_enfant": "Montre la même fraction sur une surface, une bande et une collection; dis en quoi elles expriment la même part.",
+          "statut_validation": "Raisonnement et transfert à observer par un adulte"
+        },
+        "explorer": {
+          "titre_enfant": "Essaie une nouvelle situation",
+          "consigne_enfant": "Imagine un partage d’un objet ou d’une collection; détermine précisément ce qui forme le tout.",
+          "statut_validation": "Transfert sans certifier la maîtrise"
+        }
+      },
+      "outils": [
+        {
+          "id": "fractions-2-5",
+          "titre": "Colorie deux cinquièmes",
+          "mode": "entrainement_non_certifie"
+        },
+        {
+          "id": "fractions-3-8",
+          "titre": "Colorie trois huitièmes",
+          "mode": "entrainement_non_certifie"
+        }
+      ],
+      "evaluation": "Aucune maîtrise attestée dans Ekole Élève."
+    },
+    "qc-pri-st-001": {
+      "id": "qc-pri-st-001",
+      "titre_enfant": "Observer avant d’expliquer",
+      "statut": "prototype_a_valider",
+      "phases": {
+        "decouvrir": {
+          "titre_enfant": "Je vois ou je suppose ?",
+          "consigne_enfant": "À partir de deux traces sur une fiche fictive, distingue ce qui est dessiné ou mesuré de ce que tu en déduis.",
+          "statut_validation": "Vérifier la lecture de la fiche"
+        },
+        "essayer": {
+          "titre_enfant": "Trie les affirmations",
+          "consigne_enfant": "Range de courtes phrases dans « information observable » ou « interprétation ». Il peut rester plusieurs questions à explorer.",
+          "statut_validation": "Classement fermé partiel; capacité à formuler une enquête non certifiée"
+        },
+        "expliquer": {
+          "titre_enfant": "Quelle question pourrais-tu tester ?",
+          "consigne_enfant": "Formule une question qui compare un facteur et une trace observable, en gardant des conditions comparables.",
+          "statut_validation": "Nécessite une revue humaine"
+        },
+        "explorer": {
+          "titre_enfant": "Une nouvelle investigation",
+          "consigne_enfant": "Imagine une carte d’observation fictive ou un test simple et sûr, sans présenter la simulation comme une expérience réellement menée.",
+          "statut_validation": "Raisonnement scientifique ouvert"
+        }
+      },
+      "outils": [
+        {
+          "id": "science-observer-interpreter",
+          "titre": "J’observe ou je suppose ?",
+          "mode": "entrainement_non_certifie"
+        }
+      ],
+      "evaluation": "Aucune maîtrise attestée dans Ekole Élève."
+    },
+    "qc-pri-fr-008": {
+      "id": "qc-pri-fr-008",
+      "titre_enfant": "Construire le fil d’une histoire",
+      "statut": "prototype_a_valider",
+      "phases": {
+        "decouvrir": {
+          "titre_enfant": "Que se passe-t-il ?",
+          "consigne_enfant": "Dans une courte histoire, repère le personnage, ce qui change, puis comment la situation se résout.",
+          "statut_validation": "Repérage en lecture ou écoute"
+        },
+        "essayer": {
+          "titre_enfant": "Replace les cartes de l’histoire",
+          "consigne_enfant": "Mets les événements dans un ordre cohérent. Tu peux ensuite expliquer ce qui provoque l’événement suivant.",
+          "statut_validation": "Ordre contrôlé sur une histoire originale; causalité non prouvée"
+        },
+        "expliquer": {
+          "titre_enfant": "Parce que… donc…",
+          "consigne_enfant": "Choisis deux événements successifs et explique le lien de cause à effet en te référant aux indices du récit.",
+          "statut_validation": "Justification observée humainement"
+        },
+        "explorer": {
+          "titre_enfant": "Une autre fin est-elle possible ?",
+          "consigne_enfant": "Propose un autre dénouement cohérent avec le problème et justifie ce qui devrait changer.",
+          "statut_validation": "Création ouverte, sans note automatique"
+        }
+      },
+      "outils": [
+        {
+          "id": "recit-atelier-cartes",
+          "titre": "L’histoire de la boîte à outils",
+          "mode": "entrainement_non_certifie"
+        }
+      ],
+      "evaluation": "Aucune maîtrise attestée dans Ekole Élève."
+    },
+    "qc-pri-ma-009": {
+      "id": "qc-pri-ma-009",
+      "titre_enfant": "Partager ou former des groupes",
+      "statut": "prototype_a_valider",
+      "phases": {
+        "decouvrir": {
+          "titre_enfant": "Deux histoires de division",
+          "consigne_enfant": "Dans le partage, le nombre de personnes est fixé. Dans le groupement, la taille de chaque lot est fixée.",
+          "statut_validation": "Distinguer les deux significations"
+        },
+        "essayer": {
+          "titre_enfant": "Déplace les jetons",
+          "consigne_enfant": "Distribue réellement les jetons dans plusieurs boîtes. Vérifie que toutes les boîtes ont autant de jetons et observe le reste.",
+          "statut_validation": "Validation algorithmique du partage uniquement"
+        },
+        "expliquer": {
+          "titre_enfant": "Comment vérifies-tu ?",
+          "consigne_enfant": "Explique pourquoi les parts sont égales et pourquoi le reste ne permet pas de créer une part de plus.",
+          "statut_validation": "Justification observable par l’adulte"
+        },
+        "explorer": {
+          "titre_enfant": "D’autres objets, même règle",
+          "consigne_enfant": "Transfère le partage à des lots, crayons ou autocollants sans changer les règles de la situation.",
+          "statut_validation": "Transfert avec contexte changé"
+        }
+      },
+      "outils": [
+        {
+          "id": "partage-12",
+          "titre": "Répartis 12 jetons dans 3 boîtes",
+          "mode": "entrainement_non_certifie"
+        },
+        {
+          "id": "partage-14",
+          "titre": "Partage avec un reste",
+          "mode": "entrainement_non_certifie"
+        }
+      ],
+      "evaluation": "Aucune maîtrise attestée dans Ekole Élève."
+    }
+  }
+}

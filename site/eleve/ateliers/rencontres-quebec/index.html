@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fr-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ekole Élève · Qui faisait quoi ? Sociétés du Québec</title><link rel="stylesheet" href="style-v2.css"></head>
+<body><p style="margin:12px auto;max-width:1080px;padding:12px;border:2px solid #1e6864;border-radius:14px"><a href="version-v3.html" style="font-weight:700;color:#1e6864">Ouvrir la nouvelle version v3 — Kristals autonomes et parcours référencé →</a></p>
+<a class="skip" href="#main">Aller au contenu</a>
+<header><a href="../../">← Ekole Élève</a><span>Histoire · rôles, tâches, ressources</span><a href="version-v1.html" class="muted">Ancienne exploration</a></header>
+<main id="main">
+<div class="notice">Prototype documentaire pour apprendre en explorant. Révision par les nations et essai en classe à réaliser. Aucune note scolaire.</div>
+<section class="intro"><p class="eyebrow">MON ATELIER DES SOCIÉTÉS</p><h1>Qui faisait quoi ? Comment les sociétés se sont-elles rencontrées ?</h1><p>Découvre plusieurs nations et institutions, à différentes époques. Une fiche décrit une situation documentée : elle ne résume jamais toute une nation.</p></section>
+<nav class="mainnav" aria-label="Atelier"><button data-view="decouvrir" aria-pressed="true">Découvrir</button><button data-view="relier">Relier</button><button data-view="exercices">M'entraîner</button><button data-view="questions">Questions</button><button data-view="sources">Sources</button></nav>
+<section class="period"><h2>Je choisis une époque</h2><div id="periods" class="chips" role="group" aria-label="Époques"></div><p id="period-note" class="subtle"></p></section>
+<section id="panel-decouvrir" class="panel"><h2>Ce que nous apprennent les sources</h2><div id="facts" class="cards"></div><h2>Les images seront ajoutées plus tard</h2><p>En attendant, le prompt conceptuel est affiché en texte. Il n'impose aucun style.</p><div id="visuals" class="cards"></div></section>
+<section id="panel-relier" class="panel" hidden><h2>Rôles, tâches et ressources</h2><p>Seules les relations pour lesquelles nous avons une source sont affichées.</p><div id="relations" class="cards"></div><h2>Responsabilités et règles attribuées</h2><p>Une parole conservée dans un texte colonial n'est pas automatiquement une règle acceptée par toutes les nations.</p><div id="normes" class="cards"></div></section>
+<section id="panel-exercices" class="panel" hidden><h2>Je manipule les connaissances</h2><p>Le système vérifie tes choix dans les fiches documentées, sans IA. Si tu hésites, tu peux demander un indice.</p><div id="challenge-list" class="chips"></div><article id="challenge" class="exercise"></article></section>
+<section id="panel-questions" class="panel" hidden><h2>Je demande au Kristal</h2><p>Choisis une question liée à un fait connu. Si une information manque, le système doit dire qu'il ne sait pas.</p><div id="question-list" class="cards"></div><div id="answer" class="answer" aria-live="polite"></div></section>
+<section id="panel-sources" class="panel" hidden><h2>Qui raconte cette histoire ?</h2><p>Les sources sont conservées dans le corpus. Les liens externes ne sont pas nécessaires à l'entraînement hors ligne.</p><div id="source-list" class="cards"></div></section>
+<footer>Ekole · Kristal candidat v9 · Ne représente ni une approbation institutionnelle ni une validation par les nations.</footer>
+</main><script src="donnees_v2.js"></script><script src="app-v2.js"></script></body></html>

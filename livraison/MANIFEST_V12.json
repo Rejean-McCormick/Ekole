@@ -1,0 +1,2993 @@
+{
+  "format": "ekole.overlay-v12/manifest-1.0",
+  "intended_installation": "extraction a la racine du depot, sans dossier enveloppe",
+  "statut": "candidate_technique_non_certifiee",
+  "source_200_archive": "archives/KRISTALS_200_REFERENCES_ORIGINALES.zip",
+  "kristals_references": 202,
+  "kristals_sources_avec_cadre": 200,
+  "pilotes_avec_micro_mondes": 5,
+  "micro_mondes": 7,
+  "aucune_image_ia_generee": true,
+  "included_files": [
+    {
+      "path": "LANCER_EKOLE_3_APPS.bat",
+      "bytes": 757,
+      "sha256": "56441c865e56059e18add3dcdd6cc86960c9c1b3b5b67f490fb45fd1d7e40496"
+    },
+    {
+      "path": "README_EKOLE_3_APPS_v8.md",
+      "bytes": 2548,
+      "sha256": "3712fc92d868e159ce6e3333e041c069952884173a3694b650aa6b92a921830b"
+    },
+    {
+      "path": "README_EKOLE_COUCHE_VISUELLE_KRISTAL_v10.md",
+      "bytes": 4943,
+      "sha256": "354d070d9bc066b6e6b8cf6adcc6a8eada84dadaf5816fe78008e54959729ac8"
+    },
+    {
+      "path": "README_EKOLE_MINILABS_V9.md",
+      "bytes": 1380,
+      "sha256": "0cbf8aed8297adafc49902efba80424d31e79e0387ec8957580a69d2379d08cd"
+    },
+    {
+      "path": "README_EKOLE_REFONTE_FONDAMENTALE_v11.md",
+      "bytes": 4217,
+      "sha256": "8ca94d492e3358bcc3aa35d69b0ee63c7abbbf52b4c51bcec773d2cfab79d307"
+    },
+    {
+      "path": "README_EKOLE_VERSION_CANDIDATE_V12.md",
+      "bytes": 5164,
+      "sha256": "b2d8a5a3eae5838698db2b39db13bfd7cc5946903f8bb417382e26294800c4ae"
+    },
+    {
+      "path": "README_OVERLAY_EKOLE_3_PORTAILS_v7.md",
+      "bytes": 3805,
+      "sha256": "b595e3d4829b29e342fa6d3ada5bbbe5f38bacb2a4afd43b839d7b03ad3cdbf9"
+    },
+    {
+      "path": "archives/KRISTALS_200_REFERENCES_ORIGINALES.zip",
+      "bytes": 7629093,
+      "sha256": "e87df556d1fbef00e15f34247e87ca8ce484f402c32c924ed556863b299a7a9e"
+    },
+    {
+      "path": "contracts/EKOLE_ATELIERS_V12.schema.json",
+      "bytes": 872,
+      "sha256": "9a8aa66c5c419e7d091f71b032c34b26b034b83f6e542b73eda4ec8ea7385df0"
+    },
+    {
+      "path": "contracts/EKOLE_EXPERIENCE_KRISTAL_V11.schema.json",
+      "bytes": 2273,
+      "sha256": "dcf2ab6ff39a49ea1b2f71cf208d4ba2228adafc81b7422af70731c3bf5e55f9"
+    },
+    {
+      "path": "contracts/EKOLE_KRISTAL_RESSOURCES_VISUELLES_v1.schema.json",
+      "bytes": 2479,
+      "sha256": "fcb4f618c7251cff70bd25c9bdf4937bbdd13c95e02a9620184dedbc0508ff30"
+    },
+    {
+      "path": "contracts/EKOLE_MICROLAB_0.1.schema.json",
+      "bytes": 1712,
+      "sha256": "ab85ce0b6f6e1e0585fd867acb1eb3f203dc0d0fa079664bf6ba5db4369caba1"
+    },
+    {
+      "path": "docs/CARNET_DE_REFONTE_202_v11.json",
+      "bytes": 151330,
+      "sha256": "34eeaaf61025e87ee39b19af85bd616169e64edb403bca4e0087e9beb368d2a4"
+    },
+    {
+      "path": "docs/CONTRAT_VISUEL_KRISTAL_v10.md",
+      "bytes": 2016,
+      "sha256": "7a056a41fe892cf4242e7410d02417027b16354e28bb1fa94e1cab7ec3f1f068"
+    },
+    {
+      "path": "docs/EKOLE_MINI_ENVIRONNEMENTS_V9.md",
+      "bytes": 6212,
+      "sha256": "c7e30b2e15af94d4da9d253bb73808bf1f0a7ddaa046ac143421e43e82502b01"
+    },
+    {
+      "path": "docs/EKOLE_PORTAILS_ET_VISUELS_v7.md",
+      "bytes": 2894,
+      "sha256": "f6c399e3d740180713967cd1d8db4cf3681b24bad7a14c8a496334d95cad9811"
+    },
+    {
+      "path": "docs/EKOLE_V8_VISION_SYSTEME.md",
+      "bytes": 3839,
+      "sha256": "58c52e960d4326c7e8af66d18c997b73b2f053cffee667fb5768259c076f3115"
+    },
+    {
+      "path": "docs/PLAN_TRANSFORMATION_202_V12.json",
+      "bytes": 79189,
+      "sha256": "d64b0b5148ef8653cf842bcb8628889f1070d39066d5b9578f205a42087be9c7"
+    },
+    {
+      "path": "docs/PROTOCOLE_DE_REFONTE_V11.md",
+      "bytes": 5248,
+      "sha256": "85a2a008f43699e28141c4d8b791708090fd35a19960319491ceef339f53e66b"
+    },
+    {
+      "path": "docs/PROTOCOLE_PUBLICATION_V12.md",
+      "bytes": 2887,
+      "sha256": "35f351158ab5ed751d11d0ec767adbd596f6d16aa2d621658e0eaf19361f3927"
+    },
+    {
+      "path": "enseignant-app/app.js",
+      "bytes": 11890,
+      "sha256": "601caf2891ec447adb2666789f41f2870f19bc3725808bd1459a8e2693830278"
+    },
+    {
+      "path": "enseignant-app/atelier-v12/app.js",
+      "bytes": 5033,
+      "sha256": "3b11ec0f8953d6ed6655bb8fba9755df2540941edf939ee0bef8307b41130921"
+    },
+    {
+      "path": "enseignant-app/atelier-v12/index.html",
+      "bytes": 1665,
+      "sha256": "7bc80515cdf68f881c7abc93ad2907f29cd139194d347e1ea5e1dff4b1019e82"
+    },
+    {
+      "path": "enseignant-app/atelier-v12/style.css",
+      "bytes": 2386,
+      "sha256": "5122bea65d638748c3cf626949dcdd7c2e751a0924fa60d92e3f3863d731d247"
+    },
+    {
+      "path": "enseignant-app/index.html",
+      "bytes": 2550,
+      "sha256": "7b3a8a608e5fa0d62d782ed1067515630f1dc9abe37b7b0d64eca034a00f717d"
+    },
+    {
+      "path": "enseignant-app/planification-v8.js",
+      "bytes": 4553,
+      "sha256": "44e28d16b00ef12ceabfeef355d6d218b47201e87c8ae5bdcc9fc65e7be1027d"
+    },
+    {
+      "path": "enseignant-app/style.css",
+      "bytes": 5608,
+      "sha256": "d55637dd9957f891c7c168c4dc5a881d60cd964abc2698e38458c0dd043c26f5"
+    },
+    {
+      "path": "kristals/qc-pri-ad-001/authoring/REVISION_EKOLE_v11.md",
+      "bytes": 1556,
+      "sha256": "7714539cb655bb5752849b62fc92e209c35f86d6ef233bc0f770745bf602b0e7"
+    },
+    {
+      "path": "kristals/qc-pri-ad-001/experience/ANNEXE_GUIDE_v11.md",
+      "bytes": 1437,
+      "sha256": "dcec3de8c33aa3a46a599876297b3a2b97589610fed5f70b8133abd898163c8e"
+    },
+    {
+      "path": "kristals/qc-pri-ad-001/experience/ANNEXE_PRATIQUE_v11.md",
+      "bytes": 1074,
+      "sha256": "e7a07cde32b823451fa08868b516302f349ee52c39229c310be721aa3e1ab27f"
+    },
+    {
+      "path": "kristals/qc-pri-ad-001/experience/ATELIERS_V12.json",
+      "bytes": 3230,
+      "sha256": "befd963bca6802a7becc6f1e8ef48d9efa237b956ca835a462f11f1a666fe2dc"
+    },
+    {
+      "path": "kristals/qc-pri-ad-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2042,
+      "sha256": "7277d8d9b406216bfb21f902fc17f43a4feb72640d40b21fef9b783306eba83c"
+    },
+    {
+      "path": "kristals/qc-pri-ad-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4554,
+      "sha256": "f1a77692d7dbbc535ad3e44dd7e1f3e40ef61c7b5695ccaa5990beba8474ab74"
+    },
+    {
+      "path": "kristals/qc-pri-ad-001/experience/SCENARIO_APPRENTISSAGE.json",
+      "bytes": 4107,
+      "sha256": "f2c107d89ab73879ce93f9531c64c2162d9de6936d481dccd2c980f6d9585b63"
+    },
+    {
+      "path": "kristals/qc-pri-ad-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2051,
+      "sha256": "28bbb46b7c510d0d7f81010ee09fe6fbed07bc1b90af6e77103ab61df9ef5021"
+    },
+    {
+      "path": "kristals/qc-pri-ad-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4041,
+      "sha256": "89e1d8caa0e3ae3a73e7e246a41e63d02a016d275786e508fe6d8a2cef6bd2c5"
+    },
+    {
+      "path": "kristals/qc-pri-ad-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2119,
+      "sha256": "de0c77fbe148350b74de599988947fc9c038111fcc614bd72c26c546e59b0b99"
+    },
+    {
+      "path": "kristals/qc-pri-ad-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3942,
+      "sha256": "20aedc95ff17b7638a3db07b1b45af827cad9506cec6a3887207dedf1a817b0b"
+    },
+    {
+      "path": "kristals/qc-pri-ad-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2044,
+      "sha256": "4a721addf4da5adb84e418dd20263da86072f88ebdc234209093c8c5fb50f221"
+    },
+    {
+      "path": "kristals/qc-pri-ad-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4104,
+      "sha256": "987837688d259907a8b34af96babcff8fdc8b6f644cca7a03073ee666fb459ca"
+    },
+    {
+      "path": "kristals/qc-pri-ad-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2061,
+      "sha256": "2f9756dc1ec7a1aeb5571dca1f01e07ce615c1d866f87818f83c05160943bbe2"
+    },
+    {
+      "path": "kristals/qc-pri-ad-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3964,
+      "sha256": "37df1621a8968c67413783a93dddea509c495266b94f317b35333f1cee8a305c"
+    },
+    {
+      "path": "kristals/qc-pri-ad-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2091,
+      "sha256": "91ae5057f7ba63444b0a5d630038ff62a048213f86bc0052c95bd44511101825"
+    },
+    {
+      "path": "kristals/qc-pri-ad-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3995,
+      "sha256": "aadc80c7a82e6fb296c00a6aa6fe145390961319018e62724144600a4d511dc5"
+    },
+    {
+      "path": "kristals/qc-pri-ad-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2019,
+      "sha256": "c9f7d0c5c63e8e2fc9e1306d05bef739c4b240189d771340430d88e0b31f5f16"
+    },
+    {
+      "path": "kristals/qc-pri-ad-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4004,
+      "sha256": "9f9cd506e01842da362e0b3066aa907d08ce9382773c7f7c1215c11d55c7c3b9"
+    },
+    {
+      "path": "kristals/qc-pri-ad-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2068,
+      "sha256": "dd12c35d8c303244ed88e389acfdbb7d5e9185f5f4763b30074190d940456105"
+    },
+    {
+      "path": "kristals/qc-pri-ad-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4092,
+      "sha256": "feb49f094762667bd2c14e77683aa072aaf115b80c37a271de47cbd7ed6b9dda"
+    },
+    {
+      "path": "kristals/qc-pri-ad-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2082,
+      "sha256": "1debeaa6350900aa5b50e0d28f16fccd9d2abb04c572fdc8267e22840a1988ee"
+    },
+    {
+      "path": "kristals/qc-pri-ad-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4125,
+      "sha256": "b0475fbf66bf0c2ef70558b140b616a76783adf42fd83f099307461b7d20a5ce"
+    },
+    {
+      "path": "kristals/qc-pri-ale-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2016,
+      "sha256": "39cc69938c68b268bb4a0eb78cf6247413cf0ce6fbfc8b38a96e307c3c271c66"
+    },
+    {
+      "path": "kristals/qc-pri-ale-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3944,
+      "sha256": "824a34934a07a30d568a2dcfe6545806083adbdf89f8f0665fc223152334295f"
+    },
+    {
+      "path": "kristals/qc-pri-ale-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2042,
+      "sha256": "5678b7a40caebef11092165c8f7fbdcd72b3500098b63e8841b91f508ad29a3f"
+    },
+    {
+      "path": "kristals/qc-pri-ale-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3661,
+      "sha256": "78988d205f2e4131538412a2aca40be9b891ff232a3169087b3f7ffb6679abeb"
+    },
+    {
+      "path": "kristals/qc-pri-ale-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2073,
+      "sha256": "12dd56cd4deaac3eef4cbad0d165ebca630217c4cb4e5c3725fc0b02c106c12b"
+    },
+    {
+      "path": "kristals/qc-pri-ale-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3950,
+      "sha256": "31961fa029d5e081c414db4ae88a98af9321fb47c2f78d6b22318d5978c79698"
+    },
+    {
+      "path": "kristals/qc-pri-ale-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2056,
+      "sha256": "77ec930030981119bba9d8b41c60539e5d62213e6604ffe90beb3a03ed9d810e"
+    },
+    {
+      "path": "kristals/qc-pri-ale-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3579,
+      "sha256": "35e9588bf1d591ed7660447d94f69837577b92a509e8a71ef026fa63f6e3792e"
+    },
+    {
+      "path": "kristals/qc-pri-ale-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2064,
+      "sha256": "da67a29b48e25b30f071b3de19bcd85f856e76c4d6087c1f8f4d5710dc7f91d2"
+    },
+    {
+      "path": "kristals/qc-pri-ale-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3628,
+      "sha256": "c842896ca30e6668382ec9ff4e1f7aae0fb03fb71447625f1df6d0084197fb75"
+    },
+    {
+      "path": "kristals/qc-pri-ale-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2085,
+      "sha256": "d14a4b8afdad7b38ae1a40d3ff750581e2a89c863fccdbf8821488725b2f753c"
+    },
+    {
+      "path": "kristals/qc-pri-ale-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3702,
+      "sha256": "8e7664019c8be55f955767512238ff89e82e712d55258efc2462487359908a20"
+    },
+    {
+      "path": "kristals/qc-pri-ale-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2101,
+      "sha256": "d78861774c5d4b4f3c3af02d20073d04ebff82631692c7b0b30d5b5af63f347e"
+    },
+    {
+      "path": "kristals/qc-pri-ale-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3758,
+      "sha256": "87ae20b03fe847f171ff0087d721f0a316bc2b79aae8392582f854642f49de98"
+    },
+    {
+      "path": "kristals/qc-pri-ale-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2006,
+      "sha256": "03b27af646692c708c63d8bcba3844708082888f734d6e8f1fc2c39ed1ed5c29"
+    },
+    {
+      "path": "kristals/qc-pri-ale-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3587,
+      "sha256": "030ddd961c64ceb55b0868b3f6ec9b2b144b0cda779d77dc4c86edcde6c02430"
+    },
+    {
+      "path": "kristals/qc-pri-ale-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2051,
+      "sha256": "f003086719293c7cfad645a63f4da54de96af2cab99f07cea524d8530b9f0fe4"
+    },
+    {
+      "path": "kristals/qc-pri-ale-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4043,
+      "sha256": "6d0d6df785ecd57cb292bfb2b9d3deea1cc95ccd4fbbfb5da97512ad3743bd0e"
+    },
+    {
+      "path": "kristals/qc-pri-ale-010/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2093,
+      "sha256": "6b3d190d9725dee62cc32a8d6fdf8dd2ff23dc852604b65ec51a8cff354b64d2"
+    },
+    {
+      "path": "kristals/qc-pri-ale-010/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3970,
+      "sha256": "737d421d6c5b205702834d0f2746b608205a1cbbb2dbf3ba39ee2aa4aee03fd7"
+    },
+    {
+      "path": "kristals/qc-pri-ale-011/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2052,
+      "sha256": "012695011ff605211547cb6dfe1daf0319f5bb00829fdb777fcc50c99c3926c8"
+    },
+    {
+      "path": "kristals/qc-pri-ale-011/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4054,
+      "sha256": "2331cb5dabfc536ab2010a441efd5c2ae5c166e970d205ff394404f93bcb8d65"
+    },
+    {
+      "path": "kristals/qc-pri-ale-012/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2095,
+      "sha256": "f683893d18c8ebd34f04ba3d9ae3394df61f63a89d46d77e9fc1c77707a2cc02"
+    },
+    {
+      "path": "kristals/qc-pri-ale-012/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3620,
+      "sha256": "e4db5654ecca9af81d913ed61f71b51527bddfb0d23d8b5ed8aa786e166981c0"
+    },
+    {
+      "path": "kristals/qc-pri-ale-013/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2035,
+      "sha256": "87ff9735024b4a062f7bd88711b2a5dd294e344cdc6b30f435ef11170d6bea6c"
+    },
+    {
+      "path": "kristals/qc-pri-ale-013/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3940,
+      "sha256": "732f4ad6b88db8a3a5e2193747b88c5b439cae7f6038da3d1c918d04ef63a550"
+    },
+    {
+      "path": "kristals/qc-pri-ale-014/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2085,
+      "sha256": "9b5d9f8ccb838b9f88f6e64bbec9a38cc319635ecc5cea0404ef510c347f5b7d"
+    },
+    {
+      "path": "kristals/qc-pri-ale-014/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3700,
+      "sha256": "83a23410c2d8996c98feaccad0c285d2fbefac2e38a56c2cc76788847823d22f"
+    },
+    {
+      "path": "kristals/qc-pri-als-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2042,
+      "sha256": "38cc87cca2cd8f070d07b54fb9a3e2a63b7c119a758e13a67decce6e190fdbeb"
+    },
+    {
+      "path": "kristals/qc-pri-als-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4025,
+      "sha256": "61911244c1620d98eba3b51601fa8bf4c60f3a2584037355e9f8c82f22292933"
+    },
+    {
+      "path": "kristals/qc-pri-als-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2078,
+      "sha256": "7ee06f9e6069856228f2c66dffe269db417e85136783bff86706fcedfd4f1b5e"
+    },
+    {
+      "path": "kristals/qc-pri-als-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4111,
+      "sha256": "0fd5949ee7c8e30cb53f4b283585ccdc5df28d80cb3f47cb60cdf9f79adaa253"
+    },
+    {
+      "path": "kristals/qc-pri-als-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2057,
+      "sha256": "259fa7a505f60f42d8905915d148137a4c075fa979d9049468c15729a5cdfceb"
+    },
+    {
+      "path": "kristals/qc-pri-als-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4133,
+      "sha256": "28673f1955f4122aa1a5210ae5c358cb3c291cd4b832dde3958234a135875f82"
+    },
+    {
+      "path": "kristals/qc-pri-als-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2093,
+      "sha256": "f407b9d3169b627d46d26a48530c1007a61387215df4af93c84ac2571942dbec"
+    },
+    {
+      "path": "kristals/qc-pri-als-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4061,
+      "sha256": "0cb1c78a3e423d62e1078158c60640caa7c73a231e454302b66e511dd55486f7"
+    },
+    {
+      "path": "kristals/qc-pri-als-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2054,
+      "sha256": "b70f2a66b2808d662fc2593ea8ba2ee866e87da34114a9049cd573a98805102d"
+    },
+    {
+      "path": "kristals/qc-pri-als-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4039,
+      "sha256": "7704964715e5c4fd598688564295baa8f0bafc551b7ef4bb7985cd2e4e82263f"
+    },
+    {
+      "path": "kristals/qc-pri-als-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2088,
+      "sha256": "9e89f5c2e9ae5cc7c8b0a422460bf3b01b5bd0f9d805d8cbfc1a7d9584bb6583"
+    },
+    {
+      "path": "kristals/qc-pri-als-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4063,
+      "sha256": "5d163fc81127c980740748cf9c82e7261e6a0ec7a664ae0ed25086840529dc63"
+    },
+    {
+      "path": "kristals/qc-pri-als-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2046,
+      "sha256": "b1cfbfa40b5b696938300ca75bb0c7c61f75dc44504146b899f575586228e379"
+    },
+    {
+      "path": "kristals/qc-pri-als-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4016,
+      "sha256": "44ac27b7e86fc757271ad8cb7dd1c9955401e0cf7030f50f949e2de7d91d1fa1"
+    },
+    {
+      "path": "kristals/qc-pri-als-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2068,
+      "sha256": "c6119b6db651b3bad2313c6c7c4b16180dbad96f512d404f7cee935f265bc228"
+    },
+    {
+      "path": "kristals/qc-pri-als-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4024,
+      "sha256": "1b39fbfa72aeb3fdeef3ef73d1ff50d402addaddf30f861b36bdb75810748511"
+    },
+    {
+      "path": "kristals/qc-pri-als-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2170,
+      "sha256": "35ec211fcd17cc9fb3ae885dd19a8ae91fa84ee092ad29df79f0ddb9e5bc03b4"
+    },
+    {
+      "path": "kristals/qc-pri-als-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4181,
+      "sha256": "4c91a6d49ddc5bbf1b6332567e0144222e75ff4e655be3ca76266864ef375802"
+    },
+    {
+      "path": "kristals/qc-pri-als-010/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2095,
+      "sha256": "037e50fb4c8ddf92a529e4b7f10aa000fde37558197c8db4f97367141ae75edd"
+    },
+    {
+      "path": "kristals/qc-pri-als-010/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4039,
+      "sha256": "f0fdc69c2322878c0e693fa74bf351d18c43c3cd8948cf159f33663149585957"
+    },
+    {
+      "path": "kristals/qc-pri-als-011/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2084,
+      "sha256": "1bcdbe5b388b6aeb0d5c3efb26c3b1e72146efcd34785559e7383c4ffdf02424"
+    },
+    {
+      "path": "kristals/qc-pri-als-011/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4047,
+      "sha256": "0b4fe0cf48aaebefe1fb79f9b4b7f637ebba4ef7de1de509cf29c328471db00d"
+    },
+    {
+      "path": "kristals/qc-pri-als-012/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2146,
+      "sha256": "1a244f1d4e631f5e694ddac7525ea91357e427edd845e17b63e5adbf63aa9807"
+    },
+    {
+      "path": "kristals/qc-pri-als-012/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4096,
+      "sha256": "a44f64acb361dd9bd5c0c6d896927b032f983019579c7c2c4099a8afdede1d83"
+    },
+    {
+      "path": "kristals/qc-pri-ap-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2033,
+      "sha256": "e8c28bfe2706a27ba6bc86a0ae535f35938c918b428c69c57483cdb34fff45bd"
+    },
+    {
+      "path": "kristals/qc-pri-ap-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3992,
+      "sha256": "56f2ac9ad4019b9f1fd21857ee6a71d620c0ce128b992413f19af444c92805ef"
+    },
+    {
+      "path": "kristals/qc-pri-ap-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2051,
+      "sha256": "8d5d355a8a4d51af1a567e2679c3d49ebc1545e07d19e787e5ae04d75eb2b7ee"
+    },
+    {
+      "path": "kristals/qc-pri-ap-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4056,
+      "sha256": "7f63a8d5de2c18fba5ad2ae2262a9c3f6206cc7f44c19689fd4ccdd4173de03d"
+    },
+    {
+      "path": "kristals/qc-pri-ap-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2051,
+      "sha256": "6057d0592368232a6392f340346eb71be64690bd9124cbb8ddebb98f6d154149"
+    },
+    {
+      "path": "kristals/qc-pri-ap-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4021,
+      "sha256": "c9ea73a30b87b22930734da43bcc82ecabb73d74161f19f9fc9fff95acda98d0"
+    },
+    {
+      "path": "kristals/qc-pri-ap-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2099,
+      "sha256": "6765eca71c00e9651a98ca4087feb55b71463626d76f47fa6ebf27e3c3fdde1b"
+    },
+    {
+      "path": "kristals/qc-pri-ap-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4089,
+      "sha256": "153f991d070801bfd4b75eb7d8fb366cd759837d95303852da44887648f31111"
+    },
+    {
+      "path": "kristals/qc-pri-ap-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2050,
+      "sha256": "26e7fd21aaaf7a957f2a6d395d65dc0225eb8b6609ada2fcd3f354183d31d67d"
+    },
+    {
+      "path": "kristals/qc-pri-ap-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4063,
+      "sha256": "1ff1f4aed3c8b800636ce7158a613c2c16b2f22e06cb1fc8b2da9bfd39e036c3"
+    },
+    {
+      "path": "kristals/qc-pri-ap-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2085,
+      "sha256": "efb177696bd2eaab2e3cfd92c937f7818c28664e850792f6fbb8078ace403e5b"
+    },
+    {
+      "path": "kristals/qc-pri-ap-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3978,
+      "sha256": "07f41f4e2d3b20f28d04aa7da94b9843c95c2c4b3b34be74daa77e57585ae363"
+    },
+    {
+      "path": "kristals/qc-pri-ap-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2086,
+      "sha256": "aae1fe243e64f8492d81670bad608dd9ba592b29fa5163344e98986bef55be94"
+    },
+    {
+      "path": "kristals/qc-pri-ap-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4114,
+      "sha256": "ac772418a2177472f3dda23093e89a0de5c6ec6d0e9b208bb1012abac1cec976"
+    },
+    {
+      "path": "kristals/qc-pri-ap-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2108,
+      "sha256": "a168d07db8b48dd9956f750429411c84c86f0e8f4cd0dd8202342e982ec91d60"
+    },
+    {
+      "path": "kristals/qc-pri-ap-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3730,
+      "sha256": "db93adc3116e912d1d0935c7d1a2f5029e461fd0a433805fc604f5f60bbbb8f4"
+    },
+    {
+      "path": "kristals/qc-pri-ap-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2059,
+      "sha256": "c8263e75edab2cc8fb3b932b9093f9118e447ab0252579f51f89805b63057db1"
+    },
+    {
+      "path": "kristals/qc-pri-ap-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4055,
+      "sha256": "3c595d888bfc829bab6d3d220beb7471ed5828961cf7dd24bb69f82551ecf9c9"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2135,
+      "sha256": "a816439468bf415d28e2ec685c0b03d6d3d4d9b2dfb71b1008230bfa38922026"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4165,
+      "sha256": "754584692435ce5226df06b64a43abae74f9a6b534725ca53499dafa171dfab0"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2096,
+      "sha256": "b38ed0522c179c819f931cd035147f68539de2b8df7bdfb383a40e51a740298b"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3951,
+      "sha256": "1ee427c829343651bce2433bb48476314dded44f3c1ef24f2677b1cc5e83cebb"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2032,
+      "sha256": "eae993c079331f78a452dda21b4db17ac9b0b2a5e96a96b15643632a3a7a7c7a"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3913,
+      "sha256": "ea3e7db590f420e1618134c1b6c166b7f75040f3c7499f9e6091675a367d2484"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2095,
+      "sha256": "bacd08e46adeffc90646d7ba9695015fe59af463920dce59067de392d67e105f"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4262,
+      "sha256": "bcd3f0b35398bd5cccfbb93aff7c7ea9794f7b24a08116c597a066ead24e7e30"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2088,
+      "sha256": "91cb9ed8fcf23dae7da23719344cd398a8e7f232fad50b8f731c8f83eda775e4"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4065,
+      "sha256": "907d504443a956a13bf70fc3dbfe0ccf946c532440fc5a468b3c77dd4ebb9f56"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2131,
+      "sha256": "00eac78bfdb29619fec51f89de5a625c6cc33c1a1c0f54c71084fbdabcaeb189"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4207,
+      "sha256": "b3d31c4e1bab9fd6fec35c010a699aee690b3bbf2f78a03f1a7ffe9215fcfbb8"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2080,
+      "sha256": "9351963affad151e76584356629320e23f37fb3dbc6599d5ee55c063648660ff"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4168,
+      "sha256": "8eda52193933de1be28981c59eb4c723bc48c75a76ec969b0ecf7b39b0d859aa"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2082,
+      "sha256": "d4396734fb800310b432a37b63f500e3dd54258ca0b6ca33c241b4c00ed6e244"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4043,
+      "sha256": "31507fe0633ef3840867d874e0a9e57b0c4dc460c25a0014afbb5dfeb80475de"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2106,
+      "sha256": "54d7163d3a3685b95af32de24aadb097697592870f35dc8b79fa09901d8f0c67"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4199,
+      "sha256": "715b3d9e21592415060c54fe72cd7e83d477e6ea49e9c8c1ff37979e7cf6ca0b"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-010/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2260,
+      "sha256": "badc2cec334de323c2032a6d5518543041c944f6d8de31c6fd186c4f0003ee67"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-010/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4389,
+      "sha256": "7caf06f4c0dffaaa64c08c8a7504776bdc17ab665d288277df5ee1dff860d298"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-011/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2176,
+      "sha256": "7762c1d177f51dad1bd82fe402e54c4cce5daaa479cd6c11407b574fdd0480cb"
+    },
+    {
+      "path": "kristals/qc-pri-ccq-011/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4254,
+      "sha256": "6cefaa5fc3acf1167503a0257b40d3d973074134607519ab348453e186776edf"
+    },
+    {
+      "path": "kristals/qc-pri-da-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2089,
+      "sha256": "80a1a5def09ebf5360292f6c689bab49a05d566ba9ada5cd331b81168a68b3c3"
+    },
+    {
+      "path": "kristals/qc-pri-da-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3992,
+      "sha256": "4cb8606e6a765ff4cb6b5467bec23879a8457d6cc705d2e217a46e521f7a5b2d"
+    },
+    {
+      "path": "kristals/qc-pri-da-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2065,
+      "sha256": "c309bc1cadeb143c7610f2bd48914008d68a0ce1044e60bd9a6357fa5b965384"
+    },
+    {
+      "path": "kristals/qc-pri-da-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4060,
+      "sha256": "2d0feb782d3a748aad4732aa0cb2beea6d91091a1c8e841e3b5e8afcf9c51acf"
+    },
+    {
+      "path": "kristals/qc-pri-da-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2050,
+      "sha256": "5cb78769790b66390fca13ba2bfac2d6b60edf1c9d628b272d240eebc58176cb"
+    },
+    {
+      "path": "kristals/qc-pri-da-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3959,
+      "sha256": "f08016fc6e141d8257f71979fb9a653726ae82a935f7dd80e2849603b77acdff"
+    },
+    {
+      "path": "kristals/qc-pri-da-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2083,
+      "sha256": "14f7083f2304ccc880b83aaab94589e91c0760f79f4fb6cb4ac6036620f40ee5"
+    },
+    {
+      "path": "kristals/qc-pri-da-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4021,
+      "sha256": "327b47dc4eef38cf76d57dfaded451cc2a39345c7d97ec06e22cb0aaba3a9d73"
+    },
+    {
+      "path": "kristals/qc-pri-da-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2072,
+      "sha256": "56bf5cac39d7ce5108867e12ba985fb58826a7f01763317a02c40ed748ebed86"
+    },
+    {
+      "path": "kristals/qc-pri-da-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3977,
+      "sha256": "72539a3c80840baad7264d1151b4e109bef54ad7675628bd2588d112e27df2b1"
+    },
+    {
+      "path": "kristals/qc-pri-da-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2106,
+      "sha256": "66de53887b77134c53002292508a579b68e4fdcc656067e63f4c55a4618973dd"
+    },
+    {
+      "path": "kristals/qc-pri-da-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3929,
+      "sha256": "62a9648f73cba2080ab012d38c5d066c615d981444470c1d40018bb815e48455"
+    },
+    {
+      "path": "kristals/qc-pri-da-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2027,
+      "sha256": "ca546975a0b3070124276415ec2a4f5717977c1a6aaceecadfb8b9d668af3b7e"
+    },
+    {
+      "path": "kristals/qc-pri-da-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3962,
+      "sha256": "31625edbadf8adf90b2866037dcbdce9602d50fc147516f11ba2a47f1c5d2f5f"
+    },
+    {
+      "path": "kristals/qc-pri-da-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2095,
+      "sha256": "4cdde8e500d1bed3cef64fa4690fe91b1fa88697af47945e0f461730aa0dc37f"
+    },
+    {
+      "path": "kristals/qc-pri-da-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4104,
+      "sha256": "6b37c322c92a2e2dfb2023de069d038a5dda45ce06dc0d6a7b2ffdc9eda10cd8"
+    },
+    {
+      "path": "kristals/qc-pri-da-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2082,
+      "sha256": "00bed42e9632f3d09dc94ad1ecac5c6c47787902225445a8e25fc536f5ad2442"
+    },
+    {
+      "path": "kristals/qc-pri-da-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4027,
+      "sha256": "c103757d6ea632a362c663ec520d09c20baf560d21493a37c37e38cf6102e11f"
+    },
+    {
+      "path": "kristals/qc-pri-eps-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2040,
+      "sha256": "45eeae354151bddc2206da81f2e8c047857a3e4c3215a7f83d3b5835f1971d20"
+    },
+    {
+      "path": "kristals/qc-pri-eps-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4022,
+      "sha256": "dcfcb9486f95e07cf2b6506c101824361c94c70a310c6aabf5f7e273744de18f"
+    },
+    {
+      "path": "kristals/qc-pri-eps-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2067,
+      "sha256": "589c297652bc9d07b2147af702b518561f5a93a2f6429658fb6069f5d33031d8"
+    },
+    {
+      "path": "kristals/qc-pri-eps-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3986,
+      "sha256": "35f0cca371b61747e010e396e4454d4e8ccc6872875854a7cad8f3d0f5873d01"
+    },
+    {
+      "path": "kristals/qc-pri-eps-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2077,
+      "sha256": "530e1254c7ee31e10951fa6192fb36b1d317e13c1047597ce82c912d13e9df26"
+    },
+    {
+      "path": "kristals/qc-pri-eps-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4003,
+      "sha256": "5b9600f07927ed93e55b0e5e4496ea626602164c265d3c199892826b2f2f76f7"
+    },
+    {
+      "path": "kristals/qc-pri-eps-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2144,
+      "sha256": "ad025df9295accaba8e2ec809e019549075688ac1f09b3bdf199ea4508de7777"
+    },
+    {
+      "path": "kristals/qc-pri-eps-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4199,
+      "sha256": "21373deb25d409f0174ae7f9d7639a406e7a0e23217ba1c0ae28abf1b12579cd"
+    },
+    {
+      "path": "kristals/qc-pri-eps-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2074,
+      "sha256": "b71824acabccb43b6fa6e73dfe1448bcd16aff27ab281b89bf4c238d112ae164"
+    },
+    {
+      "path": "kristals/qc-pri-eps-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4119,
+      "sha256": "ea69ade3095ab5da3636ae461753539cc0e2254af6db470afd33f4f8e5664fe3"
+    },
+    {
+      "path": "kristals/qc-pri-eps-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2142,
+      "sha256": "e0986ca57a94b7f04f9774ab9f57c8cc3c545a30394396bd538fb1790174a1a3"
+    },
+    {
+      "path": "kristals/qc-pri-eps-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4071,
+      "sha256": "43681118aebb3992751237108f0d6c9ab2f17d667cd61e3ed874394c1338e07d"
+    },
+    {
+      "path": "kristals/qc-pri-eps-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2079,
+      "sha256": "081ba533bec4859eb4e26f201da41667fba327a311259c10aa05d3b0c66da9f8"
+    },
+    {
+      "path": "kristals/qc-pri-eps-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3999,
+      "sha256": "f24b059824dd34ea22bddc91439e1adb67fbb62c6c320b1dfc6e854f2cf1153f"
+    },
+    {
+      "path": "kristals/qc-pri-eps-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2121,
+      "sha256": "5d2e8d8224ac578bf59e773a54a4f3f64acaf209d612dfbe0659ea0dc8675636"
+    },
+    {
+      "path": "kristals/qc-pri-eps-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4183,
+      "sha256": "50ce90a35666e767fcb5c46be951c182563bcfe07d01692b7b69ecd134121576"
+    },
+    {
+      "path": "kristals/qc-pri-eps-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2127,
+      "sha256": "7ad63f8f57279b95b8e135996efd770a2ec4a403468192b1a6c1fbb4c05b0a32"
+    },
+    {
+      "path": "kristals/qc-pri-eps-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4056,
+      "sha256": "a02427898a1f8838a694d38d63d9cd7d72d437b1a13f8a6ef351d30a4f486186"
+    },
+    {
+      "path": "kristals/qc-pri-eps-010/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2080,
+      "sha256": "edfe2ef68613d65f3280e7eaaa2d967d8e8c0b380a8cf2751a2b30a1c7d192ff"
+    },
+    {
+      "path": "kristals/qc-pri-eps-010/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3978,
+      "sha256": "aba845bf1771ee94c1242908bd3a13d7ef1489aede02e572a4d4aafbfea8c85d"
+    },
+    {
+      "path": "kristals/qc-pri-eps-011/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2072,
+      "sha256": "1f0614d903728bb3e6e6ce6158a13386ed92b08bdb203140970323667fe945f7"
+    },
+    {
+      "path": "kristals/qc-pri-eps-011/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4016,
+      "sha256": "15da42371c843f1dbe1b2d22d3f4a8227fc837df8eba1b70c8ac991269f1cd64"
+    },
+    {
+      "path": "kristals/qc-pri-eps-012/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2172,
+      "sha256": "93f6d79a8ee893b762f6299cf9a6363539497197d196d4289a874cbe3b169b48"
+    },
+    {
+      "path": "kristals/qc-pri-eps-012/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4144,
+      "sha256": "fe159bb4e46a9feec5a153a1ab57df9239c0ac58818019db3817dd81cd32bcb5"
+    },
+    {
+      "path": "kristals/qc-pri-fls-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2023,
+      "sha256": "44b004f5685fc4836a126c8ab171fc6d2a00958214d944dbdcc15ac4e8a66933"
+    },
+    {
+      "path": "kristals/qc-pri-fls-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4053,
+      "sha256": "3b21266f481c23a5fe54059675bac5287fd775f78ecf745218c4234d657cc237"
+    },
+    {
+      "path": "kristals/qc-pri-fls-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2050,
+      "sha256": "947a29ba220530927786b5a87477089579d33fab4e61c7db8a671226be320fbd"
+    },
+    {
+      "path": "kristals/qc-pri-fls-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4094,
+      "sha256": "4a9111b9da667f7a82e281787bf63107c5a56cfce28ffe7ce974244cf2adb053"
+    },
+    {
+      "path": "kristals/qc-pri-fls-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2083,
+      "sha256": "16389f7f81d3d1a526013e20b19738b4ba69fae49597fe08b8a96a158873238a"
+    },
+    {
+      "path": "kristals/qc-pri-fls-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4071,
+      "sha256": "0c9ed0959b086ec05a168f8f0d41e51a3f89335c763577b6b8e468d53bc0f7b0"
+    },
+    {
+      "path": "kristals/qc-pri-fls-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2097,
+      "sha256": "e5f42f8bed8d1e09789bc204664b1cfc6abcc05a50bce823d6b2edfe98cf19aa"
+    },
+    {
+      "path": "kristals/qc-pri-fls-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4087,
+      "sha256": "00158e4f22804c0616ace2e9c25fccf954bd8ccf093caab7e4ca190698f31309"
+    },
+    {
+      "path": "kristals/qc-pri-fls-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2106,
+      "sha256": "a209450fc76ee22686abc5050c9e450187eb2809757d7b12caa7013ab8ade24c"
+    },
+    {
+      "path": "kristals/qc-pri-fls-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4211,
+      "sha256": "7e2ed01c9ab565a93fc8dd6483996e9e2fecf8ce5ac2d3a25b163ab84b0f565c"
+    },
+    {
+      "path": "kristals/qc-pri-fls-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2052,
+      "sha256": "f6a0a763c31eb9563ce21287a2b80c2a75391a209e299366f706d50a9b6db0b7"
+    },
+    {
+      "path": "kristals/qc-pri-fls-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4074,
+      "sha256": "610c81d226d10eedcb357d8cc814af1265249be911f0e8f90c62cb8dafe275ca"
+    },
+    {
+      "path": "kristals/qc-pri-fls-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2070,
+      "sha256": "82cda2e5032fe7f11a884210a720727bbe64cf5f145c0de6929ee311d0a9cfe2"
+    },
+    {
+      "path": "kristals/qc-pri-fls-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4029,
+      "sha256": "7132e85e30fb2877f9145ce4a215d0a356f74e03f04f94829af6074e3e2086f6"
+    },
+    {
+      "path": "kristals/qc-pri-fls-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2055,
+      "sha256": "f3cad8e360104bf56f4cd4310887876ef3179a7cd49379d1f6a3538e3db94961"
+    },
+    {
+      "path": "kristals/qc-pri-fls-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4032,
+      "sha256": "4ca564fb242f35e272508cc5baaa21ec58bf328dda6ead63419ef152bc58cafa"
+    },
+    {
+      "path": "kristals/qc-pri-fls-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2071,
+      "sha256": "f0586b11882aebc5b977b6647d8fe97705688b3961098e0fc38fbe2d5af7a104"
+    },
+    {
+      "path": "kristals/qc-pri-fls-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4052,
+      "sha256": "3ea31243854a24795cdaa9c2a5568c1b1c8e6093505fc286d5bd0df56d450287"
+    },
+    {
+      "path": "kristals/qc-pri-fls-010/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2062,
+      "sha256": "ca59370b2401740f4a31b1694993fce02ae8e437e1b4fd1106c2e0f22827e288"
+    },
+    {
+      "path": "kristals/qc-pri-fls-010/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4134,
+      "sha256": "ab5c2c0693653a12a37b08575351b83103ee0bce6133c4a58ed5fa379c6e7fc9"
+    },
+    {
+      "path": "kristals/qc-pri-fls-011/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2091,
+      "sha256": "95caad584a68a9b01d4f07d1ef541294c3a26a551174f46e03ad0473cd9d54a0"
+    },
+    {
+      "path": "kristals/qc-pri-fls-011/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4262,
+      "sha256": "ed4374ec9f15e9d718c09583ee2db68f77c614708b755015fd375cfd7b0d81a2"
+    },
+    {
+      "path": "kristals/qc-pri-fls-012/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2079,
+      "sha256": "a1b4d7a90682c7ed2fa1ca5f2d96205d6614112c1caae219fce91f7862b3c94f"
+    },
+    {
+      "path": "kristals/qc-pri-fls-012/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4117,
+      "sha256": "3c0597effb63aaff8ffc3875773fe199c4e3d53e89a6273d80e00417c225ce32"
+    },
+    {
+      "path": "kristals/qc-pri-fr-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2037,
+      "sha256": "aadd153d86466d79696e6917b11826c0e3bc819be0bceb4ba6ff9822fdca7efc"
+    },
+    {
+      "path": "kristals/qc-pri-fr-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4027,
+      "sha256": "d95ba4ba101f3245f48714f84173fad0fb93a516b1d8c7c2a5eb8c2bba6e8282"
+    },
+    {
+      "path": "kristals/qc-pri-fr-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2232,
+      "sha256": "fc38e3a8f02221d4e7611b7a9570c53d87a485f008cf68aab73c04c2cf8a372e"
+    },
+    {
+      "path": "kristals/qc-pri-fr-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4370,
+      "sha256": "af25078bc82ceffee40a18db8c7c905d507d6398b821a4c48ba5c480bc725c86"
+    },
+    {
+      "path": "kristals/qc-pri-fr-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2169,
+      "sha256": "4a40608e5ba2b48b2c2461a91d71918ebdfdc3bb6de08ff8c09b03a78f843c69"
+    },
+    {
+      "path": "kristals/qc-pri-fr-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4317,
+      "sha256": "96a38c19ef41006bc0efa5d8c5d801bff755bcb3a337e766b5f21e4dc24f83bb"
+    },
+    {
+      "path": "kristals/qc-pri-fr-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2153,
+      "sha256": "6eb2699e3a8a73371c788c472b497f58879e920c9a150eef04a47bb5cdb29ae4"
+    },
+    {
+      "path": "kristals/qc-pri-fr-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4028,
+      "sha256": "f4a4ac150cfc67708f753dfa5442636d85f927cf62053fd4991dc5800c61ca9c"
+    },
+    {
+      "path": "kristals/qc-pri-fr-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2134,
+      "sha256": "86df5f2beb24cd2dccb922172f3ae86b3eb0283f9a4e368e84d06b0c25d9da0a"
+    },
+    {
+      "path": "kristals/qc-pri-fr-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3989,
+      "sha256": "22772efc72dd0a8dd97d26841e98fa6dd00745ee2157535187e176306244a9bd"
+    },
+    {
+      "path": "kristals/qc-pri-fr-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2142,
+      "sha256": "5ce1f2aa7d55aae85df76708134b24c9559f3e9036c5cc9bbb55c3b26c79b857"
+    },
+    {
+      "path": "kristals/qc-pri-fr-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4264,
+      "sha256": "180bfff0537686d95418cbe6cfd73a5cd39f430fe4b39064250fdf806323483f"
+    },
+    {
+      "path": "kristals/qc-pri-fr-008/authoring/REVISION_EKOLE_v11.md",
+      "bytes": 1521,
+      "sha256": "304fa78cbad462c2290f27544f4d0b7d5d7bb0a8baffa2640cccb0e951c668e0"
+    },
+    {
+      "path": "kristals/qc-pri-fr-008/experience/ANNEXE_GUIDE_v11.md",
+      "bytes": 1391,
+      "sha256": "c51a7cb1679f955d931c3713d71ca1905f4617b483444f082fdf4b1bdd7eac5f"
+    },
+    {
+      "path": "kristals/qc-pri-fr-008/experience/ANNEXE_PRATIQUE_v11.md",
+      "bytes": 1052,
+      "sha256": "b8463af7436e2ffcc7eb192002706d16d649986e3c681ccf18be233263bc6b0c"
+    },
+    {
+      "path": "kristals/qc-pri-fr-008/experience/ATELIERS_V12.json",
+      "bytes": 3985,
+      "sha256": "b43ac814b2cc8020d1ad9db03b263ed64d5b6172879dec957d19bfd1ed33de80"
+    },
+    {
+      "path": "kristals/qc-pri-fr-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2146,
+      "sha256": "b310c926d369026a0e53461998c36bf002eed86f2419c7550cd9b86850a29b2e"
+    },
+    {
+      "path": "kristals/qc-pri-fr-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4533,
+      "sha256": "83dae651c5d543270d59f003c9c9d48ff3d037aff0a65baa0dc9239b86b1b3e5"
+    },
+    {
+      "path": "kristals/qc-pri-fr-008/experience/SCENARIO_APPRENTISSAGE.json",
+      "bytes": 4128,
+      "sha256": "c2e64b384f5dec821ab024afcf89a4aa622763add581d3f60cb01e9b39ba1e04"
+    },
+    {
+      "path": "kristals/qc-pri-fr-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2156,
+      "sha256": "ac7493727e7555311557e727f4a35207593e3f75c72c724910c60ac915a48103"
+    },
+    {
+      "path": "kristals/qc-pri-fr-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4160,
+      "sha256": "39427f11ce68dbe10a3f13b532a80b24fff77bfae9d8c0de38abed2f0aed43eb"
+    },
+    {
+      "path": "kristals/qc-pri-fr-010/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2150,
+      "sha256": "579308b1a853ad0a192e070772159970917abfed9ff0c1251727bce1de809d15"
+    },
+    {
+      "path": "kristals/qc-pri-fr-010/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4113,
+      "sha256": "962dc2d1b8c79532047202fdf46819240b00d30de62c629057102fed26d1fcaf"
+    },
+    {
+      "path": "kristals/qc-pri-fr-011/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2130,
+      "sha256": "47a357ba4faadbcbb4b1f09d7e3fce879fec0a6f7d70b5fefcc528551b7e74d1"
+    },
+    {
+      "path": "kristals/qc-pri-fr-011/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4103,
+      "sha256": "5dc8cc39eefb0faf95269c54d0ace01490732692b30f0bd2d4076a09c171ef29"
+    },
+    {
+      "path": "kristals/qc-pri-fr-012/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2209,
+      "sha256": "de1a0bc31acda3b8e0391b8dfcca60aee9c3245626f5526ca28326f712a46652"
+    },
+    {
+      "path": "kristals/qc-pri-fr-012/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4219,
+      "sha256": "870dfce480ebe32638c5515dc8f92283eb876694d5c7a5dcf95ee9b0913bd34c"
+    },
+    {
+      "path": "kristals/qc-pri-fr-013/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2053,
+      "sha256": "f8d7bdf74be1da50a2f6ec26cfdf33661610641f27b5377f7f769e0c83692004"
+    },
+    {
+      "path": "kristals/qc-pri-fr-013/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3931,
+      "sha256": "4273e8a60ba091bfa3eaa1a60ae85b64fd97d5e81218cafb9dd4f75fab8ba20b"
+    },
+    {
+      "path": "kristals/qc-pri-fr-014/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2137,
+      "sha256": "889265d9c92522935be881fba1cf355d3a329a152fedd77413f3672ef522d096"
+    },
+    {
+      "path": "kristals/qc-pri-fr-014/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4087,
+      "sha256": "f7428419e7b72421a72834470c32f92685d4aae62a407dbfa93482e03c59815e"
+    },
+    {
+      "path": "kristals/qc-pri-fr-015/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2116,
+      "sha256": "49c47dd52a4d46a7cd83bfbd17e32a8425370bb2fd15463fb17d85d1d673d8b4"
+    },
+    {
+      "path": "kristals/qc-pri-fr-015/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4006,
+      "sha256": "f8ab6b72f103b9eac097ddfe6462f55dfa950a4bd41984a640b3d47e535c8c69"
+    },
+    {
+      "path": "kristals/qc-pri-fr-016/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2136,
+      "sha256": "4c14fc18699efdbfe6a9659b5febcda056738a25fa1df6ab9f90f3324f223462"
+    },
+    {
+      "path": "kristals/qc-pri-fr-016/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4031,
+      "sha256": "67476d8f09cfd25cc25420f450ed5cba9b19d0c0f2743da55650e01b7ded104e"
+    },
+    {
+      "path": "kristals/qc-pri-fr-017/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2077,
+      "sha256": "c4aebb6da91be80072d80a13ceea5365156991eb28ea29fc6561b1abd9f600c3"
+    },
+    {
+      "path": "kristals/qc-pri-fr-017/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3948,
+      "sha256": "d26d3a541eef7665835ec1086b021d7564228255e714a69321fa1b89284fffed"
+    },
+    {
+      "path": "kristals/qc-pri-fr-018/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2097,
+      "sha256": "beb820bfb1a5961fdb2ea21ba8d0a47453afaeaf0a86cb797e105628137fda23"
+    },
+    {
+      "path": "kristals/qc-pri-fr-018/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3979,
+      "sha256": "a47fd96dab4523328168d3bcd11f135a743f0aeaebb772e79c17be3bd2d5ce67"
+    },
+    {
+      "path": "kristals/qc-pri-fr-019/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2102,
+      "sha256": "2b3d8090ae79b5132cce3564d91fc3e57f141237e679c7a5ad1b37d0b5a420ac"
+    },
+    {
+      "path": "kristals/qc-pri-fr-019/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4025,
+      "sha256": "4523f11b75ebc13ca7fedfd8e16b028c4376d0bc42a0d1600786abf71e679ef8"
+    },
+    {
+      "path": "kristals/qc-pri-fr-020/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2129,
+      "sha256": "788f636c40b758221ede88fef50984eb4f5aa7bb9c564c36b4c47539790dc166"
+    },
+    {
+      "path": "kristals/qc-pri-fr-020/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4012,
+      "sha256": "5b513c3e1d70daa911354ed45acfb6b6699fc19767e9e527aa231bbcd0214956"
+    },
+    {
+      "path": "kristals/qc-pri-fr-021/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2114,
+      "sha256": "9d343daa34f258ac8741c4ab4bee74448f20a94c5a7fb5505c5136a80328f928"
+    },
+    {
+      "path": "kristals/qc-pri-fr-021/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4141,
+      "sha256": "ca2c6ba3cf78d7c518d424d4833b39fe010fede537bc198bdf4448e968327121"
+    },
+    {
+      "path": "kristals/qc-pri-fr-022/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2094,
+      "sha256": "352e6fda0af503187cd21cf01b3468aa205a62143ad24c52dee056a087d21436"
+    },
+    {
+      "path": "kristals/qc-pri-fr-022/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4142,
+      "sha256": "15d1254ed6cd60af29683362b0a910ff3a5672f915704df02f99a4628ec74301"
+    },
+    {
+      "path": "kristals/qc-pri-fr-023/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2128,
+      "sha256": "17c725eb3ae8823ae864f8d7b3116af1cd9b0d7944338a2057e6292eebcb3d45"
+    },
+    {
+      "path": "kristals/qc-pri-fr-023/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3999,
+      "sha256": "5e480a12798c0260fa40c2f78add4bf9c9a64febef4096c4e467d0bd5f3b0863"
+    },
+    {
+      "path": "kristals/qc-pri-fr-024/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2044,
+      "sha256": "a29e626bdce5c8177c2f91311fdef58c0339f66875860f96b07bad883cc00d67"
+    },
+    {
+      "path": "kristals/qc-pri-fr-024/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4041,
+      "sha256": "1e3094ef3e0b7183649f80a3b62e253a0dbb80637fb76aaa429cdd59e5ac2f40"
+    },
+    {
+      "path": "kristals/qc-pri-fr-025/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2149,
+      "sha256": "67186acbbd5644a2966624c424592700f0f3bc6b9dffd0c9bc48b2fb1eb195bf"
+    },
+    {
+      "path": "kristals/qc-pri-fr-025/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4107,
+      "sha256": "d34b9bbfbb45439abd13885393e858b923750bd1777463c20a6da1c7a73572b7"
+    },
+    {
+      "path": "kristals/qc-pri-fr-026/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2141,
+      "sha256": "fa31d30d6b9005f70670bbb82445e3612c1a7825b8cefd955fc778aedf18f89e"
+    },
+    {
+      "path": "kristals/qc-pri-fr-026/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4152,
+      "sha256": "e17da973d1e7a3087d1ee185ff85c30cf9cd91000cd7e0d645d0aae0d24da2b2"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2013,
+      "sha256": "c5419f37279d644413256ffe0960c6ce7642675828971649c3d30a3e7e0c2796"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3976,
+      "sha256": "f4d5801490bb7e0b97498de56aa9abd83c9d5bd1e4ee03e858a60d91caf27385"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2013,
+      "sha256": "d3568bf24911aeaef347f10cd41a59ad4651bd0768bb2c4507276e139fa26b8e"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3990,
+      "sha256": "ee5aca0494762409a15645666c7ba8b1558b754439e8ae96a4a8480e450045d4"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2014,
+      "sha256": "6154732c61626f253dacefda0fb700782d6cf6dbbfac00a79ad26c74bdc7a706"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4006,
+      "sha256": "9bc25f45730aed7dbbc2016771672a0655460fb63b0b9778d0b1f6f5459b64fc"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2064,
+      "sha256": "441d0cf45f66601ba13aad448660f29e8f104fc4235b81083ce83994f3016b02"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4133,
+      "sha256": "62a93f9418094e73d0e02ae2680af06d5266749405311f07c3a3ea1f39adf341"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2095,
+      "sha256": "38be34b26fc261103972ee977f6be6721309041ae6f740de1bb8d5c0f3b8ee33"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4120,
+      "sha256": "70867983246d7cc7d1e2b19adda482936263208f1cf6c037d2e256cc4a7f08ee"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2064,
+      "sha256": "1936edce06ca6b5cf715c2201264e19179a7593c14e995f1900351859c9f9560"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4100,
+      "sha256": "87199312c991b5e21ca28698fb6515142a71e2d3fb5b21ba3faae4ae9e848228"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2062,
+      "sha256": "4f027d1efd95bbcd46a15d38dd4b42b514244ba4d78f1d84ba7a3f43b2da6348"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4064,
+      "sha256": "2754f1eb2817f5efc7b41b43b17cdb5103e1e82433d1f9d036c805dceaf1a012"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2115,
+      "sha256": "d1f8fb57fca18c67c38cc3f094ced4804c414913af211dd0d0ddd5ee20a5b376"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4068,
+      "sha256": "da5b9a30eafeda2e017bcac359c9d4832b7ccf5fdd16f1728f703f0f13b9191b"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2083,
+      "sha256": "542229705a0a7985179d02b1d76467cbea93de458555f4d0ece5df376d5aa019"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4128,
+      "sha256": "cf64958de48ca75413ff1c9164f57edd49870a9183ca88bdda1f734d737bb180"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-010/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2160,
+      "sha256": "931550c2b051b9fbe48345acdbd2e8720fc47c143ef6b5309f88214db28324cb"
+    },
+    {
+      "path": "kristals/qc-pri-ilss-010/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4179,
+      "sha256": "3ee712225ccb0140af7daf87d630b3d85414f7fc0b6b051d687742fad55acf4f"
+    },
+    {
+      "path": "kristals/qc-pri-ma-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2174,
+      "sha256": "39b25c274e34bbbb4a99188164cf4c8c71fc9019116bcd33b9008af0eb2ab848"
+    },
+    {
+      "path": "kristals/qc-pri-ma-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4420,
+      "sha256": "4a89a54fa7666fc527848c3bf09051b9a91f747ba0943b0525b1bfc890a6f839"
+    },
+    {
+      "path": "kristals/qc-pri-ma-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2122,
+      "sha256": "e1c7d8782e3d661b47f5de47c0f29557e76b7d21e2734852cdb0663d8a620fb1"
+    },
+    {
+      "path": "kristals/qc-pri-ma-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4201,
+      "sha256": "acc4886d446686f20a0111739fa4bef535d611dbdd439ac861be31095ca6bbe4"
+    },
+    {
+      "path": "kristals/qc-pri-ma-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2088,
+      "sha256": "1797bb2ee121faa14104c87e652485735c9f3ef273892a6f90acf2466f706e69"
+    },
+    {
+      "path": "kristals/qc-pri-ma-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3779,
+      "sha256": "7b7b21483a1c05d09642fb0c29c635921b1a9c2a07684b667b5c7e2ff8e9cd22"
+    },
+    {
+      "path": "kristals/qc-pri-ma-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2043,
+      "sha256": "ddbd9cdc075209390f0bfbf0df02d11ba8cd9ca1f5485e9b884831957a0f0731"
+    },
+    {
+      "path": "kristals/qc-pri-ma-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4096,
+      "sha256": "44ac0e0dd27243edea8f5edc95e880881fe103a1026f8e26d45fb81269561dde"
+    },
+    {
+      "path": "kristals/qc-pri-ma-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2100,
+      "sha256": "cc9a129f915b75997e0863410df320353050ec700239e95a2377fad841f52b55"
+    },
+    {
+      "path": "kristals/qc-pri-ma-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4128,
+      "sha256": "99bed518b13375431c984138ab5e791689119d136db9e9f86980cde7a2581016"
+    },
+    {
+      "path": "kristals/qc-pri-ma-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2054,
+      "sha256": "3dc064dbeaf1cdb64ed4439bb05df36504efdf7fb2e35b6999fac7032cfe704c"
+    },
+    {
+      "path": "kristals/qc-pri-ma-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4050,
+      "sha256": "4e15a4e4bf53509fe46666344cd65f6628f94a091706f8f94f5448dbf275cf6e"
+    },
+    {
+      "path": "kristals/qc-pri-ma-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2092,
+      "sha256": "638f90e0d4c246f16d3e4d957fa797efab0d200701dcafbb029208b7a188b1f1"
+    },
+    {
+      "path": "kristals/qc-pri-ma-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3758,
+      "sha256": "b856188b02e794114631985a83d4b1eee80731aae15585a0019f66802ff0a81a"
+    },
+    {
+      "path": "kristals/qc-pri-ma-009/authoring/REVISION_EKOLE_v11.md",
+      "bytes": 1506,
+      "sha256": "19d636f2600b99f1071f5ccdfd51d1103b988473dff28b7786b7883a4c987ccd"
+    },
+    {
+      "path": "kristals/qc-pri-ma-009/experience/ANNEXE_GUIDE_v11.md",
+      "bytes": 1432,
+      "sha256": "bacc25beba35a37682945cece3014dd293f225862d11901be08fbf4ea91d148c"
+    },
+    {
+      "path": "kristals/qc-pri-ma-009/experience/ANNEXE_PRATIQUE_v11.md",
+      "bytes": 1063,
+      "sha256": "c61a58be1775f5e58feaa794e52e1ce4385f36a97c2072bcc2e30121b37d39df"
+    },
+    {
+      "path": "kristals/qc-pri-ma-009/experience/ATELIERS_V12.json",
+      "bytes": 4680,
+      "sha256": "173da1b36d07f6d6216ae15c79e86bd4e0a9a2cf58b7d8b01e5267ffbb3698de"
+    },
+    {
+      "path": "kristals/qc-pri-ma-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2064,
+      "sha256": "c56dd82b6c79373afd4f74e9f3217cef187447f070a56230766b35df6c3cda8b"
+    },
+    {
+      "path": "kristals/qc-pri-ma-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 6672,
+      "sha256": "07bc8cecb2c997ee1b8be1966fef94c0ec8a27fc8d08dbd850eb55ed023d10cc"
+    },
+    {
+      "path": "kristals/qc-pri-ma-009/experience/SCENARIO_APPRENTISSAGE.json",
+      "bytes": 4240,
+      "sha256": "d99295bfc777eaae198e61f3e3ed7ebfe77d6784a84f816a207ee5813ef5a9b9"
+    },
+    {
+      "path": "kristals/qc-pri-ma-010/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2139,
+      "sha256": "55f1ab929587435b3c3612246f061a1d7c957e7fbb7098f2bef6e47592f88561"
+    },
+    {
+      "path": "kristals/qc-pri-ma-010/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4141,
+      "sha256": "ec7ab10f74ab612924b4f3bb78422dfe9cdd6688d629a9a76007036640fcd995"
+    },
+    {
+      "path": "kristals/qc-pri-ma-011/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2067,
+      "sha256": "a9d885736310e0c0d9609da61a8193eae91eaa15f63c9eacdf4e85d160470521"
+    },
+    {
+      "path": "kristals/qc-pri-ma-011/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4093,
+      "sha256": "1d380f5ca34dfed519c2c59877623f13de26fdde1fe32b4cb4a3f4db6b835f7e"
+    },
+    {
+      "path": "kristals/qc-pri-ma-012/authoring/REVISION_EKOLE_v11.md",
+      "bytes": 1540,
+      "sha256": "8667551558f7e68b8281cdefd867cdf7a7298b9ef8504dc8a85528c15415b2ee"
+    },
+    {
+      "path": "kristals/qc-pri-ma-012/experience/ANNEXE_GUIDE_v11.md",
+      "bytes": 1401,
+      "sha256": "040187a12e057cd7ed19330390052d4332e76263011eef69469ff2f7f1909f36"
+    },
+    {
+      "path": "kristals/qc-pri-ma-012/experience/ANNEXE_PRATIQUE_v11.md",
+      "bytes": 1073,
+      "sha256": "3556787c2acb2e68ebdc7598ec5fc1de66f94c2fb46cc20ffd0217d42d9f1e9a"
+    },
+    {
+      "path": "kristals/qc-pri-ma-012/experience/ATELIERS_V12.json",
+      "bytes": 4809,
+      "sha256": "01e43313481c642df0527d1079064fc40c52090a51f8372624f929fc2f46ccf3"
+    },
+    {
+      "path": "kristals/qc-pri-ma-012/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2065,
+      "sha256": "28759bf214e7d323ba350a688406e07fad19c90dd819b135dbb7979d9d89d832"
+    },
+    {
+      "path": "kristals/qc-pri-ma-012/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 7075,
+      "sha256": "a90f17ffa4aa6918ba3599297913ccdebf20664eeb2054103033c44bd6a07cdf"
+    },
+    {
+      "path": "kristals/qc-pri-ma-012/experience/SCENARIO_APPRENTISSAGE.json",
+      "bytes": 4274,
+      "sha256": "396be7555b61cd3947768d6773913c275167ec4ca910835d5c7dd990a5ef8a7b"
+    },
+    {
+      "path": "kristals/qc-pri-ma-013/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2106,
+      "sha256": "3b3c801d1fe4b872f521b667167aa1f37492de47f56bce7529d47b3e7ef3c2b3"
+    },
+    {
+      "path": "kristals/qc-pri-ma-013/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4230,
+      "sha256": "286542ce712109fa64b848bfe6fe9638b7a8821d618f032fb329f8b643f4fb27"
+    },
+    {
+      "path": "kristals/qc-pri-ma-014/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2172,
+      "sha256": "b5be1beb0bceceb2acd52862d434b2f9ee0f5ecb10cd59e40e37039c5aa40d9d"
+    },
+    {
+      "path": "kristals/qc-pri-ma-014/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3986,
+      "sha256": "05ad79dadeccdc7c813f0e555aa4748ecbe14ea7a50b86d188a7ace55def255c"
+    },
+    {
+      "path": "kristals/qc-pri-ma-015/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2135,
+      "sha256": "e3f7b8b90f643e087a8212089c79047555244f318645f8b082a29e6fc8f6f8e9"
+    },
+    {
+      "path": "kristals/qc-pri-ma-015/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4078,
+      "sha256": "a52984c3458dc7fb0956c57e8524b0294ec70d0b96c3831c1c0fee57959c6330"
+    },
+    {
+      "path": "kristals/qc-pri-ma-016/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2149,
+      "sha256": "e16be48b385c8bddb997ff1ab4d23b5de6c0d0d26a18c705ec89329c9cc63d31"
+    },
+    {
+      "path": "kristals/qc-pri-ma-016/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4094,
+      "sha256": "79e9660e9f74dfe3cb377bb48aca6e76b0d9026c1c457912133419c87ea87efb"
+    },
+    {
+      "path": "kristals/qc-pri-ma-017/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2155,
+      "sha256": "1d0cea655fafadb221fa4a7ff8ea0d1ea38e52c8dd3ea57c2ac3bb34702c5e60"
+    },
+    {
+      "path": "kristals/qc-pri-ma-017/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4256,
+      "sha256": "1663df048f7015f8d257f189ecbe116cf9e677fbbda74228f7d625ede4ac9699"
+    },
+    {
+      "path": "kristals/qc-pri-ma-018/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2067,
+      "sha256": "9ddd59f7c8579df317e0d40c0cfd105005aab56065e92374becdbde07bdffb8e"
+    },
+    {
+      "path": "kristals/qc-pri-ma-018/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4034,
+      "sha256": "21ad79c0052710a6adeefe8e09b18ed60465f7218025b0b9a55702317824861a"
+    },
+    {
+      "path": "kristals/qc-pri-ma-019/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2143,
+      "sha256": "2da5899f1ecfee19c7cf00f51b3437018cb8f2538656e7f96d8c0176dff4a099"
+    },
+    {
+      "path": "kristals/qc-pri-ma-019/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4014,
+      "sha256": "cacc37a052a8e62e9274d83059534e3ba93454df6dff83f7d684013f115af402"
+    },
+    {
+      "path": "kristals/qc-pri-ma-020/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2130,
+      "sha256": "dc14b127e0db97a9022eda18f954d652c6635500ab390acd2e132e0d098a6683"
+    },
+    {
+      "path": "kristals/qc-pri-ma-020/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4227,
+      "sha256": "61c2038653680ed3be1b859c24ed4cc84a4e83cab6a956a881e1860590d50099"
+    },
+    {
+      "path": "kristals/qc-pri-ma-021/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2060,
+      "sha256": "3534c2745c0e0df032d4673007439f15c3b6845da4acc56a7b501e5050a5e8f8"
+    },
+    {
+      "path": "kristals/qc-pri-ma-021/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4215,
+      "sha256": "f560dd40cc96b384cd9d542cabe498c799badb4482409d768b4d55e69fe718f0"
+    },
+    {
+      "path": "kristals/qc-pri-ma-022/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2079,
+      "sha256": "b54a69c5e0363c78dbf5970dac374d7fd54d9c152899d3f3fdabab53ecb71ab9"
+    },
+    {
+      "path": "kristals/qc-pri-ma-022/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3988,
+      "sha256": "eafba9d19d6575feff96f57fcfd40c207e63e94ac971d399acc3f405bd4e2ec6"
+    },
+    {
+      "path": "kristals/qc-pri-ma-023/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2030,
+      "sha256": "7b36494d9cf52f0d116b5262499397b5f72fb22716b22de3e43c100af48877a6"
+    },
+    {
+      "path": "kristals/qc-pri-ma-023/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4075,
+      "sha256": "bee456fcef384415975d7731416a84ca9d3b15b6de7ff784fac049aa9c817ca6"
+    },
+    {
+      "path": "kristals/qc-pri-ma-024/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2092,
+      "sha256": "eefa1421ca582e61a7ef3f73c8e390373a2b4cf8b984e58b4a88621f632e13a5"
+    },
+    {
+      "path": "kristals/qc-pri-ma-024/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4043,
+      "sha256": "79222de40701e5ba8a05d585061cb57f771e30108e7a81cf0c1703bcb2d3a59c"
+    },
+    {
+      "path": "kristals/qc-pri-ma-025/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2081,
+      "sha256": "171dcc555ce345854e67bc4740bb9c2a70a5de892b72532295a1e5c1ca349955"
+    },
+    {
+      "path": "kristals/qc-pri-ma-025/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4030,
+      "sha256": "8f17d26e2fffa7db4f38344fb5cf79752b72b9904bcf8a4ca65b80704e71efe5"
+    },
+    {
+      "path": "kristals/qc-pri-ma-026/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2036,
+      "sha256": "15b2aa383ba3f92cfc60335bfdd4827acf7ab58d0956cef4d3d64ddb93312b4d"
+    },
+    {
+      "path": "kristals/qc-pri-ma-026/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3852,
+      "sha256": "b9f96dbc03553c03e22ecaec6fed0bfb8b8dbf07fa38fc9c994efcf8995d5534"
+    },
+    {
+      "path": "kristals/qc-pri-ma-027/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2156,
+      "sha256": "643138a6890a96733af365504c41191fd1a4bfb89099593178dfe0a9a3ed75dc"
+    },
+    {
+      "path": "kristals/qc-pri-ma-027/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3927,
+      "sha256": "f0d9810d248f895e685c492d2002543f7f60f37ce73f3e2e4ae4680206717f27"
+    },
+    {
+      "path": "kristals/qc-pri-ma-028/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2057,
+      "sha256": "47fc0e4b338446ec55afd8c06b6fad36b5314934130121bdfe6a1c2489a3d3fa"
+    },
+    {
+      "path": "kristals/qc-pri-ma-028/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4036,
+      "sha256": "df1bec088e9bd4822b70cd06c838f8aaea3746c83050ec16b79e1a3deb86dc6b"
+    },
+    {
+      "path": "kristals/qc-pri-ma-029/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2119,
+      "sha256": "67f5b26e3d94a9d3144d01ef1ceeec681a097001c926873ec5b456839964236c"
+    },
+    {
+      "path": "kristals/qc-pri-ma-029/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3937,
+      "sha256": "dc742ebed3aa6ed58ea50363ac9db2b14b7e662f89bee93a77df3150d37206ea"
+    },
+    {
+      "path": "kristals/qc-pri-ma-030/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2065,
+      "sha256": "f734d514f917f2d6433e6a709a147b89a915d8f1a6d9002fd1da3ba63c0a686a"
+    },
+    {
+      "path": "kristals/qc-pri-ma-030/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3989,
+      "sha256": "7b9de47e2eb814593bc3e834e9902d7c052d56d503d5b8325f63eac2536bcd1d"
+    },
+    {
+      "path": "kristals/qc-pri-ma-031/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2052,
+      "sha256": "2a73c324b4e586ec3afdc1c43afa9edd8ed285eea0a465b9d128ddd15880a1fb"
+    },
+    {
+      "path": "kristals/qc-pri-ma-031/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3965,
+      "sha256": "88961b97208ea8f489cc88404ce7d5bf8f937c0e87597f2e4415223090bcf942"
+    },
+    {
+      "path": "kristals/qc-pri-ma-032/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2055,
+      "sha256": "39cb839db9ba96b081e143b5826f9830bb9d6c64de07d1c22f70313e911d7033"
+    },
+    {
+      "path": "kristals/qc-pri-ma-032/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4006,
+      "sha256": "3fedf3e261faa0933b946c1ab3f924bbb1aa76bf20e02d64a3d9011566e3eeb4"
+    },
+    {
+      "path": "kristals/qc-pri-ma-033/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2132,
+      "sha256": "1772540647b1586d1f4dbfa32fa1ed89f995aade32b83cad9539288ca0cc3f60"
+    },
+    {
+      "path": "kristals/qc-pri-ma-033/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4168,
+      "sha256": "2654ada640bf8b372b33b8c24c9f9814ac056427a81c465a05454a1c39b12891"
+    },
+    {
+      "path": "kristals/qc-pri-mu-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2021,
+      "sha256": "98dc47c207640a1997782e48b1e758d85273a7b8b3ed85ea2a6a490d230e825f"
+    },
+    {
+      "path": "kristals/qc-pri-mu-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4091,
+      "sha256": "7f6e1c1f61f082c1f5607299dd30fb9c811dd3828c86fd42a271a8d68dbb1d04"
+    },
+    {
+      "path": "kristals/qc-pri-mu-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2015,
+      "sha256": "70200f76aca076cc996d651a88a01bd7439eee53c9fdf66176345e1ecbe4f179"
+    },
+    {
+      "path": "kristals/qc-pri-mu-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3925,
+      "sha256": "29a20073714fa297d5700e9455481fd722dad7ae4108ffe39935d7f851661e09"
+    },
+    {
+      "path": "kristals/qc-pri-mu-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2036,
+      "sha256": "30c7e23e7f43a05cbd6c3d49c069250f1f761a642483319dc213f9ef123ae5de"
+    },
+    {
+      "path": "kristals/qc-pri-mu-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3956,
+      "sha256": "7b6d1ac3d47a3ee85132951c8a5cbd29e1c06180bbae866d4e10be55cb7cdf9b"
+    },
+    {
+      "path": "kristals/qc-pri-mu-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2040,
+      "sha256": "30e7b0e17b4d7c483f776b7ab12d19b6433393dc4cf4ca4d4c88e14c269b9c03"
+    },
+    {
+      "path": "kristals/qc-pri-mu-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4132,
+      "sha256": "e058f22330a5cbc04fa3fd825a138cca60a15dfd34e680c0796583aa1603c59c"
+    },
+    {
+      "path": "kristals/qc-pri-mu-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2086,
+      "sha256": "310a31a8047c1ccc4c47a2589729391536b13e85429b0a303e735f273ffaffa9"
+    },
+    {
+      "path": "kristals/qc-pri-mu-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4033,
+      "sha256": "176554e9c356c88d696597306c85c7036752f1f8ebfb0b7e6e92d062a46984b6"
+    },
+    {
+      "path": "kristals/qc-pri-mu-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2052,
+      "sha256": "de73120331bd995fa7a0e0ed86bb94f7a31667dbaff57fa2523309951d53e8cd"
+    },
+    {
+      "path": "kristals/qc-pri-mu-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4036,
+      "sha256": "50239acb501b08f944e53e38913cb90b5d34c512cbaf8842f958cfa40a6de323"
+    },
+    {
+      "path": "kristals/qc-pri-mu-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2104,
+      "sha256": "ab207b7898a12d5d1cece5697e64d7614bfd4549aa02d0578d05aad33bdea15c"
+    },
+    {
+      "path": "kristals/qc-pri-mu-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4049,
+      "sha256": "31a904770096a4272673f373e81045bf0ef7cbfb77aa3a4b2b9b4a877e7fe8ff"
+    },
+    {
+      "path": "kristals/qc-pri-mu-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2104,
+      "sha256": "4db3ad6ffd5a04b8fb5f6e46985c5e8fe3a196962087066e426bd844bfe1f450"
+    },
+    {
+      "path": "kristals/qc-pri-mu-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4042,
+      "sha256": "556e2baee724a2fb4af31c80bfd7efc6aa243e359d08348f85a251e8a2a3b9f0"
+    },
+    {
+      "path": "kristals/qc-pri-mu-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2089,
+      "sha256": "64429bb95ca620e8bb2c1f19d591e6ad05b3284d3e9fd636a2ee193883e7de3d"
+    },
+    {
+      "path": "kristals/qc-pri-mu-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4143,
+      "sha256": "067945303ee443b53dff9dae095779b52f3dbd0eedf338ee2ca9c1330329a4cf"
+    },
+    {
+      "path": "kristals/qc-pri-st-001/authoring/REVISION_EKOLE_v11.md",
+      "bytes": 1523,
+      "sha256": "de88df17c3f14f009d6ba53fbe8600a5c0e2a6d3f787da70f709cee5769885e0"
+    },
+    {
+      "path": "kristals/qc-pri-st-001/experience/ANNEXE_GUIDE_v11.md",
+      "bytes": 1468,
+      "sha256": "0aba31129bd16067c5fcb0e27fe46903149d6897cc2d0fce9ce6e7c3ec10ac66"
+    },
+    {
+      "path": "kristals/qc-pri-st-001/experience/ANNEXE_PRATIQUE_v11.md",
+      "bytes": 1033,
+      "sha256": "d74876fd6cb418e42f39ab5f1194b667b53cd6dcb8f5057afe4dd2ac27407bfb"
+    },
+    {
+      "path": "kristals/qc-pri-st-001/experience/ATELIERS_V12.json",
+      "bytes": 3869,
+      "sha256": "bba1f2f3ae8a4bd305a82eaab65a361e8dbce046afc198abf743ac47ca88088b"
+    },
+    {
+      "path": "kristals/qc-pri-st-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2087,
+      "sha256": "e67c948e68049d845bbaf44cd9ec7ead441ade5643db3ddf2cff67f0a94435a7"
+    },
+    {
+      "path": "kristals/qc-pri-st-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4775,
+      "sha256": "b229d9f5fcd05e19a989f0c8a68f142bf10a2b5f2e5c17d70407f0624cc678e5"
+    },
+    {
+      "path": "kristals/qc-pri-st-001/experience/SCENARIO_APPRENTISSAGE.json",
+      "bytes": 4184,
+      "sha256": "a2798cea4197df139d58b328e6c184156b64458fedcf0034c2a9ad5b3b534682"
+    },
+    {
+      "path": "kristals/qc-pri-st-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2095,
+      "sha256": "4d1be6f004ea879f45479f12d4eabc1a5567cef58c2442e116aa36840f0cad7a"
+    },
+    {
+      "path": "kristals/qc-pri-st-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4115,
+      "sha256": "da8b55fa6a5b1c3de4c1b8e5611e48e47355b4cfcdf425039691c273c1079d17"
+    },
+    {
+      "path": "kristals/qc-pri-st-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2059,
+      "sha256": "7fbe1db4493ca6895990fdc803db23fee575ba6faaf4bcd6c04dd7a5c87a6c9c"
+    },
+    {
+      "path": "kristals/qc-pri-st-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3992,
+      "sha256": "aba85a54d4bdab1c615b8c2c61ff175f6196b99a9396e02c47643f4718aeed88"
+    },
+    {
+      "path": "kristals/qc-pri-st-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2110,
+      "sha256": "d78b867bbb15fd1013f4ef16acd491dbe0b503591192d8962b6651b2f21ecb0e"
+    },
+    {
+      "path": "kristals/qc-pri-st-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4079,
+      "sha256": "6338e09d6365a39d8e7ea32ee3c462016a92e2ad721af6793d25d26d97f94768"
+    },
+    {
+      "path": "kristals/qc-pri-st-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2023,
+      "sha256": "b90e5fa96168d588ee35bf8297b278d37883f49b26d9d61c886a4bc3cc962d29"
+    },
+    {
+      "path": "kristals/qc-pri-st-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4112,
+      "sha256": "2537f8b5c564a8abe71531308bd13038f0632bfdfa0b5a214098ada28914f771"
+    },
+    {
+      "path": "kristals/qc-pri-st-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2101,
+      "sha256": "4685fdbee6d8dfe2e1c5465ca35cb7251a6a68ba011b95b36487ae5481593aa9"
+    },
+    {
+      "path": "kristals/qc-pri-st-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4067,
+      "sha256": "9c3f1f9a687bcd100b265e8bfa868a40a94727c04cf08d92ae8ed0d5741f0793"
+    },
+    {
+      "path": "kristals/qc-pri-st-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2069,
+      "sha256": "a9d80dd58f0ddd2725706aea73e2f7e7332659a894444e326a509b07e788971c"
+    },
+    {
+      "path": "kristals/qc-pri-st-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3947,
+      "sha256": "3267962a2bf2c8bde64dffd7a73b1b36dd9fde6201efc29121ac9c050a7c3a76"
+    },
+    {
+      "path": "kristals/qc-pri-st-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2070,
+      "sha256": "8b7f72871a60fd6e6bee036c8770e39741a05d3cec98420233917112d4aa3ec8"
+    },
+    {
+      "path": "kristals/qc-pri-st-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4054,
+      "sha256": "181d561bb6cee4df18e0326353b01ef45ae0a2e61b0287f60ef7da1d655c4f62"
+    },
+    {
+      "path": "kristals/qc-pri-st-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2083,
+      "sha256": "15065fc722a4ccbb0b2d400ef5c28e203acecb14a40a32756123a183fc6b1a23"
+    },
+    {
+      "path": "kristals/qc-pri-st-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3925,
+      "sha256": "a3e5301dff6562d6bfdc25a70ef41491d7184192dc3520dc00736cd1012df8c3"
+    },
+    {
+      "path": "kristals/qc-pri-st-010/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2107,
+      "sha256": "eb81add25ed78fae1f633107fc44cdec0417b3cacf7587401027ccbe175e0fd9"
+    },
+    {
+      "path": "kristals/qc-pri-st-010/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4008,
+      "sha256": "dc8a5b9467b863a70c5d64c2e148750f0af1d6ca289b9bc69fdcddb167c92590"
+    },
+    {
+      "path": "kristals/qc-pri-st-011/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2040,
+      "sha256": "ca2050a0a729dc1af5fe058a34a02d9f40e861dd35de981dae258b22cafea9c0"
+    },
+    {
+      "path": "kristals/qc-pri-st-011/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3696,
+      "sha256": "176a30b66d41df45fcbb0d3dfa5a3dd13c179f9258499dd8e12a3388a88c92f2"
+    },
+    {
+      "path": "kristals/qc-pri-st-012/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2101,
+      "sha256": "c94d1710977c6396821b959875673ce14c459b45b163d9c3da3373fcb123127a"
+    },
+    {
+      "path": "kristals/qc-pri-st-012/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4054,
+      "sha256": "27fb033cee163fd367daeb8105d010c1cc6e9b8a1c42f257c87e548db6ab6a98"
+    },
+    {
+      "path": "kristals/qc-pri-st-013/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2040,
+      "sha256": "1c578417ddbe46fa2e7507a30091a526583c09fabfc79e644f20894485ae68af"
+    },
+    {
+      "path": "kristals/qc-pri-st-013/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 3929,
+      "sha256": "be3b6855f27191df83a4ac9203430e84d149896c80175c19a4eb93717b160cff"
+    },
+    {
+      "path": "kristals/qc-pri-st-014/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2153,
+      "sha256": "bd1d78b8384c0164757341693e4a2c2d9b467fe3c50332687cb9f07b706b90fd"
+    },
+    {
+      "path": "kristals/qc-pri-st-014/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4088,
+      "sha256": "8195afba03110722f272bf120387cb29489d7f612ba82863b49788df001ea983"
+    },
+    {
+      "path": "kristals/qc-pri-st-015/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2075,
+      "sha256": "bfabd04f8730326447228e30f23c7d89f20836ddaf21e0c96112b627db833f4c"
+    },
+    {
+      "path": "kristals/qc-pri-st-015/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4074,
+      "sha256": "d2e5b1b6ac99c4604b1c84ff75f78f33c4765d03cc115106b34d835090a30581"
+    },
+    {
+      "path": "kristals/qc-pri-st-016/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2055,
+      "sha256": "289ca5a95ef6a8ea181efb4d4714cef346ffb8ea886c458adaa84bfa1771ba1f"
+    },
+    {
+      "path": "kristals/qc-pri-st-016/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4044,
+      "sha256": "51634e64903f1a5cf2788e450e866e01551b23ea82395c52c4daec1b1f8ffc24"
+    },
+    {
+      "path": "kristals/qc-pri-st-017/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2079,
+      "sha256": "2c464db9e6f96f9650a4463b5be5b4b8ac695dda784fd2e66e1a9a83c8d1da35"
+    },
+    {
+      "path": "kristals/qc-pri-st-017/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4253,
+      "sha256": "a96f8caf6f7da5b4afe10f9b9996130e274f832ca138694ebd2638d7a336103a"
+    },
+    {
+      "path": "kristals/qc-pri-st-018/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2058,
+      "sha256": "f7e435b91634870b137fd1d30b7b6d9f69e63b0b7260a90996225acea6595955"
+    },
+    {
+      "path": "kristals/qc-pri-st-018/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4010,
+      "sha256": "9bbda875e9e699d99aabcdd66b578dc46f2ac0d4ef7c37d54c55acc856aa516c"
+    },
+    {
+      "path": "kristals/qc-pri-st-019/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2079,
+      "sha256": "c0855c277d1eb750bc7275fdc8c4ef4260c10cb30be62ea62b1a2acaca94b0b5"
+    },
+    {
+      "path": "kristals/qc-pri-st-019/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4081,
+      "sha256": "088ee7ddf3dc0b20ed948c19af5591dbf7419340dbf3921c80335f24abad0da4"
+    },
+    {
+      "path": "kristals/qc-pri-st-020/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2137,
+      "sha256": "068aa4e238a43304ccb39efb7b06f6b13129563fa3933672b77bd821a01e18ae"
+    },
+    {
+      "path": "kristals/qc-pri-st-020/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4189,
+      "sha256": "4ff2d3953b8f8df303f9bd333668e6d0f186f5ed0959be4ee4699fda7a99a57d"
+    },
+    {
+      "path": "kristals/qc-pri-us-001/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2081,
+      "sha256": "88fdd439b6d8d31edc690ca726b8e2f31f3277a9f5ea4a78a914ee47c209d79f"
+    },
+    {
+      "path": "kristals/qc-pri-us-001/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4324,
+      "sha256": "7a6a6d71b94decd1d0467a85158f4d8b696afd73e3f68b98b10c16b54f69158e"
+    },
+    {
+      "path": "kristals/qc-pri-us-002/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2064,
+      "sha256": "b93903e215403bcd612be88a8ca24d83d4a3d34722366855d294b2bd109c8b9f"
+    },
+    {
+      "path": "kristals/qc-pri-us-002/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4126,
+      "sha256": "59b89468c03062a0d590bc1a85b4494915c15e787962a74adba7c5ee305de555"
+    },
+    {
+      "path": "kristals/qc-pri-us-003/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2063,
+      "sha256": "ba20df9e10420fe5bf4635335f116b7d0e0bde6b2d8909a651ccc89fb42ba85b"
+    },
+    {
+      "path": "kristals/qc-pri-us-003/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4188,
+      "sha256": "cbb93b393365760b9869864ee7852d2d42ca313b22e745fcc0d172eab40f3aa3"
+    },
+    {
+      "path": "kristals/qc-pri-us-004/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2083,
+      "sha256": "aab525401369655e3e19b3271052b29fd1fad33b4fecf9cf7c3c0eafb061e2a2"
+    },
+    {
+      "path": "kristals/qc-pri-us-004/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4143,
+      "sha256": "0504d0609efe26ea376d1b799e1b8e8b9082a31f9fac4fedbcaed24a2133c5f9"
+    },
+    {
+      "path": "kristals/qc-pri-us-005/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2080,
+      "sha256": "b7d583f7d6cf32f8942de0e8b787fe8eb8579abb9ab0b4aad3a2e3a80435eb22"
+    },
+    {
+      "path": "kristals/qc-pri-us-005/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4078,
+      "sha256": "9d11bf8718f06459ea1a11a2b1332451c3eab49a937db85089ccf2aa97c0e68e"
+    },
+    {
+      "path": "kristals/qc-pri-us-006/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2106,
+      "sha256": "b95b00d6bd1deaf2299a5d26eccdc5d0cea8821e8cdd1da2ad17c361761d16f2"
+    },
+    {
+      "path": "kristals/qc-pri-us-006/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4147,
+      "sha256": "a0f001c81ff1e9573f6e72f79abb97ce604fc04a38898d9373e0c3715f114dd8"
+    },
+    {
+      "path": "kristals/qc-pri-us-007/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2156,
+      "sha256": "82e5885ddc8153df249db341e5505cc9b8fc3559bfa8d0dea330c567a610c1fb"
+    },
+    {
+      "path": "kristals/qc-pri-us-007/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4225,
+      "sha256": "6f5e185fcbe95ffef7beda9d6831dcd6c0dda43af04888689c116014e9a53903"
+    },
+    {
+      "path": "kristals/qc-pri-us-008/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2111,
+      "sha256": "d200416e88eafc9bac6b5ae349b1580402972cea0a7a8c4303f04e2a5cf8018f"
+    },
+    {
+      "path": "kristals/qc-pri-us-008/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4185,
+      "sha256": "912deecc9c14b6300dd3b3888a96fe50630ef006d3aede73bd65a2198637c36e"
+    },
+    {
+      "path": "kristals/qc-pri-us-009/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2053,
+      "sha256": "07856a999f11bf7bfbda0372d3589fb4abd92b84a9f55491114b594cb54e31f8"
+    },
+    {
+      "path": "kristals/qc-pri-us-009/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4097,
+      "sha256": "30dd40bc882061a7740e6a81a050e4374408c8729cf51b7cc054cc0cf5eaac16"
+    },
+    {
+      "path": "kristals/qc-pri-us-010/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2120,
+      "sha256": "9853c1cb35e78657d52da500eec95cb2e7ea4bc034c4b94998af968b80af051f"
+    },
+    {
+      "path": "kristals/qc-pri-us-010/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4187,
+      "sha256": "aaa8eaa50694b685419e7214329641c70637caa92dd2ae027f9719d02badad9e"
+    },
+    {
+      "path": "kristals/qc-pri-us-011/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2134,
+      "sha256": "94e2edc43b6dbcb0a6fc255f395d14731e984f717b73598a1153dc449baeb58a"
+    },
+    {
+      "path": "kristals/qc-pri-us-011/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4418,
+      "sha256": "ec109b75d5b20b1c546e2e0f787b61a3dc5e9221d7630cbd936aee1a1c25859f"
+    },
+    {
+      "path": "kristals/qc-pri-us-012/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2063,
+      "sha256": "97e4fbb4811478a6e329be7dfb533536c808ff6e283acd6761a163b37f6b13f2"
+    },
+    {
+      "path": "kristals/qc-pri-us-012/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4032,
+      "sha256": "c8b395e328610c2ca000feec8358a42c2717b09a69ba5326fc727e9fdd2816a3"
+    },
+    {
+      "path": "kristals/qc-pri-us-013/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2110,
+      "sha256": "98991bb2ff7412563897766fbfdb42e855cefb68fd4d5e7901202f67c93408c8"
+    },
+    {
+      "path": "kristals/qc-pri-us-013/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4103,
+      "sha256": "de079283f251e2ee72984d4ded1a056234f451906ee251e5cec3baf061b4753c"
+    },
+    {
+      "path": "kristals/qc-pri-us-014/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2077,
+      "sha256": "a5c76639957932473e882443be34ca40db1997e109bd93225de2a1aaeea674ae"
+    },
+    {
+      "path": "kristals/qc-pri-us-014/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4156,
+      "sha256": "80bef7e84faf11f127f27a52b9b24df875846c2fcf1f7ca3103c441d593880aa"
+    },
+    {
+      "path": "kristals/qc-pri-us-015/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2076,
+      "sha256": "4b605e15386cda4ea545ccfd5617a7d690275120f34e541909d2552417e6d92a"
+    },
+    {
+      "path": "kristals/qc-pri-us-015/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4155,
+      "sha256": "d2110bdfd220665aa102457ab4b800d1a4c88e3d925d8e2b601ad3e177d1c2f0"
+    },
+    {
+      "path": "kristals/qc-pri-us-016/experience/CADRE_PEDAGOGIQUE_V12.json",
+      "bytes": 2072,
+      "sha256": "705a0a97940a791d0c0d644d0a76a6ba9145cb89ba007291330849a919561a2c"
+    },
+    {
+      "path": "kristals/qc-pri-us-016/experience/RESSOURCES_VISUELLES.json",
+      "bytes": 4176,
+      "sha256": "b43b0fea768dd11ed7d7d00083a9b58a6e8d5fe2054559ac6fc7f0dbc4029d88"
+    },
+    {
+      "path": "livraison/EMPREINTES_SOURCES_GUIDES_v11.json",
+      "bytes": 1218,
+      "sha256": "4b4b3dd49f64c7b87f73d40ad6fcfc824cc64a4670a04afc72d5e7e2224b4651"
+    },
+    {
+      "path": "livraison/MANIFEST_3_APPS_v7.json",
+      "bytes": 1684,
+      "sha256": "9758620cdb72338315bcf388d17ae57cc4cd04e3fddfdeb85ab338c03997a6cb"
+    },
+    {
+      "path": "livraison/MANIFEST_V10.json",
+      "bytes": 50232,
+      "sha256": "ee16513ac67cd18dc7b408bd118c5e95059ab7af5d14eac88f8934deb6b05eee"
+    },
+    {
+      "path": "livraison/MANIFEST_V11.json",
+      "bytes": 70996,
+      "sha256": "3c73a175948ed96e544455dbf0901e6fbe9796a72d53cbe91f255cf6696bb555"
+    },
+    {
+      "path": "livraison/MANIFEST_V8.json",
+      "bytes": 1923,
+      "sha256": "4dc6c2e8723beb9f1b85ff508fffc9b72fb71ca4edd9d11c82c20608a8b406c8"
+    },
+    {
+      "path": "livraison/MANIFEST_V9.json",
+      "bytes": 2635,
+      "sha256": "bcb5b76cc7efc999f678fdfedb76940723d93e1a531cda143707a00db80aee45"
+    },
+    {
+      "path": "livraison/VALIDATION_3_APPS_v7.md",
+      "bytes": 952,
+      "sha256": "47b71c14ba78f8ed46fbcb24f50facf7474c70add4c3bc559acf1a099c65d8e7"
+    },
+    {
+      "path": "livraison/VALIDATION_V10.md",
+      "bytes": 1154,
+      "sha256": "49cbeb9d0ee515194a4513d27c04e9d4862162727c08250d00e2cd4140eb2353"
+    },
+    {
+      "path": "livraison/VALIDATION_V11.md",
+      "bytes": 2421,
+      "sha256": "a1bb3a6db0aa6c769bf76fafebcbaf6ea6f714d22ff67dcfc27c027ea7edfd72"
+    },
+    {
+      "path": "livraison/VALIDATION_V12.md",
+      "bytes": 1918,
+      "sha256": "bc5320b41ba63350df62151ccf1777f097c855d5ddf3eba113e94f89c6dfb082"
+    },
+    {
+      "path": "livraison/VALIDATION_V8.json",
+      "bytes": 907,
+      "sha256": "fbf1495c726df2007f9c045cfdd9c71be28c350cf551c486e65823682439e7b0"
+    },
+    {
+      "path": "livraison/VALIDATION_V8.md",
+      "bytes": 931,
+      "sha256": "7bb4d65e49bc6c06eeb1ae4db3c0dfc89cc5d4e0b01c7fad0f20aabf03b6597c"
+    },
+    {
+      "path": "livraison/VALIDATION_V9.md",
+      "bytes": 1987,
+      "sha256": "b3bdf5c65c2b92e4d1acf2b4151c59c07e281ac175356ebe2bc9bba4847c7e24"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/authoring/CONTRAT_PEDAGOGIQUE.json",
+      "bytes": 5133,
+      "sha256": "f9a6fa6ea0e64c89b9769953f08c3310fdc21182b8d62b1a2d36bf0da48fb86f"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/authoring/PARCOURS.md",
+      "bytes": 14192,
+      "sha256": "e4e8ad3b2237d7ac3e6b2f9df481295d8cff74bb3b9973f553724427930c916f"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/contenu/01_NOTIONS_ET_EXEMPLES.md",
+      "bytes": 6186,
+      "sha256": "ce32148e06172fc5d4f477854171dbc2f1bbdb711e8a245fa465e1b61c0de920"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/contenu/02_DIAGNOSTIC.md",
+      "bytes": 3531,
+      "sha256": "bca0279e4ce05fb9978182e00f66c3a1a99eba3076a82b560e197e30b97c5c4c"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/contenu/03_ENSEIGNEMENT_GUIDE.md",
+      "bytes": 3638,
+      "sha256": "1e04104e8162679e279b86fa58be29bde55599707905b3090ecb69db37b7bfd2"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/contenu/04_PRATIQUE_ACCOMPAGNEE.md",
+      "bytes": 3572,
+      "sha256": "b7c3e40e37635229e7c8d7156cb7e7f3657477ca4833026365061a037374f060"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/contenu/05_PRATIQUE_AUTONOME.md",
+      "bytes": 4248,
+      "sha256": "97e15142060f737ae043c3e40c0b020a66001f436e24a003749c15ce8b27bb37"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/contenu/06_REMEDIATION_ET_TRANSFERT.md",
+      "bytes": 4929,
+      "sha256": "2828a8f3e9fa8da8e8f3a5718e9a39164ff1f9e9a4037b8da00cdd39f219e7c6"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/evaluation/BANQUE_ITEMS.json",
+      "bytes": 27977,
+      "sha256": "42d3ed8b75563dceb25a58d4c72f42bb48978922b9e1382d1525bac3a1fd8743"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/evaluation/GRILLE_MAITRISE.md",
+      "bytes": 5399,
+      "sha256": "1a7914918b65a7dad85ff963c993147b93bc04eec0bd4ddbc339c7735ca27328"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/evaluation/PLAN_EVALUATION.md",
+      "bytes": 7044,
+      "sha256": "46c61f22de010c4edfd26e3048e804bbe69a87cfb198e7b95af581df53275e95"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/livraison/MANIFEST.json",
+      "bytes": 1104,
+      "sha256": "21a4fc80d23ab9e51a1e0294288208db1021aa457eac7a74e85b3677ff9e6d6d"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/livraison/VALIDATION.md",
+      "bytes": 6057,
+      "sha256": "21f2afc87f247661d0af671c84a08495280a6dbf75b36a1a06a3b5ff7ee25475"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ad-001/sources/REFERENCES_CONTENU.md",
+      "bytes": 4782,
+      "sha256": "cbc4edfbf6c74b9e60133a3bd9540fb465898de1f4b93f9617c2d6317a1c4438"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/authoring/CONTRAT_PEDAGOGIQUE.json",
+      "bytes": 3519,
+      "sha256": "5b40f473d90b1abfb950188f58b17c3614336806b490d88b2b703af6c40c2e6b"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/authoring/PARCOURS.md",
+      "bytes": 10844,
+      "sha256": "bfcdc3f627e8a28ca00fc7cd265c341d852e886290ba2d7bb5ce1c096e9133dd"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/contenu/01_NOTIONS_ET_EXEMPLES.md",
+      "bytes": 5272,
+      "sha256": "87cfb8919b2af85d737ca2f87f11cd1c31625b415ba9074e56795e0499a53802"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/contenu/02_DIAGNOSTIC.md",
+      "bytes": 3107,
+      "sha256": "24693551544370ba3d66badffafddf365abd76b30d9bb4b51e7285248d71a4ff"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/contenu/03_ENSEIGNEMENT_GUIDE.md",
+      "bytes": 3003,
+      "sha256": "7a2d0d5e56615b38e6f430686023cb9c9a1be4826de9bf36fda88ea4422c8bee"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/contenu/04_PRATIQUE_ACCOMPAGNEE.md",
+      "bytes": 4323,
+      "sha256": "6b4d9d0a724e9b928a982d92f026e35a68147f5be6b4ddca7bcf05b330d263b3"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/contenu/05_PRATIQUE_AUTONOME.md",
+      "bytes": 5164,
+      "sha256": "b197815c7aaa27619c8a4fb39f6008cdd8be5f7edcb0c51ccf2c020a4067818f"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/contenu/06_REMEDIATION_ET_TRANSFERT.md",
+      "bytes": 4654,
+      "sha256": "13c4bbc2b1b08ff3f3a68cce7ae070ca8177c84de1a78df31335ce56f8059965"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/evaluation/BANQUE_ITEMS.json",
+      "bytes": 29400,
+      "sha256": "57c2a06ec268d09bbb3093fb5252103ff6d8b074b610e51ff05ba918ebf4523a"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/evaluation/GRILLE_MAITRISE.md",
+      "bytes": 3342,
+      "sha256": "409aeee0b3ee1c69ca0d38bdc463406225b2b8e7b930c55fe1379f6fe263847b"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/evaluation/PLAN_EVALUATION.md",
+      "bytes": 5397,
+      "sha256": "91f1ab4f35953ebe66e19510604d234efc745b9334bbd552c88b38c0ecff3c3e"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/livraison/MANIFEST.json",
+      "bytes": 1090,
+      "sha256": "b193e3b9d542bbde4b2c64fdf812e4e318be97f04d9aef0c121de2076e6197e0"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/livraison/VALIDATION.md",
+      "bytes": 3277,
+      "sha256": "0c32a28d63b539244eeadd479d1750a55390f55d3c622d0ab5c96e0a0b5e9a01"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-fr-008/sources/REFERENCES_CONTENU.md",
+      "bytes": 3878,
+      "sha256": "9a7f08b8e02dc81cf8706c42029a52cfbc6a6f86918e4b5b1843be9598e507e9"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/authoring/CONTRAT_PEDAGOGIQUE.json",
+      "bytes": 3474,
+      "sha256": "dff9d7bd836bb471c60c705ca9dce62f186dbceb93cd6b4e0a16fdbba3f6d4c7"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/authoring/PARCOURS.md",
+      "bytes": 9651,
+      "sha256": "f53f7da6dfa52c0eacf90533a91197bc5170ed743e1040f6ad24d389383fee8d"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/contenu/01_NOTIONS_ET_EXEMPLES.md",
+      "bytes": 3712,
+      "sha256": "e96125df258ff2e4348b754ba8eeef887964975c24048fb626306f4e0b835cda"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/contenu/02_DIAGNOSTIC.md",
+      "bytes": 2458,
+      "sha256": "bdd0ffefa71b2a1c8a2fc66a7209b06f803522247d98421395cc4e5a8ca82660"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/contenu/03_ENSEIGNEMENT_GUIDE.md",
+      "bytes": 2231,
+      "sha256": "37b5b27f4f91be209848ca2e10c7a7d4311d76d6b58bbbd55abae594f458f7c9"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/contenu/04_PRATIQUE_ACCOMPAGNEE.md",
+      "bytes": 2205,
+      "sha256": "72e9fcec14f402783267e228787d8a9950b5cb8bf09a5626543d10415932ccc1"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/contenu/05_PRATIQUE_AUTONOME.md",
+      "bytes": 2260,
+      "sha256": "6624509b03e50b4d54a842d1ebc80808455c7f6eb65ea64dbd3657bef0aaf541"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/contenu/06_REMEDIATION_ET_TRANSFERT.md",
+      "bytes": 3043,
+      "sha256": "dc3395df84f1b2a4a9daa6f2402bd92bbaac32be53e0e03a5d3f7ce768ee5eaa"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/evaluation/BANQUE_ITEMS.json",
+      "bytes": 27210,
+      "sha256": "92ae1a1f56feeb4c6013d1322062f37b43e6cc0b1c4e69a86b9f1f9a5fd945ef"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/evaluation/GRILLE_MAITRISE.md",
+      "bytes": 3019,
+      "sha256": "f8b0164264d368c1674c3a257f84dc01c3e439cd7fce64229e121b445d538766"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/evaluation/PLAN_EVALUATION.md",
+      "bytes": 5373,
+      "sha256": "6632980488bef757464b7d3e15f48830ffecead7559fad892b2d093379ecf9c3"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/livraison/MANIFEST.json",
+      "bytes": 1080,
+      "sha256": "25e2c9eb86766a87c2dba429022a5ca544686677ee4343ef0f5397bc5863b227"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/livraison/VALIDATION.md",
+      "bytes": 4611,
+      "sha256": "c4538512f42bdb0949798464424ecf0441c570b4b95a79f76b7b20f38069327f"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-009/sources/REFERENCES_CONTENU.md",
+      "bytes": 2590,
+      "sha256": "1ea7a4298e3146818cc63be0ad8268f7e4ff71711d35de1e9169c8ded11763bb"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/authoring/CONTRAT_PEDAGOGIQUE.json",
+      "bytes": 3738,
+      "sha256": "ba2b91be3d3d5a7640fb6c4fc01bb72bab64dec8ce1f9d1127e6d170eed0ba99"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/authoring/PARCOURS.md",
+      "bytes": 14847,
+      "sha256": "df05de5c4ed2efbcf6d692b128f6658990c4210ec9eec4567e7c80252e0bb3e8"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/contenu/01_NOTIONS_ET_EXEMPLES.md",
+      "bytes": 5494,
+      "sha256": "a29a9ab65959e6080da9ba7389af06c310ac746515767b5f2712102b116596fe"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/contenu/02_DIAGNOSTIC.md",
+      "bytes": 2722,
+      "sha256": "01acb80687e11887097ba1932d8dc565cabcc55454ae9e8b8443dd8b7e6e11dd"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/contenu/03_ENSEIGNEMENT_GUIDE.md",
+      "bytes": 3192,
+      "sha256": "b0404207d907f6588d371f1d5ad43a81bee2ed84ab5dd874563ba181f620b130"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/contenu/04_PRATIQUE_ACCOMPAGNEE.md",
+      "bytes": 3043,
+      "sha256": "ba0be911c8467dd0cdfba508d6c6169136c46e83f4a2ecc1d112cb68821bd18f"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/contenu/05_PRATIQUE_AUTONOME.md",
+      "bytes": 3187,
+      "sha256": "e26143d8f1ea132f6399f1150332e3e02ccd39c4863fb9a06c78dd088f19724d"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/contenu/06_REMEDIATION_ET_TRANSFERT.md",
+      "bytes": 3858,
+      "sha256": "b94eb1af0766b47018073a660edc929b8fd33407560c936deedb14ebb0855b48"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/evaluation/BANQUE_ITEMS.json",
+      "bytes": 28139,
+      "sha256": "95bb58130235ef9f286c19a529e8aeb9e25b2903239188b8ef1d91b8335eb301"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/evaluation/GRILLE_MAITRISE.md",
+      "bytes": 4406,
+      "sha256": "a8328a18616cebbb2f6bd3f259f26eb8d83fc211340296d041493a4362187d16"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/evaluation/PLAN_EVALUATION.md",
+      "bytes": 5769,
+      "sha256": "47ccc2fa6df1bb1eb05a10a10dfccf752271c4600fafbd15737b6199ab2df0ee"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/livraison/MANIFEST.json",
+      "bytes": 1101,
+      "sha256": "c988848139c8c441abe9421a90063495f78f9a8a098fcbf1977db3adfbf7305a"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/livraison/VALIDATION.md",
+      "bytes": 6381,
+      "sha256": "19c830be97573a20c0b1d71028da048d43065fed8408a4b5971620939238aeb9"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-ma-012/sources/REFERENCES_CONTENU.md",
+      "bytes": 4387,
+      "sha256": "1a550116b9b748ddd79712d051e7f4076cf889d0c8653f7012d33dee93ad5c02"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/authoring/CONTRAT_PEDAGOGIQUE.json",
+      "bytes": 4523,
+      "sha256": "352ce61352c9c9689448aa75f04f152ba1896a2c8a4416af29378e4991ab0783"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/authoring/PARCOURS.md",
+      "bytes": 12339,
+      "sha256": "aa14ba4bfa348b8a94209a00a09f469fd3d55fc5bbd9a0e1bd10ff1cda97df58"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/contenu/01_NOTIONS_ET_EXEMPLES.md",
+      "bytes": 5589,
+      "sha256": "ba160af1ce1a1a00abb4034e3514ccc727a0e8497d03a031cd0b4ef53272d74d"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/contenu/02_DIAGNOSTIC.md",
+      "bytes": 3099,
+      "sha256": "eb81c9d43db61996a4bb895d077b6318e8ae44d58b8fa74cb3e50e2df4c2a9d2"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/contenu/03_ENSEIGNEMENT_GUIDE.md",
+      "bytes": 3449,
+      "sha256": "d3e7b8e6794f9883f520511eea049201518436aa8c72dd9dc0c1e0dd4099bbcf"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/contenu/04_PRATIQUE_ACCOMPAGNEE.md",
+      "bytes": 3978,
+      "sha256": "872302e81a8d9cecb0a65a713d6bf792c9ad87f9f7ea6791ff7cbee1c382278d"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/contenu/05_PRATIQUE_AUTONOME.md",
+      "bytes": 3972,
+      "sha256": "523d7a2a77a7b7d254ddea2a6d39c4020524c54cf9ebd6b72951fc1012d80e86"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/contenu/06_REMEDIATION_ET_TRANSFERT.md",
+      "bytes": 4842,
+      "sha256": "857e0c4afa06e8a4773d35bf51648a747b5285c2348d867b3826bae8b51710ff"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/evaluation/BANQUE_ITEMS.json",
+      "bytes": 43276,
+      "sha256": "2bfb51df4b5f87d1769d2f4d583a4558acb189c446620315e4793a5734c7d5b4"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/evaluation/GRILLE_MAITRISE.md",
+      "bytes": 5050,
+      "sha256": "99fa62df0b48f399dcf01b38285c0ad759e79385df7b26174e23d7e957ad558a"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/evaluation/PLAN_EVALUATION.md",
+      "bytes": 7336,
+      "sha256": "671a7e629f10565943a99c781ae96037c9a036ad020ad94638d9cf2f9061f0ab"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/livraison/MANIFEST.json",
+      "bytes": 1159,
+      "sha256": "9f98175bdc30de2f4320097365fb97a7184a37389ffdd76ac0ff5fa5d7a212e1"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/livraison/VALIDATION.md",
+      "bytes": 9244,
+      "sha256": "aaf4fcc4d33bf5ea3782c5db5424fed6902e5f9221765e8143c6cd2c992518c2"
+    },
+    {
+      "path": "ressources_pilotes_originaux/kristals/qc-pri-st-001/sources/REFERENCES_CONTENU.md",
+      "bytes": 5266,
+      "sha256": "acdfce7030bec103d5b715544c3fc9e8c1972a26695a314299525a3b9c442b28"
+    },
+    {
+      "path": "site/app.js",
+      "bytes": 27669,
+      "sha256": "e25e0b17df2ddf66baba86d2adcdfeb3ccf09f9cc13314a5cb0074b190b6dc40"
+    },
+    {
+      "path": "site/assets/ekole-logo.svg",
+      "bytes": 1578,
+      "sha256": "6b02eaf8ab47803f58e8fd56c942c9438639c7a303fdb6a5ba4c5a3f9e137b28"
+    },
+    {
+      "path": "site/data/parcours-propositions.json",
+      "bytes": 124499,
+      "sha256": "0d5016f52dd63de92c930a0c94e1eb098486481a62d56191ee35e217e95731b3"
+    },
+    {
+      "path": "site/eleve/app.js",
+      "bytes": 23952,
+      "sha256": "ff943d08a15d8e21a6b7bbfa7e8862afb74757f44a576bf503e7ebf87cd6df7c"
+    },
+    {
+      "path": "site/eleve/assets/ekole-logo.svg",
+      "bytes": 1578,
+      "sha256": "6b02eaf8ab47803f58e8fd56c942c9438639c7a303fdb6a5ba4c5a3f9e137b28"
+    },
+    {
+      "path": "site/eleve/atelier-v8.js",
+      "bytes": 10113,
+      "sha256": "558dc2795ac8de091e2ff064deec52e8c6b0fdb1fd772700e639dc5c9e23960b"
+    },
+    {
+      "path": "site/eleve/data/assets-manifest.json",
+      "bytes": 98,
+      "sha256": "d867cbf10dd32325c11adcf70f46c4acb8bc753794c26583b6da201ae3badfa1"
+    },
+    {
+      "path": "site/eleve/data/eleves/ateliers-v8.json",
+      "bytes": 151909,
+      "sha256": "b78b52e66ee9bf0ae625350e7286d783a775b28b9653ff4e11c1c6062ecfb1a4"
+    },
+    {
+      "path": "site/eleve/data/eleves/catalogue.json",
+      "bytes": 97395,
+      "sha256": "7ac65ad784fbd01a1fe63f27bfcdcb01bba362e0ca5e8d151581d2cddc7b5a4f"
+    },
+    {
+      "path": "site/eleve/data/eleves/integrations.json",
+      "bytes": 442,
+      "sha256": "1a1aebcef3785d0ebcdef9c861d0e47076e6f5ee9573821fe6285ec80e1b5434"
+    },
+    {
+      "path": "site/eleve/data/eleves/konstellation-light-candidat.json",
+      "bytes": 51048,
+      "sha256": "cc6599c1a4d5910af7b45309323740445f9d84c25a1cc58b1420b16ca3f574f1"
+    },
+    {
+      "path": "site/eleve/data/konstellation-liens.json",
+      "bytes": 468,
+      "sha256": "7946347a7b58b472769c9bd61ed2da219a832dc5356ec1f1b813135ee5b9e073"
+    },
+    {
+      "path": "site/eleve/data/kristals-experiences.json",
+      "bytes": 8658,
+      "sha256": "f943b8dcab2575243ea5d6a126a7904243e9e8ab6f06eab71389adb8f9becffc"
+    },
+    {
+      "path": "site/eleve/data/kristals-visuels.json",
+      "bytes": 643944,
+      "sha256": "b541a5dd4cd1da30dff29fc9ff49ca27f8c8a609bd7d3d822a7ac6c6f7cdb95d"
+    },
+    {
+      "path": "site/eleve/data/visuels_public.json",
+      "bytes": 57582,
+      "sha256": "ebc4fc0d6d6ae60e604c80f8ec7d1f318259330a28f948e222f9c3e4d76e72a2"
+    },
+    {
+      "path": "site/eleve/index.html",
+      "bytes": 1574,
+      "sha256": "5c94917cac394219aa9cdf9d5dbc5ab6a73d23041657582544e1bfa143dfaf55"
+    },
+    {
+      "path": "site/eleve/labo/app.js",
+      "bytes": 10905,
+      "sha256": "7700d5cf38e1c6c809bfda1dc7225462063e914b24d85191d602f0a46727610d"
+    },
+    {
+      "path": "site/eleve/labo/data/catalogue.json",
+      "bytes": 18249,
+      "sha256": "c2be3d8202aa894d69c4d244cb6af90bff4181eb2c8cbbc9bf95f6c70317d749"
+    },
+    {
+      "path": "site/eleve/labo/embed.js",
+      "bytes": 947,
+      "sha256": "e6dfe264690bd156ba5f44e252e6bb1d99720fe47271281ec68fd59f75e2a6cd"
+    },
+    {
+      "path": "site/eleve/labo/engine.js",
+      "bytes": 10263,
+      "sha256": "065adf94009025f60812567d1949c7b3b69ab8f4a21ab69c21d8deb779fe74f4"
+    },
+    {
+      "path": "site/eleve/labo/index.html",
+      "bytes": 910,
+      "sha256": "f840cd93281840c68653ca46dced08a8cb6fa33fa51f162303c56a6de789d626"
+    },
+    {
+      "path": "site/eleve/labo/lab.css",
+      "bytes": 5540,
+      "sha256": "47afc192902ac7625a737a2f4ec4896be39313dcf1aa9e862c7310be7d7b3356"
+    },
+    {
+      "path": "site/eleve/mondes-v12/app.js",
+      "bytes": 8319,
+      "sha256": "f4ff8c3512acea3e0320e30b573bae9da41dcc20f4954153a89e02ce774e0d83"
+    },
+    {
+      "path": "site/eleve/mondes-v12/data/catalogue.json",
+      "bytes": 9497,
+      "sha256": "a98a239e17583e62289f12167969a9c3f0c9727c17d6d82d935f2baedf6cc881"
+    },
+    {
+      "path": "site/eleve/mondes-v12/engine.js",
+      "bytes": 7522,
+      "sha256": "36f6192da33d507894d577ce733bfb90d97b41203603b138abe420daa64e5b81"
+    },
+    {
+      "path": "site/eleve/mondes-v12/index.html",
+      "bytes": 703,
+      "sha256": "94e6252ba395a0a21ea9a3557164b3825d5370f7c6d6990717aa79040b8afee1"
+    },
+    {
+      "path": "site/eleve/mondes-v12/style.css",
+      "bytes": 3370,
+      "sha256": "cfb8874ad17bf4411289670ba97c8d72778d5c8a5c48827ff0fd30a64a9e89fb"
+    },
+    {
+      "path": "site/eleve/style.css",
+      "bytes": 8739,
+      "sha256": "1ee6efa22122ddc4a427ffb459babf452e082b527b8912ad2bd14dd5b1e311c8"
+    },
+    {
+      "path": "site/eleve/v8.css",
+      "bytes": 4202,
+      "sha256": "9911bcfb0fc6582b8b5399d8b622b974403d4f1e2725826f9bd96e5cc7f46f41"
+    },
+    {
+      "path": "site/enseignant/index.html",
+      "bytes": 1292,
+      "sha256": "0ba405055072f4f4807db29fd0b8005f537cb1a3906484863cc4164fe24ab4f5"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 3309,
+      "sha256": "ceaaabff1f5d5d91a7ee0cb61972ca7fc9f4c65c76fc0ef11dae085b24c878aa"
+    },
+    {
+      "path": "site/style.css",
+      "bytes": 10253,
+      "sha256": "b857a1000e927e82416686084d40aca29d0ee32b76df524af7d956a69c265a9d"
+    },
+    {
+      "path": "tests/test_ekole_minilabs_v9.py",
+      "bytes": 3102,
+      "sha256": "7bbbedae9fbb2b3d2c83d3a0448b6d2e1461a1fe467495dc73c323180da126bb"
+    },
+    {
+      "path": "tests/test_ekole_three_apps_v7.py",
+      "bytes": 3470,
+      "sha256": "f1fc97a1c4b6bb56fbad4735f89ad02668425e36c6814de9e8958dc57f81eb62"
+    },
+    {
+      "path": "tests/test_ekole_v12.py",
+      "bytes": 1958,
+      "sha256": "65aaa990379e76231d0701da4e9f3c0377f39d2022c9095786ddd23ff1cfb7a0"
+    },
+    {
+      "path": "tests/test_ekole_v12_http.py",
+      "bytes": 1735,
+      "sha256": "498ffa9a0a291f89a519b97e6375bfb0b6acca8d3326073e11a006390ab6c059"
+    },
+    {
+      "path": "tests/test_ekole_v8_features.py",
+      "bytes": 4105,
+      "sha256": "d55e3dc201c1cef2c9570f75a3ab1fa1443f828372201bcb8f09df8f3bfd87d9"
+    },
+    {
+      "path": "tests/test_kristal_visuels_v10.py",
+      "bytes": 3544,
+      "sha256": "63ae0897fe5373c234df4a032fac870c1787a3ed6048d0c03a720f09f72db5ff"
+    },
+    {
+      "path": "tests/test_microlab_engine_v9.js",
+      "bytes": 2941,
+      "sha256": "ee22b101dbafbe2533ac1b8105c4b29fedadce505c9ed4f174cf73bf54e12eb4"
+    },
+    {
+      "path": "tests/test_mondes_v12.js",
+      "bytes": 2441,
+      "sha256": "b7870211607238960ce09e5789e6bbcb9f45343e1403f93c5cbf568013ecd89e"
+    },
+    {
+      "path": "tests/test_refonte_kristals_v11.py",
+      "bytes": 4535,
+      "sha256": "75879616ca37fb43edbd7543a9c144d1785cbab9e1bac1180a013c1225e87081"
+    },
+    {
+      "path": "tools/appliquer_plan_v12.py",
+      "bytes": 3011,
+      "sha256": "4541d63cb5c755f953c1f96b8710a590405303bb248c23d3f81a798e9bf3ba1c"
+    },
+    {
+      "path": "tools/appliquer_revisions_guides_v11.py",
+      "bytes": 2141,
+      "sha256": "07749af1743e3bb79da4750d630c7f4a3593a1e8cfc567255f7de61684103e33"
+    },
+    {
+      "path": "tools/compiler_experiences_v11.py",
+      "bytes": 3223,
+      "sha256": "1ec6ca02c3af5b7f89466751cedd798bf5680f1867597ddf76fe722ff48b147a"
+    },
+    {
+      "path": "tools/compiler_mondes_v12.py",
+      "bytes": 5368,
+      "sha256": "333473f56e6c55d38df175bae6ec98e9f322f0a72b240f91a12828d1baec2dd4"
+    },
+    {
+      "path": "tools/compiler_visuels_approuves_v8.py",
+      "bytes": 5339,
+      "sha256": "06d885bb51e798f45254de8e1ce6eea4ab6d20e50c6d5e95c0cecfd9b80f1994"
+    },
+    {
+      "path": "tools/compiler_visuels_kristals.py",
+      "bytes": 7030,
+      "sha256": "3b7fde22edbb49f35f73f3bec1dc95ecab1e8a0798c1667cffb505b3569079b4"
+    },
+    {
+      "path": "tools/construire_vue_enfant.py",
+      "bytes": 2750,
+      "sha256": "d940a78ece01422d99a2cd4caa0a8990cd9b6e3b235c1e54e1e5e033ab8afa60"
+    },
+    {
+      "path": "tools/export_ekole_eleve_v7.py",
+      "bytes": 2077,
+      "sha256": "2b3b6691fe470307a058baa473560e9b30679ceb126ed9c29314d6d297248032"
+    },
+    {
+      "path": "tools/export_ekole_eleve_v8.py",
+      "bytes": 5483,
+      "sha256": "47f318053d90e23ab1b8609c47ecdff00dbf0551fcdc17c5ee0fc4b0f35c23d4"
+    },
+    {
+      "path": "tools/installer_sources_200_v12.py",
+      "bytes": 2362,
+      "sha256": "70801b78b2458718c0b4810fa1eb74f7039d2cd4eed4cada2edecc0c9a21c7b5"
+    },
+    {
+      "path": "tools/installer_sources_pilotes_v11.py",
+      "bytes": 1270,
+      "sha256": "e3407b5a975852dae07160855288ad87185d53a80131cae42d50c5f23a830932"
+    },
+    {
+      "path": "tools/qualite_ekole_v12.py",
+      "bytes": 2761,
+      "sha256": "1419ee09d297539bf2053726008f5f52e352bcf542332a98b034d59ad8743cdf"
+    },
+    {
+      "path": "tools/revoir_image_v12.py",
+      "bytes": 2760,
+      "sha256": "b8abe25b32a035c894a07dcf64dafa3675645c76127d94aa32cd955395dd7e78"
+    },
+    {
+      "path": "tools/serve_enseignant.py",
+      "bytes": 6895,
+      "sha256": "e6f841aaa742cd66bbe0b5db40f7f2eff77d217163175aa41cbb933403526ccc"
+    },
+    {
+      "path": "tools/synchroniser_ekole_apps.py",
+      "bytes": 1948,
+      "sha256": "331e2ee2c396044fcf39389cd73b944a2985a3694ae70113ee46c64a204c98db"
+    },
+    {
+      "path": "tools/valider_mini_labs.py",
+      "bytes": 1980,
+      "sha256": "3944843b29dff900cb546c754390e24f60905564ad228b3e3c72f7c6017a4507"
+    },
+    {
+      "path": "visuels/APPROBATION_IMAGES.exemple.json",
+      "bytes": 521,
+      "sha256": "161cf3f17cdd1b94b24e1471b1b330582d49e6e1e5f7ff9e6c730ac0547be828"
+    },
+    {
+      "path": "visuels/INTENTIONS_IMAGES.json",
+      "bytes": 534987,
+      "sha256": "5ad23401b904f386232d7ed35cdcb21e0adc59e9cfc96364b089a24d816fc1f0"
+    },
+    {
+      "path": "visuels/KRISTALS_SANS_SOURCE.json",
+      "bytes": 5663,
+      "sha256": "9f28576519779808f135a039f256d3018e5718028a398035c6c498a1b5c4ca8e"
+    },
+    {
+      "path": "visuels/SCENES_V8.json",
+      "bytes": 16614,
+      "sha256": "9d1c30c8d9cd165ff10d42d83229a1cee4458f0a2ade2ddaea485c6bacffd88f"
+    }
+  ]
+}

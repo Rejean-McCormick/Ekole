@@ -1,0 +1,196 @@
+{
+  "format": "ekole.micro-mondes-public/1.0",
+  "statut": "pratique_exploratoire_pas_certification",
+  "couverts": 5,
+  "count": 7,
+  "items": [
+    {
+      "type": "expression",
+      "image_path": "experience/images/theatre-deux-moyens.webp",
+      "instruction": "Prépare une courte scène qui exprime la surprise avec deux moyens différents. Présente-la à une personne qui pourra observer ta prestation.",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "kristal_id": "qc-pri-ad-001",
+      "parameters": {
+        "intention": "surprise",
+        "gestures": [
+          "Utiliser une posture",
+          "Faire varier la voix",
+          "Changer le rythme du geste",
+          "Utiliser l’espace scénique"
+        ]
+      },
+      "source_review": "revue_requise",
+      "evaluation": "entrainement_non_certifiant",
+      "representation": "expression_observation_humaine",
+      "title": "Exprime la surprise",
+      "id": "theatre-deux-moyens",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Exprime la surprise ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+    },
+    {
+      "type": "causalite",
+      "image_path": "experience/images/recit-liens-causaux.webp",
+      "instruction": "Remets ces événements d’un petit récit inventé dans l’ordre. Puis décide quels liens de cause à effet sont justifiés par l’histoire.",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "kristal_id": "qc-pri-fr-008",
+      "parameters": {
+        "events": [
+          {
+            "id": "e1",
+            "text": "Lina prépare des semences pour le jardin."
+          },
+          {
+            "id": "e2",
+            "text": "Un coup de vent emporte le sachet de semences."
+          },
+          {
+            "id": "e3",
+            "text": "Lina cherche les semences près de la clôture."
+          },
+          {
+            "id": "e4",
+            "text": "Lina les retrouve et peut commencer à planter."
+          }
+        ],
+        "order": [
+          "e1",
+          "e2",
+          "e3",
+          "e4"
+        ],
+        "links": [
+          {
+            "from": "e2",
+            "to": "e3",
+            "valid": true,
+            "statement": "Le vent provoque la recherche."
+          },
+          {
+            "from": "e1",
+            "to": "e4",
+            "valid": false,
+            "statement": "Préparer un sachet garantit de retrouver les semences."
+          }
+        ]
+      },
+      "source_review": "revue_requise",
+      "evaluation": "entrainement_non_certifiant",
+      "representation": "sequence_et_liens",
+      "title": "Une histoire qui se tient",
+      "id": "recit-liens-causaux",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Une histoire qui se tient ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+    },
+    {
+      "type": "repartition",
+      "image_path": "experience/images/division-partage-14-3.webp",
+      "instruction": "Partage 14 jetons entre 3 boîtes. Chaque boîte doit en avoir autant; certains jetons peuvent rester.",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "kristal_id": "qc-pri-ma-009",
+      "parameters": {
+        "total": 14,
+        "bins": 3
+      },
+      "source_review": "revue_requise",
+      "evaluation": "entrainement_non_certifiant",
+      "representation": "repartition_avec_reste",
+      "title": "Le partage avec un reste",
+      "id": "division-partage-14-3",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Le partage avec un reste ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+    },
+    {
+      "type": "repartition",
+      "image_path": "experience/images/division-groupement-12-4.webp",
+      "instruction": "Répartis 12 jetons dans 4 groupes équitables. Vérifie qu’il ne reste rien.",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "kristal_id": "qc-pri-ma-009",
+      "parameters": {
+        "total": 12,
+        "bins": 4
+      },
+      "source_review": "revue_requise",
+      "evaluation": "entrainement_non_certifiant",
+      "representation": "repartition_sans_reste",
+      "title": "Partager et vérifier",
+      "id": "division-groupement-12-4",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Partager et vérifier ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+    },
+    {
+      "type": "representations",
+      "image_path": "experience/images/fractions-2-5-multisupport.webp",
+      "instruction": "Montre 2 parts sur 5 sur une surface, une bande et une collection en groupes égaux.",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "kristal_id": "qc-pri-ma-012",
+      "parameters": {
+        "parts": 5,
+        "chosen": 2,
+        "group_size": 2
+      },
+      "source_review": "revue_requise",
+      "evaluation": "entrainement_non_certifiant",
+      "representation": "surface_bande_collection",
+      "title": "La même fraction, trois supports",
+      "id": "fractions-2-5-multisupport",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « La même fraction, trois supports ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+    },
+    {
+      "type": "representations",
+      "image_path": "experience/images/fractions-3-4-multisupport.webp",
+      "instruction": "Représente trois quarts sur trois supports différents.",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "kristal_id": "qc-pri-ma-012",
+      "parameters": {
+        "parts": 4,
+        "chosen": 3,
+        "group_size": 3
+      },
+      "source_review": "revue_requise",
+      "evaluation": "entrainement_non_certifiant",
+      "representation": "surface_bande_collection",
+      "title": "Trois quarts autrement",
+      "id": "fractions-3-4-multisupport",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Trois quarts autrement ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+    },
+    {
+      "type": "preuves",
+      "image_path": "experience/images/sciences-observer-interpreter.webp",
+      "instruction": "Dans une situation d’observation de deux plantes, distingue ce qu’on constate de ce qu’on en déduit.",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "kristal_id": "qc-pri-st-001",
+      "parameters": {
+        "statements": [
+          {
+            "id": "s1",
+            "text": "La première plante a trois feuilles visibles.",
+            "kind": "observation"
+          },
+          {
+            "id": "s2",
+            "text": "La deuxième plante a une tige plus courte.",
+            "kind": "observation"
+          },
+          {
+            "id": "s3",
+            "text": "La première plante pousse mieux à cause de la lumière.",
+            "kind": "interpretation"
+          },
+          {
+            "id": "s4",
+            "text": "Le pot de la deuxième plante contient de la terre humide.",
+            "kind": "observation"
+          },
+          {
+            "id": "s5",
+            "text": "Cette plante ne pousse pas parce qu’elle est malade.",
+            "kind": "interpretation"
+          }
+        ]
+      },
+      "source_review": "revue_requise",
+      "evaluation": "entrainement_non_certifiant",
+      "representation": "observation_inference",
+      "title": "Je vois ou je suppose ?",
+      "id": "sciences-observer-interpreter",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Je vois ou je suppose ? ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+    }
+  ],
+  "notice": "Aucun résultat n’atteste une maîtrise. Vérification partielle uniquement. Le contenu des solutions d’entraînement est inspectable dans le navigateur."
+}

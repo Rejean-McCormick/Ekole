@@ -1,0 +1,141 @@
+{
+  "format": "ekole.parcours-configuration/0.3",
+  "statut": "projection_pedagogique_locale_a_qualifier",
+  "contexte": "primaire_quebec",
+  "principe": "Un parcours réunit des cours pédagogiques indépendants; quatre étapes pédagogiques Ekole ne sont pas les trois étapes officielles de bulletin.",
+  "annees": [
+    {
+      "id": "annee-1",
+      "niveau": 1,
+      "libelle": "1re année"
+    },
+    {
+      "id": "annee-2",
+      "niveau": 2,
+      "libelle": "2e année"
+    },
+    {
+      "id": "annee-3",
+      "niveau": 3,
+      "libelle": "3e année"
+    },
+    {
+      "id": "annee-4",
+      "niveau": 4,
+      "libelle": "4e année"
+    },
+    {
+      "id": "annee-5",
+      "niveau": 5,
+      "libelle": "5e année"
+    },
+    {
+      "id": "annee-6",
+      "niveau": 6,
+      "libelle": "6e année"
+    }
+  ],
+  "etapes": [
+    {
+      "numero": 1,
+      "libelle": "Étape pédagogique 1",
+      "periode": "automne",
+      "sequence_saison": 1,
+      "duree_mois_cible": null,
+      "dates_exactes": null,
+      "statut": "planification_locale"
+    },
+    {
+      "numero": 2,
+      "libelle": "Étape pédagogique 2",
+      "periode": "automne",
+      "sequence_saison": 2,
+      "duree_mois_cible": null,
+      "dates_exactes": null,
+      "statut": "planification_locale"
+    },
+    {
+      "numero": 3,
+      "libelle": "Étape pédagogique 3",
+      "periode": "hiver",
+      "sequence_saison": 1,
+      "duree_mois_cible": null,
+      "dates_exactes": null,
+      "statut": "planification_locale"
+    },
+    {
+      "numero": 4,
+      "libelle": "Étape pédagogique 4",
+      "periode": "hiver",
+      "sequence_saison": 2,
+      "duree_mois_cible": null,
+      "dates_exactes": null,
+      "statut": "planification_locale"
+    }
+  ],
+  "cycles": [
+    {
+      "id": "cycle-1",
+      "titre": "1er cycle",
+      "annees": [
+        1,
+        2
+      ],
+      "fil_conducteur": "Progression sur les années 1 et 2; contenus à qualifier."
+    },
+    {
+      "id": "cycle-2",
+      "titre": "2e cycle",
+      "annees": [
+        3,
+        4
+      ],
+      "fil_conducteur": "Progression sur les années 3 et 4; contenus à qualifier."
+    },
+    {
+      "id": "cycle-3",
+      "titre": "3e cycle",
+      "annees": [
+        5,
+        6
+      ],
+      "fil_conducteur": "Progression sur les années 5 et 6; contenus à qualifier."
+    }
+  ],
+  "niveau_semantique": {
+    "cours": "Kristal pédagogique référencé",
+    "parcours_etape": "regroupement éditorial de cours pour une des quatre étapes pédagogiques Ekole, non une étape de bulletin",
+    "parcours_annee": "union de quatre étapes pédagogiques et de cours de l’année sans affectation à une étape",
+    "parcours_cycle": "union des années du cycle"
+  },
+  "regles": [
+    "L’étape ne se déduit pas de la vague de création.",
+    "Une affectation peut être faite à plusieurs étapes si explicitement approuvée.",
+    "Une affectation à l’année sans étape n’est pas automatiquement placée à une étape.",
+    "Un cycle peut compter deux ou trois années si sa configuration est modifiée.",
+    "Les quatre étapes pédagogiques ne valent pas quatre étapes de bulletin; les bulletins officiels sont au nombre de trois.",
+    "Aucune durée de quatre mois par étape n’est supposée.",
+    "La saison et les dates réelles sont précisées par l’établissement; leur absence ne bloque pas la bibliothèque."
+  ],
+  "modele_bulletin_officiel": {
+    "etapes": 3,
+    "type": "bulletin_unique_quebec_primaire",
+    "statut": "cadre_ministeriel_distinct",
+    "ponderations_pourcent": [
+      20,
+      20,
+      60
+    ],
+    "applicabilite": "regles_en_vigueur_selon_annee_etablissement",
+    "reference": "https://www.quebec.ca/education/prescolaire-primaire-et-secondaire/programmes-formations-evaluation/epreuves-ministerielles-evaluation-apprentissages/ponderations-libelles-bulletin/prescolaire-primaire",
+    "est_un_parcours": false
+  },
+  "calendrier": {
+    "annee_scolaire": "a_configurer",
+    "dates_etapes": null,
+    "etablissement": "a_configurer",
+    "nom_saison_1": "Automne",
+    "nom_saison_2": "Hiver",
+    "dates_non_deduites": true
+  }
+}
