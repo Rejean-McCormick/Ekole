@@ -5,11 +5,14 @@
   "count": 7,
   "items": [
     {
-      "type": "expression",
-      "image_path": "experience/images/theatre-deux-moyens.webp",
-      "instruction": "Prépare une courte scène qui exprime la surprise avec deux moyens différents. Présente-la à une personne qui pourra observer ta prestation.",
-      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
       "kristal_id": "qc-pri-ad-001",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Exprime la surprise ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif.",
+      "type": "expression",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "representation": "expression_observation_humaine",
+      "evaluation": "entrainement_non_certifiant",
+      "source_review": "revue_requise",
+      "image_path": "experience/images/theatre-deux-moyens.webp",
       "parameters": {
         "intention": "surprise",
         "gestures": [
@@ -19,19 +22,19 @@
           "Utiliser l’espace scénique"
         ]
       },
-      "source_review": "revue_requise",
-      "evaluation": "entrainement_non_certifiant",
-      "representation": "expression_observation_humaine",
-      "title": "Exprime la surprise",
       "id": "theatre-deux-moyens",
-      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Exprime la surprise ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+      "instruction": "Prépare une courte scène qui exprime la surprise avec deux moyens différents. Présente-la à une personne qui pourra observer ta prestation.",
+      "title": "Exprime la surprise"
     },
     {
-      "type": "causalite",
-      "image_path": "experience/images/recit-liens-causaux.webp",
-      "instruction": "Remets ces événements d’un petit récit inventé dans l’ordre. Puis décide quels liens de cause à effet sont justifiés par l’histoire.",
-      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
       "kristal_id": "qc-pri-fr-008",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Une histoire qui se tient ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif.",
+      "type": "causalite",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "representation": "sequence_et_liens",
+      "evaluation": "entrainement_non_certifiant",
+      "source_review": "revue_requise",
+      "image_path": "experience/images/recit-liens-causaux.webp",
       "parameters": {
         "events": [
           {
@@ -72,89 +75,89 @@
           }
         ]
       },
-      "source_review": "revue_requise",
-      "evaluation": "entrainement_non_certifiant",
-      "representation": "sequence_et_liens",
-      "title": "Une histoire qui se tient",
       "id": "recit-liens-causaux",
-      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Une histoire qui se tient ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+      "instruction": "Remets ces événements d’un petit récit inventé dans l’ordre. Puis décide quels liens de cause à effet sont justifiés par l’histoire.",
+      "title": "Une histoire qui se tient"
     },
     {
-      "type": "repartition",
-      "image_path": "experience/images/division-partage-14-3.webp",
-      "instruction": "Partage 14 jetons entre 3 boîtes. Chaque boîte doit en avoir autant; certains jetons peuvent rester.",
-      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
       "kristal_id": "qc-pri-ma-009",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Le partage avec un reste ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif.",
+      "type": "repartition",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "representation": "repartition_avec_reste",
+      "evaluation": "entrainement_non_certifiant",
+      "source_review": "revue_requise",
+      "image_path": "experience/images/division-partage-14-3.webp",
       "parameters": {
         "total": 14,
         "bins": 3
       },
-      "source_review": "revue_requise",
-      "evaluation": "entrainement_non_certifiant",
-      "representation": "repartition_avec_reste",
-      "title": "Le partage avec un reste",
       "id": "division-partage-14-3",
-      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Le partage avec un reste ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+      "instruction": "Partage 14 jetons entre 3 boîtes. Chaque boîte doit en avoir autant; certains jetons peuvent rester.",
+      "title": "Le partage avec un reste"
     },
     {
-      "type": "repartition",
-      "image_path": "experience/images/division-groupement-12-4.webp",
-      "instruction": "Répartis 12 jetons dans 4 groupes équitables. Vérifie qu’il ne reste rien.",
-      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
       "kristal_id": "qc-pri-ma-009",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Partager et vérifier ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif.",
+      "type": "repartition",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "representation": "repartition_sans_reste",
+      "evaluation": "entrainement_non_certifiant",
+      "source_review": "revue_requise",
+      "image_path": "experience/images/division-groupement-12-4.webp",
       "parameters": {
         "total": 12,
         "bins": 4
       },
-      "source_review": "revue_requise",
-      "evaluation": "entrainement_non_certifiant",
-      "representation": "repartition_sans_reste",
-      "title": "Partager et vérifier",
       "id": "division-groupement-12-4",
-      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Partager et vérifier ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+      "instruction": "Répartis 12 jetons dans 4 groupes équitables. Vérifie qu’il ne reste rien.",
+      "title": "Partager et vérifier"
     },
     {
-      "type": "representations",
-      "image_path": "experience/images/fractions-2-5-multisupport.webp",
-      "instruction": "Montre 2 parts sur 5 sur une surface, une bande et une collection en groupes égaux.",
-      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
       "kristal_id": "qc-pri-ma-012",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « La même fraction, trois supports ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif.",
+      "type": "representations",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "representation": "surface_bande_collection",
+      "evaluation": "entrainement_non_certifiant",
+      "source_review": "revue_requise",
+      "image_path": "experience/images/fractions-2-5-multisupport.webp",
       "parameters": {
         "parts": 5,
         "chosen": 2,
         "group_size": 2
       },
-      "source_review": "revue_requise",
-      "evaluation": "entrainement_non_certifiant",
-      "representation": "surface_bande_collection",
-      "title": "La même fraction, trois supports",
       "id": "fractions-2-5-multisupport",
-      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « La même fraction, trois supports ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+      "instruction": "Montre 2 parts sur 5 sur une surface, une bande et une collection en groupes égaux.",
+      "title": "La même fraction, trois supports"
     },
     {
-      "type": "representations",
-      "image_path": "experience/images/fractions-3-4-multisupport.webp",
-      "instruction": "Représente trois quarts sur trois supports différents.",
-      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
       "kristal_id": "qc-pri-ma-012",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Trois quarts autrement ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif.",
+      "type": "representations",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "representation": "surface_bande_collection",
+      "evaluation": "entrainement_non_certifiant",
+      "source_review": "revue_requise",
+      "image_path": "experience/images/fractions-3-4-multisupport.webp",
       "parameters": {
         "parts": 4,
         "chosen": 3,
         "group_size": 3
       },
-      "source_review": "revue_requise",
-      "evaluation": "entrainement_non_certifiant",
-      "representation": "surface_bande_collection",
-      "title": "Trois quarts autrement",
       "id": "fractions-3-4-multisupport",
-      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Trois quarts autrement ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+      "instruction": "Représente trois quarts sur trois supports différents.",
+      "title": "Trois quarts autrement"
     },
     {
-      "type": "preuves",
-      "image_path": "experience/images/sciences-observer-interpreter.webp",
-      "instruction": "Dans une situation d’observation de deux plantes, distingue ce qu’on constate de ce qu’on en déduit.",
-      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
       "kristal_id": "qc-pri-st-001",
+      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Je vois ou je suppose ? ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif.",
+      "type": "preuves",
+      "premisse": "Scénario d’entraînement original aligné sur un objectif source; ne constitue pas une évaluation officielle.",
+      "representation": "observation_inference",
+      "evaluation": "entrainement_non_certifiant",
+      "source_review": "revue_requise",
+      "image_path": "experience/images/sciences-observer-interpreter.webp",
       "parameters": {
         "statements": [
           {
@@ -184,12 +187,9 @@
           }
         ]
       },
-      "source_review": "revue_requise",
-      "evaluation": "entrainement_non_certifiant",
-      "representation": "observation_inference",
-      "title": "Je vois ou je suppose ?",
       "id": "sciences-observer-interpreter",
-      "prompt_visuel": "Représenter la situation matérielle ou sociale utile pour comprendre l’activité « Je vois ou je suppose ? ». Montrer les objets et relations pertinents sans indiquer la solution et sans imposer de style graphique. Laisser toutes les quantités et propriétés évaluées au moteur interactif."
+      "instruction": "Dans une situation d’observation de deux plantes, distingue ce qu’on constate de ce qu’on en déduit.",
+      "title": "Je vois ou je suppose ?"
     }
   ],
   "notice": "Aucun résultat n’atteste une maîtrise. Vérification partielle uniquement. Le contenu des solutions d’entraînement est inspectable dans le navigateur."

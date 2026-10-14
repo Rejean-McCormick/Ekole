@@ -68,6 +68,15 @@ def export(root,out):
         if not p.is_file():raise FileNotFoundError(rel)
         t=out/rel;t.parent.mkdir(parents=True,exist_ok=True)
         raw=p.read_bytes()
+        # SPEK_STAGE2_EXPORT_GUARD_START
+        # Installed preview is local only. This is intentionally NOT in ALLOWED.
+        if rel=='index.html':
+            begin=b'<!-- SPEK_STAGE2_PREVIEW_START -->'
+            end=b'<!-- SPEK_STAGE2_PREVIEW_END -->'
+            if raw.count(begin)!=1 or raw.count(end)!=1:
+                raise ValueError('Spek preview guard missing in student index; export blocked')
+            raw=raw.split(begin,1)[0]+raw.split(begin,1)[1].split(end,1)[1]
+        # SPEK_STAGE2_EXPORT_GUARD_END
         if rel=='data/konstellation-liens.json':
             j=json.loads(raw);j['preview_local_url']=None
             j['note']='Démonstration localhost retirée de la version élève publique. Publication v10 non revendiquée.'
