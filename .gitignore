@@ -1,9 +1,6 @@
 __pycache__/
-*.pyc
+*.py[cod]
+*.log
+.DS_Store
 .venv/
-.env
-*.secret
-config.local.*
-/vendor/reference-only/*.zip
-/site/.DS_Store
-*.ekole-backup-*
+dist/

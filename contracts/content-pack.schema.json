@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ekole - paquet pédagogique indépendant",
+  "type": "object",
+  "required": [
+    "format",
+    "id",
+    "nom",
+    "cours",
+    "parcours"
+  ],
+  "properties": {
+    "format": {
+      "const": "ekole.content-pack/0.1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,80}$"
+    },
+    "nom": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "langue": {
+      "type": "string"
+    },
+    "statut": {
+      "type": "string"
+    },
+    "cours": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "titre",
+          "fichier",
+          "prerequis"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "titre": {
+            "type": "string"
+          },
+          "discipline": {
+            "type": "string"
+          },
+          "objectif": {
+            "type": "string"
+          },
+          "preuve": {
+            "type": "string"
+          },
+          "statut": {
+            "type": "string"
+          },
+          "fichier": {
+            "type": "string",
+            "pattern": "^cours/[A-Za-z0-9_-]{1,80}\\.json$"
+          },
+          "prerequis": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "parcours": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "titre",
+          "cours_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "titre": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "cours_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "parcours_mis_en_avant": {
+      "type": "string",
+      "description": "Parcours mis en avant sur la page d’accueil (identifiant défini dans ce paquet)."
+    },
+    "cours_a_decouvrir": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Identifiants des cours placés en entrée du parcours mis en avant."
+    }
+  }
+}

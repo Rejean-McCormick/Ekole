@@ -1,45 +1,35 @@
-# Ekole — des connaissances reliées pour apprendre et comprendre
+# Ekole — moteur pédagogique neutralisé
 
-**Ekole est un projet expérimental d'environnement éducatif pour le primaire québécois.** Il combine des **Kristals** de connaissances réutilisables, des parcours pédagogiques, des exercices interactifs contrôlables et une navigation sémantique. Son ambition : rendre des ressources d'apprentissage adaptables, partageables et consultables **sans connexion Internet ni modèle d'IA à l'exécution** lorsque le matériel requis est installé localement.
+Ce dépôt est le moteur neutre et commun aux deux contenus `ekole-quebec` et `ecole-pastorale`. Il comprend portail, espace apprenant, éditeur textuel local, API JSON et code historique isolé sous `legacy/`. L'ensemble est prévu pour Python 3.10+ sans dépendances tierces.
 
-> **Statut : prototype de recherche et de conception.** Ekole n'est pas un établissement scolaire agréé, ne remplace pas un enseignant, et ses 202 cours candidats ne constituent pas une validation ministérielle ou pédagogique. Les affectations par année, les contenus et les activités demandent une revue humaine.
-
-## Découvrir Ekole
-
-- **[Wiki — accueil et sommaire](docs/wiki/Home.md)**
-- [Vision et mission](docs/wiki/Vision-et-partage.md)
-- [Architecture sémantique et Kristals](docs/wiki/Architecture-semantique.md)
-- [Web sémantique, RDF, JSON-LD et Wikidata](docs/wiki/Web-semantique-et-standards.md)
-- [Cadre scolaire québécois et limites](docs/wiki/Ecole-quebecoise-et-curriculum.md)
-- [SemantiK Architect et multilinguisme](docs/wiki/SemantiK-et-multilinguisme.md)
-- [Konstellation, MiniLab et expériences](docs/wiki/Navigation-et-activites.md)
-- [Fonctionnement hors ligne, coûts et sobriété](docs/wiki/Hors-ligne-et-sobriete.md)
-- [IA, qualité, validation et provenance](docs/wiki/IA-et-validation.md)
-- [Contribution, licences et ressources communes](docs/wiki/Contribuer-et-licences.md)
-- [Installer et explorer](docs/wiki/Installer-et-explorer.md)
-
-## Fonctionnement en bref
+## Emplacement Windows
 
 ```text
-Programme de formation de l'école québécoise (référence de conception)
-                         │
-              Parcours et objectifs Ekole
-                         │
-     Kristals de cours ──┼── Kristals autonomes de connaissances
-                         │
-          Projections locales vérifiées
-          ├── SemantiK Architect : phrases (intégration à qualifier)
-          ├── Konstellation Light : relations navigables
-          ├── Ekole Élève : notions, illustrations, activités MiniLab
-          └── Ekole Enseignant : création, revue et suivi éditorial
+C:\mycode\Ekole\
+  ekole\             (moteur)
+  ekole-quebec\      (202 cours scolaires conservés)
+  ecole-pastorale\   (12 trames de cours, 3 parcours)
 ```
 
-Un **Kristal n'est pas nécessairement un cours** : il peut représenter une société, un concept scientifique, une période historique, une preuve, un événement ou une organisation. Un cours peut référencer plusieurs Kristals sans dupliquer leurs données.
+**Lancement recommandé :** double-cliquez sur `..\ekole-quebec\LANCER.bat` ou `..\ecole-pastorale\LANCER.bat`. Le choix du corpus ne demande aucune modification de configuration. Les deux lanceurs ouvrent des ports séparés (8765/8766 et 8775/8776 respectivement).
 
-## Démarrer localement
+Si seul le moteur doit être démarré : `LANCER_EKOLE.bat`, ou `python launcher.py --contenu none`.
 
-Sous Windows, après installation complète des fichiers Ekole, lancer **`LANCER_EKOLE_3_APPS.bat`**. Les adresses usuelles sont : Core et Élève sur `http://127.0.0.1:8765/`, Enseignant sur `http://127.0.0.1:8766/` (session locale requise). L'usage sur un réseau scolaire doit être configuré et sécurisé séparément.
+## Interfaces
 
-Le wiki fournit une présentation de l'architecture et de ses intentions. Il **ne certifie pas** une implémentation RDF native, un multilinguisme déjà évalué en plusieurs langues, une empreinte carbone mesurée ou une autorisation de redistribuer tous les médias.
+- Québec : `http://127.0.0.1:8765/`, apprenant à `.../eleve/` et éditeur sur port 8766 avec lien privé imprimé dans le terminal.
+- Pastorale : `http://127.0.0.1:8775/`, apprenant à `.../eleve/` et éditeur sur port 8776 avec lien privé imprimé dans le terminal.
 
-**Projet indépendant** : inspiré des programmes québécois, non affilié au ministère de l'Éducation du Québec.
+Les deux éditeurs sont **en lecture seule par défaut**. Ajouter `--edition` au lanceur pour autoriser la modification des textes de cours et créer des sauvegardes adjacentes. L'éditeur est local, non destiné à un usage public multiutilisateur.
+
+## Contrat d'interface
+
+Le moteur charge `pack.json` et `cours/<id>.json` depuis le dépôt sélectionné par `--contenu CHEMIN`, conformément à `contracts/content-pack.schema.json`. La valeur `--contenu auto` est refusée si les deux dépôts sont présents pour éviter toute sélection accidentelle.
+
+## Tests
+
+Depuis `ekole/` : `python -m unittest discover -s tests -v` (les deux dépôts frères doivent être présents) ou `python launcher.py --contenu ../ecole-pastorale --verifier`.
+
+## Limites
+
+Cette version exploite le portail Core, la vue apprenant et l'éditeur textuel; les visualisations historiques avancées et les anciens connecteurs Moodle restent archivés dans `legacy/`, pas encore portés sur ces surfaces. Les contenus présents sont candidats, non publiés et non certifiés. Aucune affiliation institutionnelle n'est présumée. Le service écoute uniquement sur 127.0.0.1.

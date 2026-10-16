@@ -1,408 +1,217 @@
 'use strict';
-const $ = selector => document.querySelector(selector);
-const node = (tag, className = '', value) => {
-  const el = document.createElement(tag);
-  if (className) el.className = className;
-  if (value !== undefined && value !== null) el.textContent = String(value);
-  return el;
-};
-const box = (tag, className, parent) => {const el = node(tag, className); parent.append(el); return el;};
-const link = (value, url, className = '') => {const el = node('a', className, value); el.href = url; return el;};
-const route = params => './?' + new URLSearchParams(params).toString();
-const labelYear = year => Number(year) === 1 ? '1re année' : `${year}e année`;
-const DOMAIN_META = Object.freeze({
-  'Mathématique': '🔢', 'Français, langue d’enseignement': '📖', 'Français, langue seconde': '📝',
-  'Anglais, langue d’enseignement': '🔤', 'Anglais, langue seconde': '🗣️',
-  'Science et technologie': '🔬', 'Géographie, histoire et éducation à la citoyenneté': '🗺️',
-  'Arts plastiques': '🎨', 'Art dramatique': '🎭', 'Danse': '💃', 'Musique': '🎵',
-  'Éducation physique et à la santé': '🏃', 'Culture et citoyenneté québécoise': '🤝',
-  'Intégration linguistique, scolaire et sociale': '🌐'
-});
-const domainIcon = name => node('span', 'domain-icon', DOMAIN_META[name] || '📘');
-const domainLabel = name => {const row=node('span','domain-text');row.append(domainIcon(name),node('span','',name));return row;};
-const statusMessage = (parent, value, level='note') => parent.append(node('p',level,value));
-let catalogue=null, school=null, placements=null, legacyYearMap={};
-let propositions=null;
-let proposedIds=new Set();
-function applySuggestedPlacements(){
-  proposedIds=new Set();
-  if(!propositions || propositions.format!=='ekole.parcours-propositions/0.1')return;
-  const approvals=new Set();
-  for(const ids of Object.values(placements.cours_par_etape))for(const id of ids)approvals.add(id);
-  for(const [id,value] of Object.entries(legacyYearMap)) if(value!==null && value!==undefined && value!=='') approvals.add(id);
-  const valid=new Set(school.annees.flatMap(x=>school.etapes.map(e=>`annee-${x.niveau}-etape-${e.numero}`)));
-  for(const [id,p] of Object.entries(propositions.affectations_proposees||{})){
-    if(!lookup.has(id))throw Error(`Cours de proposition inconnu : ${id}`);
-    if(!valid.has(p.parcours)||!/^annee-[1-6]-etape-[1-4]$/.test(p.parcours))throw Error(`Parcours proposé invalide : ${id}`);
-    if(p.statut!=='proposition_non_validee')throw Error(`Statut de proposition incorrect : ${id}`);
-    if(approvals.has(id))continue;
-    if(!placements.cours_par_etape[p.parcours])placements.cours_par_etape[p.parcours]=[];
-    if(!placements.cours_par_etape[p.parcours].includes(id))placements.cours_par_etape[p.parcours].push(id);
-    proposedIds.add(id);
-  }
+// Ekole core : aucune hypothèse sur un curriculum; tout est défini par le paquet externe.
+const $ = (s)=>document.querySelector(s);
+const elt = (tag,cls='',text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=String(text);return n;};
+const add = (host,tag,cls='',text)=>{const n=elt(tag,cls,text);host.append(n);return n;};
+const base=location.pathname.startsWith('/eleve/')?'/eleve/':'/';
+const url=(params)=>base+'?'+new URLSearchParams(params).toString();
+const a=(host,text,params,cls='')=>{const n=add(host,'a',cls,text);n.href=url(params);return n;};
+const fetchJson=async(path)=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('Ressource indisponible : '+r.status);return r.json();};
+let pack, courses=new Map(), paths=new Map(), spek=null, graph=null, activities=null;
+const current=()=>new URLSearchParams(location.search);
+function compatible(p){return p.format==='ekole.content-pack/0.1'&&Array.isArray(p.cours)&&Array.isArray(p.parcours);}
+function getPathFor(id){return pack.parcours.find(p=>p.cours_ids.includes(id))?.id||'';}
+function ctxLink(c,retour='',extra={}){return {cours:c,...(retour?{retour}:{}),...extra};}
+function activeReturn(q,c){const target=q.get('retour');return target&&paths.get(target)?.cours_ids.includes(c)?target:getPathFor(c);}
+function crumb(host,parts){const nav=add(host,'nav','breadcrumbs');nav.setAttribute('aria-label','Fil d’Ariane');parts.forEach((p,i)=>{if(i)add(nav,'span','divider-crumb','›');if(p.url){const x=add(nav,'a','',p.text);x.href=p.url;}else add(nav,'span','crumb-current',p.text);});}
+function pill(host,title){add(host,'span','chip',title);}
+function heading(host,title,lead='',eyebrow=''){if(eyebrow)add(host,'p','eyebrow',eyebrow);add(host,'h1','page-heading',title);if(lead)add(host,'p','intro',lead);}
+function buttonlink(host,label,params,cls='button-link'){return a(host,label,params,cls);}
+function card(host,c,retour=''){
+ const x=a(host,'',ctxLink(c.id,retour),'card');const meta=add(x,'div','card-meta');pill(meta,c.discipline);
+ add(x,'strong','card-title',c.titre);add(x,'p','card-description',c.objectif||'Objectif à préciser');add(x,'span','card-next',c.publication_eleve?'Découvrir la leçon →':'Leçon élève en préparation →');
+ return x;
 }
-function proposalWarning(parent){
-  if(proposedIds.size) statusMessage(parent,`${proposedIds.size} cours sont placés provisoirement pour exploration. Répartition pédagogique à réviser : ce n'est ni une affectation officielle ni un verrou Moodle. Les affectations manuelles existantes demeurent prioritaires.`,'proposal-notice');
+function grouping(ids){const by=new Map();for(const id of ids){const c=courses.get(id);if(!c)continue;const k=c.discipline||'Autres';if(!by.has(k))by.set(k,[]);by.get(k).push(c);}return [...by.entries()].sort((a,b)=>a[0].localeCompare(b[0],'fr'));}
+function pathsHome(root){
+ heading(root,'Choisir un parcours','Choisis ton niveau pour retrouver les leçons disponibles.');
+ const list=add(root,'div','path-cards');const featured=pack.parcours_mis_en_avant;
+ const all=[...pack.parcours].sort((x,y)=>(x.id===featured?-1:0)-(y.id===featured?-1:0));
+ for(const p of all){const x=a(list,'',{parcours:p.id},'path-card');add(x,'span','eyebrow',p.id===featured?'À découvrir':'Parcours');add(x,'strong','',p.titre);add(x,'span','hint',p.cours_ids.length+' cours');}
+ if(!pack.parcours.length)add(root,'p','empty','Aucun parcours disponible dans ce dépôt.');
 }
-
-let lookup=new Map();
-
-function getCycle(year) {return school.cycles.find(c => c.annees.includes(Number(year)));}
-function getStages(year) {return school.etapes.map(stage => `annee-${year}-etape-${stage.numero}`);}
-function stageIds(key) {return placements.cours_par_etape[key] || [];}
-function yearFromLegacy(courseId) {
-  const value = legacyYearMap[courseId];
-  return Number.isInteger(Number(value)) && Number(value)>=1 && Number(value)<=6 && value!==null && value!=='' ? Number(value) : null;
+function home(root){
+ const featured=paths.get(pack.parcours_mis_en_avant);
+ if(featured){crumb(root,[{text:'Accueil'}]);heading(root,`Bonjour, bienvenue dans ${pack.nom}`,'Commence par choisir une activité ou retrouve ton parcours.');
+ const hero=add(root,'section','feature-hero');add(hero,'span','eyebrow','Parcours mis en avant');add(hero,'h2','',featured.titre);
+ add(hero,'p','',`${featured.cours_ids.length} cours organisés par matière. Tu peux explorer une notion à ton rythme.`);
+ buttonlink(hero,`Explorer la ${featured.titre} →`,{parcours:featured.id},'button-link primary');
+ }else heading(root,'Bienvenue',pack.description||'');
+ add(root,'h2','section-title','Autres parcours');const grid=add(root,'div','path-cards');for(const p of pack.parcours){if(featured&&p.id===featured.id)continue;const item=a(grid,'',{parcours:p.id},'path-card');add(item,'strong','',p.titre);add(item,'span','hint',`${p.cours_ids.length} cours`);}
+ if(!pack.parcours.length)add(root,'p','empty','Aucun parcours n’est encore publié.');
+ const disclaimer=add(root,'p','disclaimer',`Contenus : ${pack.statut||'statut non précisé'}. Ce portail ne déclare aucune validation pédagogique.`);
 }
-function stagePlacements(courseId) {
-  const result=[];
-  for(const [key, ids] of Object.entries(placements.cours_par_etape)) {
-    if(ids.includes(courseId)) {
-      const found = /^annee-(\d+)-etape-(\d+)$/.exec(key);
-      if(found) result.push({year:Number(found[1]),stage:Number(found[2]),key});
-    }
-  }
-  return result;
+function pathPage(root,p){
+ crumb(root,[{text:'Accueil',url:'./'},{text:p.titre}]);
+ heading(root,p.titre,`${p.cours_ids.length} cours · Choisis une matière, puis une notion.`,'Mon parcours');
+ if(p.id===pack.parcours_mis_en_avant){const actions=add(root,'div','quick-actions');buttonlink(actions,'Explorer les fiches Spek',{parcours:p.id,vue:'spek'},'button-link');buttonlink(actions,'Carte des connaissances',{parcours:p.id,vue:'carte'},'button-link');}
+ const q=current(),v=q.get('vue');if(v==='spek'){renderSpek(root,p);return;}if(v==='carte'){renderGraph(root,null,p.id);return;}
+ const featured=(p.cours_ids.length>0&&p.id===pack.parcours_mis_en_avant?(pack.cours_a_decouvrir||[]).filter(id=>p.cours_ids.includes(id)):[]);
+ if(featured.length){const section=add(root,'section','featured-lessons');add(section,'h2','section-title','Trois notions pour commencer');
+ const grid=add(section,'div','cards');featured.forEach(id=>card(grid,courses.get(id),p.id));}
+ add(root,'h2','section-title','Toutes les matières');add(root,'p','hint','Ouvre seulement la matière qui t’intéresse. Les autres restent rangées.');
+ const groups=grouping(p.cours_ids.filter(id=>!featured.includes(id)));const chips=add(root,'nav','subject-nav');chips.setAttribute('aria-label','Choisir une matière');
+ for(const [domain] of groups){const href=add(chips,'a','subject-chip',domain);href.href='#matiere-'+slug(domain);href.addEventListener('click',()=>{const elem=document.getElementById('matiere-'+slug(domain));if(elem)elem.open=true;});}
+ for(const [domain,arr] of groups){const sec=add(root,'details','subject-section');sec.id='matiere-'+slug(domain);
+ const summary=add(sec,'summary','section-head');add(summary,'span','subject-title',domain);add(summary,'span','count',arr.length+' cours');
+ const grid=add(sec,'div','cards');for(const c of arr)card(grid,c,p.id);
+ }
 }
-function courseYears(courseId) {
-  const found=new Set(stagePlacements(courseId).map(p => p.year));
-  const legacy=yearFromLegacy(courseId);if(legacy)found.add(legacy);
-  return [...found].sort((a,b)=>a-b);
+function slug(text){return text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-');}
+function catalog(root){
+ const search=$('#search').value.trim().toLocaleLowerCase('fr'),d=$('#domain').value;
+ const filtered=pack.cours.filter(c=>(!d||c.discipline===d)&&(!search||[c.titre,c.objectif,c.discipline,c.id].join(' ').toLocaleLowerCase('fr').includes(search)));
+ crumb(root,[{text:'Accueil',url:'./'},{text:'Bibliothèque'}]);heading(root,'Bibliothèque',`${filtered.length} cours sur ${pack.cours.length}.`);
+ const grid=add(root,'div','cards');for(const c of filtered)card(grid,c,getPathFor(c.id));if(!filtered.length)add(root,'p','empty','Aucun cours trouvé. Essaie un autre mot.');
 }
-function yearCourseIds(year) {
-  const found=new Set();
-  for(const stageKey of getStages(year)) for(const id of stageIds(stageKey))found.add(id);
-  for(const [id] of lookup) if(yearFromLegacy(id)===Number(year))found.add(id);
-  return [...found].sort();
+async function showApprovedImages(host,cid,index){
+ let data;try{data=await fetchJson('/api/visuels/'+encodeURIComponent(cid)+'.json');}catch(_){return;}
+ const placement=index<2?'decouvrir':index<4?'explorer':'explorer';
+ for(const item of (data.visuels||[]).filter(v=>v.placement===placement)){
+  const fig=add(host,'figure','lesson-illustration');const image=add(fig,'img');
+  image.src=item.url;image.alt=item.alt||'Illustration';image.loading='lazy';
+  add(fig,'figcaption','hint',item.alt||'');
+ }
 }
-function cycleCourseIds(cycle) {
-  return [...new Set(cycle.annees.flatMap(y => yearCourseIds(y)))].sort();
+async function detail(root,c){
+ const q=current(),retour=activeReturn(q,c.id),group=paths.get(retour),mode=q.get('vue');
+ crumb(root,[{text:'Accueil',url:'./'},...(group?[{text:group.titre,url:url({parcours:group.id})}]:[{text:'Bibliothèque',url:url({page:'cours'})}]),{text:c.titre}]);
+ heading(root,c.titre,c.objectif||'',c.discipline);
+ const status=add(root,'div','course-status');add(status,'span','small-note',c.publication_eleve?'Leçon pilote · À vérifier avec un enseignant':'Leçon élève en préparation');
+ const tabs=add(root,'nav','course-tabs');tabs.setAttribute('aria-label','Explorer la notion');
+ [['lecon','La leçon'],...(activities?.activites?.some(x=>x.cours_id===c.id)?[['pratique','Je pratique']]:[]),['spek','Fiches Spek'],['carte','Carte des liens']].forEach(([k,label])=>{const x=a(tabs,label,ctxLink(c.id,retour,k==='lecon'?{}:{vue:k}),'tab'+((mode||'lecon')===k?' selected':''));if((mode||'lecon')===k)x.setAttribute('aria-current','page');});
+ if(mode==='pratique'){renderPractice(root,c);return;}if(mode==='spek'){renderSpek(root,group||null,c.id);return;}if(mode==='carte'){renderGraph(root,c.id,retour);return;}
+ const summary=add(root,'div','course-objective');add(summary,'strong','','Ce que je vais apprendre');add(summary,'p','',c.objectif||'Objectif non renseigné');
+ let data;try{data=await fetchJson('/api/cours/'+encodeURIComponent(c.id)+'.json');}catch(e){add(root,'p','warning',e.message);return;}
+ if(data.id!==c.id||!Array.isArray(data.modules)){add(root,'p','warning','Modules indisponibles ou incorrects.');return;}
+ if(!data.modules.length){add(root,'p','empty',data.message||'Cette leçon est en préparation pour les élèves.');add(root,'p','hint','Le contenu détaillé et les corrigés restent accessibles uniquement dans l’atelier Enseignant.');return;}
+ let index=Math.max(0,data.modules.findIndex(m=>m.id===q.get('module')));const mod=data.modules[index];
+ const bar=add(root,'div','stage-top');add(bar,'span','stage-counter',`Étape ${index+1} sur ${data.modules.length}`);
+ const jump=add(bar,'label','stage-select-label','Aller à une étape');const select=add(jump,'select','stage-picker');select.setAttribute('aria-label','Choisir une étape du cours');
+ for(const [i,m] of data.modules.entries()){const op=add(select,'option','',`${i+1}. ${m.titre}`);op.value=m.id;if(i===index)op.selected=true;}
+ select.addEventListener('change',()=>{location.href=url(ctxLink(c.id,retour,{module:select.value}));});
+ const progress=add(root,'div','step-progress');progress.setAttribute('role','progressbar');progress.setAttribute('aria-valuemin','1');progress.setAttribute('aria-valuemax',String(data.modules.length));progress.setAttribute('aria-valuenow',String(index+1));progress.setAttribute('aria-label','Étape affichée');add(progress,'span','step-progress-bar').style.width=((index+1)/data.modules.length*100)+'%';
+ const panel=add(root,'article','lesson-panel');add(panel,'h2','lesson-title',mod.titre||'Étape');
+ await showApprovedImages(panel,c.id,index);
+ const note=add(panel,'p','lesson-context','Lis une partie à la fois. Tu peux revenir aux autres étapes avec les boutons ci-dessous.');
+ renderMarkdown(panel,mod.texte||'',{course:c.id,retour,moduleIds:data.modules.map(m=>m.id)});
+ const controls=add(root,'nav','step-controls');controls.setAttribute('aria-label','Navigation dans les étapes');
+ if(index>0)buttonlink(controls,'← Étape précédente',ctxLink(c.id,retour,{module:data.modules[index-1].id}),'button-link');
+ else add(controls,'span','hint','Début du cours');
+ if(index<data.modules.length-1)buttonlink(controls,'Étape suivante →',ctxLink(c.id,retour,{module:data.modules[index+1].id}),'button-link primary');
+ else buttonlink(controls,`← Retour au ${group?group.titre:'catalogue'}`,group?{parcours:group.id}:{page:'cours'},'button-link primary');
+ /* Aucune note ni critère enseignant dans l’interface ou le DOM de l’élève. */
 }
-function onlyYearWithoutStage(year) {
-  const stages=new Set(getStages(year).flatMap(stageIds));
-  return yearCourseIds(year).filter(id=>!stages.has(id));
+function introNotice(root,msg){add(root,'p','review-note',msg);}
+function renderSpek(root,p,courseId=''){
+ const returnPath=p?.id||pack.parcours_mis_en_avant;
+ add(root,'h2','section-title','Fiches Spek · propositions');
+ if(!spek){add(root,'p','empty','Aucune fiche Spek n’est fournie par ce dépôt.');return;}
+ introNotice(root,spek.avertissement||'Fiches à valider.');
+ const relevant=spek.semaines.filter(s=>!courseId||s.correspondances.some(c=>c.id===courseId));
+ if(!relevant.length){add(root,'p','empty','Aucune fiche Spek reliée à ce cours pour le moment.');if(courseId)buttonlink(root,'Voir toutes les fiches Spek',{parcours:returnPath,vue:'spek'});return;}
+ const pick=current().get('fiche');const currentWeek=relevant.find(s=>s.id===pick);
+ if(currentWeek){buttonlink(root,'← Toutes les fiches',courseId?ctxLink(courseId,returnPath,{vue:'spek'}):{parcours:returnPath,vue:'spek'},'back-link');
+ add(root,'h3','week-heading',currentWeek.titre);
+ const content=add(root,'article','spek-sheet');
+ for(const [label,key] of [['Objectif','objectif'],['Préalables','prerequis'],['Déroulement','etapes'],['Je fais le point','reflexion']]){
+ if(currentWeek[key]?.length){add(content,'h4','',label);const lst=add(content,'ul','');currentWeek[key].forEach(t=>add(lst,'li','',t));}}
+ const ul=add(content,'div','spek-related');for(const c of currentWeek.correspondances){const found=courses.get(c.id);
+ if(found)buttonlink(ul,'Aller à la leçon : '+found.titre,ctxLink(c.id,returnPath),'button-link');}
+ if(currentWeek.limites?.length){const warn=add(content,'p','review-note',currentWeek.limites.join(' '));}
+ return;}
+ const list=add(root,'div','spek-list');for(const w of relevant){const x=a(list,'',courseId?ctxLink(courseId,returnPath,{vue:'spek',fiche:w.id}):{parcours:returnPath,vue:'spek',fiche:w.id},'spek-item');
+ add(x,'strong','',w.titre);add(x,'span','hint',w.objectif[0]||'Voir la fiche');add(x,'span','card-next','Lire la fiche →');}
 }
-function coursePlacementLabel(id) {
-  const stages=stagePlacements(id);
-  if(stages.length) return stages.map(x=>`${labelYear(x.year)}, étape ${x.stage}`).join(' · ')+(proposedIds.has(id)?' · proposition à valider':'');
-  const years=courseYears(id);
-  return years.length ? years.map(labelYear).join(' · ')+' · étape à préciser' : 'Année et étape à attribuer';
+function renderPractice(root,c){
+ const activity=activities?.activites.find(x=>x.cours_id===c.id);
+ add(root,'h2','section-title','Je pratique');
+ introNotice(root,activities?.avertissement||'Activité de démonstration.');
+ if(!activity){add(root,'p','empty','Pas encore d’activité interactive pour ce cours.');return;}
+ const box=add(root,'section','practice-card');add(box,'h3','',activity.titre);if(activity.consigne)add(box,'p','',activity.consigne);
+ if(activity.type==='groupes-egaux'){
+  const controls=add(box,'div','manip-controls');const groups=add(controls,'label','', 'Nombre de groupes');const a=add(groups,'input');a.type='range';a.min='1';a.max='7';a.value='3';
+  const items=add(controls,'label','','Jetons par groupe');const b=add(items,'input');b.type='range';b.min='1';b.max='7';b.value='4';
+  const result=add(box,'p','manip-answer');result.setAttribute('aria-live','polite');const board=add(box,'div','group-board');
+  const refresh=()=>{const count=Number(a.value),each=Number(b.value);board.replaceChildren();for(let i=0;i<count;i++){
+   const g=add(board,'div','single-group');g.setAttribute('aria-label',`Groupe ${i+1} : ${each} jetons`);for(let j=0;j<each;j++)add(g,'span','token','●');}
+   result.textContent=`${count} groupes de ${each} jetons = ${count} × ${each} = ${count*each} jetons`;
+  };a.addEventListener('input',refresh);b.addEventListener('input',refresh);refresh();
+ }else if(activity.type==='question-choix'){
+  add(box,'p','practice-text',activity.texte);add(box,'h4','',activity.question);
+  const choices=add(box,'div','choices');const feedback=add(box,'p','feedback');feedback.setAttribute('aria-live','polite');
+  activity.choix.forEach((option,i)=>{const btn=add(choices,'button','choice',option);btn.type='button';btn.addEventListener('click',()=>{
+   for(const n of choices.querySelectorAll('button'))n.classList.remove('good','bad');btn.classList.add(i===activity.reponse?'good':'bad');
+   feedback.textContent=(i===activity.reponse?'Oui, bonne interprétation. ':'Pas tout à fait. Essaie d’utiliser les indices. ')+activity.retroaction;
+  });});
+ }
+ add(box,'p','practice-privacy','Cet exercice fonctionne uniquement dans le navigateur; il ne crée ni note ni dossier d’élève.');
 }
-function iconPill(domain){const pill=node('span','subject-pill');pill.append(domainLabel(domain));return pill;}
-function renderCourseCards(parent, courses, emptyLabel) {
-  if(!courses.length) {statusMessage(parent,emptyLabel||'Aucun cours associé à cette sélection.','empty-state');return;}
-  const grid=box('div','cards',parent);
-  for(const course of courses) {
-    const card=link('',route({cours:course.id}),'card');
-    const meta=box('div','meta-row',card);
-    meta.append(iconPill(course.discipline),node('span','level-pill',coursePlacementLabel(course.id)));
-    card.append(node('small','',course.id),node('strong','',course.titre),node('p','',course.objectif || 'Consulter le contenu du cours'));
-    grid.append(card);
-  }
+function renderGraph(root,focus,returnPath=''){
+ add(root,'h2','section-title','Carte des liens entre notions');
+ introNotice(root,'Aperçu léger alimenté par les relations du dépôt. Ce n’est pas le lecteur Konstellation-Light complet et les relations ne remplacent pas une évaluation.');
+ if(!graph){add(root,'p','empty','Aucun graphe associé à ce dépôt.');return;}
+ const rel=focus?graph.relations.filter(e=>e.from===focus||e.to===focus):graph.relations.filter(e=>graph.noeuds[e.from]?.dans_parcours_3e&&graph.noeuds[e.to]?.dans_parcours_3e);
+ if(focus){const main=add(root,'div','graph-focus');add(main,'strong','',courses.get(focus)?.titre||focus);add(main,'span','hint','Notion en cours');}
+ if(!rel.length){add(root,'p','empty','Aucun lien pédagogique documenté pour cette sélection. Ce n’est pas une erreur : le graphe est encore partiel.');return;}
+ const grid=add(root,'div','relations');for(const e of rel){const other=focus?(e.from===focus?e.to:e.from):e.to;
+ const panel=add(grid,'div','relation-card');let meaning=e.type==='requires'?'Préalable':e.type==='reinforces'?'Renforce':'À explorer';
+ if(focus&&e.to===focus&&e.type==='requires')meaning='Notion qui utilise celle-ci';
+ add(panel,'span','eyebrow',meaning);const t=courses.get(other);
+ if(t)buttonlink(panel,t.titre,ctxLink(other,getPathFor(other)||returnPath),'relation-link');else add(panel,'strong','',other);
+ if(!focus)add(panel,'p','relation-caption',(courses.get(e.from)?.titre||e.from)+' → '+(courses.get(e.to)?.titre||e.to));
+ if(e.justification)add(panel,'p','hint',e.justification);
+ }
 }
-function coursesByIds(ids){return ids.map(id=>lookup.get(id)).filter(Boolean);}
-function filterCourseList(courses) {
-  const search=($('#search')?.value||'').trim().toLocaleLowerCase('fr-CA');
-  const domain=$('#subject')?.value||'';
-  const year=$('#level')?.value||'';
-  const stage=$('#stage')?.value||'';
-  return courses.filter(course=>{
-    if(domain && course.discipline !== domain) return false;
-    if(year && !courseYears(course.id).includes(Number(year)))return false;
-    if(stage && !stagePlacements(course.id).some(p=>p.stage===Number(stage) && (!year||p.year===Number(year))))return false;
-    if(search && ![course.id,course.titre,course.discipline,course.objectif,coursePlacementLabel(course.id)].join(' ').toLocaleLowerCase('fr-CA').includes(search))return false;
-    return true;
-  });
-}
-function pageHeader(parent, heading, breadcrumb){
-  statusMessage(parent,breadcrumb,'breadcrumbs');
-  parent.append(node('h1','',heading));
-}
-function courseCountBadge(parent, n){parent.append(node('span','count-pill',`${n} cours`));}
-function renderCycles(parent) {
-  pageHeader(parent,'Parcours scolaires','Ekole / Parcours');
-  proposalWarning(parent);
-  statusMessage(parent,'Choisis un cycle, puis une année et une étape. Chaque parcours réunit des cours qui y sont explicitement affectés.');
-  const grid=box('div','path-grid',parent);
-  for(const cycle of school.cycles){
-    const item=link('',route({parcours:cycle.id}),'path-card');
-    item.append(node('span','eyebrow',cycle.titre),node('h2','',cycle.annees.map(labelYear).join(' + ')));
-    statusMessage(item,cycle.fil_conducteur||'Regroupement à qualifier.');
-    courseCountBadge(item,cycleCourseIds(cycle).length);grid.append(item);
-  }
-  const foot=box('div','content',parent);
-  foot.append(node('h2','','Bibliothèque des cours'));
-  statusMessage(foot,'Les cours demeurent accessibles même lorsqu’ils ne sont pas encore intégrés à un parcours.');
-  foot.append(link('Voir tous les cours →',route({page:'cours'}),'inline-link'));
-}
-function renderYears(parent){
-  pageHeader(parent,'Parcours par année','Ekole / Parcours / Années');
-  proposalWarning(parent);
-  statusMessage(parent,'Chaque année présente quatre étapes pédagogiques Ekole : deux à l’automne et deux pendant la période hiver. Les bulletins officiels du Québec comportent, séparément, trois étapes.');
-  const grid=box('div','path-grid',parent);
-  for(const year of school.annees){
-    const item=link('',route({parcours:year.id}),'path-card');
-    const cycle=getCycle(year.niveau);
-    item.append(node('span','eyebrow',cycle?.titre||'Cycle à définir'),node('h2','',year.libelle));
-    statusMessage(item,'Étapes pédagogiques 1 à 4');courseCountBadge(item,yearCourseIds(year.niveau).length);grid.append(item);
-  }
-}
-function renderPath(parent,id){
-  if(id.startsWith('cycle-')){
-    const cycle=school.cycles.find(c=>c.id===id);if(!cycle)return renderNotFound(parent,id);
-    parent.append(link('← Tous les cycles',route({page:'parcours'})));
-    pageHeader(parent,cycle.titre,`Ekole / Parcours / ${cycle.titre}`);
-    proposalWarning(parent);
-    statusMessage(parent,cycle.fil_conducteur);
-    const grid=box('div','path-grid',parent);
-    for(const year of cycle.annees){
-      const item=link('',route({parcours:`annee-${year}`}),'path-card');
-      item.append(node('span','eyebrow',cycle.titre),node('h2','',labelYear(year)));
-      statusMessage(item,'Quatre étapes pédagogiques');courseCountBadge(item,yearCourseIds(year).length);grid.append(item);
-    }
-    return;
-  }
-  let m=/^annee-(\d+)$/.exec(id);
-  if(m){
-    const year=Number(m[1]);const cycle=getCycle(year);
-    if(!school.annees.some(a=>a.niveau===year))return renderNotFound(parent,id);
-    parent.append(link('← '+(cycle?.titre||'Parcours'),route({parcours:cycle?.id||'cycle-1'})));
-    pageHeader(parent,`Parcours de ${labelYear(year)}`,`Ekole / ${cycle?.titre||'Cycle'} / ${labelYear(year)}`);
-    proposalWarning(parent);
-    statusMessage(parent,`Cette année comprend ${school.etapes.length} étapes pédagogiques Ekole : deux à l’automne et deux en hiver. Leurs dates relèvent du calendrier de l’établissement. Les trois bulletins officiels sont une structure distincte.`);
-    const grid=box('div','path-grid',parent);
-    for(const stage of school.etapes){
-      const key=`annee-${year}-etape-${stage.numero}`;
-      const item=link('',route({parcours:key}),'path-card');
-      item.append(node('span','eyebrow',labelYear(year)),node('h2','',stage.libelle));
-      statusMessage(item,`${stage.periode==='automne'?'Automne':'Hiver'} · dates à préciser`);
-      courseCountBadge(item,stageIds(key).length);grid.append(item);
-    }
-    const pending=onlyYearWithoutStage(year);
-    if(pending.length){
-      const c=box('section','content',parent);
-      c.append(node('h2','','Cours de l’année — étape à préciser'));
-      renderCourseCards(c,filterCourseList(coursesByIds(pending)),'Aucun cours dans ce filtre.');
-    }else statusMessage(parent,'Aucun cours de cette année n’attend une étape dans les affectations actuelles.');
-    return;
-  }
-  m=/^annee-(\d+)-etape-(\d+)$/.exec(id);
-  if(m){
-    const year=Number(m[1]),stage=Number(m[2]),key=`annee-${year}-etape-${stage}`;
-    if(!school.annees.some(a=>a.niveau===year)||!school.etapes.some(s=>s.numero===stage))return renderNotFound(parent,id);
-    parent.append(link(`← ${labelYear(year)}`,route({parcours:`annee-${year}`})));
-    pageHeader(parent,`${labelYear(year)} — Étape ${stage}`,`Ekole / ${getCycle(year)?.titre||'Cycle'} / ${labelYear(year)} / Étape ${stage}`);
-    proposalWarning(parent);
-    statusMessage(parent,'Une étape pédagogique est un regroupement de cours planifié par Ekole. Elle n’est pas une étape officielle du bulletin; aucun placement n’est déduit des vagues de rédaction.');
-    const selected=filterCourseList(coursesByIds(stageIds(key)));
-    renderCourseCards(parent,selected,'Aucun cours validé pour cette étape. Consulte le catalogue des cours ou complète les affectations.');
-    parent.append(link('Explorer la bibliothèque de cours →',route({page:'cours'}),'inline-link'));
-    return;
-  }
-  renderNotFound(parent,id);
-}
-function renderNotFound(parent,id){pageHeader(parent,'Page introuvable',id);parent.append(link('Retour aux parcours',route({page:'parcours'})));}
-function renderLibrary(parent){
-  pageHeader(parent,'Bibliothèque des cours','Ekole / Cours');
-  proposalWarning(parent);
-  statusMessage(parent,'La bibliothèque présente des fiches pédagogiques issues des Kristals. Les parcours rassemblent ces cours par étape, année et cycle. Dans Moodle, un cours opérationnel peut regrouper plusieurs Kristals ou avoir plusieurs projections; aucune équivalence 1:1 n’est présumée.');
-  const courses=filterCourseList(catalogue.courses);
-  const totalUnassigned=catalogue.courses.filter(c=>!courseYears(c.id).length).length;
-  statusMessage(parent,`${courses.length} cours affichés sur ${catalogue.courses.length} · ${totalUnassigned} sans attribution, dont ${proposedIds.size} affectations provisoires à valider.`);
-  if(!courses.length){
-    statusMessage(parent,'Aucun cours affecté à cette sélection. Les affectations pédagogiques aux années et aux étapes n’ont pas encore été approuvées. Tu peux consulter les 202 cours sans filtre.', 'empty-state');
-    const btn=node('button','reset-filters','Voir tous les cours');
-    btn.type='button';btn.addEventListener('click',()=>{
-      for(const name of ['search','subject','level','stage']){const input=$('#'+name);if(input)input.value='';}
-      history.replaceState({},'',route({page:'cours'}));dispatch();
-    });parent.append(btn);
-    return;
-  }
-  renderCourseCards(parent,courses);
-}
-function renderDomains(parent){
-  pageHeader(parent,'Domaines et matières','Ekole / Domaines');
-  proposalWarning(parent);
-  const domains=[...new Set(catalogue.courses.map(c=>c.discipline))].sort((a,b)=>a.localeCompare(b,'fr'));
-  const grid=box('div','path-grid',parent);
-  for(const name of domains){
-    const item=link('',route({page:'cours',d:name}),'path-card');
-    const label=box('div','domain-heading',item);label.append(domainLabel(name));
-    statusMessage(item,'Bibliothèque de cours');
-    courseCountBadge(item,catalogue.courses.filter(c=>c.discipline===name).length);
-    grid.append(item);
-  }
-}
-function renderHome(parent){
-  const hero=box('div','hero',parent);hero.append(node('div','sub','Ekole · École primaire · Québec'));
-  hero.append(node('h1','','Apprendre, année après année.'));
-  statusMessage(hero,'Les parcours d’étape rassemblent des cours issus des Kristals pédagogiques; les parcours d’année et de cycle regroupent ces ensembles. Les cours Moodle ne sont pas créés automatiquement.');
-  proposalWarning(parent);
-  const stats=box('div','stats',parent);
-  [[catalogue.courses.length,'cours'],[school.cycles.length,'cycles'],[school.annees.length*school.etapes.length,'parcours d’étape structurés']].forEach(([n,label])=>{
-    const card=box('div','stat',stats);card.append(node('b','',n),node('span','',label));
-  });
-  parent.append(node('h2','','Choisir un cycle'));
-  const grid=box('div','path-grid',parent);
-  for(const cycle of school.cycles){
-    const item=link('',route({parcours:cycle.id}),'path-card');
-    item.append(node('span','eyebrow',cycle.titre),node('h2','',cycle.annees.map(labelYear).join(' et ')));
-    courseCountBadge(item,cycleCourseIds(cycle).length);grid.append(item);
-  }
-  const panel=box('section','content',parent);
-  panel.append(node('h2','','Explorer tous les cours'));
-  statusMessage(panel,'Le catalogue demeure complet, même avant l’attribution des cours aux années et aux étapes.');
-  panel.append(link('Ouvrir les 202 cours →',route({page:'cours'}),'inline-link'));
-}
-function renderGenericPage(parent,slug){
-  const item=catalogue.pages.find(p=>p.slug===slug);
-  if(!item)return renderNotFound(parent,slug);
-  pageHeader(parent,item.titre,`Ekole / ${item.titre}`);
-  const card=box('section','content',parent);
-  for(const sentence of item.utterances)card.append(node('p','sentence',sentence));
-  card.append(link('Voir les parcours scolaires →',route({page:'parcours'}),'inline-link'));
-}
-async function renderCourse(parent,id) {
-  const course=lookup.get(id);if(!course)return renderNotFound(parent,id);
-  parent.append(link('← Bibliothèque des cours',route({page:'cours'})));
-  pageHeader(parent,course.titre,`${course.discipline} / ${course.id}`);
-  if(proposedIds.has(id))proposalWarning(parent);
-  const info=box('div','content',parent);
-  const intro=box('div','meta-row',info);intro.append(iconPill(course.discipline),node('span','level-pill',coursePlacementLabel(id)));
-  info.append(node('h2','','Fiche pédagogique · Kristal source'));
-  const fields=box('div','summary-grid',info);
-  for(const [label,value] of [['Objectif',course.objectif],['Preuve de maîtrise',course.preuve],['Préalables',course.prerequis?.join(', ')||'Aucun préalable strict']]){
-    const card=box('div','summary-card',fields);card.append(node('h3','',label),node('p','',value||'Non renseigné'));
-  }
-  statusMessage(info,'Cette fiche pédagogique est distincte des parcours qui la regroupent. Son contenu demeure à revoir; sa projection en cours Moodle est indépendante et nécessite des correspondances approuvées.');
-  const stageRefs=stagePlacements(id);
-  if(stageRefs.length) {
-    const area=box('div','related-paths',info);
-    area.append(node('strong','','Dans les parcours :'));
-    for(const ref of stageRefs)area.append(link(`${labelYear(ref.year)} · étape ${ref.stage}`,route({parcours:ref.key}),'inline-link'));
-  } else if(courseYears(id).length){
-    statusMessage(info,'Affecté à une année, mais aucune étape précise n’a encore été qualifiée.','notice');
-  }else statusMessage(info,'Ce cours n’a pas encore été placé dans un parcours d’année ni d’étape.','notice');
-  try {
-    const response=await fetch(`data/cours/${encodeURIComponent(id)}.json`);
-    if(!response.ok)throw Error(`Lecture indisponible (${response.status})`);
-    const body=await response.json();
-    for(const module of body.modules||[]) {
-      const card=box('section','content',parent);
-      card.append(node('h2','',module.titre));
-      const inner=box('div','course-block',card);
-      renderMarkdown(inner,module.texte);
-    }
-  }catch(error){statusMessage(parent,'Les modules de ce cours ne sont pas disponibles dans cette projection.','notice');}
-}
-function validateLoadedConfiguration(){
-  if(!Array.isArray(school.cycles)||!Array.isArray(school.annees)||!Array.isArray(school.etapes))throw Error('Structure cycles/années/étapes invalide');
-  const years=school.annees.map(x=>x.niveau);
-  if(years.length!==6||new Set(years).size!==6||!years.every(n=>Number.isInteger(n)&&n>=1&&n<=6))throw Error('Les six années du primaire sont requises');
-  if(school.etapes.length!==4||school.etapes.some((e,i)=>e.numero!==i+1 || e.periode!==(i<2?'automne':'hiver')))throw Error('Quatre étapes pédagogiques attendues : deux à l’automne et deux en hiver');
-  const occupied=[];
-  for(const cycle of school.cycles){
-    if(cycle.annees.length<2||cycle.annees.length>3)throw Error('Chaque cycle doit compter deux ou trois années');
-    occupied.push(...cycle.annees);
-  }
-  if(occupied.length!==6||new Set(occupied).size!==6||occupied.some(y=>!years.includes(y)))throw Error('Tous les niveaux doivent appartenir à un cycle unique');
-  const keys=new Set(years.flatMap(getStages));
-  const groups=placements.cours_par_etape;
-  if(!groups || typeof groups!=='object' || Object.keys(groups).some(k=>!keys.has(k)))throw Error('Clés de parcours année-étape invalides');
-  // Migration compatible v3 : l'étape 4 absente est ajoutée uniquement en mémoire, jamais écrite à l'insu de l'utilisateur.
-  for(const key of keys) if(!Object.prototype.hasOwnProperty.call(groups,key))groups[key]=[];
-  if(Object.keys(groups).length!==keys.size)throw Error('24 parcours pédagogiques attendus');
-  for(const [key,ids] of Object.entries(groups)) {
-    if(!Array.isArray(ids)||new Set(ids).size!==ids.length||ids.some(id=>!lookup.has(id)))throw Error(`Affectations invalides : ${key}`);
-  }
-}
-function populateNavigation(){
-  const subjects=[...new Set(catalogue.courses.map(c=>c.discipline))].sort((a,b)=>a.localeCompare(b,'fr'));
-  const select=$('#subject');
-  for(const subject of subjects){const option=node('option','',`${DOMAIN_META[subject]||'📘'} ${subject}`);option.value=subject;select.append(option);}
-  const domains=$('#domainLegend');
-  for(const subject of subjects){const a=link('',route({page:'cours',d:subject}),'legend-item');a.append(domainLabel(subject));domains.append(a);}
-  const menu=$('#pageLinks');menu.replaceChildren();
-  for(const [title,href] of [['Parcours par cycle',route({page:'parcours'})],['Parcours par année',route({page:'annees'})],['Bibliothèque des cours',route({page:'cours'})],['Domaines et matières',route({page:'disciplines'})]]){
-    menu.append(link(title,href));
-  }
-  for(const page of catalogue.pages){
-    if(!['annees','parcours','disciplines','accueil','offre'].includes(page.slug))menu.append(link(page.titre,route({page:page.slug})));
-  }
-}
-async function getJSON(file) {
-  const response=await fetch(file,{cache:'no-store'});
-  if(!response.ok)throw Error(`Chargement impossible : ${file} (${response.status})`);
-  return await response.json();
-}
-function dispatch(){
-  const parent=$('#main'); parent.replaceChildren();
-  const q=new URL(location.href).searchParams;
-  const path=q.get('parcours'), course=q.get('cours'),page=q.get('page');
-  if(course){renderCourse(parent,course);return;}
-  if(path){renderPath(parent,path);return;}
-  if(page==='parcours'){renderCycles(parent);return;}
-  if(page==='annees'){renderYears(parent);return;}
-  if(page==='cours'){renderLibrary(parent);return;}
-  if(page==='disciplines'){renderDomains(parent);return;}
-  if(!page || page==='accueil'){renderHome(parent);return;}
-  if(page==='offre'){renderLibrary(parent);return;}
-  renderGenericPage(parent,page);
-}
-async function main(){
-  const parent=$('#main');parent.replaceChildren();parent.append(node('h1','','Chargement des parcours…'));
-  try {
-    [catalogue,school,placements]=await Promise.all([
-      getJSON('data/index.json'),getJSON('data/organisation-parcours.json'),getJSON('data/parcours-affectations.json').catch(()=>getJSON('data/parcours-affectations.4-etapes.exemple.json'))
-    ]);
-    try {
-      const legacy=await getJSON('data/niveaux-manuel.json');
-      legacyYearMap=legacy.levels_by_course||{};
-    } catch (_) {legacyYearMap={};}
-    if(!Array.isArray(catalogue.courses))throw Error('Catalogue de cours invalide');
-    lookup=new Map(catalogue.courses.map(c=>[c.id,c]));
-    if(lookup.size!==catalogue.courses.length)throw Error('Le catalogue contient des IDs de cours dupliqués');
-    validateLoadedConfiguration();
-    propositions=await getJSON('data/parcours-propositions.json').catch(()=>null);
-    applySuggestedPlacements();
-    populateNavigation();
-    const query=new URL(location.href).searchParams;
-    if(query.get('d'))$('#subject').value=query.get('d');
-    for(const id of ['search','subject','level','stage']){
-      $(`#${id}`).addEventListener(id==='search'?'input':'change',()=>{
-        const current=new URL(location.href);
-        if(current.searchParams.has('cours')||current.searchParams.has('parcours')||current.searchParams.get('page')!=='cours'){
-          history.replaceState({},'',route({page:'cours'}));
-        }
-        dispatch();
-      });
-    }
-    dispatch();
-  } catch(error) {
-    parent.replaceChildren(); parent.append(node('h1','','Chargement impossible'));
-    statusMessage(parent,`Le catalogue ou l’assemblage est invalide : ${error.message}`,'notice');
-  }
-}
-
-
+async function main(){try{
+ pack=await fetchJson('/api/pack.json');if(!compatible(pack))throw Error('Paquet non compatible');
+ courses=new Map(pack.cours.map(x=>[x.id,x]));paths=new Map(pack.parcours.map(x=>[x.id,x]));
+ const data=await Promise.allSettled([fetchJson('/api/integrations/spek.json'),fetchJson('/api/integrations/graphe.json'),fetchJson('/api/integrations/activites.json')]);
+ if(data[0].status==='fulfilled'&&data[0].value.format==='ekole.spek-preview/1')spek=data[0].value;
+ if(data[1].status==='fulfilled'&&data[1].value.format==='ekole.graph-preview/1')graph=data[1].value;
+ if(data[2].status==='fulfilled'&&data[2].value.format==='ekole.activities-preview/1')activities=data[2].value;
+ $('#ensemble').textContent=pack.nom;$('#ensembleDescription').textContent=pack.description||'';
+ $('#sidebarCount').textContent=pack.cours.length+' cours · '+pack.parcours.length+' parcours';document.title=pack.nom+' — Ekole';
+ const sel=$('#domain');for(const d of [...new Set(pack.cours.map(c=>c.discipline))].sort((a,b)=>a.localeCompare(b,'fr'))){const o=add(sel,'option','',d);o.value=d;}
+ $('#search').addEventListener('input',()=>{history.replaceState(null,'',url({page:'cours'}));render();});
+ $('#domain').addEventListener('change',()=>{history.replaceState(null,'',url({page:'cours'}));render();});
+ window.addEventListener('popstate',render);await render();
+ }catch(e){const root=$('#main');root.replaceChildren();heading(root,'Chargement impossible');add(root,'p','warning',e.message);}}
+async function render(){const root=$('#main');root.replaceChildren();try{const q=current();const course=q.get('cours'),path=q.get('parcours');
+ if(course){const c=courses.get(course);if(!c)throw Error('Cours introuvable');await detail(root,c);}
+ else if(path){const p=paths.get(path);if(!p)throw Error('Parcours introuvable');pathPage(root,p);}
+ else if(q.get('page')==='cours')catalog(root);else if(q.get('page')==='parcours')pathsHome(root);else home(root);
+ }catch(e){heading(root,'Impossible de présenter cette page');add(root,'p','warning',e.message);}}
 function escapeHtml(s){return s.replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
-function parseInline(text){let html=escapeHtml(text);html=html.replace(/`([^`]+)`/g,'<code>$1</code>');html=html.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');html=html.replace(/__([^_]+)__/g,'<strong>$1</strong>');html=html.replace(/\*([^*]+)\*/g,'<em>$1</em>');html=html.replace(/_([^_]+)_/g,'<em>$1</em>');html=html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_whole,caption,destination)=>{
-    const safe=safeMarkupLink(destination);
-    return safe?`<a href="${safe}" rel="noopener noreferrer">${caption}</a>`:caption;
-  });return html;}
-// Never allow javascript: or other unsafe schemes from Markdown link destinations.
-function safeMarkupLink(value) {
-  const cleaned=value.replace(/&amp;/g, '&').trim();
-  if (!cleaned || /[\u0000-\u001f]/.test(cleaned)) return null;
-  try {
-    const resolved=new URL(cleaned, document.baseURI);
-    if(!['https:', 'http:', 'mailto:'].includes(resolved.protocol))return null;
-    return resolved.href.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
-  }catch(_){return null;}
+const moduleNames={'01_':'01','02_':'02','03_':'03','04_':'04','05_':'05','06_':'06'};
+function safeHref(dest,context){const value=dest.replace(/&amp;/g,'&').trim();if(!value||/[\u0000-\u001f]/.test(value))return null;
+ if(/^https?:\/\//i.test(value)||/^mailto:/i.test(value)){try{const u=new URL(value);return ['https:','http:','mailto:'].includes(u.protocol)?u.href:null;}catch(_){return null;}}
+ if(value.startsWith('#')&&/^#[A-Za-z][\w-]*$/.test(value))return value;
+ if(context&&/^[A-Za-z0-9_-]+\.md$/i.test(value)){
+ const prefix=value.slice(0,2);const found=context.moduleIds.find(x=>x.startsWith(prefix));if(found)return url(ctxLink(context.course,context.retour,{module:found}));
+ }
+ return null; // legacy attachments and non-published teacher files must not yield broken links
 }
-function isTableSeparator(line){return /^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/.test(line.trim());}
-function isTableRow(line){return /\|/.test(line) && /^\s*\|?.*\|.*\|?\s*$/.test(line);}
-function splitTableRow(line){let s=line.trim();if(s.startsWith('|'))s=s.slice(1);if(s.endsWith('|'))s=s.slice(0,-1);return s.split('|').map(x=>x.trim());}
-function isBlockStart(line,next){const t=line.trim();return !t||/^#{1,6}\s+/.test(t)||/^```/.test(t)||/^>\s?/.test(t)||/^[-*]\s+/.test(t)||/^\d+\.\s+/.test(t)||/^---+$/.test(t)||(isTableRow(t)&&next&&isTableSeparator(next));}
-function renderMarkdown(host,source){const wrap=node('div','markdown');const lines=(source||'').replace(/\r\n/g,'\n').split('\n');let i=0;while(i<lines.length){const line=lines[i],t=line.trim(),next=(i+1<lines.length?lines[i+1].trim():'');if(!t){i++;continue;}let m;if((m=t.match(/^(#{1,6})\s+(.*)$/))){const h=node('h'+m[1].length,'');h.innerHTML=parseInline(m[2]);wrap.append(h);i++;continue;}if(/^```/.test(t)){const buf=[];i++;while(i<lines.length&&!/^```/.test(lines[i].trim())){buf.push(lines[i]);i++;}if(i<lines.length)i++;const pre=node('pre','');pre.textContent=buf.join('\n');wrap.append(pre);continue;}if(isTableRow(t)&&next&&isTableSeparator(next)){const table=node('table',''),thead=node('thead',''),trh=node('tr','');splitTableRow(t).forEach(cell=>{const th=node('th','');th.innerHTML=parseInline(cell);trh.append(th);});thead.append(trh);table.append(thead);i+=2;const tbody=node('tbody','');while(i<lines.length&&isTableRow(lines[i].trim())){const tr=node('tr','');splitTableRow(lines[i]).forEach(cell=>{const td=node('td','');td.innerHTML=parseInline(cell);tr.append(td);});tbody.append(tr);i++;}table.append(tbody);wrap.append(table);continue;}if(/^[-*]\s+/.test(t)){const ul=node('ul','');while(i<lines.length&&/^\s*[-*]\s+/.test(lines[i])){const li=node('li','');li.innerHTML=parseInline(lines[i].replace(/^\s*[-*]\s+/,''));ul.append(li);i++;}wrap.append(ul);continue;}if(/^\d+\.\s+/.test(t)){const ol=node('ol','');while(i<lines.length&&/^\s*\d+\.\s+/.test(lines[i])){const li=node('li','');li.innerHTML=parseInline(lines[i].replace(/^\s*\d+\.\s+/,''));ol.append(li);i++;}wrap.append(ol);continue;}if(/^>\s?/.test(t)){const block=node('blockquote',''),buf=[];while(i<lines.length&&/^\s*>\s?/.test(lines[i])){buf.push(lines[i].replace(/^\s*>\s?/,''));i++;}block.innerHTML='<p>'+parseInline(buf.join(' '))+'</p>';wrap.append(block);continue;}if(/^---+$/.test(t)){wrap.append(node('hr',''));i++;continue;}const buf=[];while(i<lines.length&&!isBlockStart(lines[i],i+1<lines.length?lines[i+1].trim():'')){if(lines[i].trim())buf.push(lines[i].trim());i++;}if(buf.length){const p=node('p','');p.innerHTML=parseInline(buf.join(' '));wrap.append(p);}else{i++;}}host.append(wrap);}
+function inlineMarkdown(source,context){let html=escapeHtml(source);html=html.replace(/`([^`]+)`/g,'<code>$1</code>')
+ .replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/__([^_]+)__/g,'<strong>$1</strong>')
+ .replace(/\*([^*]+)\*/g,'<em>$1</em>');
+ html=html.replace(/\[([^\]]+)\]\(([^)]+)\)/g,(_all,label,dest)=>{const href=safeHref(dest,context);return href?`<a href="${escapeHtml(href)}" rel="noopener noreferrer">${label}</a>`:`<span class="unavailable-link" title="Ressource source non publiée dans l’interface">${label} (ressource non disponible ici)</span>`;});
+ return html;
+}
+function isTable(line){return /\|/.test(line)&&/^\s*\|?.*\|.*\|?\s*$/.test(line);}
+function splitRow(line){return line.trim().replace(/^\|/,'').replace(/\|$/,'').split('|').map(s=>s.trim());}
+function isSep(line){return /^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/.test(line.trim());}
+function blockStart(t,next){return !t||/^#{1,6}\s+/.test(t)||/^```/.test(t)||/^>\s?/.test(t)||/^[-*]\s+/.test(t)||/^\d+\.\s+/.test(t)||/^---+$/.test(t)||(isTable(t)&&isSep(next));}
+function renderMarkdown(host,text,context){const wrap=add(host,'div','markdown');const lines=text.replace(/\r\n/g,'\n').split('\n');let i=0;
+ while(i<lines.length){const t=lines[i].trim(),next=(lines[i+1]||'').trim();if(!t){i++;continue;}
+ let match;if((match=t.match(/^(#{1,6})\s+(.*)$/))){const h=add(wrap,'h'+Math.min(6,match[1].length+2));h.innerHTML=inlineMarkdown(match[2],context);i++;continue;}
+ if(/^```/.test(t)){i++;const buf=[];while(i<lines.length&&!/^```/.test(lines[i].trim()))buf.push(lines[i++]);if(i<lines.length)i++;add(wrap,'pre','',buf.join('\n'));continue;}
+ if(isTable(t)&&isSep(next)){const table=add(wrap,'table');const tr=add(add(table,'thead'),'tr');splitRow(t).forEach(x=>add(tr,'th').innerHTML=inlineMarkdown(x,context));i+=2;const tbody=add(table,'tbody');while(i<lines.length&&isTable(lines[i])){const row=add(tbody,'tr');splitRow(lines[i]).forEach(x=>add(row,'td').innerHTML=inlineMarkdown(x,context));i++;}continue;}
+ if(/^[-*]\s+/.test(t)||/^\d+\.\s+/.test(t)){const ordered=/^\d+\./.test(t);const ul=add(wrap,ordered?'ol':'ul');while(i<lines.length && (ordered?/^\s*\d+\.\s+/:/^\s*[-*]\s+/).test(lines[i])){add(ul,'li').innerHTML=inlineMarkdown(lines[i].replace(/^\s*(?:[-*]|\d+\.)\s+/,''),context);i++;}continue;}
+ if(/^>\s?/.test(t)){const buf=[];while(i<lines.length&&/^>\s?/.test(lines[i].trim()))buf.push(lines[i++].trim().replace(/^>\s?/,''));add(wrap,'blockquote').innerHTML=inlineMarkdown(buf.join(' '),context);continue;}
+ if(/^---+$/.test(t)){add(wrap,'hr');i++;continue;}
+ const buf=[];while(i<lines.length&&!blockStart(lines[i].trim(),(lines[i+1]||'').trim())){if(lines[i].trim())buf.push(lines[i].trim());i++;}
+ if(buf.length)add(wrap,'p').innerHTML=inlineMarkdown(buf.join(' '),context);else i++;
+ }
+}
 main();

@@ -1,136 +1,117 @@
-const el=(tag,klass='',text)=>{const e=document.createElement(tag);if(klass)e.className=klass;if(text!==undefined)e.textContent=String(text);return e;};
-const $=s=>document.querySelector(s);const store={courses:[],visuals:[],kristalVisuals:new Map(),active:null,tab:'cours',search:'',subject:'',year:''};
-function add(parent,tag,klass='',text){const e=el(tag,klass,text);parent.append(e);return e;}
-async function get(url){const response=await fetch(url,{cache:'no-store',credentials:'same-origin'});if(!response.ok)throw Error('HTTP '+response.status);return response.json();}
-function clear(){const x=$('#main');x.replaceChildren();return x;}
-function paragraph(parent,text){return add(parent,'p','',text||'Information non disponible');}
-// Visible, accessible confirmation; a failed copy is never presented as success.
-const copyTimers=new WeakMap();
-async function copyImagePrompt(button,text){
- const reset=()=>{button.textContent='Copier le prompt';button.classList.remove('is-copied','copy-failed');};
- const old=copyTimers.get(button);if(old)clearTimeout(old);
- try{
-  if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text);}
-  else {
-   const tmp=document.createElement('textarea');tmp.value=text;
-   tmp.setAttribute('readonly','');tmp.style.position='fixed';tmp.style.left='-9999px';
-   document.body.append(tmp);tmp.select();
-   try{if(!document.execCommand('copy'))throw Error('Copie non disponible');}
-   finally{tmp.remove();}
-  }
-  button.textContent='✓ Prompt copié !';button.classList.add('is-copied');button.classList.remove('copy-failed');
- }catch(_){button.textContent='Copie impossible — sélectionner le texte';button.classList.add('copy-failed');button.classList.remove('is-copied');}
- copyTimers.set(button,setTimeout(reset,2800));
+'use strict';
+const $=s=>document.querySelector(s);
+const el=(host,tag,cl='',text)=>{const node=document.createElement(tag);if(cl)node.className=cl;if(text!==undefined)node.textContent=String(text);host.append(node);return node;};
+const tell=(msg)=>{$('#status').textContent=msg;};
+let cfg,pack,course,revision='',section='text',urlDrafts=new Set();
+const get=async url=>{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('Erreur HTTP '+r.status);return r.json();};
+async function start(){try{
+ [cfg,pack]=await Promise.all([get('/api/editor-config'),get('/api/pack.json')]);
+ $('#publicHome').href='http://127.0.0.1:'+cfg.port_public+'/eleve/';
+ document.title=pack.nom+' — Atelier Enseignant';
+ tell(pack.nom+' · '+pack.cours.length+' cours · '+(cfg.edition?'Édition locale activée.':'Lecture seule. Lancer avec --edition pour importer ou publier.'));
+ for(const c of pack.cours){const o=el($('#cours'),'option','',(c.discipline||'Cours')+' · '+c.titre);o.value=c.id;}
+ $('#cours').addEventListener('change',open);
+ [['Text','text'],['Visuals','visuals'],['Student','student']].forEach(([id,val])=>$('#tab'+id).addEventListener('click',()=>{section=val;refresh();}));
+ }catch(e){tell('Impossible d’ouvrir l’atelier : '+e.message);}}
+async function open(){const cid=$('#cours').value;course=null;$('#editor').replaceChildren();if(!cid)return;
+ try{const r=await fetch('/api/cours/'+encodeURIComponent(cid)+'.json',{cache:'no-store'});if(!r.ok)throw Error('Erreur HTTP '+r.status);
+ const raw=await r.text();course=JSON.parse(raw);const sha=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(raw));revision=Array.from(new Uint8Array(sha)).map(v=>v.toString(16).padStart(2,'0')).join('');
+ await refresh();}catch(e){tell('Erreur de lecture : '+e.message);}}
+async function refresh(){const root=$('#editor');root.replaceChildren();for(const [id,val] of [['Text','text'],['Visuals','visuals'],['Student','student']]){const b=$('#tab'+id);b.setAttribute('aria-current',section===val?'page':'false');}
+ if(!course){el(root,'p','','Choisis un cours.');return;}
+ if(section==='text')renderText(root);else if(section==='visuals')await renderVisuals(root);else await renderStudent(root);
 }
-// Stable production code: metadata for the authoring workflow, never an image element.
-function imageProductionCode(kristalId,slot){
- return 'EKOLE-IMG-'+String(kristalId).toUpperCase().replace(/[^A-Z0-9-]/g,'-')+'-'+String(slot).toUpperCase().replace(/[^A-Z0-9_-]/g,'-');
+function renderText(root){el(root,'h2','',course.titre);el(root,'p','tip','Ces textes sont les sources détaillées pour l’enseignant. Ils ne sont pas servis directement aux élèves.');
+ for(const mod of course.modules||[]){const wrapper=el(root,'div','expert-module');const l=el(wrapper,'label','',mod.titre);const t=el(wrapper,'textarea');t.value=mod.texte||'';t.disabled=!cfg.edition;t.dataset.mid=mod.id;l.htmlFor='text-'+mod.id;t.id='text-'+mod.id;}
+ if(cfg.edition){const save=el(root,'button','primary','Enregistrer les textes experts');save.type='button';save.addEventListener('click',saveText);}
 }
-function promptWithProductionCode(concept,code){
- return String(concept||'').trim()+'\n\n' +
-  'RÉFÉRENCE DE PRODUCTION (hors image) : '+code+'\n'+
-  'Ce code sert uniquement à identifier le fichier à remettre à Ekole. Ne jamais représenter ce code, cette référence ou une étiquette d’identification dans les pixels de l’image. Ne pas ajouter de filigrane lié à ce code. Les éléments visuels et les mots éventuellement nécessaires à la notion doivent suivre uniquement la description pédagogique ci-dessus.';
-}
-const IMAGE_ASSET=/^assets\/kristals\/qc-pri-[a-z]+-[0-9]{3}\/[a-z][a-z0-9_-]{1,48}\.(?:webp|png|jpg|jpeg)$/;
-// The picture is replaced in its current slot; never destroy the editor or scroll position.
-function paintKristalImage(frame,visual,revision='',feedback=null){
- frame.replaceChildren();
- if(!visual.url){add(frame,'p','image-not-installed','Aucune image installée pour cet emplacement.');return;}
- if(!IMAGE_ASSET.test(visual.url)){
-  add(frame,'p','image-load-error','Chemin image non valide.');return;
+async function saveText(){const updated={...course,_revision:revision,modules:course.modules.map((m,i)=>({...m,texte:document.querySelectorAll('textarea[data-mid]')[i].value}))};
+ try{const result=await postJson('/api/cours/'+encodeURIComponent(course.id)+'.json',updated);revision=result._revision;course.modules=updated.modules;
+ tell('Textes experts sauvegardés. Copie créée : '+result.copie);}catch(e){tell(e.message);}}
+async function renderStudent(root){
+ el(root,'h2','','Préparer la version pour l’élève');
+ el(root,'p','tip','Rédige un brouillon adapté à l’âge des élèves. Enregistrer le brouillon ne publie rien. La publication exige une confirmation après relecture. Le Kristal original ne change pas.');
+ let draft;try{draft=await get('/api/brouillon-eleve/'+encodeURIComponent(course.id)+'.json');}
+ catch(e){el(root,'p','notice','Impossible de charger le brouillon : '+e.message);return;}
+ const published=draft._published_exists;
+ el(root,'p','badge',published?'Une version Élève est publiée pour ce cours.':'Aucune version Élève publiée pour ce cours.');
+ const link=el(root,'a','student-preview','Voir le résultat dans Ekole Élève ↗');
+ link.href='http://127.0.0.1:'+cfg.port_public+'/eleve/?cours='+encodeURIComponent(course.id);link.target='_blank';link.rel='noopener noreferrer';
+ const inputs=[];
+ for(let i=0;i<draft.modules.length;i++){
+  const mod=draft.modules[i];const unit=el(root,'div','expert-module');el(unit,'h3','','Étape '+(i+1));
+  const titleLabel=el(unit,'label','','Titre pour l’enfant');const title=el(unit,'input','text-field');title.value=mod.titre;title.disabled=!cfg.edition;
+  const textLabel=el(unit,'label','','Explication et consigne destinées à l’enfant');const area=el(unit,'textarea','child-text');area.value=mod.texte;area.disabled=!cfg.edition;
+  inputs.push({title,area,id:mod.id});
  }
- const waiting=add(frame,'p','image-loading','Chargement de l’image enregistrée…');
- const image=add(frame,'img','kristal-image-current');image.alt=visual.alt||'Illustration du Kristal';
- image.onload=()=>{waiting.remove();if(feedback)feedback.textContent='✓ Image enregistrée et affichée immédiatement. Elle est également disponible dans Ekole Élève au prochain affichage.';};
- image.onerror=()=>{frame.replaceChildren();add(frame,'p','image-load-error','L’image est enregistrée, mais son aperçu ne se charge pas. Réessaie le bouton « Actualiser les images ».');if(feedback)feedback.textContent='Image enregistrée, mais aperçu indisponible. Vérifie le serveur local.';};
- const path='/api/kristal-image/'+visual.url.slice('assets/kristals/'.length);
- image.src=path+(revision?'?v='+encodeURIComponent(revision):'');
+ const reviewPanel=el(root,'div','publication');
+ const confirmLabel=el(reviewPanel,'label','checkbox-label');const confirm=el(confirmLabel,'input');confirm.type='checkbox';
+ el(confirmLabel,'span','','J’ai relu les six étapes : langage d’enfant, pas de corrigé anticipé, pas de consignes pour l’enseignant.');
+ const save=el(reviewPanel,'button','primary','Enregistrer le brouillon');save.type='button';save.disabled=!cfg.edition;
+ const publish=el(reviewPanel,'button','secondary','Publier la version Élève');publish.type='button';publish.disabled=!cfg.edition;
+ const feedback=el(reviewPanel,'p','status');feedback.setAttribute('role','status');
+ const collect=()=>({...draft,modules:inputs.map(x=>({id:x.id,titre:x.title.value,texte:x.area.value}))});
+ save.addEventListener('click',async()=>{save.disabled=true;try{
+  const result=await postJson('/api/brouillon-eleve/'+encodeURIComponent(course.id)+'.json',collect());
+  draft._revision=result._revision;feedback.textContent='Brouillon enregistré. Non visible dans l’espace Élève.';
+ }catch(e){feedback.textContent=e.message;}finally{save.disabled=!cfg.edition;}});
+ publish.addEventListener('click',async()=>{
+  if(!confirm.checked){feedback.textContent='Confirme d’abord ta revue pédagogique.';return;}
+  publish.disabled=true;
+  try{
+   // On sauve explicitement les changements avant la publication.
+   const doc=collect();const saving=await postJson('/api/brouillon-eleve/'+encodeURIComponent(course.id)+'.json',doc);
+   draft._revision=saving._revision;
+   const r=await fetch('/api/brouillon-eleve/'+encodeURIComponent(course.id)+'/publier',{
+     method:'POST',headers:{'Content-Type':'application/json','X-Ekole-CSRF':cfg.csrf,'X-Ekole-Reviewed':'yes'},body:'{}'});
+   if(!r.ok)throw Error('Publication refusée : '+await r.text());
+   feedback.textContent='Version Élève publiée. Le texte expert original est conservé.';
+   tell('Publication élève mise à jour. Recharge le portail public pour la voir.');
+  }catch(e){feedback.textContent=e.message;}finally{publish.disabled=!cfg.edition;}
+ });
 }
-
-function label(parent,txt,cls='tag'){return add(parent,'span',cls,txt);}
-function filtered(){return store.courses.filter(x=>(!store.subject||x.discipline===store.subject)&&(!store.year||String(x.year_suggestion)===store.year)&&(!store.search||[x.id,x.titre,x.discipline,x.objectif].join(' ').toLocaleLowerCase('fr-CA').includes(store.search)));}
-function renderList(){const host=clear();add(host,'h2','','Cours et pratiques');paragraph(host,'Chaque fiche est reliée à un Kristal. Les modules d’enseignement sont réservés à la consultation locale.');const grid=add(host,'div','course-grid');for(const c of filtered()){const btn=add(grid,'button','course-link');btn.type='button';label(btn,c.discipline);add(btn,'strong','',c.titre);add(btn,'small','source',c.id);btn.addEventListener('click',()=>openCourse(c.id));}if(!grid.children.length)add(host,'div','empty','Aucun cours pour cette sélection.');}
-function safeInline(txt){return txt.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/`([^`]+)`/g,'<code>$1</code>');}
-function renderMarkdown(host,raw){const pre=add(host,'div','textblock');const lines=String(raw||'').split(/\r?\n/);let list=null;for(const line of lines){const t=line.trim();if(!t){list=null;continue;}const h=t.match(/^(#{1,4})\s+(.+)$/);if(h){const e=add(pre,'h'+Math.min(4,h[1].length));e.textContent=h[2];list=null;continue;}const bullet=t.match(/^[-*]\s+(.+)$/);if(bullet){if(!list)list=add(pre,'ul');const li=add(list,'li');li.innerHTML=safeInline(bullet[1]);continue;}const e=add(pre,'p');e.innerHTML=safeInline(t);list=null;}}
-async function openCourse(id){store.active=id;const meta=store.courses.find(c=>c.id===id),host=clear();const back=add(host,'button','button secondary','← Retour aux cours');back.onclick=()=>{store.active=null;renderList();};const card=add(host,'section','card');add(card,'h2','',meta.titre);label(card,meta.discipline);paragraph(card,'Objectif : '+meta.objectif);paragraph(card,'Preuve attendue : '+meta.preuve);paragraph(card,'Préalables : '+(meta.prerequis||[]).join(', '));paragraph(card,'Affectation scolaire : proposition à valider, année '+meta.year_suggestion+', étape '+meta.step_suggestion);const nav=add(card,'div','toolbar');const go=add(nav,'a','button secondary','Voir l’activité Élève ↗');go.href='http://127.0.0.1:8765/eleve/?cours='+encodeURIComponent(id);try{const course=await get('/api/course/'+encodeURIComponent(id)+'.json');for(const m of course.modules){const sect=add(host,'section','card');const dt=add(sect,'details');const sm=add(dt,'summary','','Afficher : '+m.titre);const body=add(dt,'div','');renderMarkdown(body,m.texte);}}catch(e){add(host,'div','empty','Impossible de charger ce cours : '+e.message);}if(window.EkolePlansV8)window.EkolePlansV8.show(host,meta);renderKristalVisuals(host,id);try{const plan=await get('/api/experience/'+encodeURIComponent(id)+'.json');renderExperienceV11(host,plan);}catch(_){}const visual=store.kristalVisuals.has(id)?null:store.visuals.find(x=>x.visual_id==='cours-'+id);if(visual){const block=add(host,'section','card');add(block,'h2','','Image à produire pour ce cours');renderVisual(block,visual,true);}}
-function renderExperienceV11(host,plan){
- const block=add(host,'section','card');add(block,'h2','','Refonte pédagogique v11 · proposition à valider');
- paragraph(block,plan.alias_enfant+' · '+plan.modalite_evaluation);
- paragraph(block,'Objectif source : '+plan.source.objectif_observable);
- paragraph(block,'Preuve source préservée : '+plan.source.preuve_attendue);
- for(const [key,phase] of Object.entries(plan.progression_enfant)){
-  const d=add(block,'details');add(d,'summary','',key+' — '+phase.titre_enfant);
-  paragraph(d,phase.consigne_enfant);paragraph(d,'Portée : '+phase.statut_validation);
- }
- const note=add(block,'details');add(note,'summary','','Observer et remédier (enseignant seulement)');
- for(const x of plan.erreurs_et_relances)paragraph(note,x.observation+' → '+x.relance);
- for(const x of plan.limitations)paragraph(note,'Limite : '+x);
- paragraph(block,'Aucune approbation automatique. La banque d’items et le contrat source restent de référence.');
+async function renderVisuals(root){el(root,'h2','','Illustrations du Kristal');el(root,'p','tip','Copie un prompt, produis l’image dans l’outil de ton choix, puis dépose le fichier ici. Ekole ne génère pas l’image. Publication volontaire après revue.');
+ let data;try{data=await get('/api/visuels/'+encodeURIComponent(course.id)+'.json');}catch(e){el(root,'p','notice','Inventaire visuel indisponible : '+e.message);return;}
+ if(!data.visuels.length){el(root,'p','notice','Aucun emplacement visuel défini pour ce Kristal.');return;}
+ for(const item of data.visuels)renderSlot(root,item);
 }
-function renderKristalVisuals(parent,id){
- const entry=store.kristalVisuals.get(id);
- if(!entry)return;
- const block=add(parent,'section','card');
- add(block,'h2','','Couche visuelle du Kristal');
- paragraph(block,'Descriptions conceptuelles sans style. Dépose ici une image téléchargée depuis ChatGPT; le serveur la dimensionne, la nomme et recompile aussitôt la vue Élève.');
- if(entry.statut_source!=='kristal_disponible')paragraph(block,'ATTENTION : Kristal source manquant. Intentions établies uniquement à partir du catalogue.');
- if(entry.composants_envisages?.length)paragraph(block,'Mini-environnements à examiner : '+entry.composants_envisages.map(x=>x.type).join(', ')+'. Aucune validation pédagogique automatique.');
- if(entry.scenarios_existants?.length)paragraph(block,'Scénarios MiniLab candidats : '+entry.scenarios_existants.map(x=>x.id).join(', '));
- for(const v of entry.visuels){
-  const panel=add(block,'div','visual-concept-block');add(panel,'h3','',v.role+' · '+v.slot);
-  const picture=add(panel,'div','kristal-current-image');
-  paintKristalImage(picture,v);
-  const update=add(panel,'button','button secondary image-refresh-button','↻ Actualiser les images');update.type='button';
-  update.onclick=async()=>{
-   update.disabled=true;
-   try{const next=await get('/api/kristal-visuals.json');store.kristalVisuals=new Map(Object.entries(next.cours||{}));const fresh=store.kristalVisuals.get(id)?.visuels?.find(x=>x.slot===v.slot);if(fresh){Object.assign(v,fresh);paintKristalImage(picture,v,String(Date.now()));}}
-   catch(e){paragraph(picture,'Actualisation impossible : '+e.message);}finally{update.disabled=false;}
-  };
-  paragraph(panel,v.prompt);
-  const code=imageProductionCode(id,v.slot);
-  const reference=add(panel,'p','image-production-code','Code de référence (hors image) : '+code);
-  reference.title='L’identifiant est dans le prompt copié, pas dans les pixels de l’illustration.';
-  paragraph(panel,'Chemin attendu : '+v.fichier_attendu);
-  const copy=add(panel,'button','button secondary','Copier le prompt');copy.type='button';copy.onclick=()=>copyImagePrompt(copy,promptWithProductionCode(v.prompt,code));
-  if(window.EkoleImagesV15 && entry.statut_source==='kristal_disponible'){
-   window.EkoleImagesV15.attach(panel,id,v.slot,Boolean(v.url),(saved,feedback)=>{
-    // Data returned by the server is authoritative. Immediate repaint first.
-    v.url=saved.public_url;v.format_reel=saved.file_name.split('.').pop();v.statut='image_disponible';
-    paintKristalImage(picture,v,saved.sha256.slice(0,24),feedback);
-    // Keep other views consistent without rebuilding this card or losing the preview.
-    get('/api/kristal-visuals.json').then(next=>{store.kristalVisuals=new Map(Object.entries(next.cours||{}));}).catch(()=>{});
-   },(deleted,feedback)=>{
-    v.url=null;v.format_reel=null;v.statut='prompt_visible';
-    paintKristalImage(picture,v);
-    feedback.textContent='✓ Image effacée du Kristal et de la projection Élève. Une sauvegarde privée a été conservée.';
-    get('/api/kristal-visuals.json').then(next=>{store.kristalVisuals=new Map(Object.entries(next.cours||{}));}).catch(()=>{});
-   });
-  }
-  if(v.outils?.length)paragraph(panel,'Outils liés / suggérés (à revoir) : '+v.outils.map(x=>x.id||x.type).join(', '));
- }
+function renderSlot(root,item){const wrap=el(root,'section','visual-slot');
+ const heading=el(wrap,'h3','',item.slot==='concept'?'Image de la notion':item.slot==='situation'?'Image de situation':item.slot);
+ el(wrap,'p','small','Emplacement '+item.slot+' · '+(item.published?'Publié pour les élèves':'Non publié pour les élèves'));
+ const text=el(wrap,'label','', 'Prompt conceptuel à copier');const prompt=el(wrap,'textarea','prompt-field');prompt.readOnly=true;prompt.value=item.prompt||'';prompt.rows=5;
+ const copy=el(wrap,'button','secondary','Copier le prompt');copy.type='button';copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(prompt.value);feedback.textContent='Prompt copié.';}catch(_){prompt.select();document.execCommand('copy');feedback.textContent='Prompt sélectionné et copié si le navigateur l’autorise.';}});
+ const info=el(wrap,'p','tip','Image destinée à : '+(item.alt||'Illustration de la leçon'));
+ const existing=el(wrap,'div','existing-image');if(item.file_name){const img=el(existing,'img');img.src='/api/media/'+encodeURIComponent(course.id)+'/'+encodeURIComponent(item.slot)+'?v='+Date.now();img.alt=item.alt||'Aperçu';el(existing,'p','small','Fichier : '+item.file_name);}else el(existing,'p','small','Aucune image enregistrée.');
+ const drop=el(wrap,'div','dropzone');drop.tabIndex=0;drop.setAttribute('role','group');drop.setAttribute('aria-label','Déposer une image pour '+item.slot);
+ el(drop,'strong','','Glisse une image ici');el(drop,'p','small','ou utilise le sélecteur · PNG, JPEG, WebP · 12 Mo max');
+ const input=el(drop,'input');input.type='file';input.accept='image/png,image/jpeg,image/webp';input.setAttribute('aria-label','Choisir une image '+item.slot);
+ const preview=el(wrap,'img','image-preview');preview.hidden=true;preview.alt='Prévisualisation avant import';
+ const upload=el(wrap,'button','primary','Installer l’image dans le Kristal');upload.type='button';upload.disabled=!cfg.edition;
+ const replaceLabel=el(wrap,'label','checkbox-label');const replace=el(replaceLabel,'input');replace.type='checkbox';el(replaceLabel,'span','','Autoriser le remplacement de l’image existante (sauvegarde)');
+ const publication=el(wrap,'div','publication');const reviewedLabel=el(publication,'label','checkbox-label');const reviewed=el(reviewedLabel,'input');reviewed.type='checkbox';el(reviewedLabel,'span','','J’ai vérifié l’exactitude et l’adaptation de cette image à l’enfant.');
+ const publish=el(publication,'button','secondary',item.published?'Retirer de l’espace Élève':'Approuver et publier pour l’élève');publish.type='button';publish.disabled=!cfg.edition;
+ const feedback=el(wrap,'p','status');feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');
+ let chosen=null,blobUrl=null;
+ function choose(file){if(!file)return;chosen=file;if(blobUrl)URL.revokeObjectURL(blobUrl);blobUrl=URL.createObjectURL(file);preview.src=blobUrl;preview.hidden=false;feedback.textContent='Image choisie : '+file.name+' ('+Math.round(file.size/1024)+' Ko).';}
+ input.addEventListener('change',()=>choose(input.files[0]));
+ ['dragenter','dragover'].forEach(type=>drop.addEventListener(type,e=>{e.preventDefault();drop.classList.add('over');}));
+ ['dragleave','drop'].forEach(type=>drop.addEventListener(type,e=>{e.preventDefault();drop.classList.remove('over');}));
+ drop.addEventListener('drop',e=>choose(e.dataTransfer.files[0]));
+ upload.addEventListener('click',async()=>{if(!chosen){feedback.textContent='Choisis d’abord une image.';return;}if(!cfg.edition)return;
+ upload.disabled=true;try{const res=await fetch('/api/visuels/'+encodeURIComponent(course.id)+'/'+encodeURIComponent(item.slot),{
+ method:'POST',headers:{'Content-Type':'application/octet-stream','X-Ekole-CSRF':cfg.csrf,'X-Ekole-Replace':replace.checked?'yes':'no'},body:await chosen.arrayBuffer()});
+ if(!res.ok)throw Error('Import refusé : '+await res.text());const value=await res.json();feedback.textContent='Image importée : '+value.file_name+' ('+value.width+' × '+value.height+' px). Non publiée : validation nécessaire.';
+ if(blobUrl)URL.revokeObjectURL(blobUrl);await renderVisualsAfterChange();
+ }catch(e){feedback.textContent=e.message;upload.disabled=false;}});
+ publish.addEventListener('click',async()=>{
+ if(!reviewed.checked){feedback.textContent='Coche d’abord la confirmation de revue pédagogique.';return;}
+ if(!cfg.edition)return;publish.disabled=true;try{
+ const route='/api/visuels/'+encodeURIComponent(course.id)+'/'+encodeURIComponent(item.slot)+'/'+(item.published?'retirer':'publier');
+ const r=await fetch(route,{method:'POST',headers:{'X-Ekole-CSRF':cfg.csrf,'X-Ekole-Reviewed':'yes','Content-Type':'application/json'},body:'{}'});
+ if(!r.ok)throw Error('Publication refusée : '+await r.text());await renderVisualsAfterChange();tell(item.published?'Image retirée de la publication élève.':'Image approuvée et publiée.');
+ }catch(e){feedback.textContent=e.message;publish.disabled=false;}});
 }
-
-function renderVisual(parent,v,compact=false){const card=compact?parent:add(parent,'section','card');const head=add(card,'div','visual-head');add(head,'strong','',v.visual_id);label(head,v.kind);const frame=add(card,'div','blank-image');add(frame,'div','','✦ Image non générée');add(frame,'small','',v.aspect_ratio+' · '+v.status);paragraph(card,v.alt_fr_CA);const disclosure=add(card,'details');const sum=add(disclosure,'summary','','Voir le prompt pour DALL·E');const prompt=add(disclosure,'div','prompt',v.prompt_image);const ref=imageProductionCode(v.visual_id||'VISUEL','CONCEPT');add(disclosure,'p','image-production-code','Code de référence (hors image) : '+ref);const b=add(disclosure,'button','button secondary','Copier le prompt');b.type='button';b.addEventListener('click',()=>copyImagePrompt(b,promptWithProductionCode(v.prompt_image,ref)));add(disclosure,'p','subtle','Référence : '+v.source_ref+' · Destiné à : '+v.placement+' · Contrôles : '+v.validation_required.join(', '));if(v.exactness)add(disclosure,'p','intent-note','Diagramme exigeant une exactitude vérifiable : privilégier un SVG programmatique.');}
-function showVisuals(){
- const host=clear();add(host,'h2','','Concepts d’images par Kristal');
- paragraph(host,'Les prompts sont alignés sur le contrat et les exemples du Kristal. Aucun style n’est fixé. Si le fichier d’image est absent, le texte est affiché tel quel.');
- const matches=store.courses.filter(c=>store.kristalVisuals.has(c.id) &&
-   (!store.subject||store.subject===c.discipline) &&
-   (!store.year||String(c.year_suggestion)===store.year) &&
-   (!store.search||[c.id,c.titre,c.discipline,c.objectif].join(' ').toLocaleLowerCase('fr-CA').includes(store.search)));
- for(const c of matches.slice(0,12)){
-  const title=add(host,'h3','',c.titre+' · '+c.id);
-  renderKristalVisuals(host,c.id);
- }
- label(host,'Cours affichés : '+Math.min(12,matches.length)+' / '+matches.length+' — filtrer pour trouver un Kristal','source');
-}
-function showConnectors(){const host=clear();add(host,'h2','','Ponts vers les outils');
-const mini=add(host,'section','card');add(mini,'h3','','Bibliothèque de mini-environnements Ekole');
-paragraph(mini,'Neuf moteurs vérifiables et 18 scénarios originaux. Leur association aux Kristals est une proposition à revoir. Chaque outil peut être intégré à une page Élève avec une URL ou un iframe.');
-const miniLink=add(mini,'a','button secondary','Ouvrir la boîte à outils Élève ↗');miniLink.href='http://127.0.0.1:8765/eleve/labo/';miniLink.target='_blank';miniLink.rel='noopener noreferrer';
-get('/api/labo-catalogue.json').then(d=>{if(!d.items)return;for(const item of d.items){const r=add(mini,'details');add(r,'summary','',item.title+' · '+item.type);paragraph(r,item.instruction);add(r,'p','subtle','Statut : pratique illustrative, pas évaluation officielle');const sample='<iframe title="'+item.title.replaceAll('"','')+'" src="/eleve/labo/?outil='+item.id+'" loading="lazy" style="width:100%;min-height:650px;border:0"></iframe>';const b=add(r,'button','button secondary','Copier le code d’intégration');b.type='button';b.onclick=()=>navigator.clipboard?.writeText(sample);}}).catch(()=>paragraph(mini,'Catalogue non disponible sur le serveur Enseignant.'));
-const k=add(host,'section','card');add(k,'h3','','Konstellation Light');paragraph(k,'Le navigateur indépendant utilise des collections Kristal v10 publiques vérifiées. Le site actuel dispose d’une carte locale de relations : ce n’est pas une collection v10 publiée.');const a=add(k,'a','button','Ouvrir la démo locale Konstellation Light ↗');a.href='http://127.0.0.1:4177/';a.target='_blank';a.rel='noopener noreferrer';const q=add(host,'section','card');add(q,'h3','','SemantiK Architect');paragraph(q,'L’orchestrateur de phrases n’est pas connecté dans ce prototype. Les prompts d’image restent une couche distincte de la réalisation linguistique.');const m=add(host,'section','card');add(m,'h3','','Moodle (optionnel)');paragraph(m,'Aucune inscription ni création de cours n’est exécutée. Les 202 Kristals restent sources autonomes; Moodle demeure un service externe possible.');}
-function tab(name){store.tab=name;for(const [id,val] of [['#tabCourses','cours'],['#tabVisuals','visuels'],['#tabConnectors','outils']])$(id).classList.toggle('selected',name===val);if(name==='cours')renderList();else if(name==='visuels')showVisuals();else showConnectors();}
-(async()=>{try{const [d,v,kv]=await Promise.all([get('/api/index.json'),get('/api/visuals.json'),get('/api/kristal-visuals.json')]);if(!Array.isArray(d.courses)||d.courses.length!==202)throw Error('Catalogue de 202 cours absent');store.courses=d.courses;store.visuals=v.intents;store.kristalVisuals=new Map(Object.entries(kv.cours||{}));const domains=[...new Set(d.courses.map(x=>x.discipline))].sort((a,b)=>a.localeCompare(b,'fr'));for(const x of domains){const o=add($('#subject'),'option','',x);o.value=x;}$('#search').addEventListener('input',e=>{store.search=e.target.value.toLocaleLowerCase('fr-CA');tab(store.tab)});$('#subject').addEventListener('change',e=>{store.subject=e.target.value;tab(store.tab)});$('#year').addEventListener('change',e=>{store.year=e.target.value;tab(store.tab)});$('#tabCourses').onclick=()=>tab('cours');$('#tabVisuals').onclick=()=>tab('visuels');$('#tabConnectors').onclick=()=>tab('outils');tab('cours');}catch(e){const x=clear();add(x,'div','empty','Impossible de démarrer Ekole Enseignant : '+e.message);}})();
-
-window.ekoleRefreshVisualsV15=async()=>{const next=await get('/api/kristal-visuals.json');store.kristalVisuals=new Map(Object.entries(next.cours||{}));if(store.active)await openCourse(store.active);else if(store.tab==='visuels')showVisuals();};
+async function renderVisualsAfterChange(){await renderVisuals($('#editor').replaceChildren()||$('#editor'));}
+async function postJson(url,data){const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','X-Ekole-CSRF':cfg.csrf},body:JSON.stringify(data)});
+ if(!r.ok)throw Error('Enregistrement refusé : '+await r.text());return r.json();}
+start();

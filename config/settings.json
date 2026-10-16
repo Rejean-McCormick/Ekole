@@ -1,0 +1,11 @@
+{
+  "format": "ekole.engine-config/1.0",
+  "contenu": "explicit-via-launcher",
+  "port_public_par_defaut": 8765,
+  "port_editeur_par_defaut": 8766,
+  "corpus_autorises": [
+    "ekole-quebec",
+    "ecole-pastorale"
+  ],
+  "note": "Choisir le dépôt au lancement via --contenu; cette configuration ne force aucun curriculum."
+}
