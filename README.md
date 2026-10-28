@@ -8,7 +8,7 @@ Ce dépôt est le moteur neutre et commun aux deux contenus `ekole-quebec` et `e
 C:\mycode\Ekole\
   ekole\             (moteur)
   ekole-quebec\      (202 cours scolaires conservés)
-  ecole-pastorale\   (12 trames de cours, 3 parcours)
+  ecole-pastorale\   (32 cours candidats, 7 parcours (prototype non approuvé))
 ```
 
 **Lancement recommandé :** double-cliquez sur `..\ekole-quebec\LANCER.bat` ou `..\ecole-pastorale\LANCER.bat`. Le choix du corpus ne demande aucune modification de configuration. Les deux lanceurs ouvrent des ports séparés (8765/8766 et 8775/8776 respectivement).
@@ -37,3 +37,8 @@ Orgo reste le moteur canonique des activités interactives (solo ou groupe). Eko
 ## Limites
 
 Cette version exploite le portail Core, la vue apprenant et l'éditeur textuel; les visualisations historiques avancées et les anciens connecteurs Moodle restent archivés dans `legacy/`, pas encore portés sur ces surfaces. Les contenus présents sont candidats, non publiés et non certifiés. Aucune affiliation institutionnelle n'est présumée. Le service écoute uniquement sur 127.0.0.1.
+
+## Vérification des intégrations satellites (27 octobre 2026)
+
+Voir [le contrôle de compatibilité et les limites de qualification](docs/Integration-Verification-2026-10-27.md). Les versions et statuts externes doivent être vérifiés avant tout déploiement.
+
