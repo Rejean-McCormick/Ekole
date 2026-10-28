@@ -1,0 +1,4 @@
+Prévisualisation Konstellation-Light locale · non publiée
+Aucun corrigé, prompt, diagnostic ni source Kristal privée inclus.
+Origine du classement: PROPOSITION 3e non validée — remplacer par pack.json v3 avant intégration
+Ouvrir /cours.html?cours=qc-pri-ma-008 via un serveur HTTP localhost.

@@ -1,0 +1,22 @@
+Mettre a jour le branding Ekole / UCKK
+===================================
+
+1. Arreter Ekole.
+2. Dezipper ce fichier a la racine: C:\mycode\Ekole\
+3. Accepter le remplacement des fichiers.
+4. Redemarrer Ekole puis faire Ctrl+F5 dans le navigateur.
+
+Fichiers remplaces/ajoutes:
+- ekole/site/index.html
+- ekole/site/style.css
+- ekole/site/brand-logo.svg
+- ekole/enseignant-app/index.html
+- ekole/enseignant-app/style.css
+- ekole/enseignant-app/brand-logo.svg
+
+Changements:
+- logo remplace par le symbole fourni
+- couleur de marque principale: #1e6864
+- mise a jour de l entete, boutons, onglets et accents visuels
+- compatible avec l atelier B3.2 (toggle visuel / Markdown)
+- aucun changement au contenu pedagogique ni aux API

@@ -30,6 +30,10 @@ Le moteur charge `pack.json` et `cours/<id>.json` depuis le dépôt sélectionn�
 
 Depuis `ekole/` : `python -m unittest discover -s tests -v` (les deux dépôts frères doivent être présents) ou `python launcher.py --contenu ../ecole-pastorale --verifier`.
 
+## Tandem / Orgo — préparation locale P1
+
+Orgo reste le moteur canonique des activités interactives (solo ou groupe). Ekole prépare une **prévisualisation synthétique réservée à l’enseignant**, sans connexion Orgo ni identité d’élève : voir `docs/TANDEM_EKOLE_ORGO_PREVIEW_P1.md`. Le mode est **désactivé par défaut**. Ne pas utiliser pour des enfants réels ni comme mécanisme d’autorisation.
+
 ## Limites
 
 Cette version exploite le portail Core, la vue apprenant et l'éditeur textuel; les visualisations historiques avancées et les anciens connecteurs Moodle restent archivés dans `legacy/`, pas encore portés sur ces surfaces. Les contenus présents sont candidats, non publiés et non certifiés. Aucune affiliation institutionnelle n'est présumée. Le service écoute uniquement sur 127.0.0.1.

@@ -24,7 +24,7 @@ def request(url, *, data=None, headers=None, opener=None):
 class PackTests(unittest.TestCase):
     def test_content_pack_and_originals(self):
         self.assertEqual(len(load_pack(CONTENT)['cours']),202)
-        sha=json.loads((CONTENT/'CONTROLE_COURS_SHA256.json').read_text())
+        sha=json.loads((CONTENT/'CONTROLE_COURS_SHA256.json').read_text(encoding='utf-8'))
         self.assertEqual(len(sha),202)
         for filename,digest in sha.items():
             source=(CONTENT/'historique/clients/site/data/cours'/filename)
@@ -74,11 +74,13 @@ class ServerTests(unittest.TestCase):
         with self.assertRaises(urllib.error.HTTPError) as cx:
             request(self.public_url+'/api/cours/nonexistant.json')
         self.assertEqual(cx.exception.code,404)
+        cx.exception.close()
 
     def test_teacher_session_restrictions(self):
         with self.assertRaises(urllib.error.HTTPError) as cm:
             request(self.teacher_url+'/api/pack.json')
         self.assertEqual(cm.exception.code,401)
+        cm.exception.close()
         opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(CookieJar()))
         with request(self.teacher_url+'/open?key='+self.env.key,opener=opener) as resp:
             self.assertIn('Ekole',resp.read().decode())
@@ -88,6 +90,7 @@ class ServerTests(unittest.TestCase):
             request(self.teacher_url+'/api/cours/qc-pri-ma-001.json',opener=opener,
                     data=b'{}',headers={'Content-Type':'application/json','Origin':self.teacher_url,'X-Ekole-CSRF':self.env.csrf})
         self.assertEqual(cx.exception.code,403)
+        cx.exception.close()
 
 class EditTests(unittest.TestCase):
     def test_editor_saves_text_with_backup_only(self):
@@ -112,15 +115,20 @@ class EditTests(unittest.TestCase):
                 course['modules'][0]['texte']='Après'
                 course['_revision']=hashlib.sha256(raw).hexdigest()
                 with request(url+'/api/cours/demo-001.json',opener=opener,headers=headers,
-                             data=json.dumps(course).encode('utf8')) as resp:
+                             data=json.dumps(course,ensure_ascii=False).encode('utf-8')) as resp:
                     result=json.load(resp)
                 self.assertEqual(result['resultat'],'enregistre')
-                self.assertEqual(json.loads((root/'cours/demo-001.json').read_text())['modules'][0]['texte'],'Après')
+                self.assertEqual(json.loads((root/'cours/demo-001.json').read_text(encoding='utf-8'))['modules'][0]['texte'],'Après')
+                self.assertIn('Après'.encode('utf-8'), (root/'cours/demo-001.json').read_bytes())
+                with request(url+'/api/cours/demo-001.json',opener=opener) as response:
+                    self.assertIn('application/json; charset=utf-8',response.headers.get('Content-Type',''))
+                    self.assertEqual(json.load(response)['modules'][0]['texte'],'Après')
                 self.assertEqual(len(list((root/'cours').glob('*.backup-*'))),1)
                 with self.assertRaises(urllib.error.HTTPError) as duplicate:
                     request(url+'/api/cours/demo-001.json',opener=opener,headers=headers,
-                            data=json.dumps(course).encode('utf8'))
+                            data=json.dumps(course,ensure_ascii=False).encode('utf-8'))
                 self.assertEqual(duplicate.exception.code,409)
+                duplicate.exception.close()
             finally:
                 srv.shutdown();srv.server_close();t.join(timeout=5)
 

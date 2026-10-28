@@ -20,6 +20,8 @@ import urllib.parse
 import webbrowser
 import visuals
 import publications
+import missions_demo  # EKOLE_MISSIONS_INTEGREES_20261024
+from tandem import load_synthetic_preview, PreviewError
 
 ENGINE = pathlib.Path(__file__).resolve().parent
 SAFE_ID = re.compile(r"[A-Za-z0-9_-]{1,80}\Z")
@@ -78,7 +80,7 @@ def jsonify(value: object) -> bytes:
 
 
 class Environment:
-    def __init__(self, content: pathlib.Path | None, edition: bool, port_public: int = 8765):
+    def __init__(self, content: pathlib.Path | None, edition: bool, port_public: int = 8765, tandem_preview: dict | None = None):
         self.content = content
         self.pack = load_pack(content)
         self.by_id = {c['id']: c for c in self.pack['cours']}
@@ -87,6 +89,8 @@ class Environment:
         self.key = secrets.token_urlsafe(32)
         self.csrf = secrets.token_urlsafe(32)
         self.student_course_cache = {}
+        # Projeté seulement dans l'éditeur local; aucune identité/mission distribuée aux enfants.
+        self.tandem_preview = tandem_preview
 
     def student_course(self, cid):
         if cid not in self.by_id: return None
@@ -190,6 +194,22 @@ def create_handler(env: Environment, teacher: bool = False):
                 if candidate.stat().st_size > 2_000_000:
                     return self.respond(413, b'Ressource trop grande')
                 return self.respond(200, candidate.read_bytes(), 'application/json; charset=utf-8')
+            if route == '/api/tandem/preview.json':
+                # La session de l'enseignant est vérifiée au début de do_GET.
+                # Aucune route publique n'expose les fragments ou les tâches.
+                if not teacher or env.tandem_preview is None:
+                    return self.respond(404, b'Projection non disponible')
+                return self.json(200, env.tandem_preview)
+            # EKOLE_MISSIONS_INTEGREES_20261024 : vue élève filtrée par Kompose.
+            if not teacher and route == '/api/demo-missions/catalogue.json':
+                try:return self.json(200,missions_demo.catalogue(ENGINE))
+                except (ValueError,OSError,ImportError,KeyError,TypeError) as exc:
+                    return self.json(503,{'error':'Missions indisponibles : '+str(exc)})
+            if not teacher and route == '/api/demo-missions/role.json':
+                p=urllib.parse.parse_qs(u.query)
+                try:return self.json(200,missions_demo.role(ENGINE,p.get('mission',[''])[0],p.get('role',[''])[0]))
+                except (ValueError,OSError,ImportError,KeyError,TypeError) as exc:
+                    return self.json(400,{'error':str(exc)})
             if route == '/api/pack.json':
                 if teacher: return self.json(200,env.pack)
                 public=dict(env.pack)
@@ -230,6 +250,22 @@ def create_handler(env: Environment, teacher: bool = False):
             return super().do_GET()
 
         def do_POST(self):
+            # EKOLE_MISSIONS_INTEGREES_20261024 : calcul fictif, aucun état scolaire.
+            if not teacher and urllib.parse.urlsplit(self.path).path == '/api/demo-missions/check':
+                if self.headers.get('Origin') != f'http://127.0.0.1:{self.server.server_port}':
+                    return self.json(403,{'error':'Origine locale attendue'})
+                if self.headers.get('Content-Type','').split(';')[0] != 'application/json':
+                    return self.json(415,{'error':'JSON requis'})
+                sz=self.headers.get('Content-Length','')
+                if not sz.isdecimal() or not (1 <= int(sz) <= 512):
+                    return self.json(413,{'error':'Réponse trop grande'})
+                try:
+                    data=json.loads(self.rfile.read(int(sz)))
+                    if not isinstance(data,dict):raise ValueError('Objet JSON attendu')
+                    result=missions_demo.verify(ENGINE,data.get('mission_id'),data.get('exercise_id'),data.get('answer'))
+                    return self.json(200,result)
+                except (ValueError,OSError,ImportError,KeyError,TypeError,json.JSONDecodeError) as exc:
+                    return self.json(400,{'error':str(exc)})
             if not teacher or not env.edition:
                 return self.respond(403, b'Edition desactivee')
             if not self.authed():
@@ -342,6 +378,7 @@ def run():
     args.add_argument('--edition', action='store_true', help='Active la modification locale des textes; sauvegardes adjacentes')
     args.add_argument('--ouvrir', action='store_true', help='Ouvrir les pages dans le navigateur')
     args.add_argument('--verifier', action='store_true', help='Valider le corpus, sans démarrer le serveur')
+    args.add_argument('--tandem-preview', metavar='FICHIER', help='Aperçu enseignant local de missions synthétiques; aucune connexion Orgo')
     a = args.parse_args()
     if a.contenu.lower() == 'none':
         content = None
@@ -356,12 +393,14 @@ def run():
         if not content.is_dir():
             args.error(f'Dépôt de contenu absent : {content}')
     try:
-        env = Environment(content, a.edition, a.port)
+        projection = load_synthetic_preview(a.tandem_preview) if a.tandem_preview else None
+        env = Environment(content, a.edition, a.port, tandem_preview=projection)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
-        args.error('Corpus invalide : ' + str(exc))
+        args.error('Corpus / projection invalide : ' + str(exc))
     print(f'[EKOLE] Moteur    : {ENGINE}')
     print(f'[EKOLE] Contenu   : {content if content else "aucun (moteur autonome)"}')
     print(f'[EKOLE] Cours     : {len(env.by_id)} ; parcours : {len(env.pack["parcours"])}')
+    print('[TANDEM]   : aperçu synthetique enseignant UNIQUEMENT (lecture seule, pas de reseau Orgo)' if projection else '[TANDEM]   : desactive par defaut')
     if a.verifier:
         print('[EKOLE] Validation du manifeste OK.')
         return

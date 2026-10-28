@@ -1,0 +1,19 @@
+{
+  "format": "konstellation.light-catalog/1.0",
+  "notice": "PRÉVISUALISATION LOCALE DE CURATION — PAS UNE PUBLICATION KRISTAL v10.",
+  "entries": [
+    {
+      "slug": "ekole-qc-3e-candidat",
+      "title": "Ekole Québec · Liens de notions · 3e année (prévisualisation)",
+      "revision": "candidate-local",
+      "state_ref": "local-curated-not-a-v10-publication",
+      "surface_digest": "sha256:bf2f817107b6d1e2e85cda12af6089a68bb4ebaee930c682c8f215ba99f68a82",
+      "path": "data/pack-5bc2849013239d8a200b03424184cefd116f3af72805fcbfd6e5557a925b6877.json",
+      "sha256": "sha256:5bc2849013239d8a200b03424184cefd116f3af72805fcbfd6e5557a925b6877",
+      "bytes": 43876,
+      "members": 98,
+      "files": 0,
+      "mode": "semantic_preview"
+    }
+  ]
+}

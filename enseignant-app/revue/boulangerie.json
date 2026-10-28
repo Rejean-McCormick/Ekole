@@ -1,0 +1,61 @@
+{
+  "format": "kontexte.b5-preview-eleve/1",
+  "id": "b5-qc3-boulangerie",
+  "audience": "student_preview",
+  "statut": "prototype_pour_relecture_non_publie",
+  "titre": "La commande de la boulangerie",
+  "niveau": "primaire-3",
+  "intro": "La boulangerie du village a reçu une commande. Il faut préparer les plateaux de pains en carton.",
+  "tache": "Représente les plateaux avec des dessins ou des jetons. Explique comment tu comptes les groupes égaux.",
+  "mode_solo_sans_fragments": {
+    "indication": "Exercice simplifié créé pour B5 : il ne remplace pas la situation source 6 × 4.",
+    "plateaux": 3,
+    "pains_par_plateau": 4,
+    "question": "Dessine 3 plateaux avec 4 pains chacun. Combien de pains au total ?",
+    "aide_publique": "Tu peux dessiner les plateaux puis compter les jetons un à un.",
+    "statut": "simulation_solo_sans_etat_orgo"
+  },
+  "mission_collective": {
+    "statut": "description_seulement_ne_pas_lancer_sans_orgo",
+    "message": "Pour une activité en équipe, certaines informations doivent être distribuées par l’enseignant dans un système autorisé."
+  },
+  "roles": [
+    {
+      "id": "boulanger",
+      "nom": "Boulanger",
+      "description": "préparer les commandes de la boulangerie"
+    },
+    {
+      "id": "fermier",
+      "nom": "Fermier",
+      "description": "organiser une ferme imaginaire"
+    },
+    {
+      "id": "comptable",
+      "nom": "Comptable",
+      "description": "tenir le budget fictif"
+    }
+  ],
+  "objectifs_candidats": [
+    {
+      "id": "qc3.ma.multiplication",
+      "notion": "Faire des groupes égaux"
+    },
+    {
+      "id": "qc3.ma.addition",
+      "notion": "Compter avec des additions répétées"
+    },
+    {
+      "id": "qc3.fr.lire-consigne",
+      "notion": "Comprendre la consigne"
+    }
+  ],
+  "provenance": {
+    "base_trame_id": "commande-de-pains",
+    "overlay_id": "qc3-commande-de-pains",
+    "overlay_file": "data/locales/qc/fr-CA/grade3/overlays-60.json",
+    "parent_catalogue_sha256": "b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e",
+    "parent_trame_sha256": "bb10620886d58155c07f914a93c9db073ae364e1ef3d67e406d42c512a4e9621",
+    "semaine_indicative": 10
+  }
+}

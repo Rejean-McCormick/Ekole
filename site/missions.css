@@ -1,0 +1,14 @@
+/* Extension de l'interface élève actuelle, sans images ni service tiers. */
+.mission-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1rem;margin:1.2rem 0 2rem}
+.mission-tile,.mission-play,.mission-step,.mission-exercise{border:1px solid #bdd3e3;background:#fff;border-radius:18px;padding:1.25rem;box-shadow:0 2px 10px #0036550c}
+.mission-tile{display:flex;flex-direction:column;gap:.5rem}.mission-tile h2{font-size:1.3rem;margin:.35rem 0}.mission-tile p{margin:.2rem 0}.mission-tile .mission-btn{margin-top:auto}
+.mission-tag{display:inline-block;border-radius:999px;border:1px solid #bbd7e9;background:#eaf5fa;padding:.18rem .65rem;font-size:.86rem;margin:.2rem .3rem .2rem 0}
+.mission-muted{color:#526477;font-size:.9rem;line-height:1.5}.mission-warning{padding:.8rem 1rem;border-left:4px solid #a87d00;background:#fff7e3;border-radius:8px;font-size:.92rem}
+.mission-btn,.mission-back{display:inline-flex;align-items:center;justify-content:center;border:1px solid #236389;border-radius:12px;background:#fff;color:#164262;min-height:44px;padding:.7rem .95rem;cursor:pointer;font-weight:700;font-size:1rem}
+.mission-primary{background:#175b85;color:white}.mission-btn:hover,.mission-back:hover{outline:2px solid #a8d5e5;outline-offset:2px}.mission-btn:focus-visible,.mission-back:focus-visible{outline:3px solid #e2a200;outline-offset:2px}
+.mission-role-row{display:flex;flex-wrap:wrap;gap:.7rem;margin:1rem 0 1.5rem}.mission-play{max-width:750px}.mission-play h2{font-size:1.4rem}.mission-actions{margin:1.2rem 0}.mission-actions strong{display:block;margin-bottom:.4rem}
+.mission-step{margin:1rem 0;background:#f8fbfd}.mission-step h4{font-size:1.15rem;margin:.2rem 0 .6rem}.mission-entry{display:block;width:100%;box-sizing:border-box;border:1px solid #668da5;background:#fff;color:#18364d;border-radius:10px;min-height:5rem;padding:.7rem;font:inherit;margin:.6rem 0}
+.mission-feedback{min-height:1.4rem;color:#175a34;font-weight:650}.mission-exercise{background:#eff8f1;margin:1.3rem 0}.mission-answer{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin:.7rem 0}.mission-answer input{font:inherit;font-size:1.1rem;padding:.6rem;width:7rem;border:1px solid #567a90;border-radius:9px}
+@media(max-width:550px){.mission-tile,.mission-play,.mission-step,.mission-exercise{padding:.9rem}.mission-grid{grid-template-columns:1fr}.mission-role-row .mission-btn{flex:1}}
+
+.mission-choice{border-left:3px solid #91bad0;padding-left:.6rem;margin:1rem 0}.mission-action{margin:.15rem .35rem .2rem 0;font-size:.88rem}.mission-progress{font-weight:700;color:#125a82}.mission-celebrate{font-size:1.05rem;padding:.8rem;background:#ecf8ed;border-radius:10px}

@@ -1,0 +1,1137 @@
+{
+  "format": "konstellation.light-navigation/1.0",
+  "view_kind": "derived-semantic-preview",
+  "semantic_authority": false,
+  "title": "Ekole Québec · Liens de notions · 3e année (prévisualisation)",
+  "slug": "ekole-qc-3e-candidat",
+  "revision": "candidate-local",
+  "state_ref": "local-curated-not-a-v10-publication",
+  "surface_digest": "sha256:bf2f817107b6d1e2e85cda12af6089a68bb4ebaee930c682c8f215ba99f68a82",
+  "declared_commitment": {
+    "digest": "not-claimed"
+  },
+  "verification": {
+    "byteDigestsVerified": false,
+    "semanticCommitmentVerified": false
+  },
+  "metrics": {
+    "members": 98,
+    "files": 0,
+    "bytes": 0
+  },
+  "nodes": [
+    {
+      "id": "qc-pri-ad-003",
+      "kind": "cours",
+      "label": "Improviser en interaction",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ad-004",
+      "kind": "cours",
+      "label": "Créer une séquence dramatique",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ad-005",
+      "kind": "cours",
+      "label": "Organiser une mise en scène simple",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ad-009",
+      "kind": "cours",
+      "label": "Présenter et analyser sa démarche dramatique",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ale-004",
+      "kind": "cours",
+      "label": "Comprendre des textes narratifs",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ale-005",
+      "kind": "cours",
+      "label": "Comprendre des textes informatifs",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ale-006",
+      "kind": "cours",
+      "label": "Inférences et interprétation en lecture",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ale-007",
+      "kind": "cours",
+      "label": "Apprécier la littérature de langue anglaise",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-als-001",
+      "kind": "cours",
+      "label": "Comprendre des consignes et des messages oraux",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-als-002",
+      "kind": "cours",
+      "label": "Reconnaître et utiliser le vocabulaire quotidien",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-als-005",
+      "kind": "cours",
+      "label": "Interagir par formules et questions simples",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-als-006",
+      "kind": "cours",
+      "label": "Parler d’expériences et de situations familières",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-als-012",
+      "kind": "cours",
+      "label": "Présenter et échanger en anglais",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ap-002",
+      "kind": "cours",
+      "label": "Expérimenter les gestes et techniques plastiques",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ap-003",
+      "kind": "cours",
+      "label": "Composer dans l’espace et sur un support",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ap-004",
+      "kind": "cours",
+      "label": "Choisir des matériaux et procédés de création",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ap-005",
+      "kind": "cours",
+      "label": "Créer des images personnelles",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ap-006",
+      "kind": "cours",
+      "label": "Créer des images médiatiques",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ap-009",
+      "kind": "cours",
+      "label": "Présenter et expliquer sa démarche artistique",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ccq-005",
+      "kind": "cours",
+      "label": "Médias et vie numérique",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ccq-006",
+      "kind": "cours",
+      "label": "Observer et décrire des réalités culturelles",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ccq-007",
+      "kind": "cours",
+      "label": "Comparer les réalités culturelles et les points de vue",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ccq-011",
+      "kind": "cours",
+      "label": "Réalités et perspectives des Premiers Peuples",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-da-001",
+      "kind": "cours",
+      "label": "Explorer le corps et le mouvement",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-da-002",
+      "kind": "cours",
+      "label": "Explorer espace, temps et énergie en mouvement",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-da-003",
+      "kind": "cours",
+      "label": "Créer une phrase chorégraphique",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-da-004",
+      "kind": "cours",
+      "label": "Organiser une composition dansée",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-da-005",
+      "kind": "cours",
+      "label": "Improviser seul ou en groupe",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-da-009",
+      "kind": "cours",
+      "label": "Présenter et expliquer sa démarche en danse",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-eps-002",
+      "kind": "cours",
+      "label": "Locomotion et déplacements",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-eps-003",
+      "kind": "cours",
+      "label": "Équilibre et coordination",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-eps-004",
+      "kind": "cours",
+      "label": "Manipulation d’objets et habiletés motrices",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-eps-005",
+      "kind": "cours",
+      "label": "Actions et enchaînements moteurs",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fls-002",
+      "kind": "cours",
+      "label": "Vocabulaire et expressions usuelles en français",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fls-003",
+      "kind": "cours",
+      "label": "Prononciation et conscience des sons du français",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fls-004",
+      "kind": "cours",
+      "label": "Interagir dans des situations familières en français",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fls-005",
+      "kind": "cours",
+      "label": "Développer l’interaction et la prise de parole",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fls-006",
+      "kind": "cours",
+      "label": "Lire et comprendre des textes adaptés en français",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fls-007",
+      "kind": "cours",
+      "label": "Réinvestir des informations lues et entendues",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fls-009",
+      "kind": "cours",
+      "label": "Produire des textes adaptés en français",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fls-011",
+      "kind": "cours",
+      "label": "Découvrir et interpréter des références culturelles francophones",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fls-012",
+      "kind": "cours",
+      "label": "Réaliser des projets de communication en français",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-005",
+      "kind": "cours",
+      "label": "Compréhension littérale de textes",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-006",
+      "kind": "cours",
+      "label": "Inférences en lecture",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-009",
+      "kind": "cours",
+      "label": "Lire un texte courant ou documentaire",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-010",
+      "kind": "cours",
+      "label": "Réagir aux textes et les apprécier",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-013",
+      "kind": "cours",
+      "label": "Classes de mots",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-014",
+      "kind": "cours",
+      "label": "Groupes de mots et fonctions syntaxiques",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-015",
+      "kind": "cours",
+      "label": "Construction des phrases",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-016",
+      "kind": "cours",
+      "label": "Accords dans le groupe nominal",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-017",
+      "kind": "cours",
+      "label": "Accord du verbe avec le sujet",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-019",
+      "kind": "cours",
+      "label": "Ponctuation et majuscules",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-021",
+      "kind": "cours",
+      "label": "Rédiger des phrases et des paragraphes",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-022",
+      "kind": "cours",
+      "label": "Organiser et assurer la cohérence d’un texte",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-fr-023",
+      "kind": "cours",
+      "label": "Réviser et corriger un texte",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ilss-003",
+      "kind": "cours",
+      "label": "Développer le vocabulaire scolaire essentiel",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ilss-005",
+      "kind": "cours",
+      "label": "Entrer dans la lecture en français selon le palier",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ilss-006",
+      "kind": "cours",
+      "label": "Lire et comprendre des textes scolaires",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ilss-007",
+      "kind": "cours",
+      "label": "Écrire des messages et textes fonctionnels",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-003",
+      "kind": "cours",
+      "label": "Valeur de position et regroupements",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-005",
+      "kind": "cours",
+      "label": "Estimation et arrondissement",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-006",
+      "kind": "cours",
+      "label": "Sens et stratégies de l’addition",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-007",
+      "kind": "cours",
+      "label": "Sens et stratégies de la soustraction",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-008",
+      "kind": "cours",
+      "label": "Sens et stratégies de la multiplication",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-009",
+      "kind": "cours",
+      "label": "Sens et stratégies de la division",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-010",
+      "kind": "cours",
+      "label": "Calcul mental et propriétés des opérations",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-011",
+      "kind": "cours",
+      "label": "Algorithmes et vérification des calculs",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-012",
+      "kind": "cours",
+      "label": "Fractions : représentations et sens",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-013",
+      "kind": "cours",
+      "label": "Fractions : équivalence et comparaison",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-015",
+      "kind": "cours",
+      "label": "Nombres décimaux : représentations",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-018",
+      "kind": "cours",
+      "label": "Relations et égalités numériques",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-019",
+      "kind": "cours",
+      "label": "Situations-problèmes additives",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-020",
+      "kind": "cours",
+      "label": "Situations-problèmes multiplicatives",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-030",
+      "kind": "cours",
+      "label": "Collecter et organiser des données",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-ma-031",
+      "kind": "cours",
+      "label": "Lire et produire des diagrammes",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-mu-001",
+      "kind": "cours",
+      "label": "Percevoir les sons, leurs qualités et les silences",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-mu-002",
+      "kind": "cours",
+      "label": "Explorer pulsation, rythme et durée",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-mu-004",
+      "kind": "cours",
+      "label": "Découvrir timbres et instruments",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-mu-005",
+      "kind": "cours",
+      "label": "Explorer voix et techniques vocales",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-mu-006",
+      "kind": "cours",
+      "label": "Inventer une pièce vocale ou instrumentale",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-mu-007",
+      "kind": "cours",
+      "label": "Interpréter seul ou en ensemble",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-st-001",
+      "kind": "cours",
+      "label": "Observer et formuler des questions scientifiques",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-st-004",
+      "kind": "cours",
+      "label": "Expliquer et communiquer des résultats",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-st-007",
+      "kind": "cours",
+      "label": "Forces et mouvement",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-st-008",
+      "kind": "cours",
+      "label": "Énergie et transformations énergétiques",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-st-009",
+      "kind": "cours",
+      "label": "Lumière et son",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-st-010",
+      "kind": "cours",
+      "label": "Électricité et magnétisme",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-st-012",
+      "kind": "cours",
+      "label": "Concevoir et fabriquer un objet technique",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-st-015",
+      "kind": "cours",
+      "label": "Atmosphère et phénomènes météorologiques",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-us-001",
+      "kind": "cours",
+      "label": "Se repérer dans le temps et construire une chronologie",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-us-002",
+      "kind": "cours",
+      "label": "Lire des cartes et se repérer dans l’espace",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-us-005",
+      "kind": "cours",
+      "label": "Utiliser et comparer des sources historiques",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-us-007",
+      "kind": "cours",
+      "label": "Sociétés inuites et milieux nordiques",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-us-008",
+      "kind": "cours",
+      "label": "La Nouvelle-France : territoire et société",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-us-009",
+      "kind": "cours",
+      "label": "Rencontres et échanges entre populations",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-us-010",
+      "kind": "cours",
+      "label": "Transformations à l’époque britannique",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-us-015",
+      "kind": "cours",
+      "label": "Comprendre les changements et les continuités historiques",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    },
+    {
+      "id": "qc-pri-us-016",
+      "kind": "cours",
+      "label": "Diversité culturelle et héritages des sociétés",
+      "description": "Notion du répertoire scolaire Québec. Relation pédagogique déclarée, à revoir avec un enseignant.",
+      "source": "Catalogue public des intitulés Ekole Québec; affectation de niveau candidate"
+    }
+  ],
+  "edges": [
+    {
+      "from": "qc-pri-ad-004",
+      "to": "qc-pri-ad-003",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ad-005",
+      "to": "qc-pri-ad-004",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ad-009",
+      "to": "qc-pri-ad-004",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ale-006",
+      "to": "qc-pri-ale-005",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-ale-006",
+      "to": "qc-pri-ale-004",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ale-007",
+      "to": "qc-pri-ale-004",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-als-005",
+      "to": "qc-pri-als-001",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-als-005",
+      "to": "qc-pri-als-002",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-als-006",
+      "to": "qc-pri-als-005",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-als-012",
+      "to": "qc-pri-als-006",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-als-012",
+      "to": "qc-pri-als-005",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ap-004",
+      "to": "qc-pri-ap-002",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ap-005",
+      "to": "qc-pri-ap-004",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-ap-005",
+      "to": "qc-pri-ap-003",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ap-006",
+      "to": "qc-pri-ap-004",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-ap-009",
+      "to": "qc-pri-ap-005",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ccq-005",
+      "to": "qc-pri-fr-009",
+      "relation": "reinforces"
+    },
+    {
+      "from": "qc-pri-ccq-007",
+      "to": "qc-pri-ccq-006",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ccq-011",
+      "to": "qc-pri-ccq-006",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-da-004",
+      "to": "qc-pri-mu-002",
+      "relation": "reinforces"
+    },
+    {
+      "from": "qc-pri-da-004",
+      "to": "qc-pri-da-003",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-da-005",
+      "to": "qc-pri-da-002",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-da-005",
+      "to": "qc-pri-da-001",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-da-009",
+      "to": "qc-pri-da-004",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-eps-005",
+      "to": "qc-pri-eps-003",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-eps-005",
+      "to": "qc-pri-eps-004",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-eps-005",
+      "to": "qc-pri-eps-002",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fls-005",
+      "to": "qc-pri-fls-004",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fls-006",
+      "to": "qc-pri-fls-003",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-fls-006",
+      "to": "qc-pri-fls-002",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fls-007",
+      "to": "qc-pri-fls-006",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-fls-009",
+      "to": "qc-pri-fls-006",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-fls-011",
+      "to": "qc-pri-fls-006",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-fls-012",
+      "to": "qc-pri-fls-005",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fr-006",
+      "to": "qc-pri-fr-005",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fr-009",
+      "to": "qc-pri-fr-005",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fr-010",
+      "to": "qc-pri-fr-009",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-fr-014",
+      "to": "qc-pri-fr-013",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fr-015",
+      "to": "qc-pri-fr-014",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-fr-016",
+      "to": "qc-pri-fr-013",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-fr-016",
+      "to": "qc-pri-fr-014",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fr-017",
+      "to": "qc-pri-fr-014",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fr-021",
+      "to": "qc-pri-fr-019",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-fr-021",
+      "to": "qc-pri-fr-015",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fr-022",
+      "to": "qc-pri-fr-021",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-fr-023",
+      "to": "qc-pri-fr-021",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ilss-005",
+      "to": "qc-pri-ilss-003",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ilss-006",
+      "to": "qc-pri-fr-009",
+      "relation": "reinforces"
+    },
+    {
+      "from": "qc-pri-ilss-006",
+      "to": "qc-pri-ilss-005",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ilss-007",
+      "to": "qc-pri-ilss-005",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-ma-005",
+      "to": "qc-pri-ma-003",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ma-008",
+      "to": "qc-pri-ma-003",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-ma-008",
+      "to": "qc-pri-ma-006",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ma-009",
+      "to": "qc-pri-ma-008",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ma-010",
+      "to": "qc-pri-ma-007",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-ma-010",
+      "to": "qc-pri-ma-006",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ma-011",
+      "to": "qc-pri-ma-010",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-ma-013",
+      "to": "qc-pri-ma-012",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ma-015",
+      "to": "qc-pri-ma-012",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ma-019",
+      "to": "qc-pri-ma-006",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ma-019",
+      "to": "qc-pri-ma-007",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ma-020",
+      "to": "qc-pri-ma-009",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-ma-020",
+      "to": "qc-pri-ma-008",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-ma-031",
+      "to": "qc-pri-ma-030",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-mu-004",
+      "to": "qc-pri-mu-001",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-mu-005",
+      "to": "qc-pri-mu-001",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-mu-006",
+      "to": "qc-pri-mu-004",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-mu-007",
+      "to": "qc-pri-mu-005",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-st-004",
+      "to": "qc-pri-ma-031",
+      "relation": "reinforces"
+    },
+    {
+      "from": "qc-pri-st-008",
+      "to": "qc-pri-st-007",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-st-009",
+      "to": "qc-pri-st-001",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-st-010",
+      "to": "qc-pri-st-008",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-st-012",
+      "to": "qc-pri-ap-004",
+      "relation": "reinforces"
+    },
+    {
+      "from": "qc-pri-st-015",
+      "to": "qc-pri-ma-031",
+      "relation": "reinforces"
+    },
+    {
+      "from": "qc-pri-us-005",
+      "to": "qc-pri-fr-009",
+      "relation": "reinforces"
+    },
+    {
+      "from": "qc-pri-us-007",
+      "to": "qc-pri-us-001",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-us-007",
+      "to": "qc-pri-us-002",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-us-007",
+      "to": "qc-pri-us-005",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-us-008",
+      "to": "qc-pri-us-002",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-us-008",
+      "to": "qc-pri-us-005",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-us-008",
+      "to": "qc-pri-us-001",
+      "relation": "requires"
+    },
+    {
+      "from": "qc-pri-us-009",
+      "to": "qc-pri-us-008",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-us-010",
+      "to": "qc-pri-us-008",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-us-015",
+      "to": "qc-pri-us-008",
+      "relation": "recommends_before"
+    },
+    {
+      "from": "qc-pri-us-016",
+      "to": "qc-pri-us-007",
+      "relation": "recommends_before"
+    }
+  ]
+}

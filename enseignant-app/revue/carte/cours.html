@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr-CA">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ma carte des notions — Aperçu B7</title><link rel="stylesheet" href="./cours.css">
+<script type="module" src="./cours.js"></script></head>
+<body>
+<a href="#principal" class="skip">Aller à la carte</a>
+<header class="heading"><div><strong>Ma carte des notions</strong><small>Ekole · 3e année · prévisualisation</small></div>
+<nav aria-label="Navigation"><a id="return" hidden>← Retour à mon cours</a><a id="expert" href="./?lens=constellation">Explorer dans Konstellation-Light ↗</a></nav></header>
+<nav aria-label="Autres aperçus" class="revue-navigation"><a href="../index.html">← Revue</a><a href="../eleve/index.html">Expérience Élève</a><a href="../boulangerie.html">Mission boulangerie</a></nav>
+<main id="principal">
+<p class="caution" id="notice">Ce graphique présente des liens pédagogiques documentés. Il ne mesure pas mes réussites et n'est pas un programme officiellement validé.</p>
+<div class="intro"><p class="overline">La notion que j'explore</p><h1 id="focus-title">Chargement de ma carte…</h1>
+<p id="focus-detail">Les liens sont lus à partir du graphe Québec, sans inventer de chemins.</p></div>
+<div class="tools"><label for="pick">Choisir une notion</label><select id="pick" aria-label="Notion à explorer"><option>Chargement…</option></select>
+<button type="button" id="back" disabled>← Revenir à la notion précédente</button></div>
+<section aria-label="Carte de notions" class="map" id="map">
+<div class="category" id="before"><h2>Pour commencer</h2><p>Les idées qui peuvent m’aider avant cette leçon.</p><div class="items" id="before-list"></div></div>
+<div class="center"><span class="star">★</span><h2 id="center-title">Ma notion</h2><p>Je suis ici</p></div>
+<div class="category" id="after"><h2>Pour aller plus loin</h2><p>Les idées qui s’appuient sur celle-ci.</p><div class="items" id="after-list"></div></div>
+</section>
+<section class="category transfer" aria-label="Autres liens" id="transfer"><h2>J’explore aussi</h2><p>Des notions reliées par le graphe.</p><div class="items" id="transfer-list"></div></section>
+<details class="teacher" id="teacher"><summary>Informations pour l’enseignant — type et provenance des liens</summary><div id="evidence"></div></details>
+<p class="disclaimer" id="disclaimer">La classification du parcours est provisoire. Aucune maîtrise d’élève n’est enregistrée.</p>
+</main>
+<footer>Konstellation-Light : lecteur de relations candidat, pas une publication Kristal v10. Aucun compte élève, aucune note.</footer>
+</body></html>

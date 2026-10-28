@@ -9,8 +9,96 @@ const a=(host,text,params,cls='')=>{const n=add(host,'a',cls,text);n.href=url(pa
 const fetchJson=async(path)=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('Ressource indisponible : '+r.status);return r.json();};
 let pack, courses=new Map(), paths=new Map(), spek=null, graph=null, activities=null;
 const current=()=>new URLSearchParams(location.search);
+
+// Compagnons : démonstration TEXTUELLE locale, sans médias ni profil élève.
+// Ne jamais utiliser ce choix pour des droits d'accès, des notes ou de la maîtrise.
+const COMPAGNON_THEMES=Object.freeze([
+ {id:'quotidien',nom:'Mila',univers:'Le quotidien',sigle:'M'},
+ {id:'ferme',nom:'Fermier (provisoire)',univers:'La ferme',sigle:'F'},
+ {id:'cosmos',nom:'Explorateur (provisoire)',univers:'Le cosmos',sigle:'C'}
+]);
+const COMPAGNON_FLAG='ekole-demo-compagnon-active-v2';
+const COMPAGNON_CHOICE='ekole-demo-compagnon-choice-v2';
+function demoStorage(){try{return window.sessionStorage;}catch(_){return null;}}
+function demoCompagnonActif(){
+ // Verrou de portée : interface élève + paquet Québec + serveur de bouclage uniquement.
+ if(base!=='/eleve/'||pack?.id!=='primaire-qc'||!['127.0.0.1','localhost','::1','[::1]'].includes(location.hostname))return false;
+ const storage=demoStorage();if(!storage)return false;
+ try{
+  const flag=current().get('pilote_compagnon');
+  if(flag==='0'){storage.removeItem(COMPAGNON_FLAG);storage.removeItem(COMPAGNON_CHOICE);}
+  if(flag==='1')storage.setItem(COMPAGNON_FLAG,'1');
+  return storage.getItem(COMPAGNON_FLAG)==='1';
+ }catch(_){return false;}
+}
+function anneeParcours(id){const m=/^annee-([1-6])$/.exec(id||'');return m?Number(m[1]):null;}
+function lireCompagnon(){
+ if(!demoCompagnonActif())return null;
+ try{
+  const value=JSON.parse(demoStorage().getItem(COMPAGNON_CHOICE)||'null');
+  const theme=COMPAGNON_THEMES.find(t=>t.id===value?.theme);
+  return theme&&Number.isInteger(value.annee)&&value.annee>=1&&value.annee<=6?{...theme,annee:value.annee}:null;
+ }catch(_){return null;}
+}
+function niveauPage(){
+ const q=current();const path=q.get('parcours')||q.get('retour')||(q.get('cours')?getPathFor(q.get('cours')):'');
+ return anneeParcours(path)||lireCompagnon()?.annee||3;
+}
+function enregistrerCompagnon(theme,annee){
+ if(!demoCompagnonActif()||!COMPAGNON_THEMES.some(t=>t.id===theme)||!Number.isInteger(annee)||annee<1||annee>6)return;
+ try{demoStorage().setItem(COMPAGNON_CHOICE,JSON.stringify({theme,annee}));}catch(_){/* stockage bloqué : aucune sauvegarde */}
+}
+function synchroniserNiveau(){
+ const choisi=lireCompagnon();if(!choisi)return;
+ const q=current(),path=q.get('parcours')||q.get('retour')||(q.get('cours')?getPathFor(q.get('cours')):'');
+ const grade=anneeParcours(path);
+ if(grade&&grade!==choisi.annee)enregistrerCompagnon(choisi.id,grade);
+}
+function choixCompagnon(root){
+ if(!demoCompagnonActif())return;
+ const choisi=lireCompagnon(),grade=niveauPage();
+ const section=add(root,'section','compagnon-choix');section.setAttribute('aria-label','Choix facultatif du compagnon de démonstration');
+ add(section,'h2','','Choisis un compagnon (facultatif)');
+ add(section,'p','compagnon-note','Prototype local sans illustrations. Personnages provisoires, sans collecte ni suivi individuel.');
+ const niveau=add(section,'label','compagnon-niveau-label','Année scolaire');
+ const select=add(niveau,'select','compagnon-niveau');
+ for(let i=1;i<=6;i++){const option=add(select,'option','',`${i}${i===1?'re':'e'} année`);option.value=String(i);option.selected=i===grade;}
+ const grid=add(section,'div','compagnon-options');
+ for(const theme of COMPAGNON_THEMES){
+  const bouton=add(grid,'button','compagnon-option'+(choisi?.id===theme.id?' compagnon-selected':''));
+  bouton.type='button';bouton.setAttribute('aria-pressed',choisi?.id===theme.id?'true':'false');
+  add(bouton,'span','compagnon-sigle',theme.sigle).setAttribute('aria-hidden','true');
+  add(bouton,'strong','',theme.nom);add(bouton,'span','compagnon-univers',theme.univers);
+  bouton.addEventListener('click',()=>{enregistrerCompagnon(theme.id,Number(select.value));render();});
+ }
+ select.addEventListener('change',()=>{if(choisi){enregistrerCompagnon(choisi.id,Number(select.value));render();}});
+ const actions=add(section,'div','compagnon-actions');
+ const sans=add(actions,'button','compagnon-sans','Continuer sans compagnon');sans.type='button';
+ sans.addEventListener('click',()=>{try{demoStorage()?.removeItem(COMPAGNON_CHOICE);}catch(_){}render();});
+ a(actions,'Quitter la démonstration',{page:'parcours',pilote_compagnon:'0'},'compagnon-sortie');
+}
+function presenterCompagnon(root,message){
+ const choisi=lireCompagnon();if(!choisi)return;
+ const grade=niveauPage();
+ const box=add(root,'section','compagnon-apercu');box.setAttribute('aria-label','Compagnon textuel de démonstration');
+ add(box,'span','compagnon-sigle',choisi.sigle).setAttribute('aria-hidden','true');
+ const words=add(box,'div','compagnon-mots');
+ add(words,'strong','',`${choisi.nom} · ${grade}${grade===1?'re':'e'} année`);
+ add(words,'p','compagnon-message',message).setAttribute('aria-live','polite');
+ add(words,'small','compagnon-note','Prototype local sans image · Ne représente pas une évaluation');
+}
+function reactionCompagnon(reussite){
+ if(!lireCompagnon())return;
+ const message=document.querySelector('.compagnon-message');
+ if(message)message.textContent=reussite?'Bravo, tu as trouvé cette réponse.':'Tu peux réessayer en utilisant les indices.';
+}
 function compatible(p){return p.format==='ekole.content-pack/0.1'&&Array.isArray(p.cours)&&Array.isArray(p.parcours);}
-function getPathFor(id){return pack.parcours.find(p=>p.cours_ids.includes(id))?.id||'';}
+function getPathFor(id){
+ // En démo, garder le niveau déjà choisi lorsque le cours appartient à plusieurs parcours.
+ const choice=lireCompagnon();
+ if(choice){const preferred=paths.get('annee-'+choice.annee);if(preferred?.cours_ids.includes(id))return preferred.id;}
+ return pack.parcours.find(p=>p.cours_ids.includes(id))?.id||'';
+}
 function ctxLink(c,retour='',extra={}){return {cours:c,...(retour?{retour}:{}),...extra};}
 function activeReturn(q,c){const target=q.get('retour');return target&&paths.get(target)?.cours_ids.includes(c)?target:getPathFor(c);}
 function crumb(host,parts){const nav=add(host,'nav','breadcrumbs');nav.setAttribute('aria-label','Fil d’Ariane');parts.forEach((p,i)=>{if(i)add(nav,'span','divider-crumb','›');if(p.url){const x=add(nav,'a','',p.text);x.href=p.url;}else add(nav,'span','crumb-current',p.text);});}
@@ -25,6 +113,7 @@ function card(host,c,retour=''){
 function grouping(ids){const by=new Map();for(const id of ids){const c=courses.get(id);if(!c)continue;const k=c.discipline||'Autres';if(!by.has(k))by.set(k,[]);by.get(k).push(c);}return [...by.entries()].sort((a,b)=>a[0].localeCompare(b[0],'fr'));}
 function pathsHome(root){
  heading(root,'Choisir un parcours','Choisis ton niveau pour retrouver les leçons disponibles.');
+ choixCompagnon(root);
  const list=add(root,'div','path-cards');const featured=pack.parcours_mis_en_avant;
  const all=[...pack.parcours].sort((x,y)=>(x.id===featured?-1:0)-(y.id===featured?-1:0));
  for(const p of all){const x=a(list,'',{parcours:p.id},'path-card');add(x,'span','eyebrow',p.id===featured?'À découvrir':'Parcours');add(x,'strong','',p.titre);add(x,'span','hint',p.cours_ids.length+' cours');}
@@ -33,6 +122,7 @@ function pathsHome(root){
 function home(root){
  const featured=paths.get(pack.parcours_mis_en_avant);
  if(featured){crumb(root,[{text:'Accueil'}]);heading(root,`Bonjour, bienvenue dans ${pack.nom}`,'Commence par choisir une activité ou retrouve ton parcours.');
+ presenterCompagnon(root,'Salut ! Découvrons une notion à ton rythme.');
  const hero=add(root,'section','feature-hero');add(hero,'span','eyebrow','Parcours mis en avant');add(hero,'h2','',featured.titre);
  add(hero,'p','',`${featured.cours_ids.length} cours organisés par matière. Tu peux explorer une notion à ton rythme.`);
  buttonlink(hero,`Explorer la ${featured.titre} →`,{parcours:featured.id},'button-link primary');
@@ -44,6 +134,7 @@ function home(root){
 function pathPage(root,p){
  crumb(root,[{text:'Accueil',url:'./'},{text:p.titre}]);
  heading(root,p.titre,`${p.cours_ids.length} cours · Choisis une matière, puis une notion.`,'Mon parcours');
+ presenterCompagnon(root,'Je t’accompagne pendant ce parcours.');
  if(p.id===pack.parcours_mis_en_avant){const actions=add(root,'div','quick-actions');buttonlink(actions,'Explorer les fiches Spek',{parcours:p.id,vue:'spek'},'button-link');buttonlink(actions,'Carte des connaissances',{parcours:p.id,vue:'carte'},'button-link');}
  const q=current(),v=q.get('vue');if(v==='spek'){renderSpek(root,p);return;}if(v==='carte'){renderGraph(root,null,p.id);return;}
  const featured=(p.cours_ids.length>0&&p.id===pack.parcours_mis_en_avant?(pack.cours_a_decouvrir||[]).filter(id=>p.cours_ids.includes(id)):[]);
@@ -62,11 +153,12 @@ function catalog(root){
  const search=$('#search').value.trim().toLocaleLowerCase('fr'),d=$('#domain').value;
  const filtered=pack.cours.filter(c=>(!d||c.discipline===d)&&(!search||[c.titre,c.objectif,c.discipline,c.id].join(' ').toLocaleLowerCase('fr').includes(search)));
  crumb(root,[{text:'Accueil',url:'./'},{text:'Bibliothèque'}]);heading(root,'Bibliothèque',`${filtered.length} cours sur ${pack.cours.length}.`);
+ presenterCompagnon(root,'Cherche un sujet qui t’intéresse.');
  const grid=add(root,'div','cards');for(const c of filtered)card(grid,c,getPathFor(c.id));if(!filtered.length)add(root,'p','empty','Aucun cours trouvé. Essaie un autre mot.');
 }
 async function showApprovedImages(host,cid,index){
  let data;try{data=await fetchJson('/api/visuels/'+encodeURIComponent(cid)+'.json');}catch(_){return;}
- const placement=index<2?'decouvrir':index<4?'explorer':'explorer';
+ const placement=index<2?'decouvrir':index<4?'explorer':'essayer';
  for(const item of (data.visuels||[]).filter(v=>v.placement===placement)){
   const fig=add(host,'figure','lesson-illustration');const image=add(fig,'img');
   image.src=item.url;image.alt=item.alt||'Illustration';image.loading='lazy';
@@ -77,6 +169,7 @@ async function detail(root,c){
  const q=current(),retour=activeReturn(q,c.id),group=paths.get(retour),mode=q.get('vue');
  crumb(root,[{text:'Accueil',url:'./'},...(group?[{text:group.titre,url:url({parcours:group.id})}]:[{text:'Bibliothèque',url:url({page:'cours'})}]),{text:c.titre}]);
  heading(root,c.titre,c.objectif||'',c.discipline);
+ presenterCompagnon(root,mode==='pratique'?'Observe les indices et essaie par toi-même.':'Découvrons cette notion ensemble.');
  const status=add(root,'div','course-status');add(status,'span','small-note',c.publication_eleve?'Leçon pilote · À vérifier avec un enseignant':'Leçon élève en préparation');
  const tabs=add(root,'nav','course-tabs');tabs.setAttribute('aria-label','Explorer la notion');
  [['lecon','La leçon'],...(activities?.activites?.some(x=>x.cours_id===c.id)?[['pratique','Je pratique']]:[]),['spek','Fiches Spek'],['carte','Carte des liens']].forEach(([k,label])=>{const x=a(tabs,label,ctxLink(c.id,retour,k==='lecon'?{}:{vue:k}),'tab'+((mode||'lecon')===k?' selected':''));if((mode||'lecon')===k)x.setAttribute('aria-current','page');});
@@ -143,6 +236,7 @@ function renderPractice(root,c){
   activity.choix.forEach((option,i)=>{const btn=add(choices,'button','choice',option);btn.type='button';btn.addEventListener('click',()=>{
    for(const n of choices.querySelectorAll('button'))n.classList.remove('good','bad');btn.classList.add(i===activity.reponse?'good':'bad');
    feedback.textContent=(i===activity.reponse?'Oui, bonne interprétation. ':'Pas tout à fait. Essaie d’utiliser les indices. ')+activity.retroaction;
+   reactionCompagnon(i===activity.reponse);
   });});
  }
  add(box,'p','practice-privacy','Cet exercice fonctionne uniquement dans le navigateur; il ne crée ni note ni dossier d’élève.');
@@ -177,8 +271,9 @@ async function main(){try{
  $('#domain').addEventListener('change',()=>{history.replaceState(null,'',url({page:'cours'}));render();});
  window.addEventListener('popstate',render);await render();
  }catch(e){const root=$('#main');root.replaceChildren();heading(root,'Chargement impossible');add(root,'p','warning',e.message);}}
-async function render(){const root=$('#main');root.replaceChildren();try{const q=current();const course=q.get('cours'),path=q.get('parcours');
- if(course){const c=courses.get(course);if(!c)throw Error('Cours introuvable');await detail(root,c);}
+async function render(){const root=$('#main');root.replaceChildren();try{synchroniserNiveau();const q=current();const course=q.get('cours'),path=q.get('parcours');
+ if(q.get('page')==='missions'){await window.EkoleMissions.render(root);}
+ else if(course){const c=courses.get(course);if(!c)throw Error('Cours introuvable');await detail(root,c);}
  else if(path){const p=paths.get(path);if(!p)throw Error('Parcours introuvable');pathPage(root,p);}
  else if(q.get('page')==='cours')catalog(root);else if(q.get('page')==='parcours')pathsHome(root);else home(root);
  }catch(e){heading(root,'Impossible de présenter cette page');add(root,'p','warning',e.message);}}

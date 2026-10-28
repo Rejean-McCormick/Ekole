@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/ekole/tandem-teacher-preview/1.0",
+  "title": "Ekole local synthetic teacher preview - not an Orgo API or IK profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "authority",
+    "format",
+    "mode",
+    "scenario_ref",
+    "tasks",
+    "tenant_id",
+    "workflow_ref",
+    "world_id",
+    "world_release_id"
+  ],
+  "properties": {
+    "format": {
+      "const": "ekole.tandem-teacher-preview/1.0"
+    },
+    "mode": {
+      "const": "synthetic"
+    },
+    "authority": {
+      "const": "orgo"
+    },
+    "tenant_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "world_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "world_release_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "scenario_ref": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{1,63}$"
+    },
+    "workflow_ref": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{1,63}$"
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "task_ref",
+          "role_code",
+          "state",
+          "fragment_refs"
+        ],
+        "properties": {
+          "task_ref": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{1,63}$"
+          },
+          "role_code": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{1,63}$"
+          },
+          "state": {
+            "enum": [
+              "waiting",
+              "ready",
+              "in_progress",
+              "done",
+              "blocked"
+            ]
+          },
+          "fragment_refs": {
+            "type": "array",
+            "maxItems": 8,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{1,63}$"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    }
+  }
+}

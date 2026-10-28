@@ -1,0 +1,86 @@
+{
+  "id": "ekole_tandem_orgo_p1",
+  "title": "EKOLE / TANDEM / ORGO / P1",
+  "sentinel": "launcher.py",
+  "entries": [
+    {
+      "path": "README.md",
+      "old": "e53abdac575ea0be44f1cf6610a9dcae9567764b1db1623629f340efa4016852",
+      "new": "057f503fd64dfe50d4599694e631527ea8923a0d97be15b31ac52a10f7a1eb00"
+    },
+    {
+      "path": "launcher.py",
+      "old": "7eda655f62d919f519d8c9f8ec048a8b7e294bbed1b700cf728db5d7f58ce46d",
+      "new": "70bd383c38899c249e4088a3e160c6ee6401e044dac47b5333161637b581c2f7"
+    },
+    {
+      "path": "tandem/__init__.py",
+      "old": null,
+      "new": "3b811c49c7e54073120949e21b824e6349a54748ad60ca94ab4b7973b12b06d5"
+    },
+    {
+      "path": "tandem/projection.py",
+      "old": null,
+      "new": "bbe776abed442431bdbd80c56f71653b3f398aff95c1ae31f9c0a89c2559007c"
+    },
+    {
+      "path": "tandem/fixtures/fete-sorciere.synthetic.json",
+      "old": null,
+      "new": "8ada80b81443fca0c82424eddf33a09f009816d2dc97e9429b19b3b14d99af2d"
+    },
+    {
+      "path": "contracts/ekole-tandem-teacher-preview.schema.json",
+      "old": null,
+      "new": "10b382fe6df985b80ac1eeaac1178b615357b99cff054d1be075ecdcd6cede3b"
+    },
+    {
+      "path": "docs/TANDEM_EKOLE_ORGO_PREVIEW_P1.md",
+      "old": null,
+      "new": "67a4f94ee89df066616fd7650da3d87cb13f993d090cc00dcc6721ed05089f9c"
+    },
+    {
+      "path": "tests/test_tandem_projection.py",
+      "old": null,
+      "new": "d44e4a46fc718d56f8e1cceb1e14c1a9aae03f13a5004898d4465df06704c28b"
+    }
+  ],
+  "test_copy": [
+    "launcher.py",
+    "visuals.py",
+    "publications.py",
+    "site/index.html",
+    "enseignant-app/index.html",
+    "tests/test_tandem_projection.py",
+    "tandem/__init__.py",
+    "tandem/projection.py",
+    "tandem/fixtures/fete-sorciere.synthetic.json"
+  ],
+  "commands": [
+    [
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_tandem_projection.py",
+      "-q"
+    ],
+    [
+      "launcher.py",
+      "--contenu",
+      "none",
+      "--tandem-preview",
+      "tandem/fixtures/fete-sorciere.synthetic.json",
+      "--verifier"
+    ],
+    [
+      "-m",
+      "compileall",
+      "-q",
+      "launcher.py",
+      "tandem",
+      "tests/test_tandem_projection.py"
+    ]
+  ]
+}

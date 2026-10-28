@@ -1,0 +1,1224 @@
+{
+  "format": "ekole.b7-graph/1",
+  "statut": "candidate_local_non_certifie",
+  "notes": "Relations issues de décisions pédagogiques internes, non validation officielle du programme ni des acquisitions individuelles.",
+  "grade_source": "PROPOSITION 3e non validée — remplacer par pack.json v3 avant intégration",
+  "graph_source": "qc.learning-graph/1.2",
+  "source_hashes": {
+    "202_kristals.json": "sha256:5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+    "graphe_pedagogique.json": "sha256:3d3df2d692b657942265015f3e0b72bae8956c1b327086b1db33234d4562e5ef",
+    "parcours-propositions.json": "sha256:0d5016f52dd63de92c930a0c94e1eb098486481a62d56191ee35e217e95731b3"
+  },
+  "cours_3e_candidats": [
+    "qc-pri-ad-004",
+    "qc-pri-ad-005",
+    "qc-pri-ale-006",
+    "qc-pri-ale-007",
+    "qc-pri-als-005",
+    "qc-pri-als-006",
+    "qc-pri-ap-004",
+    "qc-pri-ap-005",
+    "qc-pri-ccq-005",
+    "qc-pri-ccq-006",
+    "qc-pri-da-004",
+    "qc-pri-da-005",
+    "qc-pri-eps-005",
+    "qc-pri-fls-005",
+    "qc-pri-fls-006",
+    "qc-pri-fr-006",
+    "qc-pri-fr-009",
+    "qc-pri-fr-014",
+    "qc-pri-fr-016",
+    "qc-pri-fr-021",
+    "qc-pri-ilss-005",
+    "qc-pri-ma-005",
+    "qc-pri-ma-008",
+    "qc-pri-ma-009",
+    "qc-pri-ma-010",
+    "qc-pri-ma-012",
+    "qc-pri-ma-018",
+    "qc-pri-ma-019",
+    "qc-pri-ma-031",
+    "qc-pri-mu-004",
+    "qc-pri-mu-005",
+    "qc-pri-st-008",
+    "qc-pri-st-009",
+    "qc-pri-st-010",
+    "qc-pri-us-007",
+    "qc-pri-us-008"
+  ],
+  "nœuds": [
+    {
+      "id": "qc-pri-ad-003",
+      "titre": "Improviser en interaction",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ad-004",
+      "titre": "Créer une séquence dramatique",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ad-005",
+      "titre": "Organiser une mise en scène simple",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ad-009",
+      "titre": "Présenter et analyser sa démarche dramatique",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ale-004",
+      "titre": "Comprendre des textes narratifs",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ale-005",
+      "titre": "Comprendre des textes informatifs",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ale-006",
+      "titre": "Inférences et interprétation en lecture",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ale-007",
+      "titre": "Apprécier la littérature de langue anglaise",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-als-001",
+      "titre": "Comprendre des consignes et des messages oraux",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-als-002",
+      "titre": "Reconnaître et utiliser le vocabulaire quotidien",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-als-005",
+      "titre": "Interagir par formules et questions simples",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-als-006",
+      "titre": "Parler d’expériences et de situations familières",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-als-012",
+      "titre": "Présenter et échanger en anglais",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ap-002",
+      "titre": "Expérimenter les gestes et techniques plastiques",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ap-003",
+      "titre": "Composer dans l’espace et sur un support",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ap-004",
+      "titre": "Choisir des matériaux et procédés de création",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ap-005",
+      "titre": "Créer des images personnelles",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ap-006",
+      "titre": "Créer des images médiatiques",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ap-009",
+      "titre": "Présenter et expliquer sa démarche artistique",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ccq-005",
+      "titre": "Médias et vie numérique",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ccq-006",
+      "titre": "Observer et décrire des réalités culturelles",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ccq-007",
+      "titre": "Comparer les réalités culturelles et les points de vue",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ccq-011",
+      "titre": "Réalités et perspectives des Premiers Peuples",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-da-001",
+      "titre": "Explorer le corps et le mouvement",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-da-002",
+      "titre": "Explorer espace, temps et énergie en mouvement",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-da-003",
+      "titre": "Créer une phrase chorégraphique",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-da-004",
+      "titre": "Organiser une composition dansée",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-da-005",
+      "titre": "Improviser seul ou en groupe",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-da-009",
+      "titre": "Présenter et expliquer sa démarche en danse",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-eps-002",
+      "titre": "Locomotion et déplacements",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-eps-003",
+      "titre": "Équilibre et coordination",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-eps-004",
+      "titre": "Manipulation d’objets et habiletés motrices",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-eps-005",
+      "titre": "Actions et enchaînements moteurs",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-fls-002",
+      "titre": "Vocabulaire et expressions usuelles en français",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fls-003",
+      "titre": "Prononciation et conscience des sons du français",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fls-004",
+      "titre": "Interagir dans des situations familières en français",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fls-005",
+      "titre": "Développer l’interaction et la prise de parole",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-fls-006",
+      "titre": "Lire et comprendre des textes adaptés en français",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-fls-007",
+      "titre": "Réinvestir des informations lues et entendues",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fls-009",
+      "titre": "Produire des textes adaptés en français",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fls-011",
+      "titre": "Découvrir et interpréter des références culturelles francophones",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fls-012",
+      "titre": "Réaliser des projets de communication en français",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fr-005",
+      "titre": "Compréhension littérale de textes",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fr-006",
+      "titre": "Inférences en lecture",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-fr-009",
+      "titre": "Lire un texte courant ou documentaire",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-fr-010",
+      "titre": "Réagir aux textes et les apprécier",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fr-013",
+      "titre": "Classes de mots",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fr-014",
+      "titre": "Groupes de mots et fonctions syntaxiques",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-fr-015",
+      "titre": "Construction des phrases",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fr-016",
+      "titre": "Accords dans le groupe nominal",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-fr-017",
+      "titre": "Accord du verbe avec le sujet",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fr-019",
+      "titre": "Ponctuation et majuscules",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fr-021",
+      "titre": "Rédiger des phrases et des paragraphes",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-fr-022",
+      "titre": "Organiser et assurer la cohérence d’un texte",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-fr-023",
+      "titre": "Réviser et corriger un texte",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ilss-003",
+      "titre": "Développer le vocabulaire scolaire essentiel",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ilss-005",
+      "titre": "Entrer dans la lecture en français selon le palier",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ilss-006",
+      "titre": "Lire et comprendre des textes scolaires",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ilss-007",
+      "titre": "Écrire des messages et textes fonctionnels",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ma-003",
+      "titre": "Valeur de position et regroupements",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ma-005",
+      "titre": "Estimation et arrondissement",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ma-006",
+      "titre": "Sens et stratégies de l’addition",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ma-007",
+      "titre": "Sens et stratégies de la soustraction",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ma-008",
+      "titre": "Sens et stratégies de la multiplication",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ma-009",
+      "titre": "Sens et stratégies de la division",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ma-010",
+      "titre": "Calcul mental et propriétés des opérations",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ma-011",
+      "titre": "Algorithmes et vérification des calculs",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ma-012",
+      "titre": "Fractions : représentations et sens",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ma-013",
+      "titre": "Fractions : équivalence et comparaison",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ma-015",
+      "titre": "Nombres décimaux : représentations",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ma-018",
+      "titre": "Relations et égalités numériques",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ma-019",
+      "titre": "Situations-problèmes additives",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-ma-020",
+      "titre": "Situations-problèmes multiplicatives",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ma-030",
+      "titre": "Collecter et organiser des données",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-ma-031",
+      "titre": "Lire et produire des diagrammes",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-mu-001",
+      "titre": "Percevoir les sons, leurs qualités et les silences",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-mu-002",
+      "titre": "Explorer pulsation, rythme et durée",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-mu-004",
+      "titre": "Découvrir timbres et instruments",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-mu-005",
+      "titre": "Explorer voix et techniques vocales",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-mu-006",
+      "titre": "Inventer une pièce vocale ou instrumentale",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-mu-007",
+      "titre": "Interpréter seul ou en ensemble",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-st-001",
+      "titre": "Observer et formuler des questions scientifiques",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-st-004",
+      "titre": "Expliquer et communiquer des résultats",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-st-007",
+      "titre": "Forces et mouvement",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-st-008",
+      "titre": "Énergie et transformations énergétiques",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-st-009",
+      "titre": "Lumière et son",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-st-010",
+      "titre": "Électricité et magnétisme",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-st-012",
+      "titre": "Concevoir et fabriquer un objet technique",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-st-015",
+      "titre": "Atmosphère et phénomènes météorologiques",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-us-001",
+      "titre": "Se repérer dans le temps et construire une chronologie",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-us-002",
+      "titre": "Lire des cartes et se repérer dans l’espace",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-us-005",
+      "titre": "Utiliser et comparer des sources historiques",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-us-007",
+      "titre": "Sociétés inuites et milieux nordiques",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-us-008",
+      "titre": "La Nouvelle-France : territoire et société",
+      "dans_3e_candidate": true
+    },
+    {
+      "id": "qc-pri-us-009",
+      "titre": "Rencontres et échanges entre populations",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-us-010",
+      "titre": "Transformations à l’époque britannique",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-us-015",
+      "titre": "Comprendre les changements et les continuités historiques",
+      "dans_3e_candidate": false
+    },
+    {
+      "id": "qc-pri-us-016",
+      "titre": "Diversité culturelle et héritages des sociétés",
+      "dans_3e_candidate": false
+    }
+  ],
+  "relations": [
+    {
+      "id": "qc-pri-ad-004/requires/qc-pri-ad-003",
+      "from": "qc-pri-ad-004",
+      "to": "qc-pri-ad-003",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ad-005/requires/qc-pri-ad-004",
+      "from": "qc-pri-ad-005",
+      "to": "qc-pri-ad-004",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ad-009/requires/qc-pri-ad-004",
+      "from": "qc-pri-ad-009",
+      "to": "qc-pri-ad-004",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ale-006/recommends_before/qc-pri-ale-005",
+      "from": "qc-pri-ale-006",
+      "to": "qc-pri-ale-005",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ale-006/requires/qc-pri-ale-004",
+      "from": "qc-pri-ale-006",
+      "to": "qc-pri-ale-004",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ale-007/requires/qc-pri-ale-004",
+      "from": "qc-pri-ale-007",
+      "to": "qc-pri-ale-004",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-als-005/requires/qc-pri-als-001",
+      "from": "qc-pri-als-005",
+      "to": "qc-pri-als-001",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-als-005/requires/qc-pri-als-002",
+      "from": "qc-pri-als-005",
+      "to": "qc-pri-als-002",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-als-006/requires/qc-pri-als-005",
+      "from": "qc-pri-als-006",
+      "to": "qc-pri-als-005",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-als-012/recommends_before/qc-pri-als-006",
+      "from": "qc-pri-als-012",
+      "to": "qc-pri-als-006",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-als-012/requires/qc-pri-als-005",
+      "from": "qc-pri-als-012",
+      "to": "qc-pri-als-005",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ap-004/requires/qc-pri-ap-002",
+      "from": "qc-pri-ap-004",
+      "to": "qc-pri-ap-002",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ap-005/recommends_before/qc-pri-ap-004",
+      "from": "qc-pri-ap-005",
+      "to": "qc-pri-ap-004",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ap-005/requires/qc-pri-ap-003",
+      "from": "qc-pri-ap-005",
+      "to": "qc-pri-ap-003",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ap-006/recommends_before/qc-pri-ap-004",
+      "from": "qc-pri-ap-006",
+      "to": "qc-pri-ap-004",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ap-009/requires/qc-pri-ap-005",
+      "from": "qc-pri-ap-009",
+      "to": "qc-pri-ap-005",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ccq-005/reinforces/qc-pri-fr-009",
+      "from": "qc-pri-ccq-005",
+      "to": "qc-pri-fr-009",
+      "type": "reinforces",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ccq-007/requires/qc-pri-ccq-006",
+      "from": "qc-pri-ccq-007",
+      "to": "qc-pri-ccq-006",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ccq-011/recommends_before/qc-pri-ccq-006",
+      "from": "qc-pri-ccq-011",
+      "to": "qc-pri-ccq-006",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-da-004/reinforces/qc-pri-mu-002",
+      "from": "qc-pri-da-004",
+      "to": "qc-pri-mu-002",
+      "type": "reinforces",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-da-004/requires/qc-pri-da-003",
+      "from": "qc-pri-da-004",
+      "to": "qc-pri-da-003",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-da-005/recommends_before/qc-pri-da-002",
+      "from": "qc-pri-da-005",
+      "to": "qc-pri-da-002",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-da-005/requires/qc-pri-da-001",
+      "from": "qc-pri-da-005",
+      "to": "qc-pri-da-001",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-da-009/requires/qc-pri-da-004",
+      "from": "qc-pri-da-009",
+      "to": "qc-pri-da-004",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-eps-005/recommends_before/qc-pri-eps-003",
+      "from": "qc-pri-eps-005",
+      "to": "qc-pri-eps-003",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-eps-005/recommends_before/qc-pri-eps-004",
+      "from": "qc-pri-eps-005",
+      "to": "qc-pri-eps-004",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-eps-005/requires/qc-pri-eps-002",
+      "from": "qc-pri-eps-005",
+      "to": "qc-pri-eps-002",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fls-005/requires/qc-pri-fls-004",
+      "from": "qc-pri-fls-005",
+      "to": "qc-pri-fls-004",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fls-006/recommends_before/qc-pri-fls-003",
+      "from": "qc-pri-fls-006",
+      "to": "qc-pri-fls-003",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fls-006/requires/qc-pri-fls-002",
+      "from": "qc-pri-fls-006",
+      "to": "qc-pri-fls-002",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fls-007/recommends_before/qc-pri-fls-006",
+      "from": "qc-pri-fls-007",
+      "to": "qc-pri-fls-006",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fls-009/recommends_before/qc-pri-fls-006",
+      "from": "qc-pri-fls-009",
+      "to": "qc-pri-fls-006",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fls-011/recommends_before/qc-pri-fls-006",
+      "from": "qc-pri-fls-011",
+      "to": "qc-pri-fls-006",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fls-012/requires/qc-pri-fls-005",
+      "from": "qc-pri-fls-012",
+      "to": "qc-pri-fls-005",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-006/requires/qc-pri-fr-005",
+      "from": "qc-pri-fr-006",
+      "to": "qc-pri-fr-005",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-009/requires/qc-pri-fr-005",
+      "from": "qc-pri-fr-009",
+      "to": "qc-pri-fr-005",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-010/recommends_before/qc-pri-fr-009",
+      "from": "qc-pri-fr-010",
+      "to": "qc-pri-fr-009",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-014/requires/qc-pri-fr-013",
+      "from": "qc-pri-fr-014",
+      "to": "qc-pri-fr-013",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-015/recommends_before/qc-pri-fr-014",
+      "from": "qc-pri-fr-015",
+      "to": "qc-pri-fr-014",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-016/recommends_before/qc-pri-fr-013",
+      "from": "qc-pri-fr-016",
+      "to": "qc-pri-fr-013",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-016/requires/qc-pri-fr-014",
+      "from": "qc-pri-fr-016",
+      "to": "qc-pri-fr-014",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-017/requires/qc-pri-fr-014",
+      "from": "qc-pri-fr-017",
+      "to": "qc-pri-fr-014",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-021/recommends_before/qc-pri-fr-019",
+      "from": "qc-pri-fr-021",
+      "to": "qc-pri-fr-019",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-021/requires/qc-pri-fr-015",
+      "from": "qc-pri-fr-021",
+      "to": "qc-pri-fr-015",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-022/requires/qc-pri-fr-021",
+      "from": "qc-pri-fr-022",
+      "to": "qc-pri-fr-021",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-fr-023/requires/qc-pri-fr-021",
+      "from": "qc-pri-fr-023",
+      "to": "qc-pri-fr-021",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ilss-005/requires/qc-pri-ilss-003",
+      "from": "qc-pri-ilss-005",
+      "to": "qc-pri-ilss-003",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ilss-006/reinforces/qc-pri-fr-009",
+      "from": "qc-pri-ilss-006",
+      "to": "qc-pri-fr-009",
+      "type": "reinforces",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ilss-006/requires/qc-pri-ilss-005",
+      "from": "qc-pri-ilss-006",
+      "to": "qc-pri-ilss-005",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ilss-007/recommends_before/qc-pri-ilss-005",
+      "from": "qc-pri-ilss-007",
+      "to": "qc-pri-ilss-005",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-005/requires/qc-pri-ma-003",
+      "from": "qc-pri-ma-005",
+      "to": "qc-pri-ma-003",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-008/recommends_before/qc-pri-ma-003",
+      "from": "qc-pri-ma-008",
+      "to": "qc-pri-ma-003",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-008/requires/qc-pri-ma-006",
+      "from": "qc-pri-ma-008",
+      "to": "qc-pri-ma-006",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-009/requires/qc-pri-ma-008",
+      "from": "qc-pri-ma-009",
+      "to": "qc-pri-ma-008",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-010/recommends_before/qc-pri-ma-007",
+      "from": "qc-pri-ma-010",
+      "to": "qc-pri-ma-007",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-010/requires/qc-pri-ma-006",
+      "from": "qc-pri-ma-010",
+      "to": "qc-pri-ma-006",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-011/recommends_before/qc-pri-ma-010",
+      "from": "qc-pri-ma-011",
+      "to": "qc-pri-ma-010",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-013/requires/qc-pri-ma-012",
+      "from": "qc-pri-ma-013",
+      "to": "qc-pri-ma-012",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-015/requires/qc-pri-ma-012",
+      "from": "qc-pri-ma-015",
+      "to": "qc-pri-ma-012",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-019/requires/qc-pri-ma-006",
+      "from": "qc-pri-ma-019",
+      "to": "qc-pri-ma-006",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-019/requires/qc-pri-ma-007",
+      "from": "qc-pri-ma-019",
+      "to": "qc-pri-ma-007",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-020/recommends_before/qc-pri-ma-009",
+      "from": "qc-pri-ma-020",
+      "to": "qc-pri-ma-009",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-020/requires/qc-pri-ma-008",
+      "from": "qc-pri-ma-020",
+      "to": "qc-pri-ma-008",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-ma-031/requires/qc-pri-ma-030",
+      "from": "qc-pri-ma-031",
+      "to": "qc-pri-ma-030",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-mu-004/requires/qc-pri-mu-001",
+      "from": "qc-pri-mu-004",
+      "to": "qc-pri-mu-001",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-mu-005/requires/qc-pri-mu-001",
+      "from": "qc-pri-mu-005",
+      "to": "qc-pri-mu-001",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-mu-006/recommends_before/qc-pri-mu-004",
+      "from": "qc-pri-mu-006",
+      "to": "qc-pri-mu-004",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-mu-007/recommends_before/qc-pri-mu-005",
+      "from": "qc-pri-mu-007",
+      "to": "qc-pri-mu-005",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-st-004/reinforces/qc-pri-ma-031",
+      "from": "qc-pri-st-004",
+      "to": "qc-pri-ma-031",
+      "type": "reinforces",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-st-008/recommends_before/qc-pri-st-007",
+      "from": "qc-pri-st-008",
+      "to": "qc-pri-st-007",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-st-009/recommends_before/qc-pri-st-001",
+      "from": "qc-pri-st-009",
+      "to": "qc-pri-st-001",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-st-010/requires/qc-pri-st-008",
+      "from": "qc-pri-st-010",
+      "to": "qc-pri-st-008",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-st-012/reinforces/qc-pri-ap-004",
+      "from": "qc-pri-st-012",
+      "to": "qc-pri-ap-004",
+      "type": "reinforces",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-st-015/reinforces/qc-pri-ma-031",
+      "from": "qc-pri-st-015",
+      "to": "qc-pri-ma-031",
+      "type": "reinforces",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-005/reinforces/qc-pri-fr-009",
+      "from": "qc-pri-us-005",
+      "to": "qc-pri-fr-009",
+      "type": "reinforces",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-007/recommends_before/qc-pri-us-001",
+      "from": "qc-pri-us-007",
+      "to": "qc-pri-us-001",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-007/recommends_before/qc-pri-us-002",
+      "from": "qc-pri-us-007",
+      "to": "qc-pri-us-002",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-007/recommends_before/qc-pri-us-005",
+      "from": "qc-pri-us-007",
+      "to": "qc-pri-us-005",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-008/recommends_before/qc-pri-us-002",
+      "from": "qc-pri-us-008",
+      "to": "qc-pri-us-002",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-008/recommends_before/qc-pri-us-005",
+      "from": "qc-pri-us-008",
+      "to": "qc-pri-us-005",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-008/requires/qc-pri-us-001",
+      "from": "qc-pri-us-008",
+      "to": "qc-pri-us-001",
+      "type": "requires",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-009/recommends_before/qc-pri-us-008",
+      "from": "qc-pri-us-009",
+      "to": "qc-pri-us-008",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-010/recommends_before/qc-pri-us-008",
+      "from": "qc-pri-us-010",
+      "to": "qc-pri-us-008",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-015/recommends_before/qc-pri-us-008",
+      "from": "qc-pri-us-015",
+      "to": "qc-pri-us-008",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    },
+    {
+      "id": "qc-pri-us-016/recommends_before/qc-pri-us-007",
+      "from": "qc-pri-us-016",
+      "to": "qc-pri-us-007",
+      "type": "recommends_before",
+      "statut_validation": "valide_decision_interne",
+      "provenance": "gouvernance_pedagogique_v1.2"
+    }
+  ]
+}

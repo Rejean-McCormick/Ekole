@@ -1,0 +1,19 @@
+{
+  "version": "v4.0-candidate",
+  "source_engine": "znapshot_ekole_10160737.zip",
+  "source_content": "znapshot_ekole-quebec_10160738.zip",
+  "course_pilot": "qc-pri-ma-008",
+  "components": {
+    "B1": "données dans ekole-quebec/references/3e/audit-b1",
+    "B2": "CLI privée; non raccordée aux brouillons API v3",
+    "B3": "atelier Enseignant actif, rendu Markdown et images",
+    "B4": "prototype élève dans la revue privée, non publié",
+    "B5": "Kontexte dépôt frère, scénario aperçu privé",
+    "B6": "kompose dépôt frère, pas de dispatch réel",
+    "B7": "carte Light en revue privée, relations candidates",
+    "B8": "QA conservée et tests de consolidation"
+  },
+  "teacher_only_reviews": true,
+  "student_published_from_previews": false,
+  "pedagogical_approval": false
+}
