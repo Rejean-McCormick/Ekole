@@ -10,19 +10,14 @@ const fetchJson=async(path)=>{const r=await fetch(path,{cache:'no-store'});if(!r
 let pack, courses=new Map(), paths=new Map(), spek=null, graph=null, activities=null;
 const current=()=>new URLSearchParams(location.search);
 
-// Compagnons : démonstration TEXTUELLE locale, sans médias ni profil élève.
-// Ne jamais utiliser ce choix pour des droits d'accès, des notes ou de la maîtrise.
-const COMPAGNON_THEMES=Object.freeze([
- {id:'quotidien',nom:'Mila',univers:'Le quotidien',sigle:'M'},
- {id:'ferme',nom:'Fermier (provisoire)',univers:'La ferme',sigle:'F'},
- {id:'cosmos',nom:'Explorateur (provisoire)',univers:'Le cosmos',sigle:'C'}
-]);
+// Compagnons facultatifs : le catalogue appartient au paquet de contenu.
+let COMPAGNON_THEMES=[];
 const COMPAGNON_FLAG='ekole-demo-compagnon-active-v2';
 const COMPAGNON_CHOICE='ekole-demo-compagnon-choice-v2';
 function demoStorage(){try{return window.sessionStorage;}catch(_){return null;}}
 function demoCompagnonActif(){
  // Verrou de portée : interface élève + paquet Québec + serveur de bouclage uniquement.
- if(base!=='/eleve/'||pack?.id!=='primaire-qc'||!['127.0.0.1','localhost','::1','[::1]'].includes(location.hostname))return false;
+ if(!COMPAGNON_THEMES.length||base!=='/eleve/'||pack?.id!=='primaire-qc'||!['127.0.0.1','localhost','::1','[::1]'].includes(location.hostname))return false;
  const storage=demoStorage();if(!storage)return false;
  try{
   const flag=current().get('pilote_compagnon');
@@ -36,8 +31,9 @@ function lireCompagnon(){
  if(!demoCompagnonActif())return null;
  try{
   const value=JSON.parse(demoStorage().getItem(COMPAGNON_CHOICE)||'null');
-  const theme=COMPAGNON_THEMES.find(t=>t.id===value?.theme);
-  return theme&&Number.isInteger(value.annee)&&value.annee>=1&&value.annee<=6?{...theme,annee:value.annee}:null;
+  const id=window.EkolePersonnages.catalogue.anciens_choix?.[value?.theme]||value?.theme;
+  const theme=COMPAGNON_THEMES.find(t=>t.id===id);
+  return theme&&Number.isInteger(value.annee)&&theme.annees.includes(value.annee)?{...theme,annee:value.annee}:null;
  }catch(_){return null;}
 }
 function niveauPage(){
@@ -59,7 +55,7 @@ function choixCompagnon(root){
  const choisi=lireCompagnon(),grade=niveauPage();
  const section=add(root,'section','compagnon-choix');section.setAttribute('aria-label','Choix facultatif du compagnon de démonstration');
  add(section,'h2','','Choisis un compagnon (facultatif)');
- add(section,'p','compagnon-note','Prototype local sans illustrations. Personnages provisoires, sans collecte ni suivi individuel.');
+ add(section,'p','compagnon-note','Compagnon facultatif de démonstration, sans collecte ni suivi individuel.');
  const niveau=add(section,'label','compagnon-niveau-label','Année scolaire');
  const select=add(niveau,'select','compagnon-niveau');
  for(let i=1;i<=6;i++){const option=add(select,'option','',`${i}${i===1?'re':'e'} année`);option.value=String(i);option.selected=i===grade;}
@@ -67,7 +63,7 @@ function choixCompagnon(root){
  for(const theme of COMPAGNON_THEMES){
   const bouton=add(grid,'button','compagnon-option'+(choisi?.id===theme.id?' compagnon-selected':''));
   bouton.type='button';bouton.setAttribute('aria-pressed',choisi?.id===theme.id?'true':'false');
-  add(bouton,'span','compagnon-sigle',theme.sigle).setAttribute('aria-hidden','true');
+  window.EkolePersonnages.companion(bouton,theme,grade);
   add(bouton,'strong','',theme.nom);add(bouton,'span','compagnon-univers',theme.univers);
   bouton.addEventListener('click',()=>{enregistrerCompagnon(theme.id,Number(select.value));render();});
  }
@@ -77,18 +73,20 @@ function choixCompagnon(root){
  sans.addEventListener('click',()=>{try{demoStorage()?.removeItem(COMPAGNON_CHOICE);}catch(_){}render();});
  a(actions,'Quitter la démonstration',{page:'parcours',pilote_compagnon:'0'},'compagnon-sortie');
 }
-function presenterCompagnon(root,message){
+function presenterCompagnon(root,message,pose='debout'){
  const choisi=lireCompagnon();if(!choisi)return;
  const grade=niveauPage();
- const box=add(root,'section','compagnon-apercu');box.setAttribute('aria-label','Compagnon textuel de démonstration');
- add(box,'span','compagnon-sigle',choisi.sigle).setAttribute('aria-hidden','true');
+ const box=add(root,'section','compagnon-apercu');box.setAttribute('aria-label','Compagnon de démonstration');
+ window.EkolePersonnages.companion(box,choisi,grade,pose,true);
  const words=add(box,'div','compagnon-mots');
  add(words,'strong','',`${choisi.nom} · ${grade}${grade===1?'re':'e'} année`);
  add(words,'p','compagnon-message',message).setAttribute('aria-live','polite');
- add(words,'small','compagnon-note','Prototype local sans image · Ne représente pas une évaluation');
+ add(words,'small','compagnon-note','Compagnon facultatif · Ne représente pas une évaluation');
 }
 function reactionCompagnon(reussite){
- if(!lireCompagnon())return;
+ const choisi=lireCompagnon();if(!choisi)return;
+ const portrait=document.querySelector('[data-compagnon-portrait]');
+ if(portrait){const host=portrait.parentElement;portrait.remove();const updated=window.EkolePersonnages.companion(host,choisi,niveauPage(),reussite?'celebrer':'aider',true);host.prepend(updated);}
  const message=document.querySelector('.compagnon-message');
  if(message)message.textContent=reussite?'Bravo, tu as trouvé cette réponse.':'Tu peux réessayer en utilisant les indices.';
 }
@@ -122,7 +120,7 @@ function pathsHome(root){
 function home(root){
  const featured=paths.get(pack.parcours_mis_en_avant);
  if(featured){crumb(root,[{text:'Accueil'}]);heading(root,`Bonjour, bienvenue dans ${pack.nom}`,'Commence par choisir une activité ou retrouve ton parcours.');
- presenterCompagnon(root,'Salut ! Découvrons une notion à ton rythme.');
+ presenterCompagnon(root,'Salut ! Découvrons une notion à ton rythme.','saluer');
  const hero=add(root,'section','feature-hero');add(hero,'span','eyebrow','Parcours mis en avant');add(hero,'h2','',featured.titre);
  add(hero,'p','',`${featured.cours_ids.length} cours organisés par matière. Tu peux explorer une notion à ton rythme.`);
  buttonlink(hero,`Explorer la ${featured.titre} →`,{parcours:featured.id},'button-link primary');
@@ -169,7 +167,7 @@ async function detail(root,c){
  const q=current(),retour=activeReturn(q,c.id),group=paths.get(retour),mode=q.get('vue');
  crumb(root,[{text:'Accueil',url:'./'},...(group?[{text:group.titre,url:url({parcours:group.id})}]:[{text:'Bibliothèque',url:url({page:'cours'})}]),{text:c.titre}]);
  heading(root,c.titre,c.objectif||'',c.discipline);
- presenterCompagnon(root,mode==='pratique'?'Observe les indices et essaie par toi-même.':'Découvrons cette notion ensemble.');
+ presenterCompagnon(root,mode==='pratique'?'Observe les indices et essaie par toi-même.':'Découvrons cette notion ensemble.','apprendre');
  const status=add(root,'div','course-status');add(status,'span','small-note',c.publication_eleve?'Leçon pilote · À vérifier avec un enseignant':'Leçon élève en préparation');
  const tabs=add(root,'nav','course-tabs');tabs.setAttribute('aria-label','Explorer la notion');
  [['lecon','La leçon'],...(activities?.activites?.some(x=>x.cours_id===c.id)?[['pratique','Je pratique']]:[]),['spek','Fiches Spek'],['carte','Carte des liens']].forEach(([k,label])=>{const x=a(tabs,label,ctxLink(c.id,retour,k==='lecon'?{}:{vue:k}),'tab'+((mode||'lecon')===k?' selected':''));if((mode||'lecon')===k)x.setAttribute('aria-current','page');});
@@ -260,10 +258,12 @@ function renderGraph(root,focus,returnPath=''){
 async function main(){try{
  pack=await fetchJson('/api/pack.json');if(!compatible(pack))throw Error('Paquet non compatible');
  courses=new Map(pack.cours.map(x=>[x.id,x]));paths=new Map(pack.parcours.map(x=>[x.id,x]));
- const data=await Promise.allSettled([fetchJson('/api/integrations/spek.json'),fetchJson('/api/integrations/graphe.json'),fetchJson('/api/integrations/activites.json')]);
+ const data=await Promise.allSettled([fetchJson('/api/integrations/spek.json'),fetchJson('/api/integrations/graphe.json'),fetchJson('/api/integrations/activites.json'),fetchJson('/api/personnages/catalogue.json')]);
  if(data[0].status==='fulfilled'&&data[0].value.format==='ekole.spek-preview/1')spek=data[0].value;
  if(data[1].status==='fulfilled'&&data[1].value.format==='ekole.graph-preview/1')graph=data[1].value;
  if(data[2].status==='fulfilled'&&data[2].value.format==='ekole.activities-preview/1')activities=data[2].value;
+ window.EkolePersonnages.configure(data[3].status==='fulfilled'?data[3].value:null);
+ COMPAGNON_THEMES=window.EkolePersonnages.catalogue.compagnons||[];
  $('#ensemble').textContent=pack.nom;$('#ensembleDescription').textContent=pack.description||'';
  $('#sidebarCount').textContent=pack.cours.length+' cours · '+pack.parcours.length+' parcours';document.title=pack.nom+' — Ekole';
  const sel=$('#domain');for(const d of [...new Set(pack.cours.map(c=>c.discipline))].sort((a,b)=>a.localeCompare(b,'fr'))){const o=add(sel,'option','',d);o.value=d;}

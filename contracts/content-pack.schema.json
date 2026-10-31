@@ -112,6 +112,11 @@
         "type": "string"
       },
       "description": "Identifiants des cours placés en entrée du parcours mis en avant."
+    },
+    "personnages": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]+/catalogue\\.json$",
+      "description": "Catalogue facultatif des compagnons et illustrations de rôles, indépendant des visuels de cours."
     }
   }
 }

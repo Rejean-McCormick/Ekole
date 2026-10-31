@@ -25,11 +25,11 @@
   function drawMission(){const m=state.mission;root.replaceChildren();btn(root,'← Toutes les missions',reset,'mission-back');append(root,'p','eyebrow','Mission interactive · 3e année');append(root,'h1','page-heading',m.titre);append(root,'p','intro',m.histoire);notice(root);const counter=append(root,'p','mission-progress','Étapes explorées : '+state.done.size+' / '+m.nombre_etapes+' (sans validation scolaire)');counter.id='mission-tries';if(state.done.size===m.nombre_etapes)append(root,'p','mission-celebrate','Bravo ! Tu as essayé toutes les étapes de cette histoire.');append(root,'h2','section-title','Quel rôle veux-tu essayer ?');const roles=append(root,'div','mission-role-row');
    for(const r of m.roles){const b=btn(roles,r.name,async()=>{
      try{state.role=await request(roleUrl(m.id,r.id));drawMission();jump();}catch(e){error(e);}
-   },'mission-btn '+(state.role?.role_id===r.id?'mission-primary':''));b.setAttribute('aria-pressed',String(state.role?.role_id===r.id));}
+   },'mission-btn '+(state.role?.role_id===r.id?'mission-primary':''));b.setAttribute('aria-pressed',String(state.role?.role_id===r.id));const portrait=window.EkolePersonnages.role(b,r.id,r.name);b.prepend(portrait);}
    if(state.role)drawRole(root,state.role);
    else append(root,'p','mission-muted','Tu peux essayer plusieurs rôles, un à la fois. Dans une vraie classe, les rôles seraient distribués par une personne responsable.');
   }
-  function drawRole(host,r){const section=append(host,'section','mission-play');append(section,'h2','',`À toi, ${r.nom} !`);append(section,'p','',r.introduction);
+  function drawRole(host,r){const section=append(host,'section','mission-play');window.EkolePersonnages.role(section,r.role_id,r.nom,true);append(section,'h2','',`À toi, ${r.nom} !`);append(section,'p','',r.introduction);
    const actions=append(section,'div','mission-actions');append(actions,'strong','', 'Ce rôle peut :');for(const a of r.actions)tag(actions,a);
    append(section,'h3','','Tes défis');for(const step of r.etapes){const block=append(section,'div','mission-step');append(block,'h4','',step.instruction);if(step.depends_on?.length)append(block,'p','mission-muted','Dans une équipe, cette étape dépendrait aussi d’autres rôles.');
     const key=state.mission.id+':'+r.role_id+':'+step.id;

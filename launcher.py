@@ -19,6 +19,7 @@ import time
 import urllib.parse
 import webbrowser
 import visuals
+import personnages
 import publications
 import missions_demo  # EKOLE_MISSIONS_INTEGREES_20261024
 from tandem import load_synthetic_preview, PreviewError
@@ -83,6 +84,7 @@ class Environment:
     def __init__(self, content: pathlib.Path | None, edition: bool, port_public: int = 8765, tandem_preview: dict | None = None):
         self.content = content
         self.pack = load_pack(content)
+        self.personnages = personnages.load(content, self.pack)
         self.by_id = {c['id']: c for c in self.pack['cours']}
         self.edition = edition
         self.port_public = port_public
@@ -160,6 +162,20 @@ def create_handler(env: Environment, teacher: bool = False):
                 return
             if teacher and not self.authed():
                 return self.respond(401, b'Espace local protege. Relancer le lanceur et utiliser son lien de session.')
+            # Catalogue facultatif séparé des images et prompts des Kristals.
+            if route == '/api/personnages/catalogue.json':
+                try:
+                    return self.json(200, personnages.public_inventory(env.personnages))
+                except (OSError, ValueError):
+                    return self.respond(404, b'Catalogue personnages indisponible')
+            character = re.fullmatch(r'/api/personnages/image/([a-z][a-z0-9-]{0,79})', route)
+            if character:
+                try:
+                    f = personnages.image_file(env.personnages, character[1])
+                    if f is not None: return self.respond(200, f.read_bytes(), 'image/png')
+                except (OSError, ValueError):
+                    pass
+                return self.respond(404, b'Illustration de personnage indisponible')
             # Inventaire visuel : prompts et images brutes sont réservés à l'enseignant.
             visual = re.fullmatch(r'/api/visuels/([A-Za-z0-9_-]{1,80})\.json', route)
             if visual:
