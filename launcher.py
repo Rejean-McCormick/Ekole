@@ -5,6 +5,7 @@ Le contenu n'est jamais copié ni importé dans le dépôt moteur.
 """
 from __future__ import annotations
 import argparse
+import base64
 import hashlib
 import http.server
 import json
@@ -13,6 +14,7 @@ import pathlib
 import re
 import secrets
 import socket
+import sqlite3
 import sys
 import threading
 import time
@@ -21,6 +23,8 @@ import webbrowser
 import visuals
 import personnages
 import publications
+from activite_locale import Activity, Catalogue, teacher_attempt
+from mondes_v12 import ASSETS as WORLD_ASSETS, ROOT as WORLD_ROOT
 import missions_demo  # EKOLE_MISSIONS_INTEGREES_20261024
 from tandem import load_synthetic_preview, PreviewError
 
@@ -80,6 +84,12 @@ def jsonify(value: object) -> bytes:
     return (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
 
 
+class RequestError(ValueError):
+    def __init__(self, status, message):
+        super().__init__(message)
+        self.status = status
+
+
 class Environment:
     def __init__(self, content: pathlib.Path | None, edition: bool, port_public: int = 8765, tandem_preview: dict | None = None):
         self.content = content
@@ -93,9 +103,29 @@ class Environment:
         self.student_course_cache = {}
         # Projeté seulement dans l'éditeur local; aucune identité/mission distribuée aux enfants.
         self.tandem_preview = tandem_preview
+        self.activity = None
+        self.activity_catalogue = None
+
+    def activities(self):
+        if self.activity_catalogue:
+            return self.activity_catalogue.activities
+        return {self.activity.id: self.activity} if self.activity else {}
+
+    def find_activity(self, aid=None, *, include_closed=False):
+        items = self.activities()
+        if aid and self.activity_catalogue and not include_closed:
+            theme = self.activity_catalogue.activity_themes.get(aid)
+            if theme and theme not in self.activity_catalogue.univers.profile()['choices']:
+                return None
+        return items.get(aid) if aid else next(iter(items.values()), None)
 
     def student_course(self, cid):
         if cid not in self.by_id: return None
+        editorial = self.activity_catalogue.editorial if self.activity_catalogue else None
+        if editorial:
+            local = editorial.publication(cid)
+            if local:
+                return local
         # Le dossier expert et ses corrigés ne sont jamais lus par le portail public.
         source = self.content / 'publications' / 'eleve' / (cid + '.json') if self.content else None
         if source and source.is_file() and not source.is_symlink() and source.resolve().is_relative_to(self.content.resolve()):
@@ -130,7 +160,7 @@ def create_handler(env: Environment, teacher: bool = False):
             self.send_header('X-Content-Type-Options', 'nosniff')
             self.send_header('Referrer-Policy', 'no-referrer')
             self.send_header('X-Frame-Options', 'DENY')
-            self.send_header('Content-Security-Policy', "default-src 'self'; connect-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'")
+            self.send_header('Content-Security-Policy', self.spek_policy if hasattr(self, 'spek_policy') else "default-src 'self'; connect-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'")
             super().end_headers()
 
         def respond(self, status, body=b'', typ='text/plain; charset=utf-8'):
@@ -139,6 +169,13 @@ def create_handler(env: Environment, teacher: bool = False):
             self.send_header('Content-Length', str(len(body)))
             self.end_headers()
             self.wfile.write(body)
+
+        def spek_html(self, body):
+            hashes = ' '.join("'sha256-" + base64.b64encode(hashlib.sha256(script).digest()).decode() + "'"
+                              for script in re.findall(rb'<script(?:\s[^>]*)?>(.*?)</script>', body, re.S))
+            self.spek_policy = ("default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; "
+                                "frame-ancestors 'none'; script-src " + (hashes or "'none'"))
+            return self.respond(200, body, 'text/html; charset=utf-8')
 
         def json(self, status, value):
             return self.respond(status, jsonify(value), 'application/json; charset=utf-8')
@@ -151,6 +188,7 @@ def create_handler(env: Environment, teacher: bool = False):
         def do_GET(self):
             u = urllib.parse.urlsplit(self.path)
             route = u.path
+            editorial = env.activity_catalogue.editorial if env.activity_catalogue else None
             if teacher and route == '/open':
                 candidate = urllib.parse.parse_qs(u.query).get('key', [''])[0]
                 if not secrets.compare_digest(candidate, env.key):
@@ -162,6 +200,34 @@ def create_handler(env: Environment, teacher: bool = False):
                 return
             if teacher and not self.authed():
                 return self.respond(401, b'Espace local protege. Relancer le lanceur et utiliser son lien de session.')
+            univers = env.activity_catalogue.univers if env.activity_catalogue else None
+            if univers and route.startswith('/api/univers'):
+                try:
+                    if route == '/api/univers.json':
+                        return self.json(200, univers.listing(teacher))
+                    detail = re.fullmatch(r'/api/univers/([a-z0-9-]+)\.json', route)
+                    if detail:
+                        query = urllib.parse.parse_qs(u.query)
+                        return self.json(200, univers.describe(detail[1], query.get('cours', [None])[0], teacher))
+                    image = re.fullmatch(r'/api/univers/image/([a-z0-9-]+)/([a-z0-9-]+)', route)
+                    if image:
+                        mime, body = univers.image(*image.groups())
+                        return self.respond(200, body, mime)
+                except KeyError:
+                    return self.respond(404)
+                except sqlite3.Error:
+                    return self.json(503, {'error': 'Univers indisponible'})
+            page = re.fullmatch(r'/univers-spek/([a-z0-9-]+)/([a-z0-9-]+)/fr/(index\.html|document\.json)', route)
+            if not teacher and univers and page:
+                try:
+                    body = univers.spek(*page.groups())
+                    if page[3] == 'document.json':
+                        return self.respond(200, body, 'application/json; charset=utf-8')
+                    return self.spek_html(body)
+                except (KeyError, OSError, ValueError):
+                    return self.respond(404, b'Fiche de contexte indisponible')
+                except sqlite3.Error:
+                    return self.respond(503)
             # Catalogue facultatif séparé des images et prompts des Kristals.
             if route == '/api/personnages/catalogue.json':
                 try:
@@ -209,6 +275,16 @@ def create_handler(env: Environment, teacher: bool = False):
                     return self.respond(404, b'Integration indisponible')
                 if candidate.stat().st_size > 2_000_000:
                     return self.respond(413, b'Ressource trop grande')
+                if not teacher and filename == 'activites.json':
+                    try:
+                        data = json.loads(candidate.read_bytes())
+                        items = data['activites']
+                        return self.json(200, {**data, 'activites': [
+                            {key: item[key] for key in ('cours_id', 'titre', 'type', 'consigne',
+                                                        'texte', 'question', 'choix') if key in item}
+                            for item in items]})
+                    except (ValueError, OSError, KeyError, TypeError):
+                        return self.respond(500, b'Catalogue des activites invalide')
                 return self.respond(200, candidate.read_bytes(), 'application/json; charset=utf-8')
             if route == '/api/tandem/preview.json':
                 # La session de l'enseignant est vérifiée au début de do_GET.
@@ -226,6 +302,102 @@ def create_handler(env: Environment, teacher: bool = False):
                 try:return self.json(200,missions_demo.role(ENGINE,p.get('mission',[''])[0],p.get('role',[''])[0]))
                 except (ValueError,OSError,ImportError,KeyError,TypeError) as exc:
                     return self.json(400,{'error':str(exc)})
+            if route == '/api/activite-locale.json':
+                query = urllib.parse.parse_qs(u.query)
+                locale = query.get('locale', ['fr-CA'])[0]
+                activity = env.find_activity(query.get('id', [None])[0])
+                if activity is None or locale not in activity.views:
+                    return self.respond(404, b'Activite locale indisponible')
+                return self.json(200, activity.view(locale))
+            page = re.fullmatch(
+                r'/(apercus-spek|portail-spek|notions-spek)/([a-z][a-z0-9-]{1,79})/(fr|en)/(index\.html|document\.json)', route)
+            if not teacher and page and env.activity_catalogue:
+                try:
+                    if page[1] == 'apercus-spek' and env.activity_catalogue.activity_themes.get(page[2]):
+                        if env.find_activity(page[2]) is None:
+                            return self.respond(404)
+                    body = env.activity_catalogue.page(*page.groups())
+                    if page[4] == 'document.json':
+                        return self.respond(200, body, 'application/json; charset=utf-8')
+                    if page[1] == 'apercus-spek' and (theme := env.activity_catalogue.activity_themes.get(page[2])):
+                        body = univers.decorate(body, univers.describe(theme))
+                    return self.spek_html(body)
+                except (KeyError, OSError, ValueError):
+                    return self.respond(404, b'Page Spek indisponible')
+            if not teacher and route.startswith('/eleve/konstellation/') and env.activity_catalogue:
+                name = route.removeprefix('/eleve/konstellation/') or 'index.html'
+                types = {'html': 'text/html', 'js': 'text/javascript', 'mjs': 'text/javascript',
+                         'css': 'text/css', 'json': 'application/json', 'svg': 'image/svg+xml'}
+                try:
+                    return self.respond(200, env.activity_catalogue.explorer_file(name),
+                                        types[name.rsplit('.', 1)[-1]])
+                except (KeyError, OSError, ValueError):
+                    return self.respond(404, b'Apercu Konstellation indisponible')
+            if not teacher and route.startswith('/eleve/mondes-v12/'):
+                worlds = env.activity_catalogue.worlds if env.activity_catalogue else None
+                if not worlds or not worlds.node:
+                    return self.respond(404, b'Micro-mondes indisponibles')
+                name = route.removeprefix('/eleve/mondes-v12/') or 'index.html'
+                if name == 'data/catalogue.json':
+                    return self.json(200, {'verification': 'server', 'items': worlds.catalogue})
+                if name not in WORLD_ASSETS:
+                    return self.respond(404, b'Ressource indisponible')
+                return self.respond(200, (WORLD_ROOT / name).read_bytes(), WORLD_ASSETS[name] + '; charset=utf-8')
+            if not teacher and route == '/api/portail-spek.json' and env.activity_catalogue:
+                return self.json(200, [{'id': key, 'titre': item['title']}
+                                      for key, item in env.activity_catalogue.portal.items()])
+            if teacher and route == '/api/activites-locales/scenarios.json' and env.activity_catalogue:
+                return self.json(200, env.activity_catalogue.scenarios)
+            if teacher and route == '/api/activites-locales/couverture.json' and env.activity_catalogue:
+                catalog = env.activity_catalogue
+                activities = {}
+                variants = {}
+                for activity in catalog.activities.values():
+                    rows = variants if activity.id in catalog.activity_themes else activities
+                    rows.setdefault(activity.course, []).append(activity.id)
+                worlds = {}
+                if catalog.worlds:
+                    for world in catalog.worlds.catalogue:
+                        worlds.setdefault(world['kristal_id'], []).append(world['id'])
+                published = editorial.published_ids() if editorial else set()
+                return self.json(200, [{
+                    'id': cid, 'titre': course['titre'], 'discipline': course.get('discipline', ''),
+                    'lecon_eleve': cid in published or (env.content / 'publications/eleve' / (cid + '.json')).is_file(),
+                    'activites': activities.get(cid, []), 'variantes': variants.get(cid, []),
+                    'micro_mondes': worlds.get(cid, []),
+                } for cid, course in env.by_id.items()])
+            if teacher and editorial:
+                try:
+                    if route == '/api/lecons-locales.json':
+                        return self.json(200, editorial.summary())
+                    preview = re.fullmatch(r'/api/lecons-locales/preview/([A-Za-z0-9_-]{1,80})\.json', route)
+                    if preview:
+                        return self.json(200, editorial.preview(preview[1]))
+                    lesson = re.fullmatch(r'/api/lecons-locales/([A-Za-z0-9_-]{1,80})\.json', route)
+                    if lesson:
+                        return self.json(200, editorial.detail(lesson[1]))
+                except (ValueError, OSError, sqlite3.Error) as exc:
+                    return self.json(422, {'error': str(exc)})
+            banks = env.activity_catalogue.banks if env.activity_catalogue else None
+            if teacher and banks:
+                try:
+                    if route == '/api/banques-locales.json':
+                        return self.json(200, banks.summary())
+                    bank = re.fullmatch(r'/api/banques-locales/([A-Za-z0-9_-]{1,80})\.json', route)
+                    if bank:
+                        return self.json(200, banks.detail(bank[1]))
+                except (ValueError, OSError, sqlite3.Error):
+                    return self.json(422, {'error': 'Banque de travail indisponible'})
+            if not teacher and banks and route == '/api/banques-locales/disponibles.json':
+                try:
+                    return self.json(200, list(banks.counts()))
+                except sqlite3.Error:
+                    return self.json(503, {'error': 'Stockage local indisponible'})
+            if teacher and route == '/api/activites-locales/tentatives.json' and env.find_activity():
+                try:
+                    return self.json(200, env.find_activity().store.list_attempts())
+                except sqlite3.Error:
+                    return self.json(503, {'error': 'Stockage local indisponible'})
             if route == '/api/pack.json':
                 if teacher: return self.json(200,env.pack)
                 public=dict(env.pack)
@@ -233,6 +405,33 @@ def create_handler(env: Environment, teacher: bool = False):
                                    'publication_eleve': bool(env.pack.get('politique_publication') != 'vues_separees' or
                                      (env.content and (env.content/'publications'/'eleve'/(c['id']+'.json')).is_file()))}
                                   for c in env.pack['cours']]
+                if univers:
+                    public['univers_classe'] = True
+                if env.activity_catalogue and env.activity_catalogue.portal:
+                    public['portail_spek'] = True
+                if env.activity_catalogue and env.activity_catalogue.explorer:
+                    public['exploration_konstellation'] = True
+                projected = {c['id']: c for c in public['cours']}
+                if editorial:
+                    for cid in editorial.published_ids():
+                        if cid in projected:
+                            projected[cid]['publication_eleve'] = True
+                if env.activity_catalogue and env.activity_catalogue.worlds and env.activity_catalogue.worlds.node:
+                    public['micro_mondes'] = True
+                    for world in env.activity_catalogue.worlds.catalogue:
+                        projected[world['kristal_id']]['micro_mondes'] = True
+                if env.activity_catalogue:
+                    for cid in env.activity_catalogue.notions:
+                        projected[cid]['fiche_decouverte'] = True
+                for item in env.activities().values():
+                    if env.activity_catalogue and item.id in env.activity_catalogue.activity_themes:
+                        continue
+                    course = projected[item.course]
+                    course['activite_locale'] = True
+                    course.setdefault('activites_locales', []).append({
+                        'id': item.id, 'titre': item.views['fr-CA']['title'],
+                        'spek': bool(env.activity_catalogue),
+                    })
                 return self.json(200, public)
             if route == '/api/health':
                 return self.json(200, {'service': 'ekole', 'espace': 'editeur' if teacher else 'public',
@@ -250,7 +449,11 @@ def create_handler(env: Environment, teacher: bool = False):
                 try:return self.json(200,env.student_course(cid))
                 except (ValueError,OSError,json.JSONDecodeError):return self.respond(500,b'Publication invalide')
             if route == '/api/editor-config' and teacher:
-                return self.json(200, {'csrf': env.csrf, 'edition': env.edition, 'port_public': env.port_public})
+                return self.json(200, {'csrf': env.csrf, 'edition': env.edition, 'port_public': env.port_public,
+                                       'cours_activites_locales': sorted({item.course for item in env.activities().values()}),
+                                       'banque_scenarios': bool(env.activity_catalogue),
+                                       'banques_questions': bool(env.activity_catalogue and env.activity_catalogue.banks),
+                                       'lecons_locales': bool(editorial), 'univers': bool(univers)})
             match = re.fullmatch(r'/api/cours/([A-Za-z0-9_-]{1,80})\.json', route)
             if match:
                 file = env.course_path(match[1])
@@ -259,13 +462,145 @@ def create_handler(env: Environment, teacher: bool = False):
                 try:
                     # Même URL pour les deux vues mais une provenance différente.
                     return self.respond(200,file.read_bytes(),'application/json; charset=utf-8') if teacher else self.json(200,env.student_course(match[1]))
-                except (OSError,ValueError,json.JSONDecodeError):
+                except (OSError,ValueError,sqlite3.Error):
                     return self.respond(500,b'Erreur de lecture')
             if route.startswith('/api/'):
                 return self.respond(404, b'API inconnue')
             return super().do_GET()
 
+        def local_json(self, max_length, parser=None):
+            host = self.headers.get('Host')
+            if (host not in (f'127.0.0.1:{self.server.server_port}', f'localhost:{self.server.server_port}')
+                    or self.headers.get('Origin') != f'http://{host}'):
+                raise RequestError(403, 'Origine locale attendue')
+            if self.headers.get('Content-Type', '').split(';')[0] != 'application/json':
+                raise RequestError(415, 'JSON requis')
+            length = self.headers.get('Content-Length', '')
+            if (not re.fullmatch(r'[0-9]{1,6}', length) or not 1 <= int(length) <= max_length
+                    or self.headers.get('Transfer-Encoding') is not None):
+                raise RequestError(413, 'Taille de réponse invalide')
+            data = (parser or json.loads)(self.rfile.read(int(length)))
+            if not isinstance(data, dict):
+                raise ValueError('Objet JSON attendu')
+            return data
+
         def do_POST(self):
+            route = urllib.parse.urlsplit(self.path).path
+            univers = env.activity_catalogue.univers if env.activity_catalogue else None
+            if univers and route in ('/api/univers/publier', '/api/univers/image'):
+                if not teacher or not self.authed():
+                    return self.respond(401, b'Session requise')
+                if not env.edition or not secrets.compare_digest(self.headers.get('X-Ekole-CSRF', ''), env.csrf):
+                    return self.respond(403, b'Edition ou jeton requis')
+                try:
+                    data = self.local_json(820000)
+                    if route == '/api/univers/publier':
+                        return self.json(200, univers.publish(data))
+                    raw = base64.b64decode(data['image'], validate=True)
+                    univers.save_image(data['theme'], data['style'], data['alt'], raw)
+                    return self.json(200, {'published': True})
+                except RequestError as exc:
+                    return self.json(exc.status, {'error': str(exc)})
+                except (KeyError, TypeError, ValueError):
+                    return self.json(422, {'error': 'Sélection, image ou description invalide.'})
+                except sqlite3.Error:
+                    return self.json(503, {'error': 'Stockage local indisponible'})
+            lesson_route = re.fullmatch(r'/api/lecons-locales/(prepare|save|review|publish|withdraw)',
+                                        urllib.parse.urlsplit(self.path).path)
+            editorial = env.activity_catalogue.editorial if env.activity_catalogue else None
+            if lesson_route and editorial:
+                if not teacher or not self.authed():
+                    return self.respond(401, b'Session requise')
+                if not env.edition or not secrets.compare_digest(self.headers.get('X-Ekole-CSRF', ''), env.csrf):
+                    return self.respond(403, b'Edition ou jeton requis')
+                try:
+                    data = self.local_json(160000, env.find_activity().loads)
+                    action = lesson_route[1]
+                    if action == 'prepare':
+                        result = editorial.prepare(data.get('parcours'))
+                    elif action == 'publish':
+                        result = editorial.publish(data.get('courses'), data.get('confirmed'))
+                    else:
+                        result = getattr(editorial, action)(data.get('course'), data)
+                    return self.json(200, result)
+                except RequestError as exc:
+                    return self.json(exc.status, {'error': str(exc)})
+                except (ValueError, OSError, TypeError) as exc:
+                    return self.json(422, {'error': str(exc)})
+                except sqlite3.Error:
+                    return self.json(503, {'error': 'Stockage local indisponible'})
+            bank_route = re.fullmatch(r'/api/banques-locales/(start|review|withdraw)',
+                                      urllib.parse.urlsplit(self.path).path)
+            banks = env.activity_catalogue.banks if env.activity_catalogue else None
+            if bank_route and banks:
+                action = bank_route[1]
+                if action == 'start':
+                    if teacher:
+                        return self.respond(403)
+                else:
+                    if not teacher or not self.authed():
+                        return self.respond(401, b'Session requise')
+                    if not env.edition or not secrets.compare_digest(self.headers.get('X-Ekole-CSRF', ''), env.csrf):
+                        return self.respond(403, b'Edition ou jeton requis')
+                try:
+                    data = self.local_json(32768, env.find_activity().loads)
+                    if action == 'start':
+                        return self.json(200, banks.create_attempt(data.get('cours')))
+                    return self.json(200, banks.change(data, withdraw=action == 'withdraw'))
+                except RequestError as exc:
+                    return self.json(exc.status, {'error': str(exc)})
+                except (ValueError, OSError, TypeError) as exc:
+                    return self.json(422, {'error': str(exc)})
+                except sqlite3.Error:
+                    return self.json(503, {'error': 'Stockage local indisponible'})
+            if not teacher and urllib.parse.urlsplit(self.path).path == '/api/micro-mondes/verifier':
+                worlds = env.activity_catalogue.worlds if env.activity_catalogue else None
+                if not worlds or not worlds.node:
+                    return self.respond(404, b'Micro-mondes indisponibles')
+                try:
+                    return self.json(200, worlds.evaluate(self.local_json(8192)))
+                except RequestError as exc:
+                    return self.json(exc.status, {'error': str(exc)})
+                except (ValueError, TypeError) as exc:
+                    return self.json(422, {'error': str(exc)})
+                except OSError:
+                    return self.json(503, {'error': 'Vérification indisponible'})
+            if not teacher and urllib.parse.urlsplit(self.path).path == '/api/integrations/activites/verifier':
+                try:
+                    data = self.local_json(512)
+                    if set(data) != {'cours', 'choix'} or type(data['choix']) is not int:
+                        raise ValueError('Choix invalide')
+                    source = env.content / 'integrations' / 'activites.json' if env.content else None
+                    if (source is None or source.is_symlink() or not source.is_file()
+                            or not source.resolve().is_relative_to(env.content.resolve())
+                            or source.stat().st_size > 2_000_000):
+                        return self.respond(404, b'Activite indisponible')
+                    entry = next((item for item in json.loads(source.read_bytes())['activites']
+                                  if item['cours_id'] == data['cours'] and item['type'] == 'question-choix'), None)
+                    if entry is None or not 0 <= data['choix'] < len(entry['choix']):
+                        raise ValueError('Choix invalide')
+                    return self.json(200, {'correct': data['choix'] == entry['reponse'],
+                                           'retroaction': entry['retroaction']})
+                except RequestError as exc:
+                    return self.json(exc.status, {'error': str(exc)})
+                except (ValueError, OSError, KeyError, TypeError):
+                    return self.json(422, {'error': 'Exercice ou choix invalide'})
+            route = urllib.parse.urlsplit(self.path).path
+            activity = re.fullmatch(r'/api/activite-locale/(start|submit|result)', route)
+            if activity and not teacher:
+                query = urllib.parse.parse_qs(urllib.parse.urlsplit(self.path).query)
+                item = env.find_activity(query.get('id', [None])[0], include_closed=activity[1] != 'start')
+                if item is None:
+                    return self.respond(404, b'Activite locale indisponible')
+                try:
+                    data = self.local_json(32768, item.loads)
+                    return self.json(200, item.perform(activity[1], data))
+                except RequestError as exc:
+                    return self.json(exc.status, {'error': str(exc)})
+                except (ValueError, TypeError, UnicodeError) as exc:
+                    return self.json(422, {'error': str(exc)})
+                except sqlite3.Error:
+                    return self.json(503, {'error': 'Stockage local indisponible'})
             # EKOLE_MISSIONS_INTEGREES_20261024 : calcul fictif, aucun état scolaire.
             if not teacher and urllib.parse.urlsplit(self.path).path == '/api/demo-missions/check':
                 if self.headers.get('Origin') != f'http://127.0.0.1:{self.server.server_port}':
@@ -282,6 +617,24 @@ def create_handler(env: Environment, teacher: bool = False):
                     return self.json(200,result)
                 except (ValueError,OSError,ImportError,KeyError,TypeError,json.JSONDecodeError) as exc:
                     return self.json(400,{'error':str(exc)})
+            correction = re.fullmatch(r'/api/activites-locales/tentatives/(inspect|review|release)', route)
+            if correction and teacher and env.find_activity():
+                if not self.authed():
+                    return self.respond(401, b'Session requise')
+                if not secrets.compare_digest(self.headers.get('X-Ekole-CSRF', ''), env.csrf):
+                    return self.respond(403, b'Protection CSRF')
+                if correction[1] != 'inspect' and not env.edition:
+                    return self.respond(403, b'Edition desactivee')
+                item = env.find_activity()
+                try:
+                    return self.json(200, teacher_attempt(item.store, correction[1],
+                                                          self.local_json(32768, item.loads)))
+                except RequestError as exc:
+                    return self.json(exc.status, {'error': str(exc)})
+                except (ValueError, TypeError) as exc:
+                    return self.json(422, {'error': str(exc)})
+                except sqlite3.Error:
+                    return self.json(503, {'error': 'Stockage local indisponible'})
             if not teacher or not env.edition:
                 return self.respond(403, b'Edition desactivee')
             if not self.authed():
@@ -395,6 +748,11 @@ def run():
     args.add_argument('--ouvrir', action='store_true', help='Ouvrir les pages dans le navigateur')
     args.add_argument('--verifier', action='store_true', help='Valider le corpus, sans démarrer le serveur')
     args.add_argument('--tandem-preview', metavar='FICHIER', help='Aperçu enseignant local de missions synthétiques; aucune connexion Orgo')
+    activity_flags = args.add_mutually_exclusive_group()
+    activity_flags.add_argument('--activites-locales', type=pathlib.Path, metavar='CATALOGUE',
+                                help='Active le catalogue local et ses pages Spek compilées')
+    activity_flags.add_argument('--activite-locale', type=pathlib.Path, metavar='PROJECTION',
+                      help='Active la démonstration locale avec une projection privée compilée')
     a = args.parse_args()
     if a.contenu.lower() == 'none':
         content = None
@@ -411,7 +769,21 @@ def run():
     try:
         projection = load_synthetic_preview(a.tandem_preview) if a.tandem_preview else None
         env = Environment(content, a.edition, a.port, tandem_preview=projection)
-    except (OSError, ValueError, json.JSONDecodeError) as exc:
+        inkui_root = pathlib.Path(os.environ.get('EKOLE_INKUISITE', ENGINE.parent / 'Inkuisite')).resolve()
+        if a.activites_locales:
+            index = a.activites_locales.resolve()
+            if index.is_relative_to(ENGINE):
+                raise ValueError('Placer le catalogue privé en dehors du dépôt moteur')
+            env.activity_catalogue = Catalogue(index, env.by_id, inkui_root, a.verifier, content=content, pack=env.pack)
+        if a.activite_locale:
+            path = a.activite_locale.resolve()
+            if path.is_relative_to(ENGINE):
+                raise ValueError('Placer la projection privée en dehors du dépôt moteur')
+            db_path = path.with_name('tentatives.sqlite3')
+            if db_path.is_symlink():
+                raise ValueError('Base de tentatives symbolique interdite')
+            env.activity = Activity(path, db_path, env.by_id, inkui_root, a.verifier)
+    except (OSError, ValueError, KeyError, TypeError, ImportError, sqlite3.Error) as exc:
         args.error('Corpus / projection invalide : ' + str(exc))
     print(f'[EKOLE] Moteur    : {ENGINE}')
     print(f'[EKOLE] Contenu   : {content if content else "aucun (moteur autonome)"}')

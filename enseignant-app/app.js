@@ -68,7 +68,16 @@
     const all=[['tabText','text'],['tabVisuals','visuals'],['tabStudent','student']];
     for(const [id,value] of all){const b=$('#'+id);if(!b)throw Error('Onglet requis manquant : '+id);b.onclick=()=>{state.section=value;render();};}
     const album=make(tabs,'button','','Album des images');album.id='tabAlbum';album.type='button';album.onclick=()=>{state.section='album';render();};
-    // Les handlers originaux ne sont pas chargés dans cette version B3.
+    for(const [id,label,visible] of [['univers','Univers de la classe',state.cfg.univers],
+      ['scenarios','Scénarios Kontexte',state.cfg.banque_scenarios],
+      ['attempts','Revue Inkuisite',state.cfg.cours_activites_locales?.length],
+      ['coverage','Couverture Québec',state.cfg.banque_scenarios],
+      ['banks','Banques de questions',state.cfg.banques_questions],
+      ['lessons','Leçons structurées',state.cfg.lecons_locales]]){
+      if(!visible)continue;
+      const control=button(tabs,label,()=>{state.section=id;render();});
+      control.id='tab-'+id;
+    }
   }
   async function bootstrap(){try{
     [state.cfg,state.pack]=await Promise.all([json('/api/editor-config'),json('/api/pack.json')]);
@@ -76,8 +85,12 @@
     $('#publicHome').href='http://127.0.0.1:'+state.cfg.port_public+'/eleve/';
     document.title=state.pack.nom+' — Atelier Enseignant B3';
     initTabs();
+    if(state.cfg.univers)state.section='univers';
     for(const c of [...state.pack.cours].sort((a,b)=>(a.discipline||'').localeCompare(b.discipline||'','fr')||a.titre.localeCompare(b.titre,'fr'))){const o=make($('#cours'),'option','',(c.discipline||'Cours')+' · '+c.titre);o.value=c.id;}
-    $('#cours').addEventListener('change',loadCourse);
+    $('#cours').addEventListener('change',()=>{
+      if(state.section==='univers')state.section='text';
+      loadCourse();
+    });
     setStatus(`${state.pack.cours.length} cours · ${state.cfg.edition?'Édition locale active':'Lecture seule'} · Publication distincte pour l’élève`);
     await render();
   }catch(e){setStatus('Chargement de l’atelier impossible : '+e.message,'error');}}
@@ -91,8 +104,12 @@
     }catch(e){setStatus('Impossible de charger le cours : '+e.message,'error');}
   }
   async function selectCourse(cid,section='visuals',slot=''){if($('#cours').value!==cid){$('#cours').value=cid;await loadCourse();}state.section=section;state.slotToFocus=slot;await render();}
-  async function render(){const root=clear();for(const [id,value] of [['tabText','text'],['tabVisuals','visuals'],['tabStudent','student'],['tabAlbum','album']]){$('#'+id)?.setAttribute('aria-current',state.section===value?'page':'false');}
-    try{if(state.section==='album')await renderAlbum(root);else if(!state.course)note(root,'Choisis un cours, ou ouvre l’Album pour explorer les illustrations des autres cours.');
+  async function render(){const root=clear();for(const [id,value] of [['tabText','text'],['tabVisuals','visuals'],['tabStudent','student'],['tabAlbum','album'],['tab-scenarios','scenarios'],['tab-attempts','attempts'],['tab-coverage','coverage'],['tab-banks','banks'],['tab-lessons','lessons'],['tab-univers','univers']]){$('#'+id)?.setAttribute('aria-current',state.section===value?'page':'false');}
+    try{if(state.section==='univers')await window.EkoleUniversEnseignant(root,{make,button,json,cfg:state.cfg});
+      else if(state.section==='lessons')await window.EkoleLeconsLocales(root,{make,button,json,cfg:state.cfg,courseId:state.course?.id,renderMarkdown});
+      else if(['scenarios','attempts','coverage','banks'].includes(state.section))
+      await window.EkoleActivitesEnseignant[state.section](root,{make,button,json,cfg:state.cfg,selectCourse,courseId:state.course?.id});
+      else if(state.section==='album')await renderAlbum(root);else if(!state.course)note(root,'Choisis un cours, ou ouvre l’Album pour explorer les illustrations des autres cours.');
       else if(state.section==='text')renderText(root);else if(state.section==='visuals')await renderVisuals(root);else await renderStudent(root);
     }catch(e){note(root,'Erreur : '+e.message,'b3-error');setStatus(e.message,'error');}
   }
@@ -131,6 +148,11 @@
     const draft=await json('/api/brouillon-eleve/'+safeId(state.course.id)+'.json');const modules=draft.modules||[];
     note(root,draft._published_exists?'Une version Élève est publiée. Les modifications ci-dessous restent privées jusqu’à approbation.':'Aucune version Élève publiée pour ce cours.','b3-notice');
     const href=make(root,'a','b3-open-child','Voir la leçon dans l’espace Élève ↗');href.href='http://127.0.0.1:'+state.cfg.port_public+'/eleve/?cours='+safeId(state.course.id);href.target='_blank';href.rel='noopener noreferrer';
+    if(state.cfg.cours_activites_locales?.includes(state.course.id)){
+      const activity=make(root,'a','b3-open-child','Voir l’activité pilote ↗');
+      activity.href=href.href+'&vue=activite';activity.target='_blank';activity.rel='noopener noreferrer';
+      note(root,'L’activité pilote est générée à partir de son propre Kristal local. Les champs ci-dessous modifient la leçon Élève existante.','b3-notice');
+    }
     const input=[];
     for(const [i,m] of modules.entries()){const card=make(root,'section','b3-child-card');make(card,'h3','',`Étape ${i+1}`);
       const title=make(card,'input','b3-title-input');title.value=m.titre||'';title.disabled=!state.cfg.edition;labelFor(card,'Titre destiné à l’enfant',title);

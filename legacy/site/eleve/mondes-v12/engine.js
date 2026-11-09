@@ -5,27 +5,27 @@ const TYPES=['representations','repartition','causalite','preuves','expression']
 const fail=x=>{throw Error('MicroMonde v12 : '+x);};
 const int=x=>Number.isInteger(x);
 const distinct=a=>new Set(a).size===a.length;
-function validateSpec(s){
+function validateSpec(s,presentation=false){
  if(!s||typeof s!=='object'||!/^qc-pri-[a-z]+-\d{3}$/.test(s.kristal_id)||!/^[-a-z0-9]{4,64}$/.test(s.id)||!TYPES.includes(s.type))fail('identifiant/type');
  if(!s.title||!s.instruction||s.evaluation!=='entrainement_non_certifiant'||s.source_review!=='revue_requise')fail('statut et texte');
  const p=s.parameters;if(!p||typeof p!=='object')fail('paramètres');
  switch(s.type){
- case 'representations':if(!int(p.parts)||p.parts<2||p.parts>10||!int(p.chosen)||p.chosen<1||p.chosen>=p.parts||!int(p.group_size)||p.group_size<1||p.group_size>5)fail('fraction');break;
+ case 'representations':if(!int(p.parts)||p.parts<2||p.parts>10||(!presentation&&(!int(p.chosen)||p.chosen<1||p.chosen>=p.parts))||!int(p.group_size)||p.group_size<1||p.group_size>5)fail('fraction');break;
  case 'repartition':if(!int(p.total)||!int(p.bins)||p.total<2||p.total>30||p.bins<2||p.bins>6||p.total<p.bins)fail('répartition');break;
- case 'causalite':if(!Array.isArray(p.events)||p.events.length<3||p.events.length>6||!p.events.every(e=>e&&/^e\d+$/.test(e.id)&&typeof e.text==='string'&&e.text.length>5)||!distinct(p.events.map(e=>e.id))||!Array.isArray(p.order)||p.order.length!==p.events.length||!distinct(p.order)||!p.order.every(x=>p.events.some(e=>e.id===x))||!Array.isArray(p.links)||!p.links.every(l=>p.events.some(e=>e.id===l.from)&&p.events.some(e=>e.id===l.to)&&l.from!==l.to))fail('récit');break;
- case 'preuves':if(!Array.isArray(p.statements)||p.statements.length<3||p.statements.length>8||!distinct(p.statements.map(x=>x.id))||!p.statements.every(x=>typeof x.text==='string'&&x.text.length>5&&['observation','interpretation'].includes(x.kind)))fail('démarche');break;
+ case 'causalite':if(!Array.isArray(p.events)||p.events.length<3||p.events.length>6||!p.events.every(e=>e&&/^e\d+$/.test(e.id)&&typeof e.text==='string'&&e.text.length>5)||!distinct(p.events.map(e=>e.id))||(!presentation&&(!Array.isArray(p.order)||p.order.length!==p.events.length||!distinct(p.order)||!p.order.every(x=>p.events.some(e=>e.id===x))))||!Array.isArray(p.links)||!p.links.every(l=>p.events.some(e=>e.id===l.from)&&p.events.some(e=>e.id===l.to)&&l.from!==l.to))fail('récit');break;
+ case 'preuves':if(!Array.isArray(p.statements)||p.statements.length<3||p.statements.length>8||!distinct(p.statements.map(x=>x.id))||!p.statements.every(x=>typeof x.text==='string'&&x.text.length>5&&(presentation||['observation','interpretation'].includes(x.kind))))fail('démarche');break;
  case 'expression':if(!Array.isArray(p.gestures)||p.gestures.length<2||p.gestures.length>6||!p.gestures.every(x=>typeof x==='string'&&x.trim())||!p.intention||typeof p.intention!=='string')fail('jeu');break;
  }
  return true;
 }
-function initial(s){validateSpec(s);const p=s.parameters;switch(s.type){
+function initial(s,presentation=false){validateSpec(s,presentation);const p=s.parameters;switch(s.type){
  case 'representations':return {surface:[],bande:[],collection:[]};
  case 'repartition':return {bins:Array(p.total).fill(-1),active:null};
  case 'causalite':return {order:p.events.map(x=>x.id).reverse(),links:{}};
  case 'preuves':return {classifications:{}};
  case 'expression':return {selected:[],comment:''};
  }}
-function apply(s,state,a){validateSpec(s);const p=s.parameters;const n=JSON.parse(JSON.stringify(state));if(!a||typeof a!=='object')return n;
+function apply(s,state,a,presentation=false){validateSpec(s,presentation);const p=s.parameters;const n=JSON.parse(JSON.stringify(state));if(!a||typeof a!=='object')return n;
  switch(s.type){
  case 'representations':if(['surface','bande','collection'].includes(a.part)&&a.action==='toggle'&&int(a.index)&&a.index>=0&&a.index<p.parts){const set=new Set(n[a.part]);set.has(a.index)?set.delete(a.index):set.add(a.index);n[a.part]=[...set].sort((x,y)=>x-y);}break;
  case 'repartition':if(a.action==='select'&&int(a.index)&&a.index>=0&&a.index<p.total)n.active=a.index;if(a.action==='place'&&int(a.bin)&&a.bin>=-1&&a.bin<p.bins&&int(n.active)&&n.active>=0&&n.active<p.total){n.bins[n.active]=a.bin;n.active=null;}if(a.action==='return'&&int(a.index)&&a.index>=0&&a.index<p.total)n.bins[a.index]=-1;break;

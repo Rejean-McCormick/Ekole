@@ -9,11 +9,14 @@ ID=re.compile(r'^qc-pri-[a-z]+-\d{3}$')
 TYPES={'representations','repartition','causalite','preuves','expression'}
 PUBLIC={'id','kristal_id','type','title','instruction','parameters','evaluation','source_review','premisse','prompt_visuel','image_path','representation'}
 
-def compile_mondes(root=ROOT, *, check=False):
+def compile_mondes(root=ROOT, *, check=False, course_ids=None):
  root=pathlib.Path(root).resolve()
- public=json.loads((root/'site/eleve/data/eleves/catalogue.json').read_text(encoding='utf8'))
- if len(public['courses'])!=202:raise ValueError('202 références requises')
- course_ids={c['id'] for c in public['courses']}
+ if course_ids is None:
+  public=json.loads((root/'site/eleve/data/eleves/catalogue.json').read_text(encoding='utf8'))
+  if len(public['courses'])!=202:raise ValueError('202 références requises')
+  course_ids={c['id'] for c in public['courses']}
+ if not all(isinstance(kid,str) and ID.fullmatch(kid) for kid in course_ids):
+  raise ValueError('Identifiant de cours invalide')
  items=[]; seen=set(); ids=[]
  for kid in sorted(course_ids):
   base=root/'kristals'/kid/'experience/ATELIERS_V12.json'

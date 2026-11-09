@@ -107,3 +107,18 @@ footer{border-top-color:var(--brand-line);color:var(--brand-muted)}
 .personnage-portrait img{width:100%;height:100%;object-fit:contain}
 .personnage-portrait [hidden]{display:none!important}
 .mission-role-row .mission-btn{display:inline-flex;align-items:center;gap:8px}
+
+.activity-form { display: grid; gap: 1rem; margin-block: 1rem; }
+.activity-form label { display: grid; gap: .35rem; }
+.activity-form :is(input, textarea) { font: inherit; padding: .5rem; max-width: 32rem; }
+.activity-form button { justify-self: start; }
+.invitation-groups { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.invitation-groups li { padding: .35rem .65rem; border: 1px solid currentColor; border-radius: .25rem; }
+.activity-options { border: 1px solid currentColor; margin: 0; padding: .6rem 1rem; }
+.activity-options label { display: flex; gap: .5rem; align-items: baseline; margin-block: .4rem; }
+
+.ekole-univers-card{background:var(--brand-soft);color:var(--brand-ink);border:1px solid var(--brand-border);border-radius:16px;padding:16px 20px;margin:14px 0}
+.ekole-univers-card h2{margin:0 0 8px}.ekole-univers-card p{margin:8px 0}.ekole-univers-card img{display:block;max-width:min(100%,560px);max-height:270px;object-fit:contain;border-radius:10px;margin-top:10px}
+:root[data-ekole-style="pastel"]{--brand:#694782;--brand-dark:#50335f;--brand-link:#694782;--brand-soft:#f0e5f8;--brand-soft-2:#faf4fc;--brand-border:#cdb4dd}
+:root[data-ekole-style="ardoise"]{--brand:#36576e;--brand-dark:#233c50;--brand-link:#36576e;--brand-soft:#e4edf3;--brand-soft-2:#f1f6f8;--brand-border:#a9c1d1}
+:root[data-ekole-style="vif"]{--brand:#9a3f16;--brand-dark:#713016;--brand-link:#9a3f16;--brand-soft:#ffebda;--brand-soft-2:#fff5eb;--brand-border:#e6b896}

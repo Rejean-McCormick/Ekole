@@ -2,6 +2,7 @@
 Les fichiers ne deviennent publics qu'après statut « pret » ET présence d'un PNG valide.
 """
 from __future__ import annotations
+import hashlib
 import json
 import re
 import struct
@@ -59,6 +60,9 @@ def validate(data: dict) -> dict:
         files.add(path)
         if a.get('statut') not in ('a_generer','a_verifier','pret') or not isinstance(a.get('alt'),str) or not a['alt'].strip():
             raise ValueError('Statut ou texte alternatif invalide')
+        if 'sha256' in a and (not isinstance(a['sha256'], str)
+                              or not re.fullmatch(r'sha256:[0-9a-f]{64}', a['sha256'])):
+            raise ValueError('Empreinte de personnage invalide')
         if a.get('type') == 'role':
             rid = a.get('role_id')
             if not isinstance(rid,str) or not ID.fullmatch(rid) or a['id'] != 'role-'+rid:
@@ -109,6 +113,9 @@ def png(root: Path, asset: dict):
     if not path.is_file() or not 33 <= path.stat().st_size <= MAX_BYTES: return None
     with path.open('rb') as f: head = f.read(33)
     if head[:8] != b'\x89PNG\r\n\x1a\n' or head[12:16] != b'IHDR': return None
+    expected = asset.get('sha256')
+    if expected and expected != 'sha256:' + hashlib.sha256(path.read_bytes()).hexdigest():
+        return None
     w,h = struct.unpack('>II',head[16:24])
     return path if 1 <= w <= 8192 and 1 <= h <= 8192 else None
 

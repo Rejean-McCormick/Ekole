@@ -5,7 +5,7 @@ const el=(tag,text,cls)=>{const x=document.createElement(tag);if(text!==undefine
 const put=(p,tag,text,cls)=>{const x=el(tag,text,cls);p.append(x);return x;};
 const button=(p,label,fn,cl='btn')=>{const b=put(p,'button',label,cl);b.type='button';b.onclick=fn;return b;};
 const box=(p,title)=>{const c=put(p,'section',undefined,'card');put(c,'h2',title);return c;};
-let catalog=[],spec=null,state=null,trials=0,shown=0;
+let catalog=[],spec=null,state=null,trials=0,shown=0,server=false;
 const link=(p,txt,href)=>{const a=put(p,'a',txt,'btn');a.href=href;return a;};
 function visual(p,s){const fig=put(p,'figure');put(fig,'strong','Illustration à venir');const description=put(fig,'p',s.image_alt||s.alt_visuel||s.description_visuelle||'Illustration associée à « '+s.title+' ».');if(s.image_url){const image=put(fig,'img');image.alt=s.image_alt||'Illustration de la situation';image.hidden=true;image.onload=()=>{image.hidden=false;description.hidden=true;};image.onerror=()=>{image.hidden=true;description.hidden=false;};image.src=s.image_url;}}
 function section(p,heading,info){const x=put(p,'div',undefined,'stage');put(x,'h3',heading);if(info)put(x,'p',info);return x;}
@@ -22,11 +22,27 @@ function renderInteraction(p){const s=spec,pr=s.parameters;
  if(s.type==='preuves'){const f=section(p,'Observation ou interprétation ?','Une observation est un constat. Une interprétation propose une explication.');for(const row of pr.statements){const r=put(f,'div',undefined,'row-item');put(r,'strong',row.text);for(const [kind,text] of [['observation','J’observe'],['interpretation','Je suppose']]){const b=button(r,text,()=>change({action:'classify',id:row.id,kind}));b.setAttribute('aria-pressed',String(state.classifications[row.id]===kind));}}}
  if(s.type==='expression'){const f=section(p,'Prépare ta scène','Sélectionne les moyens que tu vas utiliser. Tu les présenteras devant une personne.');for(const g of pr.gestures){const b=button(f,g,()=>change({action:'toggle',gesture:g}),'choice');b.setAttribute('aria-pressed',String(state.selected.includes(g)));}put(f,'p','Aucun score automatique : une personne observe l’expression, l’intention et les deux moyens employés.','teacher');}
 }
-function render(){root.replaceChildren();link(root,'← Tous les micro-mondes','./');put(root,'p','Entraînement · Pas de note scolaire','eyebrow');put(root,'h1',spec.title);put(root,'p',spec.instruction);visual(root,spec);const area=box(root,'À toi de manipuler');renderInteraction(area);const c=put(root,'div',undefined,'actions');button(c,'Vérifier mon essai',()=>{trials++;const result=E.evaluate(spec,state);shown++;showFeedback(result);},'btn primary');button(c,'Un indice',()=>showHint());button(c,'Recommencer',()=>{state=E.initial(spec);trials=0;shown=0;render();});put(root,'p','Chaque réussite vérifie seulement cette construction. Explique tes choix à une personne pour montrer ce que tu comprends.','muted');}
+function render(){root.replaceChildren();link(root,'← Tous les micro-mondes','./');put(root,'p','Entraînement · Pas de note scolaire','eyebrow');put(root,'h1',spec.title);put(root,'p',spec.instruction);visual(root,spec);const area=box(root,'À toi de manipuler');renderInteraction(area);const c=put(root,'div',undefined,'actions');button(c,'Vérifier mon essai',verify,'btn primary');button(c,'Un indice',()=>showHint());button(c,'Recommencer',()=>{state=E.initial(spec,server);trials=0;shown=0;render();});put(root,'p','Chaque réussite vérifie seulement cette construction. Explique tes choix à une personne pour montrer ce que tu comprends.','muted');}
+async function verify(){
+ const controls=[...root.querySelectorAll('button')].filter(node=>!node.disabled);
+ for(const node of controls)node.disabled=true;
+ try{
+  let result;
+  if(server){
+   const response=await fetch('/api/micro-mondes/verifier',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({id:spec.id,state})});
+   if(!response.ok)throw Error('Vérification indisponible.');
+   result=await response.json();
+  }else result=E.evaluate(spec,state);
+  trials++;shown++;showFeedback(result);
+ }catch(error){
+  put(root,'p',error.message,'status').setAttribute('role','status');
+ }finally{for(const node of controls)node.disabled=false;}
+}
 function change(a){
  const buttons=[...root.querySelectorAll('button')];
  const focusIndex=buttons.indexOf(document.activeElement);
- state=E.apply(spec,state,a);render();
+ state=E.apply(spec,state,a,server);render();
  if(focusIndex>=0){const next=root.querySelectorAll('button');
   if(next.length)next[Math.min(focusIndex,next.length-1)].focus({preventScroll:true});}
 }
@@ -40,5 +56,6 @@ function showFeedback(result){
  }
  put(s,'p','Résultat formatif, jamais une preuve de maîtrise.');s.scrollIntoView({block:'nearest',behavior:'auto'});
 }
-async function start(){try{const r=await fetch('data/catalogue.json',{cache:'no-store'});if(!r.ok)throw Error('Catalogue indisponible');const data=await r.json();catalog=data.items;const query=new URLSearchParams(location.search);const id=query.get('id');const course=query.get('cours');if(id){spec=catalog.find(x=>x.id===id);if(!spec)throw Error('Micro-monde inconnu');E.validateSpec(spec);state=E.initial(spec);render();}else{root.replaceChildren();put(root,'p','Des mondes pour essayer','eyebrow');put(root,'h1','Mes petits mondes');put(root,'p','Choisis une activité et construis une réponse avec les objets proposés. Les exercices ne donnent aucune note scolaire.');const list=put(root,'div',undefined,'catalogue');for(const item of catalog.filter(x=>!course||x.kristal_id===course)){const a=link(list,item.title,'?id='+encodeURIComponent(item.id));put(a,'p',item.instruction,'muted');}put(root,'p','Les activités sont des prototypes pédagogiques à faire réviser avec des enseignants.','muted');}}catch(e){root.replaceChildren();put(root,'h1','Activité indisponible');put(root,'p',e.message);}}start();
+async function start(){try{const r=await fetch('data/catalogue.json',{cache:'no-store'});if(!r.ok)throw Error('Catalogue indisponible');const data=await r.json();catalog=data.items;server=data.verification==='server';
+if(server){const links=document.querySelectorAll('header a');links[1].href='/eleve/?page=cours';links[1].textContent='Bibliothèque';}const query=new URLSearchParams(location.search);const id=query.get('id');const course=query.get('cours');if(id){spec=catalog.find(x=>x.id===id);if(!spec)throw Error('Micro-monde inconnu');E.validateSpec(spec,server);state=E.initial(spec,server);render();}else{root.replaceChildren();put(root,'p','Des mondes pour essayer','eyebrow');put(root,'h1','Mes petits mondes');put(root,'p','Choisis une activité et construis une réponse avec les objets proposés. Les exercices ne donnent aucune note scolaire.');const list=put(root,'div',undefined,'catalogue');for(const item of catalog.filter(x=>!course||x.kristal_id===course)){const a=link(list,item.title,'?id='+encodeURIComponent(item.id));put(a,'p',item.instruction,'muted');}put(root,'p','Les activités sont des prototypes pédagogiques à faire réviser avec des enseignants.','muted');}}catch(e){root.replaceChildren();put(root,'h1','Activité indisponible');put(root,'p',e.message);}}start();
 })();

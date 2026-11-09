@@ -7,6 +7,8 @@ const base=location.pathname.startsWith('/eleve/')?'/eleve/':'/';
 const url=(params)=>base+'?'+new URLSearchParams(params).toString();
 const a=(host,text,params,cls='')=>{const n=add(host,'a',cls,text);n.href=url(params);return n;};
 const fetchJson=async(path)=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('Ressource indisponible : '+r.status);return r.json();};
+let reviewedBanks=new Set();
+let universe=null;
 let pack, courses=new Map(), paths=new Map(), spek=null, graph=null, activities=null;
 const current=()=>new URLSearchParams(location.search);
 
@@ -23,7 +25,7 @@ function demoCompagnonActif(){
   const flag=current().get('pilote_compagnon');
   if(flag==='0'){storage.removeItem(COMPAGNON_FLAG);storage.removeItem(COMPAGNON_CHOICE);}
   if(flag==='1')storage.setItem(COMPAGNON_FLAG,'1');
-  return storage.getItem(COMPAGNON_FLAG)==='1';
+  return Boolean(universe?.choices.length)||storage.getItem(COMPAGNON_FLAG)==='1';
  }catch(_){return false;}
 }
 function anneeParcours(id){const m=/^annee-([1-6])$/.exec(id||'');return m?Number(m[1]):null;}
@@ -55,7 +57,7 @@ function choixCompagnon(root){
  const choisi=lireCompagnon(),grade=niveauPage();
  const section=add(root,'section','compagnon-choix');section.setAttribute('aria-label','Choix facultatif du compagnon de démonstration');
  add(section,'h2','','Choisis un compagnon (facultatif)');
- add(section,'p','compagnon-note','Compagnon facultatif de démonstration, sans collecte ni suivi individuel.');
+ add(section,'p','compagnon-note','Compagnon facultatif. Ton choix reste dans cette session.');
  const niveau=add(section,'label','compagnon-niveau-label','Année scolaire');
  const select=add(niveau,'select','compagnon-niveau');
  for(let i=1;i<=6;i++){const option=add(select,'option','',`${i}${i===1?'re':'e'} année`);option.value=String(i);option.selected=i===grade;}
@@ -109,8 +111,59 @@ function card(host,c,retour=''){
  return x;
 }
 function grouping(ids){const by=new Map();for(const id of ids){const c=courses.get(id);if(!c)continue;const k=c.discipline||'Autres';if(!by.has(k))by.set(k,[]);by.get(k).push(c);}return [...by.entries()].sort((a,b)=>a[0].localeCompare(b[0],'fr'));}
+function selectedUniverse(){
+ if(!universe?.choices.length)return null;
+ let saved;
+ try{saved=sessionStorage.getItem('ekole-univers');}catch(_){}
+ return universe.themes.find(item=>item.id===saved)||universe.themes.find(item=>item.id===universe.default);
+}
+function pickUniverse(root){
+ const theme=selectedUniverse();
+ if(!theme)return;
+ const box=add(root,'section','ekole-univers-card');
+ add(box,'h2','','Choisis ton univers');
+ const label=add(box,'label','stage-select-label','Univers');
+ const menu=add(label,'select','stage-picker');
+ for(const item of universe.themes){const option=add(menu,'option','',item.name);option.value=item.id;}
+ menu.value=theme.id;
+ menu.addEventListener('change',()=>{
+  try{sessionStorage.setItem('ekole-univers',menu.value);}catch(_){}
+  const chosen=universe.themes.find(item=>item.id===menu.value);
+  if(chosen?.companion && !lireCompagnon())enregistrerCompagnon(chosen.companion,niveauPage());
+  if(current().get('vue')==='activite'){
+   const next=current();next.delete('activite');location.search=next.toString();
+  }else location.reload();
+ });
+ add(box,'p','hint',theme.intro);
+ if(current().get('page')!=='parcours')a(box,'Choisir aussi un compagnon',{page:'parcours'});
+}
+async function universeForCourse(root,course,retour){
+ const theme=selectedUniverse();
+ if(!theme)return null;
+ let details;
+ try{details=await fetchJson('/api/univers/'+encodeURIComponent(theme.id)+'.json?cours='+encodeURIComponent(course.id));}
+ catch(_){return null;}
+ const box=add(root,'section','ekole-univers-card');
+ add(box,'h2','',details.name);
+ add(box,'p','',details.frame);
+ if(details.image){
+  const image=add(box,'img');image.src=details.image.url;image.alt=details.image.alt;
+ }
+ const actions=add(box,'div','quick-actions');
+ if(details.spek){
+  const context=add(actions,'a','button-link','Fiche Spek de ce cours dans cet univers');
+  context.href=details.spek;
+ }
+ if(details.activity){
+  buttonlink(actions,'Jouer dans cet univers',ctxLink(course.id,retour,{vue:'activite',activite:details.activity.id}));
+  const page=add(actions,'a','button-link','Fiche Spek de l’activité');
+  page.href='/apercus-spek/'+encodeURIComponent(details.activity.id)+'/fr/index.html';
+ }
+ return details.activity;
+}
 function pathsHome(root){
  heading(root,'Choisir un parcours','Choisis ton niveau pour retrouver les leçons disponibles.');
+ pickUniverse(root);
  choixCompagnon(root);
  const list=add(root,'div','path-cards');const featured=pack.parcours_mis_en_avant;
  const all=[...pack.parcours].sort((x,y)=>(x.id===featured?-1:0)-(y.id===featured?-1:0));
@@ -120,6 +173,7 @@ function pathsHome(root){
 function home(root){
  const featured=paths.get(pack.parcours_mis_en_avant);
  if(featured){crumb(root,[{text:'Accueil'}]);heading(root,`Bonjour, bienvenue dans ${pack.nom}`,'Commence par choisir une activité ou retrouve ton parcours.');
+ pickUniverse(root);
  presenterCompagnon(root,'Salut ! Découvrons une notion à ton rythme.','saluer');
  const hero=add(root,'section','feature-hero');add(hero,'span','eyebrow','Parcours mis en avant');add(hero,'h2','',featured.titre);
  add(hero,'p','',`${featured.cours_ids.length} cours organisés par matière. Tu peux explorer une notion à ton rythme.`);
@@ -167,15 +221,39 @@ async function detail(root,c){
  const q=current(),retour=activeReturn(q,c.id),group=paths.get(retour),mode=q.get('vue');
  crumb(root,[{text:'Accueil',url:'./'},...(group?[{text:group.titre,url:url({parcours:group.id})}]:[{text:'Bibliothèque',url:url({page:'cours'})}]),{text:c.titre}]);
  heading(root,c.titre,c.objectif||'',c.discipline);
+ pickUniverse(root);
  presenterCompagnon(root,mode==='pratique'?'Observe les indices et essaie par toi-même.':'Découvrons cette notion ensemble.','apprendre');
+ const themed=await universeForCourse(root,c,retour);
+ if(themed)c={...c,activite_locale:true,activites_locales:[themed,...(c.activites_locales||[])]};
  const status=add(root,'div','course-status');add(status,'span','small-note',c.publication_eleve?'Leçon pilote · À vérifier avec un enseignant':'Leçon élève en préparation');
  const tabs=add(root,'nav','course-tabs');tabs.setAttribute('aria-label','Explorer la notion');
- [['lecon','La leçon'],...(activities?.activites?.some(x=>x.cours_id===c.id)?[['pratique','Je pratique']]:[]),['spek','Fiches Spek'],['carte','Carte des liens']].forEach(([k,label])=>{const x=a(tabs,label,ctxLink(c.id,retour,k==='lecon'?{}:{vue:k}),'tab'+((mode||'lecon')===k?' selected':''));if((mode||'lecon')===k)x.setAttribute('aria-current','page');});
+ if(c.fiche_decouverte){
+  const discovery=add(tabs,'a','tab','Fiche de découverte');
+  discovery.href='/notions-spek/'+encodeURIComponent(c.id)+'/fr/index.html';
+ }
+ const openBank=reviewedBanks.has(c.id);
+ let savedBank=false;
+ try{savedBank=Boolean(sessionStorage.getItem('ekole-reviewed-bank:'+c.id));}catch(_){}
+ if(openBank||savedBank)a(tabs,'Questions relues',ctxLink(c.id,retour,{vue:'banque'}),'tab');
+ if(c.micro_mondes){
+  const practice=add(tabs,'a','tab','Micro-mondes');
+  practice.href='/eleve/mondes-v12/?'+new URLSearchParams({cours:c.id});
+ }
+ [['lecon','La leçon'],...(activities?.activites?.some(x=>x.cours_id===c.id)?[['pratique','Je pratique']]:[]),...(c.activite_locale?[['activite','Activité pilote']]:[]),['spek','Fiches Spek'],['carte','Carte des liens']].forEach(([k,label])=>{const x=a(tabs,label,ctxLink(c.id,retour,k==='lecon'?{}:{vue:k}),'tab'+((mode||'lecon')===k?' selected':''));if((mode||'lecon')===k)x.setAttribute('aria-current','page');});
+ if(mode==='banque'&&(openBank||savedBank)){renderReviewedBank(root,c,openBank);return;}
+ if(mode==='activite'&&c.activite_locale){await renderLocalActivity(root,c,retour);return;}
  if(mode==='pratique'){renderPractice(root,c);return;}if(mode==='spek'){renderSpek(root,group||null,c.id);return;}if(mode==='carte'){renderGraph(root,c.id,retour);return;}
  const summary=add(root,'div','course-objective');add(summary,'strong','','Ce que je vais apprendre');add(summary,'p','',c.objectif||'Objectif non renseigné');
  let data;try{data=await fetchJson('/api/cours/'+encodeURIComponent(c.id)+'.json');}catch(e){add(root,'p','warning',e.message);return;}
  if(data.id!==c.id||!Array.isArray(data.modules)){add(root,'p','warning','Modules indisponibles ou incorrects.');return;}
- if(!data.modules.length){add(root,'p','empty',data.message||'Cette leçon est en préparation pour les élèves.');add(root,'p','hint','Le contenu détaillé et les corrigés restent accessibles uniquement dans l’atelier Enseignant.');return;}
+ if(!data.modules.length){
+  add(root,'p','empty',data.message||'Cette leçon est en préparation pour les élèves.');
+  if(c.fiche_decouverte){
+   const discovery=add(root,'a','button-link primary','Ouvrir la fiche de découverte');
+   discovery.href='/notions-spek/'+encodeURIComponent(c.id)+'/fr/index.html';
+  }
+  return;
+ }
  let index=Math.max(0,data.modules.findIndex(m=>m.id===q.get('module')));const mod=data.modules[index];
  const bar=add(root,'div','stage-top');add(bar,'span','stage-counter',`Étape ${index+1} sur ${data.modules.length}`);
  const jump=add(bar,'label','stage-select-label','Aller à une étape');const select=add(jump,'select','stage-picker');select.setAttribute('aria-label','Choisir une étape du cours');
@@ -197,7 +275,18 @@ function introNotice(root,msg){add(root,'p','review-note',msg);}
 function renderSpek(root,p,courseId=''){
  const returnPath=p?.id||pack.parcours_mis_en_avant;
  add(root,'h2','section-title','Fiches Spek · propositions');
- if(!spek){add(root,'p','empty','Aucune fiche Spek n’est fournie par ce dépôt.');return;}
+ const scoped=courses.get(courseId);
+ if(scoped?.activites_locales?.some(item=>item.spek)){
+  const section=add(root,'div','spek-list');
+  for(const item of scoped.activites_locales.filter(item=>item.spek)){
+   const path='/apercus-spek/'+encodeURIComponent(item.id)+'/';
+   for(const [lang,label] of [['fr','Français'],['en','English']]){
+    const link=add(section,'a','spek-item',item.titre+' · '+label);
+    link.href=path+lang+'/index.html';
+   }
+  }
+ }
+ if(!spek){if(!scoped?.activites_locales?.length)add(root,'p','empty','Aucune fiche Spek n’est fournie par ce dépôt.');return;}
  introNotice(root,spek.avertissement||'Fiches à valider.');
  const relevant=spek.semaines.filter(s=>!courseId||s.correspondances.some(c=>c.id===courseId));
  if(!relevant.length){add(root,'p','empty','Aucune fiche Spek reliée à ce cours pour le moment.');if(courseId)buttonlink(root,'Voir toutes les fiches Spek',{parcours:returnPath,vue:'spek'});return;}
@@ -231,16 +320,30 @@ function renderPractice(root,c){
  }else if(activity.type==='question-choix'){
   add(box,'p','practice-text',activity.texte);add(box,'h4','',activity.question);
   const choices=add(box,'div','choices');const feedback=add(box,'p','feedback');feedback.setAttribute('aria-live','polite');
-  activity.choix.forEach((option,i)=>{const btn=add(choices,'button','choice',option);btn.type='button';btn.addEventListener('click',()=>{
-   for(const n of choices.querySelectorAll('button'))n.classList.remove('good','bad');btn.classList.add(i===activity.reponse?'good':'bad');
-   feedback.textContent=(i===activity.reponse?'Oui, bonne interprétation. ':'Pas tout à fait. Essaie d’utiliser les indices. ')+activity.retroaction;
-   reactionCompagnon(i===activity.reponse);
+  activity.choix.forEach((option,i)=>{const btn=add(choices,'button','choice',option);btn.type='button';btn.addEventListener('click',async()=>{
+   const buttons=[...choices.querySelectorAll('button')];
+   for(const n of buttons)n.disabled=true;
+   try{
+    const response=await fetch('/api/integrations/activites/verifier',{method:'POST',headers:{'Content-Type':'application/json'},
+     body:JSON.stringify({cours:c.id,choix:i})});
+    if(!response.ok)throw Error('Vérification indisponible.');
+    const outcome=await response.json();
+    for(const n of buttons)n.classList.remove('good','bad');
+    btn.classList.add(outcome.correct?'good':'bad');
+    feedback.textContent=(outcome.correct?'Oui, bonne interprétation. ':'Pas tout à fait. ')+outcome.retroaction;
+    reactionCompagnon(outcome.correct);
+   }catch(error){feedback.textContent=error.message;}
+   finally{for(const n of buttons)n.disabled=false;}
   });});
  }
- add(box,'p','practice-privacy','Cet exercice fonctionne uniquement dans le navigateur; il ne crée ni note ni dossier d’élève.');
+ add(box,'p','practice-privacy','Cet exercice de pratique ne crée ni note ni dossier d’élève.');
 }
 function renderGraph(root,focus,returnPath=''){
  add(root,'h2','section-title','Carte des liens entre notions');
+ if(pack.exploration_konstellation){
+  const link=add(root,'a','button-link','Explorer la carte dans Konstellation');
+  link.href='/eleve/konstellation/?'+new URLSearchParams({retour:'/eleve/',...(focus?{focus}:{})});
+ }
  introNotice(root,'Aperçu léger alimenté par les relations du dépôt. Ce n’est pas le lecteur Konstellation-Light complet et les relations ne remplacent pas une évaluation.');
  if(!graph){add(root,'p','empty','Aucun graphe associé à ce dépôt.');return;}
  const rel=focus?graph.relations.filter(e=>e.from===focus||e.to===focus):graph.relations.filter(e=>graph.noeuds[e.from]?.dans_parcours_3e&&graph.noeuds[e.to]?.dans_parcours_3e);
@@ -255,15 +358,40 @@ function renderGraph(root,focus,returnPath=''){
  if(e.justification)add(panel,'p','hint',e.justification);
  }
 }
+async function renderPortalPages(root){
+ heading(root,'Pages de l’école','Aperçus locaux issus des énoncés structurés du portail Québec.');
+ const entries=await fetchJson('/api/portail-spek.json');
+ const list=add(root,'ul','spek-list');
+ for(const entry of entries){
+  const link=add(add(list,'li'),'a','spek-item',entry.titre);
+  link.href='/portail-spek/'+encodeURIComponent(entry.id)+'/fr/index.html';
+ }
+}
 async function main(){try{
  pack=await fetchJson('/api/pack.json');if(!compatible(pack))throw Error('Paquet non compatible');
  courses=new Map(pack.cours.map(x=>[x.id,x]));paths=new Map(pack.parcours.map(x=>[x.id,x]));
- const data=await Promise.allSettled([fetchJson('/api/integrations/spek.json'),fetchJson('/api/integrations/graphe.json'),fetchJson('/api/integrations/activites.json'),fetchJson('/api/personnages/catalogue.json')]);
+ const data=await Promise.allSettled([fetchJson('/api/integrations/spek.json'),fetchJson('/api/integrations/graphe.json'),fetchJson('/api/integrations/activites.json'),fetchJson('/api/personnages/catalogue.json'),
+ pack.cours.some(course=>course.fiche_decouverte)?fetchJson('/api/banques-locales/disponibles.json'):Promise.resolve([])]);
  if(data[0].status==='fulfilled'&&data[0].value.format==='ekole.spek-preview/1')spek=data[0].value;
  if(data[1].status==='fulfilled'&&data[1].value.format==='ekole.graph-preview/1')graph=data[1].value;
  if(data[2].status==='fulfilled'&&data[2].value.format==='ekole.activities-preview/1')activities=data[2].value;
+ if(data[4].status==='fulfilled'&&Array.isArray(data[4].value))reviewedBanks=new Set(data[4].value);
+ if(pack.univers_classe && base==='/eleve/'){
+  try{
+   universe=await fetchJson('/api/univers.json');
+   document.documentElement.dataset.ekoleStyle=universe.style;
+  }catch(_){}
+ }
  window.EkolePersonnages.configure(data[3].status==='fulfilled'?data[3].value:null);
  COMPAGNON_THEMES=window.EkolePersonnages.catalogue.compagnons||[];
+ if(pack.micro_mondes){
+  const nav=document.querySelector('.header nav');
+  if(nav)add(nav,'a','','Micro-mondes').href='/eleve/mondes-v12/';
+ }
+ if(pack.portail_spek){
+  const nav=document.querySelector('.header nav');
+  if(nav)a(nav,'Pages de l’école',{page:'portail-spek'});
+ }
  $('#ensemble').textContent=pack.nom;$('#ensembleDescription').textContent=pack.description||'';
  $('#sidebarCount').textContent=pack.cours.length+' cours · '+pack.parcours.length+' parcours';document.title=pack.nom+' — Ekole';
  const sel=$('#domain');for(const d of [...new Set(pack.cours.map(c=>c.discipline))].sort((a,b)=>a.localeCompare(b,'fr'))){const o=add(sel,'option','',d);o.value=d;}
@@ -272,7 +400,8 @@ async function main(){try{
  window.addEventListener('popstate',render);await render();
  }catch(e){const root=$('#main');root.replaceChildren();heading(root,'Chargement impossible');add(root,'p','warning',e.message);}}
 async function render(){const root=$('#main');root.replaceChildren();try{synchroniserNiveau();const q=current();const course=q.get('cours'),path=q.get('parcours');
- if(q.get('page')==='missions'){await window.EkoleMissions.render(root);}
+ if(q.get('page')==='portail-spek'&&pack.portail_spek){await renderPortalPages(root);}
+ else if(q.get('page')==='missions'){await window.EkoleMissions.render(root);}
  else if(course){const c=courses.get(course);if(!c)throw Error('Cours introuvable');await detail(root,c);}
  else if(path){const p=paths.get(path);if(!p)throw Error('Parcours introuvable');pathPage(root,p);}
  else if(q.get('page')==='cours')catalog(root);else if(q.get('page')==='parcours')pathsHome(root);else home(root);

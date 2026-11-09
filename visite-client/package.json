@@ -1,0 +1,11 @@
+{
+  "name": "ekole-visite-client",
+  "private": true,
+  "scripts": {
+    "visite": "node visite.cjs",
+    "verifier": "node visite.cjs --verifier"
+  },
+  "dependencies": {
+    "playwright": "1.62.1"
+  }
+}
