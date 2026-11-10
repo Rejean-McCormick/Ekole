@@ -1,8 +1,8 @@
 'use strict';
 
-window.EkoleRolesEnseignant = async (root, {make, json}) => {
+window.EkoleRolesEnseignant = async (root, {make, json, isCurrent}) => {
  const data = await json('/api/parcours-roles.json');
- if (!data.themes.length) return;
+ if (!isCurrent() || !data.themes.length) return;
  const section = make(root, 'section', 'b3-child-card');
  make(section, 'h3', '', 'Missions et questions reliées');
  make(section, 'p', '', 'Chaque rôle a un défi de pratique. Seules les questions relues de la banque deviennent accessibles dans ce rôle.');

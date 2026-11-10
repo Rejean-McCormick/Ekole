@@ -93,6 +93,8 @@ def patched(root):
         newline = '\r\n' if b'\r\n' in raw else '\n'
         encoding = 'utf-8-sig' if raw.startswith(b'\xef\xbb\xbf') else 'utf-8'
         text = raw.decode(encoding).replace('\r\n', '\n')
+        if relative == 'enseignant-app/univers.js' and 'window.EkoleRolesEnseignant' in text:
+            continue
         for anchor, addition in edits:
             combined = addition + anchor
             if combined in text:

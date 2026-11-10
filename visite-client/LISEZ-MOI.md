@@ -1,6 +1,6 @@
 # Visite client d’Ekole
 
-Une visite en 17 étapes dans les interfaces locales. Le fil conducteur est la division en 3e année, avec les invitations de Mila. La visite s’arrête sur chaque écran avec un sous-titre. **Espace** ou le bouton **Suivant** déclenche l’action suivante. Fermer l’onglet termine la visite.
+Une visite en 20 étapes dans les interfaces locales. Le fil conducteur est la division en 3e année, avec les invitations de Mila. La visite s’arrête sur chaque écran avec un sous-titre. **Espace** ou le bouton **Suivant** déclenche l’action suivante. Fermer l’onglet termine la visite.
 
 ## Installation sur Windows
 

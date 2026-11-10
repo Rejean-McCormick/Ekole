@@ -68,7 +68,9 @@
     const all=[['tabText','text'],['tabVisuals','visuals'],['tabStudent','student']];
     for(const [id,value] of all){const b=$('#'+id);if(!b)throw Error('Onglet requis manquant : '+id);b.onclick=()=>{state.section=value;render();};}
     const album=make(tabs,'button','','Album des images');album.id='tabAlbum';album.type='button';album.onclick=()=>{state.section='album';render();};
-    for(const [id,label,visible] of [['scenarios','Scénarios Kontexte',state.cfg.banque_scenarios],
+    for(const [id,label,visible] of [['univers','Univers de la classe',state.cfg.univers],
+      ['kolor','Portraits Kolor',state.cfg.kolor],
+      ['scenarios','Scénarios Kontexte',state.cfg.banque_scenarios],
       ['attempts','Revue Inkuisite',state.cfg.cours_activites_locales?.length],
       ['coverage','Couverture Québec',state.cfg.banque_scenarios],
       ['banks','Banques de questions',state.cfg.banques_questions],
@@ -84,8 +86,13 @@
     $('#publicHome').href='http://127.0.0.1:'+state.cfg.port_public+'/eleve/';
     document.title=state.pack.nom+' — Atelier Enseignant B3';
     initTabs();
+    if(state.cfg.univers)state.section='univers';
+    if(state.cfg.banques_questions&&new URLSearchParams(location.search).has('banque_role'))state.section='banks';
     for(const c of [...state.pack.cours].sort((a,b)=>(a.discipline||'').localeCompare(b.discipline||'','fr')||a.titre.localeCompare(b.titre,'fr'))){const o=make($('#cours'),'option','',(c.discipline||'Cours')+' · '+c.titre);o.value=c.id;}
-    $('#cours').addEventListener('change',loadCourse);
+    $('#cours').addEventListener('change',()=>{
+      if(state.section==='univers')state.section='text';
+      loadCourse();
+    });
     setStatus(`${state.pack.cours.length} cours · ${state.cfg.edition?'Édition locale active':'Lecture seule'} · Publication distincte pour l’élève`);
     await render();
   }catch(e){setStatus('Chargement de l’atelier impossible : '+e.message,'error');}}
@@ -99,8 +106,11 @@
     }catch(e){setStatus('Impossible de charger le cours : '+e.message,'error');}
   }
   async function selectCourse(cid,section='visuals',slot=''){if($('#cours').value!==cid){$('#cours').value=cid;await loadCourse();}state.section=section;state.slotToFocus=slot;await render();}
-  async function render(){const root=clear();for(const [id,value] of [['tabText','text'],['tabVisuals','visuals'],['tabStudent','student'],['tabAlbum','album'],['tab-scenarios','scenarios'],['tab-attempts','attempts'],['tab-coverage','coverage'],['tab-banks','banks'],['tab-lessons','lessons']]){$('#'+id)?.setAttribute('aria-current',state.section===value?'page':'false');}
-    try{if(state.section==='lessons')await window.EkoleLeconsLocales(root,{make,button,json,cfg:state.cfg,courseId:state.course?.id,renderMarkdown});
+  let renderRevision=0;
+  async function render(){const revision=++renderRevision;const root=clear();for(const [id,value] of [['tabText','text'],['tabVisuals','visuals'],['tabStudent','student'],['tabAlbum','album'],['tab-scenarios','scenarios'],['tab-attempts','attempts'],['tab-coverage','coverage'],['tab-banks','banks'],['tab-lessons','lessons'],['tab-univers','univers'],['tab-kolor','kolor']]){$('#'+id)?.setAttribute('aria-current',state.section===value?'page':'false');}
+    try{if(state.section==='univers')await window.EkoleUniversEnseignant(root,{make,button,json,cfg:state.cfg,isCurrent:()=>revision===renderRevision});
+      else if(state.section==='kolor')await window.EkoleKolorEnseignant(root,{make,button,json,cfg:state.cfg,isCurrent:()=>revision===renderRevision});
+      else if(state.section==='lessons')await window.EkoleLeconsLocales(root,{make,button,json,cfg:state.cfg,courseId:state.course?.id,renderMarkdown});
       else if(['scenarios','attempts','coverage','banks'].includes(state.section))
       await window.EkoleActivitesEnseignant[state.section](root,{make,button,json,cfg:state.cfg,selectCourse,courseId:state.course?.id});
       else if(state.section==='album')await renderAlbum(root);else if(!state.course)note(root,'Choisis un cours, ou ouvre l’Album pour explorer les illustrations des autres cours.');

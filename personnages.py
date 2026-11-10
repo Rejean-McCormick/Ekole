@@ -120,14 +120,14 @@ def png(root: Path, asset: dict):
     return path if 1 <= w <= 8192 and 1 <= h <= 8192 else None
 
 
-def public_inventory(loaded):
+def public_inventory(loaded, published=()):
     if loaded is None:
         return {'format':'ekole.personnages/1','compagnons':[],'anciens_choix':{},'assets':[]}
     root,data = loaded
     assets=[]
     for a in data['assets']:
         public={k:v for k,v in a.items() if k in ('id','type','personnage','annee','pose','role_id','alt')}
-        present = png(root,a) is not None
+        present = a['id'] in published or png(root,a) is not None
         public['disponible'] = present
         public['url'] = '/api/personnages/image/'+a['id'] if present else None
         assets.append(public)

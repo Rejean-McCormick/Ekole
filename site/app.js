@@ -8,6 +8,7 @@ const url=(params)=>base+'?'+new URLSearchParams(params).toString();
 const a=(host,text,params,cls='')=>{const n=add(host,'a',cls,text);n.href=url(params);return n;};
 const fetchJson=async(path)=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('Ressource indisponible : '+r.status);return r.json();};
 let reviewedBanks=new Set();
+let universe=null;
 let pack, courses=new Map(), paths=new Map(), spek=null, graph=null, activities=null;
 const current=()=>new URLSearchParams(location.search);
 
@@ -24,7 +25,7 @@ function demoCompagnonActif(){
   const flag=current().get('pilote_compagnon');
   if(flag==='0'){storage.removeItem(COMPAGNON_FLAG);storage.removeItem(COMPAGNON_CHOICE);}
   if(flag==='1')storage.setItem(COMPAGNON_FLAG,'1');
-  return storage.getItem(COMPAGNON_FLAG)==='1';
+  return Boolean(universe?.choices.length)||storage.getItem(COMPAGNON_FLAG)==='1';
  }catch(_){return false;}
 }
 function anneeParcours(id){const m=/^annee-([1-6])$/.exec(id||'');return m?Number(m[1]):null;}
@@ -110,8 +111,60 @@ function card(host,c,retour=''){
  return x;
 }
 function grouping(ids){const by=new Map();for(const id of ids){const c=courses.get(id);if(!c)continue;const k=c.discipline||'Autres';if(!by.has(k))by.set(k,[]);by.get(k).push(c);}return [...by.entries()].sort((a,b)=>a[0].localeCompare(b[0],'fr'));}
+function selectedUniverse(){
+ if(!universe?.choices.length)return null;
+ let saved;
+ try{saved=sessionStorage.getItem('ekole-univers');}catch(_){}
+ return universe.themes.find(item=>item.id===saved)||universe.themes.find(item=>item.id===universe.default);
+}
+function pickUniverse(root){
+ const theme=selectedUniverse();
+ if(!theme)return;
+ const box=add(root,'section','ekole-univers-card');
+ add(box,'h2','','Choisis ton univers');
+ const label=add(box,'label','stage-select-label','Univers');
+ const menu=add(label,'select','stage-picker');
+ for(const item of universe.themes){const option=add(menu,'option','',item.name);option.value=item.id;}
+ menu.value=theme.id;
+ menu.addEventListener('change',()=>{
+  try{sessionStorage.setItem('ekole-univers',menu.value);}catch(_){}
+  const chosen=universe.themes.find(item=>item.id===menu.value);
+  if(chosen?.companion&&!lireCompagnon())enregistrerCompagnon(chosen.companion,niveauPage());
+  if(current().get('vue')==='activite'){
+   const next=current();next.delete('activite');location.search=next.toString();
+  }else location.reload();
+ });
+ add(box,'p','hint',theme.intro);
+ a(box,'Jouer un rôle dans cet univers',{page:'parcours-roles',univers:theme.id},'button-link');
+ if(current().get('page')!=='parcours')a(box,'Choisir aussi un compagnon',{page:'parcours'});
+}
+async function universeForCourse(root,course,retour){
+ const theme=selectedUniverse();
+ if(!theme)return null;
+ let details;
+ try{details=await fetchJson('/api/univers/'+encodeURIComponent(theme.id)+'.json?cours='+encodeURIComponent(course.id));}
+ catch(_){return null;}
+ const box=add(root,'section','ekole-univers-card');
+ add(box,'h2','',details.name);
+ add(box,'p','',details.frame);
+ if(details.image){
+  const image=add(box,'img');image.src=details.image.url;image.alt=details.image.alt;
+ }
+ const actions=add(box,'div','quick-actions');
+ if(details.spek){
+  const context=add(actions,'a','button-link','Fiche Spek de ce cours dans cet univers');
+  context.href=details.spek;
+ }
+ if(details.activity){
+  buttonlink(actions,'Jouer dans cet univers',ctxLink(course.id,retour,{vue:'activite',activite:details.activity.id}));
+  const page=add(actions,'a','button-link','Fiche Spek de l’activité');
+  page.href='/apercus-spek/'+encodeURIComponent(details.activity.id)+'/fr/index.html';
+ }
+ return details.activity;
+}
 function pathsHome(root){
  heading(root,'Choisir un parcours','Choisis ton niveau pour retrouver les leçons disponibles.');
+ pickUniverse(root);
  choixCompagnon(root);
  const list=add(root,'div','path-cards');const featured=pack.parcours_mis_en_avant;
  const all=[...pack.parcours].sort((x,y)=>(x.id===featured?-1:0)-(y.id===featured?-1:0));
@@ -121,6 +174,7 @@ function pathsHome(root){
 function home(root){
  const featured=paths.get(pack.parcours_mis_en_avant);
  if(featured){crumb(root,[{text:'Accueil'}]);heading(root,`Bonjour, bienvenue dans ${pack.nom}`,'Commence par choisir une activité ou retrouve ton parcours.');
+ pickUniverse(root);
  presenterCompagnon(root,'Salut ! Découvrons une notion à ton rythme.','saluer');
  const hero=add(root,'section','feature-hero');add(hero,'span','eyebrow','Parcours mis en avant');add(hero,'h2','',featured.titre);
  add(hero,'p','',`${featured.cours_ids.length} cours organisés par matière. Tu peux explorer une notion à ton rythme.`);
@@ -156,7 +210,9 @@ function catalog(root){
  const grid=add(root,'div','cards');for(const c of filtered)card(grid,c,getPathFor(c.id));if(!filtered.length)add(root,'p','empty','Aucun cours trouvé. Essaie un autre mot.');
 }
 async function showApprovedImages(host,cid,index){
- let data;try{data=await fetchJson('/api/visuels/'+encodeURIComponent(cid)+'.json');}catch(_){return;}
+ const theme=selectedUniverse()?.id;
+ const suffix=theme?'?theme='+encodeURIComponent(theme):'';
+ let data;try{data=await fetchJson('/api/visuels/'+encodeURIComponent(cid)+'.json'+suffix);}catch(_){return;}
  const placement=index<2?'decouvrir':index<4?'explorer':'essayer';
  for(const item of (data.visuels||[]).filter(v=>v.placement===placement)){
   const fig=add(host,'figure','lesson-illustration');const image=add(fig,'img');
@@ -168,7 +224,10 @@ async function detail(root,c){
  const q=current(),retour=activeReturn(q,c.id),group=paths.get(retour),mode=q.get('vue');
  crumb(root,[{text:'Accueil',url:'./'},...(group?[{text:group.titre,url:url({parcours:group.id})}]:[{text:'Bibliothèque',url:url({page:'cours'})}]),{text:c.titre}]);
  heading(root,c.titre,c.objectif||'',c.discipline);
+ pickUniverse(root);
  presenterCompagnon(root,mode==='pratique'?'Observe les indices et essaie par toi-même.':'Découvrons cette notion ensemble.','apprendre');
+ const themed=await universeForCourse(root,c,retour);
+ if(themed)c={...c,activite_locale:true,activites_locales:[themed,...(c.activites_locales||[])]};
  const status=add(root,'div','course-status');add(status,'span','small-note',c.publication_eleve?'Leçon pilote · À vérifier avec un enseignant':'Leçon élève en préparation');
  const tabs=add(root,'nav','course-tabs');tabs.setAttribute('aria-label','Explorer la notion');
  if(c.fiche_decouverte){
@@ -322,6 +381,12 @@ async function main(){try{
  if(data[4].status==='fulfilled'&&Array.isArray(data[4].value))reviewedBanks=new Set(data[4].value);
  window.EkolePersonnages.configure(data[3].status==='fulfilled'?data[3].value:null);
  COMPAGNON_THEMES=window.EkolePersonnages.catalogue.compagnons||[];
+ if(pack.univers_classe&&base==='/eleve/'){
+  try{
+   universe=await fetchJson('/api/univers.json');
+   document.documentElement.dataset.ekoleStyle=universe.style;
+  }catch(_){}
+ }
  if(pack.micro_mondes){
   const nav=document.querySelector('.header nav');
   if(nav)add(nav,'a','','Micro-mondes').href='/eleve/mondes-v12/';
@@ -339,6 +404,7 @@ async function main(){try{
  }catch(e){const root=$('#main');root.replaceChildren();heading(root,'Chargement impossible');add(root,'p','warning',e.message);}}
 async function render(){const root=$('#main');root.replaceChildren();try{synchroniserNiveau();const q=current();const course=q.get('cours'),path=q.get('parcours');
  if(q.get('page')==='portail-spek'&&pack.portail_spek){await renderPortalPages(root);}
+ else if(q.get('page')==='parcours-roles'&&window.EkoleParcoursRoles){await window.EkoleParcoursRoles.render(root);}
  else if(q.get('page')==='missions'){await window.EkoleMissions.render(root);}
  else if(course){const c=courses.get(course);if(!c)throw Error('Cours introuvable');await detail(root,c);}
  else if(path){const p=paths.get(path);if(!p)throw Error('Parcours introuvable');pathPage(root,p);}

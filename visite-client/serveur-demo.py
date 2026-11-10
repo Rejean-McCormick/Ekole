@@ -11,6 +11,7 @@ from http.server import ThreadingHTTPServer
 
 
 ALLOWED_POSTS = {
+    '/api/univers/publier', '/api/parcours-roles/pratique',
     '/api/lecons-locales/prepare', '/api/lecons-locales/review', '/api/lecons-locales/publish',
     '/api/activite-locale/start', '/api/activite-locale/submit', '/api/activite-locale/result',
     '/api/activites-locales/tentatives/inspect', '/api/activites-locales/tentatives/review',
@@ -42,14 +43,14 @@ def catalogue_for_visit(content, work, engine, inkui):
     index = content / 'dist/ecole-locale/catalogue.json'
     try:
         data = json.loads(index.read_bytes())
-        if (data.get('lessons') and data.get('explorer')
+        if (data.get('lessons') and data.get('explorer') and data.get('univers_pages')
                 and any('/invitations-mila/' in row['bundle'] for row in data['entries'])):
             return index
     except (OSError, ValueError, KeyError, AttributeError, TypeError):
         pass
 
     require_files(content, ('outils/construire_ecole.py',),
-                  'Applique les fichiers ekole-quebec du ZIP v6.')
+                  'Applique les fichiers ekole-quebec du ZIP consolidé.')
     print(json.dumps({'status': 'Compilation du catalogue de démonstration. Cela peut prendre un moment.'}),
           flush=True)
     output = work / 'catalogue'
@@ -69,7 +70,7 @@ def catalogue_for_visit(content, work, engine, inkui):
 
 def serve(engine, content):
     require_files(engine, ('launcher.py', 'activite_locale.py', 'lecons_locales.py'),
-                  'Copie le contenu du dossier ekole du ZIP v6 à la racine du moteur, '
+                  'Copie le contenu du dossier ekole du ZIP consolidé à la racine du moteur, '
                   'ou définis EKOLE_MOTEUR si cette racine se trouve ailleurs.')
     require_files(content, ('pack.json',),
                   'Place le dépôt complet ekole-quebec à côté du moteur ou définis EKOLE_CONTENU.')
@@ -87,8 +88,10 @@ def serve(engine, content):
         env.activity_catalogue = Catalogue(index, env.by_id, inkui,
                                           database=Path(work) / 'demo.sqlite3',
                                           content=content, pack=env.pack)
+        if not env.activity_catalogue.role_paths:
+            raise SystemExit('Parcours par rôle indisponibles. Applique le raccord consolidé.')
         if not env.activity_catalogue.editorial:
-            raise SystemExit('Atelier des leçons absent du catalogue. Applique puis compile l’overlay v6.')
+            raise SystemExit('Atelier des leçons absent du catalogue. Applique puis compile l’overlay consolidé.')
         with (ThreadingHTTPServer(('127.0.0.1', 0), demo_handler(create_handler(env))) as public,
               ThreadingHTTPServer(('127.0.0.1', 0), demo_handler(create_handler(env, True))) as teacher):
             env.port_public = public.server_port

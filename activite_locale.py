@@ -4,9 +4,11 @@ import importlib
 import json
 import re
 import sys
-from personnages import safe_file
+from personnages import load as load_personnages, safe_file
+from kolor_roles import KolorRoles
 from mondes_v12 import MicroWorlds
 from lecons_locales import Editorial
+from univers import Univers
 
 ID = re.compile(r'[a-z][a-z0-9-]{1,79}')
 TOKEN = re.compile(r'[A-Za-z0-9_-]{43}')
@@ -96,6 +98,8 @@ class Catalogue:
             raise ValueError('Catalogue d’activités locales invalide')
         self.activities = {}
         self.pages = {}
+        self.activity_themes = {}
+        variants = {}
         self.scenarios = [{key: row[key] for key in ('id', 'titre', 'famille', 'resultat')}
                           for row in data['scenarios']]
         db_path = database or safe_file(root, 'tentatives.sqlite3')
@@ -105,6 +109,12 @@ class Catalogue:
                 raise ValueError('Activité dupliquée ou pages manquantes')
             self.activities[item.id] = item
             self.pages[item.id] = entry['pages']
+            if theme := entry.get('theme'):
+                self.activity_themes[item.id] = theme
+                by_course = variants.setdefault(theme, {})
+                if item.course in by_course:
+                    raise ValueError('Variante thématique dupliquée')
+                by_course[item.course] = {'id': item.id, 'titre': item.views['fr-CA']['title'], 'spek': True}
         self.portal = {}
         for entry in data.get('portal', []):
             if not ID.fullmatch(entry['id']) or entry['id'] in self.portal or set(entry['pages']) != {'fr'}:
@@ -116,6 +126,14 @@ class Catalogue:
             seeds = json.loads(self.resource(data['lessons'], ('lecons-candidates.json',)))
             self.editorial = Editorial(content, seeds, pack, next(iter(self.activities.values())).store)
 
+        self.univers = None
+        if data.get('univers'):
+            themes = json.loads(self.resource(data['univers'], ('univers.json',)))
+            self.univers = Univers(self, themes, variants, data.get('univers_pages', {}), courses,
+                                    next(iter(self.activities.values())).store)
+        elif variants:
+            raise ValueError('Variantes sans catalogue des univers')
+
         self.notions = data.get('notions', {})
         if self.notions and set(self.notions) != set(courses):
             raise ValueError('Les fiches de découverte ne couvrent pas le pack')
@@ -123,6 +141,14 @@ class Catalogue:
         if data.get('banks'):
             bank_module = importlib.import_module('banques_locales')
             self.banks = bank_module.Banks(self, data['banks'], next(iter(self.activities.values())).store, courses)
+        self.role_paths = None
+        if self.univers and self.banks and content and (content / 'data/parcours-roles.json').is_file():
+            from parcours_roles import RolePaths
+            self.role_paths = RolePaths(content, self.univers, self.banks)
+        self.kolor = None
+        if not verify_only and content and pack and pack.get('personnages'):
+            _, inventory = load_personnages(content, pack)
+            self.kolor = KolorRoles(content, inventory, next(iter(self.activities.values())).store)
         self.worlds = None
         if data.get('worlds'):
             raw = self.resource(data['worlds'], ('micro-mondes-prives.json',))
@@ -149,7 +175,7 @@ class Catalogue:
     def explorer_file(self, name):
         if name not in {
             'index.html', 'app.js', 'style.css', 'sw.js', 'graph-core.mjs', 'profile.mjs',
-            'semantic-display.mjs', 'assets/uckk-logo.svg', 'data/catalog.json'
+            'semantic-display.mjs', 'multilingual-read.mjs', 'assets/uckk-logo.svg', 'assets/logo_k.svg', 'data/catalog.json'
         } and not re.fullmatch(r'data/pack-[0-9a-f]{64}\.json', name):
             raise ValueError('Fichier Konstellation non autorisé')
         return self.resource(self.explorer[name], tuple(name.split('/')))

@@ -101,11 +101,12 @@ class Banks:
                                   VALUES (?,?,?,?,?)""", (cid, item_id, ref, decision, canonical(payload)))
             return {'revision': saved.lastrowid, 'reviewed': not withdraw}
 
-    def create_attempt(self, cid):
+    def create_attempt(self, cid, *, item_ids=None, mission=None):
         require(cid in self.refs, 'Banque inconnue')
         with self.store.connect() as db:
             db.execute('BEGIN IMMEDIATE')
-            items = [loads(row['payload']) for row in self.decisions(db, cid) if row['decision'] == 'reviewed']
+            items = [loads(row['payload']) for row in self.decisions(db, cid)
+                     if row['decision'] == 'reviewed' and (item_ids is None or row['item'] in item_ids)]
             require(bool(items), 'Aucune question relue pour ce cours')
             seed = secrets.token_hex(16)
             selected = sorted(items, key=lambda item: digest([seed, item['id']]))[:5]
@@ -113,7 +114,7 @@ class Banks:
             exam = build_exam({'format': 'inkui.bank/1.0', 'id': cid + '-reviewed',
                                'title': self.courses[cid]['titre'], 'items': selected},
                               {'format': 'inkui.blueprint/1.0', 'id': cid + '-bank-demo',
-                               'title': self.courses[cid]['titre'] + ' · Questions relues',
+                               'title': (mission or self.courses[cid]['titre']) + ' · Questions relues',
                                'seed': seed, 'scope': 'demo', 'feedback_policy': 'on_release',
                                'sections': [{'objective_ref': ref, 'count': count}
                                             for ref, count in objectives.items()]})

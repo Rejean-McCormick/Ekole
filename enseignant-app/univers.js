@@ -1,8 +1,9 @@
 'use strict';
 
-window.EkoleUniversEnseignant = async (root, {make, button, json, cfg}) => {
+window.EkoleUniversEnseignant = async (root, {make, button, json, cfg, isCurrent}) => {
  const base = '/api/univers';
  const catalogue = await json(base + '.json');
+ if (!isCurrent()) return;
  const themes = catalogue.themes;
  make(root, 'h2', '', 'Univers de la classe');
  make(root, 'p', 'b3-intro', 'Choisis les thèmes que les élèves pourront explorer, un thème de départ et une palette pour toute la classe.');
@@ -75,8 +76,10 @@ window.EkoleUniversEnseignant = async (root, {make, button, json, cfg}) => {
  const update = () => preview().catch(error => { status.textContent = error.message; });
  previewTheme.addEventListener('change', update);
  style.addEventListener('change', update);
- if (window.EkoleRolesEnseignant) await window.EkoleRolesEnseignant(root, {make, json});
  await update();
+ if (!isCurrent()) return;
+ if (window.EkoleRolesEnseignant) await window.EkoleRolesEnseignant(root, {make, json, isCurrent});
+ if (!isCurrent()) return;
  if (!cfg.edition) return;
  make(panel, 'p', 'b3-note', 'Image optimisée de 600 ko maximum, de 120 à 4 096 pixels par côté.');
  const file = make(make(panel, 'label', '', 'Image PNG, JPG ou WebP'), 'input');

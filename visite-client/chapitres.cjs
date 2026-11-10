@@ -174,6 +174,35 @@ function chapters(page, urls) {
         await page.locator('#editor').getByText(/202 cours · /).waitFor();
         await show(heading('Couverture du corpus Québec'));
       }],
+    ['Ouvrir les univers à la classe',
+      'Le professeur propose le jazz et le jardinage. Les élèves retrouvent ses choix dans leur espace.',
+      async () => {
+        await go(urls.teacher, '/');
+        await heading('Univers de la classe').waitFor();
+        await page.getByRole('checkbox', {name: /^Le festival de jazz/}).check();
+        await page.getByRole('checkbox', {name: /^Les jardins du village/}).check();
+        await page.locator('#editor select').nth(0).selectOption('jazz');
+        await page.locator('#editor select').nth(1).selectOption('pastel');
+        await button('Appliquer à la classe').click();
+        await show(text('Choix de classe appliqués.'));
+      }],
+    ['Le rôle change le travail de l’élève',
+      'Dans le jazz, le photographe prépare une légende. Le défi passe par Inkuisite et fournit une rétroaction immédiate.',
+      async () => {
+        await pupil('');
+        await link('Jouer un rôle dans cet univers').click();
+        await link('Photographe').click();
+        await button('Commencer le défi').click();
+        await page.getByRole('radio', {name: 'Les musiciens préparent leur concert en répétant ensemble.'}).check();
+        await button('Remettre').click();
+        await show(text('Résultat · 1 / 1'));
+      }],
+    ['Une même histoire, un autre objectif',
+      'Le musicien s’entraîne à suivre un motif rythmique. Les questions complémentaires de chaque rôle restent liées à leur revue.',
+      async () => {
+        await link('Musicien').click();
+        await show(heading('Préparer la réponse rythmique'));
+      }],
   ];
 }
 

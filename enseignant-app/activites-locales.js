@@ -157,7 +157,9 @@ window.EkoleActivitesEnseignant = (() => {
    const option = make(select, 'option', '', row.cours + ' · ' + row.titre);
    option.value = row.cours;
   }
-  if (overview.some(row => row.cours === courseId)) select.value = courseId;
+  const roleLink = new URLSearchParams(location.search);
+  const requestedBank = roleLink.get('banque_role') || courseId;
+  if (overview.some(row => row.cours === requestedBank)) select.value = requestedBank;
   const panel = make(root, 'section');
   let epoch = 0;
   async function load(preferred) {
@@ -228,7 +230,7 @@ window.EkoleActivitesEnseignant = (() => {
    render();
   }
   select.addEventListener('change', () => load().catch(error => { panel.textContent = error.message; }));
-  if (overview.length) await load();
+  if (overview.length) await load(roleLink.get('question_role'));
  }
  return {scenarios, attempts, coverage, banks};
 })();
