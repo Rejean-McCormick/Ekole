@@ -111,12 +111,8 @@ class Environment:
             return self.activity_catalogue.activities
         return {self.activity.id: self.activity} if self.activity else {}
 
-    def find_activity(self, aid=None, *, include_closed=False):
+    def find_activity(self, aid=None):
         items = self.activities()
-        if aid and self.activity_catalogue and not include_closed:
-            theme = self.activity_catalogue.activity_themes.get(aid)
-            if theme and theme not in self.activity_catalogue.univers.profile()['choices']:
-                return None
         return items.get(aid) if aid else next(iter(items.values()), None)
 
     def student_course(self, cid):
@@ -131,6 +127,13 @@ class Environment:
         if source and source.is_file() and not source.is_symlink() and source.resolve().is_relative_to(self.content.resolve()):
             data = json.loads(source.read_text(encoding='utf-8-sig'))
             if data.get('id') != cid or not isinstance(data.get('modules'),list): raise ValueError('Publication élève invalide')
+            # A derived learner file is not automatically an authorized public release.
+            # Owner content packs (e.g. pastoral candidates) explicitly mark drafts
+            # as unpublished. Never serve their lesson bodies through the public API.
+            if data.get('publication_autorisee') is False or data.get('publication_eleve') is False:
+                return {'id':cid, 'titre':self.by_id[cid]['titre'],
+                        'statut_publication':'en_preparation', 'modules':[],
+                        'message':'Cette leçon reste réservée à la revue enseignante.'}
             return data
         # Ancien format de paquet sans vues distinctes: compatibilité pour les écoles
         # qui publient déjà leurs textes comme du contenu public.
@@ -170,13 +173,6 @@ def create_handler(env: Environment, teacher: bool = False):
             self.end_headers()
             self.wfile.write(body)
 
-        def spek_html(self, body):
-            hashes = ' '.join("'sha256-" + base64.b64encode(hashlib.sha256(script).digest()).decode() + "'"
-                              for script in re.findall(rb'<script(?:\s[^>]*)?>(.*?)</script>', body, re.S))
-            self.spek_policy = ("default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; "
-                                "frame-ancestors 'none'; script-src " + (hashes or "'none'"))
-            return self.respond(200, body, 'text/html; charset=utf-8')
-
         def json(self, status, value):
             return self.respond(status, jsonify(value), 'application/json; charset=utf-8')
 
@@ -200,34 +196,6 @@ def create_handler(env: Environment, teacher: bool = False):
                 return
             if teacher and not self.authed():
                 return self.respond(401, b'Espace local protege. Relancer le lanceur et utiliser son lien de session.')
-            univers = env.activity_catalogue.univers if env.activity_catalogue else None
-            if univers and route.startswith('/api/univers'):
-                try:
-                    if route == '/api/univers.json':
-                        return self.json(200, univers.listing(teacher))
-                    detail = re.fullmatch(r'/api/univers/([a-z0-9-]+)\.json', route)
-                    if detail:
-                        query = urllib.parse.parse_qs(u.query)
-                        return self.json(200, univers.describe(detail[1], query.get('cours', [None])[0], teacher))
-                    image = re.fullmatch(r'/api/univers/image/([a-z0-9-]+)/([a-z0-9-]+)', route)
-                    if image:
-                        mime, body = univers.image(*image.groups())
-                        return self.respond(200, body, mime)
-                except KeyError:
-                    return self.respond(404)
-                except sqlite3.Error:
-                    return self.json(503, {'error': 'Univers indisponible'})
-            page = re.fullmatch(r'/univers-spek/([a-z0-9-]+)/([a-z0-9-]+)/fr/(index\.html|document\.json)', route)
-            if not teacher and univers and page:
-                try:
-                    body = univers.spek(*page.groups())
-                    if page[3] == 'document.json':
-                        return self.respond(200, body, 'application/json; charset=utf-8')
-                    return self.spek_html(body)
-                except (KeyError, OSError, ValueError):
-                    return self.respond(404, b'Fiche de contexte indisponible')
-                except sqlite3.Error:
-                    return self.respond(503)
             # Catalogue facultatif séparé des images et prompts des Kristals.
             if route == '/api/personnages/catalogue.json':
                 try:
@@ -313,15 +281,14 @@ def create_handler(env: Environment, teacher: bool = False):
                 r'/(apercus-spek|portail-spek|notions-spek)/([a-z][a-z0-9-]{1,79})/(fr|en)/(index\.html|document\.json)', route)
             if not teacher and page and env.activity_catalogue:
                 try:
-                    if page[1] == 'apercus-spek' and env.activity_catalogue.activity_themes.get(page[2]):
-                        if env.find_activity(page[2]) is None:
-                            return self.respond(404)
                     body = env.activity_catalogue.page(*page.groups())
                     if page[4] == 'document.json':
                         return self.respond(200, body, 'application/json; charset=utf-8')
-                    if page[1] == 'apercus-spek' and (theme := env.activity_catalogue.activity_themes.get(page[2])):
-                        body = univers.decorate(body, univers.describe(theme))
-                    return self.spek_html(body)
+                    hashes = ' '.join("'sha256-" + base64.b64encode(hashlib.sha256(script).digest()).decode() + "'"
+                                      for script in re.findall(rb'<script(?:\s[^>]*)?>(.*?)</script>', body, re.S))
+                    self.spek_policy = ("default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; "
+                                        "frame-ancestors 'none'; script-src " + (hashes or "'none'"))
+                    return self.respond(200, body, 'text/html; charset=utf-8')
                 except (KeyError, OSError, ValueError):
                     return self.respond(404, b'Page Spek indisponible')
             if not teacher and route.startswith('/eleve/konstellation/') and env.activity_catalogue:
@@ -351,10 +318,8 @@ def create_handler(env: Environment, teacher: bool = False):
             if teacher and route == '/api/activites-locales/couverture.json' and env.activity_catalogue:
                 catalog = env.activity_catalogue
                 activities = {}
-                variants = {}
                 for activity in catalog.activities.values():
-                    rows = variants if activity.id in catalog.activity_themes else activities
-                    rows.setdefault(activity.course, []).append(activity.id)
+                    activities.setdefault(activity.course, []).append(activity.id)
                 worlds = {}
                 if catalog.worlds:
                     for world in catalog.worlds.catalogue:
@@ -363,8 +328,7 @@ def create_handler(env: Environment, teacher: bool = False):
                 return self.json(200, [{
                     'id': cid, 'titre': course['titre'], 'discipline': course.get('discipline', ''),
                     'lecon_eleve': cid in published or (env.content / 'publications/eleve' / (cid + '.json')).is_file(),
-                    'activites': activities.get(cid, []), 'variantes': variants.get(cid, []),
-                    'micro_mondes': worlds.get(cid, []),
+                    'activites': activities.get(cid, []), 'micro_mondes': worlds.get(cid, []),
                 } for cid, course in env.by_id.items()])
             if teacher and editorial:
                 try:
@@ -405,8 +369,6 @@ def create_handler(env: Environment, teacher: bool = False):
                                    'publication_eleve': bool(env.pack.get('politique_publication') != 'vues_separees' or
                                      (env.content and (env.content/'publications'/'eleve'/(c['id']+'.json')).is_file()))}
                                   for c in env.pack['cours']]
-                if univers:
-                    public['univers_classe'] = True
                 if env.activity_catalogue and env.activity_catalogue.portal:
                     public['portail_spek'] = True
                 if env.activity_catalogue and env.activity_catalogue.explorer:
@@ -424,8 +386,6 @@ def create_handler(env: Environment, teacher: bool = False):
                     for cid in env.activity_catalogue.notions:
                         projected[cid]['fiche_decouverte'] = True
                 for item in env.activities().values():
-                    if env.activity_catalogue and item.id in env.activity_catalogue.activity_themes:
-                        continue
                     course = projected[item.course]
                     course['activite_locale'] = True
                     course.setdefault('activites_locales', []).append({
@@ -453,7 +413,7 @@ def create_handler(env: Environment, teacher: bool = False):
                                        'cours_activites_locales': sorted({item.course for item in env.activities().values()}),
                                        'banque_scenarios': bool(env.activity_catalogue),
                                        'banques_questions': bool(env.activity_catalogue and env.activity_catalogue.banks),
-                                       'lecons_locales': bool(editorial), 'univers': bool(univers)})
+                                       'lecons_locales': bool(editorial)})
             match = re.fullmatch(r'/api/cours/([A-Za-z0-9_-]{1,80})\.json', route)
             if match:
                 file = env.course_path(match[1])
@@ -485,26 +445,6 @@ def create_handler(env: Environment, teacher: bool = False):
             return data
 
         def do_POST(self):
-            route = urllib.parse.urlsplit(self.path).path
-            univers = env.activity_catalogue.univers if env.activity_catalogue else None
-            if univers and route in ('/api/univers/publier', '/api/univers/image'):
-                if not teacher or not self.authed():
-                    return self.respond(401, b'Session requise')
-                if not env.edition or not secrets.compare_digest(self.headers.get('X-Ekole-CSRF', ''), env.csrf):
-                    return self.respond(403, b'Edition ou jeton requis')
-                try:
-                    data = self.local_json(820000)
-                    if route == '/api/univers/publier':
-                        return self.json(200, univers.publish(data))
-                    raw = base64.b64decode(data['image'], validate=True)
-                    univers.save_image(data['theme'], data['style'], data['alt'], raw)
-                    return self.json(200, {'published': True})
-                except RequestError as exc:
-                    return self.json(exc.status, {'error': str(exc)})
-                except (KeyError, TypeError, ValueError):
-                    return self.json(422, {'error': 'Sélection, image ou description invalide.'})
-                except sqlite3.Error:
-                    return self.json(503, {'error': 'Stockage local indisponible'})
             lesson_route = re.fullmatch(r'/api/lecons-locales/(prepare|save|review|publish|withdraw)',
                                         urllib.parse.urlsplit(self.path).path)
             editorial = env.activity_catalogue.editorial if env.activity_catalogue else None
@@ -589,7 +529,7 @@ def create_handler(env: Environment, teacher: bool = False):
             activity = re.fullmatch(r'/api/activite-locale/(start|submit|result)', route)
             if activity and not teacher:
                 query = urllib.parse.parse_qs(urllib.parse.urlsplit(self.path).query)
-                item = env.find_activity(query.get('id', [None])[0], include_closed=activity[1] != 'start')
+                item = env.find_activity(query.get('id', [None])[0])
                 if item is None:
                     return self.respond(404, b'Activite locale indisponible')
                 try:

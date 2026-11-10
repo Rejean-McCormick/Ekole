@@ -7,7 +7,6 @@ import sys
 from personnages import safe_file
 from mondes_v12 import MicroWorlds
 from lecons_locales import Editorial
-from univers import Univers
 
 ID = re.compile(r'[a-z][a-z0-9-]{1,79}')
 TOKEN = re.compile(r'[A-Za-z0-9_-]{43}')
@@ -97,8 +96,6 @@ class Catalogue:
             raise ValueError('Catalogue d’activités locales invalide')
         self.activities = {}
         self.pages = {}
-        self.activity_themes = {}
-        variants = {}
         self.scenarios = [{key: row[key] for key in ('id', 'titre', 'famille', 'resultat')}
                           for row in data['scenarios']]
         db_path = database or safe_file(root, 'tentatives.sqlite3')
@@ -108,12 +105,6 @@ class Catalogue:
                 raise ValueError('Activité dupliquée ou pages manquantes')
             self.activities[item.id] = item
             self.pages[item.id] = entry['pages']
-            if theme := entry.get('theme'):
-                self.activity_themes[item.id] = theme
-                by_course = variants.setdefault(theme, {})
-                if item.course in by_course:
-                    raise ValueError('Variante thématique dupliquée')
-                by_course[item.course] = {'id': item.id, 'titre': item.views['fr-CA']['title'], 'spek': True}
         self.portal = {}
         for entry in data.get('portal', []):
             if not ID.fullmatch(entry['id']) or entry['id'] in self.portal or set(entry['pages']) != {'fr'}:
@@ -124,14 +115,6 @@ class Catalogue:
         if data.get('lessons') and content is not None and pack is not None:
             seeds = json.loads(self.resource(data['lessons'], ('lecons-candidates.json',)))
             self.editorial = Editorial(content, seeds, pack, next(iter(self.activities.values())).store)
-
-        self.univers = None
-        if data.get('univers'):
-            themes = json.loads(self.resource(data['univers'], ('univers.json',)))
-            self.univers = Univers(self, themes, variants, data.get('univers_pages', {}), courses,
-                                    next(iter(self.activities.values())).store)
-        elif variants:
-            raise ValueError('Variantes sans catalogue des univers')
 
         self.notions = data.get('notions', {})
         if self.notions and set(self.notions) != set(courses):

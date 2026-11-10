@@ -16,6 +16,7 @@ from launcher import Environment, create_handler, ENGINE
 ROOT=ENGINE.parent
 CAT=ROOT/'ekole-quebec/personnages/catalogue.json'
 
+@unittest.skipUnless(CAT.is_file(), "ekole-quebec characters catalogue not supplied")
 class CatalogueTests(unittest.TestCase):
     def setUp(self):self.data=json.loads(CAT.read_text(encoding='utf-8'))
     def test_cross_repo_roles_and_companions(self):
@@ -53,6 +54,7 @@ class CatalogueTests(unittest.TestCase):
             root=Path(td);(root/'images').symlink_to(ROOT,target_is_directory=True)
             with self.assertRaises(ValueError):personnages.safe_file(root,'images/private.png')
 
+@unittest.skipUnless(CAT.is_file(), "ekole-quebec characters catalogue not supplied")
 class ApiTests(unittest.TestCase):
     def test_ready_png_is_served_by_id_only(self):
         import zlib

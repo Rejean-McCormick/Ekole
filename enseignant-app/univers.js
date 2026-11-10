@@ -75,6 +75,7 @@ window.EkoleUniversEnseignant = async (root, {make, button, json, cfg}) => {
  const update = () => preview().catch(error => { status.textContent = error.message; });
  previewTheme.addEventListener('change', update);
  style.addEventListener('change', update);
+ if (window.EkoleRolesEnseignant) await window.EkoleRolesEnseignant(root, {make, json});
  await update();
  if (!cfg.edition) return;
  make(panel, 'p', 'b3-note', 'Image optimisée de 600 ko maximum, de 120 à 4 096 pixels par côté.');

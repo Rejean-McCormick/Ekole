@@ -1,6 +1,6 @@
 # Visite client d’Ekole
 
-Une visite en 12 étapes dans les interfaces locales. L’enseignant ouvre le jardinage et le jazz, puis un élève explore les mathématiques, les sciences et la lecture dans ces univers. La visite s’arrête sur chaque écran avec un sous-titre. **Espace** ou le bouton **Suivant** déclenche l’action suivante. Fermer l’onglet termine la visite.
+Une visite en 17 étapes dans les interfaces locales. Le fil conducteur est la division en 3e année, avec les invitations de Mila. La visite s’arrête sur chaque écran avec un sous-titre. **Espace** ou le bouton **Suivant** déclenche l’action suivante. Fermer l’onglet termine la visite.
 
 ## Installation sur Windows
 
@@ -23,10 +23,15 @@ La visite démarre ses propres serveurs locaux et utilise une base temporaire. L
 
 ## Ce que voit le collaborateur
 
-- L’enseignant ouvre des thèmes, choisit la palette pastel et prépare un prompt d’illustration.
-- L’élève choisit son compagnon, manipule des groupes de semences et distingue une observation d’une explication au jardin.
-- L’élève change d’univers et retrouve le jazz dans une activité de lecture. Spek présente une fiche de cours dans cet univers avec la palette de classe.
-- L’enseignant retrouve la banque de questions pour intervenir sur un exercice au besoin.
+- Côté élève, le choix d’un parcours, une leçon en six étapes, la manipulation des invitations de Mila, le bilan et un micro-monde.
+- Côté enseignant, la banque de scénarios Kontexte, le brouillon et son aperçu, la revue d’une leçon, la correction d’une réponse Inkuisite, les prompts d’illustration et le tableau de couverture.
+- Du même contenu, une fiche anglaise rendue par Spek et une exploration des liens entre notions dans Konstellation-Light.
+
+## La revue pédagogique dans Ekole
+
+La revue d’une **leçon** vérifie la version que l’élève verra. On lit les six étapes et on se demande si l’objectif correspond au cours, si les exemples sont justes, si le vocabulaire convient à l’âge et si l’activité permet de voir ce que l’élève a compris. On vérifie aussi que les corrigés et les notes de l’enseignant restent privés. Dans l’atelier, une personne confirme la révision exacte du brouillon. **Diffuser** est une action distincte qui rend la version relue accessible dans l’espace Élève local.
+
+La revue d’une **réponse Inkuisite** se fait après un essai. Elle sert à lire la justification donnée par l’élève, appliquer le critère et lui faire une rétroaction. La visite montre les deux opérations.
 
 ## Vérification automatique
 

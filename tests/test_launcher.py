@@ -15,6 +15,7 @@ sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]))
 from launcher import ENGINE, Environment, create_handler, load_pack
 
 CONTENT=ENGINE.parent/'ekole-quebec'
+CONTENT_AVAILABLE=(CONTENT/'pack.json').is_file()
 
 
 def request(url, *, data=None, headers=None, opener=None):
@@ -22,6 +23,7 @@ def request(url, *, data=None, headers=None, opener=None):
     return opener.open(req,timeout=3) if opener else urllib.request.urlopen(req,timeout=3)
 
 class PackTests(unittest.TestCase):
+    @unittest.skipUnless(CONTENT_AVAILABLE, "ekole-quebec content repository not supplied")
     def test_content_pack_and_originals(self):
         self.assertEqual(len(load_pack(CONTENT)['cours']),202)
         sha=json.loads((CONTENT/'CONTROLE_COURS_SHA256.json').read_text(encoding='utf-8'))
@@ -46,6 +48,7 @@ class PackTests(unittest.TestCase):
                 'parcours':[]}),encoding='utf8')
             with self.assertRaises(ValueError):load_pack(root)
 
+@unittest.skipUnless(CONTENT_AVAILABLE, "ekole-quebec content repository not supplied")
 class ServerTests(unittest.TestCase):
     def setUp(self):
         self.env=Environment(CONTENT, False)

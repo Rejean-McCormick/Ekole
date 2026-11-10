@@ -1,5 +1,4 @@
 """Integration check for the cumulative overlay (set EKOLE_CATALOGUE_TEST to its build)."""
-import base64
 import http.cookiejar
 import http.server
 import json
@@ -63,8 +62,6 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(len(get_json(teacher, '/api/activites-locales/scenarios.json', browser.open)), 60)
         self.assertEqual(len(get_json(pupil, '/api/portail-spek.json')), 20)
         self.exercise_lessons(pupil, teacher, env, get_json, post, browser)
-        if env.activity_catalogue.univers:
-            self.exercise_univers(pupil, teacher, env, get_json, post, browser)
         pack = get_json(pupil, '/api/pack.json')
         self.assertEqual(sum(bool(c.get('fiche_decouverte')) for c in pack['cours']), 202)
         fiche = get_json(pupil, '/notions-spek/qc-pri-ad-001/fr/document.json')
@@ -118,8 +115,6 @@ class CatalogueTests(unittest.TestCase):
         coverage = get_json(teacher, '/api/activites-locales/couverture.json', browser.open)
         self.assertEqual(len(coverage), 202)
         self.assertEqual(sum(len(item['activites']) for item in coverage), 12)
-        if env.activity_catalogue.univers:
-            self.assertEqual(sum(len(item['variantes']) for item in coverage), 12)
         self.assertEqual(sum(len(item['micro_mondes']) for item in coverage), 7)
         with self.assertRaises(HTTPError) as error:
             get_json(pupil, '/api/activites-locales/couverture.json')
@@ -209,42 +204,6 @@ class CatalogueTests(unittest.TestCase):
             'result_digest': reviewed['result']['result_digest']})['released'])
         result = post(pupil, '/api/activite-locale/result?id=gouter-partage', token)
         self.assertEqual(result['score'], 3)
-
-    def exercise_univers(self, pupil, teacher, env, get_json, post, browser):
-        prefix = '/api/univers'
-        profile = {'choices': ['jardinage', 'jazz'], 'default': 'jardinage', 'style': 'pastel'}
-        activity = '/api/activite-locale.json?id=division-jardinage'
-        fiche = '/univers-spek/jardinage/qc-pri-st-001/fr/'
-        with self.assertRaises(HTTPError) as refused:
-            get_json(pupil, activity)
-        self.assertEqual(refused.exception.code, 404)
-        with self.assertRaises(HTTPError) as refused:
-            post(pupil, prefix + '/publier', profile, csrf=env.csrf)
-        self.assertEqual(refused.exception.code, 401)
-        self.assertEqual(post(teacher, prefix + '/publier', profile, browser.open, env.csrf), profile)
-        listing = get_json(pupil, prefix + '.json')
-        self.assertEqual([row['id'] for row in listing['themes']], profile['choices'])
-        self.assertEqual(listing['style'], 'pastel')
-        self.assertEqual(len(get_json(teacher, prefix + '.json', browser.open)['themes']), 10)
-        self.assertIn('jardin', get_json(pupil, activity)['title'])
-        self.assertIn('5 cm', get_json(pupil, '/api/activite-locale.json?id=semis-a-comparer-jardinage')['context'])
-        self.assertIn('programme', get_json(pupil, '/api/activite-locale.json?id=recit-du-spectacle-jazz')['context'])
-        self.assertIn('Les jardins du village', get_json(pupil, fiche + 'document.json')['subtitle'])
-        png = 'iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAAAAAAcD2kOAAAAJUlEQVR4nO3BMQEAAADCoPVPbQlPoAAAAAAAAAAAAAAAAAAAPgY4uAABCbhRfwAAAABJRU5ErkJggg=='
-        image = {'theme': 'jardinage', 'style': 'pastel', 'alt': 'Image fictive', 'image': png}
-        with self.assertRaises(HTTPError) as refused:
-            post(pupil, prefix + '/image', image, csrf=env.csrf)
-        self.assertEqual(refused.exception.code, 401)
-        post(teacher, prefix + '/image', image, browser.open, env.csrf)
-        with urlopen(pupil + prefix + '/image/jardinage/pastel', timeout=5) as response:
-            self.assertEqual(response.read(), base64.b64decode(png))
-        with urlopen(pupil + fiche + 'index.html', timeout=5) as response:
-            self.assertIn(b'--accent:#694782', response.read())
-        post(teacher, prefix + '/publier', {'choices': [], 'default': '', 'style': 'ekole'},
-             browser.open, env.csrf)
-        with self.assertRaises(HTTPError) as refused:
-            get_json(pupil, fiche + 'document.json')
-        self.assertEqual(refused.exception.code, 404)
 
     def exercise_lessons(self, pupil, teacher, env, get_json, post, browser):
         prefix = '/api/lecons-locales'

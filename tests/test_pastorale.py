@@ -21,6 +21,12 @@ class PastoralTests(unittest.TestCase):
         self.assertGreaterEqual(len(pack['parcours']), 7)
         self.assertEqual(pack['statut'], 'projet_non_publie')
 
+        from launcher import Environment
+        env = Environment(root, False)
+        first = pack['cours'][0]['id']
+        public = env.student_course(first)
+        self.assertEqual(public['modules'], [])
+        self.assertEqual(public['statut_publication'], 'en_preparation')
         for cours in pack['cours']:
             with self.subTest(cours=cours['id']):
                 self.assertEqual(cours['statut'], 'maquette_non_approuvee')

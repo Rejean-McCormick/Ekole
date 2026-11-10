@@ -15,6 +15,8 @@ from launcher import Environment, create_handler
 
 
 class LocalActivityTests(unittest.TestCase):
+    @unittest.skipUnless((Path(__file__).resolve().parents[2]/'ekole-quebec/outils/compiler_activite.py').is_file(),
+                         "ekole-quebec compiler not supplied")
     def test_practice_bilan_and_release(self):
         repos = Path(__file__).resolve().parents[2]
         quebec = repos / 'ekole-quebec'

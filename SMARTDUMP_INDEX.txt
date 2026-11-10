@@ -1,29 +1,34 @@
 SMART DUMPER INDEX
 ==================
-generated_at: 2026-10-28T16:45:23.114356
+generated_at: 2026-11-09T16:33:39.514328
 source_root: C:\mycode\Ekole\ekole
 mode: snapshot
 zip_file: ekole_Code_snapshot.zip
 embedded_index: SMARTDUMP_INDEX.txt
-file_count: 225
-total_bytes: 2210036
+file_count: 247
+total_bytes: 2391786
 compression: ZIP_DEFLATED level 1
 
 FILES
 -----
 .gitignore	78 bytes
+activite_locale.py	9892 bytes
+banques_locales.py	7264 bytes
 config/settings.json	327 bytes
-contracts/content-pack.schema.json	2499 bytes
+contracts/content-pack.schema.json	2727 bytes
 contracts/ekole-tandem-teacher-preview.schema.json	2107 bytes
 docs/Integration-Verification-2026-10-27.md	1943 bytes
+docs/PERSONNAGES_ALIGNMENT.md	2888 bytes
 docs/TANDEM_EKOLE_ORGO_PREVIEW_P1.md	3752 bytes
 ekole/enseignant-app/index.html	1260 bytes
 ekole/enseignant-app/style.css	13513 bytes
 ekole/site/index.html	1680 bytes
 ekole/site/style.css	11584 bytes
-enseignant-app/app.js	29652 bytes
+enseignant-app/activites-locales.js	12109 bytes
+enseignant-app/app.js	31043 bytes
 enseignant-app/app.v3-backup.js	12803 bytes
-enseignant-app/index.html	1248 bytes
+enseignant-app/index.html	1349 bytes
+enseignant-app/lecons-locales.js	11257 bytes
 enseignant-app/revue/audit-b1/01_MATRICE_83_OBJECTIFS.csv	63748 bytes
 enseignant-app/revue/audit-b1/01_MATRICE_83_OBJECTIFS.json	122404 bytes
 enseignant-app/revue/audit-b1/02_INVENTAIRE_36_COURS.csv	19970 bytes
@@ -60,7 +65,8 @@ enseignant-app/style.v3-backup.css	3138 bytes
 INSTALL_EKOLE_TANDEM_P1.cmd	249 bytes
 lancer-ekole.sh	101 bytes
 LANCER_EKOLE.bat	332 bytes
-launcher.py	26426 bytes
+launcher.py	47233 bytes
+lecons_locales.py	13010 bytes
 legacy/enseignant-app/app.js	17245 bytes
 legacy/enseignant-app/atelier-v12/app.js	6424 bytes
 legacy/enseignant-app/atelier-v12/index.html	1829 bytes
@@ -116,10 +122,11 @@ legacy/site/eleve/labo/embed.js	947 bytes
 legacy/site/eleve/labo/engine.js	15229 bytes
 legacy/site/eleve/labo/index.html	1081 bytes
 legacy/site/eleve/labo/lab.css	6727 bytes
-legacy/site/eleve/mondes-v12/app.js	8097 bytes
-legacy/site/eleve/mondes-v12/engine.js	7522 bytes
+legacy/site/eleve/mondes-v12/app.js	8914 bytes
+legacy/site/eleve/mondes-v12/engine.js	7659 bytes
 legacy/site/eleve/mondes-v12/index.html	703 bytes
 legacy/site/eleve/mondes-v12/style.css	3370 bytes
+legacy/site/eleve/mondes-v12/verifier-etat.cjs	1830 bytes
 legacy/site/eleve/spek-stage2/index.html	12283 bytes
 legacy/site/eleve/spek-stage2/reports/review-report.html	1074 bytes
 legacy/site/eleve/spek-stage2/spek/fr/index.html	559196 bytes
@@ -173,7 +180,7 @@ legacy/tools/compiler_atelier_histoire.py	5661 bytes
 legacy/tools/compiler_atelier_histoire_v2.py	11868 bytes
 legacy/tools/compiler_atelier_histoire_v3.py	9968 bytes
 legacy/tools/compiler_experiences_v11.py	3223 bytes
-legacy/tools/compiler_mondes_v12.py	5368 bytes
+legacy/tools/compiler_mondes_v12.py	5542 bytes
 legacy/tools/compiler_visuels_approuves_v8.py	5339 bytes
 legacy/tools/compiler_visuels_kristals.py	7285 bytes
 legacy/tools/construire_vue_enfant.py	2750 bytes
@@ -203,24 +210,33 @@ MIGRATION.md	1890 bytes
 MISE_A_JOUR_3E.md	827 bytes
 MISE_A_JOUR_V3.md	924 bytes
 missions_demo.py	5503 bytes
+mondes_v12.py	3207 bytes
+personnages.py	7530 bytes
 PREVIEW_EKOLE_TANDEM_P1.cmd	249 bytes
 publications.py	4669 bytes
 README.md	3035 bytes
 README_EKOLE_TANDEM_P1.txt	746 bytes
 ROLLBACK_EKOLE_TANDEM_P1.cmd	250 bytes
-site/app.js	28848 bytes
-site/eleve/index.html	1679 bytes
+site/activite-locale.js	11437 bytes
+site/app.js	32128 bytes
+site/eleve/index.html	1798 bytes
 site/enseignant/index.html	754 bytes
-site/index.html	1638 bytes
+site/index.html	1732 bytes
 site/missions.css	2701 bytes
-site/missions.js	8176 bytes
-site/style.css	19350 bytes
+site/missions.js	8314 bytes
+site/personnages.js	1716 bytes
+site/style.css	20456 bytes
+SMARTDUMP_INDEX.txt	11360 bytes
 SNAPSHOT_INDEX.txt	6159 bytes
 tandem/__init__.py	257 bytes
 tandem/fixtures/fete-sorciere.synthetic.json	939 bytes
 tandem/projection.py	4161 bytes
+tests/test_activite_locale.py	4898 bytes
+tests/test_catalogue_local.py	16982 bytes
 tests/test_launcher.py	7544 bytes
 tests/test_pastorale.py	1891 bytes
+tests/test_personnages.py	5871 bytes
+tests/test_personnages_ui.cjs	3550 bytes
 tests/test_tandem_projection.py	4797 bytes
 tools/tandem_tour_ekole/installer.py	8342 bytes
 tools/tandem_tour_ekole/manifest.json	2255 bytes
@@ -235,4 +251,10 @@ tools/tandem_tour_ekole/payload/tests/test_tandem_projection.py	4797 bytes
 VALIDATION.md	1621 bytes
 vendor/reference-only/SOURCES.json	2410 bytes
 VERIFY_EKOLE_TANDEM_P1.cmd	248 bytes
+visite-client/chapitres.cjs	10805 bytes
+visite-client/LANCER_VISITE.cmd	977 bytes
+visite-client/LISEZ-MOI.md	3454 bytes
+visite-client/package.json	205 bytes
+visite-client/serveur-demo.py	4950 bytes
+visite-client/visite.cjs	8166 bytes
 visuals.py	7057 bytes

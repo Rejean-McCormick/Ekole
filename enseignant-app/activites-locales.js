@@ -103,7 +103,6 @@ window.EkoleActivitesEnseignant = (() => {
   make(root, 'p', 'b3-intro',
        rows.length + ' cours · ' + counters(rows, row => row.lecon_eleve) + ' avec leçon élève · ' +
        counters(rows, row => row.activites.length) + ' avec activité structurée · ' +
-       rows.reduce((total, row) => total + (row.variantes || []).length, 0) + ' variantes thématiques · ' +
        counters(rows, row => row.micro_mondes.length) + ' avec micro-monde');
   make(root, 'p', 'b3-note', 'Les compteurs indiquent les ressources présentes. La revue pédagogique est distincte.');
   const search = field(root, make, 'Filtrer par cours, identifiant ou discipline');
@@ -117,7 +116,7 @@ window.EkoleActivitesEnseignant = (() => {
   summary.setAttribute('role', 'status');
   const table = make(root, 'table', 'b3-md-table');
   const headers = make(make(table, 'thead'), 'tr');
-  for (const text of ['Cours', 'Discipline', 'Leçon', 'Activités', 'Variantes', 'Micro-mondes'])
+  for (const text of ['Cours', 'Discipline', 'Leçon', 'Activités', 'Micro-mondes'])
    make(headers, 'th', '', text).scope = 'col';
   const body = make(table, 'tbody');
   const render = () => {
@@ -140,7 +139,6 @@ window.EkoleActivitesEnseignant = (() => {
     make(row, 'td', '', item.discipline);
     make(row, 'td', '', item.lecon_eleve ? 'Présente' : '—');
     make(row, 'td', '', item.activites.length || '—');
-    make(row, 'td', '', item.variantes?.length || '—');
     make(row, 'td', '', item.micro_mondes.length || '—');
    }
   };
