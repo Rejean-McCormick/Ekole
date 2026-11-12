@@ -1,0 +1,928 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ekole:prf22:situation-orchestrable:design:0.3",
+  "title": "Ékole PRF-22 situation pédagogique orchestrable — candidate v0.3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "status",
+    "id",
+    "title",
+    "context",
+    "learning",
+    "roles",
+    "activities",
+    "dependencies",
+    "organization",
+    "evidence",
+    "governance",
+    "pedagogical_model"
+  ],
+  "properties": {
+    "format": {
+      "const": "ekole.situation-orchestrable.design/0.3"
+    },
+    "status": {
+      "const": "design_only"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reality_mode",
+        "epoch",
+        "place",
+        "culture_refs",
+        "narrative_premise",
+        "review_status",
+        "language",
+        "cultural_frame",
+        "source_situation"
+      ],
+      "properties": {
+        "reality_mode": {
+          "enum": [
+            "real",
+            "fiction",
+            "mixed"
+          ]
+        },
+        "epoch": {
+          "type": "string",
+          "minLength": 2
+        },
+        "place": {
+          "type": "string",
+          "minLength": 2
+        },
+        "culture_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          }
+        },
+        "narrative_premise": {
+          "type": "string",
+          "minLength": 5
+        },
+        "review_status": {
+          "const": "not_evaluated"
+        },
+        "language": {
+          "type": "string",
+          "minLength": 2
+        },
+        "cultural_frame": {
+          "type": "string",
+          "minLength": 2
+        },
+        "source_situation": {
+          "$ref": "#/$defs/reference"
+        }
+      }
+    },
+    "learning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "objectives",
+        "activity_catalog_ownership"
+      ],
+      "properties": {
+        "objectives": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "reference"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "reference": {
+                "$ref": "#/$defs/reference"
+              }
+            }
+          }
+        },
+        "activity_catalog_ownership": {
+          "const": "external"
+        }
+      }
+    },
+    "roles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "purpose"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 2
+          }
+        }
+      }
+    },
+    "activities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/activity"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "before",
+          "after",
+          "handoff"
+        ],
+        "properties": {
+          "before": {
+            "type": "string"
+          },
+          "after": {
+            "type": "string"
+          },
+          "handoff": {
+            "type": "string",
+            "minLength": 4
+          }
+        }
+      }
+    },
+    "organization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "min_learners",
+        "max_learners",
+        "preferred_team_size",
+        "adaptations",
+        "human_confirm_resources"
+      ],
+      "properties": {
+        "min_learners": {
+          "const": 1
+        },
+        "max_learners": {
+          "const": 30
+        },
+        "preferred_team_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "adaptations": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "learners",
+              "strategy",
+              "requires_teacher_review"
+            ],
+            "properties": {
+              "learners": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 30
+              },
+              "strategy": {
+                "type": "string",
+                "minLength": 6
+              },
+              "requires_teacher_review": {
+                "const": true
+              }
+            }
+          }
+        },
+        "human_confirm_resources": {
+          "const": true
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "expected_artifacts",
+        "teacher_validation",
+        "student_results_stored_here"
+      ],
+      "properties": {
+        "expected_artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "teacher_validation": {
+          "const": true
+        },
+        "student_results_stored_here": {
+          "const": false
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "access_authority",
+        "execution_authority",
+        "publication_authorized",
+        "activation_authorized",
+        "student_data_included",
+        "review_status"
+      ],
+      "properties": {
+        "access_authority": {
+          "const": "external_required"
+        },
+        "execution_authority": {
+          "const": "external_required"
+        },
+        "publication_authorized": {
+          "const": false
+        },
+        "activation_authorized": {
+          "const": false
+        },
+        "student_data_included": {
+          "const": false
+        },
+        "review_status": {
+          "const": "not_evaluated"
+        }
+      }
+    },
+    "pedagogical_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "theory_refs",
+        "objective_conditions",
+        "activity_didactics",
+        "conjectures",
+        "evidence_design",
+        "alignment",
+        "adaptation_contract",
+        "research_plan"
+      ],
+      "properties": {
+        "theory_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "citation",
+              "url",
+              "design_function"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "citation": {
+                "type": "string",
+                "minLength": 12
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https://"
+              },
+              "design_function": {
+                "type": "string",
+                "minLength": 12
+              }
+            }
+          }
+        },
+        "objective_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "objective_id",
+              "assessment_requires",
+              "interpretation_limit"
+            ],
+            "properties": {
+              "objective_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "assessment_requires": {
+                "enum": [
+                  "individual_possible",
+                  "peer_interaction"
+                ]
+              },
+              "interpretation_limit": {
+                "type": "string",
+                "minLength": 12
+              }
+            }
+          }
+        },
+        "activity_didactics": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "activity_id",
+              "learning_types",
+              "four_cid_components",
+              "pedagogical_rationale"
+            ],
+            "properties": {
+              "activity_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "learning_types": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "enum": [
+                    "acquisition",
+                    "inquiry",
+                    "practice",
+                    "discussion",
+                    "collaboration",
+                    "production"
+                  ]
+                }
+              },
+              "four_cid_components": {
+                "type": "array",
+                "minItems": 0,
+                "items": {
+                  "enum": [
+                    "learning_task",
+                    "supportive_information",
+                    "procedural_information",
+                    "part_task_practice"
+                  ]
+                }
+              },
+              "pedagogical_rationale": {
+                "type": "string",
+                "minLength": 15
+              }
+            }
+          }
+        },
+        "conjectures": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "theoretical_basis_ids",
+              "design_activity_ids",
+              "intended_objective_ids",
+              "mediating_processes",
+              "boundary_conditions",
+              "disconfirmation_signals",
+              "alternative_explanations",
+              "validation_status",
+              "conjecture_statement"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "theoretical_basis_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]*$"
+                }
+              },
+              "design_activity_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]*$"
+                }
+              },
+              "intended_objective_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]*$"
+                }
+              },
+              "mediating_processes": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "description",
+                    "observation_strategy"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]*$"
+                    },
+                    "description": {
+                      "type": "string",
+                      "minLength": 10
+                    },
+                    "observation_strategy": {
+                      "type": "string",
+                      "minLength": 15
+                    }
+                  }
+                }
+              },
+              "boundary_conditions": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 12
+                }
+              },
+              "disconfirmation_signals": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 12
+                }
+              },
+              "alternative_explanations": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 12
+                }
+              },
+              "validation_status": {
+                "const": "untested"
+              },
+              "conjecture_statement": {
+                "type": "string",
+                "minLength": 15
+              }
+            }
+          }
+        },
+        "evidence_design": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "description",
+              "produced_by_activity_ids",
+              "interpretation_limits",
+              "storage_boundary"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 12
+              },
+              "produced_by_activity_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]*$"
+                }
+              },
+              "interpretation_limits": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 12
+                }
+              },
+              "storage_boundary": {
+                "const": "external_only"
+              }
+            }
+          }
+        },
+        "alignment": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "objective_id",
+              "activity_ids",
+              "expected_learner_actions",
+              "process_ids",
+              "evidence_id",
+              "criteria",
+              "assessed_modes",
+              "assessment_authority",
+              "assessment_status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "objective_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "activity_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]*$"
+                }
+              },
+              "expected_learner_actions": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 10
+                }
+              },
+              "process_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]*$"
+                }
+              },
+              "evidence_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "criteria": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 10
+                }
+              },
+              "assessed_modes": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "enum": [
+                    "solo",
+                    "collaborative"
+                  ]
+                }
+              },
+              "assessment_authority": {
+                "const": "teacher"
+              },
+              "assessment_status": {
+                "const": "planned_only"
+              }
+            }
+          }
+        },
+        "adaptation_contract": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "invariants",
+            "variants"
+          ],
+          "properties": {
+            "invariants": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "rule"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9-]*$"
+                  },
+                  "rule": {
+                    "type": "string",
+                    "minLength": 12
+                  }
+                }
+              }
+            },
+            "variants": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "learners",
+                  "mode",
+                  "change_notes",
+                  "preserved_objective_ids",
+                  "non_assessable_objective_ids",
+                  "teacher_approval_required",
+                  "resources_confirmed"
+                ],
+                "properties": {
+                  "learners": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 30
+                  },
+                  "mode": {
+                    "enum": [
+                      "solo",
+                      "collaborative"
+                    ]
+                  },
+                  "change_notes": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string",
+                      "minLength": 12
+                    }
+                  },
+                  "preserved_objective_ids": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]*$"
+                    }
+                  },
+                  "non_assessable_objective_ids": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]*$"
+                    }
+                  },
+                  "teacher_approval_required": {
+                    "const": true
+                  },
+                  "resources_confirmed": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "research_plan": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "observation_protocol",
+            "ethics_limits",
+            "revision_rule",
+            "claims_status",
+            "human_reviews"
+          ],
+          "properties": {
+            "observation_protocol": {
+              "type": "string",
+              "minLength": 20
+            },
+            "ethics_limits": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "minLength": 12
+              }
+            },
+            "revision_rule": {
+              "type": "string",
+              "minLength": 20
+            },
+            "claims_status": {
+              "const": "untested"
+            },
+            "human_reviews": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "pedagogical",
+                "contextual",
+                "accessibility",
+                "operational",
+                "authority"
+              ],
+              "properties": {
+                "pedagogical": {
+                  "const": "not_reviewed"
+                },
+                "contextual": {
+                  "const": "not_reviewed"
+                },
+                "accessibility": {
+                  "const": "not_reviewed"
+                },
+                "operational": {
+                  "const": "not_reviewed"
+                },
+                "authority": {
+                  "const": "not_reviewed"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner",
+        "resource_id",
+        "revision",
+        "pin_status"
+      ],
+      "properties": {
+        "owner": {
+          "type": "string",
+          "minLength": 2
+        },
+        "resource_id": {
+          "type": "string",
+          "minLength": 2
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pin_status": {
+          "enum": [
+            "unresolved",
+            "pinned"
+          ]
+        },
+        "commitment": {
+          "type": "string",
+          "minLength": 8
+        },
+        "source_note": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "pin_status": {
+                "const": "pinned"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "commitment"
+            ]
+          }
+        }
+      ]
+    },
+    "activity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "exercise_ref",
+        "objectives",
+        "role_ids",
+        "duration_minutes",
+        "station"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "exercise_ref": {
+          "$ref": "#/$defs/reference"
+        },
+        "objectives": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "role_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "duration_minutes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "station": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "teams_per_instance",
+            "max_parallel_instances",
+            "materials_review_required"
+          ],
+          "properties": {
+            "teams_per_instance": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_parallel_instances": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "materials_review_required": {
+              "const": true
+            }
+          }
+        },
+        "contextualization": {
+          "type": "string"
+        },
+        "solo_fallback": {
+          "type": "string",
+          "minLength": 4
+        },
+        "group_fallback": {
+          "type": "string",
+          "minLength": 4
+        }
+      }
+    }
+  }
+}

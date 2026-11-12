@@ -1,0 +1,558 @@
+{
+  "format": "ekole.situation-orchestrable.design/0.3",
+  "status": "design_only",
+  "id": "ekole-prf22-91811beaebad9f9a",
+  "title": "La fête de la sorcière — conception candidate",
+  "context": {
+    "reality_mode": "fiction",
+    "epoch": "Époque imaginaire, non historiquement attestée",
+    "place": "Place du village et atelier du boulanger",
+    "language": "fr-CA",
+    "cultural_frame": "Village de fiction sans attribution à une culture réelle",
+    "source_situation": {
+      "owner": "Kontexte",
+      "resource_id": "mission:fete-sorciere",
+      "revision": "unverified-local-snapshot",
+      "pin_status": "unresolved",
+      "source_note": "data/missions/fete-sorciere.json"
+    },
+    "culture_refs": [],
+    "narrative_premise": "La sorcière prépare la fête du village, mais aucune personne ne possède toutes les informations.",
+    "review_status": "not_evaluated"
+  },
+  "learning": {
+    "objectives": [
+      {
+        "id": "obj-01",
+        "reference": {
+          "owner": "Kontexte",
+          "resource_id": "qc-pri-fr-005",
+          "revision": "unverified-local-snapshot",
+          "pin_status": "unresolved",
+          "source_note": "data/catalogue/202_kristals.json"
+        }
+      },
+      {
+        "id": "obj-02",
+        "reference": {
+          "owner": "Kontexte",
+          "resource_id": "qc-pri-ma-002",
+          "revision": "unverified-local-snapshot",
+          "pin_status": "unresolved",
+          "source_note": "data/catalogue/202_kristals.json"
+        }
+      },
+      {
+        "id": "obj-03",
+        "reference": {
+          "owner": "Kontexte",
+          "resource_id": "qc-pri-ma-011",
+          "revision": "unverified-local-snapshot",
+          "pin_status": "unresolved",
+          "source_note": "data/catalogue/202_kristals.json"
+        }
+      }
+    ],
+    "activity_catalog_ownership": "external"
+  },
+  "roles": [
+    {
+      "id": "role-01",
+      "purpose": "Rôle narratif proposé : sorciere"
+    },
+    {
+      "id": "role-02",
+      "purpose": "Rôle narratif proposé : origamiste"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-01",
+      "exercise_ref": {
+        "owner": "Kontexte",
+        "resource_id": "micro:enseignement-explicite-004",
+        "revision": "unverified-local-snapshot",
+        "pin_status": "unresolved",
+        "source_note": "data/locales/qc/fr-CA/grade3/micro-situations-34.json"
+      },
+      "objectives": [
+        "obj-01"
+      ],
+      "role_ids": [
+        "role-01",
+        "role-02"
+      ],
+      "duration_minutes": 15,
+      "station": {
+        "teams_per_instance": 1,
+        "max_parallel_instances": 1,
+        "materials_review_required": true
+      },
+      "solo_fallback": "Documents ou indices fournis sans prétendre démontrer une interaction entre pairs.",
+      "group_fallback": "Transmission différée supervisée si les équipes ne peuvent pas se rencontrer.",
+      "contextualization": "Atelier ciblé : Repérer une information dans un court écrit adapté"
+    },
+    {
+      "id": "act-02",
+      "exercise_ref": {
+        "owner": "Kontexte",
+        "resource_id": "micro:enseignement-explicite-024",
+        "revision": "unverified-local-snapshot",
+        "pin_status": "unresolved",
+        "source_note": "data/locales/qc/fr-CA/grade3/micro-situations-34.json"
+      },
+      "objectives": [
+        "obj-02"
+      ],
+      "role_ids": [
+        "role-01",
+        "role-02"
+      ],
+      "duration_minutes": 15,
+      "station": {
+        "teams_per_instance": 1,
+        "max_parallel_instances": 1,
+        "materials_review_required": true
+      },
+      "solo_fallback": "Documents ou indices fournis sans prétendre démontrer une interaction entre pairs.",
+      "group_fallback": "Transmission différée supervisée si les équipes ne peuvent pas se rencontrer.",
+      "contextualization": "Atelier ciblé : Lire, représenter et comparer des nombres naturels"
+    },
+    {
+      "id": "act-03",
+      "exercise_ref": {
+        "owner": "Kontexte",
+        "resource_id": "micro:enseignement-explicite-022",
+        "revision": "unverified-local-snapshot",
+        "pin_status": "unresolved",
+        "source_note": "data/locales/qc/fr-CA/grade3/micro-situations-34.json"
+      },
+      "objectives": [
+        "obj-03"
+      ],
+      "role_ids": [
+        "role-01",
+        "role-02"
+      ],
+      "duration_minutes": 15,
+      "station": {
+        "teams_per_instance": 1,
+        "max_parallel_instances": 1,
+        "materials_review_required": true
+      },
+      "solo_fallback": "Documents ou indices fournis sans prétendre démontrer une interaction entre pairs.",
+      "group_fallback": "Transmission différée supervisée si les équipes ne peuvent pas se rencontrer.",
+      "contextualization": "Atelier ciblé : Expliquer et vérifier sa démarche mathématique"
+    }
+  ],
+  "dependencies": [
+    {
+      "before": "act-01",
+      "after": "act-02",
+      "handoff": "Informations issues de l’invitation"
+    },
+    {
+      "before": "act-02",
+      "after": "act-03",
+      "handoff": "Tableau des quantités comparées"
+    }
+  ],
+  "organization": {
+    "min_learners": 1,
+    "max_learners": 30,
+    "preferred_team_size": 4,
+    "adaptations": [
+      {
+        "learners": 1,
+        "strategy": "Parcours individuel et ressources documentaires de substitution, sans preuve de collaboration entre pairs.",
+        "requires_teacher_review": true
+      },
+      {
+        "learners": 8,
+        "strategy": "Organisation candidate pour 8 enfants, groupes et matériel à confirmer par l’enseignant.",
+        "requires_teacher_review": true
+      },
+      {
+        "learners": 30,
+        "strategy": "Organisation candidate pour 30 enfants, groupes et matériel à confirmer par l’enseignant.",
+        "requires_teacher_review": true
+      }
+    ],
+    "human_confirm_resources": true
+  },
+  "evidence": {
+    "expected_artifacts": [
+      "Liste annotée des informations effectivement extraites de l’invitation.",
+      "Tableau de quantités classées avec explication des comparaisons.",
+      "Feuille de calcul des provisions avec procédure de vérification expliquée."
+    ],
+    "teacher_validation": true,
+    "student_results_stored_here": false
+  },
+  "governance": {
+    "access_authority": "external_required",
+    "execution_authority": "external_required",
+    "publication_authorized": false,
+    "activation_authorized": false,
+    "student_data_included": false,
+    "review_status": "not_evaluated"
+  },
+  "pedagogical_model": {
+    "theory_refs": [
+      {
+        "id": "biggs-align",
+        "citation": "Biggs, J. (2003). Constructive alignment. Présentation University of Queensland.",
+        "url": "https://itali.uq.edu.au/teaching-guidance/principles-learning/guiding-theories-and-frameworks/teaching-frameworks-and-models",
+        "design_function": "Relier les objectifs aux actions et aux preuves évaluables."
+      },
+      {
+        "id": "laurillard",
+        "citation": "Laurillard, D. Conversational Framework, six formes d’apprentissage, UCL.",
+        "url": "https://www.ucl.ac.uk/short-courses/staff-resources/course-design/designing-learning-activities",
+        "design_function": "Caractériser les actes d’enquête, de pratique, de collaboration et de production."
+      },
+      {
+        "id": "sandoval-2014",
+        "citation": "Sandoval, W. (2014). Conjecture Mapping. Journal of the Learning Sciences, 23(1), 18–36.",
+        "url": "https://doi.org/10.1080/10508406.2013.778204",
+        "design_function": "Relier les dispositifs, les médiations et les résultats attendus."
+      }
+    ],
+    "objective_conditions": [
+      {
+        "objective_id": "obj-01",
+        "assessment_requires": "individual_possible",
+        "interpretation_limit": "Le produit final ne prouve pas à lui seul que chaque enfant a réalisé la démarche."
+      },
+      {
+        "objective_id": "obj-02",
+        "assessment_requires": "individual_possible",
+        "interpretation_limit": "Le produit final ne prouve pas à lui seul que chaque enfant a réalisé la démarche."
+      },
+      {
+        "objective_id": "obj-03",
+        "assessment_requires": "individual_possible",
+        "interpretation_limit": "Le produit final ne prouve pas à lui seul que chaque enfant a réalisé la démarche."
+      }
+    ],
+    "activity_didactics": [
+      {
+        "activity_id": "act-01",
+        "learning_types": [
+          "inquiry"
+        ],
+        "four_cid_components": [
+          "learning_task"
+        ],
+        "pedagogical_rationale": "Chercher les informations nécessaires dans une invitation courte pourrait soutenir la compréhension littérale."
+      },
+      {
+        "activity_id": "act-02",
+        "learning_types": [
+          "practice"
+        ],
+        "four_cid_components": [
+          "learning_task"
+        ],
+        "pedagogical_rationale": "Comparer des quantités issues de la fête pourrait rendre les relations entre nombres explicites."
+      },
+      {
+        "activity_id": "act-03",
+        "learning_types": [
+          "practice"
+        ],
+        "four_cid_components": [
+          "learning_task"
+        ],
+        "pedagogical_rationale": "Expliquer la démarche utilisée pour préparer les quantités pourrait aider à repérer et corriger des erreurs."
+      }
+    ],
+    "conjectures": [
+      {
+        "id": "conj-01",
+        "conjecture_statement": "Chercher les informations nécessaires dans une invitation courte pourrait soutenir la compréhension littérale.",
+        "theoretical_basis_ids": [
+          "biggs-align",
+          "laurillard",
+          "sandoval-2014"
+        ],
+        "design_activity_ids": [
+          "act-01"
+        ],
+        "intended_objective_ids": [
+          "obj-01"
+        ],
+        "mediating_processes": [
+          {
+            "id": "process-01",
+            "description": "L’enfant distingue la consigne du récit et extrait les informations pertinentes.",
+            "observation_strategy": "Observer le repérage et demander une reformulation des informations choisies."
+          }
+        ],
+        "boundary_conditions": [
+          "Supports adaptés à la lecture et matériel disponible; l’enseignant vérifie les prérequis."
+        ],
+        "disconfirmation_signals": [
+          "La liste ne correspond pas aux informations du texte malgré un guidage adapté."
+        ],
+        "alternative_explanations": [
+          "Une réussite pourrait dépendre d’un modèle fourni par un adulte et non du raisonnement propre."
+        ],
+        "validation_status": "untested"
+      },
+      {
+        "id": "conj-02",
+        "conjecture_statement": "Comparer des quantités issues de la fête pourrait rendre les relations entre nombres explicites.",
+        "theoretical_basis_ids": [
+          "biggs-align",
+          "laurillard",
+          "sandoval-2014"
+        ],
+        "design_activity_ids": [
+          "act-02"
+        ],
+        "intended_objective_ids": [
+          "obj-02"
+        ],
+        "mediating_processes": [
+          {
+            "id": "process-02",
+            "description": "L’enfant compare les représentations numériques et motive l’ordre proposé.",
+            "observation_strategy": "Observer les stratégies de comparaison et demander une explication verbale."
+          }
+        ],
+        "boundary_conditions": [
+          "Supports adaptés à la lecture et matériel disponible; l’enseignant vérifie les prérequis."
+        ],
+        "disconfirmation_signals": [
+          "Les quantités sont classées sans justification ou selon un critère incohérent."
+        ],
+        "alternative_explanations": [
+          "Une réussite pourrait dépendre d’un modèle fourni par un adulte et non du raisonnement propre."
+        ],
+        "validation_status": "untested"
+      },
+      {
+        "id": "conj-03",
+        "conjecture_statement": "Expliquer la démarche utilisée pour préparer les quantités pourrait aider à repérer et corriger des erreurs.",
+        "theoretical_basis_ids": [
+          "biggs-align",
+          "laurillard",
+          "sandoval-2014"
+        ],
+        "design_activity_ids": [
+          "act-03"
+        ],
+        "intended_objective_ids": [
+          "obj-03"
+        ],
+        "mediating_processes": [
+          {
+            "id": "process-03",
+            "description": "L’enfant confronte son résultat à une stratégie de vérification explicite.",
+            "observation_strategy": "Relever les corrections justifiées et les étapes de vérification montrées."
+          }
+        ],
+        "boundary_conditions": [
+          "Supports adaptés à la lecture et matériel disponible; l’enseignant vérifie les prérequis."
+        ],
+        "disconfirmation_signals": [
+          "L’enfant annonce un calcul correct sans pouvoir expliciter une vérification."
+        ],
+        "alternative_explanations": [
+          "Une réussite pourrait dépendre d’un modèle fourni par un adulte et non du raisonnement propre."
+        ],
+        "validation_status": "untested"
+      }
+    ],
+    "evidence_design": [
+      {
+        "id": "evidence-01",
+        "description": "Liste annotée des informations effectivement extraites de l’invitation.",
+        "produced_by_activity_ids": [
+          "act-01"
+        ],
+        "interpretation_limits": [
+          "Le produit final ne prouve pas à lui seul que chaque enfant a réalisé la démarche."
+        ],
+        "storage_boundary": "external_only"
+      },
+      {
+        "id": "evidence-02",
+        "description": "Tableau de quantités classées avec explication des comparaisons.",
+        "produced_by_activity_ids": [
+          "act-02"
+        ],
+        "interpretation_limits": [
+          "Le produit final ne prouve pas à lui seul que chaque enfant a réalisé la démarche."
+        ],
+        "storage_boundary": "external_only"
+      },
+      {
+        "id": "evidence-03",
+        "description": "Feuille de calcul des provisions avec procédure de vérification expliquée.",
+        "produced_by_activity_ids": [
+          "act-03"
+        ],
+        "interpretation_limits": [
+          "Le produit final ne prouve pas à lui seul que chaque enfant a réalisé la démarche."
+        ],
+        "storage_boundary": "external_only"
+      }
+    ],
+    "alignment": [
+      {
+        "id": "alignment-01",
+        "objective_id": "obj-01",
+        "activity_ids": [
+          "act-01"
+        ],
+        "expected_learner_actions": [
+          "Repérer puis citer les informations utiles dans un texte court."
+        ],
+        "process_ids": [
+          "process-01"
+        ],
+        "evidence_id": "evidence-01",
+        "criteria": [
+          "Les informations retenues se trouvent dans le texte et répondent à la demande."
+        ],
+        "assessed_modes": [
+          "solo",
+          "collaborative"
+        ],
+        "assessment_authority": "teacher",
+        "assessment_status": "planned_only"
+      },
+      {
+        "id": "alignment-02",
+        "objective_id": "obj-02",
+        "activity_ids": [
+          "act-02"
+        ],
+        "expected_learner_actions": [
+          "Comparer et ordonner les quantités de provisions envisagées."
+        ],
+        "process_ids": [
+          "process-02"
+        ],
+        "evidence_id": "evidence-02",
+        "criteria": [
+          "Les nombres sont comparés correctement et le raisonnement est explicité."
+        ],
+        "assessed_modes": [
+          "solo",
+          "collaborative"
+        ],
+        "assessment_authority": "teacher",
+        "assessment_status": "planned_only"
+      },
+      {
+        "id": "alignment-03",
+        "objective_id": "obj-03",
+        "activity_ids": [
+          "act-03"
+        ],
+        "expected_learner_actions": [
+          "Effectuer puis vérifier le calcul des provisions et expliquer la méthode."
+        ],
+        "process_ids": [
+          "process-03"
+        ],
+        "evidence_id": "evidence-03",
+        "criteria": [
+          "Les opérations sont correctes et au moins une méthode de vérification est documentée."
+        ],
+        "assessed_modes": [
+          "solo",
+          "collaborative"
+        ],
+        "assessment_authority": "teacher",
+        "assessment_status": "planned_only"
+      }
+    ],
+    "adaptation_contract": {
+      "invariants": [
+        {
+          "id": "inv-alignement",
+          "rule": "Toute preuve doit demeurer attachée à un objectif avec critères pertinents."
+        },
+        {
+          "id": "inv-provenance",
+          "rule": "Ne pas remplacer une source non résolue par une citation ou un pin inventé."
+        },
+        {
+          "id": "inv-collaboration",
+          "rule": "Une modalité solitaire ne valide jamais une compétence nécessitant des pairs."
+        },
+        {
+          "id": "inv-autorite",
+          "rule": "Aucun plan de conception ne peut conférer droits scolaires ni activation Orgo."
+        }
+      ],
+      "variants": [
+        {
+          "learners": 1,
+          "mode": "solo",
+          "change_notes": [
+            "Parcours individuel et ressources documentaires de substitution, sans preuve de collaboration entre pairs."
+          ],
+          "preserved_objective_ids": [
+            "obj-01",
+            "obj-02",
+            "obj-03"
+          ],
+          "non_assessable_objective_ids": [],
+          "teacher_approval_required": true,
+          "resources_confirmed": false
+        },
+        {
+          "learners": 8,
+          "mode": "collaborative",
+          "change_notes": [
+            "Organisation candidate pour 8 enfants, groupes et matériel à confirmer par l’enseignant."
+          ],
+          "preserved_objective_ids": [
+            "obj-01",
+            "obj-02",
+            "obj-03"
+          ],
+          "non_assessable_objective_ids": [],
+          "teacher_approval_required": true,
+          "resources_confirmed": false
+        },
+        {
+          "learners": 30,
+          "mode": "collaborative",
+          "change_notes": [
+            "Organisation candidate pour 30 enfants, groupes et matériel à confirmer par l’enseignant."
+          ],
+          "preserved_objective_ids": [
+            "obj-01",
+            "obj-02",
+            "obj-03"
+          ],
+          "non_assessable_objective_ids": [],
+          "teacher_approval_required": true,
+          "resources_confirmed": false
+        }
+      ]
+    },
+    "research_plan": {
+      "observation_protocol": "Comparer, avec l’enseignant et dans un cadre autorisé, les processus observés aux conjectures explicites, y compris les contre-exemples et conditions de séance.",
+      "ethics_limits": [
+        "Ne stocker aucune identité d’enfant ni réalisation individuelle dans ce blueprint.",
+        "Respecter les règles locales d’accès, de consentement, d’autorisation et de conservation."
+      ],
+      "revision_rule": "Créer une nouvelle révision après chaque pilote, tracer les écarts et conserver les hypothèses non corroborées comme telles.",
+      "claims_status": "untested",
+      "human_reviews": {
+        "pedagogical": "not_reviewed",
+        "contextual": "not_reviewed",
+        "accessibility": "not_reviewed",
+        "operational": "not_reviewed",
+        "authority": "not_reviewed"
+      }
+    }
+  }
+}

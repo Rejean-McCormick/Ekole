@@ -278,22 +278,27 @@
 })();
 
 
-/* Intégration Tandem : projection strictement enseignante via l'API Ekole existante.
- * L'absence de projection = aucune carte. Jamais d'accès direct à Orgo. */
+/* Intégration Tandem : projection strictement enseignante via l'API Ékole existante.
+ * Accepte les missions synthétiques 1..50 tâches, pas seulement la Fête de la sorcière.
+ * L'absence de projection = aucune carte. Aucune admission/permission Orgo. */
 (() => {
-  async function afficherApercuSorciere() {
+  const states = new Set(['ready','waiting','in_progress','done','blocked']);
+  const ref = /^[a-zA-Z0-9][a-zA-Z0-9_-]{1,63}$/;
+  async function afficherApercuTandem() {
     const answer = await fetch('/api/tandem/preview.json', {cache:'no-store', credentials:'same-origin'});
     if (!answer.ok) return;
     const d = await answer.json();
-    if (d.format !== 'ekole.tandem-teacher-preview/1.0' || d.mode !== 'synthetic'
-        || d.authority !== 'orgo' || d.scenario_ref !== 'fete-sorciere'
-        || !Array.isArray(d.tasks) || d.tasks.length !== 11) return;
+    if (!d || d.format !== 'ekole.tandem-teacher-preview/1.0' || d.mode !== 'synthetic'
+        || d.authority !== 'orgo' || !ref.test(d.scenario_ref)
+        || !Array.isArray(d.tasks) || d.tasks.length < 1 || d.tasks.length > 50) return;
+    if (!d.tasks.every(t => t && ref.test(t.task_ref) && ref.test(t.role_code)
+        && states.has(t.state) && Array.isArray(t.fragment_refs))) return;
     const main = document.querySelector('main.container');
-    if (!main || document.getElementById('tandem-sorciere')) return;
+    if (!main || document.getElementById('tandem-preview')) return;
     const section = document.createElement('section');
-    section.id = 'tandem-sorciere';
+    section.id = 'tandem-preview';
     section.className = 'tandem-revue';
-    section.setAttribute('aria-label', 'Aperçu Tandem de la Fête de la sorcière');
+    section.setAttribute('aria-label', 'Aperçu Tandem de mission synthétique');
     function add(parent, tag, text, css) {
       const node = document.createElement(tag);
       if (css) node.className = css;
@@ -301,20 +306,19 @@
       parent.appendChild(node);
       return node;
     }
-    add(section, 'h2', 'La Fête de la sorcière — parcours Tandem');
-    add(section, 'p', 'Projection synthétique de 11 tâches issues de Kontexte, Kompose et Akor. Aucun Case ni Task opérationnel Orgo n’a été créé. Aucun droit enseignant ou élève n’est accordé.', 'tandem-note');
-    const list = add(section,'div','', 'tandem-task-grid');
+    const missionLabel = d.scenario_ref.replace(/[-_]+/g, ' ');
+    add(section, 'h2', `Aperçu Tandem — ${missionLabel}`);
+    add(section, 'p', `Projection synthétique de ${d.tasks.length} tâche(s). Aucune Case ni Task opérationnelle Orgo n'a été créée par cet aperçu. Aucun droit enseignant ou élève n'est accordé.`, 'tandem-note');
+    const list = add(section, 'div', '', 'tandem-task-grid');
     for (const [index,t] of d.tasks.entries()) {
-      if (!t || typeof t.task_ref !== 'string' || typeof t.role_code !== 'string' ||
-          !['ready','waiting','in_progress','done','blocked'].includes(t.state)) return;
-      const card = add(list,'article','', 'tandem-task');
-      add(card,'small',`Étape ${index + 1} · ${t.state}`);
-      add(card,'h3',t.task_ref);
-      add(card,'p',`Rôle : ${t.role_code}`);
+      const card = add(list, 'article', '', 'tandem-task');
+      add(card, 'small', `Étape ${index + 1} · ${t.state}`);
+      add(card, 'h3', t.task_ref);
+      add(card, 'p', `Rôle : ${t.role_code}`);
     }
     main.insertBefore(section, main.firstChild);
   }
-  const run = () => {afficherApercuSorciere().catch(() => {});};
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded',run,{once:true});
+  const run = () => { afficherApercuTandem().catch(() => {}); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run, {once:true});
   else run();
 })();

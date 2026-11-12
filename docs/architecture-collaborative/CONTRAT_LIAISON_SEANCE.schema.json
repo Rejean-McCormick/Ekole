@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ekole:collaboration:session-link:proposal:1",
+  "title": "Liaison de séance Ékole / Orgo / Konnaxion (proposition documentaire)",
+  "description": "Schéma de travail. Valide la forme des références, pas l'identité ni les autorisations. N'est pas admis par un serveur scolaire.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "status", "scenario", "school_scope", "session_ref", "orgo", "konnaxion", "approval"],
+  "properties": {
+    "format": {"const": "ekole.collaboration.session-link/proposal-v1"},
+    "status": {"enum": ["draft", "prepared", "awaiting_review", "authorized", "active", "completed", "reviewed", "archived"]},
+    "scenario": {
+      "type": "object", "additionalProperties": false,
+      "required": ["ref", "version", "sha256"],
+      "properties": {
+        "ref": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "school_scope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["school_ref", "group_ref"],
+      "properties": {
+        "school_ref": {"type": "string", "minLength": 1},
+        "group_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "session_ref": {"type": "string", "minLength": 1},
+    "orgo": {
+      "type": "object", "additionalProperties": false,
+      "required": ["world_ref", "release_ref", "case_ref"],
+      "properties": {
+        "world_ref": {"type": "string", "minLength": 1},
+        "release_ref": {"type": "string", "minLength": 1},
+        "case_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "konnaxion": {
+      "type": "object", "additionalProperties": false,
+      "required": ["world_ref", "release_ref", "project_ref"],
+      "properties": {
+        "world_ref": {"type": "string", "minLength": 1},
+        "release_ref": {"type": "string", "minLength": 1},
+        "project_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "approval": {
+      "type": "object", "additionalProperties": false,
+      "required": ["teacher_review_ref", "owner_admission_ref"],
+      "properties": {
+        "teacher_review_ref": {"type": ["string", "null"]},
+        "owner_admission_ref": {"type": ["string", "null"]}
+      }
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  }
+}

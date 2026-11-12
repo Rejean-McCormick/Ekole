@@ -1,0 +1,324 @@
+{
+  "format": "ekole.prf22.authoring/0.3",
+  "status": "design_only",
+  "draft": {
+    "format": "ekole.situation-composition-draft/0.1",
+    "generated_at_utc": "2026-11-12T13:48:07+00:00",
+    "status": "draft_not_admitted",
+    "authorities": {
+      "scenario_source": "Kontexte",
+      "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+      "objectives_and_evidence": "Ékole",
+      "role_proposals": "Kompose",
+      "operational_tasks": "Orgo",
+      "world_ownership": "Orgo_Worlds",
+      "social_collaboration": "Konnaxion",
+      "channels": [
+        "Web",
+        "Kor",
+        "Kamel"
+      ]
+    },
+    "source": {
+      "reference": "mission:fete-sorciere",
+      "source_format": "kontexte.mission/1",
+      "source_relpath": "data/missions/fete-sorciere.json",
+      "title": "La fête de la sorcière",
+      "problem": "La sorcière prépare la fête du village, mais aucune personne ne possède toutes les informations.",
+      "narrative_role_codes": [
+        "sorciere",
+        "origamiste",
+        "traducteur",
+        "messager",
+        "metteur-en-scene",
+        "redacteur",
+        "lecteur",
+        "regisseur",
+        "comptable",
+        "photographe"
+      ],
+      "source_step_refs_unchanged": [
+        "origami",
+        "invitation",
+        "bilingue",
+        "echange-indices",
+        "repartition",
+        "mandat",
+        "discours",
+        "lecture",
+        "scene",
+        "budget-final",
+        "galerie"
+      ]
+    },
+    "world_context": {
+      "epoch": "Époque imaginaire, non historiquement attestée",
+      "cultural_frame": "Village de fiction sans attribution à une culture réelle",
+      "place": "Place du village et atelier du boulanger",
+      "reality": "fictif",
+      "language": "fr-CA",
+      "notes": "",
+      "cultural_validation": "pending_human_review"
+    },
+    "activity_bindings": [
+      {
+        "activity_ref": "micro:enseignement-explicite-004",
+        "source_type": "micro_situation",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Repérer une information dans un court écrit adapté",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.als.lecture"
+      },
+      {
+        "activity_ref": "micro:enseignement-explicite-024",
+        "source_type": "micro_situation",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.ma.numeration"
+      },
+      {
+        "activity_ref": "micro:enseignement-explicite-022",
+        "source_type": "micro_situation",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Expliquer et vérifier sa démarche mathématique",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.ma.demarche"
+      }
+    ],
+    "learning_objective_links": [
+      {
+        "objective_ref": "qc-pri-fr-005",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Compréhension littérale de textes",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-ma-002",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Lire, écrire et comparer des nombres naturels",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-ma-011",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Algorithmes et vérification des calculs",
+        "status": "candidate_teacher_review_required"
+      }
+    ],
+    "participation": {
+      "participant_count": 8,
+      "anonymized_placeholder_only": true,
+      "mode": "groupes_rotatifs",
+      "maximum_per_team": 4,
+      "teams": [
+        {
+          "id": "equipe-01",
+          "participant_placeholders": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "size": 4,
+          "suggested_role": "sorciere",
+          "assignment_status": "teacher_to_approve"
+        },
+        {
+          "id": "equipe-02",
+          "participant_placeholders": [
+            "P05",
+            "P06",
+            "P07",
+            "P08"
+          ],
+          "size": 4,
+          "suggested_role": "origamiste",
+          "assignment_status": "teacher_to_approve"
+        }
+      ],
+      "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+      "solo_substitution": null,
+      "stations": [
+        {
+          "id": "station-01",
+          "activity_ref": "micro:enseignement-explicite-004",
+          "title": "Atelier ciblé : Repérer une information dans un court écrit adapté",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "réponse appuyée sur le texte",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-02",
+          "activity_ref": "micro:enseignement-explicite-024",
+          "title": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "écriture et représentation vérifiées",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-03",
+          "activity_ref": "micro:enseignement-explicite-022",
+          "title": "Atelier ciblé : Expliquer et vérifier sa démarche mathématique",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "justification intelligible",
+          "adaptation_status": "to_review"
+        }
+      ],
+      "rotation": [
+        {
+          "round": 1,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-01",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-01",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-01",
+              "status": "visit"
+            }
+          ]
+        }
+      ],
+      "parallel_posts_per_activity": 1,
+      "additional_equipment_required": false,
+      "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+      "station_capacity": "jusqu’à 1 équipe(s) par activité et par ronde, chacune à son poste distinct",
+      "role_validation": "teacher_required"
+    },
+    "collaboration": {
+      "kontexte_hints": "utiliser les joins/fragments de la source, sans libération automatique",
+      "communication": "Konnaxion / Kids, sous permissions serveur",
+      "progress_from_messages": false
+    },
+    "export_hints": {
+      "orgo_world_slug_suggested": "fete-sorciere",
+      "world_creation_performed": false,
+      "tasks_dispatched": false,
+      "qr_created": false,
+      "runtime_admitted": false,
+      "teacher_authorized": false,
+      "real_learner_profiles_loaded": false
+    },
+    "required_reviews": [
+      "adéquation au niveau scolaire",
+      "exactitude historique et culturelle",
+      "sécurité et consentements",
+      "objectifs pédagogiques et critères de preuve",
+      "rôles et disponibilité",
+      "matériel et encadrement des postes parallèles",
+      "autorisations serveur et isolement de classe"
+    ]
+  },
+  "theory_entries": {
+    "qc-pri-fr-005": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "boundary": "Supports adaptés à la lecture et matériel disponible; l’enseignant vérifie les prérequis.",
+      "interpretation_limit": "Le produit final ne prouve pas à lui seul que chaque enfant a réalisé la démarche.",
+      "alternative": "Une réussite pourrait dépendre d’un modèle fourni par un adulte et non du raisonnement propre.",
+      "activity_refs": [
+        "micro:enseignement-explicite-004"
+      ],
+      "conjecture_statement": "Chercher les informations nécessaires dans une invitation courte pourrait soutenir la compréhension littérale.",
+      "expected_action": "Repérer puis citer les informations utiles dans un texte court.",
+      "process": "L’enfant distingue la consigne du récit et extrait les informations pertinentes.",
+      "observation": "Observer le repérage et demander une reformulation des informations choisies.",
+      "evidence": "Liste annotée des informations effectivement extraites de l’invitation.",
+      "criterion": "Les informations retenues se trouvent dans le texte et répondent à la demande.",
+      "disconfirmation": "La liste ne correspond pas aux informations du texte malgré un guidage adapté."
+    },
+    "qc-pri-ma-002": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "practice",
+      "assessment_requires": "individual_possible",
+      "boundary": "Supports adaptés à la lecture et matériel disponible; l’enseignant vérifie les prérequis.",
+      "interpretation_limit": "Le produit final ne prouve pas à lui seul que chaque enfant a réalisé la démarche.",
+      "alternative": "Une réussite pourrait dépendre d’un modèle fourni par un adulte et non du raisonnement propre.",
+      "activity_refs": [
+        "micro:enseignement-explicite-024"
+      ],
+      "conjecture_statement": "Comparer des quantités issues de la fête pourrait rendre les relations entre nombres explicites.",
+      "expected_action": "Comparer et ordonner les quantités de provisions envisagées.",
+      "process": "L’enfant compare les représentations numériques et motive l’ordre proposé.",
+      "observation": "Observer les stratégies de comparaison et demander une explication verbale.",
+      "evidence": "Tableau de quantités classées avec explication des comparaisons.",
+      "criterion": "Les nombres sont comparés correctement et le raisonnement est explicité.",
+      "disconfirmation": "Les quantités sont classées sans justification ou selon un critère incohérent."
+    },
+    "qc-pri-ma-011": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "practice",
+      "assessment_requires": "individual_possible",
+      "boundary": "Supports adaptés à la lecture et matériel disponible; l’enseignant vérifie les prérequis.",
+      "interpretation_limit": "Le produit final ne prouve pas à lui seul que chaque enfant a réalisé la démarche.",
+      "alternative": "Une réussite pourrait dépendre d’un modèle fourni par un adulte et non du raisonnement propre.",
+      "activity_refs": [
+        "micro:enseignement-explicite-022"
+      ],
+      "conjecture_statement": "Expliquer la démarche utilisée pour préparer les quantités pourrait aider à repérer et corriger des erreurs.",
+      "expected_action": "Effectuer puis vérifier le calcul des provisions et expliquer la méthode.",
+      "process": "L’enfant confronte son résultat à une stratégie de vérification explicite.",
+      "observation": "Relever les corrections justifiées et les étapes de vérification montrées.",
+      "evidence": "Feuille de calcul des provisions avec procédure de vérification expliquée.",
+      "criterion": "Les opérations sont correctes et au moins une méthode de vérification est documentée.",
+      "disconfirmation": "L’enfant annonce un calcul correct sans pouvoir expliciter une vérification."
+    }
+  },
+  "dependency_lines": "micro:enseignement-explicite-004 > micro:enseignement-explicite-024 : Informations issues de l’invitation\nmicro:enseignement-explicite-024 > micro:enseignement-explicite-022 : Tableau des quantités comparées",
+  "source_observations": []
+}
