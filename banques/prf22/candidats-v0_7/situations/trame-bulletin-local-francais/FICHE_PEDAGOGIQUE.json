@@ -1,0 +1,79 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:bulletin-local",
+  "focale": "francais",
+  "question_motrice": "Les témoignages ne concordent pas.",
+  "declencheur_source": "Une nouvelle fictive mérite d’être expliquée.",
+  "informations_a_preparer": [
+    "faits confirmes",
+    "points de vue"
+  ],
+  "actions_source": [
+    "verifier",
+    "rediger",
+    "publier"
+  ],
+  "production_attendue_source": "Bulletin relu",
+  "rebond_source": "Une correction arrive.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-056",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-023",
+      "titre": "Adapter un texte explicatif pour un lecteur",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "photo"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : photo",
+      "consigne_source": "Réviser un texte court fourni afin que les consignes et les mots importants soient compréhensibles par son destinataire.",
+      "consigne_contextualisee": "Dans « Le bulletin local », accomplir « Adapter un texte explicatif pour un lecteur » pour contribuer à « Bulletin relu ». Réviser un texte court fourni afin que les consignes et les mots importants soient compréhensibles par son destinataire.",
+      "preuve": "Texte annoté et version révisée.",
+      "critere_propose": "Sens conservé, formulations claires et corrections explicitées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-020",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-fr-012",
+      "titre": "Atelier ciblé : Réviser l’orthographe d’usage avec des outils",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "rediger"
+      ],
+      "motif_de_choix": "Indices thématiques : rediger",
+      "consigne_source": "Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "consigne_contextualisee": "Dans « Le bulletin local », accomplir « Atelier ciblé : Réviser l’orthographe d’usage avec des outils » pour contribuer à « Bulletin relu ». Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "preuve": "brouillon et version corrigée",
+      "critere_propose": "Vérifier la trace attendue pour « Orthographe d’usage » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

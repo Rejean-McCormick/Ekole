@@ -1,0 +1,63 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:lumiere-et-couleurs",
+  "focale": "arts",
+  "question_motrice": "Les couleurs observées changent selon les conditions.",
+  "declencheur_source": "Une installation lumineuse fictive doit être expliquée.",
+  "informations_a_preparer": [
+    "sources lumineuses",
+    "materiaux transparents"
+  ],
+  "actions_source": [
+    "observer",
+    "tester",
+    "representer"
+  ],
+  "production_attendue_source": "Présentation des observations",
+  "rebond_source": "Un nouveau filtre apparaît.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-062",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-001",
+      "titre": "Composer des silhouettes et des ombres",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "lumiere",
+        "laboratoire",
+        "couleur"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : lumiere, laboratoire, couleur",
+      "consigne_source": "Produire deux silhouettes sur papier puis observer comment leurs contours changent selon l’éclairage simulé.",
+      "consigne_contextualisee": "Dans « Le laboratoire de lumière », accomplir « Composer des silhouettes et des ombres » pour contribuer à « Présentation des observations ». Produire deux silhouettes sur papier puis observer comment leurs contours changent selon l’éclairage simulé.",
+      "preuve": "Esquisses de silhouettes comparées.",
+      "critere_propose": "Deux formes identifiables et observation différenciée des effets.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

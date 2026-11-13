@@ -1,0 +1,99 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:reparer-pour-un-autre",
+  "focale": "francais",
+  "question_motrice": "L’utilisateur et le réparateur ont des informations différentes.",
+  "declencheur_source": "Un objet scolaire simulé doit être remis en état.",
+  "informations_a_preparer": [
+    "symptomes observes",
+    "solutions possibles"
+  ],
+  "actions_source": [
+    "diagnostiquer",
+    "proposer",
+    "verifier"
+  ],
+  "production_attendue_source": "Plan de réparation sûr",
+  "rebond_source": "La pièce de rechange manque.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-020",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-009",
+      "titre": "Lire une notice documentaire",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "mecan",
+        "atelier"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : mecan",
+      "consigne_source": "Comparer les renseignements d'une notice et ceux d'un plan de mission; signaler les contradictions.",
+      "consigne_contextualisee": "Dans « L’atelier de réparation », accomplir « Lire une notice documentaire » pour contribuer à « Plan de réparation sûr ». Comparer les renseignements d'une notice et ceux d'un plan de mission; signaler les contradictions.",
+      "preuve": "Tableau « information, source, vérification ».",
+      "critere_propose": "Utilisation fidèle des sources et limites reconnues.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-057",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-021",
+      "titre": "Décrire les étapes d’une fabrication",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "repar",
+        "objet"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : repar",
+      "consigne_source": "Décrire par écrit trois étapes successives d’une fabrication fictive à partir d’un plan ou d’images fournis.",
+      "consigne_contextualisee": "Dans « L’atelier de réparation », accomplir « Décrire les étapes d’une fabrication » pour contribuer à « Plan de réparation sûr ». Décrire par écrit trois étapes successives d’une fabrication fictive à partir d’un plan ou d’images fournis.",
+      "preuve": "Description ordonnée.",
+      "critere_propose": "Ordre logique des étapes, verbes d’action et information suffisante.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-054",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-020",
+      "titre": "Expliquer un choix dans un court texte",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "repar"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : repar",
+      "consigne_source": "Écrire deux ou trois phrases indiquant une décision et la raison fondée sur les données de la situation.",
+      "consigne_contextualisee": "Dans « L’atelier de réparation », accomplir « Expliquer un choix dans un court texte » pour contribuer à « Plan de réparation sûr ». Écrire deux ou trois phrases indiquant une décision et la raison fondée sur les données de la situation.",
+      "preuve": "Justification écrite des options.",
+      "critere_propose": "Choix explicite, raison liée aux données et texte lisible.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

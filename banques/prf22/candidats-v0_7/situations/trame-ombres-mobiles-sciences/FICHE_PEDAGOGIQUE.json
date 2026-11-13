@@ -1,0 +1,100 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:ombres-mobiles",
+  "focale": "sciences",
+  "question_motrice": "L’élève doit expliquer ce changement.",
+  "declencheur_source": "Une ombre change de forme.",
+  "informations_a_preparer": [
+    "position lumiere",
+    "position objet"
+  ],
+  "actions_source": [
+    "mesurer",
+    "dessiner",
+    "verifier"
+  ],
+  "production_attendue_source": "Explication illustrée",
+  "rebond_source": "Une deuxième source lumineuse apparaît.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-021",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-001",
+      "titre": "Observer avant d'expliquer",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "ombre",
+        "lumiere"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : ombre, lumiere",
+      "consigne_source": "Observer un phénomène ou objet sans conclure immédiatement, puis formuler deux questions investigables.",
+      "consigne_contextualisee": "Dans « Le mystère des ombres », accomplir « Observer avant d'expliquer » pour contribuer à « Explication illustrée ». Observer un phénomène ou objet sans conclure immédiatement, puis formuler deux questions investigables.",
+      "preuve": "Carnet d'observations et questions.",
+      "critere_propose": "Séparation observation/interprétation, questions testables.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-022",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-002",
+      "titre": "Comparer deux hypothèses",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "ombre",
+        "lumiere"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : ombre, lumiere",
+      "consigne_source": "Formuler deux explications possibles d'un problème matériel et prévoir un test simple et sûr pour les distinguer.",
+      "consigne_contextualisee": "Dans « Le mystère des ombres », accomplir « Comparer deux hypothèses » pour contribuer à « Explication illustrée ». Formuler deux explications possibles d'un problème matériel et prévoir un test simple et sûr pour les distinguer.",
+      "preuve": "Fiche hypothèses, protocole proposé, risques.",
+      "critere_propose": "Hypothèses distinctes et test faisable avec supervision.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-023",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-003",
+      "titre": "Noter des observations mesurables",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "mesur",
+        "ombre"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : mesur, ombre",
+      "consigne_source": "Prendre trois mesures d'un matériel sécurisé fourni et documenter méthode, unité et incertitude.",
+      "consigne_contextualisee": "Dans « Le mystère des ombres », accomplir « Noter des observations mesurables » pour contribuer à « Explication illustrée ». Prendre trois mesures d'un matériel sécurisé fourni et documenter méthode, unité et incertitude.",
+      "preuve": "Journal de mesures datées.",
+      "critere_propose": "Observations reproductibles, unités, conditions notées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

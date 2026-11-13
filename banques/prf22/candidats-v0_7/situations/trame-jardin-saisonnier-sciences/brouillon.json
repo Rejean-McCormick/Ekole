@@ -1,0 +1,336 @@
+{
+  "format": "ekole.prf22.authoring/0.3",
+  "status": "design_only",
+  "draft": {
+    "format": "ekole.situation-composition-draft/0.1",
+    "generated_at_utc": "2026-11-12T18:50:25+00:00",
+    "status": "draft_not_admitted",
+    "authorities": {
+      "scenario_source": "Kontexte",
+      "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+      "objectives_and_evidence": "Ékole",
+      "role_proposals": "Kompose",
+      "operational_tasks": "Orgo",
+      "world_ownership": "Orgo_Worlds",
+      "social_collaboration": "Konnaxion",
+      "channels": [
+        "Web",
+        "Kor",
+        "Kamel"
+      ]
+    },
+    "source": {
+      "reference": "trame:jardin-saisonnier",
+      "source_format": "kontexte.catalogue-trames/1",
+      "source_relpath": "data/trames/catalogue-neutral-v0.2.json",
+      "title": "Le jardin des saisons",
+      "problem": "Les besoins des plantes varient.",
+      "narrative_role_codes": [
+        "fermier",
+        "jardinier",
+        "scientifique"
+      ],
+      "source_step_refs_unchanged": []
+    },
+    "world_context": {
+      "epoch": "Période de simulation à préciser selon la trame",
+      "cultural_frame": "Aucune culture réelle attribuée; sources et droits à valider",
+      "place": "Lieu de la situation source, à préciser par l’enseignant",
+      "reality": "fictif",
+      "language": "fr-CA",
+      "notes": "V0.7 : focalisation disciplinaire et choix d’activités explicitement justifiés; aucune validation pédagogique.",
+      "cultural_validation": "pending_human_review"
+    },
+    "activity_bindings": [
+      {
+        "activity_ref": "ekoleprop:ap-023",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Noter des observations mesurables",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-st-003"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-024",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Conclure avec prudence",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-st-004"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-028",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Classer le vivant observé",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-st-017"
+      }
+    ],
+    "learning_objective_links": [
+      {
+        "objective_ref": "qc-pri-st-003",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Mesurer et recueillir des données",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-st-004",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Expliquer et communiquer des résultats",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-st-017",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Caractéristiques et classification du vivant",
+        "status": "candidate_teacher_review_required"
+      }
+    ],
+    "participation": {
+      "participant_count": 8,
+      "anonymized_placeholder_only": true,
+      "mode": "groupes_rotatifs",
+      "maximum_per_team": 4,
+      "teams": [
+        {
+          "id": "equipe-01",
+          "participant_placeholders": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "size": 4,
+          "suggested_role": "fermier",
+          "assignment_status": "teacher_to_approve"
+        },
+        {
+          "id": "equipe-02",
+          "participant_placeholders": [
+            "P05",
+            "P06",
+            "P07",
+            "P08"
+          ],
+          "size": 4,
+          "suggested_role": "jardinier",
+          "assignment_status": "teacher_to_approve"
+        }
+      ],
+      "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+      "solo_substitution": null,
+      "stations": [
+        {
+          "id": "station-01",
+          "activity_ref": "ekoleprop:ap-023",
+          "title": "Noter des observations mesurables",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Journal de mesures datées.",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-02",
+          "activity_ref": "ekoleprop:ap-024",
+          "title": "Conclure avec prudence",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Phrase de conclusion associée au relevé de données.",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-03",
+          "activity_ref": "ekoleprop:ap-028",
+          "title": "Classer le vivant observé",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Tableau de classification avec critères.",
+          "adaptation_status": "to_review"
+        }
+      ],
+      "rotation": [
+        {
+          "round": 1,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-02",
+              "status": "visit"
+            }
+          ]
+        }
+      ],
+      "parallel_posts_per_activity": 3,
+      "additional_equipment_required": true,
+      "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+      "station_capacity": "jusqu’à 3 équipe(s) par activité et par ronde, chacune à son poste distinct",
+      "role_validation": "teacher_required"
+    },
+    "collaboration": {
+      "kontexte_hints": "utiliser les joins/fragments de la source, sans libération automatique",
+      "communication": "Konnaxion / Kids, sous permissions serveur",
+      "progress_from_messages": false
+    },
+    "export_hints": {
+      "orgo_world_slug_suggested": "jardin-saisonnier",
+      "world_creation_performed": false,
+      "tasks_dispatched": false,
+      "qr_created": false,
+      "runtime_admitted": false,
+      "teacher_authorized": false,
+      "real_learner_profiles_loaded": false
+    },
+    "required_reviews": [
+      "adéquation au niveau scolaire",
+      "exactitude historique et culturelle",
+      "sécurité et consentements",
+      "objectifs pédagogiques et critères de preuve",
+      "rôles et disponibilité",
+      "matériel et encadrement des postes parallèles",
+      "autorisations serveur et isolement de classe"
+    ]
+  },
+  "theory_entries": {
+    "qc-pri-st-003": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-023"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Noter des observations mesurables » pour contribuer à « Plan de jardin » dans « Le jardin des saisons », il pourrait exercer « Mesurer et recueillir des données ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Les besoins des plantes varient. », proposer la tâche suivante : Prendre trois mesures d'un matériel sécurisé fourni et documenter méthode, unité et incertitude. Mettre à disposition : conditions locales, besoins des plantes. Livrable de la situation : Plan de jardin. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Noter des observations mesurables » : Prendre trois mesures d'un matériel sécurisé fourni et documenter méthode, unité et incertitude. Vérifier qu’elles se rapportent effectivement à « Choisir un instrument et relever des mesures traçables et reproductibles ».",
+      "observation": "Pendant « Noter des observations mesurables », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Journal de mesures datées. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Observations reproductibles, unités, conditions notées. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Mesurer et recueillir des données », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : plante, mesur. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Plan de jardin ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Le jardin des saisons » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-st-004": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-024"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Conclure avec prudence » pour contribuer à « Plan de jardin » dans « Le jardin des saisons », il pourrait exercer « Expliquer et communiquer des résultats ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Les besoins des plantes varient. », proposer la tâche suivante : Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis. Mettre à disposition : conditions locales, besoins des plantes. Livrable de la situation : Plan de jardin. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Conclure avec prudence » : Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis. Vérifier qu’elles se rapportent effectivement à « Relier des observations à une conclusion en distinguant constat et interprétation ».",
+      "observation": "Pendant « Conclure avec prudence », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Phrase de conclusion associée au relevé de données. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Conclusion supportée, limites explicites. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Expliquer et communiquer des résultats », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : plante, scientifique. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Plan de jardin ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Le jardin des saisons » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-st-017": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-028"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Classer le vivant observé » pour contribuer à « Plan de jardin » dans « Le jardin des saisons », il pourrait exercer « Caractéristiques et classification du vivant ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Les besoins des plantes varient. », proposer la tâche suivante : Classer des images documentées de plantes ou animaux avec des critères observables. Mettre à disposition : conditions locales, besoins des plantes. Livrable de la situation : Plan de jardin. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Classer le vivant observé » : Classer des images documentées de plantes ou animaux avec des critères observables. Vérifier qu’elles se rapportent effectivement à « Classer des organismes par caractéristiques observables plutôt que par préférences ».",
+      "observation": "Pendant « Classer le vivant observé », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Tableau de classification avec critères. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Critères observables et catégories cohérentes. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Caractéristiques et classification du vivant », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : jardin, plante. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Plan de jardin ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Le jardin des saisons » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    }
+  },
+  "dependency_lines": "",
+  "source_observations": [
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/catalogue/202_kristals.json",
+      "observed_sha256": "sha256:5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/trames/catalogue-neutral-v0.2.json",
+      "observed_sha256": "sha256:b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Ékole",
+      "relative_path": "banques/prf22/activites-proposees-v0_7.json",
+      "observed_sha256": "sha256:23ad0fc1c49359b82eb65391d54537b43ce2ca91df04794cacf6926d7d8c642d",
+      "pin_status": "unresolved",
+      "qualification": "not_reviewed"
+    }
+  ]
+}

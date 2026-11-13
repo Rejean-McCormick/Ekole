@@ -1,0 +1,98 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:randonnee-symbolique",
+  "focale": "education_physique",
+  "question_motrice": "Les stations demandent des compétences variées.",
+  "declencheur_source": "Plusieurs équipes explorent des stations encadrées.",
+  "informations_a_preparer": [
+    "carte des stations",
+    "mandats des equipes"
+  ],
+  "actions_source": [
+    "observer",
+    "cooperer",
+    "documenter"
+  ],
+  "production_attendue_source": "Carnet collectif",
+  "rebond_source": "Une station doit être adaptée.",
+  "niveaux_suggeres_source": "maternelle-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-073",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-007",
+      "titre": "Planifier une coopération motrice",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "randonnee",
+        "equipe"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : randonnee",
+      "consigne_source": "Dans une simulation sans déplacement réel, répartir trois rôles complémentaires pour réaliser un relais ou une mission motrice.",
+      "consigne_contextualisee": "Dans « La randonnée des découvertes », accomplir « Planifier une coopération motrice » pour contribuer à « Carnet collectif ». Dans une simulation sans déplacement réel, répartir trois rôles complémentaires pour réaliser un relais ou une mission motrice.",
+      "preuve": "Schéma de rôles et consignes.",
+      "critere_propose": "Rôles distincts, passages compréhensibles et solution de rechange.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-072",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-008",
+      "titre": "Sécuriser un parcours symbolique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "randonnee"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : randonnee",
+      "consigne_source": "Tracer un petit parcours symbolique balisé; repérer trois obstacles fictifs ou contrôlés et proposer des adaptations accessibles.",
+      "consigne_contextualisee": "Dans « La randonnée des découvertes », accomplir « Sécuriser un parcours symbolique » pour contribuer à « Carnet collectif ». Tracer un petit parcours symbolique balisé; repérer trois obstacles fictifs ou contrôlés et proposer des adaptations accessibles.",
+      "preuve": "Plan du parcours et consignes de sécurité.",
+      "critere_propose": "Risques identifiés, adaptations pertinentes et déplacements autorisés.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-015",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-eps-004",
+      "titre": "Atelier ciblé : Coordonner des gestes et manipuler un objet",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "randonnee"
+      ],
+      "motif_de_choix": "Indices thématiques : randonnee",
+      "consigne_source": "Faire exécuter ou représenter l’action, expliquer un choix sécuritaire et observer avec accord.",
+      "consigne_contextualisee": "Dans « La randonnée des découvertes », accomplir « Atelier ciblé : Coordonner des gestes et manipuler un objet » pour contribuer à « Carnet collectif ». Faire exécuter ou représenter l’action, expliquer un choix sécuritaire et observer avec accord.",
+      "preuve": "démonstration accessible",
+      "critere_propose": "Vérifier la trace attendue pour « Manipulation d’objets et habiletés motrices » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

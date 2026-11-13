@@ -1,0 +1,103 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:repas-partage",
+  "focale": "mathematiques",
+  "question_motrice": "Les portions et préférences diffèrent.",
+  "declencheur_source": "Un repas fictif doit être planifié.",
+  "informations_a_preparer": [
+    "nombre de convives",
+    "stocks et besoins"
+  ],
+  "actions_source": [
+    "planifier",
+    "calculer",
+    "communiquer"
+  ],
+  "production_attendue_source": "Menu et plan des portions",
+  "rebond_source": "Un ingrédient est indisponible.",
+  "niveaux_suggeres_source": "primaire-1-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-005",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-008",
+      "titre": "Organiser des lots égaux",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "repas",
+        "boulanger",
+        "stock",
+        "partage"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : repas, boulanger, stock",
+      "consigne_source": "Répartir un matériel fictif en lots égaux, représenter l'opération et vérifier le total.",
+      "consigne_contextualisee": "Dans « Le repas partagé », accomplir « Organiser des lots égaux » pour contribuer à « Menu et plan des portions ». Répartir un matériel fictif en lots égaux, représenter l'opération et vérifier le total.",
+      "preuve": "Schéma de groupements et calcul expliqué.",
+      "critere_propose": "Groupements réguliers, opération cohérente, vérification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-024",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-002",
+      "titre": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "nombre",
+        "stock",
+        "calcul"
+      ],
+      "motif_de_choix": "Indices thématiques : nombre, stock, calcul",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « Le repas partagé », accomplir « Atelier ciblé : Lire, représenter et comparer des nombres naturels » pour contribuer à « Menu et plan des portions ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "écriture et représentation vérifiées",
+      "critere_propose": "Vérifier la trace attendue pour « Lire, écrire et comparer des nombres naturels » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-006",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-009",
+      "titre": "Partager équitablement",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "partag",
+        "repas"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : partag, repas",
+      "consigne_source": "Proposer un partage d'objets en groupes, représenter les restes et justifier une règle de répartition.",
+      "consigne_contextualisee": "Dans « Le repas partagé », accomplir « Partager équitablement » pour contribuer à « Menu et plan des portions ». Proposer un partage d'objets en groupes, représenter les restes et justifier une règle de répartition.",
+      "preuve": "Manipulation ou dessin annoté des parts et éventuel reste.",
+      "critere_propose": "Égalité des parts, reste reconnu et explication.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

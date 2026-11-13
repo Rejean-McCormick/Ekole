@@ -19,9 +19,9 @@ from composer_core import PREFERRED_KONTEXTE, compose_draft, export_activity_ind
 
 
 class Application(tk.Tk):
-    def __init__(self):
+    def __init__(self, initial_file=None, source_root=None):
         super().__init__()
-        self.title("Ékole · Atelier PRF-22 v0.3 (brouillon)")
+        self.title("Ékole · Atelier PRF-22 (intégré au dépôt Ékole)")
         self.geometry("1220x790")
         self.minsize(1000, 650)
         self.catalog = None
@@ -34,7 +34,7 @@ class Application(tk.Tk):
         self.theory_entries = {}
         self.current_objective = None
         self._theory_activity_refs = []
-        self.path = tk.StringVar(value=os.environ.get("EKOLE_KONTEXTE_ROOT", str(PREFERRED_KONTEXTE)))
+        self.path = tk.StringVar(value=source_root or os.environ.get("EKOLE_KONTEXTE_ROOT", str(PREFERRED_KONTEXTE)))
         self.template_var = tk.StringVar()
         self.epoch_var = tk.StringVar(value="Québec contemporain")
         self.culture_var = tk.StringVar(value="Milieu local choisi avec la classe")
@@ -50,6 +50,8 @@ class Application(tk.Tk):
         self.configure(bg="#f7f9fc")
         self._build()
         self._load()
+        if initial_file:
+            self._open_authoring(initial_file)
 
     def _label(self, parent, text, row, column, **kwargs):
         return ttk.Label(parent, text=text).grid(row=row, column=column, sticky="w", padx=7, pady=7, **kwargs)
@@ -307,7 +309,8 @@ class Application(tk.Tk):
 
     def _load(self):
         try:
-            self.catalog=load_catalogue(Path(self.path.get()))
+            from composer_core import attach_ekole_activity_patterns
+            self.catalog=attach_ekole_activity_patterns(load_catalogue(Path(self.path.get())))
         except Exception as exc:
             self.catalog=None
             self.status_var.set("Sources non chargées : " + str(exc))
@@ -492,8 +495,9 @@ class Application(tk.Tk):
             messagebox.showerror("Écriture impossible",str(exc));return
         self.status_var.set("Brouillon conservé : "+path)
 
-    def _open_authoring(self):
-        path=filedialog.askopenfilename(title="Ouvrir un brouillon PRF-22",filetypes=[("PRF-22 JSON","*.json")])
+    def _open_authoring(self, path=None):
+        if path is None:
+            path=filedialog.askopenfilename(title="Ouvrir un brouillon PRF-22",filetypes=[("PRF-22 JSON","*.json")])
         if not path:return
         try:
             record=load_authoring(path)
@@ -522,7 +526,7 @@ class Application(tk.Tk):
             self.current_objective=None
             self.deps_text.delete('1.0','end');self.deps_text.insert('1.0',record['dependency_lines'])
             self._refresh_selected();self._refresh_theory_objectives()
-            self.status_var.set("Brouillon de travail rouvert : "+path)
+            self.status_var.set("Brouillon de travail rouvert : "+str(path))
         except Exception as exc:
             messagebox.showerror("Ouverture refusée",str(exc))
 
@@ -547,7 +551,12 @@ class Application(tk.Tk):
 
 if __name__ == "__main__":
     try:
-        Application().mainloop()
+        import argparse
+        ap=argparse.ArgumentParser(description="Atelier PRF-22 — brouillon de conception")
+        ap.add_argument("--brouillon",type=Path)
+        ap.add_argument("--kontexte",type=Path)
+        args=ap.parse_args()
+        Application(args.brouillon, str(args.kontexte) if args.kontexte else None).mainloop()
     except Exception as e:
         # .pyw has no console on Windows; expose startup exceptions visibly.
         import traceback

@@ -1,0 +1,99 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:itineraire-sur",
+  "focale": "mathematiques",
+  "question_motrice": "Le plus court trajet n’est pas toujours praticable.",
+  "declencheur_source": "Un plan présente plusieurs trajets fictifs.",
+  "informations_a_preparer": [
+    "distances",
+    "contraintes du parcours"
+  ],
+  "actions_source": [
+    "comparer",
+    "choisir",
+    "justifier"
+  ],
+  "production_attendue_source": "Trajet annoté",
+  "rebond_source": "Une zone devient inaccessible.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-002",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-026",
+      "titre": "Planifier une durée",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "itineraire",
+        "parcours"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : itineraire, parcours",
+      "consigne_source": "Estimer puis calculer la durée de trois étapes de la mission; comparer à une contrainte de temps.",
+      "consigne_contextualisee": "Dans « L’itinéraire sûr », accomplir « Planifier une durée » pour contribuer à « Trajet annoté ». Estimer puis calculer la durée de trois étapes de la mission; comparer à une contrainte de temps.",
+      "preuve": "Frise chronologique avec trois durées et calcul explicite.",
+      "critere_propose": "Unité temporelle, somme des durées et justification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-009",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-021",
+      "titre": "Tracer un déplacement",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "parcours",
+        "itineraire"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : parcours, itineraire",
+      "consigne_source": "Tracer un itinéraire sur un quadrillage, puis vérifier les déplacements indiqués.",
+      "consigne_contextualisee": "Dans « L’itinéraire sûr », accomplir « Tracer un déplacement » pour contribuer à « Trajet annoté ». Tracer un itinéraire sur un quadrillage, puis vérifier les déplacements indiqués.",
+      "preuve": "Plan fléché avec origine et destination.",
+      "critere_propose": "Orientation, succession des déplacements et contrôle.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-008",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-023",
+      "titre": "Comparer des figures",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "plan"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : plan",
+      "consigne_source": "Repérer et classer plusieurs figures dans un plan, dessin ou objet de la situation; expliquer les propriétés.",
+      "consigne_contextualisee": "Dans « L’itinéraire sûr », accomplir « Comparer des figures » pour contribuer à « Trajet annoté ». Repérer et classer plusieurs figures dans un plan, dessin ou objet de la situation; expliquer les propriétés.",
+      "preuve": "Croquis annoté et classification argumentée.",
+      "critere_propose": "Caractéristiques géométriques reconnues, vocabulaire précis.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

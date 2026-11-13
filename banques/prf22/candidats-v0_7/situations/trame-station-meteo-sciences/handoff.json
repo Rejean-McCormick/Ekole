@@ -1,0 +1,174 @@
+{
+  "format": "ekole.prf22.handoff/0.3",
+  "status": "proposal_only_not_authorized",
+  "design_id": "ekole-prf22-291e47566e443930",
+  "design_sha256": "sha256:638ddf82e8acb6fd0a94d55711cb383998c906487625f73af0c246572492f5d8",
+  "planning_source_format": "ekole.situation-composition-draft/0.1",
+  "selected_learners": 8,
+  "organization_candidate": {
+    "participant_count": 8,
+    "anonymized_placeholder_only": true,
+    "mode": "groupes_rotatifs",
+    "maximum_per_team": 4,
+    "teams": [
+      {
+        "id": "equipe-01",
+        "participant_placeholders": [
+          "P01",
+          "P02",
+          "P03",
+          "P04"
+        ],
+        "size": 4,
+        "suggested_role": "scientifique",
+        "assignment_status": "teacher_to_approve"
+      },
+      {
+        "id": "equipe-02",
+        "participant_placeholders": [
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "size": 4,
+        "suggested_role": "inventeur",
+        "assignment_status": "teacher_to_approve"
+      }
+    ],
+    "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+    "solo_substitution": null,
+    "stations": [
+      {
+        "id": "station-01",
+        "activity_ref": "ekoleprop:ap-023",
+        "title": "Noter des observations mesurables",
+        "source_type": "patron_activite_propose",
+        "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+        "evidence_expected": "Journal de mesures datées.",
+        "adaptation_status": "to_review"
+      },
+      {
+        "id": "station-02",
+        "activity_ref": "ekoleprop:ap-024",
+        "title": "Conclure avec prudence",
+        "source_type": "patron_activite_propose",
+        "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+        "evidence_expected": "Phrase de conclusion associée au relevé de données.",
+        "adaptation_status": "to_review"
+      },
+      {
+        "id": "station-03",
+        "activity_ref": "ekoleprop:ap-027",
+        "title": "Décrire un mécanisme",
+        "source_type": "patron_activite_propose",
+        "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+        "evidence_expected": "Schéma légendé des pièces et fonctions.",
+        "adaptation_status": "to_review"
+      }
+    ],
+    "rotation": [
+      {
+        "round": 1,
+        "assignments": [
+          {
+            "team_id": "equipe-01",
+            "station_id": "station-01",
+            "post_id": "station-01-poste-01",
+            "status": "visit"
+          },
+          {
+            "team_id": "equipe-02",
+            "station_id": "station-01",
+            "post_id": "station-01-poste-02",
+            "status": "visit"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "assignments": [
+          {
+            "team_id": "equipe-01",
+            "station_id": "station-02",
+            "post_id": "station-02-poste-01",
+            "status": "visit"
+          },
+          {
+            "team_id": "equipe-02",
+            "station_id": "station-02",
+            "post_id": "station-02-poste-02",
+            "status": "visit"
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "assignments": [
+          {
+            "team_id": "equipe-01",
+            "station_id": "station-03",
+            "post_id": "station-03-poste-01",
+            "status": "visit"
+          },
+          {
+            "team_id": "equipe-02",
+            "station_id": "station-03",
+            "post_id": "station-03-poste-02",
+            "status": "visit"
+          }
+        ]
+      }
+    ],
+    "parallel_posts_per_activity": 3,
+    "additional_equipment_required": true,
+    "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+    "station_capacity": "jusqu’à 3 équipe(s) par activité et par ronde, chacune à son poste distinct",
+    "role_validation": "teacher_required"
+  },
+  "source_observations": [
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/catalogue/202_kristals.json",
+      "observed_sha256": "sha256:5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/trames/catalogue-neutral-v0.2.json",
+      "observed_sha256": "sha256:b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Ékole",
+      "relative_path": "banques/prf22/activites-proposees-v0_7.json",
+      "observed_sha256": "sha256:23ad0fc1c49359b82eb65391d54537b43ce2ca91df04794cacf6926d7d8c642d",
+      "pin_status": "unresolved",
+      "qualification": "not_reviewed"
+    }
+  ],
+  "owner_hints": {
+    "scenario_source": "Kontexte",
+    "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+    "objectives_and_evidence": "Ékole",
+    "role_proposals": "Kompose",
+    "operational_tasks": "Orgo",
+    "world_ownership": "Orgo_Worlds",
+    "social_collaboration": "Konnaxion",
+    "channels": [
+      "Web",
+      "Kor",
+      "Kamel"
+    ]
+  },
+  "teacher_review_required": true,
+  "material_confirmed": false,
+  "orgo_world_created": false,
+  "konnaxion_project_created": false,
+  "session_admitted": false,
+  "permissions_granted": false,
+  "student_data_included": false,
+  "notice": "Document de préparation hors ligne. Aucun endpoint ou droit runtime accordé."
+}

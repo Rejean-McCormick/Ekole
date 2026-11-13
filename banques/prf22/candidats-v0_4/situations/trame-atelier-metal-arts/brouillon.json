@@ -1,0 +1,333 @@
+{
+  "format": "ekole.prf22.authoring/0.3",
+  "status": "design_only",
+  "draft": {
+    "format": "ekole.situation-composition-draft/0.1",
+    "generated_at_utc": "2026-11-12T15:00:41+00:00",
+    "status": "draft_not_admitted",
+    "authorities": {
+      "scenario_source": "Kontexte",
+      "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+      "objectives_and_evidence": "Ékole",
+      "role_proposals": "Kompose",
+      "operational_tasks": "Orgo",
+      "world_ownership": "Orgo_Worlds",
+      "social_collaboration": "Konnaxion",
+      "channels": [
+        "Web",
+        "Kor",
+        "Kamel"
+      ]
+    },
+    "source": {
+      "reference": "trame:atelier-metal",
+      "source_format": "kontexte.catalogue-trames/1",
+      "source_relpath": "data/trames/catalogue-neutral-v0.2.json",
+      "title": "Le projet du forgeron",
+      "problem": "Les propriétés attendues sont contradictoires.",
+      "narrative_role_codes": [
+        "forgeron",
+        "menuisier",
+        "architecte"
+      ],
+      "source_step_refs_unchanged": []
+    },
+    "world_context": {
+      "epoch": "Période à préciser selon la situation (simulation)",
+      "cultural_frame": "Cadre fictionnel non attribué à une culture réelle; validation enseignante",
+      "place": "Lieu de la situation source; à préciser pour la classe",
+      "reality": "fictif",
+      "language": "fr-CA",
+      "notes": "Focale proposée : arts. Sources Kontexte réelles; choix automatique non qualifié.",
+      "cultural_validation": "pending_human_review"
+    },
+    "activity_bindings": [
+      {
+        "activity_ref": "micro:enseignement-explicite-027",
+        "source_type": "micro_situation",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Créer un court motif sonore",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.mu.creation"
+      },
+      {
+        "activity_ref": "micro:enseignement-explicite-028",
+        "source_type": "micro_situation",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Interpréter un motif en groupe",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.mu.ensemble"
+      },
+      {
+        "activity_ref": "micro:enseignement-explicite-024",
+        "source_type": "micro_situation",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.ma.numeration"
+      }
+    ],
+    "learning_objective_links": [
+      {
+        "objective_ref": "qc-pri-mu-006",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Inventer une pièce vocale ou instrumentale",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-mu-007",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Interpréter seul ou en ensemble",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-ma-002",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Lire, écrire et comparer des nombres naturels",
+        "status": "candidate_teacher_review_required"
+      }
+    ],
+    "participation": {
+      "participant_count": 8,
+      "anonymized_placeholder_only": true,
+      "mode": "groupes_rotatifs",
+      "maximum_per_team": 4,
+      "teams": [
+        {
+          "id": "equipe-01",
+          "participant_placeholders": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "size": 4,
+          "suggested_role": "forgeron",
+          "assignment_status": "teacher_to_approve"
+        },
+        {
+          "id": "equipe-02",
+          "participant_placeholders": [
+            "P05",
+            "P06",
+            "P07",
+            "P08"
+          ],
+          "size": 4,
+          "suggested_role": "menuisier",
+          "assignment_status": "teacher_to_approve"
+        }
+      ],
+      "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+      "solo_substitution": null,
+      "stations": [
+        {
+          "id": "station-01",
+          "activity_ref": "micro:enseignement-explicite-027",
+          "title": "Atelier ciblé : Créer un court motif sonore",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "motif identifié",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-02",
+          "activity_ref": "micro:enseignement-explicite-028",
+          "title": "Atelier ciblé : Interpréter un motif en groupe",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "participation et écoute",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-03",
+          "activity_ref": "micro:enseignement-explicite-024",
+          "title": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "écriture et représentation vérifiées",
+          "adaptation_status": "to_review"
+        }
+      ],
+      "rotation": [
+        {
+          "round": 1,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-02",
+              "status": "visit"
+            }
+          ]
+        }
+      ],
+      "parallel_posts_per_activity": 3,
+      "additional_equipment_required": true,
+      "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+      "station_capacity": "jusqu’à 3 équipe(s) par activité et par ronde, chacune à son poste distinct",
+      "role_validation": "teacher_required"
+    },
+    "collaboration": {
+      "kontexte_hints": "utiliser les joins/fragments de la source, sans libération automatique",
+      "communication": "Konnaxion / Kids, sous permissions serveur",
+      "progress_from_messages": false
+    },
+    "export_hints": {
+      "orgo_world_slug_suggested": "atelier-metal",
+      "world_creation_performed": false,
+      "tasks_dispatched": false,
+      "qr_created": false,
+      "runtime_admitted": false,
+      "teacher_authorized": false,
+      "real_learner_profiles_loaded": false
+    },
+    "required_reviews": [
+      "adéquation au niveau scolaire",
+      "exactitude historique et culturelle",
+      "sécurité et consentements",
+      "objectifs pédagogiques et critères de preuve",
+      "rôles et disponibilité",
+      "matériel et encadrement des postes parallèles",
+      "autorisations serveur et isolement de classe"
+    ]
+  },
+  "theory_entries": {
+    "qc-pri-mu-006": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "production",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "micro:enseignement-explicite-027"
+      ],
+      "conjecture_statement": "Dans « Le projet du forgeron », proposer « Atelier ciblé : Créer un court motif sonore » pourrait contribuer à l'objectif « Inventer une pièce vocale ou instrumentale »; cette hypothèse reste à vérifier en contexte.",
+      "expected_action": "Réaliser l'activité proposée : Faire écouter, reproduire et comparer le motif.. Expliquer les choix avec un soutien adapté.",
+      "process": "L'enfant mobilise les actions nécessaires pour : Composer une courte pièce sonore selon une intention donnée. Le lien entre l'activité et cet objectif est une proposition à vérifier.",
+      "observation": "Observer les étapes suivies dans « Atelier ciblé : Créer un court motif sonore » et demander à l'enfant d'expliquer ou de représenter sa démarche.",
+      "evidence": "Trace candidate de l’activité « Atelier ciblé : Créer un court motif sonore » : motif identifié. À confirmer selon la réalisation de l’enfant.",
+      "criterion": "Comparer la trace à l'objectif « Inventer une pièce vocale ou instrumentale » et aux critères de la source; jugement final réservé à l'enseignant.",
+      "disconfirmation": "L'enfant ne peut expliquer ou démontrer le processus attendu après un accompagnement adapté; l'hypothèse est à revoir.",
+      "alternative": "La trace peut résulter d'une aide adulte, d'un modèle copié ou de prérequis déjà acquis, plutôt que de l'activité seule.",
+      "boundary": "Adapter la difficulté et le support; vérifier prérequis, matériel, culture, accessibilité et pertinence de « Atelier ciblé : Créer un court motif sonore ».",
+      "interpretation_limit": "Une production dans « Le projet du forgeron » ne démontre pas à elle seule une maîtrise individuelle transférable ni un effet causal."
+    },
+    "qc-pri-mu-007": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "production",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "micro:enseignement-explicite-028"
+      ],
+      "conjecture_statement": "Dans « Le projet du forgeron », proposer « Atelier ciblé : Interpréter un motif en groupe » pourrait contribuer à l'objectif « Interpréter seul ou en ensemble »; cette hypothèse reste à vérifier en contexte.",
+      "expected_action": "Réaliser l'activité proposée : Faire écouter, reproduire et comparer le motif.. Expliquer les choix avec un soutien adapté.",
+      "process": "L'enfant mobilise les actions nécessaires pour : Interpréter une pièce avec écoute mutuelle et cohérence collective. Le lien entre l'activité et cet objectif est une proposition à vérifier.",
+      "observation": "Observer les étapes suivies dans « Atelier ciblé : Interpréter un motif en groupe » et demander à l'enfant d'expliquer ou de représenter sa démarche.",
+      "evidence": "Trace candidate de l’activité « Atelier ciblé : Interpréter un motif en groupe » : participation et écoute. À confirmer selon la réalisation de l’enfant.",
+      "criterion": "Comparer la trace à l'objectif « Interpréter seul ou en ensemble » et aux critères de la source; jugement final réservé à l'enseignant.",
+      "disconfirmation": "L'enfant ne peut expliquer ou démontrer le processus attendu après un accompagnement adapté; l'hypothèse est à revoir.",
+      "alternative": "La trace peut résulter d'une aide adulte, d'un modèle copié ou de prérequis déjà acquis, plutôt que de l'activité seule.",
+      "boundary": "Adapter la difficulté et le support; vérifier prérequis, matériel, culture, accessibilité et pertinence de « Atelier ciblé : Interpréter un motif en groupe ».",
+      "interpretation_limit": "Une production dans « Le projet du forgeron » ne démontre pas à elle seule une maîtrise individuelle transférable ni un effet causal."
+    },
+    "qc-pri-ma-002": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "practice",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "part_task_practice",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "micro:enseignement-explicite-024"
+      ],
+      "conjecture_statement": "Dans « Le projet du forgeron », proposer « Atelier ciblé : Lire, représenter et comparer des nombres naturels » pourrait contribuer à l'objectif « Lire, écrire et comparer des nombres naturels »; cette hypothèse reste à vérifier en contexte.",
+      "expected_action": "Réaliser l'activité proposée : Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.. Expliquer les choix avec un soutien adapté.",
+      "process": "L'enfant mobilise les actions nécessaires pour : Lire, écrire, ordonner et comparer des nombres naturels dans un champ adapté. Le lien entre l'activité et cet objectif est une proposition à vérifier.",
+      "observation": "Observer les étapes suivies dans « Atelier ciblé : Lire, représenter et comparer des nombres naturels » et demander à l'enfant d'expliquer ou de représenter sa démarche.",
+      "evidence": "Trace candidate de l’activité « Atelier ciblé : Lire, représenter et comparer des nombres naturels » : écriture et représentation vérifiées. À confirmer selon la réalisation de l’enfant.",
+      "criterion": "Comparer la trace à l'objectif « Lire, écrire et comparer des nombres naturels » et aux critères de la source; jugement final réservé à l'enseignant.",
+      "disconfirmation": "L'enfant ne peut expliquer ou démontrer le processus attendu après un accompagnement adapté; l'hypothèse est à revoir.",
+      "alternative": "La trace peut résulter d'une aide adulte, d'un modèle copié ou de prérequis déjà acquis, plutôt que de l'activité seule.",
+      "boundary": "Adapter la difficulté et le support; vérifier prérequis, matériel, culture, accessibilité et pertinence de « Atelier ciblé : Lire, représenter et comparer des nombres naturels ».",
+      "interpretation_limit": "Une production dans « Le projet du forgeron » ne démontre pas à elle seule une maîtrise individuelle transférable ni un effet causal."
+    }
+  },
+  "dependency_lines": "",
+  "source_observations": [
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/catalogue/202_kristals.json",
+      "observed_sha256": "sha256:5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+      "observed_sha256": "sha256:4a2bf9abf619c87a7e4e6035bce70babb99de2e2603c209de2977bb89e7904bb",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/trames/catalogue-neutral-v0.2.json",
+      "observed_sha256": "sha256:b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    }
+  ]
+}

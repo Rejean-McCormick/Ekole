@@ -1,0 +1,95 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:spectacle-imprevu",
+  "focale": "francais",
+  "question_motrice": "La scène et le texte ne sont pas prêts.",
+  "declencheur_source": "Un spectacle est demandé.",
+  "informations_a_preparer": [
+    "duree disponible",
+    "participants"
+  ],
+  "actions_source": [
+    "repartir",
+    "repeter",
+    "presenter"
+  ],
+  "production_attendue_source": "Courte représentation",
+  "rebond_source": "Le temps disponible diminue.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-019",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-fr-006",
+      "titre": "Atelier ciblé : Formuler une inférence simple à partir du texte",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [],
+      "motif_de_choix": "Micro-situation explicitement reliée à cette trame Kontexte. Revue de l’ancrage nécessaire",
+      "consigne_source": "Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "consigne_contextualisee": "Dans « Le spectacle imprévu », accomplir « Atelier ciblé : Formuler une inférence simple à partir du texte » pour contribuer à « Courte représentation ». Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "preuve": "raisonnement et indice textuel",
+      "critere_propose": "Vérifier la trace attendue pour « Inférences en lecture » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-017",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-023",
+      "titre": "Réviser un texte de mission",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "texte"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : texte",
+      "consigne_source": "Relire un texte de préparation de la mission et corriger trois erreurs justifiées.",
+      "consigne_contextualisee": "Dans « Le spectacle imprévu », accomplir « Réviser un texte de mission » pour contribuer à « Courte représentation ». Relire un texte de préparation de la mission et corriger trois erreurs justifiées.",
+      "preuve": "Version révisée avec annotations des corrections.",
+      "critere_propose": "Corrections motivées et cohérence conservée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-054",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-020",
+      "titre": "Expliquer un choix dans un court texte",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "repar"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : repar",
+      "consigne_source": "Écrire deux ou trois phrases indiquant une décision et la raison fondée sur les données de la situation.",
+      "consigne_contextualisee": "Dans « Le spectacle imprévu », accomplir « Expliquer un choix dans un court texte » pour contribuer à « Courte représentation ». Écrire deux ou trois phrases indiquant une décision et la raison fondée sur les données de la situation.",
+      "preuve": "Justification écrite des options.",
+      "critere_propose": "Choix explicite, raison liée aux données et texte lisible.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

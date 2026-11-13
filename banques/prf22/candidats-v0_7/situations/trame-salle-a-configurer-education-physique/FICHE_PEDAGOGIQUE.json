@@ -1,0 +1,61 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:salle-a-configurer",
+  "focale": "education_physique",
+  "question_motrice": "La disposition ne permet pas à tous de voir ou de circuler.",
+  "declencheur_source": "Une salle accueille un spectacle.",
+  "informations_a_preparer": [
+    "plan de salle",
+    "besoins des participants"
+  ],
+  "actions_source": [
+    "mesurer",
+    "placer",
+    "tester"
+  ],
+  "production_attendue_source": "Plan d’aménagement sûr",
+  "rebond_source": "La taille du groupe change.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-072",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-008",
+      "titre": "Sécuriser un parcours symbolique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "salle"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : salle",
+      "consigne_source": "Tracer un petit parcours symbolique balisé; repérer trois obstacles fictifs ou contrôlés et proposer des adaptations accessibles.",
+      "consigne_contextualisee": "Dans « La salle à préparer », accomplir « Sécuriser un parcours symbolique » pour contribuer à « Plan d’aménagement sûr ». Tracer un petit parcours symbolique balisé; repérer trois obstacles fictifs ou contrôlés et proposer des adaptations accessibles.",
+      "preuve": "Plan du parcours et consignes de sécurité.",
+      "critere_propose": "Risques identifiés, adaptations pertinentes et déplacements autorisés.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

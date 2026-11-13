@@ -1,0 +1,336 @@
+{
+  "format": "ekole.prf22.authoring/0.3",
+  "status": "design_only",
+  "draft": {
+    "format": "ekole.situation-composition-draft/0.1",
+    "generated_at_utc": "2026-11-12T18:50:31+00:00",
+    "status": "draft_not_admitted",
+    "authorities": {
+      "scenario_source": "Kontexte",
+      "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+      "objectives_and_evidence": "Ékole",
+      "role_proposals": "Kompose",
+      "operational_tasks": "Orgo",
+      "world_ownership": "Orgo_Worlds",
+      "social_collaboration": "Konnaxion",
+      "channels": [
+        "Web",
+        "Kor",
+        "Kamel"
+      ]
+    },
+    "source": {
+      "reference": "trame:mode-emploi-visible",
+      "source_format": "kontexte.catalogue-trames/1",
+      "source_relpath": "data/trames/catalogue-neutral-v0.2.json",
+      "title": "Le mode d’emploi accessible",
+      "problem": "Les utilisateurs ne lisent pas tous le même format.",
+      "narrative_role_codes": [
+        "traducteur",
+        "peintre",
+        "mecanicien"
+      ],
+      "source_step_refs_unchanged": []
+    },
+    "world_context": {
+      "epoch": "Période de simulation à préciser selon la trame",
+      "cultural_frame": "Aucune culture réelle attribuée; sources et droits à valider",
+      "place": "Lieu de la situation source, à préciser par l’enseignant",
+      "reality": "fictif",
+      "language": "fr-CA",
+      "notes": "V0.7 : focalisation disciplinaire et choix d’activités explicitement justifiés; aucune validation pédagogique.",
+      "cultural_validation": "pending_human_review"
+    },
+    "activity_bindings": [
+      {
+        "activity_ref": "ekoleprop:ap-043",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Comprendre une consigne simple en anglais",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-als-001"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-044",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Échanger une information simple en anglais",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-als-005"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-045",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Rédiger un court message en anglais",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-als-010"
+      }
+    ],
+    "learning_objective_links": [
+      {
+        "objective_ref": "qc-pri-als-001",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Comprendre des consignes et des messages oraux",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-als-005",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Interagir par formules et questions simples",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-als-010",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Produire de courts textes en anglais",
+        "status": "candidate_teacher_review_required"
+      }
+    ],
+    "participation": {
+      "participant_count": 8,
+      "anonymized_placeholder_only": true,
+      "mode": "groupes_rotatifs",
+      "maximum_per_team": 4,
+      "teams": [
+        {
+          "id": "equipe-01",
+          "participant_placeholders": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "size": 4,
+          "suggested_role": "traducteur",
+          "assignment_status": "teacher_to_approve"
+        },
+        {
+          "id": "equipe-02",
+          "participant_placeholders": [
+            "P05",
+            "P06",
+            "P07",
+            "P08"
+          ],
+          "size": 4,
+          "suggested_role": "peintre",
+          "assignment_status": "teacher_to_approve"
+        }
+      ],
+      "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+      "solo_substitution": null,
+      "stations": [
+        {
+          "id": "station-01",
+          "activity_ref": "ekoleprop:ap-043",
+          "title": "Comprendre une consigne simple en anglais",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Fiche de compréhension et reformulation.",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-02",
+          "activity_ref": "ekoleprop:ap-044",
+          "title": "Échanger une information simple en anglais",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Dialogue court transcrit ou grille d'observation.",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-03",
+          "activity_ref": "ekoleprop:ap-045",
+          "title": "Rédiger un court message en anglais",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Message court et relecture guidée.",
+          "adaptation_status": "to_review"
+        }
+      ],
+      "rotation": [
+        {
+          "round": 1,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-02",
+              "status": "visit"
+            }
+          ]
+        }
+      ],
+      "parallel_posts_per_activity": 3,
+      "additional_equipment_required": true,
+      "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+      "station_capacity": "jusqu’à 3 équipe(s) par activité et par ronde, chacune à son poste distinct",
+      "role_validation": "teacher_required"
+    },
+    "collaboration": {
+      "kontexte_hints": "utiliser les joins/fragments de la source, sans libération automatique",
+      "communication": "Konnaxion / Kids, sous permissions serveur",
+      "progress_from_messages": false
+    },
+    "export_hints": {
+      "orgo_world_slug_suggested": "mode-emploi-visible",
+      "world_creation_performed": false,
+      "tasks_dispatched": false,
+      "qr_created": false,
+      "runtime_admitted": false,
+      "teacher_authorized": false,
+      "real_learner_profiles_loaded": false
+    },
+    "required_reviews": [
+      "adéquation au niveau scolaire",
+      "exactitude historique et culturelle",
+      "sécurité et consentements",
+      "objectifs pédagogiques et critères de preuve",
+      "rôles et disponibilité",
+      "matériel et encadrement des postes parallèles",
+      "autorisations serveur et isolement de classe"
+    ]
+  },
+  "theory_entries": {
+    "qc-pri-als-001": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-043"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Comprendre une consigne simple en anglais » pour contribuer à « Mode d’emploi multimodal » dans « Le mode d’emploi accessible », il pourrait exercer « Comprendre des consignes et des messages oraux ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Les utilisateurs ne lisent pas tous le même format. », proposer la tâche suivante : Suivre une consigne orale simple préparée et indiquer ce qui est demandé par un geste ou un dessin. Mettre à disposition : fonctionnement, besoins de lecture. Livrable de la situation : Mode d’emploi multimodal. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Comprendre une consigne simple en anglais » : Suivre une consigne orale simple préparée et indiquer ce qui est demandé par un geste ou un dessin. Vérifier qu’elles se rapportent effectivement à « Exécuter et reformuler des consignes orales courantes en anglais ».",
+      "observation": "Pendant « Comprendre une consigne simple en anglais », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Fiche de compréhension et reformulation. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Action conforme et ambiguïtés reconnues. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Comprendre des consignes et des messages oraux », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : tradu. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Mode d’emploi multimodal ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Le mode d’emploi accessible » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-als-005": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-044"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Échanger une information simple en anglais » pour contribuer à « Mode d’emploi multimodal » dans « Le mode d’emploi accessible », il pourrait exercer « Interagir par formules et questions simples ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Les utilisateurs ne lisent pas tous le même format. », proposer la tâche suivante : Jouer un échange guidé de deux questions et réponses liées à une tâche simple. Mettre à disposition : fonctionnement, besoins de lecture. Livrable de la situation : Mode d’emploi multimodal. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Échanger une information simple en anglais » : Jouer un échange guidé de deux questions et réponses liées à une tâche simple. Vérifier qu’elles se rapportent effectivement à « Poser et répondre à des questions simples en interaction ».",
+      "observation": "Pendant « Échanger une information simple en anglais », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Dialogue court transcrit ou grille d'observation. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Compréhension, tours de parole et clarté. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Interagir par formules et questions simples », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : tradu. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Mode d’emploi multimodal ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Le mode d’emploi accessible » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-als-010": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-045"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Rédiger un court message en anglais » pour contribuer à « Mode d’emploi multimodal » dans « Le mode d’emploi accessible », il pourrait exercer « Produire de courts textes en anglais ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Les utilisateurs ne lisent pas tous le même format. », proposer la tâche suivante : Rédiger quelques phrases simples sur une activité familière en utilisant un modèle explicite. Mettre à disposition : fonctionnement, besoins de lecture. Livrable de la situation : Mode d’emploi multimodal. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Rédiger un court message en anglais » : Rédiger quelques phrases simples sur une activité familière en utilisant un modèle explicite. Vérifier qu’elles se rapportent effectivement à « Rédiger un texte anglais bref, intelligible et adapté à une consigne ».",
+      "observation": "Pendant « Rédiger un court message en anglais », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Message court et relecture guidée. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Idées compréhensibles et langage adapté. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Produire de courts textes en anglais », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : tradu. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Mode d’emploi multimodal ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Le mode d’emploi accessible » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    }
+  },
+  "dependency_lines": "",
+  "source_observations": [
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/catalogue/202_kristals.json",
+      "observed_sha256": "sha256:5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/trames/catalogue-neutral-v0.2.json",
+      "observed_sha256": "sha256:b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Ékole",
+      "relative_path": "banques/prf22/activites-proposees-v0_7.json",
+      "observed_sha256": "sha256:23ad0fc1c49359b82eb65391d54537b43ce2ca91df04794cacf6926d7d8c642d",
+      "pin_status": "unresolved",
+      "qualification": "not_reviewed"
+    }
+  ]
+}

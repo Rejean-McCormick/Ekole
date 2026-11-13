@@ -1,0 +1,95 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:fete-commune",
+  "focale": "arts",
+  "question_motrice": "Les préparatifs dépendent de plusieurs équipes.",
+  "declencheur_source": "Une célébration commune est annoncée.",
+  "informations_a_preparer": [
+    "besoins",
+    "ressources disponibles"
+  ],
+  "actions_source": [
+    "fabriquer",
+    "inviter",
+    "organiser",
+    "livrer"
+  ],
+  "production_attendue_source": "Fête et productions partagées",
+  "rebond_source": "Un matériel manque.",
+  "niveaux_suggeres_source": "maternelle-6",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-027",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-mu-006",
+      "titre": "Atelier ciblé : Créer un court motif sonore",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [],
+      "motif_de_choix": "Micro-situation explicitement reliée à cette trame Kontexte. Revue de l’ancrage nécessaire",
+      "consigne_source": "Faire écouter, reproduire et comparer le motif.",
+      "consigne_contextualisee": "Dans « La fête commune », accomplir « Atelier ciblé : Créer un court motif sonore » pour contribuer à « Fête et productions partagées ». Faire écouter, reproduire et comparer le motif.",
+      "preuve": "motif identifié",
+      "critere_propose": "Vérifier la trace attendue pour « Inventer une pièce vocale ou instrumentale » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-028",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-mu-007",
+      "titre": "Atelier ciblé : Interpréter un motif en groupe",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [],
+      "motif_de_choix": "Micro-situation explicitement reliée à cette trame Kontexte. Revue de l’ancrage nécessaire",
+      "consigne_source": "Faire écouter, reproduire et comparer le motif.",
+      "consigne_contextualisee": "Dans « La fête commune », accomplir « Atelier ciblé : Interpréter un motif en groupe » pour contribuer à « Fête et productions partagées ». Faire écouter, reproduire et comparer le motif.",
+      "preuve": "participation et écoute",
+      "critere_propose": "Vérifier la trace attendue pour « Interpréter seul ou en ensemble » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-035",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-mu-002",
+      "titre": "Créer un rythme répétitif",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "annonce",
+        "fete"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : annonce",
+      "consigne_source": "Inventer puis noter un motif rythmique court destiné à annoncer une étape de la situation.",
+      "consigne_contextualisee": "Dans « La fête commune », accomplir « Créer un rythme répétitif » pour contribuer à « Fête et productions partagées ». Inventer puis noter un motif rythmique court destiné à annoncer une étape de la situation.",
+      "preuve": "Partition graphique et essai sonore.",
+      "critere_propose": "Motif reproductible, pulsation repérable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

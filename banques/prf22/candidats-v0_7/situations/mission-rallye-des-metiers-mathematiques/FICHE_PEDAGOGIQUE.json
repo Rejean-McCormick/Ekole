@@ -1,0 +1,96 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "mission:rallye-des-metiers",
+  "focale": "mathematiques",
+  "question_motrice": "L’équipe suit une quête dans un village fictif. À chaque station, un enfant-personnage doit expliquer une idée utile avant de remettre un morceau d’information nécessaire à la suite.",
+  "declencheur_source": "L’équipe suit une quête dans un village fictif. À chaque station, un enfant-personnage doit expliquer une idée utile avant de remettre un morceau d’information nécessaire à la suite.",
+  "informations_a_preparer": [
+    "Fragments de la mission : diffusion conditionnelle par Orgo, non affichés ici"
+  ],
+  "actions_source": [],
+  "production_attendue_source": "Étapes prévues par la mission : carte-village, station-coiffure, station-boulangerie, station-atelier, station-labo, message-equipe, enigme-finale, carnet-quete",
+  "rebond_source": "",
+  "niveaux_suggeres_source": "à déterminer",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-001",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-025",
+      "titre": "Atelier de mesures comparées",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "mecan",
+        "maquette",
+        "atelier"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : mecan, maquette",
+      "consigne_source": "Mesurer trois objets pertinents à la situation avec le même instrument, noter les unités et expliquer les écarts.",
+      "consigne_contextualisee": "Dans « Le rallye des métiers du village », accomplir « Atelier de mesures comparées » pour contribuer à « Étapes prévues par la mission : carte-village, station-coiffure, station-boulangerie, station-atelier, station-labo, message-equipe, enigme-finale, carnet-quete ». Mesurer trois objets pertinents à la situation avec le même instrument, noter les unités et expliquer les écarts.",
+      "preuve": "Tableau de trois mesures et conclusion justifiée.",
+      "critere_propose": "Unités cohérentes, mesures lisibles et comparaison correcte.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-026",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-004",
+      "titre": "Atelier ciblé : Repérer et poursuivre une régularité",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "suite",
+        "sequence"
+      ],
+      "motif_de_choix": "Indices thématiques : suite, sequence",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « Le rallye des métiers du village », accomplir « Atelier ciblé : Repérer et poursuivre une régularité » pour contribuer à « Étapes prévues par la mission : carte-village, station-coiffure, station-boulangerie, station-atelier, station-labo, message-equipe, enigme-finale, carnet-quete ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "règle expliquée et suite complétée",
+      "critere_propose": "Vérifier la trace attendue pour « Suites et régularités numériques » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-005",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-008",
+      "titre": "Organiser des lots égaux",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "boulanger",
+        "atelier"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : boulanger",
+      "consigne_source": "Répartir un matériel fictif en lots égaux, représenter l'opération et vérifier le total.",
+      "consigne_contextualisee": "Dans « Le rallye des métiers du village », accomplir « Organiser des lots égaux » pour contribuer à « Étapes prévues par la mission : carte-village, station-coiffure, station-boulangerie, station-atelier, station-labo, message-equipe, enigme-finale, carnet-quete ». Répartir un matériel fictif en lots égaux, représenter l'opération et vérifier le total.",
+      "preuve": "Schéma de groupements et calcul expliqué.",
+      "critere_propose": "Groupements réguliers, opération cohérente, vérification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

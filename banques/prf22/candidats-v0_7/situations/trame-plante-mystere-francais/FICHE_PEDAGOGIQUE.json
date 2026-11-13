@@ -1,0 +1,98 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:plante-mystere",
+  "focale": "francais",
+  "question_motrice": "Ses propriétés doivent être distinguées des croyances fictives.",
+  "declencheur_source": "Une plante inconnue apparaît dans une histoire.",
+  "informations_a_preparer": [
+    "observations",
+    "documentation"
+  ],
+  "actions_source": [
+    "observer",
+    "comparer",
+    "classer"
+  ],
+  "production_attendue_source": "Fiche d’identification",
+  "rebond_source": "Deux plantes se ressemblent.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-053",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-021",
+      "titre": "Rédiger un bref compte rendu d’observation",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "plante",
+        "jardin"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : plante, jardin",
+      "consigne_source": "Écrire un court compte rendu à partir de notes d’observation fournies, avec une phrase décrivant le résultat.",
+      "consigne_contextualisee": "Dans « La plante mystérieuse », accomplir « Rédiger un bref compte rendu d’observation » pour contribuer à « Fiche d’identification ». Écrire un court compte rendu à partir de notes d’observation fournies, avec une phrase décrivant le résultat.",
+      "preuve": "Compte rendu lié aux notes.",
+      "critere_propose": "Faits observés distingués des suppositions et formulation compréhensible.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-020",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-009",
+      "titre": "Lire une notice documentaire",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "jardin"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : jardin",
+      "consigne_source": "Comparer les renseignements d'une notice et ceux d'un plan de mission; signaler les contradictions.",
+      "consigne_contextualisee": "Dans « La plante mystérieuse », accomplir « Lire une notice documentaire » pour contribuer à « Fiche d’identification ». Comparer les renseignements d'une notice et ceux d'un plan de mission; signaler les contradictions.",
+      "preuve": "Tableau « information, source, vérification ».",
+      "critere_propose": "Utilisation fidèle des sources et limites reconnues.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-059",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-005",
+      "titre": "Interpréter et reformuler une information",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "document"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : document",
+      "consigne_source": "Lire le document ou l’étiquette fournie, identifier la consigne puis la dire avec ses mots.",
+      "consigne_contextualisee": "Dans « La plante mystérieuse », accomplir « Interpréter et reformuler une information » pour contribuer à « Fiche d’identification ». Lire le document ou l’étiquette fournie, identifier la consigne puis la dire avec ses mots.",
+      "preuve": "Information repérée et reformulation.",
+      "critere_propose": "Information essentielle préservée, reformulation intelligible.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

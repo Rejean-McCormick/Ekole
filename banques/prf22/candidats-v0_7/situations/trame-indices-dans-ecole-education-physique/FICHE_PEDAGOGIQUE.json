@@ -1,0 +1,80 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:indices-dans-ecole",
+  "focale": "education_physique",
+  "question_motrice": "Les indices sont dispersés.",
+  "declencheur_source": "Une énigme se déroule dans des zones autorisées.",
+  "informations_a_preparer": [
+    "indice visuel",
+    "indice ecrit"
+  ],
+  "actions_source": [
+    "chercher",
+    "associer",
+    "expliquer"
+  ],
+  "production_attendue_source": "Énigme résolue",
+  "rebond_source": "Un indice est remplacé par une version accessible.",
+  "niveaux_suggeres_source": "primaire-2",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-072",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-008",
+      "titre": "Sécuriser un parcours symbolique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "indice",
+        "ecole"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : indice, ecole",
+      "consigne_source": "Tracer un petit parcours symbolique balisé; repérer trois obstacles fictifs ou contrôlés et proposer des adaptations accessibles.",
+      "consigne_contextualisee": "Dans « Les indices dans l’école », accomplir « Sécuriser un parcours symbolique » pour contribuer à « Énigme résolue ». Tracer un petit parcours symbolique balisé; repérer trois obstacles fictifs ou contrôlés et proposer des adaptations accessibles.",
+      "preuve": "Plan du parcours et consignes de sécurité.",
+      "critere_propose": "Risques identifiés, adaptations pertinentes et déplacements autorisés.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-073",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-007",
+      "titre": "Planifier une coopération motrice",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "indice"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : indice",
+      "consigne_source": "Dans une simulation sans déplacement réel, répartir trois rôles complémentaires pour réaliser un relais ou une mission motrice.",
+      "consigne_contextualisee": "Dans « Les indices dans l’école », accomplir « Planifier une coopération motrice » pour contribuer à « Énigme résolue ». Dans une simulation sans déplacement réel, répartir trois rôles complémentaires pour réaliser un relais ou une mission motrice.",
+      "preuve": "Schéma de rôles et consignes.",
+      "critere_propose": "Rôles distincts, passages compréhensibles et solution de rechange.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

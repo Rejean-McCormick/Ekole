@@ -1,0 +1,62 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:mode-emploi-visible",
+  "focale": "arts",
+  "question_motrice": "Les utilisateurs ne lisent pas tous le même format.",
+  "declencheur_source": "Un objet nécessite un mode d’emploi.",
+  "informations_a_preparer": [
+    "fonctionnement",
+    "besoins de lecture"
+  ],
+  "actions_source": [
+    "illustrer",
+    "traduire",
+    "tester"
+  ],
+  "production_attendue_source": "Mode d’emploi multimodal",
+  "rebond_source": "Un pictogramme est mal compris.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-075",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-003",
+      "titre": "Mettre en images un mode d’emploi",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "emploi",
+        "accessible"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : emploi, accessible",
+      "consigne_source": "Transformer trois consignes fictives validées en trois petites illustrations ordonnées avec un symbole récurrent.",
+      "consigne_contextualisee": "Dans « Le mode d’emploi accessible », accomplir « Mettre en images un mode d’emploi » pour contribuer à « Mode d’emploi multimodal ». Transformer trois consignes fictives validées en trois petites illustrations ordonnées avec un symbole récurrent.",
+      "preuve": "Suite de trois images légendées.",
+      "critere_propose": "Ordre cohérent, clarté visuelle et correspondance aux consignes.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

@@ -1,0 +1,102 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:spectacle-imprevu",
+  "focale": "arts",
+  "question_motrice": "La scène et le texte ne sont pas prêts.",
+  "declencheur_source": "Un spectacle est demandé.",
+  "informations_a_preparer": [
+    "duree disponible",
+    "participants"
+  ],
+  "actions_source": [
+    "repartir",
+    "repeter",
+    "presenter"
+  ],
+  "production_attendue_source": "Courte représentation",
+  "rebond_source": "Le temps disponible diminue.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-037",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ad-004",
+      "titre": "Construire une courte scène",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "spectacle",
+        "scene",
+        "clown"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : spectacle, scene, clown",
+      "consigne_source": "Créer une courte séquence dramatique avec début, problème et résolution qui sert la mission.",
+      "consigne_contextualisee": "Dans « Le spectacle imprévu », accomplir « Construire une courte scène » pour contribuer à « Courte représentation ». Créer une courte séquence dramatique avec début, problème et résolution qui sert la mission.",
+      "preuve": "Canevas de scène et présentation supervisée.",
+      "critere_propose": "Progression claire, intention dramatique.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-001",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ad-002",
+      "titre": "Atelier ciblé : Caractériser un personnage fictif",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "scene",
+        "spectacle",
+        "representation"
+      ],
+      "motif_de_choix": "Indices thématiques : scene, spectacle, representation",
+      "consigne_source": "Faire construire un court dialogue, répéter et commenter la représentation.",
+      "consigne_contextualisee": "Dans « Le spectacle imprévu », accomplir « Atelier ciblé : Caractériser un personnage fictif » pour contribuer à « Courte représentation ». Faire construire un court dialogue, répéter et commenter la représentation.",
+      "preuve": "présentation incarnée",
+      "critere_propose": "Vérifier la trace attendue pour « Découvrir personnages et situations dramatiques » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-036",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-mu-008",
+      "titre": "Comparer deux ambiances sonores",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "spectacle",
+        "scene"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : spectacle, scene",
+      "consigne_source": "Écouter deux extraits sous licence autorisée et décrire les choix sonores qui changent l'ambiance.",
+      "consigne_contextualisee": "Dans « Le spectacle imprévu », accomplir « Comparer deux ambiances sonores » pour contribuer à « Courte représentation ». Écouter deux extraits sous licence autorisée et décrire les choix sonores qui changent l'ambiance.",
+      "preuve": "Comparaison écrite ou orale des extraits.",
+      "critere_propose": "Vocabulaire sonore et justification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

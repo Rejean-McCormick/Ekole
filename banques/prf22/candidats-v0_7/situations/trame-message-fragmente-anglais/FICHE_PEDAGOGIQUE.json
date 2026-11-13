@@ -1,0 +1,96 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:message-fragmente",
+  "focale": "anglais",
+  "question_motrice": "Aucun élève ne connaît la consigne complète.",
+  "declencheur_source": "Un message arrive en deux parties.",
+  "informations_a_preparer": [
+    "premiere partie",
+    "deuxieme partie"
+  ],
+  "actions_source": [
+    "echanger",
+    "reconstituer",
+    "agir"
+  ],
+  "production_attendue_source": "Message reconstruit",
+  "rebond_source": "Un terme a deux sens.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-043",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-als-001",
+      "titre": "Comprendre une consigne simple en anglais",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "tradu",
+        "message"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : tradu, message",
+      "consigne_source": "Suivre une consigne orale simple préparée et indiquer ce qui est demandé par un geste ou un dessin.",
+      "consigne_contextualisee": "Dans « Le message incomplet », accomplir « Comprendre une consigne simple en anglais » pour contribuer à « Message reconstruit ». Suivre une consigne orale simple préparée et indiquer ce qui est demandé par un geste ou un dessin.",
+      "preuve": "Fiche de compréhension et reformulation.",
+      "critere_propose": "Action conforme et ambiguïtés reconnues.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-003",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-als-005",
+      "titre": "Atelier ciblé : Employer des formules et courtes questions",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [],
+      "motif_de_choix": "Micro-situation explicitement reliée à cette trame Kontexte. Revue de l’ancrage nécessaire",
+      "consigne_source": "Faire pratiquer des mots-clés, un mini-dialogue et une vérification de compréhension.",
+      "consigne_contextualisee": "Dans « Le message incomplet », accomplir « Atelier ciblé : Employer des formules et courtes questions » pour contribuer à « Message reconstruit ». Faire pratiquer des mots-clés, un mini-dialogue et une vérification de compréhension.",
+      "preuve": "échange oral enregistré localement ou observé",
+      "critere_propose": "Vérifier la trace attendue pour « Interagir par formules et questions simples » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-045",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-als-010",
+      "titre": "Rédiger un court message en anglais",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "tradu"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : tradu",
+      "consigne_source": "Rédiger quelques phrases simples sur une activité familière en utilisant un modèle explicite.",
+      "consigne_contextualisee": "Dans « Le message incomplet », accomplir « Rédiger un court message en anglais » pour contribuer à « Message reconstruit ». Rédiger quelques phrases simples sur une activité familière en utilisant un modèle explicite.",
+      "preuve": "Message court et relecture guidée.",
+      "critere_propose": "Idées compréhensibles et langage adapté.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

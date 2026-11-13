@@ -1,0 +1,79 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:temperatures-melangees",
+  "focale": "mathematiques",
+  "question_motrice": "Les relevés ne sont pas classés.",
+  "declencheur_source": "Une suite de mesures de température doit être interprétée.",
+  "informations_a_preparer": [
+    "valeurs",
+    "moments de mesure"
+  ],
+  "actions_source": [
+    "classer",
+    "mesurer",
+    "expliquer"
+  ],
+  "production_attendue_source": "Tableau chronologique",
+  "rebond_source": "Une mesure est manquante.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-024",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-002",
+      "titre": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "mesure"
+      ],
+      "motif_de_choix": "Indices thématiques : mesure",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « Les mesures mélangées », accomplir « Atelier ciblé : Lire, représenter et comparer des nombres naturels » pour contribuer à « Tableau chronologique ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "écriture et représentation vérifiées",
+      "critere_propose": "Vérifier la trace attendue pour « Lire, écrire et comparer des nombres naturels » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-026",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-004",
+      "titre": "Atelier ciblé : Repérer et poursuivre une régularité",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "suite"
+      ],
+      "motif_de_choix": "Indices thématiques : suite",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « Les mesures mélangées », accomplir « Atelier ciblé : Repérer et poursuivre une régularité » pour contribuer à « Tableau chronologique ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "règle expliquée et suite complétée",
+      "critere_propose": "Vérifier la trace attendue pour « Suites et régularités numériques » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

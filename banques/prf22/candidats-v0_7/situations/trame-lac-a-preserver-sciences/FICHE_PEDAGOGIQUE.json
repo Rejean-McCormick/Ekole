@@ -1,0 +1,79 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:lac-a-preserver",
+  "focale": "sciences",
+  "question_motrice": "Les captures prévues dépassent un seuil de simulation.",
+  "declencheur_source": "Un lac fictif doit être géré.",
+  "informations_a_preparer": [
+    "populations estimees",
+    "prelevements prevus"
+  ],
+  "actions_source": [
+    "calculer",
+    "comparer",
+    "decider"
+  ],
+  "production_attendue_source": "Proposition de gestion",
+  "rebond_source": "Les données sont mises à jour.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-024",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-004",
+      "titre": "Conclure avec prudence",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "scientifique"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : scientifique",
+      "consigne_source": "Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis.",
+      "consigne_contextualisee": "Dans « Le lac à préserver », accomplir « Conclure avec prudence » pour contribuer à « Proposition de gestion ». Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis.",
+      "preuve": "Phrase de conclusion associée au relevé de données.",
+      "critere_propose": "Conclusion supportée, limites explicites.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-067",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-001",
+      "titre": "Enquêter sur un milieu naturel",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "lac"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : lac",
+      "consigne_source": "Décrire, sur photos documentaires validées, trois éléments observables du milieu et formuler une question à investiguer.",
+      "consigne_contextualisee": "Dans « Le lac à préserver », accomplir « Enquêter sur un milieu naturel » pour contribuer à « Proposition de gestion ». Décrire, sur photos documentaires validées, trois éléments observables du milieu et formuler une question à investiguer.",
+      "preuve": "Grille d’observation et question.",
+      "critere_propose": "Éléments observables distincts des hypothèses.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

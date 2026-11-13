@@ -1,0 +1,97 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:salle-a-configurer",
+  "focale": "mathematiques",
+  "question_motrice": "La disposition ne permet pas à tous de voir ou de circuler.",
+  "declencheur_source": "Une salle accueille un spectacle.",
+  "informations_a_preparer": [
+    "plan de salle",
+    "besoins des participants"
+  ],
+  "actions_source": [
+    "mesurer",
+    "placer",
+    "tester"
+  ],
+  "production_attendue_source": "Plan d’aménagement sûr",
+  "rebond_source": "La taille du groupe change.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-024",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-002",
+      "titre": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "mesure"
+      ],
+      "motif_de_choix": "Micro-situation explicitement reliée à cette trame Kontexte. Indices thématiques : mesure",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « La salle à préparer », accomplir « Atelier ciblé : Lire, représenter et comparer des nombres naturels » pour contribuer à « Plan d’aménagement sûr ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "écriture et représentation vérifiées",
+      "critere_propose": "Vérifier la trace attendue pour « Lire, écrire et comparer des nombres naturels » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-002",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-026",
+      "titre": "Planifier une durée",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "spectacle"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : spectacle",
+      "consigne_source": "Estimer puis calculer la durée de trois étapes de la mission; comparer à une contrainte de temps.",
+      "consigne_contextualisee": "Dans « La salle à préparer », accomplir « Planifier une durée » pour contribuer à « Plan d’aménagement sûr ». Estimer puis calculer la durée de trois étapes de la mission; comparer à une contrainte de temps.",
+      "preuve": "Frise chronologique avec trois durées et calcul explicite.",
+      "critere_propose": "Unité temporelle, somme des durées et justification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-008",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-023",
+      "titre": "Comparer des figures",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "plan"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : plan",
+      "consigne_source": "Repérer et classer plusieurs figures dans un plan, dessin ou objet de la situation; expliquer les propriétés.",
+      "consigne_contextualisee": "Dans « La salle à préparer », accomplir « Comparer des figures » pour contribuer à « Plan d’aménagement sûr ». Repérer et classer plusieurs figures dans un plan, dessin ou objet de la situation; expliquer les propriétés.",
+      "preuve": "Croquis annoté et classification argumentée.",
+      "critere_propose": "Caractéristiques géométriques reconnues, vocabulaire précis.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

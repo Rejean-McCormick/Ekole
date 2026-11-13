@@ -1,0 +1,77 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:troc-equitable",
+  "focale": "mathematiques",
+  "question_motrice": "La valeur et l’utilité ne sont pas perçues pareil.",
+  "declencheur_source": "Deux participants veulent échanger des biens fictifs.",
+  "informations_a_preparer": [
+    "offre",
+    "besoin"
+  ],
+  "actions_source": [
+    "proposer",
+    "argumenter",
+    "conclure"
+  ],
+  "production_attendue_source": "Accord simulé",
+  "rebond_source": "Un troisième besoin apparaît.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-026",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-004",
+      "titre": "Atelier ciblé : Repérer et poursuivre une régularité",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [],
+      "motif_de_choix": "Micro-situation explicitement reliée à cette trame Kontexte. Revue de l’ancrage nécessaire",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « L’échange équitable », accomplir « Atelier ciblé : Repérer et poursuivre une régularité » pour contribuer à « Accord simulé ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "règle expliquée et suite complétée",
+      "critere_propose": "Vérifier la trace attendue pour « Suites et régularités numériques » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-006",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-009",
+      "titre": "Partager équitablement",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "equitable"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : equitable",
+      "consigne_source": "Proposer un partage d'objets en groupes, représenter les restes et justifier une règle de répartition.",
+      "consigne_contextualisee": "Dans « L’échange équitable », accomplir « Partager équitablement » pour contribuer à « Accord simulé ». Proposer un partage d'objets en groupes, représenter les restes et justifier une règle de répartition.",
+      "preuve": "Manipulation ou dessin annoté des parts et éventuel reste.",
+      "critere_propose": "Égalité des parts, reste reconnu et explication.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

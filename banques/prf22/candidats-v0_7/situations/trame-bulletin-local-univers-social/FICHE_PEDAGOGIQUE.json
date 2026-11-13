@@ -1,0 +1,59 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:bulletin-local",
+  "focale": "univers_social",
+  "question_motrice": "Les témoignages ne concordent pas.",
+  "declencheur_source": "Une nouvelle fictive mérite d’être expliquée.",
+  "informations_a_preparer": [
+    "faits confirmes",
+    "points de vue"
+  ],
+  "actions_source": [
+    "verifier",
+    "rediger",
+    "publier"
+  ],
+  "production_attendue_source": "Bulletin relu",
+  "rebond_source": "Une correction arrive.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-034",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-us-005",
+      "titre": "Atelier ciblé : Distinguer documents, témoins et sources",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [],
+      "motif_de_choix": "Micro-situation explicitement reliée à cette trame Kontexte. Revue de l’ancrage nécessaire",
+      "consigne_source": "Faire situer, décrire et citer la source avant toute conclusion historique.",
+      "consigne_contextualisee": "Dans « Le bulletin local », accomplir « Atelier ciblé : Distinguer documents, témoins et sources » pour contribuer à « Bulletin relu ». Faire situer, décrire et citer la source avant toute conclusion historique.",
+      "preuve": "origine de document identifiée",
+      "critere_propose": "Vérifier la trace attendue pour « Utiliser et comparer des sources historiques » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

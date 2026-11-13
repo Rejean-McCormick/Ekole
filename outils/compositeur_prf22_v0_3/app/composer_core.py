@@ -160,6 +160,31 @@ def load_catalogue(root: Path | str) -> Catalogue:
                      roles=roles, trames_count=len(trames_data.get("scenarios", [])), missions_count=missions_count)
 
 
+def attach_ekole_activity_patterns(catalog: Catalogue) -> Catalogue:
+    """Attach explicitly authored Ékole candidates without relabelling Kontexte.
+
+    This catalogue is optional for older v0.3 deployments. It is only an
+    authoring supplement, never an approved curriculum or runtime grant.
+    """
+    lib = Path(__file__).resolve().parents[3] / 'banques/prf22'
+    path = lib / 'activites-proposees-v0_7.json'
+    if not path.is_file():
+        path = lib / 'activites-proposees-v0_6.json'
+    if not path.is_file():
+        return catalog
+    data = _read(path)
+    if data.get('format') not in ('ekole.prf22.activites-proposees/0.7', 'ekole.prf22.activites-proposees/0.6') or data.get('status') != 'authoring_candidates_only':
+        raise ValueError('Bibliothèque Ékole non qualifiée : format inconnu')
+    known = {x['ref'] for x in catalog.objectives}
+    refs = {x['ref'] for x in catalog.activities}
+    for a in data['entries']:
+        if a.get('owner') != 'Ékole' or a.get('statut') != 'proposition_non_qualifiee' or a['objectif_ref'] not in known or a['ref'] in refs:
+            raise ValueError('Patron Ékole non admissible : '+str(a.get('ref')))
+        catalog.activities.append({**a, 'objective_candidate':a['objectif_ref']})
+        refs.add(a['ref'])
+    return catalog
+
+
 def group_sizes(participants: int, maximum: int) -> list[int]:
     if not isinstance(participants, int) or not 1 <= participants <= MAX_PARTICIPANTS:
         raise ValueError("Nombre de participants : 1 à 30")
@@ -274,7 +299,7 @@ def compose_draft(
         },
         "activity_bindings": [
             {
-                "activity_ref": ex["ref"], "source_type": ex["source_type"],
+                "activity_ref": ex["ref"], "source_type": ex["source_type"], "owner": ex.get("owner", "Kontexte"),
                 "source_relpath": ex["source_relpath"], "title": ex["titre"],
                 "activity_status": "candidate_not_authorized",
                 "objective_candidate": ex.get("objective_candidate"),

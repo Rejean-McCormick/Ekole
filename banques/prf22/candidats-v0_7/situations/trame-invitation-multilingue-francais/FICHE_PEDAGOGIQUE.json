@@ -1,0 +1,102 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:invitation-multilingue",
+  "focale": "francais",
+  "question_motrice": "Les destinataires n’utilisent pas tous la même langue.",
+  "declencheur_source": "Un groupe doit être invité à une rencontre.",
+  "informations_a_preparer": [
+    "details de la rencontre",
+    "langues des destinataires"
+  ],
+  "actions_source": [
+    "rediger",
+    "adapter",
+    "remettre"
+  ],
+  "production_attendue_source": "Invitation vérifiée",
+  "rebond_source": "Un destinataire demande un autre format.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-016",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-021",
+      "titre": "Rédiger une communication",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message",
+        "invitation",
+        "rencontre"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : message, invitation, rencontre",
+      "consigne_source": "Écrire un court message compréhensible pour aider un autre personnage de la situation.",
+      "consigne_contextualisee": "Dans « L’invitation multilingue », accomplir « Rédiger une communication » pour contribuer à « Invitation vérifiée ». Écrire un court message compréhensible pour aider un autre personnage de la situation.",
+      "preuve": "Texte avec destinataire et information vérifiable.",
+      "critere_propose": "Cohérence, lisibilité et pertinence des informations.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-020",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-fr-012",
+      "titre": "Atelier ciblé : Réviser l’orthographe d’usage avec des outils",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "rediger",
+        "invitation",
+        "message"
+      ],
+      "motif_de_choix": "Indices thématiques : rediger, invitation, message",
+      "consigne_source": "Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "consigne_contextualisee": "Dans « L’invitation multilingue », accomplir « Atelier ciblé : Réviser l’orthographe d’usage avec des outils » pour contribuer à « Invitation vérifiée ». Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "preuve": "brouillon et version corrigée",
+      "critere_propose": "Vérifier la trace attendue pour « Orthographe d’usage » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-013",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-005",
+      "titre": "Repérer une consigne essentielle",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message",
+        "invitation"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : message, invitation",
+      "consigne_source": "Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "consigne_contextualisee": "Dans « L’invitation multilingue », accomplir « Repérer une consigne essentielle » pour contribuer à « Invitation vérifiée ». Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "preuve": "Fiche de quatre informations avec passages repérés.",
+      "critere_propose": "Fidélité au texte et distinction explicite faits/inférences.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

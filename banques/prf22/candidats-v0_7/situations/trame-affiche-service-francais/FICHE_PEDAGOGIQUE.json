@@ -1,0 +1,100 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:affiche-service",
+  "focale": "francais",
+  "question_motrice": "Le message doit être compris par tous.",
+  "declencheur_source": "Un service communautaire fictif cherche des volontaires.",
+  "informations_a_preparer": [
+    "besoin",
+    "public cible"
+  ],
+  "actions_source": [
+    "rediger",
+    "illustrer",
+    "diffuser"
+  ],
+  "production_attendue_source": "Affiche accessible",
+  "rebond_source": "Un public utilise une autre langue.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-020",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-fr-012",
+      "titre": "Atelier ciblé : Réviser l’orthographe d’usage avec des outils",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "rediger",
+        "affiche",
+        "message"
+      ],
+      "motif_de_choix": "Indices thématiques : rediger, affiche, message",
+      "consigne_source": "Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "consigne_contextualisee": "Dans « L’affiche d’entraide », accomplir « Atelier ciblé : Réviser l’orthographe d’usage avec des outils » pour contribuer à « Affiche accessible ». Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "preuve": "brouillon et version corrigée",
+      "critere_propose": "Vérifier la trace attendue pour « Orthographe d’usage » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-013",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-005",
+      "titre": "Repérer une consigne essentielle",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message",
+        "affiche"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : message, affiche",
+      "consigne_source": "Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "consigne_contextualisee": "Dans « L’affiche d’entraide », accomplir « Repérer une consigne essentielle » pour contribuer à « Affiche accessible ». Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "preuve": "Fiche de quatre informations avec passages repérés.",
+      "critere_propose": "Fidélité au texte et distinction explicite faits/inférences.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-014",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-006",
+      "titre": "Déduire à partir d'indices",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : message",
+      "consigne_source": "Lire un court indice de la situation, proposer une inférence et citer les éléments textuels qui l'appuient.",
+      "consigne_contextualisee": "Dans « L’affiche d’entraide », accomplir « Déduire à partir d'indices » pour contribuer à « Affiche accessible ». Lire un court indice de la situation, proposer une inférence et citer les éléments textuels qui l'appuient.",
+      "preuve": "Hypothèse et deux indices cités.",
+      "critere_propose": "Lien entre indices et hypothèse, incertitude exprimée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

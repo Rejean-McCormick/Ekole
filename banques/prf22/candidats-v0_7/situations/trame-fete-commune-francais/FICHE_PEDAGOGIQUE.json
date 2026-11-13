@@ -1,0 +1,98 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:fete-commune",
+  "focale": "francais",
+  "question_motrice": "Les préparatifs dépendent de plusieurs équipes.",
+  "declencheur_source": "Une célébration commune est annoncée.",
+  "informations_a_preparer": [
+    "besoins",
+    "ressources disponibles"
+  ],
+  "actions_source": [
+    "fabriquer",
+    "inviter",
+    "organiser",
+    "livrer"
+  ],
+  "production_attendue_source": "Fête et productions partagées",
+  "rebond_source": "Un matériel manque.",
+  "niveaux_suggeres_source": "maternelle-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-052",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-009",
+      "titre": "Lire et reformuler une liste de besoins",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "ressource",
+        "preparatif"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : ressource, preparatif",
+      "consigne_source": "Lire la liste de besoins fournie, souligner les informations utiles puis reformuler ce qui est demandé.",
+      "consigne_contextualisee": "Dans « La fête commune », accomplir « Lire et reformuler une liste de besoins » pour contribuer à « Fête et productions partagées ». Lire la liste de besoins fournie, souligner les informations utiles puis reformuler ce qui est demandé.",
+      "preuve": "Liste annotée et reformulation.",
+      "critere_propose": "Informations essentielles identifiées sans ajout inventé.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-018",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-fr-016",
+      "titre": "Atelier ciblé : Observer et effectuer des accords appropriés",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [],
+      "motif_de_choix": "Micro-situation explicitement reliée à cette trame Kontexte. Revue de l’ancrage nécessaire",
+      "consigne_source": "Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "consigne_contextualisee": "Dans « La fête commune », accomplir « Atelier ciblé : Observer et effectuer des accords appropriés » pour contribuer à « Fête et productions partagées ». Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "preuve": "justification d’accord simple",
+      "critere_propose": "Vérifier la trace attendue pour « Accords dans le groupe nominal » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-020",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-fr-012",
+      "titre": "Atelier ciblé : Réviser l’orthographe d’usage avec des outils",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message",
+        "annonce"
+      ],
+      "motif_de_choix": "Indices thématiques : message, annonce",
+      "consigne_source": "Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "consigne_contextualisee": "Dans « La fête commune », accomplir « Atelier ciblé : Réviser l’orthographe d’usage avec des outils » pour contribuer à « Fête et productions partagées ». Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "preuve": "brouillon et version corrigée",
+      "critere_propose": "Vérifier la trace attendue pour « Orthographe d’usage » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

@@ -1,0 +1,97 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:mode-emploi-visible",
+  "focale": "anglais",
+  "question_motrice": "Les utilisateurs ne lisent pas tous le même format.",
+  "declencheur_source": "Un objet nécessite un mode d’emploi.",
+  "informations_a_preparer": [
+    "fonctionnement",
+    "besoins de lecture"
+  ],
+  "actions_source": [
+    "illustrer",
+    "traduire",
+    "tester"
+  ],
+  "production_attendue_source": "Mode d’emploi multimodal",
+  "rebond_source": "Un pictogramme est mal compris.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-043",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-als-001",
+      "titre": "Comprendre une consigne simple en anglais",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "tradu"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : tradu",
+      "consigne_source": "Suivre une consigne orale simple préparée et indiquer ce qui est demandé par un geste ou un dessin.",
+      "consigne_contextualisee": "Dans « Le mode d’emploi accessible », accomplir « Comprendre une consigne simple en anglais » pour contribuer à « Mode d’emploi multimodal ». Suivre une consigne orale simple préparée et indiquer ce qui est demandé par un geste ou un dessin.",
+      "preuve": "Fiche de compréhension et reformulation.",
+      "critere_propose": "Action conforme et ambiguïtés reconnues.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-044",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-als-005",
+      "titre": "Échanger une information simple en anglais",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "tradu"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : tradu",
+      "consigne_source": "Jouer un échange guidé de deux questions et réponses liées à une tâche simple.",
+      "consigne_contextualisee": "Dans « Le mode d’emploi accessible », accomplir « Échanger une information simple en anglais » pour contribuer à « Mode d’emploi multimodal ». Jouer un échange guidé de deux questions et réponses liées à une tâche simple.",
+      "preuve": "Dialogue court transcrit ou grille d'observation.",
+      "critere_propose": "Compréhension, tours de parole et clarté.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-045",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-als-010",
+      "titre": "Rédiger un court message en anglais",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "tradu"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : tradu",
+      "consigne_source": "Rédiger quelques phrases simples sur une activité familière en utilisant un modèle explicite.",
+      "consigne_contextualisee": "Dans « Le mode d’emploi accessible », accomplir « Rédiger un court message en anglais » pour contribuer à « Mode d’emploi multimodal ». Rédiger quelques phrases simples sur une activité familière en utilisant un modèle explicite.",
+      "preuve": "Message court et relecture guidée.",
+      "critere_propose": "Idées compréhensibles et langage adapté.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

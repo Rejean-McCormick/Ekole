@@ -1,0 +1,95 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "mission:salon-coiffure",
+  "focale": "arts",
+  "question_motrice": "Mission de simulation du monde Le salon de coiffure.",
+  "declencheur_source": "Mission de simulation du monde Le salon de coiffure.",
+  "informations_a_preparer": [
+    "Fragments de la mission : diffusion conditionnelle par Orgo, non affichés ici"
+  ],
+  "actions_source": [],
+  "production_attendue_source": "Étapes prévues par la mission : phase-1, phase-2, phase-3",
+  "rebond_source": "",
+  "niveaux_suggeres_source": "à déterminer",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-034",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-009",
+      "titre": "Expliquer une démarche artistique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "affiche",
+        "photo"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : affiche, photo",
+      "consigne_source": "Présenter les étapes d'une création en indiquant une modification et sa raison.",
+      "consigne_contextualisee": "Dans « Le salon de coiffure », accomplir « Expliquer une démarche artistique » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Présenter les étapes d'une création en indiquant une modification et sa raison.",
+      "preuve": "Carnet d'étapes et commentaire oral ou écrit.",
+      "critere_propose": "Étapes identifiables, choix motivés.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-060",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-003",
+      "titre": "Dessiner une proposition d’objet ou de décor",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "coiffure",
+        "salon"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : coiffure, salon",
+      "consigne_source": "Produire deux croquis rapides d’un objet, d’une affiche ou d’un décor fictif et expliquer un choix de forme ou de couleur.",
+      "consigne_contextualisee": "Dans « Le salon de coiffure », accomplir « Dessiner une proposition d’objet ou de décor » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Produire deux croquis rapides d’un objet, d’une affiche ou d’un décor fictif et expliquer un choix de forme ou de couleur.",
+      "preuve": "Deux esquisses annotées.",
+      "critere_propose": "Variantes visibles, choix plastique exprimé et contrainte source respectée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-005",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ap-008",
+      "titre": "Atelier ciblé : Exprimer un point de vue sur une création",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "photo",
+        "affiche"
+      ],
+      "motif_de_choix": "Indices thématiques : photo, affiche",
+      "consigne_source": "Faire explorer puis expliquer un choix plastique concret.",
+      "consigne_contextualisee": "Dans « Le salon de coiffure », accomplir « Atelier ciblé : Exprimer un point de vue sur une création » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Faire explorer puis expliquer un choix plastique concret.",
+      "preuve": "observations sans jugement des personnes",
+      "critere_propose": "Vérifier la trace attendue pour « Apprécier des œuvres et exprimer sa perception » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

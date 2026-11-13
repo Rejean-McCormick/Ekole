@@ -1,0 +1,79 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:ciel-en-cartes",
+  "focale": "arts",
+  "question_motrice": "Les observations changent selon le lieu et l’heure.",
+  "declencheur_source": "Une exposition sur le ciel est prévue.",
+  "informations_a_preparer": [
+    "lieu et moment",
+    "observation et source"
+  ],
+  "actions_source": [
+    "chercher",
+    "comparer",
+    "representer"
+  ],
+  "production_attendue_source": "Carte du ciel annotée",
+  "rebond_source": "Une observation contredit le dessin.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-062",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-001",
+      "titre": "Composer des silhouettes et des ombres",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "ciel"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : ciel",
+      "consigne_source": "Produire deux silhouettes sur papier puis observer comment leurs contours changent selon l’éclairage simulé.",
+      "consigne_contextualisee": "Dans « Les cartes du ciel », accomplir « Composer des silhouettes et des ombres » pour contribuer à « Carte du ciel annotée ». Produire deux silhouettes sur papier puis observer comment leurs contours changent selon l’éclairage simulé.",
+      "preuve": "Esquisses de silhouettes comparées.",
+      "critere_propose": "Deux formes identifiables et observation différenciée des effets.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-005",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ap-008",
+      "titre": "Atelier ciblé : Exprimer un point de vue sur une création",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "exposition"
+      ],
+      "motif_de_choix": "Indices thématiques : exposition",
+      "consigne_source": "Faire explorer puis expliquer un choix plastique concret.",
+      "consigne_contextualisee": "Dans « Les cartes du ciel », accomplir « Atelier ciblé : Exprimer un point de vue sur une création » pour contribuer à « Carte du ciel annotée ». Faire explorer puis expliquer un choix plastique concret.",
+      "preuve": "observations sans jugement des personnes",
+      "critere_propose": "Vérifier la trace attendue pour « Apprécier des œuvres et exprimer sa perception » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

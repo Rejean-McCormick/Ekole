@@ -151,7 +151,7 @@ def build_design(draft: dict, theory_entries: dict[str,dict], dependency_lines: 
     for a in activities:
         ref = a['activity_ref']
         activity_rows.append({
-            'id':act_ids[ref], 'exercise_ref':candidate_ref('Kontexte',ref,a['source_relpath']),
+            'id':act_ids[ref], 'exercise_ref':candidate_ref(a.get('owner','Kontexte'),ref,a['source_relpath']),
             'objectives':assigned_obj_ids[ref], 'role_ids':[r['id'] for r in roles],
             'duration_minutes':max(entries[ref]['duration_minutes'] for ref in entries if a['activity_ref'] in entries[ref]['activity_refs']),
             'station':{'teams_per_instance':1, 'max_parallel_instances':draft['participation']['parallel_posts_per_activity'], 'materials_review_required':True},
@@ -284,7 +284,7 @@ def make_handoff(design: dict, plan: dict, observed_sources: list[dict] | None =
 def observe_catalogue_sources(catalog_root: Path, draft: dict) -> list[dict]:
     """Compute informational hashes of local files, never mark them pinned/qualified."""
     relpaths = sorted({draft['source']['source_relpath'],
-                        *[a['source_relpath'] for a in draft['activity_bindings']],
+                        *[a['source_relpath'] for a in draft['activity_bindings'] if a.get('owner','Kontexte') == 'Kontexte'],
                         *[o['source_relpath'] for o in draft['learning_objective_links']]})
     results=[]
     root = catalog_root.resolve()
@@ -295,6 +295,15 @@ def observe_catalogue_sources(catalog_root: Path, draft: dict) -> list[dict]:
         results.append({'owner':'Kontexte','relative_path':rel,
                         'observed_sha256':'sha256:'+hashlib.sha256(source.read_bytes()).hexdigest(),
                         'pin_status':'unresolved', 'qualification':'not_checked_with_owner'})
+    proposal_paths = sorted({a['source_relpath'] for a in draft['activity_bindings'] if a.get('owner') == 'Ékole'})
+    ekole_root = Path(__file__).resolve().parents[3]
+    for rel in proposal_paths:
+        file = (ekole_root/rel).resolve()
+        if not file.is_relative_to(ekole_root) or not file.is_file():
+            raise DesignError('Source Ékole manquante ou chemin invalide : '+rel)
+        results.append({'owner':'Ékole','relative_path':rel,
+                        'observed_sha256':'sha256:'+hashlib.sha256(file.read_bytes()).hexdigest(),
+                        'pin_status':'unresolved','qualification':'not_reviewed'})
     return results
 
 
@@ -320,7 +329,8 @@ def export_pack(folder: str|Path, design: dict, draft: dict, entries: dict, depe
         _write_json(target/'plan-organisation.proposition.json',handoff)
         _write_json(target/'brouillon-reedition.json',authoring_state(draft,entries,dependency_lines,catalog_root))
         if catalog_root:
-            catalogue=load_catalogue(catalog_root)
+            from composer_core import attach_ekole_activity_patterns
+            catalogue=attach_ekole_activity_patterns(load_catalogue(catalog_root))
             base=draft['world_context'];source=draft['source']['reference']
             activity_refs=[a['activity_ref'] for a in draft['activity_bindings']]
             objective_refs=[o['objective_ref'] for o in draft['learning_objective_links']]

@@ -1,0 +1,3572 @@
+{
+  "format": "ekole.prf22.banque-candidate/0.4",
+  "generated_utc": "2026-11-12T15:00:54+00:00",
+  "status": "candidates_non_qualifies",
+  "source_root_hint": "/mnt/data/prf22_massive_work/kontexte",
+  "source_hashes": {
+    "data/catalogue/202_kristals.json": "5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+    "data/locales/qc/fr-CA/grade3/exercices-deterministes.json": "86d97e595a3b1fe7a8b9a8ea660aa257692c0f4dff715fa521df648139537a6f",
+    "data/locales/qc/fr-CA/grade3/micro-situations-34.json": "4a2bf9abf619c87a7e4e6035bce70babb99de2e2603c209de2977bb89e7904bb",
+    "data/missions/atelier-mecanique.json": "7960a915ba5a409b126b06027fd242305a07aa02a4dc7c35cb55510dc9b17aa7",
+    "data/missions/boulangerie.json": "0b83581e0a1d692cd93966996225a745806604d794bcfbbd118d73eff21a0536",
+    "data/missions/chantier-maquette.json": "ff81a5a9aecee0bcf95bc528aa78f9bddf94205d8744f53461b984c3d40e8ef0",
+    "data/missions/conseil-village.json": "9f0124cb423b63d7fe0bd529001d809dafa7fbca27225170763d369e4ae1379e",
+    "data/missions/expedition.json": "e70e7afd09d2d1ce9d348482c8de996234cf3c00285325237410656d3e0fc5ce",
+    "data/missions/fete-sorciere.json": "a48cbf749c4f065afcad256181e75b6130e3dcb23a62665b5ff25047a1a8ba60",
+    "data/missions/grand-menage-chez-mamie.json": "1db04809cbf81b6100a578b0b564af1efe95504fa620d0eeb00184b76cb5f4f6",
+    "data/missions/jardin-fermier.json": "5c9feaa557b1e33a6d9419a5c50b676be73cd60c2a55f7823bf17eb18285a904",
+    "data/missions/laboratoire.json": "2ce7fba365f813a31a2583a984d3be3673d5a982d0c1b0d43596fa5b5b3b0ac7",
+    "data/missions/mystere-de-la-bibliotheque.json": "ce527102e1f1917d12b280b2b7aa068440533ae4ad6f1fa797f1adbb2e24e99b",
+    "data/missions/pique-nique-des-saisons.json": "e313a8da446efa303675b1905649a20ecfc7966eafb20bd01f8edb57d1312962",
+    "data/missions/rallye-des-metiers.json": "5066249f703a1b5813e78f2575bdf04b77747756845b7a28952a3a1989ac26ea",
+    "data/missions/randonnee-a-velo.json": "9e7f22477d77704f51260c20013d29c460e128739fa8766f4ce72364e303b7d1",
+    "data/missions/salon-coiffure.json": "525918bf9ae103ebc6981f50d33f556f4be3580c5edfc6c39bdb1415dfd77afc",
+    "data/missions/sorciere-solo.json": "71e8bfe77f95cf1f1ff1090afb326c8ead538952882c5ead1288e11b57bedad1",
+    "data/missions/spectacle-clown.json": "cd963dfea20cfe5b08e1a6b46e0dd9f567291c8916596e083b85c5358d5a6b5a",
+    "data/missions/spectacle-des-histoires.json": "a50a9e40411fc2782d4fec888d25947a7cf58db6e67879085422a7b13dcb1976",
+    "data/trames/catalogue-neutral-v0.2.json": "b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e"
+  },
+  "source_count": 77,
+  "activity_catalogue_count": 49,
+  "objective_catalogue_count": 202,
+  "entries_count": 137,
+  "source_situations_covered": 77,
+  "used_activities": 26,
+  "used_objectives": 25,
+  "scope": "CONCEPTION_UNIQUEMENT; aucune séance, admission, compte ou qualification",
+  "entries": [
+    {
+      "id": "ekole-prf22-cf3643e63dff17f6",
+      "titre": "La fête commune",
+      "source_ref": "trame:fete-commune",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-fete-commune-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-fr-006",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "2a7521b8b2b991a2741e5b4598a6b79c66317b38b451369ac1dff843939619de",
+        "brouillon.json": "10ac99af2279bd829fc68bd4be5276fa636caa36e5ddd6bb246e9f2302543cec",
+        "handoff.json": "97c447cb5857637163301ce76376c62a70b1b94f7dd14627401b31225d66e733"
+      }
+    },
+    {
+      "id": "ekole-prf22-af7b619b37c8673f",
+      "titre": "La fête commune",
+      "source_ref": "trame:fete-commune",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-fete-commune-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-005"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ap-008"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "7539f3f222ddf69449e7be0cac8ccb0076d2c383902a1af84f6bcdd543f46cf1",
+        "brouillon.json": "4bda96ae5420b718f8c882162ef41befd7a5273fdf9b0ba68c7e33bd26ff1c06",
+        "handoff.json": "7e91c87385e09d92793af372d155b1f0f43153001bf39945ff759dc95f576128"
+      }
+    },
+    {
+      "id": "ekole-prf22-46e2c304b606997d",
+      "titre": "Le spectacle imprévu",
+      "source_ref": "trame:spectacle-imprevu",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-spectacle-imprevu-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-001",
+        "micro:enseignement-explicite-013",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ad-002",
+        "qc-pri-da-006",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "cbcf0bf94577c93805be720624469e50b5c4fd51286b6a1ca5d4d63a40ac205d",
+        "brouillon.json": "3aac894161c66d84ef61b6601083167054ca6b03c3edfc8ebc7182e88714c585",
+        "handoff.json": "67a1a9051572ec27fcce3d5f992a03b00c48e71b28539f69d689fde3e3446d37"
+      }
+    },
+    {
+      "id": "ekole-prf22-4e02d31793ecc0f1",
+      "titre": "Le spectacle imprévu",
+      "source_ref": "trame:spectacle-imprevu",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-spectacle-imprevu-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-001"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ad-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "28f92614202fd9cbeb45ac80dfe34d103fc3283c600a5516226e4d77a5773705",
+        "brouillon.json": "d8d4aae23c8092d390f070c3099b464fc3480bb97dd746340a78c8c3090c3601",
+        "handoff.json": "3176522f12950e9bd31bab48a8b98abfdd336b91599b928ed12188af11e36365"
+      }
+    },
+    {
+      "id": "ekole-prf22-d15a8b9a7d5b79f2",
+      "titre": "Le repas partagé",
+      "source_ref": "trame:repas-partage",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-repas-partage-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-023",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-012",
+        "qc-pri-ma-033",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "26cb4124929ba07b222ce5a10bb42cdcf19bf7e69fa098435209c5d88f037766",
+        "brouillon.json": "b939e87899c6095a2accc6513601b5afc275c1fcb967fac9730ffdf7028e2e73",
+        "handoff.json": "6208b38025f314f5ce5f448c63c80051d87fdeb3e6cb8ee34249c3e21c8cf931"
+      }
+    },
+    {
+      "id": "ekole-prf22-364c422683c01461",
+      "titre": "Le repas partagé",
+      "source_ref": "trame:repas-partage",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-repas-partage-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "1b94e5780dbff640e9d4507406b8c4eb7545c45426b914a1b0c72836b9eb5347",
+        "brouillon.json": "9ac38c593096879df453c5f6b86cfeccfc33788e4d9ac086976742abec2c868e",
+        "handoff.json": "ed8e97b44085ac0489d39dc582d51ea19685bc7c127ef6bbbc1768225df6d5e1"
+      }
+    },
+    {
+      "id": "ekole-prf22-2bab2b5802268b6d",
+      "titre": "Le marché des créations",
+      "source_ref": "trame:marche-des-creations",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-marche-des-creations-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-ma-002",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "c916d11d9394d942774372aef26a0edb9261f0842c169c70a76981c9e66d1b1c",
+        "brouillon.json": "59edc794d74c211c25646153c33253174e0ca83276cdf0ca92f966d78feacfb5",
+        "handoff.json": "5cad60fb72ca9f21f2f860d4ab56e1d1c967c04fae33650d7e3057211e7a0ebd"
+      }
+    },
+    {
+      "id": "ekole-prf22-5fa9eaddeef6e158",
+      "titre": "Le marché des créations",
+      "source_ref": "trame:marche-des-creations",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-marche-des-creations-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-022",
+        "det:3f9794170c6a84cd",
+        "micro:enseignement-explicite-025"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-033",
+        "qc-pri-ma-007",
+        "qc-pri-ma-003"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "3f876c7d705e143f8654bae99dad6865ba0507f3d94c0e307d37ccf7f50719c4",
+        "brouillon.json": "24a13e03c76bf0e7f5bf2c50315de25ad25e623a4e632f83f6c0a5820dae58e6",
+        "handoff.json": "a028aea78e9d97a3c235dded404f02b15e2677387b511a66d82c941a5b0fd99c"
+      }
+    },
+    {
+      "id": "ekole-prf22-db7ed73698951146",
+      "titre": "La bibliothèque vivante",
+      "source_ref": "trame:bibliotheque-vivante",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-bibliotheque-vivante-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-002"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-als-001"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "0ba2e800ca784b795d8d1ac6b82c8b47ee758a9c62410374819710a149cac8dc",
+        "brouillon.json": "f00f6f1285c90f8bd7abeacc973b7a0d7b2ad4d5e39ebc2e9efc26e6283c80da",
+        "handoff.json": "424f46f9c053e279da0d1af1fdd7e3aae85f6d2dc0fc5dfc7c40e83ecc64a328"
+      }
+    },
+    {
+      "id": "ekole-prf22-b78fea795b0e226a",
+      "titre": "La bibliothèque vivante",
+      "source_ref": "trame:bibliotheque-vivante",
+      "source_type": "trame",
+      "focale": "anglais",
+      "folder": "situations/trame-bibliotheque-vivante-anglais",
+      "activity_refs": [
+        "micro:enseignement-explicite-002",
+        "micro:enseignement-explicite-003",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-als-001",
+        "qc-pri-als-005",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "f67ab60a67996bf48ba5299ad9c287ed6863573b5b8d6d76cc23fc9ea7fa7da9",
+        "brouillon.json": "fb3281217b448d0255292702878d7a1912931edfc98b2474513908e5b634e1bf",
+        "handoff.json": "07ab30b6c9896ca97f456e3f34bc4551de7109dacd6b2a9e117458530f39064f"
+      }
+    },
+    {
+      "id": "ekole-prf22-59a9e1558206c507",
+      "titre": "La cérémonie des mercis",
+      "source_ref": "trame:merci-collectif",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-merci-collectif-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-027",
+        "micro:enseignement-explicite-028",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-mu-006",
+        "qc-pri-mu-007",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "ba54cd4d7c3746bf624e682835dd4a36540f435a346e41dfd49b6116a0cb4f53",
+        "brouillon.json": "6a9690f40345bf143e2eae36693cde6fb49dcaf5c5bcbf59ffd785593232cbce",
+        "handoff.json": "1d8d99c591dd9b0d930ea860b5c384b952ce0b624aa555fcbe44a75c0bf87b18"
+      }
+    },
+    {
+      "id": "ekole-prf22-9d13905c6737f1c9",
+      "titre": "La cérémonie des mercis",
+      "source_ref": "trame:merci-collectif",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-merci-collectif-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-001"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ad-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "3b60c9e931365f587c0e0410b5624bdcad16b45ae4ebf0bad2d9d5531bd34643",
+        "brouillon.json": "4f658c7b31cde7828daf33f8c5c03d433845bfcccbac7eed9a01aca218f58be9",
+        "handoff.json": "5ca83c6a8f4f10270a0ce18c64f68fcfe6b752aff3285a3e85a4834d566c1e65"
+      }
+    },
+    {
+      "id": "ekole-prf22-38c809a24b531e78",
+      "titre": "La commande de pains",
+      "source_ref": "trame:commande-de-pains",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-commande-de-pains-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-023",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-012",
+        "qc-pri-ma-033",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "4050e10b6b534559b8185c8f6126ad83e472fff653a516d3f21d7d98674a9aab",
+        "brouillon.json": "d38b7b8f797dea3fba616e378a52bc0df10c7280ae9b0983eb2695b572be1c40",
+        "handoff.json": "19825563cce05aa4fbc83ff0e7e407e095e8324a5967e74609744553721d6278"
+      }
+    },
+    {
+      "id": "ekole-prf22-bd2b95e0bff91c2b",
+      "titre": "La commande de pains",
+      "source_ref": "trame:commande-de-pains",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-commande-de-pains-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ma-002",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "49f800f80f8f14e07fcb9b289149ed2e65b65689df393711575537988cd43465",
+        "brouillon.json": "67f8b3c704084fe799845a9be4f55a2a711ea89a627df1a49a653fe4f41686e0",
+        "handoff.json": "0451ef9353de257c3848c175fafca46ac4abbe820958267b89c511fde08ff7c1"
+      }
+    },
+    {
+      "id": "ekole-prf22-47a51dbe5b8b5449",
+      "titre": "Le chapeau de papier",
+      "source_ref": "trame:chapeau-de-papier",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-chapeau-de-papier-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-ma-002",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "c1662f3676d9bb243b130fd611e9fffc5f625e0e37d83592a79e2eea497c720c",
+        "brouillon.json": "cc786c52afbfb6cb17175de66905bd95d11b83a94cf56474b44f265808f3c662",
+        "handoff.json": "2405100a00cd414b1d0f47ffd06e7c314e02617de55fbe7cdb20cf089e29179c"
+      }
+    },
+    {
+      "id": "ekole-prf22-9a23090e210f0a52",
+      "titre": "Le chapeau de papier",
+      "source_ref": "trame:chapeau-de-papier",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-chapeau-de-papier-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "det:7994501c931511c3",
+        "micro:enseignement-explicite-022"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-008",
+        "qc-pri-ma-033"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "168db9ce8dcb395d6dd2666811fcd971cd2f132d809c3c01ddb1006dace044e2",
+        "brouillon.json": "87c84d809bf2fb0f901c341fd399db109e53a921fc5f6bc8db6fa1ca81bf394d",
+        "handoff.json": "4f5524cb4c0ebbaa7673c4f745aef1b5433951e36d36a1417d75b154bd5bbec1"
+      }
+    },
+    {
+      "id": "ekole-prf22-87eac90444ac8c38",
+      "titre": "Le pont miniature",
+      "source_ref": "trame:pont-miniature",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-pont-miniature-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ap-008",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "23d91b18730411e490743bfa6ab5cdded55fffab6f64b8416217ccff0af4e831",
+        "brouillon.json": "f9ec60b890858d9926fe307711d30773cd17469bbf1d711e4fc0b3b6e9153c6c",
+        "handoff.json": "aeb50d3a5d7e8dfe0ab01b03aed5fc640d8c3cb3887a7d931c5503fdb9b32c0d"
+      }
+    },
+    {
+      "id": "ekole-prf22-d739f198c50d4716",
+      "titre": "Le pont miniature",
+      "source_ref": "trame:pont-miniature",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-pont-miniature-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-st-004",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "77a322b3c45c969833ac802810805d8368d39667c3915ec2bb48a846809ba962",
+        "brouillon.json": "655960af44f0520efa762947d8b4045efa1765451f04a6ee18c917fb07025abd",
+        "handoff.json": "4a91bd08bf14f09390d47b6052e6f670dd2cd642e77c5ca8ea941e558184774c"
+      }
+    },
+    {
+      "id": "ekole-prf22-497ee72c5f3e871f",
+      "titre": "Le mécanisme en panne",
+      "source_ref": "trame:mecanisme-en-panne",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-mecanisme-en-panne-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-fr-006",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "89bdf006420b2d34561edb7958b221df2f3240a8b6544ea09247055475f119c7",
+        "brouillon.json": "9c796af3d0666137ff7c9cbd9e007cf3aac0ccb7500bdfa0c7056de6826bfb59",
+        "handoff.json": "733a338a106ebe94e45bd189c66d16c6cf4f6b2b3d25d20597be5f7cfa87d81d"
+      }
+    },
+    {
+      "id": "ekole-prf22-1fe3cff149804be2",
+      "titre": "Le mécanisme en panne",
+      "source_ref": "trame:mecanisme-en-panne",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-mecanisme-en-panne-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "fffc4275bea7c11995dd5342d78dab9541552e7860bca747e535f01532ceb61c",
+        "brouillon.json": "99e4cf8a3f5fc69102484fd9dd01914c7c3a1dc78457b9dfe7ddf3aaa0184ae7",
+        "handoff.json": "49af2bfa6fcad9752cdb69d97bbaeb0819b07226596c08e93ced94a0df78f5b9"
+      }
+    },
+    {
+      "id": "ekole-prf22-f160506688e4c681",
+      "titre": "Le projet du forgeron",
+      "source_ref": "trame:atelier-metal",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-atelier-metal-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-027",
+        "micro:enseignement-explicite-028",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-mu-006",
+        "qc-pri-mu-007",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "19330e0b7ae3ca9d3f90c3c60e2f9ad90c9cf10c9e2602d5eef75a933e96c512",
+        "brouillon.json": "9412bb0d35a037cd35a4b4d2641b24b4050097d67dcefabfd5ab1a9d2912176a",
+        "handoff.json": "c583515a450e1c283b6c23a53277d0feda5b5c683d1873a9ec7324534fd0941f"
+      }
+    },
+    {
+      "id": "ekole-prf22-e99e61fe496ee5dc",
+      "titre": "Le projet du forgeron",
+      "source_ref": "trame:atelier-metal",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-atelier-metal-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-001"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-ad-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "4fe2071b6e6fcd8018053ee32172eb331570e2a8cce9063a4ce57519b744bcc5",
+        "brouillon.json": "6b78b5d431a2db33d4ded7ae61f682631927b58112cd8def40a6e326d0b2fdac",
+        "handoff.json": "af6f1cbd81a7bdd7eb0baa538ab71c92a0c6c3202433456014f4ce64b3a7eba5"
+      }
+    },
+    {
+      "id": "ekole-prf22-455487f59b99233e",
+      "titre": "Les costumes réinventés",
+      "source_ref": "trame:costumes-recycles",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-costumes-recycles-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-027",
+        "micro:enseignement-explicite-028",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-mu-006",
+        "qc-pri-mu-007",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "2bae99162fc9d207dc35766a34700c3504bd5bcf5c92fc00b74c0c46906b2952",
+        "brouillon.json": "4dc7c913a8a141b6a3954ee357c14ff3cd7e702fe6eb20aa42b0c7f5e82b47a3",
+        "handoff.json": "2abba4daf8a3b5769c36d448731f56082217e380f01e1bdeb640b63244f1aedb"
+      }
+    },
+    {
+      "id": "ekole-prf22-89f05f7fea28b788",
+      "titre": "Les costumes réinventés",
+      "source_ref": "trame:costumes-recycles",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-costumes-recycles-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-001"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-ad-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "8586c67d682dd15a43e0c4c09219db22f776bede4fbec5f4f0367b44dec6e867",
+        "brouillon.json": "6de1cc18c9f724f09e40202a285fbeecfbdeeadeb7c8a19904f95fc32aaff6be",
+        "handoff.json": "c0036500b29975cd9ce41f20cc6b4e2b6bd9e957fd687522c1e37d9b19097882"
+      }
+    },
+    {
+      "id": "ekole-prf22-9a80fb181742ab71",
+      "titre": "Le message incomplet",
+      "source_ref": "trame:message-fragmente",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-message-fragmente-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-002"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-als-001"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "20662ddfc2e4ab46a5af931ae1aa85db4f40c9951b178311a82e585e9af0e2b0",
+        "brouillon.json": "494d8b9f5c4f47a48bee89b4c4a44bc12a2dbac0ec3f9cd42bfbe7f8553f3ff3",
+        "handoff.json": "33e31634837d72517187f1dc2c7dccb78bb88ff2ba00cb78c9c8c4f357924bea"
+      }
+    },
+    {
+      "id": "ekole-prf22-a238d5cb18b84583",
+      "titre": "Le message incomplet",
+      "source_ref": "trame:message-fragmente",
+      "source_type": "trame",
+      "focale": "anglais",
+      "folder": "situations/trame-message-fragmente-anglais",
+      "activity_refs": [
+        "micro:enseignement-explicite-002",
+        "micro:enseignement-explicite-003",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-als-001",
+        "qc-pri-als-005",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "0b93a783934ab3761e5468ecde849446bd9253bd69f7c53cb3f3e516760d6458",
+        "brouillon.json": "5775e49fe429452e2d8876e7aa690f006af40dbc5e1198141799a519c5149beb",
+        "handoff.json": "198754cc7e3ce60025310e986c1d68f6fb86b4f956dbeb877f39c99b068e5a2c"
+      }
+    },
+    {
+      "id": "ekole-prf22-5d85e5a24d32d0e0",
+      "titre": "La plante mystérieuse",
+      "source_ref": "trame:plante-mystere",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-plante-mystere-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "a232a2a82366b6e476d143b2c1cc5f719e3629f82ae6faa8104e38092f4dcca4",
+        "brouillon.json": "5b2e3164c19296425ed24f3f3c2fc64355c161c11b973d4970b979727de4b66e",
+        "handoff.json": "5e25377a92f4833a53dbc0b5b25693ceb620a24a00fa7dc0b0d58428244cb825"
+      }
+    },
+    {
+      "id": "ekole-prf22-65351d8db4cbe30c",
+      "titre": "La plante mystérieuse",
+      "source_ref": "trame:plante-mystere",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-plante-mystere-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "844aba0fbc3222cac1b23a1c9e72027c2899a15ffe27413b50e655b874e5a536",
+        "brouillon.json": "00ed943a2723c9ff4db85bb476a0f1ef05c653493f042a02449318538f136fd3",
+        "handoff.json": "c75aed60a33e8cb0e097828e2f17eafb4e642fbee50c5165f5334a8e9e4e8313"
+      }
+    },
+    {
+      "id": "ekole-prf22-9801b0b6a09ed52e",
+      "titre": "La carte incomplète",
+      "source_ref": "trame:carte-incomplete",
+      "source_type": "trame",
+      "focale": "univers_social",
+      "folder": "situations/trame-carte-incomplete-univers-social",
+      "activity_refs": [
+        "micro:enseignement-explicite-033",
+        "micro:enseignement-explicite-034",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-us-004",
+        "qc-pri-us-005",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "3eb358d4eb24849e8db4fde0fa7ba1fafd8f6bdfc6529470babb7986942ae34c",
+        "brouillon.json": "fd653a6b7b3c1c020052a3218b6db0dc8ac63f61804476acb851a7d9362a79dd",
+        "handoff.json": "a398ad62a89a35321aab115065786b24591c6ae5d2188c2cb3a15fb611b976e2"
+      }
+    },
+    {
+      "id": "ekole-prf22-00c81b78ca8e8473",
+      "titre": "La carte incomplète",
+      "source_ref": "trame:carte-incomplete",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-carte-incomplete-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-031"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-us-015"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "fc3b1b21e401de3e95f1e37aa0a468b61c86b1dbd49d5a67d2710bce48281cbc",
+        "brouillon.json": "386c0211a4330603c740aeb511787b56b37dc03ca952644e0abd50dc36510390",
+        "handoff.json": "2427854c9691cf232dbdc5a62eb1ebb04fc82f4e9afc930d6e687b3bdd584433"
+      }
+    },
+    {
+      "id": "ekole-prf22-0b3711c4f0a9d360",
+      "titre": "Les sons du quartier",
+      "source_ref": "trame:sons-des-lieux",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-sons-des-lieux-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-027",
+        "micro:enseignement-explicite-028",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-mu-006",
+        "qc-pri-mu-007",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "03817579f59b3af058d1f2aa17b6cd311074a0102a4faa896c1dcffd6f47f51d",
+        "brouillon.json": "2f5a7a4f978f4670f98130239a2c2c79e9ebec4e7d2ee545d9dde796b8243388",
+        "handoff.json": "11e70446b2cfa9e78eafa99e6edcc6ad0cf7313f3e7e00d56ed898e94e86f2fb"
+      }
+    },
+    {
+      "id": "ekole-prf22-c3a8fc2a81205033",
+      "titre": "Les sons du quartier",
+      "source_ref": "trame:sons-des-lieux",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-sons-des-lieux-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-001",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ad-002",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "5eb8ddb4d88f7c5f1abd9aca15f48af992c1ddaf1dcbc2fbc7de5d4b1e9139a5",
+        "brouillon.json": "3094f10cd5abd2132494d7659ca4bcab802fc642443c26bf506cb6f9adaacc2c",
+        "handoff.json": "ad712666df402e5f6ea4691336f258b0ebc198664bcab4475e9f9a9aca9c3e11"
+      }
+    },
+    {
+      "id": "ekole-prf22-6e4cf2424b6ad1ac",
+      "titre": "Le mystère des ombres",
+      "source_ref": "trame:ombres-mobiles",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-ombres-mobiles-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ap-008",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "708123b8df0a7260f9d0d6f0071c0615c914d92813636a0da1dac4d2a4f48403",
+        "brouillon.json": "f2e83e26f92e7631451d0d2203d926fffc731b9f5ad7b0d8914145de93300f8a",
+        "handoff.json": "ceb3767a9c4dc5d87c72961ddd95f854d80386c25fa3884d2985688c79f68755"
+      }
+    },
+    {
+      "id": "ekole-prf22-07352f152e6a9183",
+      "titre": "Le mystère des ombres",
+      "source_ref": "trame:ombres-mobiles",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-ombres-mobiles-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-st-004",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "9fe8d310898188144e0d966014866f6c35e6b2618dada2564156ef405f5659ec",
+        "brouillon.json": "3e868224e2054f1ee07e9ddf450951509a07d20f96c48516b7c7110fd8c4825f",
+        "handoff.json": "aa468709edc82465f8355fd20af40bc94d187e8426feb549c7538cee95fab05d"
+      }
+    },
+    {
+      "id": "ekole-prf22-927519e1e1df883f",
+      "titre": "Le colis égaré",
+      "source_ref": "trame:colis-egare",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-colis-egare-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "902200031dbeee034ef1159a7a8eaa8cba3b0cc63c0090ebdb27bebf3489b4cd",
+        "brouillon.json": "6db6bf07d7c3be30bc3cc0eaa5ec83bb40ace8bcb2369a4a81d03d1342996085",
+        "handoff.json": "147dac0618d099e1bb0cfb75fa464a643bb92bc36a94760d8c29cd9002ddacfa"
+      }
+    },
+    {
+      "id": "ekole-prf22-7c1291dbd7a263bd",
+      "titre": "Le colis égaré",
+      "source_ref": "trame:colis-egare",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-colis-egare-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "da87e044612a06148164dfa3f1e4094a2153349cc6d6d0d6010bdf4f8bca032a",
+        "brouillon.json": "25386a57572edfb50ccfb015156902bf92d23b760183e2912ff182d17aabc2d0",
+        "handoff.json": "90909e7f53a4112c3ce6ea53b11bd5b2efd279ba1cca052f067554c4941c4688"
+      }
+    },
+    {
+      "id": "ekole-prf22-a5b984a5a9b3f6c9",
+      "titre": "La mission coup de main",
+      "source_ref": "trame:coup-de-main",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-coup-de-main-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-005"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ap-008"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "23d22a1582136758aea69f605ebc4e95d54a39e785db92ea5da100ebebe1a8e6",
+        "brouillon.json": "adbb85390436a055b172c0b5e505e2d4982d309c4794c211f25f7bf178c70353",
+        "handoff.json": "c443c467e161059d15cbb0abca3f01271c371b3d11ed3e5f43952cc857f2fa32"
+      }
+    },
+    {
+      "id": "ekole-prf22-b4eb68d214c36e2f",
+      "titre": "La mission coup de main",
+      "source_ref": "trame:coup-de-main",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-coup-de-main-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "b8406d0067b959fd25df2a79100475e8b4657e5a79ee3df3db06e7f72e68af2a",
+        "brouillon.json": "d3487ce1c726303a1c77bccb19d1b595bd459de1687f9762f690f2fcc17bfb78",
+        "handoff.json": "8cf3b080bcfa8d18255dd02d284465b272b933ced9c6750151070ee2dd48fccf"
+      }
+    },
+    {
+      "id": "ekole-prf22-54d8216b2a78d66f",
+      "titre": "Les ateliers solidaires",
+      "source_ref": "trame:tuteurs-temporaires",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-tuteurs-temporaires-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-015"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-fr-006",
+        "qc-pri-eps-004"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "9092c97dc3278edaf3e9031e1bed437bef2707c1e22815a4b8343e4d84e5e7eb",
+        "brouillon.json": "e9b4db22f0be64d7da72d3f803ef1cdebc2d5645834cce9289aaa93bd66f1b49",
+        "handoff.json": "9471fccafeb2b944055d8e2168d7c53baec5fe879b3202420a51530f3e922734"
+      }
+    },
+    {
+      "id": "ekole-prf22-df3a7e23c02e7246",
+      "titre": "Les ateliers solidaires",
+      "source_ref": "trame:tuteurs-temporaires",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-tuteurs-temporaires-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-005"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ap-008"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "a2a54f1e838d9cac2d434e118844e2b9d55d86e9dc616b7ec949d1d961f8fae9",
+        "brouillon.json": "45591756a33eae12a711cffb5f37db90a5a30d9b2cfb28c000fc69254c842c21",
+        "handoff.json": "ed0ed164b9cea86da474c3f902bd6053e9920ec625121f6394be044df7923e61"
+      }
+    },
+    {
+      "id": "ekole-prf22-71e76889aecf77a8",
+      "titre": "La maquette inclusive",
+      "source_ref": "trame:maquette-accessible",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-maquette-accessible-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "e6be27c9921ae51473b24911426bc6cb6644b954a18120a69e43977135aec692",
+        "brouillon.json": "c49f3b15dc0dffb33f3f553cfb202064c6ae37b9be5a31676ebaba4b29a37221",
+        "handoff.json": "e4607d0ae04dbb42dfb65c8456b2ca72a3745d527240e0f0271652c1f3a13b3e"
+      }
+    },
+    {
+      "id": "ekole-prf22-3e0c9f5bd4fa213b",
+      "titre": "La maquette inclusive",
+      "source_ref": "trame:maquette-accessible",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-maquette-accessible-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "a06aaddf4cdea731f3296e758320dc249b0c0a1586816a1bb901e01f0082f429",
+        "brouillon.json": "a8e73606c573fc90ecebf5c44521b58bbf139449c4207ce3016b3aaa7c1fd5e2",
+        "handoff.json": "67da7001b22df394f385e756c84f3fd647ec6c2447a20d6e09c346b887512c93"
+      }
+    },
+    {
+      "id": "ekole-prf22-5b1c3042a334d295",
+      "titre": "L’affiche d’entraide",
+      "source_ref": "trame:affiche-service",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-affiche-service-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-021",
+        "micro:enseignement-explicite-005"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-012",
+        "qc-pri-fr-018",
+        "qc-pri-ap-008"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "27188e399c945ee763110d8c031ed7525ace45b837b3f19b03e6864c3e3854cb",
+        "brouillon.json": "59d7a5fc56ad2b83861fdf99c9713ee9953ba35ff1845ffb710821a085f2c565",
+        "handoff.json": "0070eac02464397a1576cf57d3d01551817ac2738e9ba2cbd98bac68964b25b8"
+      }
+    },
+    {
+      "id": "ekole-prf22-e5026512c264d55e",
+      "titre": "L’affiche d’entraide",
+      "source_ref": "trame:affiche-service",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-affiche-service-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-002"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-fr-006",
+        "qc-pri-als-001"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "e82890161fefbeb22b355fdbc79bb1e68e3812658a4bf9548f4dfcd5e2467234",
+        "brouillon.json": "ab0c93ec753be9a1af9485e7024e173d5912521054949d93e4c06ea1ff9e9609",
+        "handoff.json": "fe8a8c3f516364af6eaccd6eb67de75915dad11cebd53649fcf7f069b4ca7af7"
+      }
+    },
+    {
+      "id": "ekole-prf22-ee3a1c3b3ed56223",
+      "titre": "Le guide des nouveaux",
+      "source_ref": "trame:accueil-nouveaux",
+      "source_type": "trame",
+      "focale": "univers_social",
+      "folder": "situations/trame-accueil-nouveaux-univers-social",
+      "activity_refs": [
+        "micro:enseignement-explicite-031",
+        "micro:enseignement-explicite-034",
+        "micro:enseignement-explicite-002"
+      ],
+      "objective_refs": [
+        "qc-pri-us-015",
+        "qc-pri-us-005",
+        "qc-pri-als-001"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "faf4ad1fcace92110545cd694de880f32bef8c4352aa9341cccacfb5b793999a",
+        "brouillon.json": "866a7b01b497b394ef0e56297a8feaba1c3cf1c8fbae91ab64f9b1e8f01e44c3",
+        "handoff.json": "b3d0acf77d376608d35561f4114e255a922708e0bdb2fa87a1fdfc06cf72c52d"
+      }
+    },
+    {
+      "id": "ekole-prf22-fe9cd44a2ef1f88a",
+      "titre": "Le guide des nouveaux",
+      "source_ref": "trame:accueil-nouveaux",
+      "source_type": "trame",
+      "focale": "anglais",
+      "folder": "situations/trame-accueil-nouveaux-anglais",
+      "activity_refs": [
+        "micro:enseignement-explicite-002",
+        "micro:enseignement-explicite-003",
+        "micro:enseignement-explicite-031"
+      ],
+      "objective_refs": [
+        "qc-pri-als-001",
+        "qc-pri-als-005",
+        "qc-pri-us-015"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "3e9895331d875bb084ee07a74929351e5e87a463830580d42a1b76259b58040b",
+        "brouillon.json": "7f40876de57d0855098ed522af0c37d429b628c2fbde86b0ae120a9f7dc20695",
+        "handoff.json": "ece319a42b96ed8f70d005c9255ae5e015a8727f80e1f48352caa5b0f7503519"
+      }
+    },
+    {
+      "id": "ekole-prf22-1878730aed7d4c45",
+      "titre": "L’atelier de réparation",
+      "source_ref": "trame:reparer-pour-un-autre",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-reparer-pour-un-autre-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "a89a6f1342bacbd13e0448358a24709d18dbed5f19ed09d6bee72e75ff70f87f",
+        "brouillon.json": "f5a472392765a08e1d50b1262b70283ec3f53825cdc8e4b4f5ab88995ae04289",
+        "handoff.json": "d86ce4e6ce8107502ea9b24eaaa0395650aaf0c9e612f12aab392df4d77d7fd5"
+      }
+    },
+    {
+      "id": "ekole-prf22-6d32d69e214dcfb1",
+      "titre": "L’atelier de réparation",
+      "source_ref": "trame:reparer-pour-un-autre",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-reparer-pour-un-autre-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "3f95adc6014181ed79bf460ee40e234ba9a4295aa01e8278abb6a02212e89724",
+        "brouillon.json": "a465a088bedda21922a51423e46ec79dcb9c8f22ceb330b0a8069adf63e84de4",
+        "handoff.json": "e5f810753b5d1d0b08a05fbc6f5a07fcd82f2e411ccc741ebe4e71db683ad4c9"
+      }
+    },
+    {
+      "id": "ekole-prf22-a1ea3c54132ce60b",
+      "titre": "Le jardin des saisons",
+      "source_ref": "trame:jardin-saisonnier",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-jardin-saisonnier-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-fr-006",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "3f8a1e70e65c98718ceccfa20854d5839979b76925b289a2b96ed575007b0fa8",
+        "brouillon.json": "ea0b377e26037871be06492c361c717a6163366e9376f26cf051fd44ef7c782c",
+        "handoff.json": "6cc93209e4e1235a155ce67f5694484f8155440809c64bd0dc31314eb139e31e"
+      }
+    },
+    {
+      "id": "ekole-prf22-d3549e8de3ba75bc",
+      "titre": "Le jardin des saisons",
+      "source_ref": "trame:jardin-saisonnier",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-jardin-saisonnier-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "252dfda801ee05358554b62bf38eb995eb0d6a1567b589cefe18ab80a35305da",
+        "brouillon.json": "03bbf155281c816496e23dcb0ae7971f0c07db697edba6a85ccce96539463eea",
+        "handoff.json": "7341fc6a500043e653a8eb75aea798f7dc0a9905d61d7312728db98735ba7f69"
+      }
+    },
+    {
+      "id": "ekole-prf22-132224c62dc2ed52",
+      "titre": "La réserve d’eau",
+      "source_ref": "trame:reserve-eau",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-reserve-eau-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "det:37346345dfe056f4",
+        "micro:enseignement-explicite-022"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-025",
+        "qc-pri-ma-033"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "17843fe830a1a563f6b90836d4dbca6b479d38a22547e1115a4e4c6550d250c2",
+        "brouillon.json": "133fb3477ac90c0eeabef1aee035355f069c0ae5f76cc72f2e217cb6a9afa39a",
+        "handoff.json": "89cff67b4dedd1ffa6f1aeafa3fcd15a8bdd49cd72558a69bbc7abe24d4f9e37"
+      }
+    },
+    {
+      "id": "ekole-prf22-b5ded1d444cce01c",
+      "titre": "La réserve d’eau",
+      "source_ref": "trame:reserve-eau",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-reserve-eau-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-031"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ma-002",
+        "qc-pri-us-015"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "9026c613005664f16b1bfeae05ff15283758c4663cab3b3ec3babea5f76361ca",
+        "brouillon.json": "a16e1f6d2f396a9e18e00ad052ebed42bd8130dd67db4f9a295df69d73a8ee80",
+        "handoff.json": "879fb886cf168a3656b15596b4f79dc9dbeabfcb34ad0d66c5b476a0ec1f6747"
+      }
+    },
+    {
+      "id": "ekole-prf22-72c8042e500d7986",
+      "titre": "La forêt partagée",
+      "source_ref": "trame:foret-partagee",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-foret-partagee-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-031",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-us-015",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "4df3085134dc97f73dcee068c7890014215866fcf1b2e444caec3423c049f297",
+        "brouillon.json": "0ef879a465673fbade54d9a354c873fa8714fd0826bbe186d2d1afd3175bb41d",
+        "handoff.json": "e01d84074af0f46ee2b74f47c4d9be645bf507860c5262250076b2a0a2a4aae7"
+      }
+    },
+    {
+      "id": "ekole-prf22-920d9f0f113b6743",
+      "titre": "La forêt partagée",
+      "source_ref": "trame:foret-partagee",
+      "source_type": "trame",
+      "focale": "univers_social",
+      "folder": "situations/trame-foret-partagee-univers-social",
+      "activity_refs": [
+        "micro:enseignement-explicite-031",
+        "micro:enseignement-explicite-034",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-us-015",
+        "qc-pri-us-005",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "51f07619dd5f4f7468439b36d16199195c765a4133615c1368ea9333f229ba34",
+        "brouillon.json": "ef8e45ccc43a8124cb56106d4d6fe887df49219c930d3f96924e261f172d181f",
+        "handoff.json": "da1807563d285f0c8c100af8c74126834ab76a3c1d097c6d39b35251a276cce4"
+      }
+    },
+    {
+      "id": "ekole-prf22-0e48c3bbcd6bd03e",
+      "titre": "Les habitats à protéger",
+      "source_ref": "trame:habitats-des-animaux",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-habitats-des-animaux-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-001"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-fr-006",
+        "qc-pri-ad-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "371cb1045ffd0d13550fde0658a3ab305498a00d0956ff4a14d4f490616e8532",
+        "brouillon.json": "55e5b442ef251a03d46b3cf15c9d2382e3345515486759e38b1d89f6cea938de",
+        "handoff.json": "d6325d19e0b5ad1aea4910ea3cc775499703bacbc59b836bc514eb44061ca996"
+      }
+    },
+    {
+      "id": "ekole-prf22-8a6033027931e92e",
+      "titre": "Les habitats à protéger",
+      "source_ref": "trame:habitats-des-animaux",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-habitats-des-animaux-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "40d0aba5fffe9df7f90866e4fea606735a7e3a73199019a4951fabba069e540b",
+        "brouillon.json": "b8001d7d5175b0ed11e509219cbcce7f6637ad5368523bf8606a310b98826cbe",
+        "handoff.json": "01ad597d7309d37b84c0470750750edb08d3b356cfd78fa0cb681ef158af3619"
+      }
+    },
+    {
+      "id": "ekole-prf22-748d63a8169a5d8e",
+      "titre": "Le lac à préserver",
+      "source_ref": "trame:lac-a-preserver",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-lac-a-preserver-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-031"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ma-002",
+        "qc-pri-us-015"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "8a8e0d5710bff2a2a4653d0e7338853a28b4052436c1e10cbcdc5a0aac7b7521",
+        "brouillon.json": "55da4b89fff922adae3a8b8e78a7f55bc12650ef2a3a041a47fe44f7700f6b05",
+        "handoff.json": "bc71eefa36a56479a50ade07ee1736588798804f2d980bb82693b57201c18998"
+      }
+    },
+    {
+      "id": "ekole-prf22-95eea8ee23358d87",
+      "titre": "Le lac à préserver",
+      "source_ref": "trame:lac-a-preserver",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-lac-a-preserver-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "09d1d6f834adc81bd91011e29403e5685a29acb0b14074ffdb825bae7a9ae04a",
+        "brouillon.json": "01f6c06ac88ef17b8c1790db3f2b097811d6bdc9d33b82ee60b939db611d19a6",
+        "handoff.json": "68a5a8db9ece56ef73507fe717360907bdee22c8bd3a51f2f00f6d7fdf0dfff0"
+      }
+    },
+    {
+      "id": "ekole-prf22-532b00c301c1aa31",
+      "titre": "Le compost collectif",
+      "source_ref": "trame:compost-collectif",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-compost-collectif-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ma-002",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "266310bb2e81536868509b9d8fcabb97b55fdd66538d841460e0a730a6b1596f",
+        "brouillon.json": "89755aad378a1a4c0aadb4fa170c66acd4b4981d1f94a4139d5f058165baa285",
+        "handoff.json": "b2ff4f0ed5d538859b9c3dd9e6458dacc3f842bc14feec9b3f22b6ab71814311"
+      }
+    },
+    {
+      "id": "ekole-prf22-67427bf49f90d0cd",
+      "titre": "Le compost collectif",
+      "source_ref": "trame:compost-collectif",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-compost-collectif-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "3187ce83f39e26f08f12d94724cf925f3d34c8cb35063d6cefdc2e77c4651c9a",
+        "brouillon.json": "233e7e99f9901bdacc2c0485e676eaa48402012dc30a0e8cad07639074f6eedf",
+        "handoff.json": "6753b8046ca2b25e11feee8dad79a2520fdd0c1a695c65b429d479ba78b3a8c3"
+      }
+    },
+    {
+      "id": "ekole-prf22-0e3eeba70356144e",
+      "titre": "La caisse des Klownkoins",
+      "source_ref": "trame:caisse-klownkoins",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-caisse-klownkoins-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-022",
+        "det:cc8478fd10be4b19",
+        "micro:enseignement-explicite-025"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-033",
+        "qc-pri-ma-006",
+        "qc-pri-ma-003"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "de82ef7cdd48c2c15eb137f6e2677cb561a21d025ac62fa034a5076ca019e8d6",
+        "brouillon.json": "47695c2e59bf30b31c3c7322bcb41ad76d7f002dbff6cd21ea25860854ec089a",
+        "handoff.json": "505c14d1f790058d354887428233e3e5a1d28d2a73db47167154342002e7fdcc"
+      }
+    },
+    {
+      "id": "ekole-prf22-fab7ff161e7fae5a",
+      "titre": "La caisse des Klownkoins",
+      "source_ref": "trame:caisse-klownkoins",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-caisse-klownkoins-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "ee0cb4ee90701042ac840c04ebff96d3b9f2df19ed2a8ff1c1e5ae4e2f4d6bef",
+        "brouillon.json": "02a2c0facc41279ba1b50a08aa2f671bd483b0300fc029fa9de45e2b6737a059",
+        "handoff.json": "24d74d660d00f1c488a9c3fcd187950e36ed0c12651150642388d0a2f2fe3718"
+      }
+    },
+    {
+      "id": "ekole-prf22-65caa9b078e48232",
+      "titre": "Le budget du marché",
+      "source_ref": "trame:budget-marche",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-budget-marche-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-022",
+        "det:3f9794170c6a84cd",
+        "micro:enseignement-explicite-025"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-033",
+        "qc-pri-ma-007",
+        "qc-pri-ma-003"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "91577abfc080321d4a5923781c561791ecd0935040fa678985eabd96de4e3c63",
+        "brouillon.json": "303e9d847d809dd30ba7914bbeb549232f9ab63e8472b7d543be41c388451009",
+        "handoff.json": "55b08f1838fba4e31a73c4e0cefd031c0315b77f22462b0d21e200236afe1038"
+      }
+    },
+    {
+      "id": "ekole-prf22-0d16f6d1a0cc6ff3",
+      "titre": "Le budget du marché",
+      "source_ref": "trame:budget-marche",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-budget-marche-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "67dc8e856c29268324a52068bbb3fc67e5f03932661a4f9ec99af7c49222e248",
+        "brouillon.json": "cadcf3ce5e78ab0b22fbe76828f4bf88192ad3a38949aea1337e4174de17b974",
+        "handoff.json": "4de8477625abb11c89111fbc4fc642b264e1b5463b1d6d3407cc25f23d61ee55"
+      }
+    },
+    {
+      "id": "ekole-prf22-db26f0bcd3a00361",
+      "titre": "Le stock insuffisant",
+      "source_ref": "trame:stock-et-commande",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-stock-et-commande-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-022",
+        "det:3f9794170c6a84cd",
+        "micro:enseignement-explicite-025"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-033",
+        "qc-pri-ma-007",
+        "qc-pri-ma-003"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "b815f85b4717ede49775b85ff790b51fab0fe438a2792c4c71762d3d224a87ca",
+        "brouillon.json": "45cce7da6075428adbc21876827ee4bc397dd29eb68be027f292811b7b8be8c0",
+        "handoff.json": "121c4cccaafa81b4e13616779504981a42476ef2ada4465ab3c16305e29a9999"
+      }
+    },
+    {
+      "id": "ekole-prf22-954e890cac554101",
+      "titre": "Le stock insuffisant",
+      "source_ref": "trame:stock-et-commande",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-stock-et-commande-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "4b4b5b361dc7b0464f49414e5f81464250f16457dd6ace22a81beda0b2859ed4",
+        "brouillon.json": "6752fde487ba7f08e30ecce99e964a064f15c7be1b685f93c7189b544e1aa61e",
+        "handoff.json": "57c323a437d06057c84bd5a468781fa56c2212807d34c1ff6702d44b1ee87122"
+      }
+    },
+    {
+      "id": "ekole-prf22-65d79705befe9dae",
+      "titre": "La taxe fictive",
+      "source_ref": "trame:taxe-de-simulation",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-taxe-de-simulation-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-025",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-033",
+        "qc-pri-ma-003",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "2af4f92ed324f3323283f7eb93fb2b952b6ef54bdb9868ce8a420c989b9bcd0a",
+        "brouillon.json": "7f0591c067dde5ba5a9bcb448a0fe41d56d3c764d9553702e0799fe32d05d812",
+        "handoff.json": "60e410bd56c21ebb738493b348bb28a418b125568fb8c9461413b9589ed8d011"
+      }
+    },
+    {
+      "id": "ekole-prf22-5772b30d547599d8",
+      "titre": "La taxe fictive",
+      "source_ref": "trame:taxe-de-simulation",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-taxe-de-simulation-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "683e4801f993b80bae6bf47af1d005b7cf0b41a7477a8c552352103f8d8605fa",
+        "brouillon.json": "6067469aedc2deb330be58eb1cb206b89c1c6d760f3ba084708e95239cb7bb00",
+        "handoff.json": "cadb30a453c5a1a4f92d289506cb9df8e67a39d598a64f09e4422f5efb11adaf"
+      }
+    },
+    {
+      "id": "ekole-prf22-838c7d7e2d232bd7",
+      "titre": "L’échange équitable",
+      "source_ref": "trame:troc-equitable",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-troc-equitable-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "36b63999f45c42df817639268de67d423b9223eddb16766002cc284f2c088a78",
+        "brouillon.json": "b190f9f651a65370a9810ece65f49670059925b8ea3e5eb6a4bcc2598d058a4a",
+        "handoff.json": "9ad4b10f47050e74e7e32c4a409e08f875bcc2638a39fed0c2b21b17f9ba95cd"
+      }
+    },
+    {
+      "id": "ekole-prf22-93f87b8dd3867e4c",
+      "titre": "L’échange équitable",
+      "source_ref": "trame:troc-equitable",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-troc-equitable-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "8e6cf93221454cd0034cec2efeada4a985730e770e7b733deb803825466911bb",
+        "brouillon.json": "f0d4503a6441e4672d2af90fe479db8be70ab2739a251cb630d3061165c6899f",
+        "handoff.json": "37b1a85a25ed4c32ce8ba52dfb9a74bab8b2871a0012906f7908aa0fb71598b7"
+      }
+    },
+    {
+      "id": "ekole-prf22-71afb9adf6b4714f",
+      "titre": "Le trajet le plus utile",
+      "source_ref": "trame:transport-commande",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-transport-commande-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-031"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-us-015"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "a1e7784510e7f8994d49d5a21df2198c1eb1b973be0a044495e15d6df1d3406c",
+        "brouillon.json": "bded09b9d5172644c7ff0ed0d20836c43d5e17efef0e0dee23f85e3d45a576c0",
+        "handoff.json": "febdd4e97f3bc572889b410d6176f9383b466538a43a29d9d4c14ee632eb1e75"
+      }
+    },
+    {
+      "id": "ekole-prf22-bb65a3dade1ff24f",
+      "titre": "Le trajet le plus utile",
+      "source_ref": "trame:transport-commande",
+      "source_type": "trame",
+      "focale": "univers_social",
+      "folder": "situations/trame-transport-commande-univers-social",
+      "activity_refs": [
+        "micro:enseignement-explicite-031",
+        "micro:enseignement-explicite-034",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-us-015",
+        "qc-pri-us-005",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "ea62f10aa2588a7b4be3e702263106d39b60b36054d6cb817fa9ccd51ed6399e",
+        "brouillon.json": "ae2dd690cacff6b46c5074d094475cab6bc7068aca69ec5d71e16b424dda948c",
+        "handoff.json": "0e282b5243bb23c6c17784a337858e665660016041ec3872eef6dc5aae097046"
+      }
+    },
+    {
+      "id": "ekole-prf22-005a69ade82752fa",
+      "titre": "L’invitation multilingue",
+      "source_ref": "trame:invitation-multilingue",
+      "source_type": "trame",
+      "focale": "anglais",
+      "folder": "situations/trame-invitation-multilingue-anglais",
+      "activity_refs": [
+        "micro:enseignement-explicite-002",
+        "micro:enseignement-explicite-003",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-als-001",
+        "qc-pri-als-005",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "b415a144ef941aa3a96ff4c79001c616914c3eefc5b1d582e323124eb649eced",
+        "brouillon.json": "528081dc446eae26b1717a6cf4d8053739c17754dc0bff2b569847f0eda10b2b",
+        "handoff.json": "08a5a46a5d7ec61135e636054f7a4c98ee62ce0fa232d2ad07b2cce8ae81958c"
+      }
+    },
+    {
+      "id": "ekole-prf22-422150b15acd3541",
+      "titre": "L’invitation multilingue",
+      "source_ref": "trame:invitation-multilingue",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-invitation-multilingue-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-021",
+        "micro:enseignement-explicite-002"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-012",
+        "qc-pri-fr-018",
+        "qc-pri-als-001"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "2f5a4a810e421a4dce20cf53aa8efb580ebcf404cd67f36af22666547b63e5f4",
+        "brouillon.json": "8cb87f240849ec78fdfd170fd1f45f0b1f135b1e786ea82a798302ff82faede9",
+        "handoff.json": "e0c2d3b0749ef240bb10520cd72d9c006b6a043a654ad119ba0f205f0c7e50d0"
+      }
+    },
+    {
+      "id": "ekole-prf22-7e620f26c37c2874",
+      "titre": "Le bulletin local",
+      "source_ref": "trame:bulletin-local",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-bulletin-local-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-021",
+        "micro:enseignement-explicite-031"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-012",
+        "qc-pri-fr-018",
+        "qc-pri-us-015"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "48163ac02e4e7e954a6bb1fe5939d10a547cf3683953e2bb7e7f9716c4be9dee",
+        "brouillon.json": "327ea81672d448db0b5553ec59ea80286f301672a43757847026527ecc47594d",
+        "handoff.json": "8b655c95dd1717bff339234702cf3a4d234b7ad4e78fa8046f97cb660ab4e577"
+      }
+    },
+    {
+      "id": "ekole-prf22-be60dd78bc090bb1",
+      "titre": "Le bulletin local",
+      "source_ref": "trame:bulletin-local",
+      "source_type": "trame",
+      "focale": "univers_social",
+      "folder": "situations/trame-bulletin-local-univers-social",
+      "activity_refs": [
+        "micro:enseignement-explicite-031",
+        "micro:enseignement-explicite-034",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-us-015",
+        "qc-pri-us-005",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "7531b569eb7b7834e859d93005086bf278385af60f1e419b802e18b4a4d46b24",
+        "brouillon.json": "c9f497d22cf9018c99eb41a285aea51a396082e3813a730886be4313c89e22cf",
+        "handoff.json": "74886bc022c28bb61a98467ebe074cd6ff0b80ea6d0c805cc720691831be167e"
+      }
+    },
+    {
+      "id": "ekole-prf22-a6ae7cd79449efef",
+      "titre": "Le carnet d’exploration",
+      "source_ref": "trame:journal-exploration",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-journal-exploration-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-031"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-us-015"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "b37bed8c8ea9344fecc242dbd9669e9e72629cfdf1e40155f84d54864c05df9d",
+        "brouillon.json": "9623876afa8949384c54a2a1a7f073891be979f4a3e5b2894204f32820745f92",
+        "handoff.json": "2459897a80907b778b0d3a7c642a3ac7ecec76f2d7528c1ae2b70cb473825a2c"
+      }
+    },
+    {
+      "id": "ekole-prf22-ba80984a5cd05f21",
+      "titre": "Le carnet d’exploration",
+      "source_ref": "trame:journal-exploration",
+      "source_type": "trame",
+      "focale": "univers_social",
+      "folder": "situations/trame-journal-exploration-univers-social",
+      "activity_refs": [
+        "micro:enseignement-explicite-031",
+        "micro:enseignement-explicite-034",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-us-015",
+        "qc-pri-us-005",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "1925e67d1e2f0510f48f4324d906442103c366ab694c006304dd546406102ed1",
+        "brouillon.json": "7609700f1ea85b5df316c29f99a3b0aa7b25694833cc1c87f186ca843a2dd4d2",
+        "handoff.json": "5abbbdf46af7df527e57bcca918d38e293173a9fa8e6c89b07540fd484cd40e2"
+      }
+    },
+    {
+      "id": "ekole-prf22-d9bed8665648133b",
+      "titre": "Le conte mis en scène",
+      "source_ref": "trame:conte-partage",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-conte-partage-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-001",
+        "micro:enseignement-explicite-013",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ad-002",
+        "qc-pri-da-006",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "679927e87962814fd78cbf7b253f65466f3b718c246e92a53ab480fff196a0d8",
+        "brouillon.json": "ca3f0e3dc6b86253ca6d834012a2ff308466c8455dd9ecd364dc0c195f272177",
+        "handoff.json": "037592162ff166f29f195587da14b9823c26248c3017413022ecb7885fbdfd71"
+      }
+    },
+    {
+      "id": "ekole-prf22-48820949a42e4799",
+      "titre": "Le conte mis en scène",
+      "source_ref": "trame:conte-partage",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-conte-partage-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-001"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ad-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "d8c11a35f2cc65f5dec776a58e6161945e84a31f85881a3b77178b5321ddd83d",
+        "brouillon.json": "07604e1fcfb3a38b40cadd8b9130e4b8e13f40d3deb63a64519ca072f630b5e6",
+        "handoff.json": "c731752411f9b20e353858043c76226566eeaa68edd84755386af281e39e0d33"
+      }
+    },
+    {
+      "id": "ekole-prf22-ce8174ff4903b0da",
+      "titre": "La notice ambiguë",
+      "source_ref": "trame:notice-ambigue",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-notice-ambigue-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "79ab93636ab3426060d95537db5066d627c4f36ca60f05b2552a7c9d9642ef1b",
+        "brouillon.json": "bdf62ec3ab58ee8216d0b379486555d22961c424e05020284a7e6e14991fea8d",
+        "handoff.json": "55192c7907a02b13f1a9e1cc03d712882126df527375ae6a3a3b29c10e349d0c"
+      }
+    },
+    {
+      "id": "ekole-prf22-dde3bb780dc842f2",
+      "titre": "La notice ambiguë",
+      "source_ref": "trame:notice-ambigue",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-notice-ambigue-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-fr-006",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "e8829e56dbad8943ceed8efbd007768e3b32ef49eeee157f71f9943cafa33acd",
+        "brouillon.json": "8c182a239b6ea521e77eb1f55a54e03b7cd7b3958fffe44f4dcccd1ecee3bc18",
+        "handoff.json": "1ed4ee181f12beec2d9b7ab64dcc4c7c5f39cf26218e4d4421fc3f9131f5eff7"
+      }
+    },
+    {
+      "id": "ekole-prf22-7e5f34a0f126b599",
+      "titre": "Le mode d’emploi accessible",
+      "source_ref": "trame:mode-emploi-visible",
+      "source_type": "trame",
+      "focale": "anglais",
+      "folder": "situations/trame-mode-emploi-visible-anglais",
+      "activity_refs": [
+        "micro:enseignement-explicite-002",
+        "micro:enseignement-explicite-003",
+        "micro:enseignement-explicite-005"
+      ],
+      "objective_refs": [
+        "qc-pri-als-001",
+        "qc-pri-als-005",
+        "qc-pri-ap-008"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "7f7be1f9fce803a42ce3549fa7a356780c64a0026486d9a28e708ec247497625",
+        "brouillon.json": "cda7cc03467c1f2fcf226ad7675162897dfd01d21c0e46626fafc1652a43187f",
+        "handoff.json": "5100fbf89e591583e2a48ec38d90a8dfb9a0f45f6d927bc0d33a9d593a619818"
+      }
+    },
+    {
+      "id": "ekole-prf22-36245ea0f2fa7ae4",
+      "titre": "Le mode d’emploi accessible",
+      "source_ref": "trame:mode-emploi-visible",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-mode-emploi-visible-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-002",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-als-001",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "674fc24f4190c0db95c14de7635a8ece04f0a4c59a73a61dc1cbc6ed902521c5",
+        "brouillon.json": "f11c9602a04a7f759e88ed6d108e8a0efca837c9b5c29b528fd0cd2a96aecc78",
+        "handoff.json": "35ad5b8438376dc14efde1a93036a77819eefb79527b0986c0de026399c372cf"
+      }
+    },
+    {
+      "id": "ekole-prf22-c12c8ec0acf8ae3a",
+      "titre": "Les semis comparés",
+      "source_ref": "trame:semis-compare",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-semis-compare-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-fr-006",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "5981897068b16317fde056a16fe0de77b8836bc8ec7e777008191b1a1134c6e1",
+        "brouillon.json": "ce15a37a0900e5929767d75749007ed667ab590b1e5f65e5cb55f8276f23db02",
+        "handoff.json": "62177f6c7186f185cee44dbaaf0799047d14ba7a2a55187912fa3f8478d96471"
+      }
+    },
+    {
+      "id": "ekole-prf22-7cd70922f5e7dc18",
+      "titre": "Les semis comparés",
+      "source_ref": "trame:semis-compare",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-semis-compare-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "ec7c2d66e0f231848571f94940f2b9152d6e1fe6914f568eae3e237515b810fb",
+        "brouillon.json": "2961d91c4c03182ecbc3e18c319116591814f67347f2ac579ef59a964ec47872",
+        "handoff.json": "b6260dadcb7982ed58a1b0d7ea4bff4d0074ece15360b9bb0afcd976975d9105"
+      }
+    },
+    {
+      "id": "ekole-prf22-02f4de7a1037867c",
+      "titre": "Les cartes du ciel",
+      "source_ref": "trame:ciel-en-cartes",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-ciel-en-cartes-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ap-008",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "8383182fe4b11f485a8a2aa130b2c7a90ff3fccea701fc866298bcaae5736882",
+        "brouillon.json": "a17073fd6ea2e025895ffce670cf74c785fe849d31c81b628ffe35cec938f433",
+        "handoff.json": "be849e97976ea8248799f16756d1329a7239bdce97e8c1960a2b6de209b0f73f"
+      }
+    },
+    {
+      "id": "ekole-prf22-039e5a09156a1032",
+      "titre": "Les cartes du ciel",
+      "source_ref": "trame:ciel-en-cartes",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-ciel-en-cartes-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-st-004",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "7c1522826a4a8e72ccc55205fe8f50d3ec07058df993f7ec6750a0d37d091f5c",
+        "brouillon.json": "5b94c2f3e9ebcbe460f3804007cb1555ecfe17fd3d48ad160a789a17ec523e04",
+        "handoff.json": "ac178ac9b876f37bc39737b48acdec0d3183b34a6b3d0f9489f612cae5b2dac8"
+      }
+    },
+    {
+      "id": "ekole-prf22-1ad999cfb181da80",
+      "titre": "La station météo",
+      "source_ref": "trame:station-meteo",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-station-meteo-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ma-002",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "adc9c81a53a783fd9b9f53c32a63725abdf3c2d9a3670b6f81173c708697a6fc",
+        "brouillon.json": "d07b3eb29caa0cea8d62788a883f6fb1553b5548de72c363b0c15ab8e7282186",
+        "handoff.json": "00bb6723e97f501d9d6b77699a476642cc1ef09bff57c68f9736d5615e1d613e"
+      }
+    },
+    {
+      "id": "ekole-prf22-6949d16925d624fa",
+      "titre": "La station météo",
+      "source_ref": "trame:station-meteo",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-station-meteo-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "b09d93fd4aad344193b6f0d9463d8fcf544aa71b80b97b6b60aa1ed6a5a2fa17",
+        "brouillon.json": "7a631cd018a96cccd1f9e84af09011c53a27ae591ecf9f49ff7851e380689d40",
+        "handoff.json": "2e7f2c1fa480e17b6897263b14deb4a8b40a00dd25446761330b2795c8535e4c"
+      }
+    },
+    {
+      "id": "ekole-prf22-8b0ef0701862acda",
+      "titre": "Les structures à tester",
+      "source_ref": "trame:ponts-a-tester",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-ponts-a-tester-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ap-008",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "8bf80cae09e2874ca2b3c5618637d85e31bb19dc3a6536b9433dc02195714b55",
+        "brouillon.json": "14947108e01f9ffc9f8262e148aa80975b2a9670ac5a9abc253d697277feeb5e",
+        "handoff.json": "1c12e372f6ff3aa806169bdf5629d877c4a3314eaf3040401653fcee5d0cc616"
+      }
+    },
+    {
+      "id": "ekole-prf22-ff61b2e0e912e7e1",
+      "titre": "Les structures à tester",
+      "source_ref": "trame:ponts-a-tester",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-ponts-a-tester-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-st-004",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "fb022c2c42d83966c20ab57885d6c70aa1a05c43bfbd4e66b9f518f1931c5a10",
+        "brouillon.json": "284333dc33c0b140341326f9ba85197cd2bdbd6bcc60c6d248e2daa7fab8a7ef",
+        "handoff.json": "4d81860c3603b485c9ba270b695f99bc6d800da7d5c414e46657f257ce0255cb"
+      }
+    },
+    {
+      "id": "ekole-prf22-c80b6e59bafc00b0",
+      "titre": "Les mesures mélangées",
+      "source_ref": "trame:temperatures-melangees",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-temperatures-melangees-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ma-002",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "8b2fb817dd05565d9d16d978a75621c49e6bd75bca787a6eb0d7ed8fd1d3ee06",
+        "brouillon.json": "2111170f1dc5943bf97cd7043e7a96de26f8316b8909738b5ae0029370a89cba",
+        "handoff.json": "e62939f8f79ed5fc78c0deb58fd643472c210fe83166fc9b09355b7b8d13c8a2"
+      }
+    },
+    {
+      "id": "ekole-prf22-f0aa74f3c2c2a6a6",
+      "titre": "Les mesures mélangées",
+      "source_ref": "trame:temperatures-melangees",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-temperatures-melangees-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "26de91b780804d19b97508f627204d71c21d056be7b16b6aa31cc75985f57616",
+        "brouillon.json": "91ca3a077ca0d8427120986c33b530d283d18b78f8d76eb03b494934def91b75",
+        "handoff.json": "b5b462e694e2a25f87365fda213d8648a1b4b2c1a6e09fdf36c99293531fb604"
+      }
+    },
+    {
+      "id": "ekole-prf22-3ee8d1abfafb9c05",
+      "titre": "Le laboratoire de lumière",
+      "source_ref": "trame:lumiere-et-couleurs",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-lumiere-et-couleurs-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-st-004",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "feb238e66843e69f9ac943b2d1717992974d39fee7bc16b045d927a67c051ce9",
+        "brouillon.json": "22f38baf8ad46eb6e07568c4a0759380d2eb5c9711d5d4837aa3243bf9eaa584",
+        "handoff.json": "b68f5a2d11607976d844ba707f3967ce45c032396ba778b7217494fe3dc9eee1"
+      }
+    },
+    {
+      "id": "ekole-prf22-cd5a53516d3c8d34",
+      "titre": "Le laboratoire de lumière",
+      "source_ref": "trame:lumiere-et-couleurs",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-lumiere-et-couleurs-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ap-008",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "c7a50e831b53607bb078c53068610a7d87e45eab12380ff198870c9d6f6c2d3b",
+        "brouillon.json": "672d57814eafb249b3af5f7283e9ae55698e5c36bdd4cb940e1855603e00bc54",
+        "handoff.json": "e01b332f9e9a77d98b26881b71ecd41e0ebfb7b737be942ad30190c425530368"
+      }
+    },
+    {
+      "id": "ekole-prf22-e5b06d3180e5cdf9",
+      "titre": "Le relais des messages",
+      "source_ref": "trame:messagers-en-mouvement",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-messagers-en-mouvement-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-015"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-eps-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "c439aaf7f4f8d81e5e75ea310e594a83a403344425827d968e104473972cdbf4",
+        "brouillon.json": "4a10c2a21fafaf6ee871a388b772854f146438a207d7349d4d68b5b4a2edeb87",
+        "handoff.json": "49fe5c23adbef9410aac4fdb9fc642289cdc304facc38226759f03c2357a8397"
+      }
+    },
+    {
+      "id": "ekole-prf22-7232b16de6f1cc63",
+      "titre": "Le relais des messages",
+      "source_ref": "trame:messagers-en-mouvement",
+      "source_type": "trame",
+      "focale": "education_physique",
+      "folder": "situations/trame-messagers-en-mouvement-education-physique",
+      "activity_refs": [
+        "micro:enseignement-explicite-015",
+        "micro:enseignement-explicite-016",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-eps-004",
+        "qc-pri-eps-003",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "70df4dc216d0e129bd5982605f774e867146f6f712090602977c67e4b1d1a59e",
+        "brouillon.json": "944ed4bda1f60c84dea0a5125a98dc24b5be31a40586078904990da6e5f6d458",
+        "handoff.json": "86d2f5b3e5e70a45a06ea1decebae547fd98e937d1c52872682c4ac966868a00"
+      }
+    },
+    {
+      "id": "ekole-prf22-45a80b5aa3e3b039",
+      "titre": "La salle à préparer",
+      "source_ref": "trame:salle-a-configurer",
+      "source_type": "trame",
+      "focale": "education_physique",
+      "folder": "situations/trame-salle-a-configurer-education-physique",
+      "activity_refs": [
+        "micro:enseignement-explicite-015",
+        "micro:enseignement-explicite-016",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-eps-004",
+        "qc-pri-eps-003",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "a436cfd4b13a86072e46b3f1dde403d8ddc2cca196291df0dfbab8f7c42612af",
+        "brouillon.json": "88d28bf80e2f61cf3279eeca863aeb8f9ad600c061f6296101b31026c0a691db",
+        "handoff.json": "6b5200fa5b1198e06d43d5a9cfa442a68f2fd33871a85217b3d06bd3d1ae0a07"
+      }
+    },
+    {
+      "id": "ekole-prf22-2a636be8c0ab71c7",
+      "titre": "La salle à préparer",
+      "source_ref": "trame:salle-a-configurer",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-salle-a-configurer-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-015"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-eps-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "49288096c53c6da20f375809a0bbb8afd11d757f7b31b0ea29bd4d2cc16fbd35",
+        "brouillon.json": "e11a6e9eaa176f5d1a1cb5fa23fb79967c98beff9f678e850ae682faba1b8b5e",
+        "handoff.json": "ae5056e5903a7cf4909ec353aaf0efdc627939611b90001cbc7353432d879244"
+      }
+    },
+    {
+      "id": "ekole-prf22-2fdd1f3ea6497688",
+      "titre": "Le parcours de livraison",
+      "source_ref": "trame:parcours-livraison",
+      "source_type": "trame",
+      "focale": "univers_social",
+      "folder": "situations/trame-parcours-livraison-univers-social",
+      "activity_refs": [
+        "micro:enseignement-explicite-031",
+        "micro:enseignement-explicite-034",
+        "micro:enseignement-explicite-015"
+      ],
+      "objective_refs": [
+        "qc-pri-us-015",
+        "qc-pri-us-005",
+        "qc-pri-eps-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "9440a6d728a1a773a589a1ad0608d8c945a0d9b66532a532db3b306a106a0097",
+        "brouillon.json": "475c6fa6ba697fb615d0b610373221e2da63d59b542ac2664623ec72965c51c2",
+        "handoff.json": "94eb0e452f2ab6738a108e608b5cf7922d947176369fc17ed9de8202d087069b"
+      }
+    },
+    {
+      "id": "ekole-prf22-128e5e38cc5750ee",
+      "titre": "Le parcours de livraison",
+      "source_ref": "trame:parcours-livraison",
+      "source_type": "trame",
+      "focale": "education_physique",
+      "folder": "situations/trame-parcours-livraison-education-physique",
+      "activity_refs": [
+        "micro:enseignement-explicite-015",
+        "micro:enseignement-explicite-016",
+        "micro:enseignement-explicite-031"
+      ],
+      "objective_refs": [
+        "qc-pri-eps-004",
+        "qc-pri-eps-003",
+        "qc-pri-us-015"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "24465117ba951a9380647df2bca3d798c4352a468b5a4ffefb167618986b85f0",
+        "brouillon.json": "503542b19f4e28d5e6518412a7225d16e96d7868da7c6aba1ba99960454151e6",
+        "handoff.json": "1c1f73b8608dd078d20ec33e40023e431e6d6714885d52f89f119ea1aefb3d07"
+      }
+    },
+    {
+      "id": "ekole-prf22-cf0a87168979d045",
+      "titre": "Les indices dans l’école",
+      "source_ref": "trame:indices-dans-ecole",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-indices-dans-ecole-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-015"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-eps-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "4b8f279eac2141c625e3dd1d1d7c8b95dd596c5592ccfa9ef86ae732ca2d7f5b",
+        "brouillon.json": "0551285d5c68e78dd9bca4a46db94726db1d053737cd39ec865b5c04c5dbceb8",
+        "handoff.json": "b9c1f15dd6aae49fecfa7952ef66f9f7a092e73ffe6db19a9dd07baa525fa91b"
+      }
+    },
+    {
+      "id": "ekole-prf22-ae28e875af34dbdd",
+      "titre": "Les indices dans l’école",
+      "source_ref": "trame:indices-dans-ecole",
+      "source_type": "trame",
+      "focale": "education_physique",
+      "folder": "situations/trame-indices-dans-ecole-education-physique",
+      "activity_refs": [
+        "micro:enseignement-explicite-015",
+        "micro:enseignement-explicite-016",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-eps-004",
+        "qc-pri-eps-003",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "4c7b48705b1998707822b2bd3c8d3a214c84abaff656d2dda273abf390972de5",
+        "brouillon.json": "18dfa18c1f1d42b10ac2c70bb4c74529bdf0e4ee8359af5004e664f41dd8ad80",
+        "handoff.json": "f5281479129201a6513a2f4556d493a39994b8253d3085856b98979ce072473f"
+      }
+    },
+    {
+      "id": "ekole-prf22-75753229f450a9c9",
+      "titre": "L’itinéraire sûr",
+      "source_ref": "trame:itineraire-sur",
+      "source_type": "trame",
+      "focale": "univers_social",
+      "folder": "situations/trame-itineraire-sur-univers-social",
+      "activity_refs": [
+        "micro:enseignement-explicite-031",
+        "micro:enseignement-explicite-034",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-us-015",
+        "qc-pri-us-005",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "5275cd876b2177e62f7b7613fb153580c7b0ec33d096bec041ece6c3e46062e0",
+        "brouillon.json": "ec018b4d61450ca9dcb957763c15e398d877945018f1f88af292936bf7814b12",
+        "handoff.json": "8b0ffcd572d75ec2ed352c58925afd6c7c1e638a92f0535fdff324157fb056e5"
+      }
+    },
+    {
+      "id": "ekole-prf22-0fc3981b2b5a39ac",
+      "titre": "L’itinéraire sûr",
+      "source_ref": "trame:itineraire-sur",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-itineraire-sur-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-031"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-us-015"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "e72ba36853cdff5bd21fd4cb89ff5059661436bba008c8edcaf90654a8b4ac53",
+        "brouillon.json": "c6e94871e567e958beb988e2ef6be69e760a021a0fdfeea95245a98698aaf0f3",
+        "handoff.json": "aef94b89c2c27f038d69c3f82d1906ca76ec0c8bc4ac6221e47ce113702d55e6"
+      }
+    },
+    {
+      "id": "ekole-prf22-399af51af21d6d9e",
+      "titre": "La randonnée des découvertes",
+      "source_ref": "trame:randonnee-symbolique",
+      "source_type": "trame",
+      "focale": "education_physique",
+      "folder": "situations/trame-randonnee-symbolique-education-physique",
+      "activity_refs": [
+        "micro:enseignement-explicite-015",
+        "micro:enseignement-explicite-016",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-eps-004",
+        "qc-pri-eps-003",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "fea91a95c4a5a73e49f656a36e5e4cc4d282928ee2496744f490370b547ffbd3",
+        "brouillon.json": "d12bda241f38573a94fdbd3daa6ad51ddb0a28e4fa9e40acdc9b9419e76ea55e",
+        "handoff.json": "3790a87c9190da00a8bbfbf1edd0d267e84b28252245058a9af1970061746b2c"
+      }
+    },
+    {
+      "id": "ekole-prf22-a46bc26ae6b3108f",
+      "titre": "La randonnée des découvertes",
+      "source_ref": "trame:randonnee-symbolique",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-randonnee-symbolique-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-015"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-eps-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "8abe4ccbd2aeb29911a9e3c4aef51f25056842875acf4affdef8e0854d432341",
+        "brouillon.json": "1c57a330dcae92bbeaa425bb4d7cd6cf63d3331e939a5a121eee19374f193c35",
+        "handoff.json": "77635aa1718f0e4ec0371c090ddc9f9d0c6020e8a37e6d40c84b8f1611be5260"
+      }
+    },
+    {
+      "id": "ekole-prf22-8164e7ca905d0935",
+      "titre": "Le conseil du village",
+      "source_ref": "trame:conseil-du-village",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-conseil-du-village-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-025",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-033",
+        "qc-pri-ma-003",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "038a7457197d31d89945d9684761e02d8583853881782a2023c44d97051930de",
+        "brouillon.json": "caa5855ad8cd18ba5390225f4df6779501fb305cb4f1c9f659d1019b2bca867c",
+        "handoff.json": "ec352135e75b6a620fbb63b39761bb7580595cf466cb35506a7bcb126642a5d4"
+      }
+    },
+    {
+      "id": "ekole-prf22-16ea7261c99244b4",
+      "titre": "Le conseil du village",
+      "source_ref": "trame:conseil-du-village",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-conseil-du-village-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "3d456182af49a38e83ae51fb859d4b22eec639787218561a746aa300d6651209",
+        "brouillon.json": "f9bc1026e7be78c0e75d2bfe31e9ac6bcbe45470186fb18318e196963ad7f2b5",
+        "handoff.json": "d300e87db3aef51522385d7c3f4728cc0d4593fa2ccae75a1bd94121158a6c00"
+      }
+    },
+    {
+      "id": "ekole-prf22-b9f674ebcc9fd367",
+      "titre": "Les règles de l’atelier",
+      "source_ref": "trame:regles-ateliers",
+      "source_type": "trame",
+      "focale": "sciences",
+      "folder": "situations/trame-regles-ateliers-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-fr-006",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "271e5ae8f42a2db19b4b698f95fed7bd925535a4c7280289d014d74a150d5e31",
+        "brouillon.json": "436de5d26c741aeb1180965601eca63d18816d02bb5f2a1b6e3a0691fb7b9950",
+        "handoff.json": "f28cfaa22eea5ee8b11addf329858e236e7ace3c208363c7ec8863ce7538840d"
+      }
+    },
+    {
+      "id": "ekole-prf22-4d94fd7eb0ee44f9",
+      "titre": "Les règles de l’atelier",
+      "source_ref": "trame:regles-ateliers",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-regles-ateliers-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "1b0b277f987bbd0389a4cecdd9a737bf517e921457023aac0417e49ca26e903f",
+        "brouillon.json": "3454b4808c6fcc889f29dba7733e21baa0f96de1d8892f55a1ef242f99321300",
+        "handoff.json": "61d1e04f930fd9f29dc018e9e34c2fbafe04c0506dcae8000f521f00a23f42e9"
+      }
+    },
+    {
+      "id": "ekole-prf22-5037a09c4150ee6b",
+      "titre": "La ressource partagée",
+      "source_ref": "trame:ressources-a-partager",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-ressources-a-partager-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "31aa893c1c63ca46c84e69bde8bda36f9741f21832852f26f751ed1ddcc2e925",
+        "brouillon.json": "21c18d111f9047dcac79965ec03d65c27b1814863bbd7be2937cbe2490bd423e",
+        "handoff.json": "420d9ea8babe571f71263ce66f2d3680bb36aecfefc75b6c0dcba2c49d7505c3"
+      }
+    },
+    {
+      "id": "ekole-prf22-194dad2cb50f4528",
+      "titre": "La ressource partagée",
+      "source_ref": "trame:ressources-a-partager",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-ressources-a-partager-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "c74c2276dcd8d4182eb76c3959557f4df2a9b2c423ef3c91d93163e4bee49dfd",
+        "brouillon.json": "843f4ae63ef79697754709e420587dd1c469b6c0f03982552f5e0d2a47afd23e",
+        "handoff.json": "ae1688a1ce43bb0376f9d94404249913dd0c26d386e3e11c17190c44acb8cdda"
+      }
+    },
+    {
+      "id": "ekole-prf22-715cbab0d6260a42",
+      "titre": "Le calendrier des groupes",
+      "source_ref": "trame:horaires-contradictoires",
+      "source_type": "trame",
+      "focale": "mathematiques",
+      "folder": "situations/trame-horaires-contradictoires-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "215bc4d68c4c071621a5e5c1282812579eff35898f9799ceb1088dd67d7cd6e8",
+        "brouillon.json": "7e27bc970f9828dbb4cbc88210092c5e02e153d55847b4511862a38c69023f52",
+        "handoff.json": "54388799c5d1f33978ea9aa21d0fcb30d76cf0a0bbac12cdcb99810b8f87a5b4"
+      }
+    },
+    {
+      "id": "ekole-prf22-ea8e78893af9374f",
+      "titre": "Le calendrier des groupes",
+      "source_ref": "trame:horaires-contradictoires",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-horaires-contradictoires-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "1151f1fdbf677344e0b51781bd82f232976792dc3b76764b545d44ef849c7912",
+        "brouillon.json": "36e5e4cfd648d725c130a94fc5c0d53ddcd167c6ff067f23d5c4b08a29451580",
+        "handoff.json": "f091cca26fea23bf60e37794a1748864fdbc14b5171e80c2ba360c2d9b20a086"
+      }
+    },
+    {
+      "id": "ekole-prf22-e3eb776ccf8d9b39",
+      "titre": "La photo et le choix",
+      "source_ref": "trame:photo-ou-pas",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-photo-ou-pas-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-001"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ad-002"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "da6075be4a91ac93375afaa2a63d41f7c322658d46f37160667ff810802474c8",
+        "brouillon.json": "d93210631c0d255e20bd2a1f45ddc0904dc41b37667a87554cd47b554660d8ac",
+        "handoff.json": "0811114ecc52b3112f0d883c31aae5fba2ba01cae6e0159cd29c3202c53daea5"
+      }
+    },
+    {
+      "id": "ekole-prf22-b375c8a48097b59e",
+      "titre": "La photo et le choix",
+      "source_ref": "trame:photo-ou-pas",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-photo-ou-pas-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-027",
+        "micro:enseignement-explicite-028",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-mu-006",
+        "qc-pri-mu-007",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine non déclaré dans cette trame.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "66250d14a0215f701de704a4edccbb24906627f1e9d7624021e742b8f111b292",
+        "brouillon.json": "00948ab38bead99e229670edbad455c7e9edf6c7c7d730c2a46740f273e84ac5",
+        "handoff.json": "6af17ef7bf728ce5ffe8e1ca2568caeca6c5528dd53404b14eeea6e5fb315461"
+      }
+    },
+    {
+      "id": "ekole-prf22-af05416c98f02d91",
+      "titre": "Le projet commun",
+      "source_ref": "trame:vote-projet-commun",
+      "source_type": "trame",
+      "focale": "arts",
+      "folder": "situations/trame-vote-projet-commun-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-fr-006",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "2574a7f74b07e1eecd27aa1933b7c02640d088cda7fbb7c9c26b0dc540ad28df",
+        "brouillon.json": "c1d243ecbf8090a664ae76dcecc656bf0553a08ff5085b70fcf896ce0ce5f41d",
+        "handoff.json": "c0aceb3f56ca15b0ad81520dcd03357e74e2347ded527f302dd7606406683e77"
+      }
+    },
+    {
+      "id": "ekole-prf22-188a7e69b4818f21",
+      "titre": "Le projet commun",
+      "source_ref": "trame:vote-projet-commun",
+      "source_type": "trame",
+      "focale": "francais",
+      "folder": "situations/trame-vote-projet-commun-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-005"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ap-008"
+      ],
+      "quality": "REVUE_OBLIGATOIRE",
+      "justification_provenance": "Domaine déclaré comme potentiel dans Kontexte; lien activité-objectif généré et à vérifier (exercice disciplinaire parfois absent).",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "f1cd37d8971f179729d82fa9b5b52d1e03e0f72ea60db4a71571d3a933bb0ffe",
+        "brouillon.json": "3428a09fec591a062feddbb130e39449c928e74a6c3fc452d4d00da81e1b9704",
+        "handoff.json": "c782ea6d82c88d2a2f7350809e10105196614f6a555f7b77bbbaee4645d69c8e"
+      }
+    },
+    {
+      "id": "ekole-prf22-e57298c8abba7576",
+      "titre": "L’atelier du mécanicien",
+      "source_ref": "mission:atelier-mecanique",
+      "source_type": "mission",
+      "focale": "sciences",
+      "folder": "situations/mission-atelier-mecanique-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "051892f82ae03503f1206cd805f6b737981fbb826363827a75ea742099f2e166",
+        "brouillon.json": "5609afbf2303058c85e33672a0916bd53c702cc79b28b682088909531e362020",
+        "handoff.json": "6f5871782e2873c08017cc152b65160489e02fc40a5d6e839ad67fb13dc11c3c"
+      }
+    },
+    {
+      "id": "ekole-prf22-56246ee7ec2639ef",
+      "titre": "La boulangerie du village",
+      "source_ref": "mission:boulangerie",
+      "source_type": "mission",
+      "focale": "mathematiques",
+      "folder": "situations/mission-boulangerie-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "det:757035f103a7307f",
+        "micro:enseignement-explicite-022"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "314c5a1ded6ab4c2be191a927f0ebee90fbbf284a822db78946ddd4663ac3428",
+        "brouillon.json": "dc633927cd5dcc3e97a9a49dec7c0fca61ab6eaee4f6ad12dde0f7b206d97489",
+        "handoff.json": "cf845e4825dc4e03f9e912b1f02b1adb726ae47cdcf4495d751d6cf884b59eef"
+      }
+    },
+    {
+      "id": "ekole-prf22-1d747a24fcac618b",
+      "titre": "Le chantier de l’architecte",
+      "source_ref": "mission:chantier-maquette",
+      "source_type": "mission",
+      "focale": "francais",
+      "folder": "situations/mission-chantier-maquette-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "1b6a7b14c27a8fecf6d786d4ed406f7daf71dcbc32fda41f27f73b23783b170b",
+        "brouillon.json": "00be9a28b5c8d9bc46d4fa1d325b29fa7e77e156457e33982c695f0df39760a8",
+        "handoff.json": "5176197a55b8ab14af24509a0ec535142ada12c85a2d354f4bcec74de36aeda9"
+      }
+    },
+    {
+      "id": "ekole-prf22-1202113d037e62a0",
+      "titre": "Le conseil du village",
+      "source_ref": "mission:conseil-village",
+      "source_type": "mission",
+      "focale": "francais",
+      "folder": "situations/mission-conseil-village-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "8e59bc4367e490add3979287ad5c7fa31a777095cbfe4ddc5a0d0e634ab3f739",
+        "brouillon.json": "b0ef5843af17ed4b946e37e7a0db42ac0ce6fcc922f00c8488b740f8c02e215d",
+        "handoff.json": "bf2345925933672d63128a341dbd31a99ea05b1b71134e48cf1b7e280e163836"
+      }
+    },
+    {
+      "id": "ekole-prf22-9b40758f6a92a82c",
+      "titre": "L’expédition",
+      "source_ref": "mission:expedition",
+      "source_type": "mission",
+      "focale": "univers_social",
+      "folder": "situations/mission-expedition-univers-social",
+      "activity_refs": [
+        "micro:enseignement-explicite-031",
+        "micro:enseignement-explicite-034",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-us-015",
+        "qc-pri-us-005",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "e03890ff54af0f6b5d5944580200c702f7cef4b2dbbab943e80148fcb83d2faa",
+        "brouillon.json": "1f68ffe51e7c40ccb06c4e493a70c13c56d3f6d172fd9b17fc85d8e9e8403615",
+        "handoff.json": "52fe04faf0374416650380f27f220582dfda95db2d53fe1d3b2266d375740d50"
+      }
+    },
+    {
+      "id": "ekole-prf22-d6f1926e4fcdfe74",
+      "titre": "La fête de la sorcière",
+      "source_ref": "mission:fete-sorciere",
+      "source_type": "mission",
+      "focale": "arts",
+      "folder": "situations/mission-fete-sorciere-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-027",
+        "micro:enseignement-explicite-028",
+        "micro:enseignement-explicite-019"
+      ],
+      "objective_refs": [
+        "qc-pri-mu-006",
+        "qc-pri-mu-007",
+        "qc-pri-fr-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "0385aae4aa1a375d990163044edd616063dfaad81c2e12da74c1a1637e2042e5",
+        "brouillon.json": "6d92defb5a5acab74a159bebe898eeaace074012f879a2f0feab71c4a5ea3f3a",
+        "handoff.json": "3d3b1006e585ab12c687c57bc4afa30bc7c50022a4dc6916b91af7a8f740ee86"
+      }
+    },
+    {
+      "id": "ekole-prf22-5aec121e4f81d95e",
+      "titre": "Le grand ménage chez mamie",
+      "source_ref": "mission:grand-menage-chez-mamie",
+      "source_type": "mission",
+      "focale": "mathematiques",
+      "folder": "situations/mission-grand-menage-chez-mamie-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-022",
+        "micro:enseignement-explicite-025",
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-033",
+        "qc-pri-ma-003",
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "79875514755b6fb7a8cc291fd84deb45e8555c998e2e4bb71769e6d9d92920c0",
+        "brouillon.json": "d2bcc7609a3026b9cbb073ae1f8155bc37f6afba8f9fc6791c4be2ad2ef559b6",
+        "handoff.json": "b50d0cd5ecdcf118476bfaf0eca2949b5e2e67de2b30e1f1951e0fe4101535e6"
+      }
+    },
+    {
+      "id": "ekole-prf22-51b57e0e703690bc",
+      "titre": "Le jardin du fermier",
+      "source_ref": "mission:jardin-fermier",
+      "source_type": "mission",
+      "focale": "sciences",
+      "folder": "situations/mission-jardin-fermier-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "ea11835112afaa3dccaafd9a4134b28b8edb9233e2fdad70fa180d7ae065eb0a",
+        "brouillon.json": "de1560ebae2a3bb8aa3ef06e85be0fad544205564e103fe1a6a0161f937d7290",
+        "handoff.json": "8c8666a3004643f19a8de00fa8d57583c4cb15fa84c15e57787f9d95a8f97485"
+      }
+    },
+    {
+      "id": "ekole-prf22-7c9dd42acc395060",
+      "titre": "Le laboratoire",
+      "source_ref": "mission:laboratoire",
+      "source_type": "mission",
+      "focale": "sciences",
+      "folder": "situations/mission-laboratoire-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-005"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-ap-008"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "68203f79b8baa5f6da51ee68b0a74a37c1a0607446ba1a7c86d4c0c3aaa02a54",
+        "brouillon.json": "2772f02781c8367f3c8802ea833e878e69b7f0e311935e427977fab5cd952638",
+        "handoff.json": "b24b9a4267f3c8e9e116ff683cc42891b706f7812dbac1de3316514fc42593c6"
+      }
+    },
+    {
+      "id": "ekole-prf22-566b8b62ac82f25d",
+      "titre": "Le mystère de la bibliothèque",
+      "source_ref": "mission:mystere-de-la-bibliotheque",
+      "source_type": "mission",
+      "focale": "francais",
+      "folder": "situations/mission-mystere-de-la-bibliotheque-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-021",
+        "micro:enseignement-explicite-005"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-012",
+        "qc-pri-fr-018",
+        "qc-pri-ap-008"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "efc00bd23a773447a84e180e405561e6725fe1e3a2807db6e19f43f2382ecfa9",
+        "brouillon.json": "d31f2dd52450aaa6e7486b3bf6cd17aa3d8a7d8836b12d50718d311a583ea9a8",
+        "handoff.json": "6b7b6e42dfd943366b67d8626b1f7072b424d3c5feacc0acd0a5f6de6ddb1e85"
+      }
+    },
+    {
+      "id": "ekole-prf22-fa0da3587c91b7d2",
+      "titre": "Le pique-nique des quatre saisons",
+      "source_ref": "mission:pique-nique-des-saisons",
+      "source_type": "mission",
+      "focale": "sciences",
+      "folder": "situations/mission-pique-nique-des-saisons-sciences",
+      "activity_refs": [
+        "micro:enseignement-explicite-029",
+        "micro:enseignement-explicite-031",
+        "micro:enseignement-explicite-001"
+      ],
+      "objective_refs": [
+        "qc-pri-st-004",
+        "qc-pri-us-015",
+        "qc-pri-ad-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "fc31fa92d2b4ff40060ab8b30575594da86366fef1adde11d54edd2a66aa7cd6",
+        "brouillon.json": "6a8d01693f9291e6fa01127451efa3dac38129b6649c8619d5daca98777f719c",
+        "handoff.json": "40093d4d6e4d9afe3ddb9bff7b32d57b301b12d695fa9e4439f57d12a32a9ad1"
+      }
+    },
+    {
+      "id": "ekole-prf22-6d515c2da5cc7fed",
+      "titre": "Le rallye des métiers du village",
+      "source_ref": "mission:rallye-des-metiers",
+      "source_type": "mission",
+      "focale": "mathematiques",
+      "folder": "situations/mission-rallye-des-metiers-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-026",
+        "det:37346345dfe056f4",
+        "micro:enseignement-explicite-022"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-004",
+        "qc-pri-ma-025",
+        "qc-pri-ma-033"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "3e34bf300ad56a801ad8cac31369d1220a3f41b8c3d554ce3a78fef7ce0826f4",
+        "brouillon.json": "8a425e61d21bcdb47f8f85feebdbff1c8c901be62a4ef65e9ef8c997188fd42c",
+        "handoff.json": "737ffbadd01653b94bbc84c871a71035f7c0bbbf0e4c5fc0840abc7aebe20af4"
+      }
+    },
+    {
+      "id": "ekole-prf22-a802046fde433693",
+      "titre": "La grande randonnée à vélo",
+      "source_ref": "mission:randonnee-a-velo",
+      "source_type": "mission",
+      "focale": "education_physique",
+      "folder": "situations/mission-randonnee-a-velo-education-physique",
+      "activity_refs": [
+        "micro:enseignement-explicite-015",
+        "micro:enseignement-explicite-016",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-eps-004",
+        "qc-pri-eps-003",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "a4b0921d1b7e3626fcc6d8738b61100ed34a97b3869e44a3df4d469687e273db",
+        "brouillon.json": "64f15ee5ebe2e00188e828ddcb2569c0dceb7e0ec5b78098e7c5725616f454e4",
+        "handoff.json": "9a0917e99004b2cef2870280f231f7d6bdf3634f9da287a997a1d7a568ab2b35"
+      }
+    },
+    {
+      "id": "ekole-prf22-6201ece9e6f425b6",
+      "titre": "Le salon de coiffure",
+      "source_ref": "mission:salon-coiffure",
+      "source_type": "mission",
+      "focale": "arts",
+      "folder": "situations/mission-salon-coiffure-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-005",
+        "micro:enseignement-explicite-024"
+      ],
+      "objective_refs": [
+        "qc-pri-ap-008",
+        "qc-pri-ma-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "04612701889cf7450834ccc612ea12691abced08c84726a21df6b5e0912b86be",
+        "brouillon.json": "a8eb445674f06a4282ac3cdc902eaf1572e84108bbc9818da3a86f0c6c86a5cf",
+        "handoff.json": "81dd104d1170095283242af12bfa25360633f68e8f9c813113eb5529bc86778d"
+      }
+    },
+    {
+      "id": "ekole-prf22-000a32173de55a40",
+      "titre": "Le chaudron des mesures",
+      "source_ref": "mission:sorciere-solo",
+      "source_type": "mission",
+      "focale": "mathematiques",
+      "folder": "situations/mission-sorciere-solo-mathematiques",
+      "activity_refs": [
+        "micro:enseignement-explicite-024",
+        "micro:enseignement-explicite-022"
+      ],
+      "objective_refs": [
+        "qc-pri-ma-002",
+        "qc-pri-ma-033"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "a18560d826b36f5603292cfc0234e71cca063457839771a02b2c0b0111b54d9d",
+        "brouillon.json": "7df7ce0168d9285fa06c2b361924a37ccd3e5da8709855b4a211bfeb4a41956e",
+        "handoff.json": "34bf002938031c909011eb20c0e8ce93e41c28af599a5582fcbc3e6b27b3e122"
+      }
+    },
+    {
+      "id": "ekole-prf22-47d3b6ff42f4af4d",
+      "titre": "Le spectacle du clown",
+      "source_ref": "mission:spectacle-clown",
+      "source_type": "mission",
+      "focale": "arts",
+      "folder": "situations/mission-spectacle-clown-arts",
+      "activity_refs": [
+        "micro:enseignement-explicite-001",
+        "micro:enseignement-explicite-013"
+      ],
+      "objective_refs": [
+        "qc-pri-ad-002",
+        "qc-pri-da-006"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "d247f97c87eef3d3f8f1a5c7e858c2b7e69a1ace420e1beda2aaf79ab020d507",
+        "brouillon.json": "a03d65315ad1677c0eb279057fc828c46607057e460a7a4b632c420270a1569a",
+        "handoff.json": "cc0e1f4d69a6d5255dc988d880e7233dfde6afea5fd632fa2868cf451ea50f3f"
+      }
+    },
+    {
+      "id": "ekole-prf22-dbe04f9764ee6314",
+      "titre": "Le spectacle des histoires inventées",
+      "source_ref": "mission:spectacle-des-histoires",
+      "source_type": "mission",
+      "focale": "francais",
+      "folder": "situations/mission-spectacle-des-histoires-francais",
+      "activity_refs": [
+        "micro:enseignement-explicite-019",
+        "micro:enseignement-explicite-020",
+        "micro:enseignement-explicite-001"
+      ],
+      "objective_refs": [
+        "qc-pri-fr-006",
+        "qc-pri-fr-012",
+        "qc-pri-ad-002"
+      ],
+      "quality": "REVUE_PRIORITAIRE",
+      "justification_provenance": "Domaine proposé par les mots et rôles; non explicite dans la mission.",
+      "full_json_schema": true,
+      "files_sha256": {
+        "design.json": "a07d6a39adbd568109d73b062c79740f63138b4c625cae457f4de93837eb79b1",
+        "brouillon.json": "d02104ca11a74090d96d9458565701b167343b4f1412b466aa1d4ac2504e19b5",
+        "handoff.json": "7ecc0b9e283a4057b5c1e271905793f77e9e7f7c7830c5412a4d655b97c479d4"
+      }
+    }
+  ]
+}

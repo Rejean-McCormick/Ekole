@@ -1,0 +1,79 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:caisse-klownkoins",
+  "focale": "mathematiques",
+  "question_motrice": "La caisse et les paiements doivent concorder.",
+  "declencheur_source": "Un événement utilise une monnaie entièrement fictive.",
+  "informations_a_preparer": [
+    "tarifs convenus",
+    "services realises"
+  ],
+  "actions_source": [
+    "additionner",
+    "remunerer",
+    "verifier"
+  ],
+  "production_attendue_source": "Bilan en Klownkoins",
+  "rebond_source": "Une écriture est en double.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-010",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-006",
+      "titre": "Préparer un budget simple",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "caisse"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : caisse",
+      "consigne_source": "Additionner des coûts ou quantités fournis dans une fiche de mission et expliquer une stratégie de calcul.",
+      "consigne_contextualisee": "Dans « La caisse des Klownkoins », accomplir « Préparer un budget simple » pour contribuer à « Bilan en Klownkoins ». Additionner des coûts ou quantités fournis dans une fiche de mission et expliquer une stratégie de calcul.",
+      "preuve": "Liste de calculs et total justifié.",
+      "critere_propose": "Choix de l'opération, exactitude et vérification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-022",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-033",
+      "titre": "Atelier ciblé : Expliquer et vérifier sa démarche mathématique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "caisse"
+      ],
+      "motif_de_choix": "Indices thématiques : caisse",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « La caisse des Klownkoins », accomplir « Atelier ciblé : Expliquer et vérifier sa démarche mathématique » pour contribuer à « Bilan en Klownkoins ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "justification intelligible",
+      "critere_propose": "Vérifier la trace attendue pour « Justifier et communiquer une démarche mathématique » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

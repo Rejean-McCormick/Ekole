@@ -1,0 +1,80 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:semis-compare",
+  "focale": "francais",
+  "question_motrice": "La croissance n’est pas identique.",
+  "declencheur_source": "Deux plants sont observés dans des conditions sûres.",
+  "informations_a_preparer": [
+    "conditions",
+    "mesures successives"
+  ],
+  "actions_source": [
+    "observer",
+    "noter",
+    "comparer"
+  ],
+  "production_attendue_source": "Tableau d’observations",
+  "rebond_source": "Une mesure semble anormale.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-053",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-021",
+      "titre": "Rédiger un bref compte rendu d’observation",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "semis",
+        "jardin"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : semis, jardin",
+      "consigne_source": "Écrire un court compte rendu à partir de notes d’observation fournies, avec une phrase décrivant le résultat.",
+      "consigne_contextualisee": "Dans « Les semis comparés », accomplir « Rédiger un bref compte rendu d’observation » pour contribuer à « Tableau d’observations ». Écrire un court compte rendu à partir de notes d’observation fournies, avec une phrase décrivant le résultat.",
+      "preuve": "Compte rendu lié aux notes.",
+      "critere_propose": "Faits observés distingués des suppositions et formulation compréhensible.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-020",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-009",
+      "titre": "Lire une notice documentaire",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "jardin"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : jardin",
+      "consigne_source": "Comparer les renseignements d'une notice et ceux d'un plan de mission; signaler les contradictions.",
+      "consigne_contextualisee": "Dans « Les semis comparés », accomplir « Lire une notice documentaire » pour contribuer à « Tableau d’observations ». Comparer les renseignements d'une notice et ceux d'un plan de mission; signaler les contradictions.",
+      "preuve": "Tableau « information, source, vérification ».",
+      "critere_propose": "Utilisation fidèle des sources et limites reconnues.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

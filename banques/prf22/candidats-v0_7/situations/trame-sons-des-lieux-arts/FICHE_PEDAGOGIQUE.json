@@ -1,0 +1,98 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:sons-des-lieux",
+  "focale": "arts",
+  "question_motrice": "L’origine de certains sons est incertaine.",
+  "declencheur_source": "Une collection de sons doit être classée.",
+  "informations_a_preparer": [
+    "enregistrements autorises",
+    "observations"
+  ],
+  "actions_source": [
+    "ecouter",
+    "classer",
+    "presenter"
+  ],
+  "production_attendue_source": "Carte sonore fictive",
+  "rebond_source": "Un son a plusieurs sources possibles.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-028",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-mu-007",
+      "titre": "Atelier ciblé : Interpréter un motif en groupe",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "ecouter",
+        "son"
+      ],
+      "motif_de_choix": "Indices thématiques : ecouter, son",
+      "consigne_source": "Faire écouter, reproduire et comparer le motif.",
+      "consigne_contextualisee": "Dans « Les sons du quartier », accomplir « Atelier ciblé : Interpréter un motif en groupe » pour contribuer à « Carte sonore fictive ». Faire écouter, reproduire et comparer le motif.",
+      "preuve": "participation et écoute",
+      "critere_propose": "Vérifier la trace attendue pour « Interpréter seul ou en ensemble » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-034",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-009",
+      "titre": "Expliquer une démarche artistique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "photo"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : photo",
+      "consigne_source": "Présenter les étapes d'une création en indiquant une modification et sa raison.",
+      "consigne_contextualisee": "Dans « Les sons du quartier », accomplir « Expliquer une démarche artistique » pour contribuer à « Carte sonore fictive ». Présenter les étapes d'une création en indiquant une modification et sa raison.",
+      "preuve": "Carnet d'étapes et commentaire oral ou écrit.",
+      "critere_propose": "Étapes identifiables, choix motivés.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-061",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-003",
+      "titre": "Créer une signalétique illustrée",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "photo"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : photo",
+      "consigne_source": "Dessiner un symbole et une courte légende pour guider les utilisateurs fictifs de la situation.",
+      "consigne_contextualisee": "Dans « Les sons du quartier », accomplir « Créer une signalétique illustrée » pour contribuer à « Carte sonore fictive ». Dessiner un symbole et une courte légende pour guider les utilisateurs fictifs de la situation.",
+      "preuve": "Pictogramme légendé.",
+      "critere_propose": "Message visuel compréhensible, légende cohérente et lisibilité.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

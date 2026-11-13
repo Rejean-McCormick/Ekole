@@ -1,0 +1,101 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:plante-mystere",
+  "focale": "sciences",
+  "question_motrice": "Ses propriétés doivent être distinguées des croyances fictives.",
+  "declencheur_source": "Une plante inconnue apparaît dans une histoire.",
+  "informations_a_preparer": [
+    "observations",
+    "documentation"
+  ],
+  "actions_source": [
+    "observer",
+    "comparer",
+    "classer"
+  ],
+  "production_attendue_source": "Fiche d’identification",
+  "rebond_source": "Deux plantes se ressemblent.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-024",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-004",
+      "titre": "Conclure avec prudence",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "plante",
+        "scientifique",
+        "observation"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : plante, scientifique, observation",
+      "consigne_source": "Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis.",
+      "consigne_contextualisee": "Dans « La plante mystérieuse », accomplir « Conclure avec prudence » pour contribuer à « Fiche d’identification ». Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis.",
+      "preuve": "Phrase de conclusion associée au relevé de données.",
+      "critere_propose": "Conclusion supportée, limites explicites.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-028",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-017",
+      "titre": "Classer le vivant observé",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "jardin",
+        "plante"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : jardin, plante",
+      "consigne_source": "Classer des images documentées de plantes ou animaux avec des critères observables.",
+      "consigne_contextualisee": "Dans « La plante mystérieuse », accomplir « Classer le vivant observé » pour contribuer à « Fiche d’identification ». Classer des images documentées de plantes ou animaux avec des critères observables.",
+      "preuve": "Tableau de classification avec critères.",
+      "critere_propose": "Critères observables et catégories cohérentes.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-029",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-020",
+      "titre": "Relier vivant et habitat",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "jardin",
+        "plante"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : jardin, plante",
+      "consigne_source": "Décrire des besoins d'un organisme et vérifier les informations à partir d'une source documentaire.",
+      "consigne_contextualisee": "Dans « La plante mystérieuse », accomplir « Relier vivant et habitat » pour contribuer à « Fiche d’identification ». Décrire des besoins d'un organisme et vérifier les informations à partir d'une source documentaire.",
+      "preuve": "Schéma habitat–besoins annoté de sa source.",
+      "critere_propose": "Besoins plausibles, source identifiée, généralisations évitées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

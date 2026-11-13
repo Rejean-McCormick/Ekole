@@ -1,0 +1,80 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:foret-partagee",
+  "focale": "univers_social",
+  "question_motrice": "Les objectifs de protection et d’usage divergent.",
+  "declencheur_source": "Un territoire forestier fictif est utilisé par plusieurs groupes.",
+  "informations_a_preparer": [
+    "habitats",
+    "besoins humains"
+  ],
+  "actions_source": [
+    "comparer",
+    "debattre",
+    "proposer"
+  ],
+  "production_attendue_source": "Plan d’usage responsable",
+  "rebond_source": "Une espèce fragile est découverte.",
+  "niveaux_suggeres_source": "primaire-3-6",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-033",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-us-004",
+      "titre": "Atelier ciblé : Décrire une organisation sociale liée à son territoire",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "territoire",
+        "plan"
+      ],
+      "motif_de_choix": "Micro-situation explicitement reliée à cette trame Kontexte. Indices thématiques : territoire, plan",
+      "consigne_source": "Faire situer, décrire et citer la source avant toute conclusion historique.",
+      "consigne_contextualisee": "Dans « La forêt partagée », accomplir « Atelier ciblé : Décrire une organisation sociale liée à son territoire » pour contribuer à « Plan d’usage responsable ». Faire situer, décrire et citer la source avant toute conclusion historique.",
+      "preuve": "description liée aux ressources",
+      "critere_propose": "Vérifier la trace attendue pour « Lire l’organisation d’une société sur son territoire » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-039",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-us-002",
+      "titre": "Lire un plan de lieux",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "plan"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : plan",
+      "consigne_source": "Situer trois lieux d'un plan fictif et justifier un itinéraire sans confondre carte inventée et territoire réel.",
+      "consigne_contextualisee": "Dans « La forêt partagée », accomplir « Lire un plan de lieux » pour contribuer à « Plan d’usage responsable ». Situer trois lieux d'un plan fictif et justifier un itinéraire sans confondre carte inventée et territoire réel.",
+      "preuve": "Carte annotée avec légende et trajet.",
+      "critere_propose": "Repères, légende et trajet cohérents.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

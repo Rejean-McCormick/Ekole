@@ -1,0 +1,77 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:costumes-recycles",
+  "focale": "mathematiques",
+  "question_motrice": "Les matériaux réutilisables sont insuffisants.",
+  "declencheur_source": "Une équipe prépare des costumes de scène.",
+  "informations_a_preparer": [
+    "inventaire",
+    "besoins par costume"
+  ],
+  "actions_source": [
+    "trier",
+    "creer",
+    "adapter"
+  ],
+  "production_attendue_source": "Costumes et accessoires",
+  "rebond_source": "Un participant change de rôle.",
+  "niveaux_suggeres_source": "primaire-2-6",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-023",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-012",
+      "titre": "Atelier ciblé : Représenter des fractions usuelles avec un matériel",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [],
+      "motif_de_choix": "Micro-situation explicitement reliée à cette trame Kontexte. Revue de l’ancrage nécessaire",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « Les costumes réinventés », accomplir « Atelier ciblé : Représenter des fractions usuelles avec un matériel » pour contribuer à « Costumes et accessoires ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "parts égales et fraction associée",
+      "critere_propose": "Vérifier la trace attendue pour « Fractions : représentations et sens » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-011",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-007",
+      "titre": "Calculer ce qui manque",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "prepar"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : prepar",
+      "consigne_source": "Déterminer par soustraction la quantité nécessaire pour atteindre une cible contextualisée.",
+      "consigne_contextualisee": "Dans « Les costumes réinventés », accomplir « Calculer ce qui manque » pour contribuer à « Costumes et accessoires ». Déterminer par soustraction la quantité nécessaire pour atteindre une cible contextualisée.",
+      "preuve": "Calcul annoté et réponse avec unité.",
+      "critere_propose": "Soustraction pertinente, contrôle du résultat.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

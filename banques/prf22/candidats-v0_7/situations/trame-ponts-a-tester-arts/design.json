@@ -1,0 +1,547 @@
+{
+  "format": "ekole.situation-orchestrable.design/0.3",
+  "status": "design_only",
+  "id": "ekole-prf22-5114d43791d41b82",
+  "title": "Les structures à tester — conception candidate",
+  "context": {
+    "reality_mode": "fiction",
+    "epoch": "Période de simulation à préciser selon la trame",
+    "place": "Lieu de la situation source, à préciser par l’enseignant",
+    "language": "fr-CA",
+    "cultural_frame": "Aucune culture réelle attribuée; sources et droits à valider",
+    "source_situation": {
+      "owner": "Kontexte",
+      "resource_id": "trame:ponts-a-tester",
+      "revision": "unverified-local-snapshot",
+      "pin_status": "unresolved",
+      "source_note": "data/trames/catalogue-neutral-v0.2.json"
+    },
+    "culture_refs": [],
+    "narrative_premise": "La résistance des modèles diffère.",
+    "review_status": "not_evaluated"
+  },
+  "learning": {
+    "objectives": [
+      {
+        "id": "obj-01",
+        "reference": {
+          "owner": "Kontexte",
+          "resource_id": "qc-pri-ap-001",
+          "revision": "unverified-local-snapshot",
+          "pin_status": "unresolved",
+          "source_note": "data/catalogue/202_kristals.json"
+        }
+      },
+      {
+        "id": "obj-02",
+        "reference": {
+          "owner": "Kontexte",
+          "resource_id": "qc-pri-ap-004",
+          "revision": "unverified-local-snapshot",
+          "pin_status": "unresolved",
+          "source_note": "data/catalogue/202_kristals.json"
+        }
+      },
+      {
+        "id": "obj-03",
+        "reference": {
+          "owner": "Kontexte",
+          "resource_id": "qc-pri-ap-003",
+          "revision": "unverified-local-snapshot",
+          "pin_status": "unresolved",
+          "source_note": "data/catalogue/202_kristals.json"
+        }
+      }
+    ],
+    "activity_catalog_ownership": "external"
+  },
+  "roles": [
+    {
+      "id": "role-01",
+      "purpose": "Rôle narratif proposé : architecte"
+    },
+    {
+      "id": "role-02",
+      "purpose": "Rôle narratif proposé : scientifique"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-01",
+      "exercise_ref": {
+        "owner": "Ékole",
+        "resource_id": "ekoleprop:ap-031",
+        "revision": "unverified-local-snapshot",
+        "pin_status": "unresolved",
+        "source_note": "banques/prf22/activites-proposees-v0_7.json"
+      },
+      "objectives": [
+        "obj-01"
+      ],
+      "role_ids": [
+        "role-01",
+        "role-02"
+      ],
+      "duration_minutes": 20,
+      "station": {
+        "teams_per_instance": 1,
+        "max_parallel_instances": 3,
+        "materials_review_required": true
+      },
+      "solo_fallback": "Documents ou indices fournis sans prétendre démontrer une interaction entre pairs.",
+      "group_fallback": "Transmission différée supervisée si les équipes ne peuvent pas se rencontrer.",
+      "contextualization": "Inventaire des formes et couleurs"
+    },
+    {
+      "id": "act-02",
+      "exercise_ref": {
+        "owner": "Ékole",
+        "resource_id": "ekoleprop:ap-033",
+        "revision": "unverified-local-snapshot",
+        "pin_status": "unresolved",
+        "source_note": "banques/prf22/activites-proposees-v0_7.json"
+      },
+      "objectives": [
+        "obj-02"
+      ],
+      "role_ids": [
+        "role-01",
+        "role-02"
+      ],
+      "duration_minutes": 20,
+      "station": {
+        "teams_per_instance": 1,
+        "max_parallel_instances": 3,
+        "materials_review_required": true
+      },
+      "solo_fallback": "Documents ou indices fournis sans prétendre démontrer une interaction entre pairs.",
+      "group_fallback": "Transmission différée supervisée si les équipes ne peuvent pas se rencontrer.",
+      "contextualization": "Choisir des matériaux"
+    },
+    {
+      "id": "act-03",
+      "exercise_ref": {
+        "owner": "Ékole",
+        "resource_id": "ekoleprop:ap-060",
+        "revision": "unverified-local-snapshot",
+        "pin_status": "unresolved",
+        "source_note": "banques/prf22/activites-proposees-v0_7.json"
+      },
+      "objectives": [
+        "obj-03"
+      ],
+      "role_ids": [
+        "role-01",
+        "role-02"
+      ],
+      "duration_minutes": 20,
+      "station": {
+        "teams_per_instance": 1,
+        "max_parallel_instances": 3,
+        "materials_review_required": true
+      },
+      "solo_fallback": "Documents ou indices fournis sans prétendre démontrer une interaction entre pairs.",
+      "group_fallback": "Transmission différée supervisée si les équipes ne peuvent pas se rencontrer.",
+      "contextualization": "Dessiner une proposition d’objet ou de décor"
+    }
+  ],
+  "dependencies": [],
+  "organization": {
+    "min_learners": 1,
+    "max_learners": 30,
+    "preferred_team_size": 4,
+    "adaptations": [
+      {
+        "learners": 1,
+        "strategy": "Parcours individuel et ressources documentaires de substitution, sans preuve de collaboration entre pairs.",
+        "requires_teacher_review": true
+      },
+      {
+        "learners": 8,
+        "strategy": "Organisation candidate pour 8 enfants, groupes et matériel à confirmer par l’enseignant.",
+        "requires_teacher_review": true
+      },
+      {
+        "learners": 30,
+        "strategy": "Organisation candidate pour 30 enfants, groupes et matériel à confirmer par l’enseignant.",
+        "requires_teacher_review": true
+      }
+    ],
+    "human_confirm_resources": true
+  },
+  "evidence": {
+    "expected_artifacts": [
+      "Trace attendue selon la ressource Ékole : Planche annotée d'observations. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "Trace attendue selon la ressource Ékole : Fiche de choix des matériaux et essais documentés. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "Trace attendue selon la ressource Ékole : Deux esquisses annotées. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon."
+    ],
+    "teacher_validation": true,
+    "student_results_stored_here": false
+  },
+  "governance": {
+    "access_authority": "external_required",
+    "execution_authority": "external_required",
+    "publication_authorized": false,
+    "activation_authorized": false,
+    "student_data_included": false,
+    "review_status": "not_evaluated"
+  },
+  "pedagogical_model": {
+    "theory_refs": [
+      {
+        "id": "biggs-align",
+        "citation": "Biggs, J. (2003). Constructive alignment. Présentation University of Queensland.",
+        "url": "https://itali.uq.edu.au/teaching-guidance/principles-learning/guiding-theories-and-frameworks/teaching-frameworks-and-models",
+        "design_function": "Relier les objectifs aux actions et aux preuves évaluables."
+      },
+      {
+        "id": "laurillard",
+        "citation": "Laurillard, D. Conversational Framework, six formes d’apprentissage, UCL.",
+        "url": "https://www.ucl.ac.uk/short-courses/staff-resources/course-design/designing-learning-activities",
+        "design_function": "Caractériser les actes d’enquête, de pratique, de collaboration et de production."
+      },
+      {
+        "id": "sandoval-2014",
+        "citation": "Sandoval, W. (2014). Conjecture Mapping. Journal of the Learning Sciences, 23(1), 18–36.",
+        "url": "https://doi.org/10.1080/10508406.2013.778204",
+        "design_function": "Relier les dispositifs, les médiations et les résultats attendus."
+      }
+    ],
+    "objective_conditions": [
+      {
+        "objective_id": "obj-01",
+        "assessment_requires": "individual_possible",
+        "interpretation_limit": "La trace prévue dans « Les structures à tester » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+      },
+      {
+        "objective_id": "obj-02",
+        "assessment_requires": "individual_possible",
+        "interpretation_limit": "La trace prévue dans « Les structures à tester » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+      },
+      {
+        "objective_id": "obj-03",
+        "assessment_requires": "individual_possible",
+        "interpretation_limit": "La trace prévue dans « Les structures à tester » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+      }
+    ],
+    "activity_didactics": [
+      {
+        "activity_id": "act-01",
+        "learning_types": [
+          "production"
+        ],
+        "four_cid_components": [
+          "learning_task"
+        ],
+        "pedagogical_rationale": "Si l’enfant réalise « Inventaire des formes et couleurs » pour contribuer à « Tableau comparatif » dans « Les structures à tester », il pourrait exercer « Observer formes, lignes, couleurs et textures ». L’effet et la difficulté restent à examiner."
+      },
+      {
+        "activity_id": "act-02",
+        "learning_types": [
+          "production"
+        ],
+        "four_cid_components": [
+          "learning_task"
+        ],
+        "pedagogical_rationale": "Si l’enfant réalise « Choisir des matériaux » pour contribuer à « Tableau comparatif » dans « Les structures à tester », il pourrait exercer « Choisir des matériaux et procédés de création ». L’effet et la difficulté restent à examiner."
+      },
+      {
+        "activity_id": "act-03",
+        "learning_types": [
+          "production"
+        ],
+        "four_cid_components": [
+          "learning_task"
+        ],
+        "pedagogical_rationale": "Si l’enfant réalise « Dessiner une proposition d’objet ou de décor » pour contribuer à « Tableau comparatif » dans « Les structures à tester », il pourrait exercer « Composer dans l’espace et sur un support ». L’effet et la difficulté restent à examiner."
+      }
+    ],
+    "conjectures": [
+      {
+        "id": "conj-01",
+        "conjecture_statement": "Si l’enfant réalise « Inventaire des formes et couleurs » pour contribuer à « Tableau comparatif » dans « Les structures à tester », il pourrait exercer « Observer formes, lignes, couleurs et textures ». L’effet et la difficulté restent à examiner.",
+        "theoretical_basis_ids": [
+          "biggs-align",
+          "laurillard",
+          "sandoval-2014"
+        ],
+        "design_activity_ids": [
+          "act-01"
+        ],
+        "intended_objective_ids": [
+          "obj-01"
+        ],
+        "mediating_processes": [
+          {
+            "id": "process-01",
+            "description": "Repérer dans la réalisation les opérations demandées par « Inventaire des formes et couleurs » : Observer les formes et couleurs d'une scène puis construire un nuancier ou planche d'inspiration. Vérifier qu’elles se rapportent effectivement à « Identifier et décrire des éléments visuels dans des images et objets ».",
+            "observation_strategy": "Pendant « Inventaire des formes et couleurs », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer."
+          }
+        ],
+        "boundary_conditions": [
+          "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : maquette. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Tableau comparatif ». Adapter si le contexte change."
+        ],
+        "disconfirmation_signals": [
+          "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Observer formes, lignes, couleurs et textures », ou n'arrive pas à justifier une étape malgré des soutiens adaptés."
+        ],
+        "alternative_explanations": [
+          "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule."
+        ],
+        "validation_status": "untested"
+      },
+      {
+        "id": "conj-02",
+        "conjecture_statement": "Si l’enfant réalise « Choisir des matériaux » pour contribuer à « Tableau comparatif » dans « Les structures à tester », il pourrait exercer « Choisir des matériaux et procédés de création ». L’effet et la difficulté restent à examiner.",
+        "theoretical_basis_ids": [
+          "biggs-align",
+          "laurillard",
+          "sandoval-2014"
+        ],
+        "design_activity_ids": [
+          "act-02"
+        ],
+        "intended_objective_ids": [
+          "obj-02"
+        ],
+        "mediating_processes": [
+          {
+            "id": "process-02",
+            "description": "Repérer dans la réalisation les opérations demandées par « Choisir des matériaux » : Comparer deux matériaux de création disponibles et défendre un choix en fonction d'une contrainte. Vérifier qu’elles se rapportent effectivement à « Choisir matériaux et procédés en fonction d’une intention créative ».",
+            "observation_strategy": "Pendant « Choisir des matériaux », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer."
+          }
+        ],
+        "boundary_conditions": [
+          "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : maquette. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Tableau comparatif ». Adapter si le contexte change."
+        ],
+        "disconfirmation_signals": [
+          "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Choisir des matériaux et procédés de création », ou n'arrive pas à justifier une étape malgré des soutiens adaptés."
+        ],
+        "alternative_explanations": [
+          "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule."
+        ],
+        "validation_status": "untested"
+      },
+      {
+        "id": "conj-03",
+        "conjecture_statement": "Si l’enfant réalise « Dessiner une proposition d’objet ou de décor » pour contribuer à « Tableau comparatif » dans « Les structures à tester », il pourrait exercer « Composer dans l’espace et sur un support ». L’effet et la difficulté restent à examiner.",
+        "theoretical_basis_ids": [
+          "biggs-align",
+          "laurillard",
+          "sandoval-2014"
+        ],
+        "design_activity_ids": [
+          "act-03"
+        ],
+        "intended_objective_ids": [
+          "obj-03"
+        ],
+        "mediating_processes": [
+          {
+            "id": "process-03",
+            "description": "Repérer dans la réalisation les opérations demandées par « Dessiner une proposition d’objet ou de décor » : Produire deux croquis rapides d’un objet, d’une affiche ou d’un décor fictif et expliquer un choix de forme ou de couleur. Vérifier qu’elles se rapportent effectivement à « Organiser des éléments visuels en une composition intentionnelle ».",
+            "observation_strategy": "Pendant « Dessiner une proposition d’objet ou de décor », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer."
+          }
+        ],
+        "boundary_conditions": [
+          "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : maquette. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Tableau comparatif ». Adapter si le contexte change."
+        ],
+        "disconfirmation_signals": [
+          "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Composer dans l’espace et sur un support », ou n'arrive pas à justifier une étape malgré des soutiens adaptés."
+        ],
+        "alternative_explanations": [
+          "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule."
+        ],
+        "validation_status": "untested"
+      }
+    ],
+    "evidence_design": [
+      {
+        "id": "evidence-01",
+        "description": "Trace attendue selon la ressource Ékole : Planche annotée d'observations. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+        "produced_by_activity_ids": [
+          "act-01"
+        ],
+        "interpretation_limits": [
+          "La trace prévue dans « Les structures à tester » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+        ],
+        "storage_boundary": "external_only"
+      },
+      {
+        "id": "evidence-02",
+        "description": "Trace attendue selon la ressource Ékole : Fiche de choix des matériaux et essais documentés. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+        "produced_by_activity_ids": [
+          "act-02"
+        ],
+        "interpretation_limits": [
+          "La trace prévue dans « Les structures à tester » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+        ],
+        "storage_boundary": "external_only"
+      },
+      {
+        "id": "evidence-03",
+        "description": "Trace attendue selon la ressource Ékole : Deux esquisses annotées. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+        "produced_by_activity_ids": [
+          "act-03"
+        ],
+        "interpretation_limits": [
+          "La trace prévue dans « Les structures à tester » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+        ],
+        "storage_boundary": "external_only"
+      }
+    ],
+    "alignment": [
+      {
+        "id": "alignment-01",
+        "objective_id": "obj-01",
+        "activity_ids": [
+          "act-01"
+        ],
+        "expected_learner_actions": [
+          "Pour résoudre « La résistance des modèles diffère. », proposer la tâche suivante : Observer les formes et couleurs d'une scène puis construire un nuancier ou planche d'inspiration. Mettre à disposition : plans, mesures de tests. Livrable de la situation : Tableau comparatif. Les données et le matériel précis sont à fournir avant usage."
+        ],
+        "process_ids": [
+          "process-01"
+        ],
+        "evidence_id": "evidence-01",
+        "criteria": [
+          "Critères proposés, à préciser et à faire valider : Éléments repérés, choix expliqués. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise."
+        ],
+        "assessed_modes": [
+          "solo",
+          "collaborative"
+        ],
+        "assessment_authority": "teacher",
+        "assessment_status": "planned_only"
+      },
+      {
+        "id": "alignment-02",
+        "objective_id": "obj-02",
+        "activity_ids": [
+          "act-02"
+        ],
+        "expected_learner_actions": [
+          "Pour résoudre « La résistance des modèles diffère. », proposer la tâche suivante : Comparer deux matériaux de création disponibles et défendre un choix en fonction d'une contrainte. Mettre à disposition : plans, mesures de tests. Livrable de la situation : Tableau comparatif. Les données et le matériel précis sont à fournir avant usage."
+        ],
+        "process_ids": [
+          "process-02"
+        ],
+        "evidence_id": "evidence-02",
+        "criteria": [
+          "Critères proposés, à préciser et à faire valider : Choix relié à l'usage, sécurité et disponibilité. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise."
+        ],
+        "assessed_modes": [
+          "solo",
+          "collaborative"
+        ],
+        "assessment_authority": "teacher",
+        "assessment_status": "planned_only"
+      },
+      {
+        "id": "alignment-03",
+        "objective_id": "obj-03",
+        "activity_ids": [
+          "act-03"
+        ],
+        "expected_learner_actions": [
+          "Pour résoudre « La résistance des modèles diffère. », proposer la tâche suivante : Produire deux croquis rapides d’un objet, d’une affiche ou d’un décor fictif et expliquer un choix de forme ou de couleur. Mettre à disposition : plans, mesures de tests. Livrable de la situation : Tableau comparatif. Les données et le matériel précis sont à fournir avant usage."
+        ],
+        "process_ids": [
+          "process-03"
+        ],
+        "evidence_id": "evidence-03",
+        "criteria": [
+          "Critères proposés, à préciser et à faire valider : Variantes visibles, choix plastique exprimé et contrainte source respectée. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise."
+        ],
+        "assessed_modes": [
+          "solo",
+          "collaborative"
+        ],
+        "assessment_authority": "teacher",
+        "assessment_status": "planned_only"
+      }
+    ],
+    "adaptation_contract": {
+      "invariants": [
+        {
+          "id": "inv-alignement",
+          "rule": "Toute preuve doit demeurer attachée à un objectif avec critères pertinents."
+        },
+        {
+          "id": "inv-provenance",
+          "rule": "Ne pas remplacer une source non résolue par une citation ou un pin inventé."
+        },
+        {
+          "id": "inv-collaboration",
+          "rule": "Une modalité solitaire ne valide jamais une compétence nécessitant des pairs."
+        },
+        {
+          "id": "inv-autorite",
+          "rule": "Aucun plan de conception ne peut conférer droits scolaires ni activation Orgo."
+        }
+      ],
+      "variants": [
+        {
+          "learners": 1,
+          "mode": "solo",
+          "change_notes": [
+            "Parcours individuel et ressources documentaires de substitution, sans preuve de collaboration entre pairs."
+          ],
+          "preserved_objective_ids": [
+            "obj-01",
+            "obj-02",
+            "obj-03"
+          ],
+          "non_assessable_objective_ids": [],
+          "teacher_approval_required": true,
+          "resources_confirmed": false
+        },
+        {
+          "learners": 8,
+          "mode": "collaborative",
+          "change_notes": [
+            "Organisation candidate pour 8 enfants, groupes et matériel à confirmer par l’enseignant."
+          ],
+          "preserved_objective_ids": [
+            "obj-01",
+            "obj-02",
+            "obj-03"
+          ],
+          "non_assessable_objective_ids": [],
+          "teacher_approval_required": true,
+          "resources_confirmed": false
+        },
+        {
+          "learners": 30,
+          "mode": "collaborative",
+          "change_notes": [
+            "Organisation candidate pour 30 enfants, groupes et matériel à confirmer par l’enseignant."
+          ],
+          "preserved_objective_ids": [
+            "obj-01",
+            "obj-02",
+            "obj-03"
+          ],
+          "non_assessable_objective_ids": [],
+          "teacher_approval_required": true,
+          "resources_confirmed": false
+        }
+      ]
+    },
+    "research_plan": {
+      "observation_protocol": "Comparer, avec l’enseignant et dans un cadre autorisé, les processus observés aux conjectures explicites, y compris les contre-exemples et conditions de séance.",
+      "ethics_limits": [
+        "Ne stocker aucune identité d’enfant ni réalisation individuelle dans ce blueprint.",
+        "Respecter les règles locales d’accès, de consentement, d’autorisation et de conservation."
+      ],
+      "revision_rule": "Créer une nouvelle révision après chaque pilote, tracer les écarts et conserver les hypothèses non corroborées comme telles.",
+      "claims_status": "untested",
+      "human_reviews": {
+        "pedagogical": "not_reviewed",
+        "contextual": "not_reviewed",
+        "accessibility": "not_reviewed",
+        "operational": "not_reviewed",
+        "authority": "not_reviewed"
+      }
+    }
+  }
+}

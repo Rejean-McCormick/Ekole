@@ -1,0 +1,94 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "mission:randonnee-a-velo",
+  "focale": "education_physique",
+  "question_motrice": "Martin prépare une randonnée avec un petit groupe. Il faut d’abord préparer les vélos, choisir un itinéraire, découvrir la nature, accueillir une rencontre et gérer une pause-gourmandise fictive.",
+  "declencheur_source": "Martin prépare une randonnée avec un petit groupe. Il faut d’abord préparer les vélos, choisir un itinéraire, découvrir la nature, accueillir une rencontre et gérer une pause-gourmandise fictive.",
+  "informations_a_preparer": [
+    "Fragments de la mission : diffusion conditionnelle par Orgo, non affichés ici"
+  ],
+  "actions_source": [],
+  "production_attendue_source": "Étapes prévues par la mission : lire-pneu, air-et-valve, abc-dv, itineraire, message-depart, station-nature, rencontre, glacerie, reportage, journal-retour",
+  "rebond_source": "",
+  "niveaux_suggeres_source": "à déterminer",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-015",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-eps-004",
+      "titre": "Atelier ciblé : Coordonner des gestes et manipuler un objet",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "velo",
+        "randonnee"
+      ],
+      "motif_de_choix": "Indices thématiques : velo, randonnee",
+      "consigne_source": "Faire exécuter ou représenter l’action, expliquer un choix sécuritaire et observer avec accord.",
+      "consigne_contextualisee": "Dans « La grande randonnée à vélo », accomplir « Atelier ciblé : Coordonner des gestes et manipuler un objet » pour contribuer à « Étapes prévues par la mission : lire-pneu, air-et-valve, abc-dv, itineraire, message-depart, station-nature, rencontre, glacerie, reportage, journal-retour ». Faire exécuter ou représenter l’action, expliquer un choix sécuritaire et observer avec accord.",
+      "preuve": "démonstration accessible",
+      "critere_propose": "Vérifier la trace attendue pour « Manipulation d’objets et habiletés motrices » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-073",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-007",
+      "titre": "Planifier une coopération motrice",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "randonnee",
+        "mission"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : randonnee",
+      "consigne_source": "Dans une simulation sans déplacement réel, répartir trois rôles complémentaires pour réaliser un relais ou une mission motrice.",
+      "consigne_contextualisee": "Dans « La grande randonnée à vélo », accomplir « Planifier une coopération motrice » pour contribuer à « Étapes prévues par la mission : lire-pneu, air-et-valve, abc-dv, itineraire, message-depart, station-nature, rencontre, glacerie, reportage, journal-retour ». Dans une simulation sans déplacement réel, répartir trois rôles complémentaires pour réaliser un relais ou une mission motrice.",
+      "preuve": "Schéma de rôles et consignes.",
+      "critere_propose": "Rôles distincts, passages compréhensibles et solution de rechange.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-046",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-002",
+      "titre": "Concevoir un parcours locomoteur",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "velo"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : velo",
+      "consigne_source": "Planifier et essayer un parcours simple et sécuritaire en distinguant marche, saut et déplacement.",
+      "consigne_contextualisee": "Dans « La grande randonnée à vélo », accomplir « Concevoir un parcours locomoteur » pour contribuer à « Étapes prévues par la mission : lire-pneu, air-et-valve, abc-dv, itineraire, message-depart, station-nature, rencontre, glacerie, reportage, journal-retour ». Planifier et essayer un parcours simple et sécuritaire en distinguant marche, saut et déplacement.",
+      "preuve": "Schéma de parcours et observation motrice.",
+      "critere_propose": "Déplacements appropriés et sécurité respectée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

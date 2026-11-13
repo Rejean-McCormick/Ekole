@@ -1,0 +1,81 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:atelier-metal",
+  "focale": "arts",
+  "question_motrice": "Les propriétés attendues sont contradictoires.",
+  "declencheur_source": "Un objet doit être conçu en matériaux sûrs.",
+  "informations_a_preparer": [
+    "usage prevu",
+    "contraintes de materiaux"
+  ],
+  "actions_source": [
+    "dessiner",
+    "comparer",
+    "fabriquer"
+  ],
+  "production_attendue_source": "Prototype en carton",
+  "rebond_source": "Le prototype se déforme.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-060",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-003",
+      "titre": "Dessiner une proposition d’objet ou de décor",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "forgeron",
+        "projet"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : forgeron",
+      "consigne_source": "Produire deux croquis rapides d’un objet, d’une affiche ou d’un décor fictif et expliquer un choix de forme ou de couleur.",
+      "consigne_contextualisee": "Dans « Le projet du forgeron », accomplir « Dessiner une proposition d’objet ou de décor » pour contribuer à « Prototype en carton ». Produire deux croquis rapides d’un objet, d’une affiche ou d’un décor fictif et expliquer un choix de forme ou de couleur.",
+      "preuve": "Deux esquisses annotées.",
+      "critere_propose": "Variantes visibles, choix plastique exprimé et contrainte source respectée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-063",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-009",
+      "titre": "Présenter une réalisation de manière visuelle",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "forgeron",
+        "projet"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : forgeron",
+      "consigne_source": "Préparer un court cartel ou une étiquette expliquant un choix de matériau, de forme ou de couleur sur un objet fictif.",
+      "consigne_contextualisee": "Dans « Le projet du forgeron », accomplir « Présenter une réalisation de manière visuelle » pour contribuer à « Prototype en carton ». Préparer un court cartel ou une étiquette expliquant un choix de matériau, de forme ou de couleur sur un objet fictif.",
+      "preuve": "Cartel ou étiquette associé à la réalisation.",
+      "critere_propose": "Choix identifié et justification reliée à la réalisation.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

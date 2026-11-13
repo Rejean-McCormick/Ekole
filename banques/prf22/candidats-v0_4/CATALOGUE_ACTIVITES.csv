@@ -1,0 +1,50 @@
+﻿ref;titre;type;domaine;preuve;objectif_candidat
+micro:enseignement-explicite-001;Atelier ciblé : Caractériser un personnage fictif;micro_situation;AD;présentation incarnée;qc-pri-ad-002
+micro:enseignement-explicite-002;Atelier ciblé : Comprendre des consignes courtes en anglais;micro_situation;ALS;action exécutée après consigne orale;qc-pri-als-001
+micro:enseignement-explicite-003;Atelier ciblé : Employer des formules et courtes questions;micro_situation;ALS;échange oral enregistré localement ou observé;qc-pri-als-005
+micro:enseignement-explicite-004;Atelier ciblé : Repérer une information dans un court écrit adapté;micro_situation;ALS;réponse appuyée sur le texte;qc-pri-als-007
+micro:enseignement-explicite-005;Atelier ciblé : Exprimer un point de vue sur une création;micro_situation;AP;observations sans jugement des personnes;qc-pri-ap-008
+micro:enseignement-explicite-006;Atelier ciblé : Étudier les étapes de vie et diversité des expériences;micro_situation;CCQ;observation non intrusive;NON_COUPLE
+micro:enseignement-explicite-007;Atelier ciblé : Normes de genre : enseigner avec respect et sans assignation;micro_situation;CCQ;enseignement explicite par personnel qualifié;NON_COUPLE
+micro:enseignement-explicite-008;Atelier ciblé : Observer différentes façons d’habiter le territoire québécois;micro_situation;CCQ;documents de contextes variés;NON_COUPLE
+micro:enseignement-explicite-009;Atelier ciblé : Prévention des agressions sexuelles : enseignement approprié par personnel qualifié;micro_situation;CCQ;enseignement spécifique et attestation enseignante;NON_COUPLE
+micro:enseignement-explicite-010;Atelier ciblé : Observer la diversité des croyances et des formes de spiritualité sans l’essentialiser;micro_situation;CCQ;analyse documentaire encadrée;NON_COUPLE
+micro:enseignement-explicite-011;Atelier ciblé : Observer des stéréotypes et leurs effets;micro_situation;CCQ;exemples et points de vue comparés;qc-pri-ccq-009
+micro:enseignement-explicite-012;Atelier ciblé : Inventer une courte séquence corporelle;micro_situation;DA;enchaînement expliqué;qc-pri-da-003
+micro:enseignement-explicite-013;Atelier ciblé : Interpréter la séquence devant un groupe;micro_situation;DA;observation respectueuse;qc-pri-da-006
+micro:enseignement-explicite-014;Atelier ciblé : Explorer corps, espace et qualités de mouvement;micro_situation;DA;séquence observée;qc-pri-da-001
+micro:enseignement-explicite-015;Atelier ciblé : Coordonner des gestes et manipuler un objet;micro_situation;EPS;démonstration accessible;qc-pri-eps-004
+micro:enseignement-explicite-016;Atelier ciblé : Maintenir et retrouver son équilibre;micro_situation;EPS;observation graduée;qc-pri-eps-003
+micro:enseignement-explicite-017;Atelier ciblé : Observer et nommer des habitudes actives appropriées;micro_situation;EPS;rétroaction adaptée;qc-pri-eps-010
+micro:enseignement-explicite-018;Atelier ciblé : Observer et effectuer des accords appropriés;micro_situation;FR;justification d’accord simple;qc-pri-fr-016
+micro:enseignement-explicite-019;Atelier ciblé : Formuler une inférence simple à partir du texte;micro_situation;FR;raisonnement et indice textuel;qc-pri-fr-006
+micro:enseignement-explicite-020;Atelier ciblé : Réviser l’orthographe d’usage avec des outils;micro_situation;FR;brouillon et version corrigée;qc-pri-fr-012
+micro:enseignement-explicite-021;Atelier ciblé : Employer des formes verbales adaptées au texte;micro_situation;FR;relecture de formes verbales ciblées;qc-pri-fr-018
+micro:enseignement-explicite-022;Atelier ciblé : Expliquer et vérifier sa démarche mathématique;micro_situation;MA;justification intelligible;qc-pri-ma-033
+micro:enseignement-explicite-023;Atelier ciblé : Représenter des fractions usuelles avec un matériel;micro_situation;MA;parts égales et fraction associée;qc-pri-ma-012
+micro:enseignement-explicite-024;Atelier ciblé : Lire, représenter et comparer des nombres naturels;micro_situation;MA;écriture et représentation vérifiées;qc-pri-ma-002
+micro:enseignement-explicite-025;Atelier ciblé : Mobiliser la valeur de position et le regroupement;micro_situation;MA;décomposition correcte;qc-pri-ma-003
+micro:enseignement-explicite-026;Atelier ciblé : Repérer et poursuivre une régularité;micro_situation;MA;règle expliquée et suite complétée;qc-pri-ma-004
+micro:enseignement-explicite-027;Atelier ciblé : Créer un court motif sonore;micro_situation;MU;motif identifié;qc-pri-mu-006
+micro:enseignement-explicite-028;Atelier ciblé : Interpréter un motif en groupe;micro_situation;MU;participation et écoute;qc-pri-mu-007
+micro:enseignement-explicite-029;Atelier ciblé : Décrire une conclusion limitée aux observations;micro_situation;ST;conclusion justifiée;qc-pri-st-004
+micro:enseignement-explicite-030;Atelier ciblé : Comparer des caractéristiques de sociétés algonquiennes vers 1500;micro_situation;US;comparaison sourcée, sans homogénéiser les nations;NON_COUPLE
+micro:enseignement-explicite-031;Atelier ciblé : Distinguer changement, continuité, passé et présent;micro_situation;US;comparaison située dans le temps;qc-pri-us-015
+micro:enseignement-explicite-032;Atelier ciblé : Étudier une société iroquoienne vers 1500 avec sources contextualisées;micro_situation;US;"carte/fiche sourcée; validation historique et culturelle requise";NON_COUPLE
+micro:enseignement-explicite-033;Atelier ciblé : Décrire une organisation sociale liée à son territoire;micro_situation;US;description liée aux ressources;qc-pri-us-004
+micro:enseignement-explicite-034;Atelier ciblé : Distinguer documents, témoins et sources;micro_situation;US;origine de document identifiée;qc-pri-us-005
+det:757035f103a7307f;La boulangerie fictive prépare 6 plateaux de 4 pains. Combien de pains?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-033
+det:7994501c931511c3;4 équipes fabriquent chacune 3 chapeaux. Combien de chapeaux?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-008
+det:3f9794170c6a84cd;Une équipe possède 50 Klownkoins et achète 3 articles à 8 Klownkoins. Quel montant reste?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-007
+det:75802839c2654998;Il faut 30 invitations. Il reste 18 feuilles. Combien manque-t-il de feuilles?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-007
+det:6a6091256eb2bca0;Trois fournitures coûtent respectivement 12, 7 et 5 Klownkoins. Quel total?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-006
+det:cc8478fd10be4b19;La caisse reçoit 18, 13 et 9 Klownkoins. Quel total?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-006
+det:25afc666916d7725;24 cartons sont partagés également entre 4 groupes. Combien par groupe?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-009
+det:3556b8ce54c27ed9;5 rangées contiennent 4 chaises chacune. Combien de chaises?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-008
+det:bb467a6c9f5ac994;Un plant mesure 8 cm, puis 13 cm. Quelle croissance?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-025
+det:37346345dfe056f4;Quatre pots ont besoin chacun de 250 mL d’eau. Quel volume total?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-025
+det:a9c39c1c7bd22e2e;La classe imprime 3 lots de 9 invitations. Combien d’invitations?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-008
+det:05eaaad049b2dd86;Une plante passe de 3 cm à 9 cm. De combien grandit-elle?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-025
+det:128a2b23a5b97c15;6 équipes préparent 4 étoiles chacune. Combien d’étoiles?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-008
+det:d69d758f0c26aac8;Le spectacle contient 3 numéros de 5 minutes. Combien de minutes?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-026
+det:1049af7fab38bd97;On parcourt 12 m, puis 9 m. Quelle distance totale?;exercice_deterministe;mathématiques (fixture);Réponse et vérification selon fixture locale (non décision de maîtrise);qc-pri-ma-006

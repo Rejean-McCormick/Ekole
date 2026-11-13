@@ -1,0 +1,94 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "mission:boulangerie",
+  "focale": "mathematiques",
+  "question_motrice": "Mission de simulation du monde La boulangerie du village.",
+  "declencheur_source": "Mission de simulation du monde La boulangerie du village.",
+  "informations_a_preparer": [
+    "Fragments de la mission : diffusion conditionnelle par Orgo, non affichés ici"
+  ],
+  "actions_source": [],
+  "production_attendue_source": "Étapes prévues par la mission : phase-1, phase-2, phase-3",
+  "rebond_source": "",
+  "niveaux_suggeres_source": "à déterminer",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-005",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-008",
+      "titre": "Organiser des lots égaux",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "commande",
+        "boulanger"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : commande, boulanger",
+      "consigne_source": "Répartir un matériel fictif en lots égaux, représenter l'opération et vérifier le total.",
+      "consigne_contextualisee": "Dans « La boulangerie du village », accomplir « Organiser des lots égaux » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Répartir un matériel fictif en lots égaux, représenter l'opération et vérifier le total.",
+      "preuve": "Schéma de groupements et calcul expliqué.",
+      "critere_propose": "Groupements réguliers, opération cohérente, vérification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-011",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-007",
+      "titre": "Calculer ce qui manque",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "commande",
+        "prepar"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : commande, prepar",
+      "consigne_source": "Déterminer par soustraction la quantité nécessaire pour atteindre une cible contextualisée.",
+      "consigne_contextualisee": "Dans « La boulangerie du village », accomplir « Calculer ce qui manque » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Déterminer par soustraction la quantité nécessaire pour atteindre une cible contextualisée.",
+      "preuve": "Calcul annoté et réponse avec unité.",
+      "critere_propose": "Soustraction pertinente, contrôle du résultat.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-010",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-006",
+      "titre": "Préparer un budget simple",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "commande"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : commande",
+      "consigne_source": "Additionner des coûts ou quantités fournis dans une fiche de mission et expliquer une stratégie de calcul.",
+      "consigne_contextualisee": "Dans « La boulangerie du village », accomplir « Préparer un budget simple » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Additionner des coûts ou quantités fournis dans une fiche de mission et expliquer une stratégie de calcul.",
+      "preuve": "Liste de calculs et total justifié.",
+      "critere_propose": "Choix de l'opération, exactitude et vérification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

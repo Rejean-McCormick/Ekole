@@ -1,0 +1,77 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "mission:sorciere-solo",
+  "focale": "mathematiques",
+  "question_motrice": "Mila veut remplir quatre fioles avec la même quantité de potion imaginaire.",
+  "declencheur_source": "Mila veut remplir quatre fioles avec la même quantité de potion imaginaire.",
+  "informations_a_preparer": [
+    "Fragments de la mission : diffusion conditionnelle par Orgo, non affichés ici"
+  ],
+  "actions_source": [],
+  "production_attendue_source": "Étapes prévues par la mission : mesurer, expliquer",
+  "rebond_source": "",
+  "niveaux_suggeres_source": "à déterminer",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-024",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-002",
+      "titre": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "quantite",
+        "mesure",
+        "calcul"
+      ],
+      "motif_de_choix": "Indices thématiques : quantite, mesure, calcul",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « Le chaudron des mesures », accomplir « Atelier ciblé : Lire, représenter et comparer des nombres naturels » pour contribuer à « Étapes prévues par la mission : mesurer, expliquer ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "écriture et représentation vérifiées",
+      "critere_propose": "Vérifier la trace attendue pour « Lire, écrire et comparer des nombres naturels » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-022",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-033",
+      "titre": "Atelier ciblé : Expliquer et vérifier sa démarche mathématique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "calcul",
+        "quantite"
+      ],
+      "motif_de_choix": "Indices thématiques : calcul, quantite",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « Le chaudron des mesures », accomplir « Atelier ciblé : Expliquer et vérifier sa démarche mathématique » pour contribuer à « Étapes prévues par la mission : mesurer, expliquer ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "justification intelligible",
+      "critere_propose": "Vérifier la trace attendue pour « Justifier et communiquer une démarche mathématique » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

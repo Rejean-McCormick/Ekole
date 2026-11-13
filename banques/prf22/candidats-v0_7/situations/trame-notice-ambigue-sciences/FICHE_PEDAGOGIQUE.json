@@ -1,0 +1,100 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:notice-ambigue",
+  "focale": "sciences",
+  "question_motrice": "Deux étapes peuvent être comprises différemment.",
+  "declencheur_source": "Une notice ne permet pas de monter une maquette.",
+  "informations_a_preparer": [
+    "texte des consignes",
+    "dessin du mecanisme"
+  ],
+  "actions_source": [
+    "clarifier",
+    "tester",
+    "reecrire"
+  ],
+  "production_attendue_source": "Notice corrigée",
+  "rebond_source": "Une pièce est différente du schéma.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-022",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-002",
+      "titre": "Comparer deux hypothèses",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "mecan",
+        "maquette"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : mecan, maquette",
+      "consigne_source": "Formuler deux explications possibles d'un problème matériel et prévoir un test simple et sûr pour les distinguer.",
+      "consigne_contextualisee": "Dans « La notice ambiguë », accomplir « Comparer deux hypothèses » pour contribuer à « Notice corrigée ». Formuler deux explications possibles d'un problème matériel et prévoir un test simple et sûr pour les distinguer.",
+      "preuve": "Fiche hypothèses, protocole proposé, risques.",
+      "critere_propose": "Hypothèses distinctes et test faisable avec supervision.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-025",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-007",
+      "titre": "Tester une structure",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "maquette",
+        "mecan"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : maquette, mecan",
+      "consigne_source": "Comparer deux structures miniatures sous une même charge sécuritaire et décrire ce qui varie.",
+      "consigne_contextualisee": "Dans « La notice ambiguë », accomplir « Tester une structure » pour contribuer à « Notice corrigée ». Comparer deux structures miniatures sous une même charge sécuritaire et décrire ce qui varie.",
+      "preuve": "Tableau de tests de stabilité et photo/croquis.",
+      "critere_propose": "Variable comparée clairement, sécurité respectée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-027",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-011",
+      "titre": "Décrire un mécanisme",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "mecan",
+        "inventeur"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : mecan, inventeur",
+      "consigne_source": "Examiner un objet technique inerte et dessiner comment une pièce agit sur une autre sans le démonter dangereusement.",
+      "consigne_contextualisee": "Dans « La notice ambiguë », accomplir « Décrire un mécanisme » pour contribuer à « Notice corrigée ». Examiner un objet technique inerte et dessiner comment une pièce agit sur une autre sans le démonter dangereusement.",
+      "preuve": "Schéma légendé des pièces et fonctions.",
+      "critere_propose": "Fonctions plausibles, observations distinguées des suppositions.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

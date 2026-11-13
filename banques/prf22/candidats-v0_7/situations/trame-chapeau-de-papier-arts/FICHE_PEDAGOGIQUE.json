@@ -1,0 +1,102 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:chapeau-de-papier",
+  "focale": "arts",
+  "question_motrice": "Le papier et la forme imposent des contraintes.",
+  "declencheur_source": "Un costume a besoin d’un accessoire.",
+  "informations_a_preparer": [
+    "modele",
+    "dimensions de la feuille"
+  ],
+  "actions_source": [
+    "plier",
+    "mesurer",
+    "decrire"
+  ],
+  "production_attendue_source": "Chapeau ou maquette papier",
+  "rebond_source": "Un autre format est demandé.",
+  "niveaux_suggeres_source": "primaire-2",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-031",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-001",
+      "titre": "Inventaire des formes et couleurs",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "chapeau",
+        "maquette",
+        "costume"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : chapeau, maquette, costume",
+      "consigne_source": "Observer les formes et couleurs d'une scène puis construire un nuancier ou planche d'inspiration.",
+      "consigne_contextualisee": "Dans « Le chapeau de papier », accomplir « Inventaire des formes et couleurs » pour contribuer à « Chapeau ou maquette papier ». Observer les formes et couleurs d'une scène puis construire un nuancier ou planche d'inspiration.",
+      "preuve": "Planche annotée d'observations.",
+      "critere_propose": "Éléments repérés, choix expliqués.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-033",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-004",
+      "titre": "Choisir des matériaux",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "chapeau",
+        "costume",
+        "maquette"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : chapeau, costume, maquette",
+      "consigne_source": "Comparer deux matériaux de création disponibles et défendre un choix en fonction d'une contrainte.",
+      "consigne_contextualisee": "Dans « Le chapeau de papier », accomplir « Choisir des matériaux » pour contribuer à « Chapeau ou maquette papier ». Comparer deux matériaux de création disponibles et défendre un choix en fonction d'une contrainte.",
+      "preuve": "Fiche de choix des matériaux et essais documentés.",
+      "critere_propose": "Choix relié à l'usage, sécurité et disponibilité.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-034",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-009",
+      "titre": "Expliquer une démarche artistique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "costume",
+        "chapeau"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : costume, chapeau",
+      "consigne_source": "Présenter les étapes d'une création en indiquant une modification et sa raison.",
+      "consigne_contextualisee": "Dans « Le chapeau de papier », accomplir « Expliquer une démarche artistique » pour contribuer à « Chapeau ou maquette papier ». Présenter les étapes d'une création en indiquant une modification et sa raison.",
+      "preuve": "Carnet d'étapes et commentaire oral ou écrit.",
+      "critere_propose": "Étapes identifiables, choix motivés.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

@@ -1,0 +1,97 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:messagers-en-mouvement",
+  "focale": "francais",
+  "question_motrice": "Les destinataires et les trajets ne sont pas connus de tous.",
+  "declencheur_source": "Des messages doivent circuler entre équipes.",
+  "informations_a_preparer": [
+    "destinations",
+    "messages autorises"
+  ],
+  "actions_source": [
+    "orienter",
+    "transmettre",
+    "confirmer"
+  ],
+  "production_attendue_source": "Messages remis",
+  "rebond_source": "Un destinataire change de lieu.",
+  "niveaux_suggeres_source": "primaire-1-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-013",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-005",
+      "titre": "Repérer une consigne essentielle",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : message",
+      "consigne_source": "Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "consigne_contextualisee": "Dans « Le relais des messages », accomplir « Repérer une consigne essentielle » pour contribuer à « Messages remis ». Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "preuve": "Fiche de quatre informations avec passages repérés.",
+      "critere_propose": "Fidélité au texte et distinction explicite faits/inférences.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-014",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-006",
+      "titre": "Déduire à partir d'indices",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : message",
+      "consigne_source": "Lire un court indice de la situation, proposer une inférence et citer les éléments textuels qui l'appuient.",
+      "consigne_contextualisee": "Dans « Le relais des messages », accomplir « Déduire à partir d'indices » pour contribuer à « Messages remis ». Lire un court indice de la situation, proposer une inférence et citer les éléments textuels qui l'appuient.",
+      "preuve": "Hypothèse et deux indices cités.",
+      "critere_propose": "Lien entre indices et hypothèse, incertitude exprimée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-016",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-021",
+      "titre": "Rédiger une communication",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : message",
+      "consigne_source": "Écrire un court message compréhensible pour aider un autre personnage de la situation.",
+      "consigne_contextualisee": "Dans « Le relais des messages », accomplir « Rédiger une communication » pour contribuer à « Messages remis ». Écrire un court message compréhensible pour aider un autre personnage de la situation.",
+      "preuve": "Texte avec destinataire et information vérifiable.",
+      "critere_propose": "Cohérence, lisibilité et pertinence des informations.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

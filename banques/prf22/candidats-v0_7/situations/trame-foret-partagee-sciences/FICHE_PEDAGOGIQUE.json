@@ -1,0 +1,103 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:foret-partagee",
+  "focale": "sciences",
+  "question_motrice": "Les objectifs de protection et d’usage divergent.",
+  "declencheur_source": "Un territoire forestier fictif est utilisé par plusieurs groupes.",
+  "informations_a_preparer": [
+    "habitats",
+    "besoins humains"
+  ],
+  "actions_source": [
+    "comparer",
+    "debattre",
+    "proposer"
+  ],
+  "production_attendue_source": "Plan d’usage responsable",
+  "rebond_source": "Une espèce fragile est découverte.",
+  "niveaux_suggeres_source": "primaire-3-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-028",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-017",
+      "titre": "Classer le vivant observé",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "jardin",
+        "foret",
+        "habitat"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : jardin, foret, habitat",
+      "consigne_source": "Classer des images documentées de plantes ou animaux avec des critères observables.",
+      "consigne_contextualisee": "Dans « La forêt partagée », accomplir « Classer le vivant observé » pour contribuer à « Plan d’usage responsable ». Classer des images documentées de plantes ou animaux avec des critères observables.",
+      "preuve": "Tableau de classification avec critères.",
+      "critere_propose": "Critères observables et catégories cohérentes.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-029",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-020",
+      "titre": "Relier vivant et habitat",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "jardin",
+        "foret",
+        "habitat"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : jardin, foret, habitat",
+      "consigne_source": "Décrire des besoins d'un organisme et vérifier les informations à partir d'une source documentaire.",
+      "consigne_contextualisee": "Dans « La forêt partagée », accomplir « Relier vivant et habitat » pour contribuer à « Plan d’usage responsable ». Décrire des besoins d'un organisme et vérifier les informations à partir d'une source documentaire.",
+      "preuve": "Schéma habitat–besoins annoté de sa source.",
+      "critere_propose": "Besoins plausibles, source identifiée, généralisations évitées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-067",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-001",
+      "titre": "Enquêter sur un milieu naturel",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "foret",
+        "habitat",
+        "jardin"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : foret, habitat, jardin",
+      "consigne_source": "Décrire, sur photos documentaires validées, trois éléments observables du milieu et formuler une question à investiguer.",
+      "consigne_contextualisee": "Dans « La forêt partagée », accomplir « Enquêter sur un milieu naturel » pour contribuer à « Plan d’usage responsable ». Décrire, sur photos documentaires validées, trois éléments observables du milieu et formuler une question à investiguer.",
+      "preuve": "Grille d’observation et question.",
+      "critere_propose": "Éléments observables distincts des hypothèses.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

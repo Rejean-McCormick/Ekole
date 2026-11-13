@@ -1,0 +1,278 @@
+{
+  "format": "ekole.prf22.authoring/0.3",
+  "status": "design_only",
+  "draft": {
+    "format": "ekole.situation-composition-draft/0.1",
+    "generated_at_utc": "2026-11-12T18:50:29+00:00",
+    "status": "draft_not_admitted",
+    "authorities": {
+      "scenario_source": "Kontexte",
+      "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+      "objectives_and_evidence": "Ékole",
+      "role_proposals": "Kompose",
+      "operational_tasks": "Orgo",
+      "world_ownership": "Orgo_Worlds",
+      "social_collaboration": "Konnaxion",
+      "channels": [
+        "Web",
+        "Kor",
+        "Kamel"
+      ]
+    },
+    "source": {
+      "reference": "trame:troc-equitable",
+      "source_format": "kontexte.catalogue-trames/1",
+      "source_relpath": "data/trames/catalogue-neutral-v0.2.json",
+      "title": "L’échange équitable",
+      "problem": "La valeur et l’utilité ne sont pas perçues pareil.",
+      "narrative_role_codes": [
+        "fermier",
+        "forgeron",
+        "pecheur"
+      ],
+      "source_step_refs_unchanged": []
+    },
+    "world_context": {
+      "epoch": "Période de simulation à préciser selon la trame",
+      "cultural_frame": "Aucune culture réelle attribuée; sources et droits à valider",
+      "place": "Lieu de la situation source, à préciser par l’enseignant",
+      "reality": "fictif",
+      "language": "fr-CA",
+      "notes": "V0.7 : focalisation disciplinaire et choix d’activités explicitement justifiés; aucune validation pédagogique.",
+      "cultural_validation": "pending_human_review"
+    },
+    "activity_bindings": [
+      {
+        "activity_ref": "micro:enseignement-explicite-026",
+        "source_type": "micro_situation",
+        "owner": "Kontexte",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Repérer et poursuivre une régularité",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.ma.suite"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-006",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Partager équitablement",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-ma-009"
+      }
+    ],
+    "learning_objective_links": [
+      {
+        "objective_ref": "qc-pri-ma-004",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Suites et régularités numériques",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-ma-009",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Sens et stratégies de la division",
+        "status": "candidate_teacher_review_required"
+      }
+    ],
+    "participation": {
+      "participant_count": 8,
+      "anonymized_placeholder_only": true,
+      "mode": "groupes_rotatifs",
+      "maximum_per_team": 4,
+      "teams": [
+        {
+          "id": "equipe-01",
+          "participant_placeholders": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "size": 4,
+          "suggested_role": "fermier",
+          "assignment_status": "teacher_to_approve"
+        },
+        {
+          "id": "equipe-02",
+          "participant_placeholders": [
+            "P05",
+            "P06",
+            "P07",
+            "P08"
+          ],
+          "size": 4,
+          "suggested_role": "forgeron",
+          "assignment_status": "teacher_to_approve"
+        }
+      ],
+      "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+      "solo_substitution": null,
+      "stations": [
+        {
+          "id": "station-01",
+          "activity_ref": "micro:enseignement-explicite-026",
+          "title": "Atelier ciblé : Repérer et poursuivre une régularité",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "règle expliquée et suite complétée",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-02",
+          "activity_ref": "ekoleprop:ap-006",
+          "title": "Partager équitablement",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Manipulation ou dessin annoté des parts et éventuel reste.",
+          "adaptation_status": "to_review"
+        }
+      ],
+      "rotation": [
+        {
+          "round": 1,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-02",
+              "status": "visit"
+            }
+          ]
+        }
+      ],
+      "parallel_posts_per_activity": 3,
+      "additional_equipment_required": true,
+      "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+      "station_capacity": "jusqu’à 3 équipe(s) par activité et par ronde, chacune à son poste distinct",
+      "role_validation": "teacher_required"
+    },
+    "collaboration": {
+      "kontexte_hints": "utiliser les joins/fragments de la source, sans libération automatique",
+      "communication": "Konnaxion / Kids, sous permissions serveur",
+      "progress_from_messages": false
+    },
+    "export_hints": {
+      "orgo_world_slug_suggested": "troc-equitable",
+      "world_creation_performed": false,
+      "tasks_dispatched": false,
+      "qr_created": false,
+      "runtime_admitted": false,
+      "teacher_authorized": false,
+      "real_learner_profiles_loaded": false
+    },
+    "required_reviews": [
+      "adéquation au niveau scolaire",
+      "exactitude historique et culturelle",
+      "sécurité et consentements",
+      "objectifs pédagogiques et critères de preuve",
+      "rôles et disponibilité",
+      "matériel et encadrement des postes parallèles",
+      "autorisations serveur et isolement de classe"
+    ]
+  },
+  "theory_entries": {
+    "qc-pri-ma-004": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "practice",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "part_task_practice",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "micro:enseignement-explicite-026"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Atelier ciblé : Repérer et poursuivre une régularité » pour contribuer à « Accord simulé » dans « L’échange équitable », il pourrait exercer « Suites et régularités numériques ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « La valeur et l’utilité ne sont pas perçues pareil. », proposer la tâche suivante : Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode. Mettre à disposition : offre, besoin. Livrable de la situation : Accord simulé. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Atelier ciblé : Repérer et poursuivre une régularité » : Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode. Vérifier qu’elles se rapportent effectivement à « Identifier, poursuivre et décrire une régularité numérique ».",
+      "observation": "Pendant « Atelier ciblé : Repérer et poursuivre une régularité », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Kontexte : règle expliquée et suite complétée. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Trace attendue clairement identifiable (règle expliquée et suite complétée); lien observable avec « Identifier, poursuivre et décrire une régularité numérique »; explication individuelle vérifiable. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Suites et régularités numériques », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Micro-situation explicitement reliée à cette trame Kontexte. Revue de l’ancrage nécessaire. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Accord simulé ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « L’échange équitable » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-ma-009": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "practice",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "part_task_practice",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-006"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Partager équitablement » pour contribuer à « Accord simulé » dans « L’échange équitable », il pourrait exercer « Sens et stratégies de la division ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « La valeur et l’utilité ne sont pas perçues pareil. », proposer la tâche suivante : Proposer un partage d'objets en groupes, représenter les restes et justifier une règle de répartition. Mettre à disposition : offre, besoin. Livrable de la situation : Accord simulé. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Partager équitablement » : Proposer un partage d'objets en groupes, représenter les restes et justifier une règle de répartition. Vérifier qu’elles se rapportent effectivement à « Représenter le partage et le groupement pour résoudre des divisions ».",
+      "observation": "Pendant « Partager équitablement », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Manipulation ou dessin annoté des parts et éventuel reste. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Égalité des parts, reste reconnu et explication. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Sens et stratégies de la division », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : equitable. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Accord simulé ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « L’échange équitable » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    }
+  },
+  "dependency_lines": "",
+  "source_observations": [
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/catalogue/202_kristals.json",
+      "observed_sha256": "sha256:5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+      "observed_sha256": "sha256:4a2bf9abf619c87a7e4e6035bce70babb99de2e2603c209de2977bb89e7904bb",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/trames/catalogue-neutral-v0.2.json",
+      "observed_sha256": "sha256:b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Ékole",
+      "relative_path": "banques/prf22/activites-proposees-v0_7.json",
+      "observed_sha256": "sha256:23ad0fc1c49359b82eb65391d54537b43ce2ca91df04794cacf6926d7d8c642d",
+      "pin_status": "unresolved",
+      "qualification": "not_reviewed"
+    }
+  ]
+}

@@ -24,6 +24,7 @@ import visuals
 import visuels_themes
 import personnages
 import publications
+import prf22_bridge
 from activite_locale import Activity, Catalogue, teacher_attempt
 from mondes_v12 import ASSETS as WORLD_ASSETS, ROOT as WORLD_ROOT
 import missions_demo  # EKOLE_MISSIONS_INTEGREES_20261024
@@ -323,6 +324,23 @@ def create_handler(env: Environment, teacher: bool = False):
                     except (ValueError, OSError, KeyError, TypeError):
                         return self.respond(500, b'Catalogue des activites invalide')
                 return self.respond(200, candidate.read_bytes(), 'application/json; charset=utf-8')
+            # PRF-22 : catalogue et conceptions réservés au serveur enseignant.
+            if route == '/api/prf22/index.json' and teacher:
+                try:return self.json(200,prf22_bridge.index())
+                except (ValueError,OSError,KeyError,TypeError):return self.json(503,{'error':'Banque PRF-22 indisponible'})
+            prf_revision=re.fullmatch(r'/api/prf22/revision/([a-z0-9-]{1,116})/(rev-[0-9TZ-]{8,40}-[a-f0-9]{8})\.json',route)
+            if prf_revision and teacher:
+                try:return self.json(200,prf22_bridge.read_revision(*prf_revision.groups()))
+                except FileNotFoundError:return self.json(404,{'error':'Révision inconnue'})
+                except (ValueError,OSError,KeyError,TypeError):return self.json(422,{'error':'Révision non conforme'})
+            if route == '/api/prf22/catalogue.json' and teacher:
+                try:return self.json(200,prf22_bridge.catalogue())
+                except (ValueError,OSError,KeyError,TypeError):return self.json(503,{'error':'Catalogue PRF-22 indisponible'})
+            item = re.fullmatch(r'/api/prf22/situation/([a-z0-9-]{1,116})\.json',route)
+            if item and teacher:
+                try:return self.json(200,prf22_bridge.detail(item[1]))
+                except FileNotFoundError:return self.json(404,{'error':'Situation inconnue'})
+                except (ValueError,OSError,KeyError,TypeError):return self.json(422,{'error':'Situation ou empreinte non conforme'})
             if route == '/api/tandem/preview.json':
                 # La session de l'enseignant est vérifiée au début de do_GET.
                 # Aucune route publique n'expose les fragments ou les tâches.
@@ -522,6 +540,15 @@ def create_handler(env: Environment, teacher: bool = False):
 
         def do_POST(self):
             route = urllib.parse.urlsplit(self.path).path
+            if route == '/api/prf22/reviser':
+                if not teacher or not self.authed():
+                    return self.respond(401, b'Session enseignant requise')
+                if not env.edition or not secrets.compare_digest(self.headers.get('X-Ekole-CSRF', ''),env.csrf):
+                    return self.respond(403, b'Edition locale ou jeton requis')
+                try:return self.json(200,prf22_bridge.revise(self.local_json(240000)))
+                except RequestError as exc:return self.json(exc.status,{'error':str(exc)})
+                except (ValueError,KeyError,TypeError):return self.json(422,{'error':'Revue PRF-22 invalide'})
+                except OSError:return self.json(503,{'error':'Ecriture locale impossible'})
             kolor = env.activity_catalogue.kolor if env.activity_catalogue else None
             if kolor and route in ('/api/kolor/publier', '/api/kolor/retirer'):
                 if not teacher or not self.authed():

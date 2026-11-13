@@ -1,0 +1,100 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:ponts-a-tester",
+  "focale": "sciences",
+  "question_motrice": "La résistance des modèles diffère.",
+  "declencheur_source": "Plusieurs maquettes de pont sont disponibles.",
+  "informations_a_preparer": [
+    "plans",
+    "mesures de tests"
+  ],
+  "actions_source": [
+    "comparer",
+    "justifier",
+    "ameliorer"
+  ],
+  "production_attendue_source": "Tableau comparatif",
+  "rebond_source": "Un matériau est remplacé.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-022",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-002",
+      "titre": "Comparer deux hypothèses",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "pont",
+        "maquette"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : pont, maquette",
+      "consigne_source": "Formuler deux explications possibles d'un problème matériel et prévoir un test simple et sûr pour les distinguer.",
+      "consigne_contextualisee": "Dans « Les structures à tester », accomplir « Comparer deux hypothèses » pour contribuer à « Tableau comparatif ». Formuler deux explications possibles d'un problème matériel et prévoir un test simple et sûr pour les distinguer.",
+      "preuve": "Fiche hypothèses, protocole proposé, risques.",
+      "critere_propose": "Hypothèses distinctes et test faisable avec supervision.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-025",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-007",
+      "titre": "Tester une structure",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "pont",
+        "maquette"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : pont, maquette",
+      "consigne_source": "Comparer deux structures miniatures sous une même charge sécuritaire et décrire ce qui varie.",
+      "consigne_contextualisee": "Dans « Les structures à tester », accomplir « Tester une structure » pour contribuer à « Tableau comparatif ». Comparer deux structures miniatures sous une même charge sécuritaire et décrire ce qui varie.",
+      "preuve": "Tableau de tests de stabilité et photo/croquis.",
+      "critere_propose": "Variable comparée clairement, sécurité respectée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-029",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-st-004",
+      "titre": "Atelier ciblé : Décrire une conclusion limitée aux observations",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "tester",
+        "structure"
+      ],
+      "motif_de_choix": "Indices thématiques : tester, structure",
+      "consigne_source": "Faire poser une question, comparer les données et distinguer observation et conclusion.",
+      "consigne_contextualisee": "Dans « Les structures à tester », accomplir « Atelier ciblé : Décrire une conclusion limitée aux observations » pour contribuer à « Tableau comparatif ». Faire poser une question, comparer les données et distinguer observation et conclusion.",
+      "preuve": "conclusion justifiée",
+      "critere_propose": "Vérifier la trace attendue pour « Expliquer et communiquer des résultats » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

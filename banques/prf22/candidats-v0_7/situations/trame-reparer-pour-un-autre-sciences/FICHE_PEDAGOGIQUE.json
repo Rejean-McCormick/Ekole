@@ -1,0 +1,103 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:reparer-pour-un-autre",
+  "focale": "sciences",
+  "question_motrice": "L’utilisateur et le réparateur ont des informations différentes.",
+  "declencheur_source": "Un objet scolaire simulé doit être remis en état.",
+  "informations_a_preparer": [
+    "symptomes observes",
+    "solutions possibles"
+  ],
+  "actions_source": [
+    "diagnostiquer",
+    "proposer",
+    "verifier"
+  ],
+  "production_attendue_source": "Plan de réparation sûr",
+  "rebond_source": "La pièce de rechange manque.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-027",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-011",
+      "titre": "Décrire un mécanisme",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "mecan",
+        "repar",
+        "inventeur",
+        "atelier",
+        "objet"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : mecan, repar, inventeur",
+      "consigne_source": "Examiner un objet technique inerte et dessiner comment une pièce agit sur une autre sans le démonter dangereusement.",
+      "consigne_contextualisee": "Dans « L’atelier de réparation », accomplir « Décrire un mécanisme » pour contribuer à « Plan de réparation sûr ». Examiner un objet technique inerte et dessiner comment une pièce agit sur une autre sans le démonter dangereusement.",
+      "preuve": "Schéma légendé des pièces et fonctions.",
+      "critere_propose": "Fonctions plausibles, observations distinguées des suppositions.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-021",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-001",
+      "titre": "Observer avant d'expliquer",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "mecan",
+        "atelier"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : mecan",
+      "consigne_source": "Observer un phénomène ou objet sans conclure immédiatement, puis formuler deux questions investigables.",
+      "consigne_contextualisee": "Dans « L’atelier de réparation », accomplir « Observer avant d'expliquer » pour contribuer à « Plan de réparation sûr ». Observer un phénomène ou objet sans conclure immédiatement, puis formuler deux questions investigables.",
+      "preuve": "Carnet d'observations et questions.",
+      "critere_propose": "Séparation observation/interprétation, questions testables.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-022",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-002",
+      "titre": "Comparer deux hypothèses",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "mecan",
+        "atelier"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : mecan",
+      "consigne_source": "Formuler deux explications possibles d'un problème matériel et prévoir un test simple et sûr pour les distinguer.",
+      "consigne_contextualisee": "Dans « L’atelier de réparation », accomplir « Comparer deux hypothèses » pour contribuer à « Plan de réparation sûr ». Formuler deux explications possibles d'un problème matériel et prévoir un test simple et sûr pour les distinguer.",
+      "preuve": "Fiche hypothèses, protocole proposé, risques.",
+      "critere_propose": "Hypothèses distinctes et test faisable avec supervision.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

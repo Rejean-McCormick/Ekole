@@ -1,0 +1,99 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:messagers-en-mouvement",
+  "focale": "education_physique",
+  "question_motrice": "Les destinataires et les trajets ne sont pas connus de tous.",
+  "declencheur_source": "Des messages doivent circuler entre équipes.",
+  "informations_a_preparer": [
+    "destinations",
+    "messages autorises"
+  ],
+  "actions_source": [
+    "orienter",
+    "transmettre",
+    "confirmer"
+  ],
+  "production_attendue_source": "Messages remis",
+  "rebond_source": "Un destinataire change de lieu.",
+  "niveaux_suggeres_source": "primaire-1-6",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-016",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-eps-003",
+      "titre": "Atelier ciblé : Maintenir et retrouver son équilibre",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "equipe",
+        "relais"
+      ],
+      "motif_de_choix": "Indices thématiques : equipe, relais",
+      "consigne_source": "Faire exécuter ou représenter l’action, expliquer un choix sécuritaire et observer avec accord.",
+      "consigne_contextualisee": "Dans « Le relais des messages », accomplir « Atelier ciblé : Maintenir et retrouver son équilibre » pour contribuer à « Messages remis ». Faire exécuter ou représenter l’action, expliquer un choix sécuritaire et observer avec accord.",
+      "preuve": "observation graduée",
+      "critere_propose": "Vérifier la trace attendue pour « Équilibre et coordination » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-047",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-007",
+      "titre": "Élaborer une stratégie d'équipe",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "relais",
+        "equipe"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : relais",
+      "consigne_source": "Définir une stratégie de déplacement collectif avec rôles, puis observer ce qui fonctionne.",
+      "consigne_contextualisee": "Dans « Le relais des messages », accomplir « Élaborer une stratégie d'équipe » pour contribuer à « Messages remis ». Définir une stratégie de déplacement collectif avec rôles, puis observer ce qui fonctionne.",
+      "preuve": "Plan de coopération et bref bilan.",
+      "critere_propose": "Rôles clairs, sécurité, réajustements.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-046",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-002",
+      "titre": "Concevoir un parcours locomoteur",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "relais"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : relais",
+      "consigne_source": "Planifier et essayer un parcours simple et sécuritaire en distinguant marche, saut et déplacement.",
+      "consigne_contextualisee": "Dans « Le relais des messages », accomplir « Concevoir un parcours locomoteur » pour contribuer à « Messages remis ». Planifier et essayer un parcours simple et sécuritaire en distinguant marche, saut et déplacement.",
+      "preuve": "Schéma de parcours et observation motrice.",
+      "critere_propose": "Déplacements appropriés et sécurité respectée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

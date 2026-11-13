@@ -1,0 +1,98 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:randonnee-symbolique",
+  "focale": "francais",
+  "question_motrice": "Les stations demandent des compétences variées.",
+  "declencheur_source": "Plusieurs équipes explorent des stations encadrées.",
+  "informations_a_preparer": [
+    "carte des stations",
+    "mandats des equipes"
+  ],
+  "actions_source": [
+    "observer",
+    "cooperer",
+    "documenter"
+  ],
+  "production_attendue_source": "Carnet collectif",
+  "rebond_source": "Une station doit être adaptée.",
+  "niveaux_suggeres_source": "maternelle-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-059",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-005",
+      "titre": "Interpréter et reformuler une information",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "carte",
+        "document"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : carte, document",
+      "consigne_source": "Lire le document ou l’étiquette fournie, identifier la consigne puis la dire avec ses mots.",
+      "consigne_contextualisee": "Dans « La randonnée des découvertes », accomplir « Interpréter et reformuler une information » pour contribuer à « Carnet collectif ». Lire le document ou l’étiquette fournie, identifier la consigne puis la dire avec ses mots.",
+      "preuve": "Information repérée et reformulation.",
+      "critere_propose": "Information essentielle préservée, reformulation intelligible.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-014",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-006",
+      "titre": "Déduire à partir d'indices",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : message",
+      "consigne_source": "Lire un court indice de la situation, proposer une inférence et citer les éléments textuels qui l'appuient.",
+      "consigne_contextualisee": "Dans « La randonnée des découvertes », accomplir « Déduire à partir d'indices » pour contribuer à « Carnet collectif ». Lire un court indice de la situation, proposer une inférence et citer les éléments textuels qui l'appuient.",
+      "preuve": "Hypothèse et deux indices cités.",
+      "critere_propose": "Lien entre indices et hypothèse, incertitude exprimée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-016",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-021",
+      "titre": "Rédiger une communication",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : message",
+      "consigne_source": "Écrire un court message compréhensible pour aider un autre personnage de la situation.",
+      "consigne_contextualisee": "Dans « La randonnée des découvertes », accomplir « Rédiger une communication » pour contribuer à « Carnet collectif ». Écrire un court message compréhensible pour aider un autre personnage de la situation.",
+      "preuve": "Texte avec destinataire et information vérifiable.",
+      "critere_propose": "Cohérence, lisibilité et pertinence des informations.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

@@ -1,0 +1,337 @@
+{
+  "format": "ekole.prf22.authoring/0.3",
+  "status": "design_only",
+  "draft": {
+    "format": "ekole.situation-composition-draft/0.1",
+    "generated_at_utc": "2026-11-12T18:50:31+00:00",
+    "status": "draft_not_admitted",
+    "authorities": {
+      "scenario_source": "Kontexte",
+      "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+      "objectives_and_evidence": "Ékole",
+      "role_proposals": "Kompose",
+      "operational_tasks": "Orgo",
+      "world_ownership": "Orgo_Worlds",
+      "social_collaboration": "Konnaxion",
+      "channels": [
+        "Web",
+        "Kor",
+        "Kamel"
+      ]
+    },
+    "source": {
+      "reference": "trame:conte-partage",
+      "source_format": "kontexte.catalogue-trames/1",
+      "source_relpath": "data/trames/catalogue-neutral-v0.2.json",
+      "title": "Le conte mis en scène",
+      "problem": "Sa forme actuelle est trop complexe pour certains auditeurs.",
+      "narrative_role_codes": [
+        "ecrivain",
+        "lecteur",
+        "metteur-en-scene",
+        "peintre"
+      ],
+      "source_step_refs_unchanged": []
+    },
+    "world_context": {
+      "epoch": "Période de simulation à préciser selon la trame",
+      "cultural_frame": "Aucune culture réelle attribuée; sources et droits à valider",
+      "place": "Lieu de la situation source, à préciser par l’enseignant",
+      "reality": "fictif",
+      "language": "fr-CA",
+      "notes": "V0.7 : focalisation disciplinaire et choix d’activités explicitement justifiés; aucune validation pédagogique.",
+      "cultural_validation": "pending_human_review"
+    },
+    "activity_bindings": [
+      {
+        "activity_ref": "ekoleprop:ap-013",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Repérer une consigne essentielle",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-fr-005"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-014",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Déduire à partir d'indices",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-fr-006"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-017",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Réviser un texte de mission",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-fr-023"
+      }
+    ],
+    "learning_objective_links": [
+      {
+        "objective_ref": "qc-pri-fr-005",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Compréhension littérale de textes",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-fr-006",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Inférences en lecture",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-fr-023",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Réviser et corriger un texte",
+        "status": "candidate_teacher_review_required"
+      }
+    ],
+    "participation": {
+      "participant_count": 8,
+      "anonymized_placeholder_only": true,
+      "mode": "groupes_rotatifs",
+      "maximum_per_team": 4,
+      "teams": [
+        {
+          "id": "equipe-01",
+          "participant_placeholders": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "size": 4,
+          "suggested_role": "ecrivain",
+          "assignment_status": "teacher_to_approve"
+        },
+        {
+          "id": "equipe-02",
+          "participant_placeholders": [
+            "P05",
+            "P06",
+            "P07",
+            "P08"
+          ],
+          "size": 4,
+          "suggested_role": "lecteur",
+          "assignment_status": "teacher_to_approve"
+        }
+      ],
+      "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+      "solo_substitution": null,
+      "stations": [
+        {
+          "id": "station-01",
+          "activity_ref": "ekoleprop:ap-013",
+          "title": "Repérer une consigne essentielle",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Fiche de quatre informations avec passages repérés.",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-02",
+          "activity_ref": "ekoleprop:ap-014",
+          "title": "Déduire à partir d'indices",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Hypothèse et deux indices cités.",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-03",
+          "activity_ref": "ekoleprop:ap-017",
+          "title": "Réviser un texte de mission",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Version révisée avec annotations des corrections.",
+          "adaptation_status": "to_review"
+        }
+      ],
+      "rotation": [
+        {
+          "round": 1,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-02",
+              "status": "visit"
+            }
+          ]
+        }
+      ],
+      "parallel_posts_per_activity": 3,
+      "additional_equipment_required": true,
+      "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+      "station_capacity": "jusqu’à 3 équipe(s) par activité et par ronde, chacune à son poste distinct",
+      "role_validation": "teacher_required"
+    },
+    "collaboration": {
+      "kontexte_hints": "utiliser les joins/fragments de la source, sans libération automatique",
+      "communication": "Konnaxion / Kids, sous permissions serveur",
+      "progress_from_messages": false
+    },
+    "export_hints": {
+      "orgo_world_slug_suggested": "conte-partage",
+      "world_creation_performed": false,
+      "tasks_dispatched": false,
+      "qr_created": false,
+      "runtime_admitted": false,
+      "teacher_authorized": false,
+      "real_learner_profiles_loaded": false
+    },
+    "required_reviews": [
+      "adéquation au niveau scolaire",
+      "exactitude historique et culturelle",
+      "sécurité et consentements",
+      "objectifs pédagogiques et critères de preuve",
+      "rôles et disponibilité",
+      "matériel et encadrement des postes parallèles",
+      "autorisations serveur et isolement de classe"
+    ]
+  },
+  "theory_entries": {
+    "qc-pri-fr-005": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-013"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Repérer une consigne essentielle » pour contribuer à « Conte présenté » dans « Le conte mis en scène », il pourrait exercer « Compréhension littérale de textes ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Sa forme actuelle est trop complexe pour certains auditeurs. », proposer la tâche suivante : Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails. Mettre à disposition : histoire source autorisee, besoins du public. Livrable de la situation : Conte présenté. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Repérer une consigne essentielle » : Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails. Vérifier qu’elles se rapportent effectivement à « Repérer des informations explicites et les restituer fidèlement après lecture ou écoute ».",
+      "observation": "Pendant « Repérer une consigne essentielle », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Fiche de quatre informations avec passages repérés. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Fidélité au texte et distinction explicite faits/inférences. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Compréhension littérale de textes », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : recit, conte. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Conte présenté ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Le conte mis en scène » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-fr-006": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-014"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Déduire à partir d'indices » pour contribuer à « Conte présenté » dans « Le conte mis en scène », il pourrait exercer « Inférences en lecture ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Sa forme actuelle est trop complexe pour certains auditeurs. », proposer la tâche suivante : Lire un court indice de la situation, proposer une inférence et citer les éléments textuels qui l'appuient. Mettre à disposition : histoire source autorisee, besoins du public. Livrable de la situation : Conte présenté. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Déduire à partir d'indices » : Lire un court indice de la situation, proposer une inférence et citer les éléments textuels qui l'appuient. Vérifier qu’elles se rapportent effectivement à « Déduire une information implicite en reliant indices du texte et connaissances pertinentes ».",
+      "observation": "Pendant « Déduire à partir d'indices », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Hypothèse et deux indices cités. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Lien entre indices et hypothèse, incertitude exprimée. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Inférences en lecture », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : conte. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Conte présenté ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Le conte mis en scène » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-fr-023": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-017"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Réviser un texte de mission » pour contribuer à « Conte présenté » dans « Le conte mis en scène », il pourrait exercer « Réviser et corriger un texte ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Sa forme actuelle est trop complexe pour certains auditeurs. », proposer la tâche suivante : Relire un texte de préparation de la mission et corriger trois erreurs justifiées. Mettre à disposition : histoire source autorisee, besoins du public. Livrable de la situation : Conte présenté. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Réviser un texte de mission » : Relire un texte de préparation de la mission et corriger trois erreurs justifiées. Vérifier qu’elles se rapportent effectivement à « Améliorer un texte en révisant sens, structure puis orthographe et grammaire ».",
+      "observation": "Pendant « Réviser un texte de mission », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Version révisée avec annotations des corrections. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Corrections motivées et cohérence conservée. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Réviser et corriger un texte », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : conte. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Conte présenté ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Le conte mis en scène » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    }
+  },
+  "dependency_lines": "",
+  "source_observations": [
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/catalogue/202_kristals.json",
+      "observed_sha256": "sha256:5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/trames/catalogue-neutral-v0.2.json",
+      "observed_sha256": "sha256:b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Ékole",
+      "relative_path": "banques/prf22/activites-proposees-v0_7.json",
+      "observed_sha256": "sha256:23ad0fc1c49359b82eb65391d54537b43ce2ca91df04794cacf6926d7d8c642d",
+      "pin_status": "unresolved",
+      "qualification": "not_reviewed"
+    }
+  ]
+}

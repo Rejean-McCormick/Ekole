@@ -1,0 +1,97 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:maquette-accessible",
+  "focale": "mathematiques",
+  "question_motrice": "Une voie d’accès ne fonctionne pas pour tous.",
+  "declencheur_source": "Une maquette doit convenir à différents utilisateurs.",
+  "informations_a_preparer": [
+    "contraintes des utilisateurs",
+    "dimensions"
+  ],
+  "actions_source": [
+    "ecouter",
+    "dessiner",
+    "tester"
+  ],
+  "production_attendue_source": "Maquette améliorée",
+  "rebond_source": "Une nouvelle contrainte est révélée.",
+  "niveaux_suggeres_source": "primaire-3-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-001",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-025",
+      "titre": "Atelier de mesures comparées",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "maquette"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : maquette",
+      "consigne_source": "Mesurer trois objets pertinents à la situation avec le même instrument, noter les unités et expliquer les écarts.",
+      "consigne_contextualisee": "Dans « La maquette inclusive », accomplir « Atelier de mesures comparées » pour contribuer à « Maquette améliorée ». Mesurer trois objets pertinents à la situation avec le même instrument, noter les unités et expliquer les écarts.",
+      "preuve": "Tableau de trois mesures et conclusion justifiée.",
+      "critere_propose": "Unités cohérentes, mesures lisibles et comparaison correcte.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-007",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-012",
+      "titre": "Représenter des fractions",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "maquette"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : maquette",
+      "consigne_source": "Modéliser des fractions d'une quantité ou d'une surface liée à la mission avec du matériel ou un dessin.",
+      "consigne_contextualisee": "Dans « La maquette inclusive », accomplir « Représenter des fractions » pour contribuer à « Maquette améliorée ». Modéliser des fractions d'une quantité ou d'une surface liée à la mission avec du matériel ou un dessin.",
+      "preuve": "Représentations annotées d'au moins deux fractions.",
+      "critere_propose": "Unité entière explicite, parts cohérentes.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-008",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-023",
+      "titre": "Comparer des figures",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "maquette"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : maquette",
+      "consigne_source": "Repérer et classer plusieurs figures dans un plan, dessin ou objet de la situation; expliquer les propriétés.",
+      "consigne_contextualisee": "Dans « La maquette inclusive », accomplir « Comparer des figures » pour contribuer à « Maquette améliorée ». Repérer et classer plusieurs figures dans un plan, dessin ou objet de la situation; expliquer les propriétés.",
+      "preuve": "Croquis annoté et classification argumentée.",
+      "critere_propose": "Caractéristiques géométriques reconnues, vocabulaire précis.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

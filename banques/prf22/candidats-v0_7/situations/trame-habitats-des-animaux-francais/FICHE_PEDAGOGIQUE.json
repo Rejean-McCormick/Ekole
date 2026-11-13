@@ -1,0 +1,79 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:habitats-des-animaux",
+  "focale": "francais",
+  "question_motrice": "Les besoins des espèces sont différents.",
+  "declencheur_source": "Des animaux fictifs changent d’habitat.",
+  "informations_a_preparer": [
+    "espece et besoins",
+    "caracteristiques du lieu"
+  ],
+  "actions_source": [
+    "classer",
+    "associer",
+    "justifier"
+  ],
+  "production_attendue_source": "Carte d’habitats",
+  "rebond_source": "Un lieu ne convient plus.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-053",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-021",
+      "titre": "Rédiger un bref compte rendu d’observation",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "habitat"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : habitat",
+      "consigne_source": "Écrire un court compte rendu à partir de notes d’observation fournies, avec une phrase décrivant le résultat.",
+      "consigne_contextualisee": "Dans « Les habitats à protéger », accomplir « Rédiger un bref compte rendu d’observation » pour contribuer à « Carte d’habitats ». Écrire un court compte rendu à partir de notes d’observation fournies, avec une phrase décrivant le résultat.",
+      "preuve": "Compte rendu lié aux notes.",
+      "critere_propose": "Faits observés distingués des suppositions et formulation compréhensible.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-059",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-005",
+      "titre": "Interpréter et reformuler une information",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "carte"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : carte",
+      "consigne_source": "Lire le document ou l’étiquette fournie, identifier la consigne puis la dire avec ses mots.",
+      "consigne_contextualisee": "Dans « Les habitats à protéger », accomplir « Interpréter et reformuler une information » pour contribuer à « Carte d’habitats ». Lire le document ou l’étiquette fournie, identifier la consigne puis la dire avec ses mots.",
+      "preuve": "Information repérée et reformulation.",
+      "critere_propose": "Information essentielle préservée, reformulation intelligible.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

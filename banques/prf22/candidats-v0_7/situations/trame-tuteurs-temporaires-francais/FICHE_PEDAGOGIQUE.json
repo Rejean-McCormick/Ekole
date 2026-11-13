@@ -1,0 +1,99 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:tuteurs-temporaires",
+  "focale": "francais",
+  "question_motrice": "Chaque participant a besoin d’un soutien différent.",
+  "declencheur_source": "Des ateliers accueillent des enfants de plusieurs âges.",
+  "informations_a_preparer": [
+    "competences des guides",
+    "besoins des participants"
+  ],
+  "actions_source": [
+    "accueillir",
+    "montrer",
+    "adapter"
+  ],
+  "production_attendue_source": "Ateliers accessibles",
+  "rebond_source": "Un atelier devient trop fréquenté.",
+  "niveaux_suggeres_source": "maternelle-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-016",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-021",
+      "titre": "Rédiger une communication",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "guide",
+        "accueil"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : guide, accueil",
+      "consigne_source": "Écrire un court message compréhensible pour aider un autre personnage de la situation.",
+      "consigne_contextualisee": "Dans « Les ateliers solidaires », accomplir « Rédiger une communication » pour contribuer à « Ateliers accessibles ». Écrire un court message compréhensible pour aider un autre personnage de la situation.",
+      "preuve": "Texte avec destinataire et information vérifiable.",
+      "critere_propose": "Cohérence, lisibilité et pertinence des informations.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-056",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-023",
+      "titre": "Adapter un texte explicatif pour un lecteur",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "guide",
+        "atelier"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : guide",
+      "consigne_source": "Réviser un texte court fourni afin que les consignes et les mots importants soient compréhensibles par son destinataire.",
+      "consigne_contextualisee": "Dans « Les ateliers solidaires », accomplir « Adapter un texte explicatif pour un lecteur » pour contribuer à « Ateliers accessibles ». Réviser un texte court fourni afin que les consignes et les mots importants soient compréhensibles par son destinataire.",
+      "preuve": "Texte annoté et version révisée.",
+      "critere_propose": "Sens conservé, formulations claires et corrections explicitées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-015",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-020",
+      "titre": "Établir un plan d'écriture",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "guide"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : guide",
+      "consigne_source": "Planifier un message utile à un personnage en indiquant destinataire, intention et trois idées.",
+      "consigne_contextualisee": "Dans « Les ateliers solidaires », accomplir « Établir un plan d'écriture » pour contribuer à « Ateliers accessibles ». Planifier un message utile à un personnage en indiquant destinataire, intention et trois idées.",
+      "preuve": "Plan d'écriture avec ordre logique.",
+      "critere_propose": "Destinataire, intention et idées pertinents.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

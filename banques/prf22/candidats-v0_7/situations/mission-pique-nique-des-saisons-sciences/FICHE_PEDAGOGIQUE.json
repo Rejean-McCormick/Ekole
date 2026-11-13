@@ -1,0 +1,95 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "mission:pique-nique-des-saisons",
+  "focale": "sciences",
+  "question_motrice": "Le village veut organiser un pique-nique imaginaire accessible à toute l’équipe. Il faut choisir un lieu, établir un plan météo, répartir des portions fictives et préparer une annonce.",
+  "declencheur_source": "Le village veut organiser un pique-nique imaginaire accessible à toute l’équipe. Il faut choisir un lieu, établir un plan météo, répartir des portions fictives et préparer une annonce.",
+  "informations_a_preparer": [
+    "Fragments de la mission : diffusion conditionnelle par Orgo, non affichés ici"
+  ],
+  "actions_source": [],
+  "production_attendue_source": "Étapes prévues par la mission : observer-saison, choisir-lieu, liste-menu, quantites, station-plantes, plan-repli, invitation, confirmation",
+  "rebond_source": "",
+  "niveaux_suggeres_source": "à déterminer",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-023",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-003",
+      "titre": "Noter des observations mesurables",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "meteo",
+        "plante"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : meteo, plante",
+      "consigne_source": "Prendre trois mesures d'un matériel sécurisé fourni et documenter méthode, unité et incertitude.",
+      "consigne_contextualisee": "Dans « Le pique-nique des quatre saisons », accomplir « Noter des observations mesurables » pour contribuer à « Étapes prévues par la mission : observer-saison, choisir-lieu, liste-menu, quantites, station-plantes, plan-repli, invitation, confirmation ». Prendre trois mesures d'un matériel sécurisé fourni et documenter méthode, unité et incertitude.",
+      "preuve": "Journal de mesures datées.",
+      "critere_propose": "Observations reproductibles, unités, conditions notées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-024",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-004",
+      "titre": "Conclure avec prudence",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "plante",
+        "scientifique"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : plante, scientifique",
+      "consigne_source": "Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis.",
+      "consigne_contextualisee": "Dans « Le pique-nique des quatre saisons », accomplir « Conclure avec prudence » pour contribuer à « Étapes prévues par la mission : observer-saison, choisir-lieu, liste-menu, quantites, station-plantes, plan-repli, invitation, confirmation ». Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis.",
+      "preuve": "Phrase de conclusion associée au relevé de données.",
+      "critere_propose": "Conclusion supportée, limites explicites.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-028",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-017",
+      "titre": "Classer le vivant observé",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "jardin",
+        "plante"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : jardin, plante",
+      "consigne_source": "Classer des images documentées de plantes ou animaux avec des critères observables.",
+      "consigne_contextualisee": "Dans « Le pique-nique des quatre saisons », accomplir « Classer le vivant observé » pour contribuer à « Étapes prévues par la mission : observer-saison, choisir-lieu, liste-menu, quantites, station-plantes, plan-repli, invitation, confirmation ». Classer des images documentées de plantes ou animaux avec des critères observables.",
+      "preuve": "Tableau de classification avec critères.",
+      "critere_propose": "Critères observables et catégories cohérentes.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

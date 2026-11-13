@@ -1,0 +1,96 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "mission:spectacle-clown",
+  "focale": "arts",
+  "question_motrice": "Mission de simulation du monde Le spectacle du clown.",
+  "declencheur_source": "Mission de simulation du monde Le spectacle du clown.",
+  "informations_a_preparer": [
+    "Fragments de la mission : diffusion conditionnelle par Orgo, non affichés ici"
+  ],
+  "actions_source": [],
+  "production_attendue_source": "Étapes prévues par la mission : phase-1, phase-2, phase-3",
+  "rebond_source": "",
+  "niveaux_suggeres_source": "à déterminer",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-037",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ad-004",
+      "titre": "Construire une courte scène",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "spectacle",
+        "scene",
+        "clown"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : spectacle, scene, clown",
+      "consigne_source": "Créer une courte séquence dramatique avec début, problème et résolution qui sert la mission.",
+      "consigne_contextualisee": "Dans « Le spectacle du clown », accomplir « Construire une courte scène » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Créer une courte séquence dramatique avec début, problème et résolution qui sert la mission.",
+      "preuve": "Canevas de scène et présentation supervisée.",
+      "critere_propose": "Progression claire, intention dramatique.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-032",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-003",
+      "titre": "Composer une affiche narrative",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "affiche",
+        "spectacle"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : affiche, spectacle",
+      "consigne_source": "Réaliser une composition visuelle qui communique une information de la mission à un lecteur.",
+      "consigne_contextualisee": "Dans « Le spectacle du clown », accomplir « Composer une affiche narrative » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Réaliser une composition visuelle qui communique une information de la mission à un lecteur.",
+      "preuve": "Affiche commentée avec choix de formes et disposition.",
+      "critere_propose": "Message lisible et organisation visuelle explicite.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-034",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-009",
+      "titre": "Expliquer une démarche artistique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "affiche",
+        "spectacle"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : affiche, spectacle",
+      "consigne_source": "Présenter les étapes d'une création en indiquant une modification et sa raison.",
+      "consigne_contextualisee": "Dans « Le spectacle du clown », accomplir « Expliquer une démarche artistique » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Présenter les étapes d'une création en indiquant une modification et sa raison.",
+      "preuve": "Carnet d'étapes et commentaire oral ou écrit.",
+      "critere_propose": "Étapes identifiables, choix motivés.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

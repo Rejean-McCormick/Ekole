@@ -1,0 +1,474 @@
+{
+  "format": "ekole.prf22.authoring/0.3",
+  "status": "design_only",
+  "draft": {
+    "format": "ekole.situation-composition-draft/0.1",
+    "generated_at_utc": "2026-11-12T18:11:37+00:00",
+    "status": "draft_not_admitted",
+    "authorities": {
+      "scenario_source": "Kontexte",
+      "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+      "objectives_and_evidence": "Ékole",
+      "role_proposals": "Kompose",
+      "operational_tasks": "Orgo",
+      "world_ownership": "Orgo_Worlds",
+      "social_collaboration": "Konnaxion",
+      "channels": [
+        "Web",
+        "Kor",
+        "Kamel"
+      ]
+    },
+    "source": {
+      "reference": "trame:foret-partagee",
+      "source_format": "kontexte.catalogue-trames/1",
+      "source_relpath": "data/trames/catalogue-neutral-v0.2.json",
+      "title": "La forêt partagée",
+      "problem": "Les objectifs de protection et d’usage divergent.",
+      "narrative_role_codes": [
+        "bucheron",
+        "jardinier",
+        "scientifique",
+        "politicien"
+      ],
+      "source_step_refs_unchanged": []
+    },
+    "world_context": {
+      "epoch": "Période à préciser selon la situation (simulation)",
+      "cultural_frame": "Cadre fictif candidat; revue culturelle et historique requise",
+      "place": "Lieu de la situation source; à documenter",
+      "reality": "fictif",
+      "language": "fr-CA",
+      "notes": "Enrichissement v0.6 : liens générés, provenance distincte Kontexte / Ékole.",
+      "cultural_validation": "pending_human_review"
+    },
+    "activity_bindings": [
+      {
+        "activity_ref": "micro:enseignement-explicite-031",
+        "source_type": "micro_situation",
+        "owner": "Kontexte",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Distinguer changement, continuité, passé et présent",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.us.continuite"
+      },
+      {
+        "activity_ref": "micro:enseignement-explicite-034",
+        "source_type": "micro_situation",
+        "owner": "Kontexte",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Distinguer documents, témoins et sources",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.us.sources"
+      },
+      {
+        "activity_ref": "micro:enseignement-explicite-029",
+        "source_type": "micro_situation",
+        "owner": "Kontexte",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Décrire une conclusion limitée aux observations",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.st.conclusion"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-049",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_6.json",
+        "title": "Écouter des points de vue",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-ccq-008"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-051",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_6.json",
+        "title": "Analyser un choix environnemental",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-ccq-004"
+      }
+    ],
+    "learning_objective_links": [
+      {
+        "objective_ref": "qc-pri-us-015",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Comprendre les changements et les continuités historiques",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-us-005",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Utiliser et comparer des sources historiques",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-st-004",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Expliquer et communiquer des résultats",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-ccq-008",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Dialoguer et écouter avec respect",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-ccq-004",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Relations entre humains et environnement",
+        "status": "candidate_teacher_review_required"
+      }
+    ],
+    "participation": {
+      "participant_count": 8,
+      "anonymized_placeholder_only": true,
+      "mode": "groupes_rotatifs",
+      "maximum_per_team": 4,
+      "teams": [
+        {
+          "id": "equipe-01",
+          "participant_placeholders": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "size": 4,
+          "suggested_role": "bucheron",
+          "assignment_status": "teacher_to_approve"
+        },
+        {
+          "id": "equipe-02",
+          "participant_placeholders": [
+            "P05",
+            "P06",
+            "P07",
+            "P08"
+          ],
+          "size": 4,
+          "suggested_role": "jardinier",
+          "assignment_status": "teacher_to_approve"
+        }
+      ],
+      "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+      "solo_substitution": null,
+      "stations": [
+        {
+          "id": "station-01",
+          "activity_ref": "micro:enseignement-explicite-031",
+          "title": "Atelier ciblé : Distinguer changement, continuité, passé et présent",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "comparaison située dans le temps",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-02",
+          "activity_ref": "micro:enseignement-explicite-034",
+          "title": "Atelier ciblé : Distinguer documents, témoins et sources",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "origine de document identifiée",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-03",
+          "activity_ref": "micro:enseignement-explicite-029",
+          "title": "Atelier ciblé : Décrire une conclusion limitée aux observations",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "conclusion justifiée",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-04",
+          "activity_ref": "ekoleprop:ap-049",
+          "title": "Écouter des points de vue",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Tableau des propositions et reformulations.",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-05",
+          "activity_ref": "ekoleprop:ap-051",
+          "title": "Analyser un choix environnemental",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Tableau ressource–effet–incertitude.",
+          "adaptation_status": "to_review"
+        }
+      ],
+      "rotation": [
+        {
+          "round": 1,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-04",
+              "post_id": "station-04-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-04",
+              "post_id": "station-04-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-05",
+              "post_id": "station-05-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-05",
+              "post_id": "station-05-poste-02",
+              "status": "visit"
+            }
+          ]
+        }
+      ],
+      "parallel_posts_per_activity": 3,
+      "additional_equipment_required": true,
+      "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+      "station_capacity": "jusqu’à 3 équipe(s) par activité et par ronde, chacune à son poste distinct",
+      "role_validation": "teacher_required"
+    },
+    "collaboration": {
+      "kontexte_hints": "utiliser les joins/fragments de la source, sans libération automatique",
+      "communication": "Konnaxion / Kids, sous permissions serveur",
+      "progress_from_messages": false
+    },
+    "export_hints": {
+      "orgo_world_slug_suggested": "foret-partagee",
+      "world_creation_performed": false,
+      "tasks_dispatched": false,
+      "qr_created": false,
+      "runtime_admitted": false,
+      "teacher_authorized": false,
+      "real_learner_profiles_loaded": false
+    },
+    "required_reviews": [
+      "adéquation au niveau scolaire",
+      "exactitude historique et culturelle",
+      "sécurité et consentements",
+      "objectifs pédagogiques et critères de preuve",
+      "rôles et disponibilité",
+      "matériel et encadrement des postes parallèles",
+      "autorisations serveur et isolement de classe"
+    ]
+  },
+  "theory_entries": {
+    "qc-pri-us-015": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "micro:enseignement-explicite-031"
+      ],
+      "conjecture_statement": "Dans « La forêt partagée », proposer « Atelier ciblé : Distinguer changement, continuité, passé et présent » pourrait contribuer à l'objectif « Comprendre les changements et les continuités historiques »; cette hypothèse reste à vérifier en contexte.",
+      "expected_action": "Réaliser l'activité proposée : Faire situer, décrire et citer la source avant toute conclusion historique.. Expliquer les choix avec un soutien adapté.",
+      "process": "L'enfant mobilise les actions nécessaires pour : Distinguer ce qui change de ce qui perdure au fil d’une période. Le lien entre l'activité et cet objectif est une proposition à vérifier.",
+      "observation": "Observer les étapes suivies dans « Atelier ciblé : Distinguer changement, continuité, passé et présent » et demander à l'enfant d'expliquer ou de représenter sa démarche.",
+      "evidence": "Trace candidate de l’activité « Atelier ciblé : Distinguer changement, continuité, passé et présent » : comparaison située dans le temps. À confirmer selon la réalisation de l’enfant.",
+      "criterion": "Comparer la trace à l'objectif « Comprendre les changements et les continuités historiques » et aux critères de la source; jugement final réservé à l'enseignant.",
+      "disconfirmation": "L'enfant ne peut expliquer ou démontrer le processus attendu après un accompagnement adapté; l'hypothèse est à revoir.",
+      "alternative": "La trace peut résulter d'une aide adulte, d'un modèle copié ou de prérequis déjà acquis, plutôt que de l'activité seule.",
+      "boundary": "Adapter la difficulté et le support; vérifier prérequis, matériel, culture, accessibilité et pertinence de « Atelier ciblé : Distinguer changement, continuité, passé et présent ».",
+      "interpretation_limit": "Une production dans « La forêt partagée » ne démontre pas à elle seule une maîtrise individuelle transférable ni un effet causal."
+    },
+    "qc-pri-us-005": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "micro:enseignement-explicite-034"
+      ],
+      "conjecture_statement": "Dans « La forêt partagée », proposer « Atelier ciblé : Distinguer documents, témoins et sources » pourrait contribuer à l'objectif « Utiliser et comparer des sources historiques »; cette hypothèse reste à vérifier en contexte.",
+      "expected_action": "Réaliser l'activité proposée : Faire situer, décrire et citer la source avant toute conclusion historique.. Expliquer les choix avec un soutien adapté.",
+      "process": "L'enfant mobilise les actions nécessaires pour : Distinguer source, affirmation et interprétation dans un document historique. Le lien entre l'activité et cet objectif est une proposition à vérifier.",
+      "observation": "Observer les étapes suivies dans « Atelier ciblé : Distinguer documents, témoins et sources » et demander à l'enfant d'expliquer ou de représenter sa démarche.",
+      "evidence": "Trace candidate de l’activité « Atelier ciblé : Distinguer documents, témoins et sources » : origine de document identifiée. À confirmer selon la réalisation de l’enfant.",
+      "criterion": "Comparer la trace à l'objectif « Utiliser et comparer des sources historiques » et aux critères de la source; jugement final réservé à l'enseignant.",
+      "disconfirmation": "L'enfant ne peut expliquer ou démontrer le processus attendu après un accompagnement adapté; l'hypothèse est à revoir.",
+      "alternative": "La trace peut résulter d'une aide adulte, d'un modèle copié ou de prérequis déjà acquis, plutôt que de l'activité seule.",
+      "boundary": "Adapter la difficulté et le support; vérifier prérequis, matériel, culture, accessibilité et pertinence de « Atelier ciblé : Distinguer documents, témoins et sources ».",
+      "interpretation_limit": "Une production dans « La forêt partagée » ne démontre pas à elle seule une maîtrise individuelle transférable ni un effet causal."
+    },
+    "qc-pri-st-004": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "inquiry",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "micro:enseignement-explicite-029"
+      ],
+      "conjecture_statement": "Dans « La forêt partagée », proposer « Atelier ciblé : Décrire une conclusion limitée aux observations » pourrait contribuer à l'objectif « Expliquer et communiquer des résultats »; cette hypothèse reste à vérifier en contexte.",
+      "expected_action": "Réaliser l'activité proposée : Faire poser une question, comparer les données et distinguer observation et conclusion.. Expliquer les choix avec un soutien adapté.",
+      "process": "L'enfant mobilise les actions nécessaires pour : Relier des observations à une conclusion en distinguant constat et interprétation. Le lien entre l'activité et cet objectif est une proposition à vérifier.",
+      "observation": "Observer les étapes suivies dans « Atelier ciblé : Décrire une conclusion limitée aux observations » et demander à l'enfant d'expliquer ou de représenter sa démarche.",
+      "evidence": "Trace candidate de l’activité « Atelier ciblé : Décrire une conclusion limitée aux observations » : conclusion justifiée. À confirmer selon la réalisation de l’enfant.",
+      "criterion": "Comparer la trace à l'objectif « Expliquer et communiquer des résultats » et aux critères de la source; jugement final réservé à l'enseignant.",
+      "disconfirmation": "L'enfant ne peut expliquer ou démontrer le processus attendu après un accompagnement adapté; l'hypothèse est à revoir.",
+      "alternative": "La trace peut résulter d'une aide adulte, d'un modèle copié ou de prérequis déjà acquis, plutôt que de l'activité seule.",
+      "boundary": "Adapter la difficulté et le support; vérifier prérequis, matériel, culture, accessibilité et pertinence de « Atelier ciblé : Décrire une conclusion limitée aux observations ».",
+      "interpretation_limit": "Une production dans « La forêt partagée » ne démontre pas à elle seule une maîtrise individuelle transférable ni un effet causal."
+    },
+    "qc-pri-ccq-008": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "discussion",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "part_task_practice",
+      "duration_minutes": 10,
+      "activity_refs": [
+        "ekoleprop:ap-049"
+      ],
+      "conjecture_statement": "L'activité candidate « Écouter des points de vue » pourrait aider à travailler « Dialoguer et écouter avec respect » dans « La forêt partagée »; lien non démontré.",
+      "expected_action": "Comparer deux propositions d'organisation et reformuler chaque position sans la caricaturer. Expliquer comment cette action sert le problème posé.",
+      "process": "L'enfant mobilise les actions nécessaires pour : Conduire un échange avec écoute active, questions ouvertes et respect. Le lien entre l'activité et cet objectif est une proposition à vérifier.",
+      "observation": "Observer les étapes explicitement demandées : Comparer deux propositions d'organisation et reformuler chaque position sans la caricaturer.",
+      "evidence": "Trace candidate : Tableau des propositions et reformulations. Une production ne prouve pas à elle seule la maîtrise.",
+      "criterion": "Critères candidats à examiner avec l’enseignant : Écoute respectueuse et fidélité aux propos.",
+      "disconfirmation": "L'enfant ne peut expliquer ou démontrer le processus attendu après un accompagnement adapté; l'hypothèse est à revoir.",
+      "alternative": "La trace peut résulter d'une aide adulte, d'un modèle copié ou de prérequis déjà acquis, plutôt que de l'activité seule.",
+      "boundary": "Patron conçu par Ékole (non source Kontexte), à adapter : âge, matériel, accessibilité, droits, contexte culturel.",
+      "interpretation_limit": "Une production dans « La forêt partagée » ne démontre pas à elle seule une maîtrise individuelle transférable ni un effet causal."
+    },
+    "qc-pri-ccq-004": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "discussion",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "part_task_practice",
+      "duration_minutes": 10,
+      "activity_refs": [
+        "ekoleprop:ap-051"
+      ],
+      "conjecture_statement": "L'activité candidate « Analyser un choix environnemental » pourrait aider à travailler « Relations entre humains et environnement » dans « La forêt partagée »; lien non démontré.",
+      "expected_action": "Comparer deux usages possibles d'une ressource en nommant les effets et limites connus. Expliquer comment cette action sert le problème posé.",
+      "process": "L'enfant mobilise les actions nécessaires pour : Analyser une situation où des choix humains touchent l’environnement. Le lien entre l'activité et cet objectif est une proposition à vérifier.",
+      "observation": "Observer les étapes explicitement demandées : Comparer deux usages possibles d'une ressource en nommant les effets et limites connus.",
+      "evidence": "Trace candidate : Tableau ressource–effet–incertitude. Une production ne prouve pas à elle seule la maîtrise.",
+      "criterion": "Critères candidats à examiner avec l’enseignant : Conséquences plausibles, incertitude reconnue.",
+      "disconfirmation": "L'enfant ne peut expliquer ou démontrer le processus attendu après un accompagnement adapté; l'hypothèse est à revoir.",
+      "alternative": "La trace peut résulter d'une aide adulte, d'un modèle copié ou de prérequis déjà acquis, plutôt que de l'activité seule.",
+      "boundary": "Patron conçu par Ékole (non source Kontexte), à adapter : âge, matériel, accessibilité, droits, contexte culturel.",
+      "interpretation_limit": "Une production dans « La forêt partagée » ne démontre pas à elle seule une maîtrise individuelle transférable ni un effet causal."
+    }
+  },
+  "dependency_lines": "",
+  "source_observations": [
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/catalogue/202_kristals.json",
+      "observed_sha256": "sha256:5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+      "observed_sha256": "sha256:4a2bf9abf619c87a7e4e6035bce70babb99de2e2603c209de2977bb89e7904bb",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/trames/catalogue-neutral-v0.2.json",
+      "observed_sha256": "sha256:b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Ékole",
+      "relative_path": "banques/prf22/activites-proposees-v0_6.json",
+      "observed_sha256": "sha256:6e82d3758814afbc2218e72673e94789eade1e69ddb74a3d812146eb50c8ecd1",
+      "pin_status": "unresolved",
+      "qualification": "not_reviewed"
+    }
+  ]
+}

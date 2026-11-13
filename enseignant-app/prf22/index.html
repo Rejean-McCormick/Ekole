@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ékole — Situations PRF-22</title>
+<link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/prf22/studio.css"></head>
+<body>
+<header class="top"><div><strong>Ékole · Situations PRF-22</strong><p>Banque, cohérence pédagogique et préparation — propositions non qualifiées</p></div><nav><a href="/">Atelier des leçons</a> &nbsp; <a href="/revue/index.html">Planification</a></nav></header>
+<main class="prf-shell">
+<section class="prf-intro"><div><h1>Compositeur de situations</h1><p>Partir d'une situation existante, examiner les objectifs, les activités et leurs preuves. Les révisions restent locales.</p></div><strong class="prf-warning">Aucune publication · Aucun accès enfant · Aucune séance</strong></section>
+<div id="status" role="status" aria-live="polite">Chargement de la banque…</div>
+<section class="prf-stats" id="metrics" aria-label="Couverture de la banque"></section>
+<div class="prf-columns">
+<section class="prf-list" aria-label="Bibliothèque des situations"><label for="search">Rechercher dans les situations</label><input id="search" type="search" placeholder="Nom, source, domaine ou objectif"><label for="domain">Discipline principale</label><select id="domain"><option value="">Toutes les disciplines</option></select><label for="filter">Priorité de revue</label><select id="filter"><option value="">Toutes les propositions</option><option value="REVUE_PRIORITAIRE">Revue prioritaire</option><option value="REVUE_OBLIGATOIRE">Revue obligatoire</option></select><p id="count" class="prf-muted"></p><div id="situations" class="prf-results" role="list"></div></section>
+<section class="prf-detail" aria-label="Conception pédagogique"><div id="empty">Choisis une situation dans la liste.</div><div id="content" hidden>
+<div class="prf-detail-head"><div><span class="prf-small" id="source"></span><h2 id="title"></h2><p id="quality"></p></div><span class="prf-chip" id="focus"></span></div>
+<p id="reason" class="prf-muted"></p>
+<div class="prf-cards"><section><h3>Situation et contexte</h3><p id="context"></p><p id="problem"></p></section><section><h3>Organisation candidate</h3><div class="prf-variants"><span>1 enfant · solo</span><span>8 enfants · équipes</span><span>30 enfants · stations</span></div><p class="prf-muted">Ressources, capacité et matériel à confirmer. La collaboration entre pairs ne peut pas être évaluée en solo.</p></section></div>
+<h3>Problème, informations et production</h3>
+<div id="editorial-summary" class="prf-story" aria-live="polite"><p class="prf-muted">Informations de la situation source et limites du brouillon.</p></div>
+<h3>Activités proposées — pourquoi ce choix ?</h3><p class="prf-muted">Les correspondances sont des hypothèses. Chaque carte précise son origine, sa justification, son objectif et les traces à observer.</p><div id="activity-list" class="prf-activities"></div>
+<h3>Objectifs et conjectures à réviser</h3><label for="goal">Choisir un objectif à examiner</label><select id="goal"></select><div id="theory-editor" class="prf-theory"></div>
+<label for="note">Notes de revue (locales)</label><textarea id="note" rows="3" placeholder="Risques, corrections souhaitées, matériel à confirmer…"></textarea>
+<div class="prf-actions"><button id="save" type="button">Enregistrer une révision locale</button><button id="reload" class="secondary" type="button">Réinitialiser à la banque</button><label for="revision">Révisions précédentes</label><select id="revision"><option value="">Banque d'origine</option></select><button id="openRevision" class="secondary" type="button">Lire cette révision</button></div><p class="prf-muted">Les propositions et révisions ne sont pas approuvées. Aucune affectation, preuve élève ni publication. Les révisions d’anciennes versions doivent être examinées avant réutilisation.</p>
+</div></section></div>
+</main><script src="/prf22/studio.js" defer></script></body></html>

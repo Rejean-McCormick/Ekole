@@ -1,0 +1,62 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:ombres-mobiles",
+  "focale": "arts",
+  "question_motrice": "L’élève doit expliquer ce changement.",
+  "declencheur_source": "Une ombre change de forme.",
+  "informations_a_preparer": [
+    "position lumiere",
+    "position objet"
+  ],
+  "actions_source": [
+    "mesurer",
+    "dessiner",
+    "verifier"
+  ],
+  "production_attendue_source": "Explication illustrée",
+  "rebond_source": "Une deuxième source lumineuse apparaît.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-062",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-001",
+      "titre": "Composer des silhouettes et des ombres",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "ombre",
+        "lumiere"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : ombre, lumiere",
+      "consigne_source": "Produire deux silhouettes sur papier puis observer comment leurs contours changent selon l’éclairage simulé.",
+      "consigne_contextualisee": "Dans « Le mystère des ombres », accomplir « Composer des silhouettes et des ombres » pour contribuer à « Explication illustrée ». Produire deux silhouettes sur papier puis observer comment leurs contours changent selon l’éclairage simulé.",
+      "preuve": "Esquisses de silhouettes comparées.",
+      "critere_propose": "Deux formes identifiables et observation différenciée des effets.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

@@ -1,0 +1,93 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "mission:chantier-maquette",
+  "focale": "francais",
+  "question_motrice": "Mission de simulation du monde Le chantier de l’architecte.",
+  "declencheur_source": "Mission de simulation du monde Le chantier de l’architecte.",
+  "informations_a_preparer": [
+    "Fragments de la mission : diffusion conditionnelle par Orgo, non affichés ici"
+  ],
+  "actions_source": [],
+  "production_attendue_source": "Étapes prévues par la mission : phase-1, phase-2, phase-3",
+  "rebond_source": "",
+  "niveaux_suggeres_source": "à déterminer",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-057",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-021",
+      "titre": "Décrire les étapes d’une fabrication",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "maquette",
+        "chantier"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : maquette, chantier",
+      "consigne_source": "Décrire par écrit trois étapes successives d’une fabrication fictive à partir d’un plan ou d’images fournis.",
+      "consigne_contextualisee": "Dans « Le chantier de l’architecte », accomplir « Décrire les étapes d’une fabrication » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Décrire par écrit trois étapes successives d’une fabrication fictive à partir d’un plan ou d’images fournis.",
+      "preuve": "Description ordonnée.",
+      "critere_propose": "Ordre logique des étapes, verbes d’action et information suffisante.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-013",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-005",
+      "titre": "Repérer une consigne essentielle",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "affiche"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : affiche",
+      "consigne_source": "Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "consigne_contextualisee": "Dans « Le chantier de l’architecte », accomplir « Repérer une consigne essentielle » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "preuve": "Fiche de quatre informations avec passages repérés.",
+      "critere_propose": "Fidélité au texte et distinction explicite faits/inférences.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-015",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-020",
+      "titre": "Établir un plan d'écriture",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "affiche"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : affiche",
+      "consigne_source": "Planifier un message utile à un personnage en indiquant destinataire, intention et trois idées.",
+      "consigne_contextualisee": "Dans « Le chantier de l’architecte », accomplir « Établir un plan d'écriture » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Planifier un message utile à un personnage en indiquant destinataire, intention et trois idées.",
+      "preuve": "Plan d'écriture avec ordre logique.",
+      "critere_propose": "Destinataire, intention et idées pertinents.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

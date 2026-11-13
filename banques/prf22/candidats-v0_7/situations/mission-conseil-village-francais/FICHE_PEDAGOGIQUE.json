@@ -1,0 +1,95 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "mission:conseil-village",
+  "focale": "francais",
+  "question_motrice": "Mission de simulation du monde Le conseil du village.",
+  "declencheur_source": "Mission de simulation du monde Le conseil du village.",
+  "informations_a_preparer": [
+    "Fragments de la mission : diffusion conditionnelle par Orgo, non affichés ici"
+  ],
+  "actions_source": [],
+  "production_attendue_source": "Étapes prévues par la mission : phase-1, phase-2, phase-3",
+  "rebond_source": "",
+  "niveaux_suggeres_source": "à déterminer",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-015",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-020",
+      "titre": "Établir un plan d'écriture",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "affiche",
+        "conseil"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : affiche, conseil",
+      "consigne_source": "Planifier un message utile à un personnage en indiquant destinataire, intention et trois idées.",
+      "consigne_contextualisee": "Dans « Le conseil du village », accomplir « Établir un plan d'écriture » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Planifier un message utile à un personnage en indiquant destinataire, intention et trois idées.",
+      "preuve": "Plan d'écriture avec ordre logique.",
+      "critere_propose": "Destinataire, intention et idées pertinents.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-020",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-fr-012",
+      "titre": "Atelier ciblé : Réviser l’orthographe d’usage avec des outils",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "ecrire",
+        "affiche"
+      ],
+      "motif_de_choix": "Indices thématiques : ecrire, affiche",
+      "consigne_source": "Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "consigne_contextualisee": "Dans « Le conseil du village », accomplir « Atelier ciblé : Réviser l’orthographe d’usage avec des outils » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Faire annoter l’élément linguistique ciblé et produire une version révisée.",
+      "preuve": "brouillon et version corrigée",
+      "critere_propose": "Vérifier la trace attendue pour « Orthographe d’usage » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-018",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-025",
+      "titre": "Écouter et reformuler",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "conseil",
+        "mission"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : conseil",
+      "consigne_source": "Écouter deux consignes ou propositions en jeu de rôle puis les reformuler sans changer leur sens.",
+      "consigne_contextualisee": "Dans « Le conseil du village », accomplir « Écouter et reformuler » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Écouter deux consignes ou propositions en jeu de rôle puis les reformuler sans changer leur sens.",
+      "preuve": "Reformulations notées ou enregistrées avec consentement.",
+      "critere_propose": "Écoute, exactitude et clarification respectueuse.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

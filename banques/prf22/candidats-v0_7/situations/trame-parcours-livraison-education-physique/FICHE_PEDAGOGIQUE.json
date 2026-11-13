@@ -1,0 +1,98 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:parcours-livraison",
+  "focale": "education_physique",
+  "question_motrice": "La capacité de transport est limitée.",
+  "declencheur_source": "Des objets fictifs sont à livrer.",
+  "informations_a_preparer": [
+    "quantites",
+    "distances"
+  ],
+  "actions_source": [
+    "repartir",
+    "suivre",
+    "compter"
+  ],
+  "production_attendue_source": "Plan de tournée",
+  "rebond_source": "Une livraison supplémentaire est annoncée.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-072",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-008",
+      "titre": "Sécuriser un parcours symbolique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "livraison",
+        "parcours"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : livraison, parcours",
+      "consigne_source": "Tracer un petit parcours symbolique balisé; repérer trois obstacles fictifs ou contrôlés et proposer des adaptations accessibles.",
+      "consigne_contextualisee": "Dans « Le parcours de livraison », accomplir « Sécuriser un parcours symbolique » pour contribuer à « Plan de tournée ». Tracer un petit parcours symbolique balisé; repérer trois obstacles fictifs ou contrôlés et proposer des adaptations accessibles.",
+      "preuve": "Plan du parcours et consignes de sécurité.",
+      "critere_propose": "Risques identifiés, adaptations pertinentes et déplacements autorisés.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-046",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-002",
+      "titre": "Concevoir un parcours locomoteur",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "parcours"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : parcours",
+      "consigne_source": "Planifier et essayer un parcours simple et sécuritaire en distinguant marche, saut et déplacement.",
+      "consigne_contextualisee": "Dans « Le parcours de livraison », accomplir « Concevoir un parcours locomoteur » pour contribuer à « Plan de tournée ». Planifier et essayer un parcours simple et sécuritaire en distinguant marche, saut et déplacement.",
+      "preuve": "Schéma de parcours et observation motrice.",
+      "critere_propose": "Déplacements appropriés et sécurité respectée.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-047",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-eps-007",
+      "titre": "Élaborer une stratégie d'équipe",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "parcours"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : parcours",
+      "consigne_source": "Définir une stratégie de déplacement collectif avec rôles, puis observer ce qui fonctionne.",
+      "consigne_contextualisee": "Dans « Le parcours de livraison », accomplir « Élaborer une stratégie d'équipe » pour contribuer à « Plan de tournée ». Définir une stratégie de déplacement collectif avec rôles, puis observer ce qui fonctionne.",
+      "preuve": "Plan de coopération et bref bilan.",
+      "critere_propose": "Rôles clairs, sécurité, réajustements.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

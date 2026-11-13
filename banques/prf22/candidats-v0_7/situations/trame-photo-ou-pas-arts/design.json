@@ -1,0 +1,547 @@
+{
+  "format": "ekole.situation-orchestrable.design/0.3",
+  "status": "design_only",
+  "id": "ekole-prf22-f8f22728b8b4fe21",
+  "title": "La photo et le choix — conception candidate",
+  "context": {
+    "reality_mode": "fiction",
+    "epoch": "Période de simulation à préciser selon la trame",
+    "place": "Lieu de la situation source, à préciser par l’enseignant",
+    "language": "fr-CA",
+    "cultural_frame": "Aucune culture réelle attribuée; sources et droits à valider",
+    "source_situation": {
+      "owner": "Kontexte",
+      "resource_id": "trame:photo-ou-pas",
+      "revision": "unverified-local-snapshot",
+      "pin_status": "unresolved",
+      "source_note": "data/trames/catalogue-neutral-v0.2.json"
+    },
+    "culture_refs": [],
+    "narrative_premise": "Une personne refuse une diffusion identifiante.",
+    "review_status": "not_evaluated"
+  },
+  "learning": {
+    "objectives": [
+      {
+        "id": "obj-01",
+        "reference": {
+          "owner": "Kontexte",
+          "resource_id": "qc-pri-ap-009",
+          "revision": "unverified-local-snapshot",
+          "pin_status": "unresolved",
+          "source_note": "data/catalogue/202_kristals.json"
+        }
+      },
+      {
+        "id": "obj-02",
+        "reference": {
+          "owner": "Kontexte",
+          "resource_id": "qc-pri-ap-003",
+          "revision": "unverified-local-snapshot",
+          "pin_status": "unresolved",
+          "source_note": "data/catalogue/202_kristals.json"
+        }
+      },
+      {
+        "id": "obj-03",
+        "reference": {
+          "owner": "Kontexte",
+          "resource_id": "qc-pri-ap-008",
+          "revision": "unverified-local-snapshot",
+          "pin_status": "unresolved",
+          "source_note": "data/catalogue/202_kristals.json"
+        }
+      }
+    ],
+    "activity_catalog_ownership": "external"
+  },
+  "roles": [
+    {
+      "id": "role-01",
+      "purpose": "Rôle narratif proposé : photographe"
+    },
+    {
+      "id": "role-02",
+      "purpose": "Rôle narratif proposé : redacteur"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-01",
+      "exercise_ref": {
+        "owner": "Ékole",
+        "resource_id": "ekoleprop:ap-034",
+        "revision": "unverified-local-snapshot",
+        "pin_status": "unresolved",
+        "source_note": "banques/prf22/activites-proposees-v0_7.json"
+      },
+      "objectives": [
+        "obj-01"
+      ],
+      "role_ids": [
+        "role-01",
+        "role-02"
+      ],
+      "duration_minutes": 20,
+      "station": {
+        "teams_per_instance": 1,
+        "max_parallel_instances": 3,
+        "materials_review_required": true
+      },
+      "solo_fallback": "Documents ou indices fournis sans prétendre démontrer une interaction entre pairs.",
+      "group_fallback": "Transmission différée supervisée si les équipes ne peuvent pas se rencontrer.",
+      "contextualization": "Expliquer une démarche artistique"
+    },
+    {
+      "id": "act-02",
+      "exercise_ref": {
+        "owner": "Ékole",
+        "resource_id": "ekoleprop:ap-061",
+        "revision": "unverified-local-snapshot",
+        "pin_status": "unresolved",
+        "source_note": "banques/prf22/activites-proposees-v0_7.json"
+      },
+      "objectives": [
+        "obj-02"
+      ],
+      "role_ids": [
+        "role-01",
+        "role-02"
+      ],
+      "duration_minutes": 20,
+      "station": {
+        "teams_per_instance": 1,
+        "max_parallel_instances": 3,
+        "materials_review_required": true
+      },
+      "solo_fallback": "Documents ou indices fournis sans prétendre démontrer une interaction entre pairs.",
+      "group_fallback": "Transmission différée supervisée si les équipes ne peuvent pas se rencontrer.",
+      "contextualization": "Créer une signalétique illustrée"
+    },
+    {
+      "id": "act-03",
+      "exercise_ref": {
+        "owner": "Kontexte",
+        "resource_id": "micro:enseignement-explicite-005",
+        "revision": "unverified-local-snapshot",
+        "pin_status": "unresolved",
+        "source_note": "data/locales/qc/fr-CA/grade3/micro-situations-34.json"
+      },
+      "objectives": [
+        "obj-03"
+      ],
+      "role_ids": [
+        "role-01",
+        "role-02"
+      ],
+      "duration_minutes": 20,
+      "station": {
+        "teams_per_instance": 1,
+        "max_parallel_instances": 3,
+        "materials_review_required": true
+      },
+      "solo_fallback": "Documents ou indices fournis sans prétendre démontrer une interaction entre pairs.",
+      "group_fallback": "Transmission différée supervisée si les équipes ne peuvent pas se rencontrer.",
+      "contextualization": "Atelier ciblé : Exprimer un point de vue sur une création"
+    }
+  ],
+  "dependencies": [],
+  "organization": {
+    "min_learners": 1,
+    "max_learners": 30,
+    "preferred_team_size": 4,
+    "adaptations": [
+      {
+        "learners": 1,
+        "strategy": "Parcours individuel et ressources documentaires de substitution, sans preuve de collaboration entre pairs.",
+        "requires_teacher_review": true
+      },
+      {
+        "learners": 8,
+        "strategy": "Organisation candidate pour 8 enfants, groupes et matériel à confirmer par l’enseignant.",
+        "requires_teacher_review": true
+      },
+      {
+        "learners": 30,
+        "strategy": "Organisation candidate pour 30 enfants, groupes et matériel à confirmer par l’enseignant.",
+        "requires_teacher_review": true
+      }
+    ],
+    "human_confirm_resources": true
+  },
+  "evidence": {
+    "expected_artifacts": [
+      "Trace attendue selon la ressource Ékole : Carnet d'étapes et commentaire oral ou écrit. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "Trace attendue selon la ressource Ékole : Pictogramme légendé. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "Trace attendue selon la ressource Kontexte : observations sans jugement des personnes. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon."
+    ],
+    "teacher_validation": true,
+    "student_results_stored_here": false
+  },
+  "governance": {
+    "access_authority": "external_required",
+    "execution_authority": "external_required",
+    "publication_authorized": false,
+    "activation_authorized": false,
+    "student_data_included": false,
+    "review_status": "not_evaluated"
+  },
+  "pedagogical_model": {
+    "theory_refs": [
+      {
+        "id": "biggs-align",
+        "citation": "Biggs, J. (2003). Constructive alignment. Présentation University of Queensland.",
+        "url": "https://itali.uq.edu.au/teaching-guidance/principles-learning/guiding-theories-and-frameworks/teaching-frameworks-and-models",
+        "design_function": "Relier les objectifs aux actions et aux preuves évaluables."
+      },
+      {
+        "id": "laurillard",
+        "citation": "Laurillard, D. Conversational Framework, six formes d’apprentissage, UCL.",
+        "url": "https://www.ucl.ac.uk/short-courses/staff-resources/course-design/designing-learning-activities",
+        "design_function": "Caractériser les actes d’enquête, de pratique, de collaboration et de production."
+      },
+      {
+        "id": "sandoval-2014",
+        "citation": "Sandoval, W. (2014). Conjecture Mapping. Journal of the Learning Sciences, 23(1), 18–36.",
+        "url": "https://doi.org/10.1080/10508406.2013.778204",
+        "design_function": "Relier les dispositifs, les médiations et les résultats attendus."
+      }
+    ],
+    "objective_conditions": [
+      {
+        "objective_id": "obj-01",
+        "assessment_requires": "individual_possible",
+        "interpretation_limit": "La trace prévue dans « La photo et le choix » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+      },
+      {
+        "objective_id": "obj-02",
+        "assessment_requires": "individual_possible",
+        "interpretation_limit": "La trace prévue dans « La photo et le choix » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+      },
+      {
+        "objective_id": "obj-03",
+        "assessment_requires": "individual_possible",
+        "interpretation_limit": "La trace prévue dans « La photo et le choix » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+      }
+    ],
+    "activity_didactics": [
+      {
+        "activity_id": "act-01",
+        "learning_types": [
+          "production"
+        ],
+        "four_cid_components": [
+          "learning_task"
+        ],
+        "pedagogical_rationale": "Si l’enfant réalise « Expliquer une démarche artistique » pour contribuer à « Galerie respectueuse des choix » dans « La photo et le choix », il pourrait exercer « Présenter et expliquer sa démarche artistique ». L’effet et la difficulté restent à examiner."
+      },
+      {
+        "activity_id": "act-02",
+        "learning_types": [
+          "production"
+        ],
+        "four_cid_components": [
+          "learning_task"
+        ],
+        "pedagogical_rationale": "Si l’enfant réalise « Créer une signalétique illustrée » pour contribuer à « Galerie respectueuse des choix » dans « La photo et le choix », il pourrait exercer « Composer dans l’espace et sur un support ». L’effet et la difficulté restent à examiner."
+      },
+      {
+        "activity_id": "act-03",
+        "learning_types": [
+          "production"
+        ],
+        "four_cid_components": [
+          "learning_task"
+        ],
+        "pedagogical_rationale": "Si l’enfant réalise « Atelier ciblé : Exprimer un point de vue sur une création » pour contribuer à « Galerie respectueuse des choix » dans « La photo et le choix », il pourrait exercer « Apprécier des œuvres et exprimer sa perception ». L’effet et la difficulté restent à examiner."
+      }
+    ],
+    "conjectures": [
+      {
+        "id": "conj-01",
+        "conjecture_statement": "Si l’enfant réalise « Expliquer une démarche artistique » pour contribuer à « Galerie respectueuse des choix » dans « La photo et le choix », il pourrait exercer « Présenter et expliquer sa démarche artistique ». L’effet et la difficulté restent à examiner.",
+        "theoretical_basis_ids": [
+          "biggs-align",
+          "laurillard",
+          "sandoval-2014"
+        ],
+        "design_activity_ids": [
+          "act-01"
+        ],
+        "intended_objective_ids": [
+          "obj-01"
+        ],
+        "mediating_processes": [
+          {
+            "id": "process-01",
+            "description": "Repérer dans la réalisation les opérations demandées par « Expliquer une démarche artistique » : Présenter les étapes d'une création en indiquant une modification et sa raison. Vérifier qu’elles se rapportent effectivement à « Expliquer son processus de création et des ajustements apportés ».",
+            "observation_strategy": "Pendant « Expliquer une démarche artistique », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer."
+          }
+        ],
+        "boundary_conditions": [
+          "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : photo. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Galerie respectueuse des choix ». Adapter si le contexte change."
+        ],
+        "disconfirmation_signals": [
+          "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Présenter et expliquer sa démarche artistique », ou n'arrive pas à justifier une étape malgré des soutiens adaptés."
+        ],
+        "alternative_explanations": [
+          "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule."
+        ],
+        "validation_status": "untested"
+      },
+      {
+        "id": "conj-02",
+        "conjecture_statement": "Si l’enfant réalise « Créer une signalétique illustrée » pour contribuer à « Galerie respectueuse des choix » dans « La photo et le choix », il pourrait exercer « Composer dans l’espace et sur un support ». L’effet et la difficulté restent à examiner.",
+        "theoretical_basis_ids": [
+          "biggs-align",
+          "laurillard",
+          "sandoval-2014"
+        ],
+        "design_activity_ids": [
+          "act-02"
+        ],
+        "intended_objective_ids": [
+          "obj-02"
+        ],
+        "mediating_processes": [
+          {
+            "id": "process-02",
+            "description": "Repérer dans la réalisation les opérations demandées par « Créer une signalétique illustrée » : Dessiner un symbole et une courte légende pour guider les utilisateurs fictifs de la situation. Vérifier qu’elles se rapportent effectivement à « Organiser des éléments visuels en une composition intentionnelle ».",
+            "observation_strategy": "Pendant « Créer une signalétique illustrée », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer."
+          }
+        ],
+        "boundary_conditions": [
+          "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : photo. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Galerie respectueuse des choix ». Adapter si le contexte change."
+        ],
+        "disconfirmation_signals": [
+          "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Composer dans l’espace et sur un support », ou n'arrive pas à justifier une étape malgré des soutiens adaptés."
+        ],
+        "alternative_explanations": [
+          "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule."
+        ],
+        "validation_status": "untested"
+      },
+      {
+        "id": "conj-03",
+        "conjecture_statement": "Si l’enfant réalise « Atelier ciblé : Exprimer un point de vue sur une création » pour contribuer à « Galerie respectueuse des choix » dans « La photo et le choix », il pourrait exercer « Apprécier des œuvres et exprimer sa perception ». L’effet et la difficulté restent à examiner.",
+        "theoretical_basis_ids": [
+          "biggs-align",
+          "laurillard",
+          "sandoval-2014"
+        ],
+        "design_activity_ids": [
+          "act-03"
+        ],
+        "intended_objective_ids": [
+          "obj-03"
+        ],
+        "mediating_processes": [
+          {
+            "id": "process-03",
+            "description": "Repérer dans la réalisation les opérations demandées par « Atelier ciblé : Exprimer un point de vue sur une création » : Faire explorer puis expliquer un choix plastique concret. Vérifier qu’elles se rapportent effectivement à « Formuler une appréciation argumentée d’une œuvre sans imposer le goût ».",
+            "observation_strategy": "Pendant « Atelier ciblé : Exprimer un point de vue sur une création », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer."
+          }
+        ],
+        "boundary_conditions": [
+          "Ancrage : Indices thématiques : photo. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Galerie respectueuse des choix ». Adapter si le contexte change."
+        ],
+        "disconfirmation_signals": [
+          "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Apprécier des œuvres et exprimer sa perception », ou n'arrive pas à justifier une étape malgré des soutiens adaptés."
+        ],
+        "alternative_explanations": [
+          "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule."
+        ],
+        "validation_status": "untested"
+      }
+    ],
+    "evidence_design": [
+      {
+        "id": "evidence-01",
+        "description": "Trace attendue selon la ressource Ékole : Carnet d'étapes et commentaire oral ou écrit. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+        "produced_by_activity_ids": [
+          "act-01"
+        ],
+        "interpretation_limits": [
+          "La trace prévue dans « La photo et le choix » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+        ],
+        "storage_boundary": "external_only"
+      },
+      {
+        "id": "evidence-02",
+        "description": "Trace attendue selon la ressource Ékole : Pictogramme légendé. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+        "produced_by_activity_ids": [
+          "act-02"
+        ],
+        "interpretation_limits": [
+          "La trace prévue dans « La photo et le choix » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+        ],
+        "storage_boundary": "external_only"
+      },
+      {
+        "id": "evidence-03",
+        "description": "Trace attendue selon la ressource Kontexte : observations sans jugement des personnes. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+        "produced_by_activity_ids": [
+          "act-03"
+        ],
+        "interpretation_limits": [
+          "La trace prévue dans « La photo et le choix » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+        ],
+        "storage_boundary": "external_only"
+      }
+    ],
+    "alignment": [
+      {
+        "id": "alignment-01",
+        "objective_id": "obj-01",
+        "activity_ids": [
+          "act-01"
+        ],
+        "expected_learner_actions": [
+          "Pour résoudre « Une personne refuse une diffusion identifiante. », proposer la tâche suivante : Présenter les étapes d'une création en indiquant une modification et sa raison. Mettre à disposition : auteur et œuvre, choix de visibilite. Livrable de la situation : Galerie respectueuse des choix. Les données et le matériel précis sont à fournir avant usage."
+        ],
+        "process_ids": [
+          "process-01"
+        ],
+        "evidence_id": "evidence-01",
+        "criteria": [
+          "Critères proposés, à préciser et à faire valider : Étapes identifiables, choix motivés. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise."
+        ],
+        "assessed_modes": [
+          "solo",
+          "collaborative"
+        ],
+        "assessment_authority": "teacher",
+        "assessment_status": "planned_only"
+      },
+      {
+        "id": "alignment-02",
+        "objective_id": "obj-02",
+        "activity_ids": [
+          "act-02"
+        ],
+        "expected_learner_actions": [
+          "Pour résoudre « Une personne refuse une diffusion identifiante. », proposer la tâche suivante : Dessiner un symbole et une courte légende pour guider les utilisateurs fictifs de la situation. Mettre à disposition : auteur et œuvre, choix de visibilite. Livrable de la situation : Galerie respectueuse des choix. Les données et le matériel précis sont à fournir avant usage."
+        ],
+        "process_ids": [
+          "process-02"
+        ],
+        "evidence_id": "evidence-02",
+        "criteria": [
+          "Critères proposés, à préciser et à faire valider : Message visuel compréhensible, légende cohérente et lisibilité. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise."
+        ],
+        "assessed_modes": [
+          "solo",
+          "collaborative"
+        ],
+        "assessment_authority": "teacher",
+        "assessment_status": "planned_only"
+      },
+      {
+        "id": "alignment-03",
+        "objective_id": "obj-03",
+        "activity_ids": [
+          "act-03"
+        ],
+        "expected_learner_actions": [
+          "Pour résoudre « Une personne refuse une diffusion identifiante. », proposer la tâche suivante : Faire explorer puis expliquer un choix plastique concret. Mettre à disposition : auteur et œuvre, choix de visibilite. Livrable de la situation : Galerie respectueuse des choix. Les données et le matériel précis sont à fournir avant usage."
+        ],
+        "process_ids": [
+          "process-03"
+        ],
+        "evidence_id": "evidence-03",
+        "criteria": [
+          "Critères proposés, à préciser et à faire valider : Trace attendue clairement identifiable (observations sans jugement des personnes); lien observable avec « Formuler une appréciation argumentée d’une œuvre sans imposer le goût »; explication individuelle vérifiable. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise."
+        ],
+        "assessed_modes": [
+          "solo",
+          "collaborative"
+        ],
+        "assessment_authority": "teacher",
+        "assessment_status": "planned_only"
+      }
+    ],
+    "adaptation_contract": {
+      "invariants": [
+        {
+          "id": "inv-alignement",
+          "rule": "Toute preuve doit demeurer attachée à un objectif avec critères pertinents."
+        },
+        {
+          "id": "inv-provenance",
+          "rule": "Ne pas remplacer une source non résolue par une citation ou un pin inventé."
+        },
+        {
+          "id": "inv-collaboration",
+          "rule": "Une modalité solitaire ne valide jamais une compétence nécessitant des pairs."
+        },
+        {
+          "id": "inv-autorite",
+          "rule": "Aucun plan de conception ne peut conférer droits scolaires ni activation Orgo."
+        }
+      ],
+      "variants": [
+        {
+          "learners": 1,
+          "mode": "solo",
+          "change_notes": [
+            "Parcours individuel et ressources documentaires de substitution, sans preuve de collaboration entre pairs."
+          ],
+          "preserved_objective_ids": [
+            "obj-01",
+            "obj-02",
+            "obj-03"
+          ],
+          "non_assessable_objective_ids": [],
+          "teacher_approval_required": true,
+          "resources_confirmed": false
+        },
+        {
+          "learners": 8,
+          "mode": "collaborative",
+          "change_notes": [
+            "Organisation candidate pour 8 enfants, groupes et matériel à confirmer par l’enseignant."
+          ],
+          "preserved_objective_ids": [
+            "obj-01",
+            "obj-02",
+            "obj-03"
+          ],
+          "non_assessable_objective_ids": [],
+          "teacher_approval_required": true,
+          "resources_confirmed": false
+        },
+        {
+          "learners": 30,
+          "mode": "collaborative",
+          "change_notes": [
+            "Organisation candidate pour 30 enfants, groupes et matériel à confirmer par l’enseignant."
+          ],
+          "preserved_objective_ids": [
+            "obj-01",
+            "obj-02",
+            "obj-03"
+          ],
+          "non_assessable_objective_ids": [],
+          "teacher_approval_required": true,
+          "resources_confirmed": false
+        }
+      ]
+    },
+    "research_plan": {
+      "observation_protocol": "Comparer, avec l’enseignant et dans un cadre autorisé, les processus observés aux conjectures explicites, y compris les contre-exemples et conditions de séance.",
+      "ethics_limits": [
+        "Ne stocker aucune identité d’enfant ni réalisation individuelle dans ce blueprint.",
+        "Respecter les règles locales d’accès, de consentement, d’autorisation et de conservation."
+      ],
+      "revision_rule": "Créer une nouvelle révision après chaque pilote, tracer les écarts et conserver les hypothèses non corroborées comme telles.",
+      "claims_status": "untested",
+      "human_reviews": {
+        "pedagogical": "not_reviewed",
+        "contextual": "not_reviewed",
+        "accessibility": "not_reviewed",
+        "operational": "not_reviewed",
+        "authority": "not_reviewed"
+      }
+    }
+  }
+}

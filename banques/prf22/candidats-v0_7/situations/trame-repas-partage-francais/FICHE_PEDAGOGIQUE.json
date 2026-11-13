@@ -1,0 +1,99 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:repas-partage",
+  "focale": "francais",
+  "question_motrice": "Les portions et préférences diffèrent.",
+  "declencheur_source": "Un repas fictif doit être planifié.",
+  "informations_a_preparer": [
+    "nombre de convives",
+    "stocks et besoins"
+  ],
+  "actions_source": [
+    "planifier",
+    "calculer",
+    "communiquer"
+  ],
+  "production_attendue_source": "Menu et plan des portions",
+  "rebond_source": "Un ingrédient est indisponible.",
+  "niveaux_suggeres_source": "primaire-1-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-052",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-009",
+      "titre": "Lire et reformuler une liste de besoins",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "repas",
+        "stock"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : repas, stock",
+      "consigne_source": "Lire la liste de besoins fournie, souligner les informations utiles puis reformuler ce qui est demandé.",
+      "consigne_contextualisee": "Dans « Le repas partagé », accomplir « Lire et reformuler une liste de besoins » pour contribuer à « Menu et plan des portions ». Lire la liste de besoins fournie, souligner les informations utiles puis reformuler ce qui est demandé.",
+      "preuve": "Liste annotée et reformulation.",
+      "critere_propose": "Informations essentielles identifiées sans ajout inventé.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-058",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-026",
+      "titre": "Présenter une solution à un problème concret",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "stock",
+        "repas"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : stock, repas",
+      "consigne_source": "Présenter oralement un problème fictif, une proposition de solution et une raison issue de la situation.",
+      "consigne_contextualisee": "Dans « Le repas partagé », accomplir « Présenter une solution à un problème concret » pour contribuer à « Menu et plan des portions ». Présenter oralement un problème fictif, une proposition de solution et une raison issue de la situation.",
+      "preuve": "Courte présentation et plan de parole.",
+      "critere_propose": "Problème, proposition et justification distinguables.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-013",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-005",
+      "titre": "Repérer une consigne essentielle",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "message"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : message",
+      "consigne_source": "Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "consigne_contextualisee": "Dans « Le repas partagé », accomplir « Repérer une consigne essentielle » pour contribuer à « Menu et plan des portions ». Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "preuve": "Fiche de quatre informations avec passages repérés.",
+      "critere_propose": "Fidélité au texte et distinction explicite faits/inférences.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

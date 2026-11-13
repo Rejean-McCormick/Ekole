@@ -1,0 +1,100 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:stock-et-commande",
+  "focale": "mathematiques",
+  "question_motrice": "Le client et le fournisseur possèdent chacun un chiffre.",
+  "declencheur_source": "Une commande est supérieure au stock.",
+  "informations_a_preparer": [
+    "commande",
+    "inventaire"
+  ],
+  "actions_source": [
+    "echanger",
+    "soustraire",
+    "commander"
+  ],
+  "production_attendue_source": "Bon de commande",
+  "rebond_source": "Une livraison partielle arrive.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-005",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-008",
+      "titre": "Organiser des lots égaux",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "commande",
+        "stock"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : commande, stock",
+      "consigne_source": "Répartir un matériel fictif en lots égaux, représenter l'opération et vérifier le total.",
+      "consigne_contextualisee": "Dans « Le stock insuffisant », accomplir « Organiser des lots égaux » pour contribuer à « Bon de commande ». Répartir un matériel fictif en lots égaux, représenter l'opération et vérifier le total.",
+      "preuve": "Schéma de groupements et calcul expliqué.",
+      "critere_propose": "Groupements réguliers, opération cohérente, vérification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-011",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-007",
+      "titre": "Calculer ce qui manque",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "stock",
+        "commande"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : stock, commande",
+      "consigne_source": "Déterminer par soustraction la quantité nécessaire pour atteindre une cible contextualisée.",
+      "consigne_contextualisee": "Dans « Le stock insuffisant », accomplir « Calculer ce qui manque » pour contribuer à « Bon de commande ». Déterminer par soustraction la quantité nécessaire pour atteindre une cible contextualisée.",
+      "preuve": "Calcul annoté et réponse avec unité.",
+      "critere_propose": "Soustraction pertinente, contrôle du résultat.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-024",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-002",
+      "titre": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "stock",
+        "commande"
+      ],
+      "motif_de_choix": "Indices thématiques : stock, commande",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « Le stock insuffisant », accomplir « Atelier ciblé : Lire, représenter et comparer des nombres naturels » pour contribuer à « Bon de commande ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "écriture et représentation vérifiées",
+      "critere_propose": "Vérifier la trace attendue pour « Lire, écrire et comparer des nombres naturels » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

@@ -1,0 +1,98 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:affiche-service",
+  "focale": "arts",
+  "question_motrice": "Le message doit être compris par tous.",
+  "declencheur_source": "Un service communautaire fictif cherche des volontaires.",
+  "informations_a_preparer": [
+    "besoin",
+    "public cible"
+  ],
+  "actions_source": [
+    "rediger",
+    "illustrer",
+    "diffuser"
+  ],
+  "production_attendue_source": "Affiche accessible",
+  "rebond_source": "Un public utilise une autre langue.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-074",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-003",
+      "titre": "Illustrer un geste d’entraide",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "entraide",
+        "service"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : entraide, service",
+      "consigne_source": "Concevoir deux pictogrammes pour représenter une aide concrète fictive, puis choisir le plus compréhensible.",
+      "consigne_contextualisee": "Dans « L’affiche d’entraide », accomplir « Illustrer un geste d’entraide » pour contribuer à « Affiche accessible ». Concevoir deux pictogrammes pour représenter une aide concrète fictive, puis choisir le plus compréhensible.",
+      "preuve": "Deux pictogrammes et un choix expliqué.",
+      "critere_propose": "Intention lisible, choix visuel justifié et aucune personne réelle identifiable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-031",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-001",
+      "titre": "Inventaire des formes et couleurs",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "affiche"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : affiche",
+      "consigne_source": "Observer les formes et couleurs d'une scène puis construire un nuancier ou planche d'inspiration.",
+      "consigne_contextualisee": "Dans « L’affiche d’entraide », accomplir « Inventaire des formes et couleurs » pour contribuer à « Affiche accessible ». Observer les formes et couleurs d'une scène puis construire un nuancier ou planche d'inspiration.",
+      "preuve": "Planche annotée d'observations.",
+      "critere_propose": "Éléments repérés, choix expliqués.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-034",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-009",
+      "titre": "Expliquer une démarche artistique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "affiche"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : affiche",
+      "consigne_source": "Présenter les étapes d'une création en indiquant une modification et sa raison.",
+      "consigne_contextualisee": "Dans « L’affiche d’entraide », accomplir « Expliquer une démarche artistique » pour contribuer à « Affiche accessible ». Présenter les étapes d'une création en indiquant une modification et sa raison.",
+      "preuve": "Carnet d'étapes et commentaire oral ou écrit.",
+      "critere_propose": "Étapes identifiables, choix motivés.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

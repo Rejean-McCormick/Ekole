@@ -1,0 +1,97 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:journal-exploration",
+  "focale": "francais",
+  "question_motrice": "Certaines observations manquent de précision.",
+  "declencheur_source": "Un explorateur consigne sa découverte.",
+  "informations_a_preparer": [
+    "observations",
+    "mesures"
+  ],
+  "actions_source": [
+    "decrire",
+    "situer",
+    "completer"
+  ],
+  "production_attendue_source": "Carnet illustré",
+  "rebond_source": "Une nouvelle découverte contredit l’ancienne.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-013",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-005",
+      "titre": "Repérer une consigne essentielle",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "consigne"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : consigne",
+      "consigne_source": "Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "consigne_contextualisee": "Dans « Le carnet d’exploration », accomplir « Repérer une consigne essentielle » pour contribuer à « Carnet illustré ». Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "preuve": "Fiche de quatre informations avec passages repérés.",
+      "critere_propose": "Fidélité au texte et distinction explicite faits/inférences.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-056",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-023",
+      "titre": "Adapter un texte explicatif pour un lecteur",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "consigne"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : consigne",
+      "consigne_source": "Réviser un texte court fourni afin que les consignes et les mots importants soient compréhensibles par son destinataire.",
+      "consigne_contextualisee": "Dans « Le carnet d’exploration », accomplir « Adapter un texte explicatif pour un lecteur » pour contribuer à « Carnet illustré ». Réviser un texte court fourni afin que les consignes et les mots importants soient compréhensibles par son destinataire.",
+      "preuve": "Texte annoté et version révisée.",
+      "critere_propose": "Sens conservé, formulations claires et corrections explicitées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-058",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-026",
+      "titre": "Présenter une solution à un problème concret",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "manque"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : manque",
+      "consigne_source": "Présenter oralement un problème fictif, une proposition de solution et une raison issue de la situation.",
+      "consigne_contextualisee": "Dans « Le carnet d’exploration », accomplir « Présenter une solution à un problème concret » pour contribuer à « Carnet illustré ». Présenter oralement un problème fictif, une proposition de solution et une raison issue de la situation.",
+      "preuve": "Courte présentation et plan de parole.",
+      "critere_propose": "Problème, proposition et justification distinguables.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

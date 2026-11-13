@@ -1,0 +1,102 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:marche-des-creations",
+  "focale": "mathematiques",
+  "question_motrice": "Chaque équipe a un budget limité.",
+  "declencheur_source": "L’école prépare un marché fictif.",
+  "informations_a_preparer": [
+    "couts",
+    "commandes"
+  ],
+  "actions_source": [
+    "produire",
+    "etiqueter",
+    "echanger"
+  ],
+  "production_attendue_source": "Kiosques et registre fictif",
+  "rebond_source": "La demande dépasse l’offre.",
+  "niveaux_suggeres_source": "maternelle-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-010",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-006",
+      "titre": "Préparer un budget simple",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "budget",
+        "marche",
+        "commande",
+        "cout"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : budget, marche, commande, cout",
+      "consigne_source": "Additionner des coûts ou quantités fournis dans une fiche de mission et expliquer une stratégie de calcul.",
+      "consigne_contextualisee": "Dans « Le marché des créations », accomplir « Préparer un budget simple » pour contribuer à « Kiosques et registre fictif ». Additionner des coûts ou quantités fournis dans une fiche de mission et expliquer une stratégie de calcul.",
+      "preuve": "Liste de calculs et total justifié.",
+      "critere_propose": "Choix de l'opération, exactitude et vérification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-011",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-007",
+      "titre": "Calculer ce qui manque",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "commande",
+        "prepar"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : commande, prepar",
+      "consigne_source": "Déterminer par soustraction la quantité nécessaire pour atteindre une cible contextualisée.",
+      "consigne_contextualisee": "Dans « Le marché des créations », accomplir « Calculer ce qui manque » pour contribuer à « Kiosques et registre fictif ». Déterminer par soustraction la quantité nécessaire pour atteindre une cible contextualisée.",
+      "preuve": "Calcul annoté et réponse avec unité.",
+      "critere_propose": "Soustraction pertinente, contrôle du résultat.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-022",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-033",
+      "titre": "Atelier ciblé : Expliquer et vérifier sa démarche mathématique",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "cout",
+        "budget"
+      ],
+      "motif_de_choix": "Indices thématiques : cout, budget",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « Le marché des créations », accomplir « Atelier ciblé : Expliquer et vérifier sa démarche mathématique » pour contribuer à « Kiosques et registre fictif ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "justification intelligible",
+      "critere_propose": "Vérifier la trace attendue pour « Justifier et communiquer une démarche mathématique » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

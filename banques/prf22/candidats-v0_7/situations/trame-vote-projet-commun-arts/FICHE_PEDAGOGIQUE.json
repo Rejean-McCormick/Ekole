@@ -1,0 +1,62 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:vote-projet-commun",
+  "focale": "arts",
+  "question_motrice": "Les priorités diffèrent selon les classes.",
+  "declencheur_source": "L’école choisit un projet simulé.",
+  "informations_a_preparer": [
+    "propositions",
+    "contraintes communes"
+  ],
+  "actions_source": [
+    "consulter",
+    "presenter",
+    "choisir"
+  ],
+  "production_attendue_source": "Décision collective",
+  "rebond_source": "Une solution hybride apparaît.",
+  "niveaux_suggeres_source": "maternelle-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-076",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-003",
+      "titre": "Créer une esquisse pour un projet collectif",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "projet commun",
+        "decision collective"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : projet commun, decision collective",
+      "consigne_source": "Dessiner deux variantes visuelles d’un projet fictif et argumenter le choix collectif sans imposer un style.",
+      "consigne_contextualisee": "Dans « Le projet commun », accomplir « Créer une esquisse pour un projet collectif » pour contribuer à « Décision collective ». Dessiner deux variantes visuelles d’un projet fictif et argumenter le choix collectif sans imposer un style.",
+      "preuve": "Deux esquisses et une justification.",
+      "critere_propose": "Différence des propositions, choix appuyé sur les contraintes et représentation respectueuse.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

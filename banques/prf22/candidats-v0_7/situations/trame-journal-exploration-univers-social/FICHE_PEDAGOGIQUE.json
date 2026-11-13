@@ -1,0 +1,81 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:journal-exploration",
+  "focale": "univers_social",
+  "question_motrice": "Certaines observations manquent de précision.",
+  "declencheur_source": "Un explorateur consigne sa découverte.",
+  "informations_a_preparer": [
+    "observations",
+    "mesures"
+  ],
+  "actions_source": [
+    "decrire",
+    "situer",
+    "completer"
+  ],
+  "production_attendue_source": "Carnet illustré",
+  "rebond_source": "Une nouvelle découverte contredit l’ancienne.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-070",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-us-002",
+      "titre": "Tracer un itinéraire avec légende",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "carnet",
+        "exploration",
+        "decouverte"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : carnet, exploration, decouverte",
+      "consigne_source": "Sur un plan fictif fourni, placer trois repères et expliquer l’itinéraire avec une légende lisible.",
+      "consigne_contextualisee": "Dans « Le carnet d’exploration », accomplir « Tracer un itinéraire avec légende » pour contribuer à « Carnet illustré ». Sur un plan fictif fourni, placer trois repères et expliquer l’itinéraire avec une légende lisible.",
+      "preuve": "Plan annoté.",
+      "critere_propose": "Repères lisibles, légende cohérente et trajet interprétable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-071",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-us-015",
+      "titre": "Observer les transformations d’un lieu",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "carnet"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : carnet",
+      "consigne_source": "À partir de deux vues datées et documentées fournies, repérer ce qui a changé et ce qui reste semblable.",
+      "consigne_contextualisee": "Dans « Le carnet d’exploration », accomplir « Observer les transformations d’un lieu » pour contribuer à « Carnet illustré ». À partir de deux vues datées et documentées fournies, repérer ce qui a changé et ce qui reste semblable.",
+      "preuve": "Comparaison avant/après.",
+      "critere_propose": "Changements observables distingués des suppositions.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

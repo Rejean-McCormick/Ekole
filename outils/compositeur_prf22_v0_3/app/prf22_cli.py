@@ -51,7 +51,8 @@ def main(argv=None) -> int:
         if args.command=='exporter':
             state=load_authoring(args.authoring)
             if args.kontexte:
-                c=load_catalogue(args.kontexte)
+                from composer_core import attach_ekole_activity_patterns
+                c=attach_ekole_activity_patterns(load_catalogue(args.kontexte))
                 for a in state['draft']['activity_bindings']:c.activity(a['activity_ref'])
                 for o in state['draft']['learning_objective_links']:c.objective(o['objective_ref'])
                 if state.get('source_observations'):

@@ -1,0 +1,80 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:temperatures-melangees",
+  "focale": "sciences",
+  "question_motrice": "Les relevés ne sont pas classés.",
+  "declencheur_source": "Une suite de mesures de température doit être interprétée.",
+  "informations_a_preparer": [
+    "valeurs",
+    "moments de mesure"
+  ],
+  "actions_source": [
+    "classer",
+    "mesurer",
+    "expliquer"
+  ],
+  "production_attendue_source": "Tableau chronologique",
+  "rebond_source": "Une mesure est manquante.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-023",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-003",
+      "titre": "Noter des observations mesurables",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "temperature",
+        "mesur"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : temperature, mesur",
+      "consigne_source": "Prendre trois mesures d'un matériel sécurisé fourni et documenter méthode, unité et incertitude.",
+      "consigne_contextualisee": "Dans « Les mesures mélangées », accomplir « Noter des observations mesurables » pour contribuer à « Tableau chronologique ». Prendre trois mesures d'un matériel sécurisé fourni et documenter méthode, unité et incertitude.",
+      "preuve": "Journal de mesures datées.",
+      "critere_propose": "Observations reproductibles, unités, conditions notées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-024",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-004",
+      "titre": "Conclure avec prudence",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "scientifique"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : scientifique",
+      "consigne_source": "Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis.",
+      "consigne_contextualisee": "Dans « Les mesures mélangées », accomplir « Conclure avec prudence » pour contribuer à « Tableau chronologique ». Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis.",
+      "preuve": "Phrase de conclusion associée au relevé de données.",
+      "critere_propose": "Conclusion supportée, limites explicites.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

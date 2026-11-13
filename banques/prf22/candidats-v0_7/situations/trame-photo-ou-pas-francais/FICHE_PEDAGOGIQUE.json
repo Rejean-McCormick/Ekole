@@ -1,0 +1,61 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:photo-ou-pas",
+  "focale": "francais",
+  "question_motrice": "Une personne refuse une diffusion identifiante.",
+  "declencheur_source": "Une production peut être montrée dans une galerie.",
+  "informations_a_preparer": [
+    "auteur et œuvre",
+    "choix de visibilite"
+  ],
+  "actions_source": [
+    "demander",
+    "classifier",
+    "publier_ou_retenir"
+  ],
+  "production_attendue_source": "Galerie respectueuse des choix",
+  "rebond_source": "Un consentement est retiré.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-056",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-023",
+      "titre": "Adapter un texte explicatif pour un lecteur",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "photo"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : photo",
+      "consigne_source": "Réviser un texte court fourni afin que les consignes et les mots importants soient compréhensibles par son destinataire.",
+      "consigne_contextualisee": "Dans « La photo et le choix », accomplir « Adapter un texte explicatif pour un lecteur » pour contribuer à « Galerie respectueuse des choix ». Réviser un texte court fourni afin que les consignes et les mots importants soient compréhensibles par son destinataire.",
+      "preuve": "Texte annoté et version révisée.",
+      "critere_propose": "Sens conservé, formulations claires et corrections explicitées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

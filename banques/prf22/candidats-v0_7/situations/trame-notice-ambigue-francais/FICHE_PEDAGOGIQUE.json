@@ -1,0 +1,100 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:notice-ambigue",
+  "focale": "francais",
+  "question_motrice": "Deux étapes peuvent être comprises différemment.",
+  "declencheur_source": "Une notice ne permet pas de monter une maquette.",
+  "informations_a_preparer": [
+    "texte des consignes",
+    "dessin du mecanisme"
+  ],
+  "actions_source": [
+    "clarifier",
+    "tester",
+    "reecrire"
+  ],
+  "production_attendue_source": "Notice corrigée",
+  "rebond_source": "Une pièce est différente du schéma.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-013",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-005",
+      "titre": "Repérer une consigne essentielle",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "consigne",
+        "notice"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : consigne, notice",
+      "consigne_source": "Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "consigne_contextualisee": "Dans « La notice ambiguë », accomplir « Repérer une consigne essentielle » pour contribuer à « Notice corrigée ». Lire un court texte préparé par l'enseignant et relever qui, quoi, où et quand sans inventer de détails.",
+      "preuve": "Fiche de quatre informations avec passages repérés.",
+      "critere_propose": "Fidélité au texte et distinction explicite faits/inférences.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-020",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-009",
+      "titre": "Lire une notice documentaire",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "notice",
+        "mecan"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : notice, mecan",
+      "consigne_source": "Comparer les renseignements d'une notice et ceux d'un plan de mission; signaler les contradictions.",
+      "consigne_contextualisee": "Dans « La notice ambiguë », accomplir « Lire une notice documentaire » pour contribuer à « Notice corrigée ». Comparer les renseignements d'une notice et ceux d'un plan de mission; signaler les contradictions.",
+      "preuve": "Tableau « information, source, vérification ».",
+      "critere_propose": "Utilisation fidèle des sources et limites reconnues.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-056",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-023",
+      "titre": "Adapter un texte explicatif pour un lecteur",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "notice",
+        "consigne"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : notice, consigne",
+      "consigne_source": "Réviser un texte court fourni afin que les consignes et les mots importants soient compréhensibles par son destinataire.",
+      "consigne_contextualisee": "Dans « La notice ambiguë », accomplir « Adapter un texte explicatif pour un lecteur » pour contribuer à « Notice corrigée ». Réviser un texte court fourni afin que les consignes et les mots importants soient compréhensibles par son destinataire.",
+      "preuve": "Texte annoté et version révisée.",
+      "critere_propose": "Sens conservé, formulations claires et corrections explicitées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

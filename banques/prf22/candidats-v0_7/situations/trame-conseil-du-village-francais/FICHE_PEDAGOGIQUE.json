@@ -1,0 +1,101 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:conseil-du-village",
+  "focale": "francais",
+  "question_motrice": "Plusieurs propositions dépassent le budget.",
+  "declencheur_source": "Un conseil fictif doit choisir un projet.",
+  "informations_a_preparer": [
+    "besoins exprimes",
+    "couts proposes"
+  ],
+  "actions_source": [
+    "debattre",
+    "voter",
+    "justifier"
+  ],
+  "production_attendue_source": "Décision motivée",
+  "rebond_source": "Un groupe propose un compromis.",
+  "niveaux_suggeres_source": "primaire-4",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-019",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-026",
+      "titre": "Défendre une proposition à l'oral",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "conseil",
+        "decision",
+        "village",
+        "projet"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : conseil, decision",
+      "consigne_source": "Présenter une proposition de solution au problème et la justifier avec deux arguments observables.",
+      "consigne_contextualisee": "Dans « Le conseil du village », accomplir « Défendre une proposition à l'oral » pour contribuer à « Décision motivée ». Présenter une proposition de solution au problème et la justifier avec deux arguments observables.",
+      "preuve": "Plan oral ou notes d'arguments.",
+      "critere_propose": "Arguments pertinents, distinction observation/opinion.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-054",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-020",
+      "titre": "Expliquer un choix dans un court texte",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "budget",
+        "projet"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : budget",
+      "consigne_source": "Écrire deux ou trois phrases indiquant une décision et la raison fondée sur les données de la situation.",
+      "consigne_contextualisee": "Dans « Le conseil du village », accomplir « Expliquer un choix dans un court texte » pour contribuer à « Décision motivée ». Écrire deux ou trois phrases indiquant une décision et la raison fondée sur les données de la situation.",
+      "preuve": "Justification écrite des options.",
+      "critere_propose": "Choix explicite, raison liée aux données et texte lisible.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-018",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-fr-025",
+      "titre": "Écouter et reformuler",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "conseil"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : conseil",
+      "consigne_source": "Écouter deux consignes ou propositions en jeu de rôle puis les reformuler sans changer leur sens.",
+      "consigne_contextualisee": "Dans « Le conseil du village », accomplir « Écouter et reformuler » pour contribuer à « Décision motivée ». Écouter deux consignes ou propositions en jeu de rôle puis les reformuler sans changer leur sens.",
+      "preuve": "Reformulations notées ou enregistrées avec consentement.",
+      "critere_propose": "Écoute, exactitude et clarification respectueuse.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

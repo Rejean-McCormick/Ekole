@@ -1,0 +1,337 @@
+{
+  "format": "ekole.prf22.authoring/0.3",
+  "status": "design_only",
+  "draft": {
+    "format": "ekole.situation-composition-draft/0.1",
+    "generated_at_utc": "2026-11-12T18:50:21+00:00",
+    "status": "draft_not_admitted",
+    "authorities": {
+      "scenario_source": "Kontexte",
+      "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+      "objectives_and_evidence": "Ékole",
+      "role_proposals": "Kompose",
+      "operational_tasks": "Orgo",
+      "world_ownership": "Orgo_Worlds",
+      "social_collaboration": "Konnaxion",
+      "channels": [
+        "Web",
+        "Kor",
+        "Kamel"
+      ]
+    },
+    "source": {
+      "reference": "trame:costumes-recycles",
+      "source_format": "kontexte.catalogue-trames/1",
+      "source_relpath": "data/trames/catalogue-neutral-v0.2.json",
+      "title": "Les costumes réinventés",
+      "problem": "Les matériaux réutilisables sont insuffisants.",
+      "narrative_role_codes": [
+        "coiffeuse",
+        "peintre",
+        "regisseur",
+        "origamiste"
+      ],
+      "source_step_refs_unchanged": []
+    },
+    "world_context": {
+      "epoch": "Période de simulation à préciser selon la trame",
+      "cultural_frame": "Aucune culture réelle attribuée; sources et droits à valider",
+      "place": "Lieu de la situation source, à préciser par l’enseignant",
+      "reality": "fictif",
+      "language": "fr-CA",
+      "notes": "V0.7 : focalisation disciplinaire et choix d’activités explicitement justifiés; aucune validation pédagogique.",
+      "cultural_validation": "pending_human_review"
+    },
+    "activity_bindings": [
+      {
+        "activity_ref": "ekoleprop:ap-031",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Inventaire des formes et couleurs",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-ap-001"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-033",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Choisir des matériaux",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-ap-004"
+      },
+      {
+        "activity_ref": "ekoleprop:ap-034",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Expliquer une démarche artistique",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-ap-009"
+      }
+    ],
+    "learning_objective_links": [
+      {
+        "objective_ref": "qc-pri-ap-001",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Observer formes, lignes, couleurs et textures",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-ap-004",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Choisir des matériaux et procédés de création",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-ap-009",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Présenter et expliquer sa démarche artistique",
+        "status": "candidate_teacher_review_required"
+      }
+    ],
+    "participation": {
+      "participant_count": 8,
+      "anonymized_placeholder_only": true,
+      "mode": "groupes_rotatifs",
+      "maximum_per_team": 4,
+      "teams": [
+        {
+          "id": "equipe-01",
+          "participant_placeholders": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "size": 4,
+          "suggested_role": "coiffeuse",
+          "assignment_status": "teacher_to_approve"
+        },
+        {
+          "id": "equipe-02",
+          "participant_placeholders": [
+            "P05",
+            "P06",
+            "P07",
+            "P08"
+          ],
+          "size": 4,
+          "suggested_role": "peintre",
+          "assignment_status": "teacher_to_approve"
+        }
+      ],
+      "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+      "solo_substitution": null,
+      "stations": [
+        {
+          "id": "station-01",
+          "activity_ref": "ekoleprop:ap-031",
+          "title": "Inventaire des formes et couleurs",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Planche annotée d'observations.",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-02",
+          "activity_ref": "ekoleprop:ap-033",
+          "title": "Choisir des matériaux",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Fiche de choix des matériaux et essais documentés.",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-03",
+          "activity_ref": "ekoleprop:ap-034",
+          "title": "Expliquer une démarche artistique",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Carnet d'étapes et commentaire oral ou écrit.",
+          "adaptation_status": "to_review"
+        }
+      ],
+      "rotation": [
+        {
+          "round": 1,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-02",
+              "status": "visit"
+            }
+          ]
+        }
+      ],
+      "parallel_posts_per_activity": 3,
+      "additional_equipment_required": true,
+      "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+      "station_capacity": "jusqu’à 3 équipe(s) par activité et par ronde, chacune à son poste distinct",
+      "role_validation": "teacher_required"
+    },
+    "collaboration": {
+      "kontexte_hints": "utiliser les joins/fragments de la source, sans libération automatique",
+      "communication": "Konnaxion / Kids, sous permissions serveur",
+      "progress_from_messages": false
+    },
+    "export_hints": {
+      "orgo_world_slug_suggested": "costumes-recycles",
+      "world_creation_performed": false,
+      "tasks_dispatched": false,
+      "qr_created": false,
+      "runtime_admitted": false,
+      "teacher_authorized": false,
+      "real_learner_profiles_loaded": false
+    },
+    "required_reviews": [
+      "adéquation au niveau scolaire",
+      "exactitude historique et culturelle",
+      "sécurité et consentements",
+      "objectifs pédagogiques et critères de preuve",
+      "rôles et disponibilité",
+      "matériel et encadrement des postes parallèles",
+      "autorisations serveur et isolement de classe"
+    ]
+  },
+  "theory_entries": {
+    "qc-pri-ap-001": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "production",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-031"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Inventaire des formes et couleurs » pour contribuer à « Costumes et accessoires » dans « Les costumes réinventés », il pourrait exercer « Observer formes, lignes, couleurs et textures ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Les matériaux réutilisables sont insuffisants. », proposer la tâche suivante : Observer les formes et couleurs d'une scène puis construire un nuancier ou planche d'inspiration. Mettre à disposition : inventaire, besoins par costume. Livrable de la situation : Costumes et accessoires. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Inventaire des formes et couleurs » : Observer les formes et couleurs d'une scène puis construire un nuancier ou planche d'inspiration. Vérifier qu’elles se rapportent effectivement à « Identifier et décrire des éléments visuels dans des images et objets ».",
+      "observation": "Pendant « Inventaire des formes et couleurs », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Planche annotée d'observations. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Éléments repérés, choix expliqués. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Observer formes, lignes, couleurs et textures », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : costume. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Costumes et accessoires ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Les costumes réinventés » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-ap-004": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "production",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-033"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Choisir des matériaux » pour contribuer à « Costumes et accessoires » dans « Les costumes réinventés », il pourrait exercer « Choisir des matériaux et procédés de création ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Les matériaux réutilisables sont insuffisants. », proposer la tâche suivante : Comparer deux matériaux de création disponibles et défendre un choix en fonction d'une contrainte. Mettre à disposition : inventaire, besoins par costume. Livrable de la situation : Costumes et accessoires. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Choisir des matériaux » : Comparer deux matériaux de création disponibles et défendre un choix en fonction d'une contrainte. Vérifier qu’elles se rapportent effectivement à « Choisir matériaux et procédés en fonction d’une intention créative ».",
+      "observation": "Pendant « Choisir des matériaux », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Fiche de choix des matériaux et essais documentés. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Choix relié à l'usage, sécurité et disponibilité. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Choisir des matériaux et procédés de création », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : costume. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Costumes et accessoires ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Les costumes réinventés » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-ap-009": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "production",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "learning_task",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-034"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Expliquer une démarche artistique » pour contribuer à « Costumes et accessoires » dans « Les costumes réinventés », il pourrait exercer « Présenter et expliquer sa démarche artistique ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « Les matériaux réutilisables sont insuffisants. », proposer la tâche suivante : Présenter les étapes d'une création en indiquant une modification et sa raison. Mettre à disposition : inventaire, besoins par costume. Livrable de la situation : Costumes et accessoires. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Expliquer une démarche artistique » : Présenter les étapes d'une création en indiquant une modification et sa raison. Vérifier qu’elles se rapportent effectivement à « Expliquer son processus de création et des ajustements apportés ».",
+      "observation": "Pendant « Expliquer une démarche artistique », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Carnet d'étapes et commentaire oral ou écrit. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Étapes identifiables, choix motivés. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Présenter et expliquer sa démarche artistique », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : costume. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Costumes et accessoires ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « Les costumes réinventés » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    }
+  },
+  "dependency_lines": "",
+  "source_observations": [
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/catalogue/202_kristals.json",
+      "observed_sha256": "sha256:5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/trames/catalogue-neutral-v0.2.json",
+      "observed_sha256": "sha256:b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Ékole",
+      "relative_path": "banques/prf22/activites-proposees-v0_7.json",
+      "observed_sha256": "sha256:23ad0fc1c49359b82eb65391d54537b43ce2ca91df04794cacf6926d7d8c642d",
+      "pin_status": "unresolved",
+      "qualification": "not_reviewed"
+    }
+  ]
+}

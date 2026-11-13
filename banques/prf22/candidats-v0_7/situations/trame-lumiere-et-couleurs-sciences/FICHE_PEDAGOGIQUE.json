@@ -1,0 +1,99 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:lumiere-et-couleurs",
+  "focale": "sciences",
+  "question_motrice": "Les couleurs observées changent selon les conditions.",
+  "declencheur_source": "Une installation lumineuse fictive doit être expliquée.",
+  "informations_a_preparer": [
+    "sources lumineuses",
+    "materiaux transparents"
+  ],
+  "actions_source": [
+    "observer",
+    "tester",
+    "representer"
+  ],
+  "production_attendue_source": "Présentation des observations",
+  "rebond_source": "Un nouveau filtre apparaît.",
+  "niveaux_suggeres_source": "primaire-3",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-024",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-004",
+      "titre": "Conclure avec prudence",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "scientifique",
+        "laboratoire",
+        "observation"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : scientifique, laboratoire, observation",
+      "consigne_source": "Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis.",
+      "consigne_contextualisee": "Dans « Le laboratoire de lumière », accomplir « Conclure avec prudence » pour contribuer à « Présentation des observations ». Comparer une hypothèse initiale à des observations et rédiger une conclusion limitée aux résultats recueillis.",
+      "preuve": "Phrase de conclusion associée au relevé de données.",
+      "critere_propose": "Conclusion supportée, limites explicites.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-021",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-001",
+      "titre": "Observer avant d'expliquer",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "lumiere"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : lumiere",
+      "consigne_source": "Observer un phénomène ou objet sans conclure immédiatement, puis formuler deux questions investigables.",
+      "consigne_contextualisee": "Dans « Le laboratoire de lumière », accomplir « Observer avant d'expliquer » pour contribuer à « Présentation des observations ». Observer un phénomène ou objet sans conclure immédiatement, puis formuler deux questions investigables.",
+      "preuve": "Carnet d'observations et questions.",
+      "critere_propose": "Séparation observation/interprétation, questions testables.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-022",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-002",
+      "titre": "Comparer deux hypothèses",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "lumiere"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : lumiere",
+      "consigne_source": "Formuler deux explications possibles d'un problème matériel et prévoir un test simple et sûr pour les distinguer.",
+      "consigne_contextualisee": "Dans « Le laboratoire de lumière », accomplir « Comparer deux hypothèses » pour contribuer à « Présentation des observations ». Formuler deux explications possibles d'un problème matériel et prévoir un test simple et sûr pour les distinguer.",
+      "preuve": "Fiche hypothèses, protocole proposé, risques.",
+      "critere_propose": "Hypothèses distinctes et test faisable avec supervision.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

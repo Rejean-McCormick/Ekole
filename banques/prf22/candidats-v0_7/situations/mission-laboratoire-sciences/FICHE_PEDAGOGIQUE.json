@@ -1,0 +1,95 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "mission:laboratoire",
+  "focale": "sciences",
+  "question_motrice": "Mission de simulation du monde Le laboratoire.",
+  "declencheur_source": "Mission de simulation du monde Le laboratoire.",
+  "informations_a_preparer": [
+    "Fragments de la mission : diffusion conditionnelle par Orgo, non affichés ici"
+  ],
+  "actions_source": [],
+  "production_attendue_source": "Étapes prévues par la mission : phase-1, phase-2, phase-3",
+  "rebond_source": "",
+  "niveaux_suggeres_source": "à déterminer",
+  "activites": [
+    {
+      "activite_ref": "micro:enseignement-explicite-029",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-st-004",
+      "titre": "Atelier ciblé : Décrire une conclusion limitée aux observations",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "laboratoire",
+        "hypothese",
+        "tester"
+      ],
+      "motif_de_choix": "Indices thématiques : laboratoire, hypothese, tester",
+      "consigne_source": "Faire poser une question, comparer les données et distinguer observation et conclusion.",
+      "consigne_contextualisee": "Dans « Le laboratoire », accomplir « Atelier ciblé : Décrire une conclusion limitée aux observations » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Faire poser une question, comparer les données et distinguer observation et conclusion.",
+      "preuve": "conclusion justifiée",
+      "critere_propose": "Vérifier la trace attendue pour « Expliquer et communiquer des résultats » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-027",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-011",
+      "titre": "Décrire un mécanisme",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "inventeur",
+        "objet"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : inventeur",
+      "consigne_source": "Examiner un objet technique inerte et dessiner comment une pièce agit sur une autre sans le démonter dangereusement.",
+      "consigne_contextualisee": "Dans « Le laboratoire », accomplir « Décrire un mécanisme » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Examiner un objet technique inerte et dessiner comment une pièce agit sur une autre sans le démonter dangereusement.",
+      "preuve": "Schéma légendé des pièces et fonctions.",
+      "critere_propose": "Fonctions plausibles, observations distinguées des suppositions.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-023",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-st-003",
+      "titre": "Noter des observations mesurables",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "laboratoire"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : laboratoire",
+      "consigne_source": "Prendre trois mesures d'un matériel sécurisé fourni et documenter méthode, unité et incertitude.",
+      "consigne_contextualisee": "Dans « Le laboratoire », accomplir « Noter des observations mesurables » pour contribuer à « Étapes prévues par la mission : phase-1, phase-2, phase-3 ». Prendre trois mesures d'un matériel sécurisé fourni et documenter méthode, unité et incertitude.",
+      "preuve": "Journal de mesures datées.",
+      "critere_propose": "Observations reproductibles, unités, conditions notées.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

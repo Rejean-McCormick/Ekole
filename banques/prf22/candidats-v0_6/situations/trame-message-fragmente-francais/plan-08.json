@@ -1,0 +1,310 @@
+{
+  "format": "ekole.situation-composition-draft/0.1",
+  "generated_at_utc": "2026-11-12T18:11:31+00:00",
+  "status": "draft_not_admitted",
+  "authorities": {
+    "scenario_source": "Kontexte",
+    "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+    "objectives_and_evidence": "Ékole",
+    "role_proposals": "Kompose",
+    "operational_tasks": "Orgo",
+    "world_ownership": "Orgo_Worlds",
+    "social_collaboration": "Konnaxion",
+    "channels": [
+      "Web",
+      "Kor",
+      "Kamel"
+    ]
+  },
+  "source": {
+    "reference": "trame:message-fragmente",
+    "source_format": "kontexte.catalogue-trames/1",
+    "source_relpath": "data/trames/catalogue-neutral-v0.2.json",
+    "title": "Le message incomplet",
+    "problem": "Aucun élève ne connaît la consigne complète.",
+    "narrative_role_codes": [
+      "messager",
+      "traducteur",
+      "redacteur"
+    ],
+    "source_step_refs_unchanged": []
+  },
+  "world_context": {
+    "epoch": "Période à préciser selon la situation (simulation)",
+    "cultural_frame": "Cadre fictif candidat; revue culturelle et historique requise",
+    "place": "Lieu de la situation source; à documenter",
+    "reality": "fictif",
+    "language": "fr-CA",
+    "notes": "",
+    "cultural_validation": "pending_human_review"
+  },
+  "activity_bindings": [
+    {
+      "activity_ref": "micro:enseignement-explicite-019",
+      "source_type": "micro_situation",
+      "owner": "Kontexte",
+      "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+      "title": "Atelier ciblé : Formuler une inférence simple à partir du texte",
+      "activity_status": "candidate_not_authorized",
+      "objective_candidate": "qc3.fr.inference"
+    },
+    {
+      "activity_ref": "micro:enseignement-explicite-020",
+      "source_type": "micro_situation",
+      "owner": "Kontexte",
+      "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+      "title": "Atelier ciblé : Réviser l’orthographe d’usage avec des outils",
+      "activity_status": "candidate_not_authorized",
+      "objective_candidate": "qc3.fr.orthographe"
+    },
+    {
+      "activity_ref": "micro:enseignement-explicite-002",
+      "source_type": "micro_situation",
+      "owner": "Kontexte",
+      "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+      "title": "Atelier ciblé : Comprendre des consignes courtes en anglais",
+      "activity_status": "candidate_not_authorized",
+      "objective_candidate": "qc3.als.consignes"
+    },
+    {
+      "activity_ref": "ekoleprop:ap-013",
+      "source_type": "patron_activite_propose",
+      "owner": "Ékole",
+      "source_relpath": "banques/prf22/activites-proposees-v0_6.json",
+      "title": "Repérer une consigne essentielle",
+      "activity_status": "candidate_not_authorized",
+      "objective_candidate": "qc-pri-fr-005"
+    },
+    {
+      "activity_ref": "ekoleprop:ap-014",
+      "source_type": "patron_activite_propose",
+      "owner": "Ékole",
+      "source_relpath": "banques/prf22/activites-proposees-v0_6.json",
+      "title": "Déduire à partir d'indices",
+      "activity_status": "candidate_not_authorized",
+      "objective_candidate": "qc-pri-fr-006"
+    }
+  ],
+  "learning_objective_links": [
+    {
+      "objective_ref": "qc-pri-fr-006",
+      "source_relpath": "data/catalogue/202_kristals.json",
+      "title": "Inférences en lecture",
+      "status": "candidate_teacher_review_required"
+    },
+    {
+      "objective_ref": "qc-pri-fr-012",
+      "source_relpath": "data/catalogue/202_kristals.json",
+      "title": "Orthographe d’usage",
+      "status": "candidate_teacher_review_required"
+    },
+    {
+      "objective_ref": "qc-pri-als-001",
+      "source_relpath": "data/catalogue/202_kristals.json",
+      "title": "Comprendre des consignes et des messages oraux",
+      "status": "candidate_teacher_review_required"
+    },
+    {
+      "objective_ref": "qc-pri-fr-005",
+      "source_relpath": "data/catalogue/202_kristals.json",
+      "title": "Compréhension littérale de textes",
+      "status": "candidate_teacher_review_required"
+    }
+  ],
+  "participation": {
+    "participant_count": 8,
+    "anonymized_placeholder_only": true,
+    "mode": "groupes_rotatifs",
+    "maximum_per_team": 4,
+    "teams": [
+      {
+        "id": "equipe-01",
+        "participant_placeholders": [
+          "P01",
+          "P02",
+          "P03",
+          "P04"
+        ],
+        "size": 4,
+        "suggested_role": "messager",
+        "assignment_status": "teacher_to_approve"
+      },
+      {
+        "id": "equipe-02",
+        "participant_placeholders": [
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "size": 4,
+        "suggested_role": "traducteur",
+        "assignment_status": "teacher_to_approve"
+      }
+    ],
+    "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+    "solo_substitution": null,
+    "stations": [
+      {
+        "id": "station-01",
+        "activity_ref": "micro:enseignement-explicite-019",
+        "title": "Atelier ciblé : Formuler une inférence simple à partir du texte",
+        "source_type": "micro_situation",
+        "qualification": "activité proposée à relire et instancier",
+        "evidence_expected": "raisonnement et indice textuel",
+        "adaptation_status": "to_review"
+      },
+      {
+        "id": "station-02",
+        "activity_ref": "micro:enseignement-explicite-020",
+        "title": "Atelier ciblé : Réviser l’orthographe d’usage avec des outils",
+        "source_type": "micro_situation",
+        "qualification": "activité proposée à relire et instancier",
+        "evidence_expected": "brouillon et version corrigée",
+        "adaptation_status": "to_review"
+      },
+      {
+        "id": "station-03",
+        "activity_ref": "micro:enseignement-explicite-002",
+        "title": "Atelier ciblé : Comprendre des consignes courtes en anglais",
+        "source_type": "micro_situation",
+        "qualification": "activité proposée à relire et instancier",
+        "evidence_expected": "action exécutée après consigne orale",
+        "adaptation_status": "to_review"
+      },
+      {
+        "id": "station-04",
+        "activity_ref": "ekoleprop:ap-013",
+        "title": "Repérer une consigne essentielle",
+        "source_type": "patron_activite_propose",
+        "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+        "evidence_expected": "Fiche de quatre informations avec passages repérés.",
+        "adaptation_status": "to_review"
+      },
+      {
+        "id": "station-05",
+        "activity_ref": "ekoleprop:ap-014",
+        "title": "Déduire à partir d'indices",
+        "source_type": "patron_activite_propose",
+        "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+        "evidence_expected": "Hypothèse et deux indices cités.",
+        "adaptation_status": "to_review"
+      }
+    ],
+    "rotation": [
+      {
+        "round": 1,
+        "assignments": [
+          {
+            "team_id": "equipe-01",
+            "station_id": "station-01",
+            "post_id": "station-01-poste-01",
+            "status": "visit"
+          },
+          {
+            "team_id": "equipe-02",
+            "station_id": "station-05",
+            "post_id": "station-05-poste-01",
+            "status": "visit"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "assignments": [
+          {
+            "team_id": "equipe-01",
+            "station_id": "station-02",
+            "post_id": "station-02-poste-01",
+            "status": "visit"
+          },
+          {
+            "team_id": "equipe-02",
+            "station_id": "station-01",
+            "post_id": "station-01-poste-01",
+            "status": "visit"
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "assignments": [
+          {
+            "team_id": "equipe-01",
+            "station_id": "station-03",
+            "post_id": "station-03-poste-01",
+            "status": "visit"
+          },
+          {
+            "team_id": "equipe-02",
+            "station_id": "station-02",
+            "post_id": "station-02-poste-01",
+            "status": "visit"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "assignments": [
+          {
+            "team_id": "equipe-01",
+            "station_id": "station-04",
+            "post_id": "station-04-poste-01",
+            "status": "visit"
+          },
+          {
+            "team_id": "equipe-02",
+            "station_id": "station-03",
+            "post_id": "station-03-poste-01",
+            "status": "visit"
+          }
+        ]
+      },
+      {
+        "round": 5,
+        "assignments": [
+          {
+            "team_id": "equipe-01",
+            "station_id": "station-05",
+            "post_id": "station-05-poste-01",
+            "status": "visit"
+          },
+          {
+            "team_id": "equipe-02",
+            "station_id": "station-04",
+            "post_id": "station-04-poste-01",
+            "status": "visit"
+          }
+        ]
+      }
+    ],
+    "parallel_posts_per_activity": 1,
+    "additional_equipment_required": false,
+    "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+    "station_capacity": "jusqu’à 1 équipe(s) par activité et par ronde, chacune à son poste distinct",
+    "role_validation": "teacher_required"
+  },
+  "collaboration": {
+    "kontexte_hints": "utiliser les joins/fragments de la source, sans libération automatique",
+    "communication": "Konnaxion / Kids, sous permissions serveur",
+    "progress_from_messages": false
+  },
+  "export_hints": {
+    "orgo_world_slug_suggested": "message-fragmente",
+    "world_creation_performed": false,
+    "tasks_dispatched": false,
+    "qr_created": false,
+    "runtime_admitted": false,
+    "teacher_authorized": false,
+    "real_learner_profiles_loaded": false
+  },
+  "required_reviews": [
+    "adéquation au niveau scolaire",
+    "exactitude historique et culturelle",
+    "sécurité et consentements",
+    "objectifs pédagogiques et critères de preuve",
+    "rôles et disponibilité",
+    "matériel et encadrement des postes parallèles",
+    "autorisations serveur et isolement de classe"
+  ]
+}

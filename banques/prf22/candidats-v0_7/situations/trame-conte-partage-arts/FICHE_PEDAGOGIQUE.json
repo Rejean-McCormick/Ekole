@@ -1,0 +1,100 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:conte-partage",
+  "focale": "arts",
+  "question_motrice": "Sa forme actuelle est trop complexe pour certains auditeurs.",
+  "declencheur_source": "Un récit doit être présenté aux plus jeunes.",
+  "informations_a_preparer": [
+    "histoire source autorisee",
+    "besoins du public"
+  ],
+  "actions_source": [
+    "adapter",
+    "illustrer",
+    "raconter"
+  ],
+  "production_attendue_source": "Conte présenté",
+  "rebond_source": "Une scène doit être simplifiée.",
+  "niveaux_suggeres_source": "primaire-1-6",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-036",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-mu-008",
+      "titre": "Comparer deux ambiances sonores",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "scene",
+        "conte"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : scene, conte",
+      "consigne_source": "Écouter deux extraits sous licence autorisée et décrire les choix sonores qui changent l'ambiance.",
+      "consigne_contextualisee": "Dans « Le conte mis en scène », accomplir « Comparer deux ambiances sonores » pour contribuer à « Conte présenté ». Écouter deux extraits sous licence autorisée et décrire les choix sonores qui changent l'ambiance.",
+      "preuve": "Comparaison écrite ou orale des extraits.",
+      "critere_propose": "Vocabulaire sonore et justification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-037",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ad-004",
+      "titre": "Construire une courte scène",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "scene",
+        "conte"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : scene, conte",
+      "consigne_source": "Créer une courte séquence dramatique avec début, problème et résolution qui sert la mission.",
+      "consigne_contextualisee": "Dans « Le conte mis en scène », accomplir « Construire une courte scène » pour contribuer à « Conte présenté ». Créer une courte séquence dramatique avec début, problème et résolution qui sert la mission.",
+      "preuve": "Canevas de scène et présentation supervisée.",
+      "critere_propose": "Progression claire, intention dramatique.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-014",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-da-001",
+      "titre": "Atelier ciblé : Explorer corps, espace et qualités de mouvement",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "scene",
+        "public"
+      ],
+      "motif_de_choix": "Indices thématiques : scene, public",
+      "consigne_source": "Faire composer une transition et verbaliser un choix.",
+      "consigne_contextualisee": "Dans « Le conte mis en scène », accomplir « Atelier ciblé : Explorer corps, espace et qualités de mouvement » pour contribuer à « Conte présenté ». Faire composer une transition et verbaliser un choix.",
+      "preuve": "séquence observée",
+      "critere_propose": "Vérifier la trace attendue pour « Explorer le corps et le mouvement » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

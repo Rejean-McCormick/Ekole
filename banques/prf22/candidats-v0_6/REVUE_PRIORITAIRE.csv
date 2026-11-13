@@ -1,0 +1,138 @@
+﻿source;focale;statut;patrons
+trame:fete-commune;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-035, ekoleprop:ap-032
+trame:fete-commune;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-015, ekoleprop:ap-035
+trame:spectacle-imprevu;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-036, ekoleprop:ap-037
+trame:spectacle-imprevu;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-014, ekoleprop:ap-017
+trame:repas-partage;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-005, ekoleprop:ap-006
+trame:repas-partage;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-007, ekoleprop:ap-005
+trame:marche-des-creations;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-031, ekoleprop:ap-033
+trame:marche-des-creations;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-010, ekoleprop:ap-003
+trame:bibliotheque-vivante;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-013, ekoleprop:ap-016
+trame:bibliotheque-vivante;anglais;REVUE_OBLIGATOIRE;ekoleprop:ap-043, ekoleprop:ap-044
+trame:merci-collectif;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-036, ekoleprop:ap-035
+trame:merci-collectif;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-049, ekoleprop:ap-036
+trame:commande-de-pains;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-005, ekoleprop:ap-001
+trame:commande-de-pains;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-005, ekoleprop:ap-011
+trame:chapeau-de-papier;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-034, ekoleprop:ap-031
+trame:chapeau-de-papier;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-008, ekoleprop:ap-001
+trame:pont-miniature;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-022, ekoleprop:ap-025
+trame:pont-miniature;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-033, ekoleprop:ap-031
+trame:mecanisme-en-panne;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-021, ekoleprop:ap-022
+trame:mecanisme-en-panne;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-020, ekoleprop:ap-021
+trame:atelier-metal;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-035, ekoleprop:ap-036
+trame:atelier-metal;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-003, ekoleprop:ap-001
+trame:costumes-recycles;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-036, ekoleprop:ap-034
+trame:costumes-recycles;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-004, ekoleprop:ap-010
+trame:message-fragmente;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-013, ekoleprop:ap-014
+trame:message-fragmente;anglais;REVUE_OBLIGATOIRE;ekoleprop:ap-043, ekoleprop:ap-013
+trame:plante-mystere;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-023, ekoleprop:ap-024
+trame:plante-mystere;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-028, ekoleprop:ap-029
+trame:carte-incomplete;univers_social;REVUE_OBLIGATOIRE;ekoleprop:ap-039, ekoleprop:ap-009
+trame:carte-incomplete;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-009, ekoleprop:ap-039
+trame:sons-des-lieux;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-031, ekoleprop:ap-035
+trame:sons-des-lieux;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-026, ekoleprop:ap-021
+trame:ombres-mobiles;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-023, ekoleprop:ap-026
+trame:ombres-mobiles;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-022, ekoleprop:ap-023
+trame:colis-egare;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-011
+trame:colis-egare;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-011
+trame:coup-de-main;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-018
+trame:coup-de-main;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-018
+trame:tuteurs-temporaires;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-031, ekoleprop:ap-032
+trame:tuteurs-temporaires;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-016, ekoleprop:ap-020
+trame:maquette-accessible;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-007, ekoleprop:ap-008
+trame:maquette-accessible;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-025, ekoleprop:ap-022
+trame:affiche-service;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-013, ekoleprop:ap-015
+trame:affiche-service;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-032, ekoleprop:ap-034
+trame:accueil-nouveaux;univers_social;REVUE_OBLIGATOIRE;ekoleprop:ap-042, ekoleprop:ap-051
+trame:accueil-nouveaux;anglais;REVUE_OBLIGATOIRE;ekoleprop:ap-017, ekoleprop:ap-042
+trame:reparer-pour-un-autre;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-027, ekoleprop:ap-024
+trame:reparer-pour-un-autre;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-020, ekoleprop:ap-027
+trame:jardin-saisonnier;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-028, ekoleprop:ap-029
+trame:jardin-saisonnier;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-020, ekoleprop:ap-003
+trame:reserve-eau;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-001, ekoleprop:ap-007
+trame:reserve-eau;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-022, ekoleprop:ap-030
+trame:foret-partagee;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-028, ekoleprop:ap-029
+trame:foret-partagee;univers_social;REVUE_OBLIGATOIRE;ekoleprop:ap-049, ekoleprop:ap-051
+trame:habitats-des-animaux;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-026, ekoleprop:ap-021
+trame:habitats-des-animaux;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-026, ekoleprop:ap-028
+trame:lac-a-preserver;sciences;REVUE_PRIORITAIRE;
+trame:lac-a-preserver;mathematiques;REVUE_PRIORITAIRE;
+trame:compost-collectif;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-050, ekoleprop:ap-004
+trame:compost-collectif;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-006, ekoleprop:ap-004
+trame:caisse-klownkoins;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-010
+trame:caisse-klownkoins;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-010
+trame:budget-marche;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-010, ekoleprop:ap-003
+trame:budget-marche;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-010, ekoleprop:ap-004
+trame:stock-et-commande;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-011, ekoleprop:ap-005
+trame:stock-et-commande;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-011, ekoleprop:ap-005
+trame:taxe-de-simulation;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-004, ekoleprop:ap-010
+trame:taxe-de-simulation;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-004, ekoleprop:ap-010
+trame:troc-equitable;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-050, ekoleprop:ap-006
+trame:troc-equitable;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-006, ekoleprop:ap-050
+trame:transport-commande;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-002, ekoleprop:ap-040
+trame:transport-commande;univers_social;REVUE_OBLIGATOIRE;ekoleprop:ap-040, ekoleprop:ap-042
+trame:invitation-multilingue;anglais;REVUE_OBLIGATOIRE;ekoleprop:ap-045, ekoleprop:ap-044
+trame:invitation-multilingue;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-016, ekoleprop:ap-015
+trame:bulletin-local;francais;REVUE_PRIORITAIRE;
+trame:bulletin-local;univers_social;REVUE_PRIORITAIRE;
+trame:journal-exploration;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-013, ekoleprop:ap-011
+trame:journal-exploration;univers_social;REVUE_OBLIGATOIRE;ekoleprop:ap-013, ekoleprop:ap-011
+trame:conte-partage;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-037, ekoleprop:ap-036
+trame:conte-partage;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-013, ekoleprop:ap-014
+trame:notice-ambigue;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-020, ekoleprop:ap-013
+trame:notice-ambigue;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-025, ekoleprop:ap-022
+trame:mode-emploi-visible;anglais;REVUE_PRIORITAIRE;
+trame:mode-emploi-visible;arts;REVUE_PRIORITAIRE;
+trame:semis-compare;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-021, ekoleprop:ap-026
+trame:semis-compare;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-008, ekoleprop:ap-003
+trame:ciel-en-cartes;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-024, ekoleprop:ap-009
+trame:ciel-en-cartes;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-031, ekoleprop:ap-009
+trame:station-meteo;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-023, ekoleprop:ap-030
+trame:station-meteo;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-003, ekoleprop:ap-023
+trame:ponts-a-tester;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-022, ekoleprop:ap-025
+trame:ponts-a-tester;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-033, ekoleprop:ap-035
+trame:temperatures-melangees;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-023, ekoleprop:ap-021
+trame:temperatures-melangees;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-006, ekoleprop:ap-004
+trame:lumiere-et-couleurs;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-024, ekoleprop:ap-020
+trame:lumiere-et-couleurs;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-024, ekoleprop:ap-026
+trame:messagers-en-mouvement;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-014, ekoleprop:ap-016
+trame:messagers-en-mouvement;education_physique;REVUE_OBLIGATOIRE;ekoleprop:ap-047, ekoleprop:ap-046
+trame:salle-a-configurer;education_physique;REVUE_OBLIGATOIRE;ekoleprop:ap-002, ekoleprop:ap-011
+trame:salle-a-configurer;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-002, ekoleprop:ap-011
+trame:parcours-livraison;univers_social;REVUE_OBLIGATOIRE;ekoleprop:ap-048, ekoleprop:ap-046
+trame:parcours-livraison;education_physique;REVUE_OBLIGATOIRE;ekoleprop:ap-047, ekoleprop:ap-048
+trame:indices-dans-ecole;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-014
+trame:indices-dans-ecole;education_physique;REVUE_OBLIGATOIRE;ekoleprop:ap-014
+trame:itineraire-sur;univers_social;REVUE_OBLIGATOIRE;ekoleprop:ap-039, ekoleprop:ap-002
+trame:itineraire-sur;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-008, ekoleprop:ap-002
+trame:randonnee-symbolique;education_physique;REVUE_OBLIGATOIRE;ekoleprop:ap-047
+trame:randonnee-symbolique;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-047
+trame:conseil-du-village;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-003, ekoleprop:ap-010
+trame:conseil-du-village;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-019, ekoleprop:ap-018
+trame:regles-ateliers;sciences;REVUE_OBLIGATOIRE;ekoleprop:ap-027, ekoleprop:ap-025
+trame:regles-ateliers;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-020, ekoleprop:ap-049
+trame:ressources-a-partager;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-007, ekoleprop:ap-006
+trame:ressources-a-partager;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-051, ekoleprop:ap-049
+trame:horaires-contradictoires;mathematiques;REVUE_OBLIGATOIRE;ekoleprop:ap-002
+trame:horaires-contradictoires;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-002
+trame:photo-ou-pas;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-019, ekoleprop:ap-049
+trame:photo-ou-pas;arts;REVUE_PRIORITAIRE;ekoleprop:ap-034, ekoleprop:ap-035
+trame:vote-projet-commun;arts;REVUE_OBLIGATOIRE;ekoleprop:ap-019, ekoleprop:ap-049
+trame:vote-projet-commun;francais;REVUE_OBLIGATOIRE;ekoleprop:ap-019, ekoleprop:ap-005
+mission:atelier-mecanique;sciences;REVUE_PRIORITAIRE;ekoleprop:ap-027, ekoleprop:ap-025
+mission:boulangerie;mathematiques;REVUE_PRIORITAIRE;ekoleprop:ap-002, ekoleprop:ap-003
+mission:chantier-maquette;francais;REVUE_PRIORITAIRE;ekoleprop:ap-018
+mission:conseil-village;francais;REVUE_PRIORITAIRE;ekoleprop:ap-018, ekoleprop:ap-019
+mission:expedition;univers_social;REVUE_PRIORITAIRE;ekoleprop:ap-041, ekoleprop:ap-039
+mission:fete-sorciere;arts;REVUE_PRIORITAIRE;ekoleprop:ap-035, ekoleprop:ap-038
+mission:grand-menage-chez-mamie;mathematiques;REVUE_PRIORITAIRE;ekoleprop:ap-002, ekoleprop:ap-010
+mission:jardin-fermier;sciences;REVUE_PRIORITAIRE;ekoleprop:ap-030, ekoleprop:ap-029
+mission:laboratoire;sciences;REVUE_PRIORITAIRE;ekoleprop:ap-024, ekoleprop:ap-023
+mission:mystere-de-la-bibliotheque;francais;REVUE_PRIORITAIRE;ekoleprop:ap-014, ekoleprop:ap-016
+mission:pique-nique-des-saisons;sciences;REVUE_PRIORITAIRE;ekoleprop:ap-030, ekoleprop:ap-027
+mission:rallye-des-metiers;mathematiques;REVUE_PRIORITAIRE;ekoleprop:ap-001, ekoleprop:ap-003
+mission:randonnee-a-velo;education_physique;REVUE_PRIORITAIRE;ekoleprop:ap-046, ekoleprop:ap-048
+mission:salon-coiffure;arts;REVUE_PRIORITAIRE;
+mission:sorciere-solo;mathematiques;REVUE_PRIORITAIRE;
+mission:spectacle-clown;arts;REVUE_PRIORITAIRE;ekoleprop:ap-037, ekoleprop:ap-038
+mission:spectacle-des-histoires;francais;REVUE_PRIORITAIRE;ekoleprop:ap-019

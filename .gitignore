@@ -6,3 +6,7 @@ __pycache__/
 dist/
 ZmartZnap.pyw
 GitSink.bat
+
+# Révisions PRF-22 saisies localement, jamais publiées automatiquement
+banques/prf22/revisions-local/
+banques/prf22/generations/

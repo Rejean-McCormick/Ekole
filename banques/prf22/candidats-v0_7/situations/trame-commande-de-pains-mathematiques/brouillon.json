@@ -1,0 +1,343 @@
+{
+  "format": "ekole.prf22.authoring/0.3",
+  "status": "design_only",
+  "draft": {
+    "format": "ekole.situation-composition-draft/0.1",
+    "generated_at_utc": "2026-11-12T18:50:19+00:00",
+    "status": "draft_not_admitted",
+    "authorities": {
+      "scenario_source": "Kontexte",
+      "exercise_catalogue": "Kontexte / Inkuisite selon le contenu",
+      "objectives_and_evidence": "Ékole",
+      "role_proposals": "Kompose",
+      "operational_tasks": "Orgo",
+      "world_ownership": "Orgo_Worlds",
+      "social_collaboration": "Konnaxion",
+      "channels": [
+        "Web",
+        "Kor",
+        "Kamel"
+      ]
+    },
+    "source": {
+      "reference": "trame:commande-de-pains",
+      "source_format": "kontexte.catalogue-trames/1",
+      "source_relpath": "data/trames/catalogue-neutral-v0.2.json",
+      "title": "La commande de pains",
+      "problem": "La recette ne correspond pas à la quantité demandée.",
+      "narrative_role_codes": [
+        "boulanger",
+        "fermier",
+        "comptable"
+      ],
+      "source_step_refs_unchanged": []
+    },
+    "world_context": {
+      "epoch": "Période de simulation à préciser selon la trame",
+      "cultural_frame": "Aucune culture réelle attribuée; sources et droits à valider",
+      "place": "Lieu de la situation source, à préciser par l’enseignant",
+      "reality": "fictif",
+      "language": "fr-CA",
+      "notes": "V0.7 : focalisation disciplinaire et choix d’activités explicitement justifiés; aucune validation pédagogique.",
+      "cultural_validation": "pending_human_review"
+    },
+    "activity_bindings": [
+      {
+        "activity_ref": "ekoleprop:ap-005",
+        "source_type": "patron_activite_propose",
+        "owner": "Ékole",
+        "source_relpath": "banques/prf22/activites-proposees-v0_7.json",
+        "title": "Organiser des lots égaux",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc-pri-ma-008"
+      },
+      {
+        "activity_ref": "micro:enseignement-explicite-024",
+        "source_type": "micro_situation",
+        "owner": "Kontexte",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.ma.numeration"
+      },
+      {
+        "activity_ref": "micro:enseignement-explicite-022",
+        "source_type": "micro_situation",
+        "owner": "Kontexte",
+        "source_relpath": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+        "title": "Atelier ciblé : Expliquer et vérifier sa démarche mathématique",
+        "activity_status": "candidate_not_authorized",
+        "objective_candidate": "qc3.ma.demarche"
+      }
+    ],
+    "learning_objective_links": [
+      {
+        "objective_ref": "qc-pri-ma-008",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Sens et stratégies de la multiplication",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-ma-002",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Lire, écrire et comparer des nombres naturels",
+        "status": "candidate_teacher_review_required"
+      },
+      {
+        "objective_ref": "qc-pri-ma-033",
+        "source_relpath": "data/catalogue/202_kristals.json",
+        "title": "Justifier et communiquer une démarche mathématique",
+        "status": "candidate_teacher_review_required"
+      }
+    ],
+    "participation": {
+      "participant_count": 8,
+      "anonymized_placeholder_only": true,
+      "mode": "groupes_rotatifs",
+      "maximum_per_team": 4,
+      "teams": [
+        {
+          "id": "equipe-01",
+          "participant_placeholders": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "size": 4,
+          "suggested_role": "boulanger",
+          "assignment_status": "teacher_to_approve"
+        },
+        {
+          "id": "equipe-02",
+          "participant_placeholders": [
+            "P05",
+            "P06",
+            "P07",
+            "P08"
+          ],
+          "size": 4,
+          "suggested_role": "fermier",
+          "assignment_status": "teacher_to_approve"
+        }
+      ],
+      "role_use": "rôles narratifs réutilisables par équipe, pas des permissions",
+      "solo_substitution": null,
+      "stations": [
+        {
+          "id": "station-01",
+          "activity_ref": "ekoleprop:ap-005",
+          "title": "Organiser des lots égaux",
+          "source_type": "patron_activite_propose",
+          "qualification": "à réviser: contenu, adaptation, niveau scolaire, matériel et sécurité",
+          "evidence_expected": "Schéma de groupements et calcul expliqué.",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-02",
+          "activity_ref": "micro:enseignement-explicite-024",
+          "title": "Atelier ciblé : Lire, représenter et comparer des nombres naturels",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "écriture et représentation vérifiées",
+          "adaptation_status": "to_review"
+        },
+        {
+          "id": "station-03",
+          "activity_ref": "micro:enseignement-explicite-022",
+          "title": "Atelier ciblé : Expliquer et vérifier sa démarche mathématique",
+          "source_type": "micro_situation",
+          "qualification": "activité proposée à relire et instancier",
+          "evidence_expected": "justification intelligible",
+          "adaptation_status": "to_review"
+        }
+      ],
+      "rotation": [
+        {
+          "round": 1,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-01",
+              "post_id": "station-01-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-02",
+              "post_id": "station-02-poste-02",
+              "status": "visit"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assignments": [
+            {
+              "team_id": "equipe-01",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-01",
+              "status": "visit"
+            },
+            {
+              "team_id": "equipe-02",
+              "station_id": "station-03",
+              "post_id": "station-03-poste-02",
+              "status": "visit"
+            }
+          ]
+        }
+      ],
+      "parallel_posts_per_activity": 3,
+      "additional_equipment_required": true,
+      "when_team_idle": "lecture, exercice autonome, pause ou aide supervisée",
+      "station_capacity": "jusqu’à 3 équipe(s) par activité et par ronde, chacune à son poste distinct",
+      "role_validation": "teacher_required"
+    },
+    "collaboration": {
+      "kontexte_hints": "utiliser les joins/fragments de la source, sans libération automatique",
+      "communication": "Konnaxion / Kids, sous permissions serveur",
+      "progress_from_messages": false
+    },
+    "export_hints": {
+      "orgo_world_slug_suggested": "commande-de-pains",
+      "world_creation_performed": false,
+      "tasks_dispatched": false,
+      "qr_created": false,
+      "runtime_admitted": false,
+      "teacher_authorized": false,
+      "real_learner_profiles_loaded": false
+    },
+    "required_reviews": [
+      "adéquation au niveau scolaire",
+      "exactitude historique et culturelle",
+      "sécurité et consentements",
+      "objectifs pédagogiques et critères de preuve",
+      "rôles et disponibilité",
+      "matériel et encadrement des postes parallèles",
+      "autorisations serveur et isolement de classe"
+    ]
+  },
+  "theory_entries": {
+    "qc-pri-ma-008": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "practice",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "part_task_practice",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "ekoleprop:ap-005"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Organiser des lots égaux » pour contribuer à « Plan de production » dans « La commande de pains », il pourrait exercer « Sens et stratégies de la multiplication ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « La recette ne correspond pas à la quantité demandée. », proposer la tâche suivante : Répartir un matériel fictif en lots égaux, représenter l'opération et vérifier le total. Mettre à disposition : recette de base, quantite demandee. Livrable de la situation : Plan de production. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Organiser des lots égaux » : Répartir un matériel fictif en lots égaux, représenter l'opération et vérifier le total. Vérifier qu’elles se rapportent effectivement à « Représenter la multiplication comme groupes égaux et calculer des produits ».",
+      "observation": "Pendant « Organiser des lots égaux », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Ékole : Schéma de groupements et calcul expliqué. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Groupements réguliers, opération cohérente, vérification. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Sens et stratégies de la multiplication », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices issus du titre, des productions, rôles ou étapes sources : commande, boulanger, recette. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Plan de production ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « La commande de pains » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-ma-002": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "practice",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "part_task_practice",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "micro:enseignement-explicite-024"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Atelier ciblé : Lire, représenter et comparer des nombres naturels » pour contribuer à « Plan de production » dans « La commande de pains », il pourrait exercer « Lire, écrire et comparer des nombres naturels ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « La recette ne correspond pas à la quantité demandée. », proposer la tâche suivante : Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode. Mettre à disposition : recette de base, quantite demandee. Livrable de la situation : Plan de production. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Atelier ciblé : Lire, représenter et comparer des nombres naturels » : Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode. Vérifier qu’elles se rapportent effectivement à « Lire, écrire, ordonner et comparer des nombres naturels dans un champ adapté ».",
+      "observation": "Pendant « Atelier ciblé : Lire, représenter et comparer des nombres naturels », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Kontexte : écriture et représentation vérifiées. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Trace attendue clairement identifiable (écriture et représentation vérifiées); lien observable avec « Lire, écrire, ordonner et comparer des nombres naturels dans un champ adapté »; explication individuelle vérifiable. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Lire, écrire et comparer des nombres naturels », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices thématiques : quantite, commande, mesure, calcul. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Plan de production ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « La commande de pains » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    },
+    "qc-pri-ma-033": {
+      "theory_ids": [
+        "sandoval-2014",
+        "biggs-align",
+        "laurillard"
+      ],
+      "learning_type": "practice",
+      "assessment_requires": "individual_possible",
+      "fourcid_component": "part_task_practice",
+      "duration_minutes": 20,
+      "activity_refs": [
+        "micro:enseignement-explicite-022"
+      ],
+      "conjecture_statement": "Si l’enfant réalise « Atelier ciblé : Expliquer et vérifier sa démarche mathématique » pour contribuer à « Plan de production » dans « La commande de pains », il pourrait exercer « Justifier et communiquer une démarche mathématique ». L’effet et la difficulté restent à examiner.",
+      "expected_action": "Pour résoudre « La recette ne correspond pas à la quantité demandée. », proposer la tâche suivante : Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode. Mettre à disposition : recette de base, quantite demandee. Livrable de la situation : Plan de production. Les données et le matériel précis sont à fournir avant usage.",
+      "process": "Repérer dans la réalisation les opérations demandées par « Atelier ciblé : Expliquer et vérifier sa démarche mathématique » : Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode. Vérifier qu’elles se rapportent effectivement à « Communiquer un raisonnement mathématique vérifiable, au-delà du résultat ».",
+      "observation": "Pendant « Atelier ciblé : Expliquer et vérifier sa démarche mathématique », noter les démarches de l'enfant et recueillir la production. Demander une explication courte de la décision ou du résultat, sans la suggérer.",
+      "evidence": "Trace attendue selon la ressource Kontexte : justification intelligible. La conserver uniquement dans un dispositif autorisé, sans données d’enfant dans ce brouillon.",
+      "criterion": "Critères proposés, à préciser et à faire valider : Trace attendue clairement identifiable (justification intelligible); lien observable avec « Communiquer un raisonnement mathématique vérifiable, au-delà du résultat »; explication individuelle vérifiable. La simple réalisation de l'activité ne suffit pas à conclure à la maîtrise.",
+      "disconfirmation": "L'enfant réalise la production sans pouvoir montrer l'opération visée par « Justifier et communiquer une démarche mathématique », ou n'arrive pas à justifier une étape malgré des soutiens adaptés.",
+      "alternative": "Le résultat peut refléter les prérequis, l'aide reçue, un exemple copié ou une coopération non observable séparément, plutôt que cette activité seule.",
+      "boundary": "Ancrage : Indices thématiques : calcul, quantite. Vérifier pertinence, niveau, accessibilité, durée, matériel et cohérence avec le résultat « Plan de production ». Adapter si le contexte change.",
+      "interpretation_limit": "La trace prévue dans « La commande de pains » ne démontre ni transfert hors situation, ni efficacité causale, ni compétence de collaboration entre pairs pour un participant seul."
+    }
+  },
+  "dependency_lines": "",
+  "source_observations": [
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/catalogue/202_kristals.json",
+      "observed_sha256": "sha256:5487495d3e92db5d0614db73380700188d728dc28782ae2e80522331323cffb6",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/locales/qc/fr-CA/grade3/micro-situations-34.json",
+      "observed_sha256": "sha256:4a2bf9abf619c87a7e4e6035bce70babb99de2e2603c209de2977bb89e7904bb",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Kontexte",
+      "relative_path": "data/trames/catalogue-neutral-v0.2.json",
+      "observed_sha256": "sha256:b475de9ede688045dc1bff76b0ded1ebeec5fda121327f8dfc5d0eb37d45367e",
+      "pin_status": "unresolved",
+      "qualification": "not_checked_with_owner"
+    },
+    {
+      "owner": "Ékole",
+      "relative_path": "banques/prf22/activites-proposees-v0_7.json",
+      "observed_sha256": "sha256:23ad0fc1c49359b82eb65391d54537b43ce2ca91df04794cacf6926d7d8c642d",
+      "pin_status": "unresolved",
+      "qualification": "not_reviewed"
+    }
+  ]
+}

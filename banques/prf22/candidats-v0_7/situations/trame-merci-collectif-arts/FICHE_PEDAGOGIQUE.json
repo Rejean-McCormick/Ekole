@@ -1,0 +1,99 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:merci-collectif",
+  "focale": "arts",
+  "question_motrice": "Les contributions sont nombreuses mais invisibles.",
+  "declencheur_source": "La classe veut remercier des personnes.",
+  "informations_a_preparer": [
+    "personnes remerciees",
+    "gestes reconnus"
+  ],
+  "actions_source": [
+    "recueillir",
+    "rediger",
+    "presenter"
+  ],
+  "production_attendue_source": "Cartes et cérémonie",
+  "rebond_source": "Une personne souhaite rester anonyme.",
+  "niveaux_suggeres_source": "primaire-2",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-064",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-003",
+      "titre": "Composer une carte de remerciement illustrée",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "merci",
+        "remerci",
+        "ceremonie"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : merci, remerci, ceremonie",
+      "consigne_source": "Concevoir une carte fictive avec une illustration et un espace de message, sans nom ni photo identifiante.",
+      "consigne_contextualisee": "Dans « La cérémonie des mercis », accomplir « Composer une carte de remerciement illustrée » pour contribuer à « Cartes et cérémonie ». Concevoir une carte fictive avec une illustration et un espace de message, sans nom ni photo identifiante.",
+      "preuve": "Maquette de carte.",
+      "critere_propose": "Illustration pertinente, lisibilité et respect du choix d’anonymat.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-036",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-mu-008",
+      "titre": "Comparer deux ambiances sonores",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "scene"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : scene",
+      "consigne_source": "Écouter deux extraits sous licence autorisée et décrire les choix sonores qui changent l'ambiance.",
+      "consigne_contextualisee": "Dans « La cérémonie des mercis », accomplir « Comparer deux ambiances sonores » pour contribuer à « Cartes et cérémonie ». Écouter deux extraits sous licence autorisée et décrire les choix sonores qui changent l'ambiance.",
+      "preuve": "Comparaison écrite ou orale des extraits.",
+      "critere_propose": "Vocabulaire sonore et justification.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-037",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ad-004",
+      "titre": "Construire une courte scène",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "scene"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : scene",
+      "consigne_source": "Créer une courte séquence dramatique avec début, problème et résolution qui sert la mission.",
+      "consigne_contextualisee": "Dans « La cérémonie des mercis », accomplir « Construire une courte scène » pour contribuer à « Cartes et cérémonie ». Créer une courte séquence dramatique avec début, problème et résolution qui sert la mission.",
+      "preuve": "Canevas de scène et présentation supervisée.",
+      "critere_propose": "Progression claire, intention dramatique.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

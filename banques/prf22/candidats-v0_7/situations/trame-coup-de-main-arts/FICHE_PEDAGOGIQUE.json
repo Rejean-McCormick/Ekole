@@ -1,0 +1,62 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:coup-de-main",
+  "focale": "arts",
+  "question_motrice": "Les deux élèves disposent de compétences complémentaires.",
+  "declencheur_source": "Un élève a besoin d’assistance pour terminer une production.",
+  "informations_a_preparer": [
+    "besoin exprime",
+    "ressource disponible"
+  ],
+  "actions_source": [
+    "demander",
+    "aider",
+    "verifier"
+  ],
+  "production_attendue_source": "Production achevée en coopération",
+  "rebond_source": "La personne préfère une autre forme d’aide.",
+  "niveaux_suggeres_source": "primaire-2",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-074",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ap-003",
+      "titre": "Illustrer un geste d’entraide",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "coup de main",
+        "aider"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : coup de main, aider",
+      "consigne_source": "Concevoir deux pictogrammes pour représenter une aide concrète fictive, puis choisir le plus compréhensible.",
+      "consigne_contextualisee": "Dans « La mission coup de main », accomplir « Illustrer un geste d’entraide » pour contribuer à « Production achevée en coopération ». Concevoir deux pictogrammes pour représenter une aide concrète fictive, puis choisir le plus compréhensible.",
+      "preuve": "Deux pictogrammes et un choix expliqué.",
+      "critere_propose": "Intention lisible, choix visuel justifié et aucune personne réelle identifiable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}

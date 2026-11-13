@@ -1,0 +1,99 @@
+{
+  "format": "ekole.prf22.fiche-pedagogique/0.7",
+  "status": "candidat_non_qualifie",
+  "source_ref": "trame:chapeau-de-papier",
+  "focale": "mathematiques",
+  "question_motrice": "Le papier et la forme imposent des contraintes.",
+  "declencheur_source": "Un costume a besoin d’un accessoire.",
+  "informations_a_preparer": [
+    "modele",
+    "dimensions de la feuille"
+  ],
+  "actions_source": [
+    "plier",
+    "mesurer",
+    "decrire"
+  ],
+  "production_attendue_source": "Chapeau ou maquette papier",
+  "rebond_source": "Un autre format est demandé.",
+  "niveaux_suggeres_source": "primaire-2",
+  "activites": [
+    {
+      "activite_ref": "ekoleprop:ap-008",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-023",
+      "titre": "Comparer des figures",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "maquette",
+        "chapeau"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : maquette, chapeau",
+      "consigne_source": "Repérer et classer plusieurs figures dans un plan, dessin ou objet de la situation; expliquer les propriétés.",
+      "consigne_contextualisee": "Dans « Le chapeau de papier », accomplir « Comparer des figures » pour contribuer à « Chapeau ou maquette papier ». Repérer et classer plusieurs figures dans un plan, dessin ou objet de la situation; expliquer les propriétés.",
+      "preuve": "Croquis annoté et classification argumentée.",
+      "critere_propose": "Caractéristiques géométriques reconnues, vocabulaire précis.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "micro:enseignement-explicite-025",
+      "proprietaire": "Kontexte",
+      "objectif_ref": "qc-pri-ma-003",
+      "titre": "Atelier ciblé : Mobiliser la valeur de position et le regroupement",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "forme",
+        "maquette"
+      ],
+      "motif_de_choix": "Indices thématiques : forme, maquette",
+      "consigne_source": "Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "consigne_contextualisee": "Dans « Le chapeau de papier », accomplir « Atelier ciblé : Mobiliser la valeur de position et le regroupement » pour contribuer à « Chapeau ou maquette papier ». Faire représenter les données, résoudre, expliquer et vérifier par une seconde méthode.",
+      "preuve": "décomposition correcte",
+      "critere_propose": "Vérifier la trace attendue pour « Valeur de position et regroupements » et demander une justification observable.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    },
+    {
+      "activite_ref": "ekoleprop:ap-001",
+      "proprietaire": "Ékole",
+      "objectif_ref": "qc-pri-ma-025",
+      "titre": "Atelier de mesures comparées",
+      "place_dans_la_situation": "centrale_candidate",
+      "confiance": "ancrage_direct",
+      "mots_sources_observes": [
+        "maquette"
+      ],
+      "motif_de_choix": "Indices issus du titre, des productions, rôles ou étapes sources : maquette",
+      "consigne_source": "Mesurer trois objets pertinents à la situation avec le même instrument, noter les unités et expliquer les écarts.",
+      "consigne_contextualisee": "Dans « Le chapeau de papier », accomplir « Atelier de mesures comparées » pour contribuer à « Chapeau ou maquette papier ». Mesurer trois objets pertinents à la situation avec le même instrument, noter les unités et expliquer les écarts.",
+      "preuve": "Tableau de trois mesures et conclusion justifiée.",
+      "critere_propose": "Unités cohérentes, mesures lisibles et comparaison correcte.",
+      "materiel_a_confirmer": true,
+      "verification_humaine_requise": true
+    }
+  ],
+  "lacunes": [
+    "Préciser des données, supports et matériel concrets avant de faire réaliser les activités",
+    "Vérifier l’adéquation au groupe, la sécurité et les ressources disponibles",
+    "Faire confirmer les critères par un enseignant avant usage réel"
+  ],
+  "adaptations": {
+    "1": {
+      "modalite": "individuel",
+      "conservation": "objectif disciplinaire seulement",
+      "limite": "Aucune compétence de collaboration entre pairs ne peut être évaluée en solo"
+    },
+    "8": {
+      "modalite": "équipes candidates",
+      "controle": "Répartition des rôles, dépendances et contribution de chaque enfant à vérifier"
+    },
+    "30": {
+      "modalite": "stations candidates",
+      "controle": "Nombre de postes, matériel, bruit, temps et encadrement réels à confirmer"
+    }
+  },
+  "decision": "Aucune qualification pédagogique, publication, séance, compte ou admission permise"
+}
