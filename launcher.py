@@ -271,10 +271,11 @@ def create_handler(env: Environment, teacher: bool = False):
             character = re.fullmatch(r'/api/personnages/image/([a-z][a-z0-9-]{0,79})', route)
             if character:
                 try:
-                    portrait = kolor.image(character[1]) if kolor else None
-                    if portrait is not None: return self.respond(200, portrait, 'image/png')
+                    # Une image « pret » du pack fait autorité; Kolor est un repli historique.
                     f = personnages.image_file(env.personnages, character[1])
                     if f is not None: return self.respond(200, f.read_bytes(), 'image/png')
+                    portrait = kolor.image(character[1]) if kolor else None
+                    if portrait is not None: return self.respond(200, portrait, 'image/png')
                 except (OSError, ValueError, sqlite3.Error):
                     pass
                 return self.respond(404, b'Illustration de personnage indisponible')

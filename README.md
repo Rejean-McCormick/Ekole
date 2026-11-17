@@ -44,3 +44,7 @@ Voir [le contrôle de compatibilité et les limites de qualification](docs/Integ
 ## Final-system integration reference (Branch 06)
 
 The [English education-boundary specification](docs/FINAL_SYSTEM_EDUCATION_ALIGNMENT.md) describes implemented safety checks, local test instructions, cross-owner responsibilities and still-unapproved interfaces. It does **not** assert a deployed Orgo/Moodle workflow.
+
+## Compagnons-rôles Ékole Québec V2
+
+Le moteur accepte le catalogue `ekole.personnages/2` : un rôle et un compagnon partagent un seul portrait neutre et sept poses. La page élève propose les 38 rôles en choix facultatif lorsque le pack déclare `personnages_compagnons_actifs: true`. Le module historique `ekole.personnages/1` reste lisible. Voir le guide à la racine du pack 38×8.

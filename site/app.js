@@ -18,8 +18,11 @@ const COMPAGNON_FLAG='ekole-demo-compagnon-active-v2';
 const COMPAGNON_CHOICE='ekole-demo-compagnon-choice-v2';
 function demoStorage(){try{return window.sessionStorage;}catch(_){return null;}}
 function demoCompagnonActif(){
- // Verrou de portée : interface élève + paquet Québec + serveur de bouclage uniquement.
- if(!COMPAGNON_THEMES.length||base!=='/eleve/'||pack?.id!=='primaire-qc'||!['127.0.0.1','localhost','::1','[::1]'].includes(location.hostname))return false;
+ // Catalogue v2 explicitement activé par le pack : visible sans compte ni suivi personnel.
+ if(!COMPAGNON_THEMES.length||base!=='/eleve/'||pack?.id!=='primaire-qc')return false;
+ if(['ekole.personnages/2','ekole.personnages/3','ekole.personnages/4'].includes(window.EkolePersonnages.catalogue.format))return pack.personnages_compagnons_actifs===true;
+ // L’ancien pilote v1 reste volontairement réservé au serveur local.
+ if(!['127.0.0.1','localhost','::1','[::1]'].includes(location.hostname))return false;
  const storage=demoStorage();if(!storage)return false;
  try{
   const flag=current().get('pilote_compagnon');
@@ -35,7 +38,8 @@ function lireCompagnon(){
   const value=JSON.parse(demoStorage().getItem(COMPAGNON_CHOICE)||'null');
   const id=window.EkolePersonnages.catalogue.anciens_choix?.[value?.theme]||value?.theme;
   const theme=COMPAGNON_THEMES.find(t=>t.id===id);
-  return theme&&Number.isInteger(value.annee)&&theme.annees.includes(value.annee)?{...theme,annee:value.annee}:null;
+  const valide=Number.isInteger(value?.annee)&&value.annee>=1&&value.annee<=6;
+  return theme&&valide&&(['ekole.personnages/2','ekole.personnages/3','ekole.personnages/4'].includes(window.EkolePersonnages.catalogue.format)||theme.annees?.includes(value.annee))?{...theme,annee:value.annee}:null;
  }catch(_){return null;}
 }
 function niveauPage(){
@@ -55,35 +59,40 @@ function synchroniserNiveau(){
 function choixCompagnon(root){
  if(!demoCompagnonActif())return;
  const choisi=lireCompagnon(),grade=niveauPage();
- const section=add(root,'section','compagnon-choix');section.setAttribute('aria-label','Choix facultatif du compagnon de démonstration');
- add(section,'h2','','Choisis un compagnon (facultatif)');
- add(section,'p','compagnon-note','Compagnon facultatif de démonstration, sans collecte ni suivi individuel.');
+ const section=add(root,'section','compagnon-choix');section.setAttribute('aria-label','Choix facultatif du compagnon-rôle');
+ add(section,'h2','','Choisis ton compagnon-rôle (facultatif)');
+ add(section,'p','compagnon-note','38 rôles, chacun avec une version garçon et fille. Ton choix est facultatif et gardé uniquement dans cet onglet.');
  const niveau=add(section,'label','compagnon-niveau-label','Année scolaire');
  const select=add(niveau,'select','compagnon-niveau');
  for(let i=1;i<=6;i++){const option=add(select,'option','',`${i}${i===1?'re':'e'} année`);option.value=String(i);option.selected=i===grade;}
+ const recherche=add(section,'label','compagnon-recherche-label','Chercher un compagnon-rôle');
+ const filtre=add(recherche,'input','compagnon-recherche');filtre.type='search';filtre.placeholder='Ex. photographe, sorcière…';
  const grid=add(section,'div','compagnon-options');
+ filtre.addEventListener('input',()=>{const q=filtre.value.trim().toLocaleLowerCase('fr');
+  for(const bouton of grid.children){bouton.hidden=!bouton.dataset.nom.includes(q);}
+ });
  for(const theme of COMPAGNON_THEMES){
   const bouton=add(grid,'button','compagnon-option'+(choisi?.id===theme.id?' compagnon-selected':''));
-  bouton.type='button';bouton.setAttribute('aria-pressed',choisi?.id===theme.id?'true':'false');
+  bouton.type='button';bouton.dataset.nom=theme.nom.toLocaleLowerCase('fr');bouton.setAttribute('aria-pressed',choisi?.id===theme.id?'true':'false');
   window.EkolePersonnages.companion(bouton,theme,grade);
-  add(bouton,'strong','',theme.nom);add(bouton,'span','compagnon-univers',theme.univers);
+  add(bouton,'strong','',theme.nom);add(bouton,'span','compagnon-univers',theme.role_id?'Compagnon · rôle':'Compagnon');
   bouton.addEventListener('click',()=>{enregistrerCompagnon(theme.id,Number(select.value));render();});
  }
  select.addEventListener('change',()=>{if(choisi){enregistrerCompagnon(choisi.id,Number(select.value));render();}});
  const actions=add(section,'div','compagnon-actions');
  const sans=add(actions,'button','compagnon-sans','Continuer sans compagnon');sans.type='button';
  sans.addEventListener('click',()=>{try{demoStorage()?.removeItem(COMPAGNON_CHOICE);}catch(_){}render();});
- a(actions,'Quitter la démonstration',{page:'parcours',pilote_compagnon:'0'},'compagnon-sortie');
+ if(!['ekole.personnages/2','ekole.personnages/3','ekole.personnages/4'].includes(window.EkolePersonnages.catalogue.format))a(actions,'Quitter la démonstration',{page:'parcours',pilote_compagnon:'0'},'compagnon-sortie');
 }
-function presenterCompagnon(root,message,pose='debout'){
+function presenterCompagnon(root,message,pose='neutre'){
  const choisi=lireCompagnon();if(!choisi)return;
  const grade=niveauPage();
- const box=add(root,'section','compagnon-apercu');box.setAttribute('aria-label','Compagnon de démonstration');
+ const box=add(root,'section','compagnon-apercu');box.setAttribute('aria-label','Compagnon visuel');
  window.EkolePersonnages.companion(box,choisi,grade,pose,true);
  const words=add(box,'div','compagnon-mots');
  add(words,'strong','',`${choisi.nom} · ${grade}${grade===1?'re':'e'} année`);
  add(words,'p','compagnon-message',message).setAttribute('aria-live','polite');
- add(words,'small','compagnon-note','Compagnon facultatif · Ne représente pas une évaluation');
+ add(words,'small','compagnon-note','Compagnon visuel facultatif · Ne représente pas une évaluation');
 }
 function reactionCompagnon(reussite){
  const choisi=lireCompagnon();if(!choisi)return;
@@ -187,7 +196,7 @@ function home(root){
 function pathPage(root,p){
  crumb(root,[{text:'Accueil',url:'./'},{text:p.titre}]);
  heading(root,p.titre,`${p.cours_ids.length} cours · Choisis une matière, puis une notion.`,'Mon parcours');
- presenterCompagnon(root,'Je t’accompagne pendant ce parcours.');
+ presenterCompagnon(root,'Je t’accompagne pendant ce parcours.','presenter');
  if(p.id===pack.parcours_mis_en_avant){const actions=add(root,'div','quick-actions');buttonlink(actions,'Explorer les fiches Spek',{parcours:p.id,vue:'spek'},'button-link');buttonlink(actions,'Carte des connaissances',{parcours:p.id,vue:'carte'},'button-link');}
  const q=current(),v=q.get('vue');if(v==='spek'){renderSpek(root,p);return;}if(v==='carte'){renderGraph(root,null,p.id);return;}
  const featured=(p.cours_ids.length>0&&p.id===pack.parcours_mis_en_avant?(pack.cours_a_decouvrir||[]).filter(id=>p.cours_ids.includes(id)):[]);
@@ -206,7 +215,7 @@ function catalog(root){
  const search=$('#search').value.trim().toLocaleLowerCase('fr'),d=$('#domain').value;
  const filtered=pack.cours.filter(c=>(!d||c.discipline===d)&&(!search||[c.titre,c.objectif,c.discipline,c.id].join(' ').toLocaleLowerCase('fr').includes(search)));
  crumb(root,[{text:'Accueil',url:'./'},{text:'Bibliothèque'}]);heading(root,'Bibliothèque',`${filtered.length} cours sur ${pack.cours.length}.`);
- presenterCompagnon(root,'Cherche un sujet qui t’intéresse.');
+ presenterCompagnon(root,'Cherche un sujet qui t’intéresse.','reflechir');
  const grid=add(root,'div','cards');for(const c of filtered)card(grid,c,getPathFor(c.id));if(!filtered.length)add(root,'p','empty','Aucun cours trouvé. Essaie un autre mot.');
 }
 async function showApprovedImages(host,cid,index){
@@ -225,7 +234,7 @@ async function detail(root,c){
  crumb(root,[{text:'Accueil',url:'./'},...(group?[{text:group.titre,url:url({parcours:group.id})}]:[{text:'Bibliothèque',url:url({page:'cours'})}]),{text:c.titre}]);
  heading(root,c.titre,c.objectif||'',c.discipline);
  pickUniverse(root);
- presenterCompagnon(root,mode==='pratique'?'Observe les indices et essaie par toi-même.':'Découvrons cette notion ensemble.','apprendre');
+ presenterCompagnon(root,mode==='pratique'?'Observe les indices et essaie par toi-même.':'Découvrons cette notion ensemble.','expliquer');
  const themed=await universeForCourse(root,c,retour);
  if(themed)c={...c,activite_locale:true,activites_locales:[themed,...(c.activites_locales||[])]};
  const status=add(root,'div','course-status');add(status,'span','small-note',c.publication_eleve?'Leçon pilote · À vérifier avec un enseignant':'Leçon élève en préparation');

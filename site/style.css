@@ -122,3 +122,11 @@ footer{border-top-color:var(--brand-line);color:var(--brand-muted)}
 :root[data-ekole-style="pastel"]{--brand:#694782;--brand-dark:#50335f;--brand-link:#694782;--brand-soft:#f0e5f8;--brand-soft-2:#faf4fc;--brand-border:#cdb4dd}
 :root[data-ekole-style="ardoise"]{--brand:#36576e;--brand-dark:#233c50;--brand-link:#36576e;--brand-soft:#e4edf3;--brand-soft-2:#f1f6f8;--brand-border:#a9c1d1}
 :root[data-ekole-style="vif"]{--brand:#9a3f16;--brand-dark:#713016;--brand-link:#9a3f16;--brand-soft:#ffebda;--brand-soft-2:#fff5eb;--brand-border:#e6b896}
+
+/* Compagnons-rôles v2 : 38 choix accessibles et recherchables. */
+.compagnon-recherche-label{display:flex;flex-direction:column;gap:6px;max-width:350px;font-weight:650}
+.compagnon-recherche{width:100%;padding:10px;border:1px solid var(--brand-border);border-radius:9px;font:inherit}
+.compagnon-option[hidden]{display:none!important}
+
+/* Carte de rôle v3 : afficher les deux versions garçon/fille côte à côte. */
+.personnage-duo{display:inline-flex;align-items:center;gap:2px;vertical-align:middle}.personnage-duo>.personnage-portrait{width:42px;height:58px}.personnage-duo>.personnage-portrait.personnage-large{width:56px;height:74px}

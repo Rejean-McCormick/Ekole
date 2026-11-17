@@ -21,21 +21,33 @@ class CatalogueTests(unittest.TestCase):
     def setUp(self):self.data=json.loads(CAT.read_text(encoding='utf-8'))
     def test_cross_repo_roles_and_companions(self):
         personnages.validate(self.data)
-        roles=[json.loads(p.read_text(encoding='utf-8')) for p in (ROOT/'Kontexte/data/roles').glob('*.json')]
-        self.assertEqual(len(roles),38)
+        role_dir=ROOT/'Kontexte/data/roles'
+        roles=[json.loads(p.read_text(encoding='utf-8')) for p in role_dir.glob('*.json')]
         assets={a['id']:a for a in self.data['assets']}
-        self.assertEqual(len(assets),80)
-        self.assertEqual({a['role_id'] for a in assets.values() if a['type']=='role'},{r['id'] for r in roles})
-        for r in roles:self.assertEqual(assets[r['visual_id']]['role_id'],r['id'])
-        self.assertEqual(len(self.data['compagnons']),5)
+        self.assertEqual(self.data['format'],'ekole.personnages/4')
+        self.assertEqual(len(assets),3040)
+        self.assertEqual(len(self.data['compagnons']),380)
+        self.assertEqual(len(self.data['poses']),8)
+        self.assertEqual({a['role_id'] for a in assets.values() if a['type']=='role'},
+                         {c['role_id'] for c in self.data['compagnons']})
+        if roles:
+            self.assertEqual({a['role_id'] for a in assets.values() if a['type']=='role'},{r['id'] for r in roles})
+            for r in roles:self.assertEqual(assets[r['visual_id']]['role_id'],r['id'])
         self.assertEqual(self.data['anciens_choix']['cosmos'],'extraterrestre')
+        self.assertIn('role-photographe-fille', assets)
+        self.assertIn('compagnon-photographe-fille-pose-ecouter', assets)
+        self.assertEqual(len({c['role_id'] for c in self.data['compagnons']}),38)
         self.assertNotEqual(assets['role-explorateur']['id'],assets['role-extraterrestre']['id'])
+    def test_ancien_catalogue_draft_encore_valide(self):
+        archived=json.loads((CAT.parent/'catalogue.v1.archive.json').read_text(encoding='utf-8'))
+        self.assertEqual(personnages.validate(archived)['format'],'ekole.personnages/1')
+
     def test_unique_slots_and_safe_paths(self):
         for mutation in ('duplicate','path','year','missing'):
             data=copy.deepcopy(self.data)
             if mutation=='duplicate':data['assets'].append(copy.deepcopy(data['assets'][0]))
             elif mutation=='path':data['assets'][0]['fichier']='images/../../private.png'
-            elif mutation=='year':data['assets'][0]['annee']=True
+            elif mutation=='year':data['assets'][0]['pose']='inconnue'
             else:data['assets'].pop(0)
             with self.subTest(mutation=mutation),self.assertRaises(ValueError):personnages.validate(data)
     def test_images_require_review_presence_and_png(self):
@@ -84,7 +96,7 @@ class ApiTests(unittest.TestCase):
         url=f'http://127.0.0.1:{server.server_port}'
         try:
             with urllib.request.urlopen(url+'/api/personnages/catalogue.json') as res:data=json.load(res)
-            self.assertEqual(len(data['assets']),80)
+            self.assertEqual(len(data['assets']),608)
             self.assertTrue(all(a['url'] is None and not a['disponible'] for a in data['assets']))
             self.assertTrue(all('fichier' not in a and 'prompt' not in a for a in data['assets']))
             for id in ('role-fermier','unknown','%2e%2e%2fpack.json'):

@@ -117,6 +117,10 @@
       "type": "string",
       "pattern": "^[A-Za-z0-9_-]+/catalogue\\.json$",
       "description": "Catalogue facultatif des compagnons et illustrations de rôles, indépendant des visuels de cours."
+    },
+    "personnages_compagnons_actifs": {
+      "type": "boolean",
+      "description": "Active les compagnons-rôles facultatifs pour le paquet (stockage limité à la session)."
     }
   }
 }
