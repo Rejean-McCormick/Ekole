@@ -1,5 +1,7 @@
 # Validation croisée Ékole × Orgo × Kidaxion — 11 novembre 2026
 
+Cette page consigne la validation initiale. Le verrou du sous-ensemble B5 a depuis été traité dans [le contrôle Kontexte de la banque étendue](https://github.com/Rejean-McCormick/Kontexte/blob/main/docs/banque-worlds/VALIDATION_TANDEM_2026_11_11.md). Pour la suite de Kidaxion et des preuves locales, voir [le lot multicanal](architecture-collaborative/11_LOT_CODE_MULTICANAL_2026_11_11.md).
+
 > Statut : audit du code contenu dans les 13 dépôts fournis, hors exécution de services réels. Ce document ne vaut ni qualification de production ni preuve de conformité pour des comptes d’enfants.
 
 ## 1. Dépôts reçus et périmètre

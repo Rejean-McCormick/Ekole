@@ -1,5 +1,7 @@
 # État de l'intégration et recette du premier World pédagogique
 
+**Point de lecture.** Ce rapport retrace l’état initial du pilote. La [recette collaborative](architecture-collaborative/09_FEUILLE_DE_ROUTE_ET_RECETTE.md) porte les critères actuels. Le [lot multicanal](architecture-collaborative/11_LOT_CODE_MULTICANAL_2026_11_11.md) précise la préparation des onze étapes et la préversion Kidaxion. La fixture historique de quatre tâches reste un exemple d’aperçu.
+
 > **Révision d’architecture — 11 novembre 2026 :** cette page historique est conservée pour ses détails du pilote. La référence transversale actuelle est [Architecture collaborative et interfaces humaines](architecture-collaborative/00_LIRE_EN_PREMIER.md) : Konnaxion y est traité comme **propriétaire des projets, équipes, messages, ressources et portfolios**, Orgo comme propriétaire des tâches des aventures qu’il exécute, et Ékole comme responsable des décisions pédagogiques. Une fonction documentée ou simulée n’est pas nécessairement en production.
 
 

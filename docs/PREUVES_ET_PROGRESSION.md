@@ -1,5 +1,7 @@
 # Ékole : preuves, réalisations et recommandations pédagogiques
 
+Pour la conception du modèle, lire [le référentiel Kontexte](https://github.com/Rejean-McCormick/Kontexte/blob/main/docs/ekole-orgo/04_REFERENTIEL_PREUVES_ET_RAPPORTS.md). Pour un essai, le [journal local Ékole](../tandem/portfolio_ledger.py) enregistre et fait revoir des preuves de démonstration. Sa portée et les conditions du portfolio sont décrites dans [le chapitre sur les preuves](architecture-collaborative/05_PREUVES_EVALUATIONS_PORTFOLIOS.md).
+
 > **Révision d’architecture — 11 novembre 2026 :** cette page historique est conservée pour ses détails du pilote. La référence transversale actuelle est [Architecture collaborative et interfaces humaines](architecture-collaborative/00_LIRE_EN_PREMIER.md) : Konnaxion y est traité comme **propriétaire des projets, équipes, messages, ressources et portfolios**, Orgo comme propriétaire des tâches des aventures qu’il exécute, et Ékole comme responsable des décisions pédagogiques. Une fonction documentée ou simulée n’est pas nécessairement en production.
 
 

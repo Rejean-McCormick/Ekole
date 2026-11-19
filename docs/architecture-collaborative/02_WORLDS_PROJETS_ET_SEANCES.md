@@ -59,3 +59,7 @@ Cette machine d'états décrit un **coordonnateur de présentation Ékole** à c
 ## Cas à couvrir
 
 Deux classes lancent *La Fête de la sorcière* simultanément; un élève change de personnage; un groupe partage un Chromebook; un World Konnaxion change de release; une carte papier est photographiée; une station est suspendue; un enseignant clôt le projet mais n'a pas fini l'évaluation. **Aucun de ces événements ne doit exposer les données d'une autre classe ni réécrire des résultats passés.**
+
+## Résoudre une séance
+
+À partir d’une mission, retrouver l’occurrence scolaire et sa version épinglée. Récupérer séparément les références [Orgo Worlds](https://github.com/Rejean-McCormick/Orgo-Worlds/blob/main/docs/Technical-Reference/Worlds/04_DATA_OWNERSHIP_MATRIX.md) et [Konnaxion Worlds](https://github.com/Rejean-McCormick/Konnaxion-Worlds/blob/main/docs/Technical-Reference/Worlds/04_DATA_OWNERSHIP_MATRIX.md), puis vérifier les droits dans chacun. Consulter [le schéma de liaison proposé](CONTRAT_LIAISON_SEANCE.schema.json) pour les champs attendus et [la recette](09_FEUILLE_DE_ROUTE_ET_RECETTE.md) pour leur qualification.

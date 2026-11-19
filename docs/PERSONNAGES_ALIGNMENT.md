@@ -1,5 +1,7 @@
 # Personnages — alignement du 28 octobre 2026
 
+**Compatibilité du moteur.** Le pilote décrit ci-dessous correspond à l’alignement d’octobre. Le [chargeur du moteur](../personnages.py) reconnaît les formats `ekole.personnages/1` à `/4`. Le [catalogue du pack Québec](https://github.com/Rejean-McCormick/Ekole-Quebec/blob/main/personnages/catalogue.json) et le pack effectivement installé déterminent le format et les ressources disponibles. Voir [le guide du catalogue](https://github.com/Rejean-McCormick/Ekole-Quebec/blob/main/personnages/README.md).
+
 Cette couche est indépendante des images de cours, de leurs prompts, de leur importation et de leur publication. `visuals.py`, l’éditeur d’images et leurs API ne changent pas.
 
 ## Répartition

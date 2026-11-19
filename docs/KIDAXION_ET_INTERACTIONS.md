@@ -5,7 +5,7 @@
 
 ## Statut et périmètre
 
-**Kidaxion est le nom retenu pour l'interface enfant simplifiée de Konnaxion.** Il s'agit d'un **composant cible**, non d'un moteur distinct, et **aucune implémentation Kidaxion n'a été identifiée dans les instantanés fournis**. Ce document est une spécification fonctionnelle d'intégration, pas une API déjà disponible.
+**Kidaxion est l’interface jeunesse de Konnaxion.** Cette page décrit les interactions prévues dans une séance. Le [lot multicanal](architecture-collaborative/11_LOT_CODE_MULTICANAL_2026_11_11.md) documente une [préversion Web](https://github.com/Rejean-McCormick/Konnaxion/blob/main/frontend/app/kidaxion/page.tsx) pour les projets scolaires. Le trajet complet vers les tâches Orgo et ses droits reste à qualifier.
 
 La conversation, la transmission d'un message, les destinataires et les capacités de communication relèvent de **Konnaxion** et de ses contrats. La disponibilité d'un indice ou le déblocage d'une étape relèvent **d'Orgo**. Les contenus d'apprentissage et la validation des réussites relèvent **d'Ékole**.
 

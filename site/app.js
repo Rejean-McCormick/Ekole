@@ -218,8 +218,36 @@ function catalog(root){
  presenterCompagnon(root,'Cherche un sujet qui t’intéresse.','reflechir');
  const grid=add(root,'div','cards');for(const c of filtered)card(grid,c,getPathFor(c.id));if(!filtered.length)add(root,'p','empty','Aucun cours trouvé. Essaie un autre mot.');
 }
+function pastoralStyles(){
+ const cfg=pack?.visuels_themes;
+ return pack?.id==='ecole-pastorale' && Array.isArray(cfg?.styles) ? cfg.styles : [];
+}
+function selectedPastoralStyle(){
+ const all=pastoralStyles();
+ if (!all.length) return null;
+ let saved='';try { saved=sessionStorage.getItem('ekole-pastorale-style')||''; } catch(_) {}
+ return all.find(x=>x.id===saved) || all.find(x=>x.id===pack.visuels_themes.default) || all[0];
+}
+function pickPastoralStyle(root){
+ const styles=pastoralStyles();
+ if (!styles.length) return;
+ const chosen=selectedPastoralStyle();
+ const section=add(root,'section','pastorale-style-choice');
+ add(section,'h2','','Style des illustrations');
+ const label=add(section,'label','stage-select-label','Choisir le style visuel');
+ const menu=add(label,'select','stage-picker');
+ menu.setAttribute('aria-label','Style des illustrations École Pastorale');
+ for(const style of styles){ const option=add(menu,'option','',style.name);option.value=style.id; }
+ menu.value=chosen?.id || '';
+ menu.addEventListener('change',()=>{
+  if(!styles.some(s=>s.id===menu.value)) return;
+  try { sessionStorage.setItem('ekole-pastorale-style',menu.value); } catch(_) {}
+  location.reload();
+ });
+ add(section,'p','hint','Les cours conservent leur contenu. Seules les illustrations approuvées pour ce style sont affichées.');
+}
 async function showApprovedImages(host,cid,index){
- const theme=selectedUniverse()?.id;
+ const theme=selectedPastoralStyle()?.id || selectedUniverse()?.id;
  const suffix=theme?'?theme='+encodeURIComponent(theme):'';
  let data;try{data=await fetchJson('/api/visuels/'+encodeURIComponent(cid)+'.json'+suffix);}catch(_){return;}
  const placement=index<2?'decouvrir':index<4?'explorer':'essayer';
@@ -234,6 +262,7 @@ async function detail(root,c){
  crumb(root,[{text:'Accueil',url:'./'},...(group?[{text:group.titre,url:url({parcours:group.id})}]:[{text:'Bibliothèque',url:url({page:'cours'})}]),{text:c.titre}]);
  heading(root,c.titre,c.objectif||'',c.discipline);
  pickUniverse(root);
+ pickPastoralStyle(root);
  presenterCompagnon(root,mode==='pratique'?'Observe les indices et essaie par toi-même.':'Découvrons cette notion ensemble.','expliquer');
  const themed=await universeForCourse(root,c,retour);
  if(themed)c={...c,activite_locale:true,activites_locales:[themed,...(c.activites_locales||[])]};

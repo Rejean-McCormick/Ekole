@@ -69,3 +69,7 @@ Construire **une projection autorisée** des projets et des actions pertinentes,
 ## Sources
 
 `Konnaxion/backend/konnaxion/keenkonnect/models.py`, `api_views.py`; `backend/konnaxion/konnected/models.py`, `api_views.py`; `backend/konnaxion/ekoh/models/access.py`; `backend/konnaxion/smart_vote/models/consultation.py`; `Konnaxion_Worlds/docs/Technical-Reference/Worlds/08_ACCOUNTS_PERSONAS_EKOH_SMARTVOTE.md`.
+
+## Raccorder un projet
+
+[Konnaxion](https://github.com/Rejean-McCormick/Konnaxion/blob/main/README.md) est la référence pour le projet et sa collaboration. La [préversion Web Kidaxion](https://github.com/Rejean-McCormick/Konnaxion/blob/main/frontend/app/kidaxion/page.tsx) s’appuie sur ce périmètre. L’affichage d’une tâche Orgo exige une liaison explicite à son propriétaire. Pour les règles d’accès, voir [la confidentialité scolaire](08_SECURITE_ET_CONFIDENTIALITE.md).

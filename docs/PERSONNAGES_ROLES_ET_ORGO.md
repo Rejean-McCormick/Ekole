@@ -1,5 +1,7 @@
 # Personnages-métiers, rôles et attribution dans Orgo
 
+Utiliser [Kontexte](https://github.com/Rejean-McCormick/Kontexte/blob/main/README.md) pour l’identité narrative, [le catalogue du pack Québec](https://github.com/Rejean-McCormick/Ekole-Quebec/blob/main/personnages/README.md) pour les visuels et [Kompose](https://github.com/Rejean-McCormick/Kompose/blob/main/docs/TANDEM_P1_ORGO_EKOLE_ALIGNMENT.md) pour les propositions. L’affectation effective relève du propriétaire de la tâche. Voir [le modèle des autorités](architecture-collaborative/01_CARTOGRAPHIE_ET_AUTORITES.md).
+
 > **Révision d’architecture — 11 novembre 2026 :** cette page historique est conservée pour ses détails du pilote. La référence transversale actuelle est [Architecture collaborative et interfaces humaines](architecture-collaborative/00_LIRE_EN_PREMIER.md) : Konnaxion y est traité comme **propriétaire des projets, équipes, messages, ressources et portfolios**, Orgo comme propriétaire des tâches des aventures qu’il exécute, et Ékole comme responsable des décisions pédagogiques. Une fonction documentée ou simulée n’est pas nécessairement en production.
 
 

@@ -47,3 +47,7 @@ Une validation JSON, la présence d'un World Pack, l'injecteur synthétique Orgo
 5. Essai supervisé avec identités fictives, puis autorisations institutionnelles nécessaires avant toute utilisation avec de vrais enfants.
 
 **Blocage de production :** tant que ces conditions ne sont pas remplies, les interactions restent des simulations ou des maquettes, et toutes les données de tests doivent être synthétiques.
+
+## Qualifier les accès par surface
+
+Le [module scolaire de Konnaxion](https://github.com/Rejean-McCormick/Konnaxion/blob/main/backend/konnaxion/keenkonnect/school_access.py) donne le point de départ pour examiner les permissions collaboratives. Qualifier séparément la lecture, l’écriture, les médias et la visibilité du portfolio, avec les données de test et les droits prévus. Les contrôles du [lot multicanal](11_LOT_CODE_MULTICANAL_2026_11_11.md) s’inscrivent dans cette recette par propriétaire.

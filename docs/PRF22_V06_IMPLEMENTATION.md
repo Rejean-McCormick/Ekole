@@ -1,5 +1,7 @@
 # Ékole PRF-22 v0.6 — banque enrichie et studio enseignant intégré
 
+Cette page décrit le lot v0.6. Pour choisir le lot v0.7 et son vérificateur, suivre [la banque PRF-22](../banques/prf22/README.md). Pour orienter une proposition vers une revue de classe, voir [les scénarios collaboratifs](architecture-collaborative/07_SCENARIOS_ET_PARCOURS.md).
+
 ## Résultat
 
 - **137 propositions** issues des mêmes **77 sources Kontexte**; la banque initiale `candidats-v0_4/` demeure versionnée et inchangée.

@@ -1,5 +1,7 @@
 # Final-system learning engine and publication boundary — Ékole Core
 
+For the cross-repository overview, see [the Ékole ecosystem map](ECOSYSTEME.md). [Authoring and publication](AUTEUR_ET_PUBLICATION.md) links the learner view, Spek rendering, Kristal read surfaces and the owner’s Moodle handoff.
+
 **Scope:** `FC-11` with support to `FC-10`; neutral, locally operable educational engine. `Ekole-Pastorale` and `ekole-quebec` are **independent content repositories**; no religious curriculum or Orgo state is embedded as mandatory engine logic.
 
 ## Content pack and teacher preview
@@ -13,4 +15,4 @@
 
 Run `python -m unittest discover -s tests -v`. Tests requiring the separate `ekole-quebec` content checkout now **skip explicitly if its source pack is absent**, rather than reporting an engine failure; those integrations remain unqualified until its owner archive is supplied. Core and supplied pastoral fixtures are exercised independently. The branch runner proves an explicit unapproved pastoral lesson is not exposed through the local learner interface.
 
-An integration to UCKK/Moodle is **not implemented by this change**; see UCKK's read-only source inspector and the cross-owner handoff document.
+The [Québec Moodle plan and candidate reader](https://github.com/Rejean-McCormick/Ekole-Quebec/blob/main/moodle/README.md) are maintained by the content repository. [UCKK](https://github.com/Rejean-McCormick/UCKK/blob/main/README.md) owns the destination. A dry-run plan and a live Moodle receipt provide different evidence.

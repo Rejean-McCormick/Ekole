@@ -79,3 +79,7 @@ Des droits de retrait, correction, traçabilité de copropriété et conservatio
 ## Revue et audit
 
 Chaîne cible : `source event → preuve candidate → revue pédagogique → état de compétence → recommandation → portfolio sélectionné`. Chaque transition conserve `who/when/why/which version`. Le retrait d'une publication ne doit pas effacer la décision pédagogique originale, qui reste soumise aux règles de conservation du dossier scolaire.
+
+## Pratiquer sur données fictives
+
+Le [journal SQLite de démonstration](../../tandem/portfolio_ledger.py) conserve les attributions, observations, revues et sélections candidates. Le [test de la chaîne de preuve](../../tests/test_portfolio_ledger.py) vérifie la déduplication et le passage en revue sans attribuer automatiquement une maîtrise. Pour un usage réel, confirmer l’accès aux preuves et au portfolio pour chaque audience.

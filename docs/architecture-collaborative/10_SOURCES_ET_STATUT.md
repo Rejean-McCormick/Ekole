@@ -19,21 +19,21 @@
 | Orgo / Orgo_Worlds | `Orgo/apps/api/src/orgo/modules/work/work.service.ts`, `Orgo_Worlds/apps/api/src/orgo/modules/worlds/worlds.service.ts` — **moteurs propres, session scolaire non admise** |
 | Missions et personnages | `Kontexte/data/missions/*.json`, `data/roles/*.json`, `docs/ekole-orgo/` — **17 missions, 38 rôles après overlays** |
 | Ékole et preuves | `ekole/activite_locale.py`, `tandem/projection.py`, `docs/PREUVES_ET_PROGRESSION.md`; `Inkuisite` — **briques locales, pas longitudinal complet** |
-| Kidaxion, lot 2 | `Konnaxion/frontend/lib/kidaxion-intents.mjs` (overlay lot 2) — **constructeur de demandes non autoritatives, pas UI ni serveur scolaire** |
+| Kidaxion, lot 2 | `Konnaxion/frontend/lib/kidaxion-intents.mjs` (overlay lot 2) — **constructeur de demandes non autoritatives**. La préversion Web relève du [lot multicanal](11_LOT_CODE_MULTICANAL_2026_11_11.md). |
 | Préparation Orgo | `Orgo_Worlds/world-packs/ekole-fete-sorciere` (overlay lot 2) — **revue synthétique des 11 tâches, pas création runtime** |
 
 ## Résultats conservés des lots antérieurs
 
 - Overlay documentaire v2 Ékole : 7 documents dans `docs/`, installation confirmée par journal utilisateur.
 - Lot coordonné 1 : 23 fichiers répartis dans 9 dépôts, empreintes vérifiées par journal utilisateur; audit en lecture seule : 17 missions, 92 étapes, 38 rôles, 7 intentions synthétiques.
-- Lot 2 : 16 fichiers vérifiés par journal utilisateur, 55 liens pédagogiques **candidats** dans 7 missions, garde-fous structurés pour les 10 missions historiques et pack de revue de la fête. Une validation structurelle ne vaut ni approbation de compétence ni admission runtime.
+- Lot 2 : 16 fichiers vérifiés par journal utilisateur, 55 liens pédagogiques **candidats** dans 7 missions, registre des garde-fous à revoir pour les 10 missions historiques et pack de revue de la fête. Une validation structurelle ne vaut ni approbation de compétence ni admission runtime.
 
 ## Décisions de conception nouvellement proposées
 
 1. **Liaison de séance** entre contexte Ékole, World Orgo, World Konnaxion et projet Konnaxion, sans fusion des identifiants. Non implémentée.
 2. **Une seule autorité de tâche** par projet : Orgo pour l'aventure Ékole; Konnaxion peut rester propriétaire des tâches de projets qui lui sont propres. À ratifier dans les adaptateurs.
 3. **Portfolio à double perspective** : décision pédagogique privée Ékole; exposition choisie et contrôlée de références dans KonnectED. Adaptateur absent.
-4. **Kidaxion multicanal** : présentation Web/Chromebook, Kor/Android et Kamel/papier, tous adressant des propriétaires métiers existants. Portail Kidaxion non opérationnel.
+4. **Kidaxion multicanal** : présentation Web/Chromebook, Kor/Android et Kamel/papier, tous adressant des propriétaires métiers existants. Préversion Web documentée. L’admission scolaire et le trajet des tâches Orgo restent à qualifier.
 5. **Passerelle jeunesse de sécurité** : identité scolaire vérifiée, contrôle d'audience, modération, querysets privés. Bloquant avant données réelles.
 
 ## Principaux problèmes ouverts
@@ -48,3 +48,7 @@
 ## Règle de lecture de cette documentation
 
 **Présent dans le code** = classe, route ou service observable. **Documenté** = intention ou contrat dans un document du dépôt. **Simulé** = vérifié sur fixture de démonstration. **Proposé** = conception nouvelle. **Opérationnel avec des enfants** = exige une recette intégrée et une approbation institutionnelle, **non démontrées ici**. Ne jamais confondre ces états.
+
+## Lire les états dans l’ordre
+
+Le rapport distingue l’audit initial, le lot 2 et l’[état du lot multicanal](11_LOT_CODE_MULTICANAL_2026_11_11.md). Pour les éléments publiquement consultables, comparer [la vue Kidaxion](https://github.com/Rejean-McCormick/Konnaxion/blob/main/frontend/app/kidaxion/page.tsx), [les règles scolaires Konnaxion](https://github.com/Rejean-McCormick/Konnaxion/blob/main/backend/konnaxion/keenkonnect/school_access.py) et [la recette Kontexte de la banque étendue](https://github.com/Rejean-McCormick/Kontexte/blob/main/docs/banque-worlds/VALIDATION_TANDEM_2026_11_11.md).

@@ -1,5 +1,7 @@
 # Ekole — Tournée Tandem P1 — projection pédagogique synthétique (2026-10-19)
 
+Ce guide reproduit la prévisualisation P1 d’origine. Pour le périmètre élargi de l’aperçu, voir [le lot coordonné](LOT_COORDONNE_TANDEM_2026_11_11.md). Pour préparer les cartes et le plan enseignant à partir de Kontexte, suivre [le lot multicanal](architecture-collaborative/11_LOT_CODE_MULTICANAL_2026_11_11.md).
+
 ## Statut réel
 
 **Implémenté dans ce correctif :** import contrôlé d'une *projection de démonstration*, lecture seule et **enseignant seulement** via `/api/tandem/preview.json`. Corpus, cours, éditeur et publication existants inchangés. Pas de modification des dépôts frères `ekole-quebec` / `ecole-pastorale`.

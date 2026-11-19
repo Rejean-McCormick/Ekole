@@ -93,3 +93,7 @@
 ## Conditions de déploiement
 
 Les lots précédents sont des **tests de code et de préparation**, pas une admission d'élèves. Avant production : essais réels sur des services intégrés, authentification, politiques d'accès, sécurité des médias et des portfolios, validation institutionnelle et protocole de retrait. Aucun « taux de complétion » de cette architecture n'est inféré à partir des seules simulations.
+
+## Consigner un résultat de recette
+
+Indiquer la révision du producteur et celle du consommateur, la version du contrat, le contexte de test et le reçu obtenu. Joindre un scénario accepté et un scénario refusé. Les [sources et statuts](10_SOURCES_ET_STATUT.md) donnent l’état des démonstrations. Le [guide de démarrage](../DEMARRAGE.md) couvre la vérification indépendante des packs.

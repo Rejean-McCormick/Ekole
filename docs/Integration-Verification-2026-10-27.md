@@ -1,5 +1,7 @@
 # Vérification des intégrations satellites — 27 octobre 2026
 
+Ce contrôle est daté du 27 octobre. Pour sélectionner le pack, suivre [le guide de démarrage](DEMARRAGE.md). Pour les projections actuelles et la décision de diffusion, suivre [le guide auteur](AUTEUR_ET_PUBLICATION.md).
+
 **Portée :** vérification statique des instantanés de code et de documentation datés du 27 octobre 2026. **Aucune qualification runtime, CI distante, publication ni autorisation de production n’est déduite de cet audit.**
 
 ## Deux contenus indépendants et publication

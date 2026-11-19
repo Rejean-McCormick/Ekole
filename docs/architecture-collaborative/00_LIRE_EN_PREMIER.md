@@ -2,6 +2,8 @@
 
 **Révision :** 2026-11-11 · **Statut :** référence de conception, fondée sur les snapshots fournis, **pas** certification d'un déploiement scolaire.
 
+Pour les packs Québec et Pastorale, les ateliers, les outils de publication et les liens vers leurs dépôts, consultez [L’écosystème Ékole](../ECOSYSTEME.md). Cette page décrit le trajet d’une aventure collaborative.
+
 ## Objectif
 
 Permettre à une enseignante ou à un enseignant de choisir une aventure thématique, de préparer un projet de classe avec des personnages-métiers, d'organiser des tâches, de faire collaborer les élèves sur plusieurs supports, puis d'observer leurs apprentissages et de composer un portfolio personnel et collectif. **Ékole est le pilote éducatif d'une mécanique réutilisable** en entreprise, dans un organisme, une administration ou un collectif artistique. Seules les règles de présentation, de protection et d'évaluation changent selon le contexte.
@@ -55,10 +57,15 @@ Permettre à une enseignante ou à un enseignant de choisir une aventure thémat
 | [07 — Parcours concrets](07_SCENARIOS_ET_PARCOURS.md) | Fête, vélo, spectacle, mamie et stations |
 | [08 — Sécurité des enfants](08_SECURITE_ET_CONFIDENTIALITE.md) | Barrières de mise en service et modèles de menace |
 | [09 — Feuille de route et recette](09_FEUILLE_DE_ROUTE_ET_RECETTE.md) | Mise en œuvre minimale et tests de bout en bout |
-| [10 — Sources et statut](10_SOURCES_ET_STATUT.md) | Fichiers réellement examinés; état prouvé, proposé ou bloqué |
+| [10 — Sources et statut](10_SOURCES_ET_STATUT.md) | Fichiers examinés et portée de leurs preuves |
+| [11 — Lot de code multicanal](11_LOT_CODE_MULTICANAL_2026_11_11.md) | Préparation locale, préversion et conditions de qualification |
 
 La note [CONTRAT_LIAISON_SEANCE.exemple.json](CONTRAT_LIAISON_SEANCE.exemple.json) est **un exemple proposé**, non un contrat déjà déployé. Le document [CONTRAT_LIAISON_SEANCE.schema.json](CONTRAT_LIAISON_SEANCE.schema.json) est destiné à qualifier les adaptations futures, pas à admettre une séance en production.
 
 ## Portée de cette livraison
 
 Mise à jour **documentaire** du dépôt `C:\mycode\Ekole\ekole`. Elle ne déploie pas de World, ne crée aucun compte d'enfant, ne change aucune permission serveur et ne rend ni Kor, ni Kamel, ni Kidaxion opérationnels pour la classe. Les lots Tandem antérieurs restent tels quels.
+
+## Démo et classe réelle
+
+Pour préparer sans services scolaires, voyez [la démonstration du lot multicanal](11_LOT_CODE_MULTICANAL_2026_11_11.md). Pour raccorder une classe, suivez [la recette inter-dépôts](09_FEUILLE_DE_ROUTE_ET_RECETTE.md). Le [module de navigation IA](../NAVIGATION_IA.md) reprend les mêmes responsabilités.

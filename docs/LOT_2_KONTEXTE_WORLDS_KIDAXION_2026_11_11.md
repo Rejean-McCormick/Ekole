@@ -1,5 +1,7 @@
 # Lot coordonné 2 — état réellement livré (11 novembre 2026)
 
+Pour travailler sur les liens à revoir, consultez [les 55 propositions versionnées de Kontexte](https://github.com/Rejean-McCormick/Kontexte/blob/main/integrations/ekole/banque-worlds.curriculum-candidates.json). Pour les surfaces de séance et l’état du prototype, consultez [le lot de code multicanal](architecture-collaborative/11_LOT_CODE_MULTICANAL_2026_11_11.md).
+
 ## Résumé
 
 Ce lot reste **synthétique, hors ligne et non déployé**. Il complète le premier overlay coordonné sans modifier les autorités des dépôts. Les fichiers de compétences et de sécurité ne sont pas des validations officielles, des autorisations scolaires ni des résultats d'élèves.

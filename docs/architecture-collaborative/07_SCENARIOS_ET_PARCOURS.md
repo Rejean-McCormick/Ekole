@@ -53,3 +53,7 @@ Des stations représentent coiffeuse, fermier, boulanger, scientifique ou messag
 Une mission peut être très courte (4 étapes), moyenne (8–10) ou plus longue (11+). Ne jamais exiger « exactement 11 » au niveau de la banque générale : ce chiffre décrit **le pilote historique de la fête**. Le référentiel B5 des onze missions d'origine reste une photographie historique, distincte de la banque extensible.
 
 Les six nouvelles missions et trois étapes de la fête disposent de **55 liens curriculaires candidats** dans le lot 2; ils restent non approuvés. La conception d'une activité doit inclure dès le départ les *critères de preuve* et les points de contrôle enseignant pour que l'aventure ne se résume pas à une liste de tâches.
+
+## Choisir le trajet à reproduire
+
+Pour la conception collective, partir de [la mission Kontexte](https://github.com/Rejean-McCormick/Kontexte/blob/main/data/missions/fete-sorciere.json), puis produire un [plan enseignant local](11_LOT_CODE_MULTICANAL_2026_11_11.md). Pour un exercice individuel de division, suivre [Les invitations de Mila](https://github.com/Rejean-McCormick/Ekole-Quebec/blob/main/activites/invitations-mila/README.md) et [la visite locale](../../visite-client/LISEZ-MOI.md). Chaque trajet doit indiquer s’il s’arrête à la revue ou s’il dispose d’un reçu d’admission.

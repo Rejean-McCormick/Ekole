@@ -6,7 +6,7 @@
 
 | Canal | Usage adapté | État vérifié | Limite |
 | --- | --- | --- | --- |
-| **Web hébergé** | Chromebook scolaire : accès sans installation; projet, tâches, messages, productions et portfolio | Ékole et Konnaxion possèdent des interfaces Web, **pas** un portail Kidaxion scolaire de bout en bout | Construire une vue intégrée et authentifiée; courriel seul insuffisant |
+| **Web hébergé** | Chromebook scolaire : accès sans installation; projet, tâches, messages, productions et portfolio | Préversion Kidaxion côté Konnaxion pour les projets scolaires autorisés | Qualifier la vue scolaire et le raccord aux tâches Orgo |
 | **Kor** | Android : recevoir alertes, voir surfaces autorisées, scanner QR, envoyer réponse, consulter les objets | ADR et code de projection mobile, QR et files hors ligne présents | Le profil jeunesse et la liaison scolaire ne sont pas qualifiés; pas une application Chromebook universelle |
 | **Kamel** | Cartes imprimées : personnage, station, consignes, indice, rappel, vérification à quatre étapes | Compilation/assemblage/rendu et impression présents | QR d'action, émission/validation de droits et remontée vers Orgo non raccordés |
 
@@ -75,3 +75,7 @@ En usine, l'écran pourra exposer davantage de détails techniques et l'applicat
 - `Kor/docs/04_BOUNDARIES_AND_OWNERSHIP.md`, `docs/10_MANDATE_QR.md` : états, preuves de mandat, hors ligne.
 - `Kamel/docs/06-cartes-et-editions.md`, `docs/14-securite-gouvernance-et-publication.md` : rendu, édition, publication.
 - `Konnaxion/frontend/lib/kidaxion-intents.mjs` (lot 2 installé par overlay) : création d'intentions contrôlées **hors autorisation serveur**.
+
+## État de la préversion
+
+Le [code public de la vue Web Kidaxion](https://github.com/Rejean-McCormick/Konnaxion/blob/main/frontend/app/kidaxion/page.tsx) permet de situer la préversion dans Konnaxion. Pour les tâches Orgo, le pont vers le mobile et la confirmation d’une action, suivre [les preuves et limites du lot multicanal](11_LOT_CODE_MULTICANAL_2026_11_11.md). Pour une démo locale, ouvrir [le plan enseignant et les cartes](07_SCENARIOS_ET_PARCOURS.md).

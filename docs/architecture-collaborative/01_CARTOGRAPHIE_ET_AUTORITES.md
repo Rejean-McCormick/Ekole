@@ -65,3 +65,7 @@ De même, `konnected.Evaluation` et `konnected.PeerValidation` ne deviennent pas
 - `Konnaxion_Worlds/docs/Technical-Reference/Worlds/04_DATA_OWNERSHIP_MATRIX.md`.
 - `Orgo/apps/api/src/orgo/modules/work/work.service.ts`, `Orgo_Worlds/apps/api/src/orgo/modules/worlds/worlds.service.ts`.
 - `Kor/adr/0020-mobile-projection-of-konnaxion-orgo.md`.
+
+## Références des propriétaires
+
+La [carte kOA des autorités](https://github.com/Rejean-McCormick/kOA-Digital-Ecosystem/blob/main/docs/2-Technical-Reference/10-system/authority-map.md) situe les systèmes hors de la séance scolaire. Comparez les matrices [Orgo Worlds](https://github.com/Rejean-McCormick/Orgo-Worlds/blob/main/docs/Technical-Reference/Worlds/04_DATA_OWNERSHIP_MATRIX.md) et [Konnaxion Worlds](https://github.com/Rejean-McCormick/Konnaxion-Worlds/blob/main/docs/Technical-Reference/Worlds/04_DATA_OWNERSHIP_MATRIX.md) pour les Worlds, releases et appartenances. La [carte Ékole](../ECOSYSTEME.md) couvre aussi les packs, l’atelier auteur et la diffusion.

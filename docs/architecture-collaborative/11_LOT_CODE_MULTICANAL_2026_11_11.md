@@ -85,3 +85,7 @@ Konnaxion et leurs contrôles de projet ; elle ne communique pas avec un
 **Attention** : les scripts de test Python/Node qui fonctionnent sans la stack
 Django ne prouvent ni la confidentialité réelle de la classe ni l'admission
 Orgo. Les 55 liens curriculaires candidats demeurent non approuvés.
+
+## Retrouver les sources et le résultat attendu
+
+Le [préparateur Ékole](../../tools/preparer_mission_collaborative.py) produit le plan et les cartes JSON. L’option Kamel ajoute le rendu imprimable lorsqu’un dépôt compatible est disponible. Voir [la mission Kontexte](https://github.com/Rejean-McCormick/Kontexte/blob/main/data/missions/fete-sorciere.json), [le paquet Orgo Worlds de revue](https://github.com/Rejean-McCormick/Orgo-Worlds/blob/main/world-packs/ekole-fete-sorciere/README.md), [la vue Web Kidaxion](https://github.com/Rejean-McCormick/Konnaxion/blob/main/frontend/app/kidaxion/page.tsx) et [le journal local de preuves](../../tandem/portfolio_ledger.py).

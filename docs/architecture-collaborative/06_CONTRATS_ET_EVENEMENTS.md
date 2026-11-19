@@ -75,3 +75,7 @@ Pour chaque demande : `request_ref`, source/canal (`web`, `kor`, `kamel`, `teach
 ## Contrat d'exemple
 
 Le schéma JSON compagnon représente **le lien entre les mondes et la séance** sans habilitation incorporée. Toute action réelle exige l'authentification et la politique du propriétaire : le simple fait qu'un objet valide le schéma ne confère aucun accès.
+
+## Choisir le bon contrat
+
+Le [schéma d’aperçu P1](../../contracts/ekole-tandem-teacher-preview.schema.json) décrit une lecture locale synthétique. Le [schéma de liaison de séance](CONTRAT_LIAISON_SEANCE.schema.json) et son [exemple](CONTRAT_LIAISON_SEANCE.exemple.json) documentent un raccord proposé. Pour une commande réseau, consulter le profil adopté par le propriétaire dans [Interaction Kernel](https://github.com/Rejean-McCormick/Interaction-Kernel/blob/main/README.md) et vérifier son reçu.

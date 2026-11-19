@@ -1,5 +1,7 @@
 # Ékole : consolidation PRF-22 dans le dépôt
 
+Pour ouvrir l’atelier intégré et retrouver les générations disponibles, voir [la banque PRF-22](../banques/prf22/README.md). Les notes v0.4 à v0.6 ci-dessous documentent les étapes de consolidation. La banque v0.7 ajoute les dossiers de justification et de revue.
+
 ## Pourquoi dans Ékole
 
 La banque PRF-22 est un artefact de **conception pédagogique**, pas un nouveau produit ni une nouvelle source d'exercices. Le code est versionné sous `outils/compositeur_prf22_v0_3/`, avec le compositeur existant. Le dossier `banques/prf22/candidats-v0_4/` conserve les 137 propositions préconstruites afin qu'elles soient inspectables et diffusables dans le même dépôt.
@@ -46,3 +48,7 @@ L'installateur refuse d'écraser un fichier préexistant divergent. Seul le `Ate
 - `--edition` et session enseignant + CSRF + origine locale requis pour l'enregistrement.
 - `GENERER_BANQUE_ENRICHIE_PRF22.cmd` crée un lot neuf sans modifier les lots versionnés.
 - Aucune interface enfant, aucun World, aucune publication ni admission créée.
+
+## Utiliser le lot qualité v0.7
+
+Choisir la banque v0.7 dans l’atelier enseignant et vérifier le lot avec `VERIFIER_BANQUE_QUALITE_PRF22.cmd`. Pour revoir une proposition, suivre la référence de [Kontexte](https://github.com/Rejean-McCormick/Kontexte/blob/main/README.md), les critères observables et le dossier pédagogique. Le [contrat du compositeur](../outils/compositeur_prf22_v0_3/docs/CONTRATS_INTEROP.md) décrit la portée du transfert candidat.

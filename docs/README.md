@@ -1,8 +1,19 @@
 # Documentation Ékole — scénarios, collaboration et apprentissages
 
-**Révision 11 novembre 2026 (architecture multicanale, v3).** La page canonique pour le fonctionnement global est [**Architecture collaborative et interfaces humaines**](architecture-collaborative/00_LIRE_EN_PREMIER.md). Elle intègre Orgo, **Konnaxion (projets, équipes, ressources, évaluations, portfolio)**, Web/Chromebook, Kor, Kamel, Kidaxion et le suivi Ékole. Les raccordements de production non validés demeurent explicitement identifiés.
+[**Comprendre l’écosystème Ékole**](ECOSYSTEME.md) présente le moteur, les packs et les outils associés. La page oriente vers les dépôts par usage : apprendre, préparer une activité, animer une aventure, évaluer, illustrer ou diffuser.
 
-## Référence actuelle
+Pour le fonctionnement d’une aventure de classe, ouvrez l’[architecture collaborative et les interfaces humaines](architecture-collaborative/00_LIRE_EN_PREMIER.md). Elle décrit les responsabilités d’Orgo, de Konnaxion et d’Ékole, les accès Web, Kor et Kamel, ainsi que les étapes à qualifier avant utilisation scolaire.
+
+## Guides par usage
+
+- [Démarrage et dépannage](DEMARRAGE.md) · Packs, ports, lecture seule et essais locaux.
+- [Conception, révision et publication](AUTEUR_ET_PUBLICATION.md) · Sources des packs, activité locale, médias, langues, Kristal et Moodle.
+- [Navigation assistée par IA](NAVIGATION_IA.md) · Intention, contexte et passage au bon composant.
+- [Banque PRF-22](../banques/prf22/README.md) et [atelier enseignant](PRF22_BANQUE_REPO.md) · Propositions, critères et revue des situations pédagogiques.
+- [Visite de la division](../visite-client/LISEZ-MOI.md) · Démonstration locale de l’élève à la revue enseignante.
+- [Migration du moteur](../MIGRATION.md) et [OpsConsole historique](../legacy/opsconsole/README.md) · Repères pour une installation antérieure.
+
+## Architecture collaborative
 
 1. [Vue d’ensemble](architecture-collaborative/00_LIRE_EN_PREMIER.md)
 2. [Composants, responsabilités, doublons à éviter](architecture-collaborative/01_CARTOGRAPHIE_ET_AUTORITES.md)
@@ -15,6 +26,7 @@
 9. [Sécurité des mineurs](architecture-collaborative/08_SECURITE_ET_CONFIDENTIALITE.md)
 10. [Plan et recette](architecture-collaborative/09_FEUILLE_DE_ROUTE_ET_RECETTE.md)
 11. [Sources, statut vérifié](architecture-collaborative/10_SOURCES_ET_STATUT.md)
+12. [Lot de code multicanal du 11 novembre](architecture-collaborative/11_LOT_CODE_MULTICANAL_2026_11_11.md)
 
 ## Documentation du pilote conservée
 
@@ -35,3 +47,9 @@
 - [Vérification des satellites](Integration-Verification-2026-10-27.md)
 
 **Frontière incontournable :** les paquets synthétiques et la préparation Kidaxion ne sont ni une séance scolaire admise, ni une autorisation serveur, ni un registre de compétences validées.
+
+## Notes de version et contrôles historiques
+
+- [Mise à jour de l’expérience 3e année](../MISE_A_JOUR_3E.md), [moteur v3](../MISE_A_JOUR_V3.md) et [validation du découplage](../VALIDATION.md).
+- [Notice de mise à jour visuelle](../LISEZ-MOI_BRAND_UPDATE.txt) et [notice du paquet Tandem P1](../README_EKOLE_TANDEM_P1.txt).
+- [Contrats de l’atelier PRF-22](../outils/compositeur_prf22_v0_3/docs/CONTRATS_INTEROP.md) et [rapport de l’OpsConsole](../legacy/opsconsole/evidence/VALIDATION_0.1.md).
