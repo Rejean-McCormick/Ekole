@@ -93,7 +93,7 @@ class RequestError(ValueError):
 
 
 class Environment:
-    def __init__(self, content: pathlib.Path | None, edition: bool, port_public: int = 8765, tandem_preview: dict | None = None):
+    def __init__(self, content: pathlib.Path | None, edition: bool, port_public: int = 21150, tandem_preview: dict | None = None):
         self.content = content
         self.pack = load_pack(content)
         self.personnages = personnages.load(content, self.pack)
@@ -839,8 +839,8 @@ def create_handler(env: Environment, teacher: bool = False):
 def run():
     args = argparse.ArgumentParser(description='Ekole neutre — moteur partagé entre plusieurs dépôts de contenus')
     args.add_argument('--contenu', default='auto', help='Dossier de contenu, "auto" (frère), ou "none"')
-    args.add_argument('--port', type=int, default=8765)
-    args.add_argument('--port-editeur', type=int, default=8766)
+    args.add_argument('--port', type=int, default=21150)
+    args.add_argument('--port-editeur', type=int, default=21151)
     args.add_argument('--sans-editeur', action='store_true')
     args.add_argument('--edition', action='store_true', help='Active la modification locale des textes; sauvegardes adjacentes')
     args.add_argument('--ouvrir', action='store_true', help='Ouvrir les pages dans le navigateur')

@@ -15,14 +15,14 @@ C:\mycode\Ekole\
   ecole-pastorale\   (32 cours candidats, 7 parcours (prototype non approuvé))
 ```
 
-**Lancement recommandé :** double-cliquez sur `..\ekole-quebec\LANCER_EKOLE_QUEBEC.bat` ou `..\ecole-pastorale\LANCER_PASTORALE.bat`. Le choix du corpus ne demande aucune modification de configuration. Les deux lanceurs ouvrent des ports séparés (8765/8766 et 8775/8776 respectivement).
+**Lancement recommandé :** double-cliquez sur `..\ekole-quebec\LANCER_EKOLE_QUEBEC.bat` ou `..\ecole-pastorale\LANCER_PASTORALE.bat`. Le choix du corpus ne demande aucune modification de configuration. Les deux lanceurs ouvrent des ports séparés (21150/21151 et 21153/21154 respectivement).
 
 Si seul le moteur doit être démarré : `LANCER_EKOLE.bat`, ou `python launcher.py --contenu none`.
 
 ## Interfaces
 
-- Québec : `http://127.0.0.1:8765/`, apprenant à `.../eleve/` et éditeur sur port 8766 avec lien privé imprimé dans le terminal.
-- Pastorale : `http://127.0.0.1:8775/`, apprenant à `.../eleve/` et éditeur sur port 8776 avec lien privé imprimé dans le terminal.
+- Québec : `http://127.0.0.1:21150/`, apprenant à `.../eleve/` et éditeur sur port 21151 avec lien privé imprimé dans le terminal.
+- Pastorale : `http://127.0.0.1:21153/`, apprenant à `.../eleve/` et éditeur sur port 21154 avec lien privé imprimé dans le terminal.
 
 Les deux éditeurs sont **en lecture seule par défaut**. Ajouter `--edition` au lanceur pour autoriser la modification des textes de cours et créer des sauvegardes adjacentes. L'éditeur est local, non destiné à un usage public multiutilisateur.
 
