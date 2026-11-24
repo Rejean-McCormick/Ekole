@@ -96,10 +96,18 @@ class ApiTests(unittest.TestCase):
         url=f'http://127.0.0.1:{server.server_port}'
         try:
             with urllib.request.urlopen(url+'/api/personnages/catalogue.json') as res:data=json.load(res)
-            self.assertEqual(len(data['assets']),608)
-            self.assertTrue(all(a['url'] is None and not a['disponible'] for a in data['assets']))
+            # L'inventaire public combine les identités suivies et les 304 libres.
+            catalogue=json.loads(CAT.read_text(encoding='utf-8'))
+            expected=personnages.public_inventory((CAT.parent,catalogue))['assets']
+            self.assertEqual(len(data['assets']),len(expected))
+            self.assertEqual({a['id'] for a in data['assets']}, {a['id'] for a in expected})
+            self.assertEqual(len(data['assets']), len(catalogue['assets']) + len(catalogue['illustrations_libres']))
+            self.assertEqual(
+                [(a['id'],a['disponible'],a['url']) for a in data['assets']],
+                [(a['id'],a['disponible'],a['url']) for a in expected]
+            )
             self.assertTrue(all('fichier' not in a and 'prompt' not in a for a in data['assets']))
-            for id in ('role-fermier','unknown','%2e%2e%2fpack.json'):
+            for id in ('unknown','%2e%2e%2fpack.json'):
                 with self.assertRaises(urllib.error.HTTPError) as e:urllib.request.urlopen(url+'/api/personnages/image/'+id)
                 self.assertEqual(e.exception.code,404);e.exception.close()
         finally:server.shutdown();server.server_close();thread.join()
